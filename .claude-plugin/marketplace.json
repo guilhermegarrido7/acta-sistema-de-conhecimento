@@ -1,0 +1,98 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "acta-sistema-de-conhecimento",
+  "owner": {
+    "name": "Guilherme Garrido",
+    "email": "guilhermegarrido@acta.com.br"
+  },
+  "metadata": {
+    "description": "Sistema de Conhecimento ACTA — biblioteca privada de skills de Consultoria e Auditoria organizada por área e subsegmentação."
+  },
+  "plugins": [
+    {
+      "name": "acta-pesquisa-salarial",
+      "source": "./consultoria/rh/pesquisa-salarial",
+      "description": "[Pronto] Metodologia ACTA de Pesquisa de Remuneração e Benefícios: matching de cargos, estatística, modelagem de planilhas e dashboard Power BI."
+    },
+    {
+      "name": "acta-job-architecture",
+      "source": "./consultoria/rh/job-architecture",
+      "description": "[Planejado] Job Architecture — Consultoria > RH."
+    },
+    {
+      "name": "acta-compensation-analysis",
+      "source": "./consultoria/rh/compensation-analysis",
+      "description": "[Planejado] Compensation Analysis — Consultoria > RH."
+    },
+    {
+      "name": "acta-dre",
+      "source": "./consultoria/financeiro/dre",
+      "description": "[Planejado] DRE — Consultoria > Financeiro."
+    },
+    {
+      "name": "acta-working-capital",
+      "source": "./consultoria/financeiro/working-capital",
+      "description": "[Planejado] Working Capital — Consultoria > Financeiro."
+    },
+    {
+      "name": "acta-valuation-financeiro",
+      "source": "./consultoria/financeiro/valuation",
+      "description": "[Planejado] Valuation — Consultoria > Financeiro."
+    },
+    {
+      "name": "acta-ma-teaser",
+      "source": "./consultoria/ma/teaser",
+      "description": "[Planejado] Teaser — Consultoria > M&A."
+    },
+    {
+      "name": "acta-ma-cim",
+      "source": "./consultoria/ma/cim",
+      "description": "[Planejado] CIM — Consultoria > M&A."
+    },
+    {
+      "name": "acta-ma-market-mapping",
+      "source": "./consultoria/ma/market-mapping",
+      "description": "[Planejado] Market Mapping — Consultoria > M&A."
+    },
+    {
+      "name": "acta-ma-financial-due-diligence",
+      "source": "./consultoria/ma/financial-due-diligence",
+      "description": "[Planejado] Financial Due Diligence — Consultoria > M&A."
+    },
+    {
+      "name": "acta-ma-valuation",
+      "source": "./consultoria/ma/valuation",
+      "description": "[Planejado] Valuation — Consultoria > M&A."
+    },
+    {
+      "name": "acta-market-sizing",
+      "source": "./consultoria/estrategia/market-sizing",
+      "description": "[Planejado] Market Sizing — Consultoria > Estratégia."
+    },
+    {
+      "name": "acta-estrategia-benchmarking",
+      "source": "./consultoria/estrategia/benchmarking",
+      "description": "[Planejado] Benchmarking — Consultoria > Estratégia."
+    },
+    {
+      "name": "acta-diagnostico-operacional",
+      "source": "./consultoria/estrategia/diagnostico-operacional",
+      "description": "[Planejado] Diagnóstico Operacional — Consultoria > Estratégia."
+    },
+    {
+      "name": "acta-strategic-planning",
+      "source": "./consultoria/estrategia/strategic-planning",
+      "description": "[Planejado] Strategic Planning — Consultoria > Estratégia."
+    },
+    {
+      "name": "acta-auditoria-interna",
+      "source": "./auditoria/auditoria-interna",
+      "description": "[Pronto] Skill mestra da metodologia de auditoria interna ACTA Advisory."
+    },
+    {
+      "name": "acta-auditoria-de-folha",
+      "source": "./auditoria/auditoria-de-folha",
+      "description": "[Planejado] Auditoria de Folha de Pagamento — Auditoria."
+    }
+  ]
+}

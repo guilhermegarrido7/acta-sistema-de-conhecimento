@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "acta-pesquisa-salarial",
+  "version": "1.0.0",
+  "description": "Metodologia ACTA para projetos de Pesquisa de Remuneração e Benefícios: matching de cargos, estatística de remuneração, modelagem de planilhas e dashboard Power BI.",
+  "author": {
+    "name": "Guilherme Garrido",
+    "email": "guilhermegarrido@acta.com.br"
+  },
+  "keywords": ["rh", "consultoria", "remuneracao", "pesquisa-salarial", "benchmarking"],
+  "skills": [
+    "./"
+  ]
+}

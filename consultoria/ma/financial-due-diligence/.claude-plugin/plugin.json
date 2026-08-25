@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "acta-ma-financial-due-diligence",
+  "version": "0.0.0",
+  "description": "[Planejado] Financial Due Diligence — subsegmentação de Consultoria > M&A no ACTA Sistema de Conhecimento. Ainda sem metodologia consolidada.",
+  "author": {
+    "name": "Guilherme Garrido",
+    "email": "guilhermegarrido@acta.com.br"
+  },
+  "keywords": ["planejado", "roadmap"],
+  "skills": [
+    "./"
+  ]
+}

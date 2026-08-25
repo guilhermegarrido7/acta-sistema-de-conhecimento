@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "acta-auditoria-de-folha",
+  "version": "0.0.0",
+  "description": "[Planejado] Auditoria de folha de pagamento: análise de folha, encargos, horas extras, benefícios, identificação de anomalias e benchmark de remuneração. Ainda sem metodologia consolidada.",
+  "author": {
+    "name": "Guilherme Garrido",
+    "email": "guilhermegarrido@acta.com.br"
+  },
+  "keywords": ["auditoria", "folha-de-pagamento", "planejado", "roadmap"],
+  "skills": [
+    "./"
+  ]
+}

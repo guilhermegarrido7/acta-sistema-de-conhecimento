@@ -187,10 +187,12 @@ contrário.
    IA entra no `B10_LOG_AUDITORIA` com a marca de que foi assistida e quem validou.
 4. **Prompt com entrada explícita.** Nunca "analise a base". Sempre: qual arquivo,
    qual versão, qual grão, qual cálculo do livro, qual formato de saída.
-5. **Checkpoint ao final de cada sessão.** Sem exceção. Atualize o checkpoint do
-   projeto conforme `CHECKPOINT_TEMPLATE.md`: em projetos com mais de um
-   consultor, o checkpoint individual de quem trabalhou na sessão e o arquivo
-   mestre do projeto. Ver protocolo completo no `SKILL.md`, seção 7.
+5. **Checkpoint ao final de cada sessão.** Sem exceção. O protocolo, os
+   templates e a regra de defasagem estão em `acta-way`, skill `checkpoint`. Em projeto com mais
+   de um consultor o checkpoint fica defasado na virada da jornada, e produzir sobre estado
+   defasado é a principal fonte de retrabalho.
+
+
 6. **Verificação cruzada de output crítico.** Números que vão para o relatório final
    são conferidos por caminho independente: se o Excel produziu, confira uma amostra
    com Python ou manualmente, e vice-versa.

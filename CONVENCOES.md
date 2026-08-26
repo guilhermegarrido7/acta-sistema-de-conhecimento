@@ -45,6 +45,28 @@ qual recorte, qual data de referência.
 **Não repita camada de baixo na de cima.** Se a regra vale para todo projeto, ela mora em `acta-way`
 e a skill de etapa apenas manda carregá-la. Duplicar significa corrigir em 32 lugares.
 
+## 3b. Checkpoint: o estado atravessa pessoas, a sessão não
+
+Sessão de Claude é por pessoa e por máquina. O que a equipe compartilha é o arquivo na pasta do
+engajamento. Todo projeto da ACTA mantém:
+
+```
+~~pasta de trabalho/
+├── CLAUDE.md · AGENTS.md      regras estáveis, carregadas automaticamente
+└── ~~controle/
+    ├── CHECKPOINT.md          estado consolidado. Quem chega lê ISTO primeiro.
+    ├── Sessoes/               uma por sessão, imutável, nome único, nunca conflita
+    └── APRENDIZADOS.md        lição reutilizável em outro cliente
+```
+
+Duas regras que não se negociam:
+
+- **Arquivo em `Sessoes/` nunca é editado depois de gravado.** Corrigiu? Nova entrada.
+- **Apresentar, esperar validação, só então gravar.** Nunca escrever calado.
+
+O protocolo completo está em `acta-way`, skill `checkpoint`. Skill de projeto **não redefine** o
+mecanismo: aponta para ele e acrescenta só o que é específico daquele tipo de trabalho.
+
 ## 4. Anatomia de um plugin
 
 ```

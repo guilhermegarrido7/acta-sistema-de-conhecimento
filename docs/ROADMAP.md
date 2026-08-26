@@ -11,7 +11,7 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 | Plugin | Status | No marketplace | Observação |
 |---|---|---|---|
-| `acta-way` | Esqueleto | não | Só `ambiente-tecnico` tem material (catálogo de armadilhas Windows/OneDrive). Falta identidade visual, convenções de entregável, anonimização, checkpoint e ritual de aprendizado. |
+| `acta-way` | Parcial | sim | `checkpoint` e `ambiente-tecnico` prontos. Faltam identidade visual, convenções de entregável, anonimização/LGPD e redação ACTA. |
 
 ## Consultoria Empresarial
 
@@ -40,7 +40,7 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 | Plugin | Status | No marketplace | Observação |
 |---|---|---|---|
-| `acta-metodo-auditoria` | Parcial | sim | Skill de método normalizada e publicada. As 6 skills de mecânica (bases, WP, programa de testes, redação, relatório, aprendizado) estão em esqueleto. |
+| `acta-metodo-auditoria` | Parcial | sim | Skill de método normalizada e publicada. `aprendizado-e-historico` escrita sobre o mecanismo de checkpoint. As 5 restantes (bases, WP, programa de testes, redação, relatório) em esqueleto. |
 | `acta-governanca` | Esqueleto | não | Estruturação de governança corporativa: instâncias e alçadas, regimento e estatuto, compos… |
 | `acta-gestao-de-riscos` | Esqueleto | não | Implantação de gestão de riscos: identificação e taxonomia, avaliação de impacto e probabi… |
 | `acta-revenue-assurance` | Esqueleto | não | Auditoria do ciclo de receita e revenue assurance: contrato, medição, aceite, faturamento,… |
@@ -58,10 +58,10 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 ## Ordem sugerida
 
-1. **`acta-way`** primeiro. Enquanto a fundação não existir, cada projeto vai reescrever
-   identidade visual e convenção de entregável por conta própria — que é exatamente o que a
-   arquitetura de três camadas existe para evitar.
-2. **`acta-metodo-auditoria`**, completando as 6 skills de mecânica. Elas destravam os 5 plugins
+1. **`acta-way`**, completando as quatro skills que faltam (identidade visual, convenções de
+   entregável, anonimização/LGPD, redação). O `checkpoint` já está pronto e é o que sustenta o
+   trabalho em equipe entre sessões diferentes.
+2. **`acta-metodo-auditoria`**, completando as 5 skills de mecânica restantes. Elas destravam os 5 plugins
    de processo auditado de uma vez.
 3. **`acta-pesquisa-salarial`**, que já tem o ciclo de vida mapeado e a fonte de cada etapa
    apontada dentro do próprio esqueleto.

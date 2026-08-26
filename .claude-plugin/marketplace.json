@@ -7,6 +7,12 @@
   },
   "plugins": [
     {
+      "name": "acta-way",
+      "source": "./fundacao/acta-way",
+      "category": "fundacao",
+      "description": "Fundação do método ACTA: mecanismo de checkpoint entre sessões e consultores, e catálogo de armadilhas de ambiente Windows/OneDrive. Todo projeto assume este plugin carregado."
+    },
+    {
       "name": "acta-metodo-auditoria",
       "source": "./governanca-riscos-compliance/_metodo",
       "category": "governanca-riscos-compliance",

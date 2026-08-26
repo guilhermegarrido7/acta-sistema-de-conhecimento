@@ -1,31 +1,52 @@
-# Fundação ACTA
+# ACTA Way
 
-Método ACTA transversal a qualquer projeto: identidade visual, doutrina do número exato, convenções de entregável e nomenclatura, anonimização e LGPD, protocolo de checkpoint e ritual de aprendizado.
+Método transversal à firma inteira. É a camada de fundação do Sistema de Conhecimento: o que vale
+para **todo** projeto da ACTA, seja de Consultoria Empresarial ou de Governança, Riscos e
+Compliance.
 
-> **Status: esqueleto.** A estrutura do plugin existe, a metodologia ainda nao foi escrita.
-> Este plugin nao esta publicado no `marketplace.json` e por isso nao pode ser instalado ainda.
-> Ver [docs/ROADMAP.md](../../docs/ROADMAP.md).
-
-## O que faz
-
-A preencher: o que este plugin entrega, em um paragrafo.
+Todo plugin de projeto assume que este está carregado e **não repete** o que está aqui.
 
 ## Skills
 
-Uma skill por etapa do ciclo de vida do projeto. A preencher.
-
-| Skill | Etapa | Descricao |
+| Skill | O que traz | Status |
 |---|---|---|
-| _(a definir)_ | | |
+| `checkpoint` | Como registrar e retomar o estado de um engajamento entre sessões e entre consultores | ✅ |
+| `ambiente-tecnico` | Armadilhas de Windows, OneDrive e automação Office, com a solução que funcionou | ✅ |
 
-## Fluxo tipico
+## Por que o checkpoint existe
 
-A preencher: a sequencia de skills numa execucao real do projeto.
+Sessão de Claude não atravessa pessoas. Sessões ficam guardadas por diretório e por máquina, e
+desktop, web e IDE mantêm históricos separados. Um consultor decide algo às 16h e o Claude do colega
+às 9h do dia seguinte não sabe de nada.
 
-## Convencoes
+O que atravessa é o arquivo na pasta compartilhada do engajamento:
 
-Este plugin segue as convencoes do repositorio, incluindo os placeholders de pasta
-(`~~pasta de trabalho`, `~~arquivos recebidos`, ...). Ver [CONVENCOES.md](../../CONVENCOES.md).
+```
+~~pasta de trabalho/
+├── CLAUDE.md          carregado automaticamente pelo Claude Code
+├── AGENTS.md          mesmo conteúdo, para outras ferramentas
+└── ~~controle/
+    ├── CHECKPOINT.md  estado consolidado. Quem chega lê ISTO.
+    ├── Sessoes/       uma entrada por sessão, imutável, nunca conflita
+    └── APRENDIZADOS.md
+```
 
-Metodo transversal vive em `acta-way`; metodo da pratica, em `acta-metodo-consultoria`
-ou `acta-metodo-auditoria`. Nao repita aqui o que ja esta la.
+A skill `checkpoint` traz o protocolo dos quatro momentos, a detecção automática do modo de operação
+(Claude Code com acesso à pasta, ou Desktop sem acesso), a regra de defasagem, e os templates.
+
+## Instalar num projeto novo
+
+Copie os templates de `skills/checkpoint/references/` para a pasta do engajamento. O
+`TEMPLATE-CLAUDE.md` traz o passo a passo — são cinco minutos, uma vez por projeto.
+
+## Roadmap
+
+Falta escrever, nesta ordem de utilidade:
+
+- `identidade-visual` — paleta ACTA, tipografia, o que nunca aparece num entregável
+- `convencoes-de-entregavel` — nomenclatura de arquivo, versionamento, estrutura de PPTX e XLSX
+- `anonimizacao-e-lgpd` — mínimos de agregação, o que não se publica, base legal
+- `redacao-acta` — primeira pessoa do plural, pretérito, vocabulário fechado, sem adjetivo de intensidade
+
+Hoje cada projeto reescreve essas quatro por conta própria, que é exatamente o que a camada de
+fundação existe para evitar.

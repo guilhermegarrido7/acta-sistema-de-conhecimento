@@ -215,13 +215,20 @@ Recalcular no slide é a principal fonte de divergência entre entregáveis.
 
 ## 7. Protocolo de checkpoint
 
-Ao final de qualquer sessão de trabalho, atualize o checkpoint do projeto (ver
-`CHECKPOINT_TEMPLATE.md` para o formato) com: o que foi concluído, arquivos
-gerados ou alterados com versão, decisões metodológicas tomadas (e onde foram
-registradas no livro de cálculos), pendências abertas com responsável, e o
-próximo passo imediato. Em projetos com mais de um consultor, cada consultor
-mantém seu próprio arquivo de checkpoint nos anexos do Project, além do arquivo
-mestre na pasta do projeto, conforme detalhado no template.
+O mecanismo de checkpoint é **comum a todos os projetos da ACTA** e vive em `acta-way`, skill
+`checkpoint`. Carregue-a: ela traz os quatro momentos (abrir, levantar, detectar defasagem,
+fechar), a detecção dos dois modos de operação, e os templates.
+
+O que é específico da pesquisa salarial e deve entrar no checkpoint do projeto:
+
+- **Seção 7 do `CHECKPOINT.md`, Entregáveis e versões:** registrar o estado das bases B1 a B10 e
+  a versão do release congelado (R1.0, R1.1, ...).
+- **Seção 5, Decisões metodológicas:** toda decisão que altere cálculo precisa apontar para onde
+  ela foi registrada no `references/03-livro-de-calculos.md`. Fórmula tem um lugar só; o
+  checkpoint indexa, não duplica.
+- **Seção 6, Pendências de insumo:** os `P-01`, `P-02` de insumo do cliente e dos participantes.
+- **Seção 0:** o mínimo amostral e o critério de nivelamento acordados, porque parametrizam todas
+  as etapas seguintes.
 
 ## 8. Guarda-corpos
 

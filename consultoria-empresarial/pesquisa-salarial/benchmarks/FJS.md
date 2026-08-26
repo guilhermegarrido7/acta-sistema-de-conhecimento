@@ -37,7 +37,7 @@ que se tornaram regra geral ou módulo do plugin:
 - Storyline de 42 slides em arco de três atos, com a resposta no slide 3
   (`06-storyline-relatorio-ppt.md`).
 - Protocolo de checkpoint por consultor, para trabalho de mais de uma pessoa
-  em paralelo (`CHECKPOINT_TEMPLATE.md`).
+  em paralelo (hoje generalizado em `acta-way`, skill `checkpoint`).
 
 ## O que não generalizar a partir deste caso
 

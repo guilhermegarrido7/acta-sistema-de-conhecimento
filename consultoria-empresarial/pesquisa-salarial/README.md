@@ -3,6 +3,14 @@
 Metodologia ACTA para projetos de Pesquisa de Remuneração e Benefícios, generalizada a partir dos
 casos FJS e PASB. Uma skill por etapa do ciclo de vida, do escopo comercial ao encerramento.
 
+> **Pré-requisito: instale `acta-way` antes.**
+> ```bash
+> claude plugin install acta-way@acta-sistema-de-conhecimento --scope user
+> ```
+> É onde vive o mecanismo de checkpoint entre sessões e consultores (seção 7 do método, abaixo). Sem
+> ele instalado, a instrução "carregue `acta-way`, skill `checkpoint`" não encontra nada — o
+> manifesto de plugin não tem campo de dependência, ninguém instala isso por você.
+
 Vizinho de `acta-pccr`: a pesquisa alimenta a tabela salarial do Plano de Cargos, mas é um projeto
 com metodologia, entregáveis e ciclo próprios.
 

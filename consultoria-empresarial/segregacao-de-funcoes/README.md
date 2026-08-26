@@ -2,6 +2,8 @@
 
 Revisão de perfis de acesso e segregação de funções: matriz de SoD, identificação de conflitos, desenho de perfis e plano de remediação.
 
+> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`) — é onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+>
 > **Status: esqueleto.** A estrutura do plugin existe, a metodologia ainda nao foi escrita.
 > Este plugin nao esta publicado no `marketplace.json` e por isso nao pode ser instalado ainda.
 > Ver [docs/ROADMAP.md](../../docs/ROADMAP.md).

@@ -2,6 +2,8 @@
 
 Transformação comercial e crescimento de receita: diagnóstico do funil, política comercial, cobertura e produtividade da força de vendas.
 
+> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`) — é onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+>
 > **Status: esqueleto.** A estrutura do plugin existe, a metodologia ainda nao foi escrita.
 > Este plugin nao esta publicado no `marketplace.json` e por isso nao pode ser instalado ainda.
 > Ver [docs/ROADMAP.md](../../docs/ROADMAP.md).

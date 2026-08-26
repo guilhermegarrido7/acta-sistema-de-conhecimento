@@ -13,6 +13,24 @@ Todo plugin de projeto assume que este está carregado e **não repete** o que e
 | `checkpoint` | Como registrar e retomar o estado de um engajamento entre sessões e entre consultores | ✅ |
 | `ambiente-tecnico` | Armadilhas de Windows, OneDrive e automação Office, com a solução que funcionou | ✅ |
 
+## Hook: lembrete de always-on
+
+`hooks/session-start.js` dispara uma vez a cada sessão nova (evento `SessionStart`), independente
+do assunto da conversa. Ele lê `~/.claude/settings.json` e, se algum plugin `@acta-sistema-de-
+conhecimento` estiver habilitado, instrui o Claude a mencionar isso na primeira resposta e sugerir
+desativar o que não estiver em uso:
+
+> Plugins do ACTA Sistema de Conhecimento habilitados nesta máquina: `acta-pesquisa-salarial`.
+> Se esta conversa não for sobre um dos projetos acima, considere `claude plugin disable <nome>`.
+
+**Por que isso existe:** custo always-on é cobrado por plugin **habilitado**, não por skill
+**usada** — a `description` de toda skill instalada precisa estar disponível para o Claude decidir
+se ela é relevante, mesmo antes de saber do que você vai falar. Instalar não é o problema; deixar
+ligado sem usar, sim.
+
+Se nenhum plugin ACTA estiver habilitado, o hook não produz saída nenhuma — silencioso por
+construção, nunca interrompe uma sessão que não tem nada a ver com isto.
+
 ## Por que o checkpoint existe
 
 Sessão de Claude não atravessa pessoas. Sessões ficam guardadas por diretório e por máquina, e

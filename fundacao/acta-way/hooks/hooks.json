@@ -1,0 +1,15 @@
+{
+  "description": "Lembra o custo de contexto always-on dos plugins ACTA ativos no início de cada sessão",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/session-start.js\""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -4,6 +4,14 @@ O "ACTA way of work" em auditoria interna: as regras que não se negociam, a dis
 modo de operar e a mecânica de cada entregável. Não é um projeto — é o método que todos os projetos
 de auditoria da firma carregam.
 
+> **Pré-requisito: instale `acta-way` antes.**
+> ```bash
+> claude plugin install acta-way@acta-sistema-de-conhecimento --scope user
+> ```
+> `aprendizado-e-historico` (abaixo) roda sobre o mecanismo de checkpoint que vive lá. O manifesto
+> de plugin não tem campo de dependência — sem `acta-way` instalado, essa instrução não encontra
+> nada.
+
 ## Skills
 
 | Skill | Papel | Status |

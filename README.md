@@ -55,9 +55,19 @@ formato de frontmatter, onde vive cada camada — estão em **[CONVENCOES.md](CO
 
 ## Instalação
 
+**`acta-way` é pré-requisito de todo projeto.** O manifesto de plugin do Claude Code não tem campo
+de dependência — nenhum `plugin.json` consegue forçar a instalação de outro. Instale sempre primeiro,
+manualmente, senão o checkpoint e o resto do método comum não existem na sua sessão.
+
 ```bash
 claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user
 ```
+
+```bash
+claude plugin install acta-way@acta-sistema-de-conhecimento --scope user
+```
+
+Depois, o(s) plugin(s) do projeto em que você vai trabalhar:
 
 ```bash
 claude plugin install acta-metodo-auditoria@acta-sistema-de-conhecimento --scope user

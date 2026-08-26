@@ -67,6 +67,34 @@ Duas regras que não se negociam:
 O protocolo completo está em `acta-way`, skill `checkpoint`. Skill de projeto **não redefine** o
 mecanismo: aponta para ele e acrescenta só o que é específico daquele tipo de trabalho.
 
+**Isso não é imposto pelo marketplace — não existe campo de dependência em `plugin.json`.** Instalar
+`acta-pesquisa-salarial` não instala `acta-way` junto; o texto "carregue `acta-way`, skill
+`checkpoint`" dentro de uma skill só funciona se o plugin `acta-way` também estiver instalado. Sem
+ele, a instrução aponta para uma skill que não existe na sessão, e falha calada.
+
+**Regra de todo plugin de projeto:** o `README.md` precisa listar `acta-way` como pré-requisito de
+instalação, em destaque, antes do plugin em si — não é opcional, é o que faz o checkpoint existir de
+fato.
+
+## 3c. Custo always-on: instale só o que está em uso
+
+Todo plugin **habilitado** soma tokens fixos em **toda sessão nova**, mesmo em conversas sem relação
+nenhuma com ele — é o preço de manter a `description` de cada skill disponível para o roteamento
+antes mesmo de o Claude saber do que você vai falar. Não é cobrado por skill usada, é cobrado por
+plugin ligado.
+
+`acta-way` traz um hook de `SessionStart` (`fundacao/acta-way/hooks/`) que lembra disso uma vez por
+sessão nova, só quando algum plugin ACTA está habilitado, e sugere desativar o que não estiver em
+uso:
+
+```bash
+claude plugin disable <nome>    # some do custo, reversível
+claude plugin enable <nome>     # volta a qualquer momento
+```
+
+Regra prática: habilite o plugin do projeto em que você está trabalhando; desative ao encerrar,
+`uninstall` só se não for retomar tão cedo.
+
 ## 4. Anatomia de um plugin
 
 ```

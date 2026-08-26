@@ -70,7 +70,9 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 ## Ao completar um plugin
 
 1. Escrever as skills em `skills/<etapa>/SKILL.md`.
-2. Atualizar o `README.md` do plugin com a tabela de skills e o fluxo típico.
+2. Atualizar o `README.md` do plugin com a tabela de skills e o fluxo típico. **Manter o aviso de
+   pré-requisito `acta-way` no topo** — o manifesto de plugin não tem campo de dependência, então
+   é o único lugar que garante que quem instala não perde o checkpoint.
 3. Subir a `version` no `plugin.json`.
 4. Adicionar a entrada em `.claude-plugin/marketplace.json`.
 5. Atualizar a linha aqui.

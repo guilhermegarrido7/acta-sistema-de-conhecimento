@@ -1,0 +1,8 @@
+{
+  "name": "acta-centro-servicos-compartilhados",
+  "version": "0.1.0",
+  "description": "Estruturação de CSC: escopo de serviços, modelo de atendimento e SLA, dimensionamento, catálogo de serviços e transição.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

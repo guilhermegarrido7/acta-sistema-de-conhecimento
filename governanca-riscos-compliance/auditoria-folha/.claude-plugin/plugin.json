@@ -1,0 +1,8 @@
+{
+  "name": "acta-auditoria-folha",
+  "version": "0.1.0",
+  "description": "Auditoria do ciclo de folha: análise da folha, encargos, horas extras, benefícios, identificação de anomalias e benchmark de remuneração.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

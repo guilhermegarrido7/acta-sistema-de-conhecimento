@@ -1,0 +1,8 @@
+{
+  "name": "acta-auditoria-estoques",
+  "version": "0.1.0",
+  "description": "Auditoria do ciclo de estoques: acuracidade e inventário, custeio e giro, obsolescência, perdas e controles de movimentação.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "acta-modelos-de-custeio",
+  "version": "0.1.0",
+  "description": "Desenho de modelo de custeio: escolha do método, mapeamento de direcionadores, rateio, custo por produto ou serviço e análise de margem.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "acta-auditoria-producao",
+  "version": "0.1.0",
+  "description": "Auditoria do ciclo de produção: apontamento, consumo e perdas, produtividade, manutenção e controles de qualidade.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

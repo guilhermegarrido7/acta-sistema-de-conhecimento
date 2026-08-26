@@ -1,0 +1,8 @@
+{
+  "name": "acta-pesquisa-salarial",
+  "version": "0.9.0",
+  "description": "Pesquisa de remuneração e benefícios: painel de participantes, matching de cargos, coleta, estatística, competitividade e painel interativo.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

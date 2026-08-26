@@ -1,0 +1,8 @@
+{
+  "name": "acta-remuneracao-variavel",
+  "version": "0.1.0",
+  "description": "Desenho de remuneração variável: elegibilidade, indicadores e metas, curva de pagamento, simulação de custo e regulamento.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

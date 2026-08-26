@@ -1,0 +1,8 @@
+{
+  "name": "acta-gestao-de-riscos",
+  "version": "0.1.0",
+  "description": "Implantação de gestão de riscos: identificação e taxonomia, avaliação de impacto e probabilidade, apetite, resposta e monitoramento.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

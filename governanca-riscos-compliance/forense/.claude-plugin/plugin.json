@@ -1,0 +1,8 @@
+{
+  "name": "acta-forense",
+  "version": "0.1.0",
+  "description": "Investigação forense: preservação de evidência, análise documental e de dados, entrevistas, quantificação de perda e relatório investigativo.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

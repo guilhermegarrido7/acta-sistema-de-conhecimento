@@ -1,0 +1,8 @@
+{
+  "name": "acta-planejamento-orcamentario",
+  "version": "0.1.0",
+  "description": "Construção e revisão de orçamento: premissas, orçamento base zero ou incremental, ciclo de aprovação, acompanhamento e análise de desvio.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

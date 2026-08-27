@@ -17,7 +17,8 @@ qualquer tarefa:
 2. Leia a seção 2 (regras de ouro). Não são negociáveis, valem para todo projeto.
 3. Identifique a etapa da tarefa na seção 3 e carregue apenas os módulos
    indicados.
-4. Ao terminar, registre no checkpoint do projeto conforme a seção 7.
+4. O checkpoint do projeto **não** se registra ao fim de cada etapa — só nos gatilhos da seção 7
+   (pedido do consultor, encerrar sessão ou trocar de chat, conversa pesada, ou a pergunta diária).
 
 **Módulos de referência** (ler sob demanda, não todos de uma vez):
 
@@ -216,8 +217,9 @@ Recalcular no slide é a principal fonte de divergência entre entregáveis.
 ## 7. Protocolo de checkpoint
 
 O mecanismo de checkpoint é **comum a todos os projetos da ACTA** e vive em `acta-way`, skill
-`checkpoint`. Carregue-a: ela traz os quatro momentos (abrir, levantar, detectar defasagem,
-fechar), a detecção dos dois modos de operação, e os templates.
+`checkpoint`. Carregue-a: ela traz os gatilhos de quando gravar (pedido do consultor, encerrar
+sessão ou trocar de chat, conversa pesada, ou a pergunta diária de início de dia e fim de tarde), a
+detecção de defasagem, a detecção dos dois modos de operação, e os templates.
 
 O que é específico da pesquisa salarial e deve entrar no checkpoint do projeto:
 

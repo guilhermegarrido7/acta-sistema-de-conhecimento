@@ -1,6 +1,6 @@
 ---
 name: checkpoint
-description: Registre e retome o estado de um engajamento ACTA entre sessões e entre consultores. Acionar ao abrir qualquer sessão de trabalho num projeto, ao concluir uma etapa, ao criar ou alterar entregável, ao tomar decisão metodológica, ou ao encerrar a sessão.
+description: Registre e retome o estado de um engajamento ACTA entre sessões e entre consultores. Acionar ao abrir qualquer sessão de trabalho num projeto, quando o consultor pedir o checkpoint, sinalizar que vai encerrar a sessão ou trocar de chat, quando a conversa estiver pesada e for hora de sugerir um chat novo, ou na pergunta diária de início de dia e fim de tarde.
 argument-hint: "[abrir | fechar | consolidar]"
 ---
 
@@ -15,7 +15,14 @@ escrever e ler esse arquivo.
 
 > **A metade que todo mundo esquece.** Escrever o checkpoint não resolve nada sozinho. Se ninguém
 > obriga o Claude do colega a **ler** no início da sessão, o arquivo existe e continua invisível.
-> Por isso o protocolo tem três momentos, e o primeiro é o de leitura.
+> Por isso o protocolo tem momentos de leitura e momentos de escrita, e eles não são os mesmos.
+
+**A responsabilidade de saber em que versão está é do consultor, não do Claude.** Esta skill não
+fica anunciando "estamos na v14" a cada resposta, nem grava a cada etapa concluída ou decisão
+tomada — isso é ruído, e checkpoint que interrompe demais vira checkpoint ignorado. O Claude informa
+a versão nos momentos definidos abaixo: ao abrir a sessão, na pergunta diária, e ao fechar. Fora
+disso, se o consultor perder a conta, a saída é simples: perguntar "em que versão estamos", que
+aciona a leitura do arquivo.
 
 ---
 
@@ -73,14 +80,18 @@ consultor lê do mesmo lugar.
 
 **Antes de produzir qualquer coisa.**
 
-1. Ler `~~controle/CHECKPOINT.md`. Anotar a versão e o carimbo de consolidação.
+1. Ler `~~controle/CHECKPOINT.md`. Anotar a versão, o carimbo de consolidação, e os dois campos de
+   lembrete da seção 0 (`Última pergunta diária`, `Última pergunta pós-17h`).
 2. Listar `~~controle/Sessoes/`. Toda entrada com timestamp **posterior** à consolidação é trabalho
    que ainda não entrou no estado: ler todas.
 3. Procurar cópia conflitante do OneDrive, arquivo terminado em `-<NOMEDAMAQUINA>.md`. Se existir,
    avisar: houve edição simultânea e alguém precisa reconciliar. O OneDrive guarda no máximo
    **5** dessas e não avisa ninguém.
-4. Avaliar defasagem (seção 5).
-5. **Fazer a leitura de volta e esperar confirmação.**
+4. Avaliar defasagem (seção 6).
+5. Avaliar se é caso da pergunta diária (seção 5) — não é a mesma coisa que a leitura de volta
+   abaixo: a leitura de volta confirma entendimento, a pergunta diária oferece gerar um checkpoint
+   novo.
+6. **Fazer a leitura de volta e esperar confirmação.**
 
 ### A leitura de volta
 
@@ -110,20 +121,70 @@ Não consigo verificar se existe versão mais nova. Confira na pasta antes de pr
 
 ---
 
-## 4. Momento 2: DURANTE, quando levantar
+## 4. Momento 2: quando GRAVAR
 
-**Levante o checkpoint quando:** uma etapa for concluída, um entregável for criado, alterado ou
-versionado, uma decisão metodológica for tomada, uma pendência for aberta ou resolvida, a sessão
-estiver encerrando, ou houver handoff explícito para outro consultor.
+Só quatro gatilhos escrevem checkpoint. Fora deles, o trabalho segue normalmente na conversa — o
+que foi feito, decidido ou pendente fica ali, e só vira uma entrada de sessão quando um destes
+ocorrer:
 
-**Não levante:** a cada mensagem, a cada rascunho, a cada consulta que não produziu nada. Checkpoint
-que interrompe demais é checkpoint que passa a ser ignorado.
+1. **O consultor pede o checkpoint** — explicitamente, invocando a skill ou simplesmente pedindo
+   "atualiza o checkpoint" / "gera o arquivo".
+2. **O consultor sinaliza que está encerrando** a sessão, ou que vai trocar de chat.
+3. **A conversa está pesada.** Você percebe sinais de contexto extenso — muitas trocas, muita
+   ferramenta chamada, o próprio Claude Code oferecendo resumir/compactar a sessão — e é hora de
+   sugerir abrir um chat novo. Nesse caso, **avise antes de agir:**
 
-**Sempre:** apresente no chat, **espere a validação**, só então grave. Nunca escreva calado.
+   > Esta conversa está ficando pesada em contexto. Vou gerar o checkpoint agora para você abrir um
+   > chat novo sem perder o que fizemos.
+
+   e só então grave.
+4. **A pergunta diária** (seção 5), quando o consultor responde que sim.
+
+**Não grave fora destes quatro casos** — nem a cada etapa concluída, nem a cada entregável criado,
+nem a cada decisão isolada. Acumule na conversa; consolide no gatilho.
+
+**Sempre, nos quatro casos:** apresente o que vai entrar na entrada de sessão, **espere a
+validação**, só então grave. Nunca escreva calado.
 
 ---
 
-## 5. Momento 3: detecção de defasagem
+## 5. A pergunta diária: o nudge de economia
+
+Independente dos gatilhos da seção 4, ofereça gerar o checkpoint em até **duas janelas por dia
+corrido** — nunca mais que isso, mesmo que a conversa continue por horas ou vire outro chat.
+
+| Janela | Dispara quando | Só pergunta se |
+|---|---|---|
+| Início do dia | a primeira mensagem de uma sessão cai numa data diferente da registrada em `Última pergunta diária` | ainda não perguntou hoje |
+| Fim de tarde | qualquer mensagem depois das 17h (confira a hora real, ex.: comando `date` no Bash, não deduza) | ainda não perguntou depois das 17h hoje |
+
+A pergunta é curta e sempre informa a versão atual, para o consultor decidir com o dado em mãos:
+
+> Você está na v14 do checkpoint, consolidada em 26/08. Quer que eu gere uma atualização agora?
+
+- **Se sim:** siga o Momento 2 → Momento 3 (fechar) normalmente.
+- **Se não:** registre que perguntou (abaixo) e siga trabalhando. Não insista, não repita na mesma
+  janela.
+
+**Registre que perguntou, sempre, independente da resposta.** Atualize os dois campos da seção 0 do
+`CHECKPOINT.md`:
+
+```
+Última pergunta diária: {{AAAAMMDD}}
+Última pergunta pós-17h: {{AAAAMMDD}}
+```
+
+Isso não gera uma nova versão do checkpoint sozinho — é só a marcação do lembrete, para outro chat
+aberto mais tarde no mesmo dia não perguntar de novo. O registro está no arquivo, não na sessão, e
+por isso qualquer chat novo o enxerga.
+
+**O que isto não é:** um lembrete a cada meia hora, nem cobrança. É uma pergunta, no máximo duas
+vezes por dia, pensada para caber no hábito de quem já pausa no fim da manhã e no fim da tarde —
+sem custar mais que isso em tokens.
+
+---
+
+## 6. Detecção de defasagem
 
 O limiar depende de quantos consultores estão ativos, porque dois dias num projeto solo é
 irrelevante e quatro horas num projeto de três consultores em coleta é perigoso.
@@ -138,20 +199,23 @@ conferiu a pasta. Não é obstrução, é o que impede refazer o trabalho que o 
 
 ---
 
-## 6. Momento 4: FECHAR a sessão
+## 7. Momento 3: FECHAR
 
-1. Montar a entrada de sessão pelo template `references/entrada-de-sessao.md`.
+Acionado por qualquer um dos quatro gatilhos da seção 4.
+
+1. Montar a entrada de sessão pelo template `references/TEMPLATE-entrada-de-sessao.md`, com tudo
+   que se acumulou na conversa desde a última entrada.
 2. Apresentar no chat. **Esperar validação.**
 3. Gravar em `~~controle/Sessoes/AAAAMMDD-HHMM <Consultor>.md`.
    No modo Desktop: entregar o bloco pronto e dizer o nome do arquivo e o caminho exato.
 4. Consolidar o `CHECKPOINT.md`: incorporar a entrada, subir a versão, carimbar data e autor.
    Antes de gravar, **reler** o `CHECKPOINT.md`. Se ele mudou desde que você o leu, alguém
    consolidou em paralelo e é preciso incorporar aquilo também.
-5. Se houve lição reutilizável em outro cliente, seguir a seção 8.
+5. Se houve lição reutilizável em outro cliente, seguir a seção 9.
 
 ---
 
-## 7. Datas: duas convenções
+## 8. Datas: duas convenções
 
 Nós escrevemos DD/MM por hábito, e isso quebra ordenação de arquivo.
 
@@ -160,7 +224,7 @@ Nós escrevemos DD/MM por hábito, e isso quebra ordenação de arquivo.
 
 ---
 
-## 8. Metodologia não é projeto
+## 9. Metodologia não é projeto
 
 | Mudou | Registra em | Chega no colega por |
 |---|---|---|
@@ -176,7 +240,7 @@ engajamento, é decisão de projeto e fica no `CHECKPOINT.md`.
 
 ---
 
-## 9. Documentação e conformidade
+## 10. Documentação e conformidade
 
 Para engajamentos de auditoria interna isto não é organização, é requisito. A Norma 14.6 do IIA,
 vigente desde 09/01/2025, exige que a documentação permita que um auditor interno informado e
@@ -189,19 +253,25 @@ auditoria, é conformidade. O mesmo ato satisfaz os dois.
 
 ---
 
-## 10. Templates
+## 11. Templates
 
 | Arquivo | Uso |
 |---|---|
-| `references/TEMPLATE-CHECKPOINT.md` | estado consolidado do engajamento |
+| `references/TEMPLATE-CHECKPOINT.md` | estado consolidado do engajamento, com os dois campos de lembrete diário na seção 0 |
 | `references/TEMPLATE-entrada-de-sessao.md` | uma por sessão de trabalho |
 | `references/TEMPLATE-APRENDIZADOS.md` | lição reutilizável |
 | `references/TEMPLATE-CLAUDE.md` | raiz do engajamento, carregado automaticamente |
 
 ---
 
-## 11. Por que este desenho
+## 12. Por que este desenho
 
+- **Gatilhos estreitos de escrita** existem porque checkpoint que grava a cada etapa ou decisão
+  interrompe o trabalho e é o primeiro hábito que a equipe abandona. Gravar só em fronteira real de
+  sessão preserva o mecanismo no longo prazo.
+- **A pergunta diária, com estado persistido no arquivo**, é o que torna a economia de tokens
+  compatível com hábito de equipe: pergunta pouco, nunca duas vezes na mesma janela, mesmo entre
+  chats diferentes, porque o registro mora no `CHECKPOINT.md` e não na sessão.
 - **Log append-only mais estado derivado** é o modelo de event sourcing de Fowler: persistir duas
   coisas distintas, um log de eventos e um estado de aplicação. Como o estado é derivável do log,
   uma cópia conflitante nele é aborrecimento, não perda.

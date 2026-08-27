@@ -25,9 +25,16 @@
 | Consultores ativos | `{{nomes, separados por vírgula}}` |
 | D0 | `{{dd/mm/aaaa}}` |
 | Conclusão prevista | `{{dd/mm/aaaa}}` |
+| Última pergunta diária | `{{AAAAMMDD ou vazio}}` |
+| Última pergunta pós-17h | `{{AAAAMMDD ou vazio}}` |
 
 > A contagem de **consultores ativos** define o limiar de defasagem: com 2 ou mais, o checkpoint
 > fica defasado na virada da jornada e bloqueia produção após 1 dia útil.
+>
+> As duas linhas de **pergunta diária** são atualizadas pelo Claude toda vez que oferece gerar um
+> checkpoint no início do dia ou depois das 17h, **independente da resposta do consultor**. É o que
+> impede a pergunta de se repetir se outro chat for aberto mais tarde no mesmo dia. Ver skill
+> `checkpoint`, seção 5.
 
 ## 1. Semáforo
 

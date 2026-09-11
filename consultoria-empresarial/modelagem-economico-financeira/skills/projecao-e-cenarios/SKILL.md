@@ -10,6 +10,10 @@ description: Direcionar a projeção operacional — drivers de volume e preço,
 **Oráculo. Não escreve na planilha.** Direciona a arquitetura da projeção, contesta drivers sem
 lastro e verifica as coerências que fazem o modelo fechar. Quem digita é o analista.
 
+Pré-requisito conceitual: a tese de crescimento de mercado/market share já sabatinada em
+`projecao-de-mercado-e-equity-story`. Esta skill assume que a equity story existe e a transforma em
+árvore de drivers, cenários formais e coerência com o reinvestimento — não constrói a tese do zero.
+
 ## O princípio que governa esta etapa
 
 > **Projete drivers, não linhas da DRE.**

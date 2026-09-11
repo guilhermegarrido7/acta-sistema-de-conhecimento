@@ -170,5 +170,7 @@ que o leitor não entende não convence.
 
 ## Próximo passo
 
-`projecao-e-cenarios`, onde o ROIC diagnosticado impõe a coerência entre crescimento e reinvestimento.
-E `custo-de-capital`, para que o spread tenha um WACC defensável do outro lado.
+`projecao-de-mercado-e-equity-story`, onde a tese de CAP aqui diagnosticada vira mecanismo de
+ganho ou perda de market share projetado. Depois, `projecao-e-cenarios`, onde o ROIC diagnosticado
+impõe a coerência entre crescimento e reinvestimento. E `custo-de-capital`, para que o spread tenha
+um WACC defensável do outro lado.

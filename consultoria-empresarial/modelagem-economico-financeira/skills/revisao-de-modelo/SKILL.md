@@ -275,5 +275,5 @@ de SG&A do ano 4 enquanto a camada 1 tem uma reconciliação aberta.
 
 ## Próximo passo
 
-Com o modelo validado: `triangulacao-e-faixa` para consolidar o resultado, e o plugin de M&A,
-`go-to-market` — o item 4 do gate é justamente o valuation preliminar estruturado.
+Com o modelo validado: `relatorio-de-valuation` para converter o resultado em documento, e o
+plugin de M&A, `go-to-market` — o item 4 do gate é justamente o valuation preliminar estruturado.

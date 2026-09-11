@@ -1,0 +1,8 @@
+{
+  "name": "acta-pensadores-de-negocios",
+  "version": "1.0.0",
+  "description": "Biblioteca de lentes teoricas de estrategia, valor, gestao, mercado e tecnologia, roteadas por tipo de pergunta e nao por autor.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

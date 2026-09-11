@@ -26,8 +26,8 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 | `acta-reducao-estrategica-de-custos` | Esqueleto | não | Programa de redução de custos: baseline de gastos, identificação e priorização de alavanca… |
 | `acta-transformacao-comercial` | Esqueleto | não | Transformação comercial e crescimento de receita: diagnóstico do funil, política comercial… |
 | `acta-excelencia-operacional` | Esqueleto | não | Modelagem e otimização de processos ponta a ponta, incluindo os ciclos PTP, OTC, RTR e HTR… |
-| `acta-ma-sell-buy-side` | Esqueleto | não | Assessoria em fusões e aquisições sell side e buy side: teaser, CIM, mapeamento de mercado… |
-| `acta-modelagem-economico-financeira` | Esqueleto | não | Construção de modelo econômico-financeiro: projeção de resultado e caixa, capital de giro,… |
+| `acta-ma-sell-buy-side` | Completo | sim | 9 de 9 skills com conteúdo real: convenções de projeto, estudo setorial, transações precedentes, go-to-market, teaser, segmentação de compradores, IM, solicitação de informações, negociação/LOI. |
+| `acta-modelagem-economico-financeira` | Completo | sim | 12 de 12 skills com conteúdo real, framework Koller/McKinsey: fundamentos, reorganização contábil, ROIC, custo de capital, capital de giro/CapEx, impostos, projeção/cenários, saúde de crédito, valor terminal, triangulação, revisão de modelo. |
 | `acta-selecao-de-erp` | Esqueleto | não | Seleção de ERP: levantamento de requisitos, matriz de aderência, RFP, avaliação de fornece… |
 | `acta-segregacao-de-funcoes` | Esqueleto | não | Revisão de perfis de acesso e segregação de funções: matriz de SoD, identificação de confl… |
 | `acta-dados-e-analytics` | Esqueleto | não | Projetos de dados e analytics: diagnóstico de maturidade, arquitetura de dados, modelagem,… |

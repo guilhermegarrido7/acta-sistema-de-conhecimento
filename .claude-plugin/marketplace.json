@@ -23,6 +23,18 @@
       "source": "./consultoria-empresarial/pesquisa-salarial",
       "category": "consultoria-empresarial",
       "description": "Pesquisa de remuneração e benefícios ponta a ponta: painel de participantes, matching de cargos, coleta, estatística, competitividade, relatório e painel interativo."
+    },
+    {
+      "name": "acta-modelagem-economico-financeira",
+      "source": "./consultoria-empresarial/modelagem-economico-financeira",
+      "category": "consultoria-empresarial",
+      "description": "Construção de modelo econômico-financeiro no framework Koller/McKinsey: reorganização contábil, ROIC e lucro econômico, custo de capital, capital de giro e CapEx, projeção e cenários, valor terminal, triangulação de faixa de valor e revisão de modelo."
+    },
+    {
+      "name": "acta-ma-sell-buy-side",
+      "source": "./consultoria-empresarial/ma-sell-buy-side",
+      "category": "consultoria-empresarial",
+      "description": "Assessoria em fusões e aquisições sell side e buy side: convenções de mandato, tese setorial, transações precedentes, teaser, segmentação de compradores, information memorandum, solicitação de informações e negociação/LOI."
     }
   ]
 }

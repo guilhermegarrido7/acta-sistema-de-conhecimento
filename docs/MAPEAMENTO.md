@@ -81,7 +81,7 @@ ACTA a mid-market brasileiro.
 
 | Plugin | Skills alvo | Âncora |
 |---|---|---|
-| `acta-metodo-auditoria` | metodo-auditoria ✅ · aprendizado-e-historico ✅ · bases-e-conciliacao · papel-de-trabalho · programa-de-testes · redacao-de-achados · relatorio-de-auditoria | IIA Global Internal Audit Standards (2024) |
+| `acta-metodo-auditoria` ✅ | metodo-auditoria · aprendizado-e-historico · bases-e-conciliacao · papel-de-trabalho · programa-de-testes · redacao-de-achados · relatorio-de-auditoria | IIA Global Internal Audit Standards (2024) |
 | `acta-controles-internos` | matriz-riscos-controles · walkthrough-e-narrativa · desenho-vs-efetividade · teste-de-controle-e-amostragem · deficiencias-e-severidade · itgc | COSO 2013 (5 componentes, 17 princípios); PCAOB AS 2201; COBIT |
 | `acta-gestao-de-riscos` | taxonomia-de-riscos · apetite-e-tolerancia · avaliacao-impacto-probabilidade · matriz-e-mapa-de-calor · planos-de-resposta · monitoramento-e-kri | COSO ERM 2017; ISO 31000 |
 | `acta-revenue-assurance` | ciclo-da-receita · contrato-e-cadastro · medicao-e-aceite · faturamento-e-nf · recebimento-e-inadimplencia · glosas-e-disputas | Ciclo OTC; IIA |
@@ -133,34 +133,37 @@ ACTA a mid-market brasileiro.
 A ordem abaixo é por valor entregue sobre esforço, com peso para o que já tem matéria-prima escrita
 e para o que destrava outros plugins.
 
-### P0 — Higiene do catálogo
+### P0 — Higiene do catálogo ✅
 
 Destrava valor que já existe. Esforço de horas.
 
-1. Publicar `acta-pensadores-de-negocios` no `marketplace.json` — 15 skills prontas, hoje invisíveis.
-2. Atualizar o `README.md` da raiz: marcar o que está publicado, incluir a categoria Conceitos.
-3. Criar o **guia de instalação por engajamento** — "vou fazer uma auditoria de folha: instalo o quê?".
+1. ✅ Publicar `acta-pensadores-de-negocios` no `marketplace.json` — 15 skills prontas, que estavam
+   invisíveis.
+2. ✅ Atualizar o `README.md` da raiz: marcar o que está publicado, incluir a categoria Conceitos.
+3. ✅ Criar o **guia de instalação por engajamento** — "vou fazer uma auditoria de folha: instalo o
+   quê?".
 
 ### P1 — Absorver a metodologia de auditoria já escrita
 
-O maior ativo disponível hoje: nove skills de metodologia de auditoria testadas em campo, que
-preenchem cinco esqueletos existentes e originam um plugin novo.
+O maior ativo disponível: metodologia de auditoria testada em campo, que preenche cinco esqueletos
+existentes e origina um plugin novo.
 
-4. Merge nos esqueletos de `acta-metodo-auditoria`: bases-e-conciliacao, papel-de-trabalho,
+4. ✅ Merge nos esqueletos de `acta-metodo-auditoria`: bases-e-conciliacao, papel-de-trabalho,
    programa-de-testes, redacao-de-achados, relatorio-de-auditoria.
 5. Escrever `acta-revenue-assurance` a partir do material de ciclo de receita.
 6. Deduplicar contra `acta-way` (memória/aprendizado/ambiente Windows) — o que é fundação fica na
-   fundação e sai das skills de auditoria.
-7. No merge, aplicar o padrão da seção 2: descrição ≤ 350 caracteres (o material de origem tem
-   média de 970) e remoção de nome de pessoa e de cliente.
+   fundação e sai das skills de auditoria. **Pendente:** três blocos do material de origem não têm
+   equivalente em lugar nenhum e precisam de destino — edição em massa de arquivos, handoff entre
+   sessões e retrospectiva por leitura de transcript.
+7. ✅ No merge, aplicar o padrão da seção 2 e remover nome de pessoa e de cliente.
 
-### P2 — Guardrails
+### P2 — Guardrails ✅
 
 Sem isso, o padrão da seção 2 é só intenção.
 
-8. Escrever o padrão de skill em `CONVENCOES.md`.
-9. `scripts/validar-skills.py` — falha se descrição passar de 350 caracteres, se o corpo passar de
-   300 linhas, ou se houver nome de cliente conhecido no texto.
+8. ✅ O padrão de skill já estava em `CONVENCOES.md` §5 — o que faltava era aplicá-lo.
+9. ✅ `scripts/validar-skills.py`. A relação de clientes vive em `clientes.local.txt`, fora do
+   versionamento: publicar a carteira da firma seria o mesmo vazamento que o script impede.
 
 ### P3 — Plugins com matéria-prima real
 

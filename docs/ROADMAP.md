@@ -49,7 +49,7 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 | `acta-metodo-auditoria` | Completo | sim | 7 de 7 skills com conteúdo real: método, bases e conciliação, papel de trabalho, programa de testes, redação de achados, relatório e aprendizado. Metodologia de campo absorvida e anonimizada. |
 | `acta-governanca` | Esqueleto | não | Estruturação de governança corporativa: instâncias e alçadas, regimento e estatuto, compos… |
 | `acta-gestao-de-riscos` | Esqueleto | não | Implantação de gestão de riscos: identificação e taxonomia, avaliação de impacto e probabi… |
-| `acta-revenue-assurance` | Esqueleto | não | Auditoria do ciclo de receita e revenue assurance: contrato, medição, aceite, faturamento,… |
+| `acta-revenue-assurance` | Completo | sim | 6 skills: ciclo da receita, contrato e cadastro, medição e aceite, faturamento e NF, recebimento e inadimplência, matriz de riscos da receita. |
 | `acta-programa-de-integridade` | Esqueleto | não | Implantação de programa de integridade: código de conduta, canal de denúncias, due diligen… |
 | `acta-controles-internos` | Esqueleto | não | Desenho e teste de controles internos: matriz de riscos e controles, walkthrough, teste de… |
 | `acta-forense` | Esqueleto | não | Investigação forense: preservação de evidência, análise documental e de dados, entrevistas… |

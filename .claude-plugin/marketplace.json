@@ -41,6 +41,12 @@
       "source": "./conceitos/pensadores-de-negocios",
       "category": "conceitos",
       "description": "Biblioteca de lentes teóricas de estratégia, valor, gestão, mercado e tecnologia — Porter, Greenwald, Koller, Christensen, Prahalad, McGrath e outras — roteadas pela pergunta que cada uma responde, não pelo autor."
+    },
+    {
+      "name": "acta-revenue-assurance",
+      "source": "./governanca-riscos-compliance/revenue-assurance",
+      "category": "governanca-riscos-compliance",
+      "description": "Auditoria do ciclo da receita ponta a ponta: contrato e cadastro, medição e aceite, glosas, faturamento e nota fiscal, cut-off, recebimento e inadimplência, com a matriz de riscos da receita e o padrão de degradação de evidência."
     }
   ]
 }

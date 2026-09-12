@@ -8,7 +8,9 @@ que regras impedem o marketplace de ficar pesado.** O status corrente de cada pl
 
 ## 1. Diagnóstico
 
-Medição feita sobre o repositório em setembro de 2026.
+**Linha de base**, medida antes da rodada de trabalho que este documento organiza. Os números
+abaixo são o problema que a seção 4 ataca — não o estado atual. O estado atual vive em
+[ROADMAP.md](ROADMAP.md).
 
 | Métrica | Valor |
 |---|---|
@@ -84,7 +86,7 @@ ACTA a mid-market brasileiro.
 | `acta-metodo-auditoria` ✅ | metodo-auditoria · aprendizado-e-historico · bases-e-conciliacao · papel-de-trabalho · programa-de-testes · redacao-de-achados · relatorio-de-auditoria | IIA Global Internal Audit Standards (2024) |
 | `acta-controles-internos` | matriz-riscos-controles · walkthrough-e-narrativa · desenho-vs-efetividade · teste-de-controle-e-amostragem · deficiencias-e-severidade · itgc | COSO 2013 (5 componentes, 17 princípios); PCAOB AS 2201; COBIT |
 | `acta-gestao-de-riscos` | taxonomia-de-riscos · apetite-e-tolerancia · avaliacao-impacto-probabilidade · matriz-e-mapa-de-calor · planos-de-resposta · monitoramento-e-kri | COSO ERM 2017; ISO 31000 |
-| `acta-revenue-assurance` | ciclo-da-receita · contrato-e-cadastro · medicao-e-aceite · faturamento-e-nf · recebimento-e-inadimplencia · glosas-e-disputas | Ciclo OTC; IIA |
+| `acta-revenue-assurance` ✅ | ciclo-da-receita · contrato-e-cadastro · medicao-e-aceite · faturamento-e-nf · recebimento-e-inadimplencia · matriz-de-riscos-da-receita | Ciclo OTC; IIA |
 | `acta-auditoria-folha` | universo-da-folha · encargos-e-beneficios · horas-extras-e-jornada · admissao-e-desligamento · terceiros-e-pj | CLT; eSocial; IIA |
 | `acta-auditoria-compras` | ciclo-ptp · requisicao-e-alcada · cotacao-e-selecao · contrato-e-aditivo · recebimento-e-pagamento | APQC PCF 4.0; ciclo PTP |
 | `acta-auditoria-estoques` | acuracidade-e-inventario · custeio-e-giro · obsolescencia-e-provisao · movimentacao-e-perdas | CPC 16; IIA |
@@ -150,7 +152,7 @@ existentes e origina um plugin novo.
 
 4. ✅ Merge nos esqueletos de `acta-metodo-auditoria`: bases-e-conciliacao, papel-de-trabalho,
    programa-de-testes, redacao-de-achados, relatorio-de-auditoria.
-5. Escrever `acta-revenue-assurance` a partir do material de ciclo de receita.
+5. ✅ Escrever `acta-revenue-assurance` a partir do material de ciclo de receita.
 6. Deduplicar contra `acta-way` (memória/aprendizado/ambiente Windows) — o que é fundação fica na
    fundação e sai das skills de auditoria. **Pendente:** três blocos do material de origem não têm
    equivalente em lugar nenhum e precisam de destino — edição em massa de arquivos, handoff entre

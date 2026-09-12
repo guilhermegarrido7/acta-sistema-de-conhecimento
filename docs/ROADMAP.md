@@ -11,7 +11,7 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 | Plugin | Status | No marketplace | Observação |
 |---|---|---|---|
-| `acta-way` | Parcial | sim | `checkpoint` e `ambiente-tecnico` prontos. Faltam identidade visual, convenções de entregável, anonimização/LGPD e redação ACTA. |
+| `acta-way` | Parcial | sim | `checkpoint` (com handoff e detecção de bifurcação), `ambiente-tecnico` e `edicao-em-massa` prontos. Faltam identidade visual, convenções de entregável, anonimização/LGPD e redação ACTA. |
 
 ## Conceitos
 

@@ -77,7 +77,7 @@ ACTA a mid-market brasileiro.
 
 | Plugin | Skills alvo | Âncora |
 |---|---|---|
-| `acta-way` | checkpoint ✅ · ambiente-tecnico ✅ · identidade-visual · convencoes-de-entregavel · anonimizacao-e-lgpd · redacao-acta | Identidade da casa; LGPD |
+| `acta-way` | checkpoint ✅ · ambiente-tecnico ✅ · edicao-em-massa ✅ · identidade-visual · convencoes-de-entregavel · anonimizacao-e-lgpd · redacao-acta | Identidade da casa; LGPD |
 
 ### Governança, Riscos e Compliance
 
@@ -153,10 +153,9 @@ existentes e origina um plugin novo.
 4. ✅ Merge nos esqueletos de `acta-metodo-auditoria`: bases-e-conciliacao, papel-de-trabalho,
    programa-de-testes, redacao-de-achados, relatorio-de-auditoria.
 5. ✅ Escrever `acta-revenue-assurance` a partir do material de ciclo de receita.
-6. Deduplicar contra `acta-way` (memória/aprendizado/ambiente Windows) — o que é fundação fica na
-   fundação e sai das skills de auditoria. **Pendente:** três blocos do material de origem não têm
-   equivalente em lugar nenhum e precisam de destino — edição em massa de arquivos, handoff entre
-   sessões e retrospectiva por leitura de transcript.
+6. ✅ Deduplicar contra `acta-way` — o que é fundação ficou na fundação. Os três blocos órfãos
+   ganharam destino: edição em massa virou skill própria (`acta-way:edicao-em-massa`), e handoff
+   entre sessões e detecção de bifurcação entraram em `acta-way:checkpoint` (§7.1 e §6.1).
 7. ✅ No merge, aplicar o padrão da seção 2 e remover nome de pessoa e de cliente.
 
 ### P2 — Guardrails ✅

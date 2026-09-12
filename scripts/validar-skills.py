@@ -28,16 +28,29 @@ ARQUIVO_CLIENTES = "clientes.local.txt"
 
 
 def carregar_clientes(raiz):
+    """Lê a relação local de nomes proibidos.
+
+    Um nome por linha. Prefixo `=` força casamento sensível a maiúsculas, para o caso em que o
+    nome do cliente colide com palavra comum: `=Célula` pega "a Célula" e não pega "célula
+    mesclada". Sem o prefixo, o casamento ignora maiúsculas.
+    """
     caminho = os.path.join(raiz, ARQUIVO_CLIENTES)
     if not os.path.exists(caminho):
         return None
-    nomes = []
+    padroes = {}
     for linha in open(caminho, encoding="utf-8"):
         linha = linha.split("#", 1)[0].strip()
-        if linha:
-            nomes.append(linha)
-    # Fronteira de palavra: um nome curto não pode casar dentro de outra palavra.
-    return {n: re.compile(rf"(?<![\w]){re.escape(n)}(?![\w])", re.I) for n in nomes}
+        if not linha:
+            continue
+        sensivel = linha.startswith("=")
+        nome = linha[1:].strip() if sensivel else linha
+        if not nome:
+            continue
+        # Fronteira de palavra: um nome curto não pode casar dentro de outra palavra.
+        padroes[nome] = re.compile(
+            rf"(?<![\w]){re.escape(nome)}(?![\w])", 0 if sensivel else re.I
+        )
+    return padroes
 
 # Material de referência de terceiros, estacionado no repositório e não publicado como plugin.
 # Ver a seção "Material de referência solto" do README da raiz.

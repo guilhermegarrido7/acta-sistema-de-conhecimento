@@ -65,6 +65,18 @@ Rode antes de publicar:
 python scripts/validar-skills.py
 ```
 
+### A relação de clientes
+
+Vive em `clientes.local.txt` na raiz, **fora do versionamento**: publicar a carteira da firma seria
+o mesmo vazamento que o script existe para impedir. Um nome por linha; acrescente ao fechar cada
+mandato novo. Sem o arquivo, o script roda e **avisa** que a checagem de cliente não foi executada,
+em vez de dar por feita.
+
+Quando o nome do cliente colide com palavra comum — há cliente chamado *Célula*, e "célula
+mesclada" aparece em quase toda skill de auditoria —, prefixe a linha com `=` para forçar
+casamento sensível a maiúsculas. Sem isso, o alarme falso é tão frequente que a equipe desliga a
+verificação, que é o pior desfecho possível.
+
 ---
 
 ## 3. Desenho alvo por plugin

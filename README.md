@@ -12,12 +12,15 @@ de projeto, organizado pelas duas práticas da firma.
 ACTA — Sistema de Conhecimento
 │
 ├── Fundação
-│   └── acta-way ......................... método transversal a toda a firma
+│   └── acta-way ✅ ...................... método transversal a toda a firma
+│
+├── Conceitos
+│   └── Pensadores de Negócios ✅ ........ lentes teóricas roteadas por pergunta
 │
 ├── Consultoria Empresarial
 │   ├── _metodo .......................... como se conduz um projeto de consultoria
-│   ├── Planejamento Estratégico          ├── M&A Sell Side / Buy Side
-│   ├── Planejamento Orçamentário         ├── Modelagem Econômico-Financeira
+│   ├── Planejamento Estratégico          ├── M&A Sell Side / Buy Side ✅
+│   ├── Planejamento Orçamentário         ├── Modelagem Econômico-Financeira ✅
 │   ├── Modelos de Operações Inteligentes ├── Análise de Aderência e Seleção de ERP
 │   ├── Centro de Serviços Compartilhados ├── Perfis de Acesso e Segregação de Funções
 │   ├── Modelos de Custeio                ├── Dados e Analytics
@@ -38,7 +41,23 @@ ACTA — Sistema de Conhecimento
 ```
 
 ✅ = tem conteúdo e está no marketplace. Os demais são esqueleto — ver
-[docs/ROADMAP.md](docs/ROADMAP.md).
+[docs/ROADMAP.md](docs/ROADMAP.md) para o status e [docs/MAPEAMENTO.md](docs/MAPEAMENTO.md) para o
+desenho alvo de cada um e a ordem em que serão escritos.
+
+## O que instalar para o meu trabalho
+
+`acta-way` primeiro, sempre. Depois, o plugin do engajamento:
+
+| Se o seu trabalho é… | Instale |
+|---|---|
+| Auditoria interna de qualquer ciclo | `acta-metodo-auditoria` |
+| Valuation, modelo econômico-financeiro, DCF | `acta-modelagem-economico-financeira` |
+| Venda ou compra de empresa, teaser, IM, negociação | `acta-ma-sell-buy-side` (+ o de modelagem, para o número) |
+| Pesquisa de remuneração e benefícios | `acta-pesquisa-salarial` |
+| Análise competitiva, tese de investimento, diagnóstico estratégico | `acta-pensadores-de-negocios` |
+
+Instalar o que não está em uso custa contexto em toda sessão, mesmo sem usar. Desinstale ou desative
+o que não for do engajamento corrente: `claude plugin disable <nome>`.
 
 ## Como está desenhado, e por quê
 

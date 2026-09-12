@@ -13,6 +13,12 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 |---|---|---|---|
 | `acta-way` | Parcial | sim | `checkpoint` e `ambiente-tecnico` prontos. Faltam identidade visual, convenções de entregável, anonimização/LGPD e redação ACTA. |
 
+## Conceitos
+
+| Plugin | Status | No marketplace | Observação |
+|---|---|---|---|
+| `acta-pensadores-de-negocios` | Completo | sim | 15 skills: a roteadora `lentes` e 14 lentes de pensador (`user-invocable: false`). Fronteira com `acta-modelagem-economico-financeira` declarada em `tim-koller`. |
+
 ## Consultoria Empresarial
 
 | Plugin | Status | No marketplace | Observação |

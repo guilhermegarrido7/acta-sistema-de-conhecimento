@@ -35,6 +35,12 @@
       "source": "./consultoria-empresarial/ma-sell-buy-side",
       "category": "consultoria-empresarial",
       "description": "Assessoria em fusões e aquisições sell side e buy side: convenções de mandato, tese setorial, transações precedentes, teaser, segmentação de compradores, information memorandum, solicitação de informações e negociação/LOI."
+    },
+    {
+      "name": "acta-pensadores-de-negocios",
+      "source": "./conceitos/pensadores-de-negocios",
+      "category": "conceitos",
+      "description": "Biblioteca de lentes teóricas de estratégia, valor, gestão, mercado e tecnologia — Porter, Greenwald, Koller, Christensen, Prahalad, McGrath e outras — roteadas pela pergunta que cada uma responde, não pelo autor."
     }
   ]
 }

@@ -46,7 +46,7 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 | Plugin | Status | No marketplace | Observação |
 |---|---|---|---|
-| `acta-metodo-auditoria` | Parcial | sim | Skill de método normalizada e publicada. `aprendizado-e-historico` escrita sobre o mecanismo de checkpoint. As 5 restantes (bases, WP, programa de testes, redação, relatório) em esqueleto. |
+| `acta-metodo-auditoria` | Completo | sim | 7 de 7 skills com conteúdo real: método, bases e conciliação, papel de trabalho, programa de testes, redação de achados, relatório e aprendizado. Metodologia de campo absorvida e anonimizada. |
 | `acta-governanca` | Esqueleto | não | Estruturação de governança corporativa: instâncias e alçadas, regimento e estatuto, compos… |
 | `acta-gestao-de-riscos` | Esqueleto | não | Implantação de gestão de riscos: identificação e taxonomia, avaliação de impacto e probabi… |
 | `acta-revenue-assurance` | Esqueleto | não | Auditoria do ciclo de receita e revenue assurance: contrato, medição, aceite, faturamento,… |

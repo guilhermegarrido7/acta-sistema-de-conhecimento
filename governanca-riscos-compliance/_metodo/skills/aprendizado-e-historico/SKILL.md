@@ -24,7 +24,7 @@ corrigiu.
    - O que errei e como descobri — inclusive o erro que morreu no rascunho.
    - O que ficou em aberto.
 2. **Espere a reflexão do auditor.** É aqui que a lição é corrigida. Foi assim que "não existe regra
-   no Swile" virou "a regra existe e fecha ao centavo": a primeira versão da lição estava errada, e
+   no benefício" virou "a regra existe e fecha ao centavo": a primeira versão da lição estava errada, e
    registrá-la teria propagado o erro para o próximo cliente.
 3. **Só então grave**, conforme a seção 3.
 

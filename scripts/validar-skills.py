@@ -20,15 +20,24 @@ MAX_DESC = 380          # acima disso desperdiça contexto em toda sessão
 MAX_LINHAS = 300        # corpo do SKILL.md; acima disso, mover para references/
 MAX_SKILLS_PLUGIN = 12  # acima disso o plugin passa de ~1 mil tokens always-on
 
-# Nomes que não podem aparecer no conteúdo publicado. O marketplace é compartilhado na firma:
-# caso real vira exemplo anonimizado. Acrescente aqui ao fechar um novo mandato.
-# Casados com fronteira de palavra — "Solví" não pode casar dentro de "resolvido".
-PROIBIDOS = [
-    "bosque da paz", "solví", "solvi", "consórcio ba", "consorcio ba",
-    "grupo jsg", "bahia ecologia", "baeco", "cirklo", "eletromídia", "eletromidia",
-    "tronox", "neogrid", "concremat", "new chase", "premium entretenimento",
-]
-PADRAO_PROIBIDOS = {p: re.compile(rf"(?<![\w]){re.escape(p)}(?![\w])", re.I) for p in PROIBIDOS}
+# A lista de nomes de cliente NÃO vive neste arquivo, e não pode viver: o repositório é público,
+# e uma relação da carteira da firma versionada aqui seria o mesmo vazamento que este script existe
+# para impedir. Ela fica em `clientes.local.txt` na raiz — um nome por linha, ignorado pelo git.
+# Sem esse arquivo o script roda e avisa que a checagem de cliente não foi executada.
+ARQUIVO_CLIENTES = "clientes.local.txt"
+
+
+def carregar_clientes(raiz):
+    caminho = os.path.join(raiz, ARQUIVO_CLIENTES)
+    if not os.path.exists(caminho):
+        return None
+    nomes = []
+    for linha in open(caminho, encoding="utf-8"):
+        linha = linha.split("#", 1)[0].strip()
+        if linha:
+            nomes.append(linha)
+    # Fronteira de palavra: um nome curto não pode casar dentro de outra palavra.
+    return {n: re.compile(rf"(?<![\w]){re.escape(n)}(?![\w])", re.I) for n in nomes}
 
 # Material de referência de terceiros, estacionado no repositório e não publicado como plugin.
 # Ver a seção "Material de referência solto" do README da raiz.
@@ -49,6 +58,12 @@ def frontmatter(txt):
 def validar(raiz):
     erros, avisos = [], []
     por_plugin = {}
+    clientes = carregar_clientes(raiz)
+    if clientes is None:
+        avisos.append(
+            f"{ARQUIVO_CLIENTES} não encontrado na raiz — a checagem de nome de cliente NÃO rodou. "
+            "Crie o arquivo (um nome por linha) para que ela passe a valer nesta máquina."
+        )
 
     for dirpath, dirnames, filenames in os.walk(raiz):
         dirnames[:] = [d for d in dirnames if d not in IGNORAR and d != ".git"]
@@ -87,9 +102,10 @@ def validar(raiz):
                 "Mover detalhe para references/, que só carrega quando necessário."
             )
 
-        achados = sorted({p for p, padrao in PADRAO_PROIBIDOS.items() if padrao.search(txt)})
-        if achados:
-            erros.append(f"{rel}: nome de cliente no texto: {', '.join(achados)}. Anonimize.")
+        if clientes:
+            achados = sorted({n for n, padrao in clientes.items() if padrao.search(txt)})
+            if achados:
+                erros.append(f"{rel}: nome de cliente no texto: {', '.join(achados)}. Anonimize.")
 
         partes = os.path.normpath(rel).split(os.sep)
         plugin = partes[partes.index("skills") - 1] if "skills" in partes else partes[0]

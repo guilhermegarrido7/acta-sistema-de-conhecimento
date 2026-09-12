@@ -178,7 +178,7 @@ validar a 2", isso é ordem de execução, não sugestão.
 **Regra nova entra DEPOIS, e não altera regra anterior.** *"essa regra para pegar esses casos tem
 que aplicar uma nova regra que vem DEPOIS, não mudar as regras anteriores, pra não dar falso negativo"*
 (19/08/2026). Vale para qualquer régua de casamento, classificação ou conciliação. O caso que gerou:
-no BBA, um bem legítimo foi dado como inexistente porque o nome do fornecedor não batia — a FAF
+num mandato, um bem legítimo foi dado como inexistente porque o nome do fornecedor não batia — a FAF
 cadastra **nome fantasia** e o razão **razão social**, e `SAT` contra `SISTEMA DE AUTOMACAO E
 TECNOLOGIA` dá similaridade 0,00. A correção certa não foi baixar o limiar de similaridade, que
 mexeria em milhares de pares já casados, e sim acrescentar uma **passada terminal** que casa o que
@@ -190,7 +190,7 @@ documento mais valor; o nome serve para desempatar homônimo.
 avalio a depreciação uniforme com tudo já consolidado"* (20/08/2026). Na prática:
 
 1. **Completude se prova, não se argumenta.** Varra **todas** as contas ou todos os registros sem
-   filtro, liste o que ficou fora **com valor**, e classifique cada exclusão. Custa um script. No BBA
+   filtro, liste o que ficou fora **com valor**, e classifique cada exclusão. Custa um script. Num mandato
    isso revelou que uma conta dada como "fora do universo" estava dentro, e provou que tudo o que
    ficava fora era depreciação acumulada ou obra em andamento.
 2. **Nunca feche diferença de uma grandeza com número de outra.** Custo não se explica com residual.
@@ -205,7 +205,7 @@ não é só a taxa de acerto: é a **ausência de casos que casam com valor dive
 divergências significa chave frouxa; taxa média com zero divergência significa chave certa.
 
 **Hipótese do revisor também se testa antes de implementar.** Descartar regra por medição vale tanto
-quanto criar regra por medição, e o custo do teste é um script. No BBA, implementar por deferência uma
+quanto criar regra por medição, e o custo do teste é um script. Num mandato, implementar por deferência uma
 regra pedida teria criado dupla contagem de R$ 34 milhões; a medição mostrou que os dois lados do
 lançamento já estavam na base.
 
@@ -270,7 +270,7 @@ você resolveu, gera três coisas:
 3. **O que ficou em aberto.**
 
 Apresente isso no chat, em bloco curto e destacado, e **espere a reflexão do auditor antes de
-gravar**. O auditor corrige a lição, foi assim que "não existe regra no Swile" virou "a regra existe
+gravar**. O auditor corrige a lição, foi assim que "não existe regra no benefício" virou "a regra existe
 e fecha ao centavo".
 
 Depois de validado, o registro segue o **mecanismo de checkpoint comum a todos os projetos da

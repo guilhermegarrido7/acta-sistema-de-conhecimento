@@ -119,6 +119,7 @@ pago. Usar assim seria violar os termos, com risco de derrubada sem aviso.
 ### A recomendação
 
 **Cloudflare Pages + Cloudflare Access (Zero Trust), ambos no plano gratuito.**
+O passo a passo de execução está em [DEPLOY.md](DEPLOY.md).
 
 | Requisito | Como é atendido | Custo |
 |---|---|---|

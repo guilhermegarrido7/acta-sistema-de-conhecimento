@@ -10,9 +10,7 @@
   },
   "dependencies": {
     "astro": "^5.14.1",
-    "marked": "^16.4.1"
-  },
-  "devDependencies": {
+    "marked": "^16.4.1",
     "pagefind": "^1.4.0"
   }
 }

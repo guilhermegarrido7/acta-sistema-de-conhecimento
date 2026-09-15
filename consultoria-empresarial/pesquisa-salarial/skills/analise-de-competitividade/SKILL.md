@@ -1,6 +1,7 @@
 ---
 name: analise-de-competitividade
 description: Analise a competitividade da remuneração do cliente contra o painel. Acionar ao calcular comparatio, gap e ajuste necessário, ao classificar posição na faixa, ao estimar custo de equalização em cenários, ou ao priorizar por criticidade versus gap.
+disable-model-invocation: true   # esqueleto: nao roteia nem custa contexto ate ser escrita
 ---
 
 # analise-de-competitividade

@@ -1,6 +1,7 @@
 ---
 name: encerramento-e-licoes-aprendidas
 description: Encerre o projeto e converta o engajamento em benchmark reutilizável. Acionar ao montar o pacote de encerramento, ao arquivar release e livro de cálculos, ao escrever o caso em casos/, ou ao atualizar o estudo de benchmarking com o que mudou no método.
+disable-model-invocation: true   # esqueleto: nao roteia nem custa contexto ate ser escrita
 ---
 
 # encerramento-e-licoes-aprendidas

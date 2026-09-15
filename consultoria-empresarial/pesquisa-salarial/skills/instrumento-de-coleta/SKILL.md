@@ -1,6 +1,7 @@
 ---
 name: instrumento-de-coleta
 description: Desenhe e homologue o formulário e o dicionário de dados da coleta. Acionar ao estruturar os blocos do instrumento, ao definir regras de validação na entrada e tabelas de domínio, ao escolher a tecnologia de coleta, ou ao homologar com participante-piloto.
+disable-model-invocation: true   # esqueleto: nao roteia nem custa contexto ate ser escrita
 ---
 
 # instrumento-de-coleta

@@ -1,6 +1,7 @@
 ---
 name: tratamento-e-validacao-da-base
 description: Consolide e trate a base bruta até ela passar os checks de consistência. Acionar ao normalizar jornada, moeda e periodicidade, ao tratar outliers, ao rodar as validações de integridade entre bases, ou ao registrar exclusão com motivo.
+disable-model-invocation: true   # esqueleto: nao roteia nem custa contexto ate ser escrita
 ---
 
 # tratamento-e-validacao-da-base

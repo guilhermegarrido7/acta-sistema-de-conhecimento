@@ -1,6 +1,7 @@
 ---
 name: conducao-da-coleta
 description: Opere o campo da coleta até a base estar completa. Acionar ao receber e triar retornos, ao sanear resposta incompleta, ao escalonar atraso de participante, ou ao decidir o corte de encerramento da coleta.
+disable-model-invocation: true   # esqueleto: nao roteia nem custa contexto ate ser escrita
 ---
 
 # conducao-da-coleta

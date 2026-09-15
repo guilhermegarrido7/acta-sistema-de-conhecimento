@@ -54,9 +54,20 @@ compensa quando várias pessoas administram. Ver a seção 6.
    | Build output directory | `dist` |
    | **Root directory (advanced)** | **`site`** |
 
-   O **Root directory** é o campo que quase sempre se esquece. Sem ele, o build roda na raiz do
-   repositório, não encontra o `package.json` e falha. Com ele, `dist` passa a ser relativo a
-   `site/`.
+   O **Root directory** é o campo que quase sempre se esquece, porque fica atrás de *advanced*. Sem
+   ele, o build roda na raiz do repositório, não encontra o `package.json` e falha. Com ele, `dist`
+   passa a ser relativo a `site/`.
+
+   > **O fluxo "Workers & Pages" cria um Worker, não um projeto Pages.** É o padrão atual da
+   > Cloudflare, e funciona igual para um site estático — mas o comando de deploy passa a ser
+   > `npx wrangler versions upload`, que lê o `site/wrangler.toml`. Por isso esse arquivo declara
+   > `[assets] directory = "./dist"`, e não a chave `pages_build_output_dir`, que só um projeto Pages
+   > entenderia. Se o deploy falhar com *"Missing entry-point to Worker script or to assets
+   > directory"*, é essa a causa.
+
+   Como garantia adicional, a **raiz do repositório** tem um `package.json` que instala e builda o
+   `site/` e copia a saída para `./dist`. Assim o build funciona mesmo se o Root directory ficar
+   vazio.
 
 4. **Save and Deploy.** O primeiro build leva dois ou três minutos.
 5. Você recebe uma URL `https://<projeto>.pages.dev`.

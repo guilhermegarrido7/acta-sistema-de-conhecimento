@@ -1,5 +1,13 @@
-# Cloudflare Pages. O site e estatico: nao ha servidor, nao ha banco, nao ha segredo.
-# A autenticacao fica no Cloudflare Access, na frente — ver docs/PLATAFORMA.md secao 4.
+# Worker servindo apenas ativos estaticos. O projeto foi criado pelo fluxo
+# "Workers & Pages", que cria um Worker por padrao — nao um projeto Pages.
+# Por isso [assets], e nao pages_build_output_dir: o Worker ignora a chave de Pages
+# e o deploy falha com "Missing entry-point to Worker script or to assets directory".
+#
+# Nao ha "main": um Worker que so serve ativos nao precisa de script de entrada.
+# A autenticacao fica no Cloudflare Access, na frente. Ver docs/DEPLOY.md.
 name = "acta-conhecimento"
 compatibility_date = "2026-09-14"
-pages_build_output_dir = "dist"
+
+[assets]
+directory = "./dist"
+not_found_handling = "404-page"

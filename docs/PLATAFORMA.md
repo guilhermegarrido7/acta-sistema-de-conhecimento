@@ -125,9 +125,13 @@ O passo a passo de execução está em [DEPLOY.md](DEPLOY.md).
 |---|---|---|
 | Hospedagem de site estático | Cloudflare Pages, build a partir do repositório privado | grátis, sem restrição de uso comercial |
 | Autenticação | Cloudflare Access, plano Zero Trust gratuito, **limite de 50 usuários** | grátis |
-| Identidade | integração com Microsoft Entra ID — a firma já usa Microsoft 365 | já contratado |
-| Revogação de acesso | quem sai da firma perde o acesso ao sair do diretório, automaticamente | — |
+| Identidade, fase 1 | código de uso único por e-mail, restrito ao domínio `@acta.com.br` | grátis |
+| Identidade, fase 2 | Microsoft Entra ID — a firma já usa Microsoft 365 | já contratado |
+| Revogação de acesso | na fase 2, quem sai da firma perde o acesso ao sair do diretório, automaticamente | — |
 | Código de autenticação no site | **nenhum**. O Access fica na frente; o site não tem login, sessão nem senha para vazar | — |
+
+A identidade é a única peça que muda entre as fases, e a troca é de configuração, não de código. A
+fase 1 sobe hoje sem depender de quem administra o Microsoft 365.
 
 O ganho de não ter autenticação no código é maior do que parece: sem formulário de login, sem
 sessão, sem banco de usuários, não há o que ser mal implementado nem o que vazar. O site é HTML

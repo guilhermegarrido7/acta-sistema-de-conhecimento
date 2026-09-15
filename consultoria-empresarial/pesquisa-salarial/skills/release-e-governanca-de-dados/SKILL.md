@@ -1,6 +1,7 @@
 ---
 name: release-e-governanca-de-dados
 description: Congele o release da base e estabeleça a governança dos números publicados. Acionar ao fechar R1.0 com hash, ao acionar revisão independente por segundo consultor, ao versionar artefatos, ou ao propagar correção de número já publicado.
+disable-model-invocation: true   # esqueleto: nao roteia nem custa contexto ate ser escrita
 ---
 
 # release-e-governanca-de-dados

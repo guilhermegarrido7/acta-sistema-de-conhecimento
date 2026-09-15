@@ -1,0 +1,13 @@
+# Relação de clientes usada por scripts/validar-skills.py para barrar nome de cliente no conteúdo
+# publicado. Fica fora do versionamento de propósito: versioná-la seria publicar a carteira da
+# firma, que é exatamente o que o script existe para impedir.
+clientes.local.txt
+
+# Temporários de Office e Windows
+~$*
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc

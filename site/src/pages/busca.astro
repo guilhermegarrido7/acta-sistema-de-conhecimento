@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base titulo="Busca" descricao="Busca em todo o conteúdo do portal.">
+  <h1>Busca</h1>
+  <p class="chamada">
+    Procura no texto de todas as páginas: plugins, skills e conteúdo de projeto. Se você ainda não
+    sabe o que procurar, comece por <a href="/projetos">tipo de projeto</a>.
+  </p>
+
+  <div id="busca"></div>
+
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', () => {
+      new PagefindUI({
+        element: '#busca',
+        showSubResults: true,
+        showImages: false,
+        translations: {
+          placeholder: 'Buscar no portal',
+          clear_search: 'Limpar',
+          load_more: 'Ver mais resultados',
+          search_label: 'Buscar',
+          zero_results: 'Nada encontrado para [SEARCH_TERM]',
+          many_results: '[COUNT] resultados para [SEARCH_TERM]',
+          one_result: '1 resultado para [SEARCH_TERM]',
+          searching: 'Buscando [SEARCH_TERM]...',
+        },
+      });
+    });
+  </script>
+</Base>

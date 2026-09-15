@@ -17,12 +17,12 @@ de auditoria da firma carregam.
 | Skill | Papel | Status |
 |---|---|---|
 | `metodo-auditoria` | As oito regras invioláveis, a doutrina do número exato, o ritual de aprendizado e o roteamento. Conhecimento de fundo, carrega sozinho. | ✅ |
-| `bases-e-conciliacao` | Ler e tratar base, conciliar fontes divergentes, definir amostra. | esqueleto |
-| `papel-de-trabalho` | Capa, abas de evidência, aba de critérios, resultado. | esqueleto |
-| `programa-de-testes` | Programa e matriz de testes, registro de riscos, régua de riscos. | esqueleto |
-| `redacao-de-achados` | Ponto de auditoria, achado, memorando, severidade, recomendação. | esqueleto |
-| `relatorio-de-auditoria` | Slides, tabelas, gráficos, organograma, fluxo AS IS. | esqueleto |
-| `aprendizado-e-historico` | Ledger do engajamento, promoção de lição a método. | esqueleto |
+| `bases-e-conciliacao` | Sequência obrigatória de leitura de arquivo, extração de PDF por coordenada, classificação por natureza com resíduo medido, casamento com consumo de pool, derivação de chave pelo procedimento de cadastro, bateria de testes e amostragem. | ✅ |
+| `papel-de-trabalho` | Código e capa, vocabulário fechado do campo Resultado, padrão visual das abas de evidência, proibição de célula mesclada, aba Critérios e arquivamento de versões. | ✅ |
+| `programa-de-testes` | Matriz de testes, taxonomia fechada de tipo de teste, régua de amostragem, separação desenho × efetividade, registro de riscos e os cinco conceitos que não se misturam. | ✅ |
+| `redacao-de-achados` | Pontuação e voz, fórmulas consagradas, estrutura Condição/Risco/Recomendação, severidade, codificação de prefixos, consolidação de entrevistas e plano de ação. | ✅ |
+| `relatorio-de-auditoria` | Geometria e identidade do deck, padrão de tabela, gráficos nativos, operações seguras de slide, estrutura canônica e o relatório detalhado em Word. | ✅ |
+| `aprendizado-e-historico` | Ledger do engajamento, promoção de lição a método. | ✅ |
 
 ## Como se relaciona com os plugins de processo
 

@@ -1,6 +1,7 @@
 ---
 name: escopo-e-proposta
 description: Qualifique a demanda e desenhe o escopo de um projeto de pesquisa de remuneração. Acionar ao dimensionar Total Rewards versus subconjunto, ao precificar e cronogramar a proposta, ao fixar a fronteira do escopo, ou ao avaliar pedido de mudança durante a execução.
+disable-model-invocation: true   # esqueleto: nao roteia nem custa contexto ate ser escrita
 ---
 
 # escopo-e-proposta

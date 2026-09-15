@@ -1,6 +1,7 @@
 ---
 name: relatorio-e-storyline
 description: Construa o relatório da pesquisa, do ghost deck ao deck final. Acionar ao montar a storyline em três atos, ao escrever títulos de ação, ao aplicar o design ACTA nos slides, ou ao rodar o checklist de qualidade visual antes de entregar.
+disable-model-invocation: true   # esqueleto: nao roteia nem custa contexto ate ser escrita
 ---
 
 # relatorio-e-storyline

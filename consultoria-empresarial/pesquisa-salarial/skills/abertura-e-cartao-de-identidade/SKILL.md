@@ -1,6 +1,7 @@
 ---
 name: abertura-e-cartao-de-identidade
 description: Abra o projeto preenchendo o cartão de identidade e diagnosticando os insumos do cliente. Acionar no kick-off, ao registrar particularidades estruturais que mudam a metodologia, ao inventariar as bases recebidas, ou ao avaliar a qualidade da base de cargos do cliente.
+disable-model-invocation: true   # esqueleto: nao roteia nem custa contexto ate ser escrita
 ---
 
 # abertura-e-cartao-de-identidade

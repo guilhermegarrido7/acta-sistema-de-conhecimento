@@ -12,6 +12,7 @@ Todo plugin de projeto assume que este está carregado e **não repete** o que e
 |---|---|---|
 | `checkpoint` | Como registrar e retomar o estado de um engajamento entre sessões e entre consultores | ✅ |
 | `ambiente-tecnico` | Armadilhas de Windows, OneDrive e automação Office, com a solução que funcionou | ✅ |
+| `edicao-em-massa` | Alterar muitos arquivos de uma vez sem quebrar nenhum: substituição por token inteiro, a armadilha do YAML que apaga a skill em silêncio, e a validação obrigatória depois | ✅ |
 
 ## Hook: lembrete de always-on
 

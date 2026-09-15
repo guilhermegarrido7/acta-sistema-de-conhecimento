@@ -1,6 +1,7 @@
 ---
 name: apresentacao-ao-cliente
 description: Conduza a apresentação dos resultados ao cliente e o treinamento do painel. Acionar ao fazer pré-leitura reservada de achado sensível, ao ensaiar as perguntas difíceis, ao validar coerência entre os artefatos, ou ao apresentar ao Comitê Gestor.
+disable-model-invocation: true   # esqueleto: nao roteia nem custa contexto ate ser escrita
 ---
 
 # apresentacao-ao-cliente

@@ -1,6 +1,7 @@
 ---
 name: painel-de-participantes
 description: Componha e feche o painel de empresas participantes da pesquisa. Acionar ao definir critérios de comparabilidade, ao dimensionar o número de convites, ao obter aprovação formal do painel, ou ao decidir consolidação de recorte com amostra insuficiente.
+disable-model-invocation: true   # esqueleto: nao roteia nem custa contexto ate ser escrita
 ---
 
 # painel-de-participantes

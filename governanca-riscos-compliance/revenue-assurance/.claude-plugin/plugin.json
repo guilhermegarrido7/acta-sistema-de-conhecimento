@@ -1,6 +1,6 @@
 {
   "name": "acta-revenue-assurance",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Auditoria do ciclo de receita e revenue assurance: contrato, medição, aceite, faturamento, reajuste, glosa, inadimplência e cancelamento.",
   "author": {
     "name": "ACTA Advisory"

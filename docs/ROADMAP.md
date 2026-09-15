@@ -11,21 +11,27 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 | Plugin | Status | No marketplace | Observação |
 |---|---|---|---|
-| `acta-way` | Parcial | sim | `checkpoint` e `ambiente-tecnico` prontos. Faltam identidade visual, convenções de entregável, anonimização/LGPD e redação ACTA. |
+| `acta-way` | Parcial | sim | `checkpoint` (com handoff e detecção de bifurcação), `ambiente-tecnico` e `edicao-em-massa` prontos. Faltam identidade visual, convenções de entregável, anonimização/LGPD e redação ACTA. |
+
+## Conceitos
+
+| Plugin | Status | No marketplace | Observação |
+|---|---|---|---|
+| `acta-pensadores-de-negocios` | Completo | sim | 15 skills: a roteadora `lentes` e 14 lentes de pensador (`user-invocable: false`). Fronteira com `acta-modelagem-economico-financeira` declarada em `tim-koller`. |
 
 ## Consultoria Empresarial
 
 | Plugin | Status | No marketplace | Observação |
 |---|---|---|---|
 | `acta-metodo-consultoria` | Esqueleto | não | Como a ACTA conduz um projeto de consultoria: diagnóstico, entrevistas, mapeamento AS IS e… |
-| `acta-planejamento-estrategico` | Esqueleto | não | Condução de planejamento estratégico: diagnóstico de posicionamento, definição de direcion… |
+| `acta-planejamento-estrategico` | Completo | sim | 7 skills organizadas nos quatro workshops da casa: diagnóstico, propósito/visão/valores, ambientes, direcionadores e mapa estratégico, desdobramento e metas, painel, mais a mecânica de condução de workshop. |
 | `acta-planejamento-orcamentario` | Esqueleto | não | Construção e revisão de orçamento: premissas, orçamento base zero ou incremental, ciclo de… |
 | `acta-operacoes-inteligentes` | Esqueleto | não | Desenho de modelos de operação apoiados em automação e analytics: identificação de casos, … |
 | `acta-centro-servicos-compartilhados` | Esqueleto | não | Estruturação de CSC: escopo de serviços, modelo de atendimento e SLA, dimensionamento, cat… |
 | `acta-modelos-de-custeio` | Esqueleto | não | Desenho de modelo de custeio: escolha do método, mapeamento de direcionadores, rateio, cus… |
 | `acta-reducao-estrategica-de-custos` | Esqueleto | não | Programa de redução de custos: baseline de gastos, identificação e priorização de alavanca… |
 | `acta-transformacao-comercial` | Esqueleto | não | Transformação comercial e crescimento de receita: diagnóstico do funil, política comercial… |
-| `acta-excelencia-operacional` | Esqueleto | não | Modelagem e otimização de processos ponta a ponta, incluindo os ciclos PTP, OTC, RTR e HTR… |
+| `acta-excelencia-operacional` | Completo | sim | 7 skills: taxonomia de processos, coleta e diagnóstico, workshop de mapeamento, fluxo e regras de negócio, oportunidades e quick wins, SLA e indicadores, manual de processos. |
 | `acta-ma-sell-buy-side` | Completo | sim | 9 de 9 skills com conteúdo real: convenções de projeto, estudo setorial, transações precedentes, go-to-market, teaser, segmentação de compradores, IM, solicitação de informações, negociação/LOI. |
 | `acta-modelagem-economico-financeira` | Completo | sim | 14 de 14 skills com conteúdo real, framework Koller/McKinsey: fundamentos, reorganização contábil, ROIC, custo de capital, capital de giro/CapEx, impostos, projeção de mercado/equity story, projeção/cenários, saúde de crédito, valor terminal, triangulação, revisão de modelo, relatório de valuation. |
 | `acta-selecao-de-erp` | Esqueleto | não | Seleção de ERP: levantamento de requisitos, matriz de aderência, RFP, avaliação de fornece… |
@@ -40,12 +46,12 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 | Plugin | Status | No marketplace | Observação |
 |---|---|---|---|
-| `acta-metodo-auditoria` | Parcial | sim | Skill de método normalizada e publicada. `aprendizado-e-historico` escrita sobre o mecanismo de checkpoint. As 5 restantes (bases, WP, programa de testes, redação, relatório) em esqueleto. |
+| `acta-metodo-auditoria` | Completo | sim | 7 de 7 skills com conteúdo real: método, bases e conciliação, papel de trabalho, programa de testes, redação de achados, relatório e aprendizado. Metodologia de campo absorvida e anonimizada. |
 | `acta-governanca` | Esqueleto | não | Estruturação de governança corporativa: instâncias e alçadas, regimento e estatuto, compos… |
 | `acta-gestao-de-riscos` | Esqueleto | não | Implantação de gestão de riscos: identificação e taxonomia, avaliação de impacto e probabi… |
-| `acta-revenue-assurance` | Esqueleto | não | Auditoria do ciclo de receita e revenue assurance: contrato, medição, aceite, faturamento,… |
+| `acta-revenue-assurance` | Completo | sim | 6 skills: ciclo da receita, contrato e cadastro, medição e aceite, faturamento e NF, recebimento e inadimplência, matriz de riscos da receita. |
 | `acta-programa-de-integridade` | Esqueleto | não | Implantação de programa de integridade: código de conduta, canal de denúncias, due diligen… |
-| `acta-controles-internos` | Esqueleto | não | Desenho e teste de controles internos: matriz de riscos e controles, walkthrough, teste de… |
+| `acta-controles-internos` | Completo | sim | 6 skills ancoradas em COSO 2013 e PCAOB AS 2201: matriz de riscos e controles, walkthrough e narrativa, desenho × efetividade, teste e amostragem, deficiências e severidade, ITGC. |
 | `acta-forense` | Esqueleto | não | Investigação forense: preservação de evidência, análise documental e de dados, entrevistas… |
 | `acta-esg` | Esqueleto | não | Diagnóstico e estruturação ESG: materialidade, indicadores e frameworks de reporte, plano … |
 | `acta-auditoria-folha` | Esqueleto | não | Auditoria do ciclo de folha: análise da folha, encargos, horas extras, benefícios, identif… |

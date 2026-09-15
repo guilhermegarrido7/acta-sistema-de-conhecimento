@@ -97,13 +97,13 @@ Nunca confie no render como única prova de que a escrita funcionou.
 | Situação | O que fazer |
 |---|---|
 | `.xls` antigo | `pandas.read_excel(p, engine="xlrd")`, openpyxl não abre |
-| Cabeçalho não está na linha 1 | **Verifique sempre.** Base de colaboradores do Bosque: linha 3. Bases de pagamento do AG.10: linha 2. Assumir linha 1 perde dados em silêncio |
+| Cabeçalho não está na linha 1 | **Verifique sempre.** Base de colaboradores de um cliente veio com cabeçalho na linha 3; base de pagamentos de outro, na linha 2. Assumir linha 1 perde dados em silêncio |
 | Célula mesclada | `MergedCell.value` é **read-only**. Faça `ws.unmerge_cells(...)` antes de escrever |
 | Fórmulas | `data_only=True` devolve o valor calculado; sem isso vem a fórmula em texto |
 | Base grande (>50k linhas) | `read_only=True` na leitura; `ws.append(lista)` na escrita, nunca célula a célula |
 | Autofiltro + tabela nativa | Nunca use `ws.auto_filter.ref` junto com `ws.add_table()`, conflito de XML corrompe o arquivo |
 | Descobrir colunas | Nunca chute índice. Leia o cabeçalho, monte o mapa `nome → índice`, e falhe alto se faltar coluna esperada |
-| **Gravar workbook com imagem** | **Um único `wb.save()` por processo.** O segundo save do mesmo workbook estoura `ValueError: I/O operation on closed file` nas imagens (openpyxl fecha os handles no primeiro save) e grava um `.xlsx` truncado, **sem `[Content_Types].xml`**, que o Excel recusa. Custou o WP.AR.02 do Consórcio BA, recuperado pelo histórico de versões do OneDrive. Se precisar de duas gravações, rode dois processos, ou monte tudo em memória e salve uma vez |
+| **Gravar workbook com imagem** | **Um único `wb.save()` por processo.** O segundo save do mesmo workbook estoura `ValueError: I/O operation on closed file` nas imagens (openpyxl fecha os handles no primeiro save) e grava um `.xlsx` truncado, **sem `[Content_Types].xml`**, que o Excel recusa. Já custou um papel de trabalho inteiro, recuperado pelo histórico de versões do OneDrive. Se precisar de duas gravações, rode dois processos, ou monte tudo em memória e salve uma vez |
 | `freeze_panes` em aba com linha mesclada | Passe **coordenada em texto** (`ws.freeze_panes = 'E5'`), nunca um objeto de célula: `ws.cell(...)` sobre região mesclada devolve `MergedCell`, e a atribuição estoura `TypeError: 'MergedCell' object is not iterable` |
 
 ---
@@ -125,7 +125,7 @@ palavras = pg.get_text("words")          # (x0, y0, x1, y1, texto, ...)
 
 Outras notas:
 
-- **PDF com senha:** `fitz.open(p); doc.authenticate("0451")`. Senhas por cliente ficam no CLAUDE.md
+- **PDF com senha:** `fitz.open(p); doc.authenticate("~~senha do documento")`. Senhas por cliente ficam no CLAUDE.md
   do engajamento, não aqui.
 - **PDF que é imagem:** `pytesseract` não está instalado. Use render + leitura visual (ferramenta
   Read na imagem). Funcionou para ler assinaturas e carimbos em aceites digitalizados.

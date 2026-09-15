@@ -35,6 +35,36 @@
       "source": "./consultoria-empresarial/ma-sell-buy-side",
       "category": "consultoria-empresarial",
       "description": "Assessoria em fusões e aquisições sell side e buy side: convenções de mandato, tese setorial, transações precedentes, teaser, segmentação de compradores, information memorandum, solicitação de informações e negociação/LOI."
+    },
+    {
+      "name": "acta-pensadores-de-negocios",
+      "source": "./conceitos/pensadores-de-negocios",
+      "category": "conceitos",
+      "description": "Biblioteca de lentes teóricas de estratégia, valor, gestão, mercado e tecnologia — Porter, Greenwald, Koller, Christensen, Prahalad, McGrath e outras — roteadas pela pergunta que cada uma responde, não pelo autor."
+    },
+    {
+      "name": "acta-revenue-assurance",
+      "source": "./governanca-riscos-compliance/revenue-assurance",
+      "category": "governanca-riscos-compliance",
+      "description": "Auditoria do ciclo da receita ponta a ponta: contrato e cadastro, medição e aceite, glosas, faturamento e nota fiscal, cut-off, recebimento e inadimplência, com a matriz de riscos da receita e o padrão de degradação de evidência."
+    },
+    {
+      "name": "acta-excelencia-operacional",
+      "source": "./consultoria-empresarial/excelencia-operacional",
+      "category": "consultoria-empresarial",
+      "description": "Mapeamento e otimização de processos ponta a ponta: taxonomia de cinco níveis e notação, checklist de coleta, workshop de crítica do To-Be, fluxograma e regras de negócio, oportunidades e quick wins, SLA e indicadores, e o manual de processos."
+    },
+    {
+      "name": "acta-planejamento-estrategico",
+      "source": "./consultoria-empresarial/planejamento-estrategico",
+      "category": "consultoria-empresarial",
+      "description": "Planejamento estratégico em quatro workshops: diagnóstico de posicionamento, propósito visão e valores, análise de ambientes, direcionadores e mapa estratégico, desdobramento em metas e orçamento, e o painel de acompanhamento."
+    },
+    {
+      "name": "acta-controles-internos",
+      "source": "./governanca-riscos-compliance/controles-internos",
+      "category": "governanca-riscos-compliance",
+      "description": "Desenho e teste de controles internos no framework COSO: matriz de riscos e controles, walkthrough e narrativa, desenho versus efetividade, teste e amostragem, classificação de deficiência e controles gerais de TI."
     }
   ]
 }

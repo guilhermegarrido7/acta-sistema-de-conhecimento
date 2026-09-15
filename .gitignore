@@ -11,3 +11,6 @@ desktop.ini
 # Python
 __pycache__/
 *.pyc
+
+# Saida do build, copiada de site/dist pelo package.json da raiz
+/dist/

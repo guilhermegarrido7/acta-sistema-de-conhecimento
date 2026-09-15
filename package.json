@@ -1,0 +1,8 @@
+{
+  "name": "acta-sistema-de-conhecimento",
+  "private": true,
+  "description": "Delega o build ao site/. Existe para que o Cloudflare Pages funcione mesmo com o campo Root directory vazio, que e o padrao e o erro mais comum de configuracao.",
+  "scripts": {
+    "build": "npm --prefix site install && npm --prefix site run build && rm -rf dist && cp -r site/dist dist"
+  }
+}

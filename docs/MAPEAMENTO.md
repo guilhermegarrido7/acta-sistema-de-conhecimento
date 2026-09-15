@@ -96,7 +96,7 @@ ACTA a mid-market brasileiro.
 | Plugin | Skills alvo | Âncora |
 |---|---|---|
 | `acta-metodo-auditoria` ✅ | metodo-auditoria · aprendizado-e-historico · bases-e-conciliacao · papel-de-trabalho · programa-de-testes · redacao-de-achados · relatorio-de-auditoria | IIA Global Internal Audit Standards (2024) |
-| `acta-controles-internos` | matriz-riscos-controles · walkthrough-e-narrativa · desenho-vs-efetividade · teste-de-controle-e-amostragem · deficiencias-e-severidade · itgc | COSO 2013 (5 componentes, 17 princípios); PCAOB AS 2201; COBIT |
+| `acta-controles-internos` ✅ | matriz-riscos-controles · walkthrough-e-narrativa · desenho-vs-efetividade · teste-de-controle-e-amostragem · deficiencias-e-severidade · itgc | COSO 2013 (5 componentes, 17 princípios); PCAOB AS 2201; COBIT |
 | `acta-gestao-de-riscos` | taxonomia-de-riscos · apetite-e-tolerancia · avaliacao-impacto-probabilidade · matriz-e-mapa-de-calor · planos-de-resposta · monitoramento-e-kri | COSO ERM 2017; ISO 31000 |
 | `acta-revenue-assurance` ✅ | ciclo-da-receita · contrato-e-cadastro · medicao-e-aceite · faturamento-e-nf · recebimento-e-inadimplencia · matriz-de-riscos-da-receita | Ciclo OTC; IIA |
 | `acta-auditoria-folha` | universo-da-folha · encargos-e-beneficios · horas-extras-e-jornada · admissao-e-desligamento · terceiros-e-pj | CLT; eSocial; IIA |
@@ -182,9 +182,9 @@ Sem isso, o padrão da seção 2 é só intenção.
 
 Nesta ordem, porque cada um tem projeto real de onde extrair:
 
-10. `acta-excelencia-operacional` — material de mapeamento PTP de projeto real.
-11. `acta-controles-internos` — material de SOX de projeto real.
-12. `acta-planejamento-estrategico` — material de benchmarking e de dois clientes.
+10. ✅ `acta-excelencia-operacional` — escrito a partir do material de mapeamento de ciclo PTP.
+11. ✅ `acta-controles-internos` — escrito a partir de material de SOX de projeto real.
+12. ✅ `acta-planejamento-estrategico` — escrito a partir do material de dois engajamentos.
 13. `acta-auditoria-compras` — reaproveita o ciclo PTP mapeado em (10).
 
 ### P4 — Demais plugins

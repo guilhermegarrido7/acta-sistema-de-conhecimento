@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import { catalogo } from '../lib/catalogo.js';
+const { plugins } = catalogo();
+const projeto = plugins.filter((p) => p.categoria === 'consultoria-empresarial' || p.categoria === 'governanca-riscos-compliance');
+---
+<Base titulo="Benchmarking" descricao="Acervo de engajamentos executados.">
+  <h1>Benchmarking de projetos</h1>
+  <p class="chamada">
+    O registro do que a firma já executou, por tipo de projeto: o contexto, o que foi entregue, e o
+    que se aprendeu. É a memória que hoje só existe em pasta de OneDrive e na cabeça de quem
+    participou.
+  </p>
+
+  <div class="nota">
+    <strong>Em construção.</strong> Esta área depende de uma decisão de governança que precede a
+    implementação: <em>o que pode ser referenciado</em>. Engajamento tem cláusula de
+    confidencialidade, e a regra da casa hoje é que caso real vira exemplo anonimizado. Referenciar
+    entregável de cliente, ainda que só por link e atrás de autenticação, precisa ser decidido antes
+    de ser construído.
+  </div>
+
+  <h2>Como vai funcionar</h2>
+  <p>
+    Cada engajamento executado ganha um registro sob o seu tipo de projeto, com quatro coisas:
+  </p>
+  <table>
+    <tbody>
+      <tr><td style="width:13rem"><strong>Contexto</strong></td><td>Porte, setor e o problema que motivou a contratação — anonimizados.</td></tr>
+      <tr><td><strong>O que foi entregue</strong></td><td>Os artefatos, em que formato, e a duração real contra a prevista.</td></tr>
+      <tr><td><strong>O que se aprendeu</strong></td><td>O que funcionou, o que foi refeito e por quê. É a parte que mais vale e a que ninguém escreve.</td></tr>
+      <tr><td><strong>Onde estão os arquivos</strong></td><td>Apontador para o SharePoint. O acervo <strong>não</strong> duplica arquivo de cliente: a permissão continua sendo a do SharePoint.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Tipos de projeto que terão acervo</h2>
+  <div class="grade">
+    {projeto.map((p) => (
+      <article class="cartao">
+        <h3>{p.projeto?.titulo ?? p.slug}</h3>
+        <p>Aguardando registro de engajamentos.</p>
+        <div class="rodape"><a href={`/projetos/${p.slug}`}>Ver o método →</a></div>
+      </article>
+    ))}
+  </div>
+</Base>

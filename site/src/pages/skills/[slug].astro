@@ -1,0 +1,88 @@
+---
+import Base from '../../layouts/Base.astro';
+import { catalogo } from '../../lib/catalogo.js';
+
+export async function getStaticPaths() {
+  const { plugins } = catalogo();
+  const vistos = new Set();
+  const rotas = [];
+  for (const p of plugins) {
+    for (const s of p.skills) {
+      if (vistos.has(s.slug)) continue;   // nome de skill é único no repositório
+      vistos.add(s.slug);
+      rotas.push({ params: { slug: s.slug }, props: { s, p } });
+    }
+  }
+  return rotas;
+}
+const { s, p } = Astro.props;
+const [oQueFaz, ...gatilhos] = s.descricao.split(/\.\s*Acionar\s*/);
+const listaGatilhos = gatilhos.join('').replace(/\.$/, '');
+---
+
+<Base titulo={s.nome} descricao={s.descricao}>
+  <p style="margin:0 0 .5rem"><a href="/skills">← Skills</a></p>
+  <h1><code>{s.nome}</code></h1>
+  <p class="chamada">{oQueFaz}.</p>
+
+  <div class="rodape" style="margin-bottom:2rem; gap:.6rem">
+    <span class="etiqueta">{p.nome}</span>
+    {!s.invocavelPeloUsuario && <span class="etiqueta">conhecimento de fundo</span>}
+    {(s.esqueleto || !s.roteavel) && <span class="etiqueta parcial">a escrever</span>}
+    {s.roteavel && <span class="etiqueta">~{Math.round(s.descricao.length / 4)} tok/sessão</span>}
+    {s.linhas > 1 && <span class="etiqueta">{s.linhas} linhas</span>}
+  </div>
+
+  {(s.esqueleto || !s.roteavel) && (
+    <div class="nota">
+      <strong>A metodologia desta etapa ainda não foi escrita.</strong> A skill existe como marcador
+      do que falta: está fora do roteamento do Claude e não consome contexto. Quando o método for
+      escrito, ela entra em operação automaticamente.
+    </div>
+  )}
+
+  {listaGatilhos && (
+    <>
+      <h2>Quando ela dispara</h2>
+      <p>Acionar {listaGatilhos}.</p>
+      {s.invocavelPeloUsuario && s.roteavel && (
+        <p>
+          O Claude a carrega sozinho quando o assunto aparece. Para forçar, digite
+          {' '}<code>/{s.nome}</code> no início da mensagem.
+        </p>
+      )}
+    </>
+  )}
+
+  {!s.invocavelPeloUsuario && (
+    <>
+      <h2>Por que não aparece no menu</h2>
+      <p>
+        Esta skill é marcada como conhecimento de fundo: outra skill a carrega quando precisa do
+        conceito exato. Manter fora do menu de <code>/</code> evita poluir a lista de comandos com
+        material que não é uma ação que você executa.
+      </p>
+    </>
+  )}
+
+  {s.referencias.length > 0 && (
+    <>
+      <h2>Material de referência</h2>
+      <p>
+        Detalhe que só carrega quando a skill precisa dele — fica fora do corpo principal justamente
+        para não custar contexto à toa.
+      </p>
+      <ul>{s.referencias.map((r) => <li><code>{r}</code></li>)}</ul>
+    </>
+  )}
+
+  <h2>Como obter</h2>
+  <p>Ela vem com o plugin <a href={`/projetos/${p.slug}`}><code>{p.nome}</code></a>:</p>
+  <div class="comando"><code>{p.instalacao}</code></div>
+
+  <h2>Onde o texto vive</h2>
+  <p>
+    A fonte é <code>{p.caminho}/skills/{s.slug}/SKILL.md</code> no repositório. Esta página é gerada
+    dele — corrigir a skill corrige a página.
+  </p>
+</Base>

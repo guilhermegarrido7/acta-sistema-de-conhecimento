@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import { catalogo } from '../../lib/catalogo.js';
+const { categorias } = catalogo();
+---
+<Base titulo="Projetos" descricao="Catálogo de plugins por tipo de projeto.">
+  <h1>Projetos</h1>
+  <p class="chamada">
+    Um plugin por tipo de engajamento. Cada um traz as etapas do ciclo de vida daquele projeto e os
+    entregáveis de cada etapa.
+  </p>
+
+  {categorias.map((c) => (
+    <section>
+      <h2>{c.rotulo}</h2>
+      <div class="grade">
+        {c.plugins.map((p) => (
+          <article class="cartao">
+            <h3><a href={`/projetos/${p.slug}`}>{p.projeto?.titulo ?? p.slug}</a></h3>
+            <p>{p.descricao}</p>
+            <div class="rodape">
+              <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>
+              <span>{p.skills.length} skills</span>
+              <span>~{p.custoAlwaysOn} tok/sessão</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <h2>O que ainda não está aqui</h2>
+  <p>
+    O repositório tem mais tipos de projeto mapeados do que publicados — um plugin só entra no
+    catálogo quando tem metodologia escrita, para ninguém instalar casca vazia. O desenho alvo de
+    cada um e a ordem em que serão escritos estão em <code>docs/MAPEAMENTO.md</code>.
+  </p>
+</Base>

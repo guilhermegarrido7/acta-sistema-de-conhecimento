@@ -1,0 +1,148 @@
+/* Identidade visual ACTA. Os tokens vêm do tema "ACTA" do PowerPoint da casa —
+   ver a skill acta-modelagem-economico-financeira:relatorio-de-valuation, que documenta
+   a paleta e a tipografia. Quando acta-way:identidade-visual for escrita, reconciliar. */
+
+:root {
+  --verde: #167D73;
+  --verde-escuro: #0f5a53;
+  --navy: #334E6F;
+  --azul-claro: #87AFC7;
+  --azul-palido: #C5D3E8;
+
+  --texto: #262626;
+  --texto-secundario: #4A5560;
+  --nota: #75787B;
+
+  --fundo: #ffffff;
+  --fundo-suave: #f7f9f9;
+  --borda: #e3e8e8;
+
+  --largura: 62rem;
+  --raio: 8px;
+
+  /* Rawline é a fonte da casa e está instalada nas máquinas da firma.
+     A pilha de fallback cobre quem acessar de fora. */
+  --fonte: Rawline, "Segoe UI", system-ui, -apple-system, sans-serif;
+  --fonte-mono: "Cascadia Mono", Consolas, "SF Mono", Menlo, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  color: var(--texto);
+  background: var(--fundo);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a { color: var(--verde); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.envelope { max-width: var(--largura); margin: 0 auto; padding: 0 1.5rem; }
+
+/* ---------- cabeçalho ---------- */
+
+.topo {
+  border-bottom: 1px solid var(--borda);
+  background: var(--fundo);
+  position: sticky; top: 0; z-index: 10;
+}
+.topo .envelope { display: flex; align-items: center; gap: 2rem; height: 64px; }
+.marca { font-weight: 600; font-size: 1.05rem; color: var(--texto); letter-spacing: -0.01em; }
+.marca span { color: var(--verde); }
+.topo nav { display: flex; gap: 1.5rem; margin-left: auto; flex-wrap: wrap; }
+.topo nav a { color: var(--texto-secundario); font-size: 0.925rem; }
+.topo nav a:hover, .topo nav a[aria-current="page"] { color: var(--verde); text-decoration: none; }
+
+/* ---------- tipografia ---------- */
+
+h1 { font-size: 2.1rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 0.75rem; font-weight: 600; }
+h2 { font-size: 1.35rem; margin: 2.5rem 0 0.75rem; font-weight: 600; letter-spacing: -0.01em; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 0.5rem; font-weight: 600; }
+.chamada { font-size: 1.1rem; color: var(--texto-secundario); margin: 0 0 2rem; max-width: 46rem; }
+
+main { padding: 2.5rem 0 5rem; }
+
+/* ---------- cartões ---------- */
+
+.grade { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); }
+
+.cartao {
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 1.15rem 1.25rem;
+  background: var(--fundo);
+  display: flex; flex-direction: column; gap: 0.4rem;
+}
+.cartao:hover { border-color: var(--verde); }
+.cartao h3 { margin: 0; font-size: 1rem; }
+.cartao h3 a { color: var(--texto); }
+.cartao p { margin: 0; font-size: 0.875rem; color: var(--texto-secundario); }
+.cartao .rodape { margin-top: auto; padding-top: 0.6rem; font-size: 0.8rem; color: var(--nota); display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+/* ---------- etiquetas ---------- */
+
+.etiqueta {
+  display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.03em;
+  text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 4px;
+  background: var(--fundo-suave); color: var(--texto-secundario); border: 1px solid var(--borda);
+}
+.etiqueta.completo { background: #e8f4f2; color: var(--verde-escuro); border-color: #bfdedb; }
+.etiqueta.parcial  { background: #fdf6e3; color: #8a6d1f; border-color: #eadfc0; }
+
+/* ---------- bloco de comando ---------- */
+
+.comando {
+  background: #14201f; color: #e6efee; border-radius: var(--raio);
+  padding: 0.85rem 1rem; font-family: var(--fonte-mono); font-size: 0.84rem;
+  overflow-x: auto; display: flex; align-items: center; gap: 0.6rem;
+}
+.comando::before { content: "$"; color: var(--azul-claro); flex: none; }
+.comando code { white-space: pre; }
+
+/* ---------- tabela ---------- */
+
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; margin: 1rem 0; }
+th, td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--borda); vertical-align: top; }
+th { font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--nota); }
+
+/* ---------- avisos ---------- */
+
+.nota {
+  border-left: 3px solid var(--verde); background: var(--fundo-suave);
+  padding: 0.85rem 1.1rem; border-radius: 0 var(--raio) var(--raio) 0; margin: 1.25rem 0;
+  font-size: 0.92rem;
+}
+.nota strong { color: var(--verde-escuro); }
+
+/* ---------- passos ---------- */
+
+.passos { counter-reset: passo; list-style: none; padding: 0; margin: 1.5rem 0; }
+.passos > li { counter-increment: passo; position: relative; padding-left: 2.6rem; margin-bottom: 1.75rem; }
+.passos > li::before {
+  content: counter(passo); position: absolute; left: 0; top: 0;
+  width: 1.75rem; height: 1.75rem; border-radius: 50%;
+  background: var(--verde); color: #fff; font-size: 0.85rem; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+}
+.passos h3 { margin: 0.1rem 0 0.4rem; }
+
+/* ---------- rodapé ---------- */
+
+footer {
+  border-top: 1px solid var(--borda); padding: 2rem 0; margin-top: 4rem;
+  font-size: 0.85rem; color: var(--nota);
+}
+footer .envelope { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+/* ---------- busca (Pagefind) ---------- */
+
+.pagefind-ui { --pagefind-ui-primary: var(--verde); --pagefind-ui-font: var(--fonte); }
+
+@media (max-width: 640px) {
+  .topo .envelope { height: auto; padding-top: 0.75rem; padding-bottom: 0.75rem; flex-wrap: wrap; gap: 0.75rem; }
+  .topo nav { margin-left: 0; gap: 1rem; }
+  h1 { font-size: 1.6rem; }
+}

@@ -1,0 +1,85 @@
+---
+import Base from '../layouts/Base.astro';
+import { catalogo } from '../lib/catalogo.js';
+const { plugins, categorias } = catalogo();
+const completos = plugins.filter((p) => p.status === 'Completo').length;
+const totalSkills = plugins.reduce((t, p) => t + p.skills.length, 0);
+const projeto = categorias.find((c) => c.slug === 'consultoria-empresarial')?.plugins ?? [];
+---
+<Base titulo="Início" descricao="Metodologia da ACTA Advisory, instalável no Claude Code.">
+  <h1>A metodologia da casa, instalável.</h1>
+  <p class="chamada">
+    Cada tipo de projeto da ACTA tem um plugin com o método escrito: as etapas, as regras que não se
+    negociam, o formato de cada entregável. Você instala o do seu engajamento e o Claude passa a
+    trabalhar no padrão da firma, não no padrão genérico dele.
+  </p>
+
+  <div class="grade" style="grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); margin-bottom: 2rem;">
+    <div class="cartao"><h3>{plugins.length}</h3><p>plugins publicados</p></div>
+    <div class="cartao"><h3>{completos}</h3><p>com método completo</p></div>
+    <div class="cartao"><h3>{totalSkills}</h3><p>skills disponíveis</p></div>
+  </div>
+
+  <h2>Antes de instalar</h2>
+  <table>
+    <tbody>
+      <tr>
+        <th style="width: 12rem">Claude Code</th>
+        <td>Instalado e autenticado. O portal não substitui o Claude Code — ele diz o que instalar dentro dele.</td>
+      </tr>
+      <tr>
+        <th>Acesso ao repositório</th>
+        <td>O marketplace é um repositório <strong>privado</strong> no GitHub. Peça acesso antes: sem ele, o comando de instalação falha na autenticação.</td>
+      </tr>
+      <tr>
+        <th><code>acta-way</code></th>
+        <td>É pré-requisito de todos os outros. Instale primeiro, sempre — é onde vive o checkpoint entre sessões e entre consultores.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Instalação em dois comandos</h2>
+  <p>Registre o marketplace uma vez por máquina:</p>
+  <div class="comando"><code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code></div>
+  <p style="margin-top: 1rem">Depois instale a fundação:</p>
+  <div class="comando"><code>claude plugin install acta-way@acta-sistema-de-conhecimento --scope user</code></div>
+  <p style="margin-top: 1rem">
+    Daí em diante, só o plugin do engajamento em que você está.
+    <a href="/comecar">O guia completo</a> cobre verificação, atualização e o que fazer quando não funciona.
+  </p>
+
+  <h2>Escolha pelo projeto, não pela ferramenta</h2>
+  <p class="chamada" style="font-size: 1rem">
+    Ninguém acorda querendo instalar uma skill: acorda tendo que conduzir um projeto. Comece pelo
+    tipo de engajamento.
+  </p>
+  <div class="grade">
+    {projeto.map((p) => (
+      <article class="cartao">
+        <h3><a href={`/projetos/${p.slug}`}>{p.projeto?.titulo ?? p.slug}</a></h3>
+        <p>{p.descricao}</p>
+        <div class="rodape">
+          <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>
+          <span>{p.skills.length} skills</span>
+        </div>
+      </article>
+    ))}
+  </div>
+  <p style="margin-top: 1.25rem"><a href="/projetos">Ver todos os tipos de projeto →</a></p>
+
+  <h2>Três coisas que economizam contexto</h2>
+  <div class="nota">
+    <strong>Instale só o que está em uso.</strong> Cada plugin instalado custa contexto em
+    <em>toda</em> sessão, mesmo quando você não usa. Desative o que não é do engajamento corrente com
+    <code>claude plugin disable &lt;nome&gt;</code> — é reversível a qualquer momento.
+  </div>
+  <div class="nota">
+    <strong>O checkpoint é o que atravessa pessoas.</strong> Sessão de Claude não passa de um
+    consultor para outro; o arquivo na pasta do engajamento passa. Feche a sessão pelo checkpoint em
+    vez de simplesmente fechar o chat.
+  </div>
+  <div class="nota">
+    <strong>Nome de cliente não entra em skill.</strong> O repositório é compartilhado na firma e há
+    verificação automática no build. Caso real vira exemplo anonimizado.
+  </div>
+</Base>

@@ -1,0 +1,5 @@
+# Cloudflare Pages. O site e estatico: nao ha servidor, nao ha banco, nao ha segredo.
+# A autenticacao fica no Cloudflare Access, na frente — ver docs/PLATAFORMA.md secao 4.
+name = "acta-conhecimento"
+compatibility_date = "2026-09-14"
+pages_build_output_dir = "dist"

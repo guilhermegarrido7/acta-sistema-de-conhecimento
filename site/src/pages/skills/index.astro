@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/Base.astro';
+import { catalogo } from '../../lib/catalogo.js';
+const { categorias } = catalogo();
+const resumo = (d) => d.split('. Acionar')[0].replace(/\.$/, '') + '.';
+const total = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x + p.skills.length, 0), 0);
+---
+
+<Base titulo="Skills" descricao="Todas as skills, por plugin.">
+  <h1>Skills</h1>
+  <p class="chamada">
+    As {total} skills publicadas, agrupadas pelo plugin em que vivem. Se você não sabe qual instalar,
+    comece por <a href="/projetos">tipo de projeto</a> — é a pergunta certa.
+  </p>
+
+  {categorias.map((c) => (
+    <section>
+      <h2>{c.rotulo}</h2>
+      {c.plugins.map((p) => (
+        <>
+          <h3>
+            <a href={`/projetos/${p.slug}`}><code>{p.nome}</code></a>
+            <span class="etiqueta" style="margin-left:.5rem">{p.skills.length}</span>
+          </h3>
+          <table>
+            <tbody>
+              {p.skills.map((s) => (
+                <tr>
+                  <td style="width:17rem">
+                    <a href={`/skills/${s.slug}`}><code>{s.nome}</code></a>
+                    {!s.invocavelPeloUsuario && <span class="etiqueta" style="margin-left:.4rem">de fundo</span>}
+                    {(s.esqueleto || !s.roteavel) && <span class="etiqueta" style="margin-left:.4rem">a escrever</span>}
+                  </td>
+                  <td>{s.descricao ? resumo(s.descricao) : '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      ))}
+    </section>
+  ))}
+
+  <h2>Como ler as etiquetas</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:9rem"><span class="etiqueta">de fundo</span></td>
+        <td>
+          Não aparece no menu de <code>/</code>. É conhecimento que outra skill carrega quando precisa
+          do conceito exato — você não a invoca diretamente.
+        </td>
+      </tr>
+      <tr>
+        <td><span class="etiqueta">a escrever</span></td>
+        <td>
+          A etapa está mapeada mas a metodologia ainda não foi escrita. Está fora do roteamento e
+          <strong>não custa contexto</strong> — existe como marcador do que falta.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</Base>

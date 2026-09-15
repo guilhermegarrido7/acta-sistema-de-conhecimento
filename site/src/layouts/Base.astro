@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+const { titulo, descricao } = Astro.props;
+const rota = Astro.url.pathname.replace(/\/$/, '') || '/';
+const itens = [
+  { href: '/comecar',     rotulo: 'Começar' },
+  { href: '/projetos',    rotulo: 'Projetos' },
+  { href: '/skills',      rotulo: 'Skills' },
+  { href: '/avulsas',     rotulo: 'Avulsas' },
+  { href: '/benchmarking',rotulo: 'Benchmarking' },
+];
+const ativo = (href) => rota === href || rota.startsWith(href + '/');
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titulo} · ACTA Sistema de Conhecimento</title>
+    {descricao && <meta name="description" content={descricao} />}
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="envelope">
+        <a href="/" class="marca">ACTA <span>Conhecimento</span></a>
+        <nav>
+          {itens.map((i) => (
+            <a href={i.href} aria-current={ativo(i.href) ? 'page' : undefined}>{i.rotulo}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main class="envelope" data-pagefind-body>
+      <slot />
+    </main>
+
+    <footer>
+      <div class="envelope">
+        <span>ACTA Advisory · uso interno</span>
+        <span>Gerado do repositório <code>acta-sistema-de-conhecimento</code></span>
+      </div>
+    </footer>
+  </body>
+</html>

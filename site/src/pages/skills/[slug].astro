@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro';
+import Pagina from '../../layouts/Pagina.astro';
 import { catalogo } from '../../lib/catalogo.js';
 
 export async function getStaticPaths() {
@@ -20,13 +20,15 @@ const [oQueFaz, ...gatilhos] = s.descricao.split(/\.\s*Acionar\s*/);
 const listaGatilhos = gatilhos.join('').replace(/\.$/, '');
 ---
 
-<Base titulo={s.nome} descricao={s.descricao}>
-  <p style="margin:0 0 .5rem"><a href="/skills">← Skills</a></p>
-  <h1><code>{s.nome}</code></h1>
-  <p class="chamada">{oQueFaz}.</p>
-
-  <div class="rodape" style="margin-bottom:2rem; gap:.6rem">
-    <span class="etiqueta">{p.nome}</span>
+<Pagina
+  titulo={s.nome}
+  sobrescrito="Skill"
+  descricao={s.descricao}
+  abertura={`${oQueFaz}.`}
+  voltar={{ href: '/skills', rotulo: 'Skills' }}
+>
+  <div slot="meta" class="pe" style="margin-top:1.15rem">
+    <a href={`/projetos/${p.slug}`} class="etiqueta">{p.nome}</a>
     {!s.invocavelPeloUsuario && <span class="etiqueta">conhecimento de fundo</span>}
     {(s.esqueleto || !s.roteavel) && <span class="etiqueta parcial">a escrever</span>}
     {s.roteavel && <span class="etiqueta">~{Math.round(s.descricao.length / 4)} tok/sessão</span>}
@@ -34,15 +36,17 @@ const listaGatilhos = gatilhos.join('').replace(/\.$/, '');
   </div>
 
   {(s.esqueleto || !s.roteavel) && (
-    <div class="nota">
-      <strong>A metodologia desta etapa ainda não foi escrita.</strong> A skill existe como marcador
-      do que falta: está fora do roteamento do Claude e não consome contexto. Quando o método for
-      escrito, ela entra em operação automaticamente.
+    <div class="aviso aviso--atencao">
+      <p>
+        <strong>A metodologia desta etapa ainda não foi escrita.</strong> A skill existe como
+        marcador do que falta: está fora do roteamento do Claude e não consome contexto. Quando o
+        método for escrito, ela entra em operação automaticamente.
+      </p>
     </div>
   )}
 
   {listaGatilhos && (
-    <>
+    <section class="secao">
       <h2>Quando ela dispara</h2>
       <p>Acionar {listaGatilhos}.</p>
       {s.invocavelPeloUsuario && s.roteavel && (
@@ -51,38 +55,42 @@ const listaGatilhos = gatilhos.join('').replace(/\.$/, '');
           {' '}<code>/{s.nome}</code> no início da mensagem.
         </p>
       )}
-    </>
+    </section>
   )}
 
   {!s.invocavelPeloUsuario && (
-    <>
+    <section class="secao">
       <h2>Por que não aparece no menu</h2>
       <p>
         Esta skill é marcada como conhecimento de fundo: outra skill a carrega quando precisa do
         conceito exato. Manter fora do menu de <code>/</code> evita poluir a lista de comandos com
         material que não é uma ação que você executa.
       </p>
-    </>
+    </section>
   )}
 
   {s.referencias.length > 0 && (
-    <>
+    <section class="secao">
       <h2>Material de referência</h2>
       <p>
-        Detalhe que só carrega quando a skill precisa dele — fica fora do corpo principal justamente
+        Detalhe que só carrega quando a skill precisa dele. Fica fora do corpo principal justamente
         para não custar contexto à toa.
       </p>
-      <ul>{s.referencias.map((r) => <li><code>{r}</code></li>)}</ul>
-    </>
+      <p class="pe">{s.referencias.map((r) => <span class="etiqueta">{r}</span>)}</p>
+    </section>
   )}
 
-  <h2>Como obter</h2>
-  <p>Ela vem com o plugin <a href={`/projetos/${p.slug}`}><code>{p.nome}</code></a>:</p>
-  <div class="comando"><code>{p.instalacao}</code></div>
+  <section class="secao">
+    <h2>Como obter</h2>
+    <p>Ela vem com o plugin <a href={`/projetos/${p.slug}`}><code>{p.nome}</code></a>:</p>
+    <div class="comando"><code>{p.instalacao}</code></div>
+  </section>
 
-  <h2>Onde o texto vive</h2>
-  <p>
-    A fonte é <code>{p.caminho}/skills/{s.slug}/SKILL.md</code> no repositório. Esta página é gerada
-    dele — corrigir a skill corrige a página.
-  </p>
-</Base>
+  <section class="secao">
+    <h2>Onde o texto vive</h2>
+    <p>
+      A fonte é <code>{p.caminho}/skills/{s.slug}/SKILL.md</code> no repositório. Esta página é
+      gerada dele: corrigir a skill corrige a página.
+    </p>
+  </section>
+</Pagina>

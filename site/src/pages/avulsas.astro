@@ -1,65 +1,72 @@
 ---
-import Base from '../layouts/Base.astro';
+import Pagina from '../layouts/Pagina.astro';
 ---
-<Base titulo="Avulsas" descricao="Skills e plugins de terceiros que a firma usa.">
-  <h1>Skills avulsas</h1>
-  <p class="chamada">
-    Nem tudo que ajuda no trabalho é metodologia da ACTA. Estas são skills e plugins de terceiros,
-    ou genéricos, que valem em qualquer engajamento e não pertencem a um plugin de projeto.
-  </p>
 
-  <div class="nota">
-    <strong>Elas não vêm do nosso marketplace.</strong> Instalam por outros caminhos e são mantidas
-    por terceiros — o que significa que podem mudar ou sumir sem aviso. Nenhuma delas conhece o
-    método da casa.
+<Pagina
+  titulo="Skills avulsas"
+  sobrescrito="De terceiros"
+  descricao="Skills e plugins de terceiros que a firma usa."
+  abertura="Nem tudo que ajuda no trabalho é metodologia da ACTA. Estas são skills de terceiros, ou genéricas, que valem em qualquer engajamento e não pertencem a um plugin de projeto."
+>
+  <div class="aviso aviso--atencao">
+    <p>
+      <strong>Elas não vêm do nosso marketplace.</strong> Instalam por outros caminhos e são mantidas
+      por terceiros, o que significa que podem mudar ou sumir sem aviso. Nenhuma delas conhece o
+      método da casa.
+    </p>
   </div>
 
-  <h2>Descoberta</h2>
-  <table>
-    <thead><tr><th style="width:13rem">Skill</th><th>O que faz</th></tr></thead>
-    <tbody>
-      <tr>
-        <td><code>find-skills</code></td>
-        <td>
+  <section class="secao">
+    <h2>Descoberta</h2>
+    <div class="lista">
+      <a href="/avulsas">
+        <span class="nome">find-skills</span>
+        <span class="oque">
           Procura skills instaláveis quando você descreve o que precisa fazer. Útil quando desconfia
           que já existe ferramenta para um problema, mas não sabe o nome dela.
-        </td>
-      </tr>
-    </tbody>
-  </table>
+        </span>
+      </a>
+    </div>
+  </section>
 
-  <h2>Escrita e revisão</h2>
-  <table>
-    <tbody>
-      <tr>
-        <td style="width:13rem"><code>avoid-ai-writing</code></td>
-        <td>
+  <section class="secao">
+    <h2>Escrita e revisão</h2>
+    <div class="lista">
+      <a href="/avulsas">
+        <span class="nome">avoid-ai-writing</span>
+        <span class="oque">
           Audita e reescreve texto para remover padrões característicos de escrita de IA. Vale antes
           de qualquer coisa que vá ao cliente. O repositório guarda uma cópia em
           <code>evitar-escrita-de-IA/</code> como referência; não é plugin instalável.
-        </td>
-      </tr>
-      <tr>
-        <td><code>sabatina</code></td>
-        <td>
+        </span>
+      </a>
+      <a href="/avulsas">
+        <span class="nome">sabatina</span>
+        <span class="oque">
           Argumenta contra a versão mais forte de uma posição, não a mais fraca. A skill
           <code>projecao-de-mercado-e-equity-story</code>, do plugin de valuation, usa esse mesmo
           processo para estressar projeção antes de travar o número.
-        </td>
-      </tr>
-    </tbody>
-  </table>
+        </span>
+      </a>
+    </div>
+  </section>
 
-  <h2>Formatos de arquivo</h2>
-  <p>
-    As skills <code>xlsx</code>, <code>docx</code>, <code>pptx</code> e <code>pdf</code> da Anthropic
-    cobrem leitura e geração desses formatos. Valem a instalação para quem produz entregável em
-    Office, que é praticamente todo mundo na firma.
-  </p>
+  <section class="secao">
+    <h2>Formatos de arquivo</h2>
+    <p>
+      As skills <code>xlsx</code>, <code>docx</code>, <code>pptx</code> e <code>pdf</code> da
+      Anthropic cobrem leitura e geração desses formatos. Valem a instalação para quem produz
+      entregável em Office, que é praticamente todo mundo na firma.
+    </p>
+  </section>
 
-  <div class="nota">
-    <strong>Antes de instalar qualquer skill de terceiro:</strong> ela vai operar sobre arquivo de
-    cliente. Confira a origem e o que ela faz. As regras de confidencialidade da casa valem
-    independentemente de quem escreveu a ferramenta.
-  </div>
-</Base>
+  <section class="secao">
+    <h2>Antes de instalar qualquer skill de terceiro</h2>
+    <div class="aviso">
+      <p>
+        Ela vai operar sobre arquivo de cliente. Confira a origem e o que ela faz. As regras de
+        confidencialidade da casa valem independentemente de quem escreveu a ferramenta.
+      </p>
+    </div>
+  </section>
+</Pagina>

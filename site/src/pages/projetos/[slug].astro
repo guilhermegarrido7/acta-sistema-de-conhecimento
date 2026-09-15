@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro';
+import Pagina from '../../layouts/Pagina.astro';
 import { catalogo } from '../../lib/catalogo.js';
 
 export async function getStaticPaths() {
@@ -10,105 +10,111 @@ const invocaveis = p.skills.filter((s) => s.invocavelPeloUsuario && s.roteavel &
 const defundo = p.skills.filter((s) => !s.invocavelPeloUsuario);
 const pendentes = p.skills.filter((s) => s.esqueleto || !s.roteavel);
 const resumo = (d) => d.split('. Acionar')[0].replace(/\.$/, '') + '.';
+const titulo = p.titulo;
 ---
 
-<Base titulo={p.projeto?.titulo ?? p.slug} descricao={p.descricao}>
-  <p style="margin:0 0 .5rem"><a href="/projetos">← Projetos</a></p>
-  <h1>{p.projeto?.titulo ?? p.slug}</h1>
-  <p class="chamada">{p.descricao}</p>
-
-  <div class="rodape" style="margin-bottom:2rem; gap:.6rem">
+<Pagina
+  titulo={titulo}
+  sobrescrito="Tipo de projeto"
+  descricao={p.descricao}
+  abertura={p.descricao}
+  voltar={{ href: '/projetos', rotulo: 'Projetos' }}
+>
+  <div slot="meta" class="pe" style="margin-top:1.15rem">
     <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>
     <span class="etiqueta">v{p.versao}</span>
     <span class="etiqueta">{p.skills.length} skills</span>
-    <span class="etiqueta">~{p.custoAlwaysOn} tokens por sessão</span>
+    <span class="etiqueta">~{p.custoAlwaysOn} tok/sessão</span>
     {p.projeto?.duracao_tipica && <span class="etiqueta">{p.projeto.duracao_tipica}</span>}
   </div>
 
   {p.projeto ? (
-    <div set:html={p.projeto.corpoHtml} />
+    <div class="prosa" set:html={p.projeto.corpoHtml} />
   ) : (
-    <div class="nota">
-      <strong>A página editorial deste projeto ainda não foi escrita.</strong> O que você vê abaixo é
-      derivado do plugin. O conteúdo que falta — etapas do ciclo de vida, onde o projeto dá errado,
-      entregáveis, quem participa de cada lado — vive num arquivo <code>projeto.md</code> dentro da
-      pasta do plugin.
+    <div class="aviso aviso--atencao">
+      <p>
+        <strong>A página editorial deste projeto ainda não foi escrita.</strong> O que você vê abaixo
+        é derivado do plugin. O que falta (etapas do ciclo de vida, onde o projeto dá errado,
+        entregáveis, quem participa de cada lado) vive num arquivo <code>projeto.md</code> dentro da
+        pasta do plugin.
+      </p>
     </div>
   )}
 
-  <h2>Como instalar</h2>
-  <ol class="passos">
-    <li>
-      <h3>Registre o marketplace</h3>
-      <p>Uma vez por máquina. Exige acesso ao repositório privado no GitHub.</p>
-      <div class="comando"><code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code></div>
-    </li>
-    <li>
-      <h3>Instale a fundação</h3>
-      <p>Pré-requisito de todos os plugins: é onde vive o checkpoint entre sessões e consultores.</p>
-      <div class="comando"><code>claude plugin install acta-way@acta-sistema-de-conhecimento --scope user</code></div>
-    </li>
-    <li>
-      <h3>Instale este plugin</h3>
-      <div class="comando"><code>{p.instalacao}</code></div>
-    </li>
-    <li>
-      <h3>Reinicie a sessão e confirme</h3>
-      <p>As skills só aparecem depois de reiniciar o Claude Code.</p>
-      <div class="comando"><code>{`claude plugin details ${p.nome}@acta-sistema-de-conhecimento`}</code></div>
-    </li>
-  </ol>
+  <section class="secao">
+    <h2>Como instalar</h2>
+    <ol class="passos">
+      <li>
+        <h3>Registre o marketplace</h3>
+        <p>Uma vez por máquina. Exige acesso ao repositório privado no GitHub.</p>
+        <div class="comando"><code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code></div>
+      </li>
+      <li>
+        <h3>Instale a fundação</h3>
+        <p>Pré-requisito de todos os plugins: é onde vive o checkpoint entre sessões e consultores.</p>
+        <div class="comando"><code>claude plugin install acta-way@acta-sistema-de-conhecimento --scope user</code></div>
+      </li>
+      <li>
+        <h3>Instale este plugin</h3>
+        <div class="comando"><code>{p.instalacao}</code></div>
+      </li>
+      <li>
+        <h3>Reinicie a sessão e confirme</h3>
+        <p>As skills só aparecem depois de reiniciar o Claude Code.</p>
+        <div class="comando"><code>{`claude plugin details ${p.nome}@acta-sistema-de-conhecimento`}</code></div>
+      </li>
+    </ol>
+  </section>
 
-  <h2>O que vem no plugin</h2>
+  <section class="secao">
+    <h2>O que vem no plugin</h2>
 
-  {invocaveis.length > 0 && (
-    <>
-      <p>
-        Estas você chama digitando <code>/</code> seguido do nome, e o Claude também as carrega
-        sozinho quando o assunto aparece na conversa.
-      </p>
-      <table>
-        <thead><tr><th style="width:15rem">Skill</th><th>O que faz</th></tr></thead>
-        <tbody>
+    {invocaveis.length > 0 && (
+      <>
+        <p>
+          Estas você chama digitando <code>/</code> seguido do nome, e o Claude também as carrega
+          sozinho quando o assunto aparece na conversa.
+        </p>
+        <div class="lista">
           {invocaveis.map((s) => (
-            <tr>
-              <td><a href={`/skills/${s.slug}`}><code>{s.nome}</code></a></td>
-              <td>{resumo(s.descricao)}</td>
-            </tr>
+            <a href={`/skills/${s.slug}`}>
+              <span class="nome">{s.nome}</span>
+              <span class="oque">{resumo(s.descricao)}</span>
+            </a>
           ))}
-        </tbody>
-      </table>
-    </>
-  )}
+        </div>
+      </>
+    )}
 
-  {defundo.length > 0 && (
-    <>
-      <h3>Carregadas por outras skills</h3>
-      <p>
-        Não aparecem no menu de <code>/</code>: são conhecimento de fundo que outra skill puxa
-        quando precisa do conceito exato.
-      </p>
-      <table>
-        <tbody>
+    {defundo.length > 0 && (
+      <>
+        <h3>Carregadas por outras skills</h3>
+        <p>
+          Não aparecem no menu de <code>/</code>: são conhecimento de fundo que outra skill puxa
+          quando precisa do conceito exato.
+        </p>
+        <div class="lista">
           {defundo.map((s) => (
-            <tr>
-              <td style="width:15rem"><a href={`/skills/${s.slug}`}><code>{s.nome}</code></a></td>
-              <td>{resumo(s.descricao)}</td>
-            </tr>
+            <a href={`/skills/${s.slug}`}>
+              <span class="nome">{s.nome}</span>
+              <span class="oque">{resumo(s.descricao)}</span>
+            </a>
           ))}
-        </tbody>
-      </table>
-    </>
-  )}
+        </div>
+      </>
+    )}
 
-  {pendentes.length > 0 && (
-    <>
-      <h3>Etapas ainda não escritas</h3>
-      <p>
-        Estão fora do roteamento e <strong>não custam contexto</strong>. Existem como marcador do que
-        falta: quando a metodologia da etapa for escrita, a skill entra em operação.
-      </p>
-      <p>{pendentes.map((s) => <><code>{s.nome}</code>{'  '}</>)}</p>
-    </>
-  )}
-</Base>
+    {pendentes.length > 0 && (
+      <>
+        <h3>Etapas ainda não escritas</h3>
+        <p>
+          Estão fora do roteamento e <strong>não custam contexto</strong>. Existem como marcador do
+          que falta: quando a metodologia da etapa for escrita, a skill entra em operação.
+        </p>
+        <p class="pe">
+          {pendentes.map((s) => <span class="etiqueta">{s.nome}</span>)}
+        </p>
+      </>
+    )}
+  </section>
+</Pagina>

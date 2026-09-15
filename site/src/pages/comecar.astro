@@ -1,146 +1,170 @@
 ---
-import Base from '../layouts/Base.astro';
+import Pagina from '../layouts/Pagina.astro';
 import { catalogo } from '../lib/catalogo.js';
 const { plugins } = catalogo();
 ---
 
-<Base titulo="Começar" descricao="Instalar, verificar, atualizar e resolver problema.">
-  <h1>Começar</h1>
-  <p class="chamada">
-    Do zero ao primeiro plugin funcionando. Se algo falhar, a seção de problemas no fim cobre o que
-    mais acontece.
-  </p>
+<Pagina
+  titulo="Começar"
+  sobrescrito="Guia de instalação"
+  descricao="Instalar, verificar, atualizar e resolver problema."
+  abertura="Do zero ao primeiro plugin funcionando. A seção do fim cobre os erros que mais aparecem, na ordem em que costumam acontecer."
+>
+  <section class="secao">
+    <h2>Pré-requisitos</h2>
+    <div class="quadro">
+      <table>
+        <tbody>
+          <tr>
+            <th style="width:14rem">Claude Code</th>
+            <td>
+              Instalado e autenticado na sua conta. Confira com <code>claude --version</code>. Este
+              portal não substitui o Claude Code: ele diz o que instalar dentro dele.
+            </td>
+          </tr>
+          <tr>
+            <th>Acesso ao repositório</th>
+            <td>
+              O marketplace vive num repositório <strong>privado</strong> no GitHub. Sem acesso
+              concedido à sua conta, o passo 1 falha na autenticação. Peça antes de começar.
+            </td>
+          </tr>
+          <tr>
+            <th>Git autenticado</th>
+            <td>
+              O Claude Code usa o seu Git para clonar o marketplace. Se <code>git clone</code> de um
+              repositório privado funciona na sua máquina, isto já está resolvido.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-  <h2>Pré-requisitos</h2>
-  <table>
-    <tbody>
-      <tr>
-        <th style="width:13rem">Claude Code</th>
-        <td>Instalado e autenticado na sua conta. Confira com <code>claude --version</code>.</td>
-      </tr>
-      <tr>
-        <th>Acesso ao repositório</th>
-        <td>
-          O marketplace vive num repositório <strong>privado</strong> no GitHub. Sem acesso concedido
-          à sua conta, o passo 1 falha na autenticação. Peça antes de começar.
-        </td>
-      </tr>
-      <tr>
-        <th>Git autenticado</th>
-        <td>
-          O Claude Code usa o seu Git para clonar o marketplace. Se <code>git clone</code> de um
-          repositório privado funciona na sua máquina, isto está resolvido.
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <section class="secao">
+    <h2>Instalação</h2>
+    <ol class="passos">
+      <li>
+        <h3>Registre o marketplace</h3>
+        <p>Uma vez por máquina. A partir daí ela conhece todos os plugins da firma.</p>
+        <div class="comando"><code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code></div>
+      </li>
+      <li>
+        <h3>Instale o <code>acta-way</code></h3>
+        <p>
+          É pré-requisito de todos os outros e não é opcional: é onde vive o checkpoint, o mecanismo
+          que faz o estado de um engajamento atravessar sessões e consultores. O manifesto de plugin
+          do Claude Code não tem campo de dependência, então nenhum plugin consegue forçar a
+          instalação de outro. Por isso este passo é manual.
+        </p>
+        <div class="comando"><code>claude plugin install acta-way@acta-sistema-de-conhecimento --scope user</code></div>
+      </li>
+      <li>
+        <h3>Instale o plugin do seu engajamento</h3>
+        <p>Só o do projeto em que você está. A lista completa fica em <a href="/projetos">Projetos</a>.</p>
+        <div class="comando"><code>claude plugin install acta-metodo-auditoria@acta-sistema-de-conhecimento --scope user</code></div>
+      </li>
+      <li>
+        <h3>Reinicie o Claude Code</h3>
+        <p>
+          As skills só entram em operação na sessão seguinte. Sem reiniciar, o menu de
+          <code>/</code> continua igual e parece que a instalação falhou.
+        </p>
+      </li>
+      <li>
+        <h3>Confirme</h3>
+        <p>Deve listar as skills do plugin e o custo de contexto que ele adiciona.</p>
+        <div class="comando"><code>claude plugin details acta-metodo-auditoria@acta-sistema-de-conhecimento</code></div>
+      </li>
+    </ol>
+  </section>
 
-  <h2>Instalação</h2>
-  <ol class="passos">
-    <li>
-      <h3>Registre o marketplace</h3>
-      <p>Uma vez por máquina. Ele passa a conhecer todos os plugins da firma.</p>
-      <div class="comando"><code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code></div>
-    </li>
-    <li>
-      <h3>Instale <code>acta-way</code></h3>
-      <p>
-        É pré-requisito de todos os outros e não é opcional: é onde vive o checkpoint, o mecanismo
-        que faz o estado de um engajamento atravessar sessões e consultores. O manifesto de plugin
-        do Claude Code não tem campo de dependência — nenhum plugin consegue forçar a instalação de
-        outro. Por isso este passo é manual.
-      </p>
-      <div class="comando"><code>claude plugin install acta-way@acta-sistema-de-conhecimento --scope user</code></div>
-    </li>
-    <li>
-      <h3>Instale o plugin do seu engajamento</h3>
-      <p>Só o do projeto em que você está. Ver <a href="/projetos">a lista por tipo de projeto</a>.</p>
-      <div class="comando"><code>claude plugin install acta-metodo-auditoria@acta-sistema-de-conhecimento --scope user</code></div>
-    </li>
-    <li>
-      <h3>Reinicie o Claude Code</h3>
-      <p>As skills só entram em operação na sessão seguinte. Sem reiniciar, o menu de <code>/</code> não muda.</p>
-    </li>
-    <li>
-      <h3>Confirme</h3>
-      <p>Deve listar as skills do plugin e o custo de contexto que ele adiciona.</p>
-      <div class="comando"><code>claude plugin details acta-metodo-auditoria@acta-sistema-de-conhecimento</code></div>
-    </li>
-  </ol>
+  <section class="secao">
+    <h2>Manter atualizado</h2>
+    <p>
+      O repositório muda quando alguém escreve metodologia nova. O marketplace registrado na sua
+      máquina é uma cópia e não se atualiza sozinho.
+    </p>
+    <div class="comando"><code>claude plugin marketplace update acta-sistema-de-conhecimento</code></div>
+    <p>Depois, atualize os plugins que você usa:</p>
+    <div class="comando"><code>claude plugin update acta-metodo-auditoria@acta-sistema-de-conhecimento</code></div>
+  </section>
 
-  <h2>Manter atualizado</h2>
-  <p>
-    O repositório muda quando alguém escreve metodologia nova. O marketplace registrado na sua
-    máquina é uma cópia: ele não se atualiza sozinho.
-  </p>
-  <div class="comando"><code>claude plugin marketplace update acta-sistema-de-conhecimento</code></div>
-  <p style="margin-top:1rem">Depois, atualize os plugins que você usa:</p>
-  <div class="comando"><code>claude plugin update acta-metodo-auditoria@acta-sistema-de-conhecimento</code></div>
+  <section class="secao">
+    <h2>Contexto: instale pouco, desative o resto</h2>
+    <p>
+      Cada plugin instalado e habilitado custa contexto em <strong>toda</strong> sessão, mesmo em
+      conversa que não tem nada a ver com ele. O preço é a descrição das skills, que fica sempre
+      carregada para o Claude saber o que existe. A cobrança é por estar ativo, não por uso.
+    </p>
+    <div class="quadro">
+      <table>
+        <thead>
+          <tr><th style="width:24rem">Plugin</th><th>Custo por sessão</th><th>Skills</th></tr>
+        </thead>
+        <tbody>
+          {plugins.map((p) => (
+            <tr>
+              <td><a href={`/projetos/${p.slug}`}><code>{p.nome}</code></a></td>
+              <td>~{p.custoAlwaysOn} tokens</td>
+              <td>{p.skills.length}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p>Desative o que não é do engajamento corrente. É reversível a qualquer momento.</p>
+    <div class="comando"><code>claude plugin disable acta-pesquisa-salarial@acta-sistema-de-conhecimento</code></div>
+  </section>
 
-  <h2>Contexto: instale pouco, desative o resto</h2>
-  <p>
-    Cada plugin instalado e habilitado custa contexto em <strong>toda</strong> sessão, mesmo em
-    conversa que não tem nada a ver com ele. O preço é a descrição das skills, que fica sempre
-    carregada para o Claude saber o que existe. Não é cobrado por uso — é cobrado por estar ativo.
-  </p>
-  <table>
-    <thead><tr><th style="width:22rem">Plugin</th><th>Custo por sessão</th><th>Skills</th></tr></thead>
-    <tbody>
-      {plugins.map((p) => (
-        <tr>
-          <td><a href={`/projetos/${p.slug}`}><code>{p.nome}</code></a></td>
-          <td>~{p.custoAlwaysOn} tokens</td>
-          <td>{p.skills.length}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-  <p>Desative o que não é do engajamento corrente. É reversível a qualquer momento.</p>
-  <div class="comando"><code>claude plugin disable acta-pesquisa-salarial@acta-sistema-de-conhecimento</code></div>
+  <section class="secao">
+    <h2>Quando não funciona</h2>
 
-  <h2>Quando não funciona</h2>
+    <h3>O comando de marketplace falha na autenticação</h3>
+    <p>
+      Quase sempre é falta de acesso ao repositório privado. Teste com
+      <code>git clone https://github.com/guilhermegarrido7/acta-sistema-de-conhecimento</code>. Se
+      isso falha, o problema é permissão no GitHub, não o Claude Code.
+    </p>
 
-  <h3>O comando de marketplace falha na autenticação</h3>
-  <p>
-    Quase sempre é falta de acesso ao repositório privado. Teste com
-    <code>git clone https://github.com/guilhermegarrido7/acta-sistema-de-conhecimento</code>: se isso
-    falha, o problema é permissão no GitHub, não o Claude Code.
-  </p>
+    <h3>Instalei mas as skills não aparecem</h3>
+    <p>Três causas, nesta ordem de frequência:</p>
+    <ol>
+      <li><strong>Não reiniciou a sessão.</strong> É a causa mais comum, de longe.</li>
+      <li>
+        <strong>O plugin está instalado mas desabilitado.</strong> Confira com
+        <code>claude plugin list</code> e procure <code>disabled</code> na linha de status. Resolva
+        com <code>claude plugin enable &lt;nome&gt;</code>.
+      </li>
+      <li>
+        <strong>O marketplace local está desatualizado</strong> e não conhece o plugin novo. Rode o
+        <code>marketplace update</code> da seção acima.
+      </li>
+    </ol>
 
-  <h3>Instalei mas as skills não aparecem</h3>
-  <p>Três causas, nesta ordem de frequência:</p>
-  <ol>
-    <li><strong>Não reiniciou a sessão.</strong> É a causa mais comum.</li>
-    <li>
-      <strong>O plugin está instalado mas desabilitado.</strong> Confira com
-      <code>claude plugin list</code> — procure <code>disabled</code> na linha de status. Resolva com
-      <code>claude plugin enable &lt;nome&gt;</code>.
-    </li>
-    <li>
-      <strong>O marketplace local está desatualizado</strong> e não conhece o plugin novo. Rode o
-      <code>marketplace update</code> acima.
-    </li>
-  </ol>
+    <h3>Vejo a skill duplicada</h3>
+    <p>
+      Acontece quando o mesmo plugin chega por dois caminhos: instalado localmente no Claude Code
+      <em>e</em> habilitado na sua conta claude.ai, em Customize. São sistemas independentes e o app
+      carrega os dois. Escolha um: se você trabalha no Claude Code, mantenha o local e remova da
+      conta.
+    </p>
 
-  <h3>Vejo a skill duplicada</h3>
-  <p>
-    Acontece quando o mesmo plugin chega por dois caminhos: instalado localmente no Claude Code
-    <em>e</em> habilitado na sua conta claude.ai (Customize). São sistemas independentes e o app
-    carrega os dois. Escolha um: se você trabalha no Claude Code, mantenha o local e remova da conta.
-  </p>
+    <h3>A skill dispara na hora errada, ou não dispara</h3>
+    <p>
+      O roteamento é feito pela descrição da skill. Se ela dispara demais, a descrição está genérica
+      demais; se não dispara, está vaga ou falta o gatilho que você usa. Os dois casos são defeito da
+      skill, não do seu uso. Abra a questão com quem mantém o plugin.
+    </p>
+  </section>
 
-  <h3>A skill dispara na hora errada, ou não dispara</h3>
-  <p>
-    O roteamento é feito pela descrição da skill. Se ela dispara demais, a descrição está genérica
-    demais; se não dispara, está vaga ou falta o gatilho que você usa. Os dois casos são defeito da
-    skill, não do seu uso — abra a questão com quem mantém o plugin.
-  </p>
-
-  <h2>Contribuir</h2>
-  <p>
-    A metodologia é escrita em arquivos <code>SKILL.md</code> no repositório. Antes de abrir um pull
-    request, rode o validador da raiz — ele aplica os limites da casa e barra nome de cliente e de
-    pessoa no texto publicado:
-  </p>
-  <div class="comando"><code>python scripts/validar-skills.py</code></div>
-</Base>
+  <section class="secao">
+    <h2>Contribuir</h2>
+    <p>
+      A metodologia é escrita em arquivos <code>SKILL.md</code> no repositório. Antes de abrir um
+      pull request, rode o validador da raiz: ele aplica os limites da casa e barra nome de cliente e
+      de pessoa no texto publicado.
+    </p>
+    <div class="comando"><code>python scripts/validar-skills.py</code></div>
+  </section>
+</Pagina>

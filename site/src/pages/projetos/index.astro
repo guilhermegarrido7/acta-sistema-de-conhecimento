@@ -1,24 +1,24 @@
 ---
-import Base from '../../layouts/Base.astro';
+import Pagina from '../../layouts/Pagina.astro';
 import { catalogo } from '../../lib/catalogo.js';
 const { categorias } = catalogo();
 ---
-<Base titulo="Projetos" descricao="Catálogo de plugins por tipo de projeto.">
-  <h1>Projetos</h1>
-  <p class="chamada">
-    Um plugin por tipo de engajamento. Cada um traz as etapas do ciclo de vida daquele projeto e os
-    entregáveis de cada etapa.
-  </p>
 
+<Pagina
+  titulo="Projetos"
+  sobrescrito="Catálogo"
+  descricao="Catálogo de plugins por tipo de projeto."
+  abertura="Um plugin por tipo de engajamento. Cada um traz as etapas do ciclo de vida daquele projeto e o formato do entregável de cada etapa."
+>
   {categorias.map((c) => (
-    <section>
+    <section class="secao">
       <h2>{c.rotulo}</h2>
       <div class="grade">
         {c.plugins.map((p) => (
           <article class="cartao">
-            <h3><a href={`/projetos/${p.slug}`}>{p.projeto?.titulo ?? p.slug}</a></h3>
+            <h3><a href={`/projetos/${p.slug}`}>{p.titulo}</a></h3>
             <p>{p.descricao}</p>
-            <div class="rodape">
+            <div class="pe">
               <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>
               <span>{p.skills.length} skills</span>
               <span>~{p.custoAlwaysOn} tok/sessão</span>
@@ -29,10 +29,40 @@ const { categorias } = catalogo();
     </section>
   ))}
 
-  <h2>O que ainda não está aqui</h2>
-  <p>
-    O repositório tem mais tipos de projeto mapeados do que publicados — um plugin só entra no
-    catálogo quando tem metodologia escrita, para ninguém instalar casca vazia. O desenho alvo de
-    cada um e a ordem em que serão escritos estão em <code>docs/MAPEAMENTO.md</code>.
-  </p>
-</Base>
+  <section class="secao">
+    <h2>Como ler os rótulos</h2>
+    <div class="quadro">
+      <table>
+        <tbody>
+          <tr>
+            <th style="width:10rem"><span class="etiqueta completo">Completo</span></th>
+            <td>Todas as etapas do ciclo de vida têm metodologia escrita.</td>
+          </tr>
+          <tr>
+            <th><span class="etiqueta parcial">Parcial</span></th>
+            <td>
+              Parte das etapas está escrita e o resto existe como marcador. O plugin funciona; ele
+              cobre menos do que o projeto inteiro.
+            </td>
+          </tr>
+          <tr>
+            <th><span class="etiqueta">tok/sessão</span></th>
+            <td>
+              O contexto que o plugin consome em toda sessão enquanto estiver habilitado. É o número
+              que decide se vale mantê-lo instalado fora do engajamento.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="secao">
+    <h2>O que ainda não está aqui</h2>
+    <p>
+      O repositório tem mais tipos de projeto mapeados do que publicados. Um plugin só entra no
+      catálogo quando tem metodologia escrita, para ninguém instalar casca vazia. O desenho alvo de
+      cada um e a ordem em que serão escritos estão em <code>docs/MAPEAMENTO.md</code>.
+    </p>
+  </section>
+</Pagina>

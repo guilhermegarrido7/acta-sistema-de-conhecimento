@@ -2,84 +2,156 @@
 import Base from '../layouts/Base.astro';
 import { catalogo } from '../lib/catalogo.js';
 const { plugins, categorias } = catalogo();
-const completos = plugins.filter((p) => p.status === 'Completo').length;
+
 const totalSkills = plugins.reduce((t, p) => t + p.skills.length, 0);
-const projeto = categorias.find((c) => c.slug === 'consultoria-empresarial')?.plugins ?? [];
+const completos = plugins.filter((p) => p.status === 'Completo').length;
+const deProjeto = plugins.filter(
+  (p) => p.categoria === 'consultoria-empresarial' || p.categoria === 'governanca-riscos-compliance'
+);
+const praticas = categorias.length;
 ---
-<Base titulo="Início" descricao="Metodologia da ACTA Advisory, instalável no Claude Code.">
-  <h1>A metodologia da casa, instalável.</h1>
-  <p class="chamada">
-    Cada tipo de projeto da ACTA tem um plugin com o método escrito: as etapas, as regras que não se
-    negociam, o formato de cada entregável. Você instala o do seu engajamento e o Claude passa a
-    trabalhar no padrão da firma, não no padrão genérico dele.
-  </p>
 
-  <div class="grade" style="grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); margin-bottom: 2rem;">
-    <div class="cartao"><h3>{plugins.length}</h3><p>plugins publicados</p></div>
-    <div class="cartao"><h3>{completos}</h3><p>com método completo</p></div>
-    <div class="cartao"><h3>{totalSkills}</h3><p>skills disponíveis</p></div>
-  </div>
+<Base
+  titulo="Início"
+  descricao="A metodologia da ACTA Advisory escrita em plugins instaláveis no Claude Code."
+>
+  <section class="heroi">
+    <div class="envelope">
+      <span class="selo">{plugins.length} plugins · {totalSkills} skills</span>
+      <h1>A metodologia da casa, <em>instalável</em>.</h1>
+      <p class="abertura">
+        Cada tipo de projeto da ACTA tem um plugin com o método escrito: as etapas do ciclo de vida,
+        as regras que não se negociam e o formato de cada entregável. Você instala o do seu
+        engajamento e o Claude passa a trabalhar no padrão da firma em vez do padrão genérico dele.
+      </p>
+      <div class="acoes">
+        <a href="/comecar" class="botao botao--forte">Como instalar</a>
+        <a href="/projetos" class="botao botao--claro">Ver os tipos de projeto</a>
+      </div>
+      <div class="comando comando--claro" style="margin-top:2.25rem; max-width:46rem">
+        <code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code>
+      </div>
+    </div>
+  </section>
 
-  <h2>Antes de instalar</h2>
-  <table>
-    <tbody>
-      <tr>
-        <th style="width: 12rem">Claude Code</th>
-        <td>Instalado e autenticado. O portal não substitui o Claude Code — ele diz o que instalar dentro dele.</td>
-      </tr>
-      <tr>
-        <th>Acesso ao repositório</th>
-        <td>O marketplace é um repositório <strong>privado</strong> no GitHub. Peça acesso antes: sem ele, o comando de instalação falha na autenticação.</td>
-      </tr>
-      <tr>
-        <th><code>acta-way</code></th>
-        <td>É pré-requisito de todos os outros. Instale primeiro, sempre — é onde vive o checkpoint entre sessões e entre consultores.</td>
-      </tr>
-    </tbody>
-  </table>
+  <section class="faixa faixa--suave faixa--fina">
+    <div class="envelope">
+      <div class="numeros">
+        <div><b>{plugins.length}</b><span>plugins publicados</span></div>
+        <div><b>{completos}</b><span>com método completo</span></div>
+        <div><b>{totalSkills}</b><span>skills disponíveis</span></div>
+        <div><b>{praticas}</b><span>práticas cobertas</span></div>
+      </div>
+    </div>
+  </section>
 
-  <h2>Instalação em dois comandos</h2>
-  <p>Registre o marketplace uma vez por máquina:</p>
-  <div class="comando"><code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code></div>
-  <p style="margin-top: 1rem">Depois instale a fundação:</p>
-  <div class="comando"><code>claude plugin install acta-way@acta-sistema-de-conhecimento --scope user</code></div>
-  <p style="margin-top: 1rem">
-    Daí em diante, só o plugin do engajamento em que você está.
-    <a href="/comecar">O guia completo</a> cobre verificação, atualização e o que fazer quando não funciona.
-  </p>
+  <div class="envelope conteudo">
+    <section class="secao">
+      <span class="sobrescrito">O que você instala</span>
+      <h2>Três palavras que aparecem o tempo todo aqui</h2>
+      <p class="abertura" style="margin-bottom:1.75rem">
+        Vale ler antes de instalar qualquer coisa. O portal inteiro usa esses três termos.
+      </p>
+      <div class="grade">
+        <article class="cartao">
+          <h3>Plugin</h3>
+          <p>
+            O método de um tipo de projeto inteiro, do kick-off ao encerramento. É a unidade que você
+            instala e desinstala. <code>acta-metodo-auditoria</code> é um plugin.
+          </p>
+        </article>
+        <article class="cartao">
+          <h3>Skill</h3>
+          <p>
+            Uma etapa dentro desse método, com as regras e o formato de saída daquela etapa. Um
+            plugin traz entre cinco e doze delas. O Claude carrega a skill certa quando o assunto
+            aparece na conversa.
+          </p>
+        </article>
+        <article class="cartao">
+          <h3>Checkpoint</h3>
+          <p>
+            O arquivo que registra onde o engajamento parou. Sessão de Claude não passa de um
+            consultor para outro; o checkpoint passa. Vive no <code>acta-way</code>, que todo mundo
+            instala.
+          </p>
+        </article>
+      </div>
+    </section>
 
-  <h2>Escolha pelo projeto, não pela ferramenta</h2>
-  <p class="chamada" style="font-size: 1rem">
-    Ninguém acorda querendo instalar uma skill: acorda tendo que conduzir um projeto. Comece pelo
-    tipo de engajamento.
-  </p>
-  <div class="grade">
-    {projeto.map((p) => (
-      <article class="cartao">
-        <h3><a href={`/projetos/${p.slug}`}>{p.projeto?.titulo ?? p.slug}</a></h3>
-        <p>{p.descricao}</p>
-        <div class="rodape">
-          <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>
-          <span>{p.skills.length} skills</span>
-        </div>
-      </article>
-    ))}
-  </div>
-  <p style="margin-top: 1.25rem"><a href="/projetos">Ver todos os tipos de projeto →</a></p>
+    <section class="secao">
+      <span class="sobrescrito">Por onde começar</span>
+      <h2>Escolha pelo projeto, não pela ferramenta</h2>
+      <p class="abertura" style="margin-bottom:1.75rem">
+        Ninguém acorda querendo instalar uma skill: acorda tendo que conduzir um projeto. Cada
+        cartão abaixo leva ao método daquele tipo de engajamento e ao comando que o instala.
+      </p>
+      <div class="grade">
+        {deProjeto.map((p) => (
+          <article class="cartao">
+            <h3><a href={`/projetos/${p.slug}`}>{p.titulo}</a></h3>
+            <p>{p.descricao}</p>
+            <div class="pe">
+              <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>
+              <span>{p.skills.length} skills</span>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p style="margin-top:1.4rem">
+        <a href="/projetos" class="botao botao--linha">Ver todos os tipos de projeto</a>
+      </p>
+    </section>
 
-  <h2>Três coisas que economizam contexto</h2>
-  <div class="nota">
-    <strong>Instale só o que está em uso.</strong> Cada plugin instalado custa contexto em
-    <em>toda</em> sessão, mesmo quando você não usa. Desative o que não é do engajamento corrente com
-    <code>claude plugin disable &lt;nome&gt;</code> — é reversível a qualquer momento.
-  </div>
-  <div class="nota">
-    <strong>O checkpoint é o que atravessa pessoas.</strong> Sessão de Claude não passa de um
-    consultor para outro; o arquivo na pasta do engajamento passa. Feche a sessão pelo checkpoint em
-    vez de simplesmente fechar o chat.
-  </div>
-  <div class="nota">
-    <strong>Nome de cliente não entra em skill.</strong> O repositório é compartilhado na firma e há
-    verificação automática no build. Caso real vira exemplo anonimizado.
+    <section class="secao">
+      <span class="sobrescrito">Instalação</span>
+      <h2>Dois comandos antes do primeiro uso</h2>
+      <ol class="passos">
+        <li>
+          <h3>Registre o marketplace</h3>
+          <p>Uma vez por máquina. Exige acesso ao repositório privado no GitHub.</p>
+          <div class="comando"><code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code></div>
+        </li>
+        <li>
+          <h3>Instale a fundação</h3>
+          <p>
+            O <code>acta-way</code> é pré-requisito de todos os outros: é onde vivem o checkpoint e
+            as convenções da casa.
+          </p>
+          <div class="comando"><code>claude plugin install acta-way@acta-sistema-de-conhecimento --scope user</code></div>
+        </li>
+      </ol>
+      <p>
+        Daí em diante, só o plugin do engajamento em que você está.
+        <a href="/comecar">O guia completo</a> cobre verificação, atualização e o que fazer quando
+        não funciona.
+      </p>
+    </section>
+
+    <section class="secao">
+      <span class="sobrescrito">Antes de sair instalando</span>
+      <h2>Três coisas que evitam problema</h2>
+      <div class="aviso">
+        <p>
+          <strong>Instale só o que está em uso.</strong> Cada plugin habilitado custa contexto em
+          toda sessão, mesmo naquelas que não têm relação com ele. O preço é a descrição das skills,
+          que fica carregada para o Claude saber o que existe. Desative o que não é do engajamento
+          corrente com <code>claude plugin disable &lt;nome&gt;</code>, reversível a qualquer momento.
+        </p>
+      </div>
+      <div class="aviso">
+        <p>
+          <strong>Feche a sessão pelo checkpoint.</strong> Fechar o chat direto perde o estado do
+          engajamento. O checkpoint grava onde parou num arquivo da pasta do projeto, que é o que
+          outro consultor consegue abrir depois.
+        </p>
+      </div>
+      <div class="aviso aviso--atencao">
+        <p>
+          <strong>Nome de cliente não entra em skill.</strong> O repositório é compartilhado na firma
+          e há verificação automática antes de cada publicação. Caso real vira exemplo anonimizado.
+        </p>
+      </div>
+    </section>
   </div>
 </Base>

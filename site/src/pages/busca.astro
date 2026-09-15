@@ -1,13 +1,13 @@
 ---
-import Base from '../layouts/Base.astro';
+import Pagina from '../layouts/Pagina.astro';
 ---
-<Base titulo="Busca" descricao="Busca em todo o conteúdo do portal.">
-  <h1>Busca</h1>
-  <p class="chamada">
-    Procura no texto de todas as páginas: plugins, skills e conteúdo de projeto. Se você ainda não
-    sabe o que procurar, comece por <a href="/projetos">tipo de projeto</a>.
-  </p>
 
+<Pagina
+  titulo="Busca"
+  sobrescrito="Todo o portal"
+  descricao="Busca em todo o conteúdo do portal."
+  abertura="Procura no texto de todas as páginas: plugins, skills e conteúdo de projeto. Se você ainda não sabe o que procurar, comece pelo tipo de projeto."
+>
   <div id="busca"></div>
 
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
@@ -31,4 +31,4 @@ import Base from '../layouts/Base.astro';
       });
     });
   </script>
-</Base>
+</Pagina>

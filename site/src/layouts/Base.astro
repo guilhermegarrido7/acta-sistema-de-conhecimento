@@ -3,12 +3,12 @@ import '../styles/global.css';
 const { titulo, descricao } = Astro.props;
 const rota = Astro.url.pathname.replace(/\/$/, '') || '/';
 const itens = [
-  { href: '/comecar',     rotulo: 'Começar' },
-  { href: '/projetos',    rotulo: 'Projetos' },
-  { href: '/skills',      rotulo: 'Skills' },
-  { href: '/avulsas',     rotulo: 'Avulsas' },
-  { href: '/benchmarking',rotulo: 'Benchmarking' },
-  { href: '/busca',       rotulo: 'Busca' },
+  { href: '/comecar',      rotulo: 'Começar' },
+  { href: '/projetos',     rotulo: 'Projetos' },
+  { href: '/skills',       rotulo: 'Skills' },
+  { href: '/avulsas',      rotulo: 'Avulsas' },
+  { href: '/benchmarking', rotulo: 'Benchmarking' },
+  { href: '/busca',        rotulo: 'Busca' },
 ];
 const ativo = (href) => rota === href || rota.startsWith(href + '/');
 ---
@@ -20,11 +20,17 @@ const ativo = (href) => rota === href || rota.startsWith(href + '/');
     <title>{titulo} · ACTA Sistema de Conhecimento</title>
     {descricao && <meta name="description" content={descricao} />}
     <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap"
+    />
   </head>
   <body>
     <header class="topo">
       <div class="envelope">
-        <a href="/" class="marca">ACTA <span>Conhecimento</span></a>
+        <a href="/" class="marca"><b>ACTA</b><span>Conhecimento</span></a>
         <nav>
           {itens.map((i) => (
             <a href={i.href} aria-current={ativo(i.href) ? 'page' : undefined}>{i.rotulo}</a>
@@ -33,15 +39,61 @@ const ativo = (href) => rota === href || rota.startsWith(href + '/');
       </div>
     </header>
 
-    <main class="envelope" data-pagefind-body>
+    <main data-pagefind-body>
       <slot />
     </main>
 
-    <footer>
+    <footer data-pagefind-ignore>
       <div class="envelope">
-        <span>ACTA Advisory · uso interno</span>
-        <span>Gerado do repositório <code>acta-sistema-de-conhecimento</code></span>
+        <div class="colunas">
+          <div>
+            <a href="/" class="marca" style="margin-bottom:.9rem"><b>ACTA</b><span>Conhecimento</span></a>
+            <p>
+              A metodologia da firma escrita em plugins do Claude Code. O catálogo deste portal é
+              gerado do repositório a cada publicação, então ele não descreve uma versão antiga do
+              método.
+            </p>
+          </div>
+          <div>
+            <h4>Portal</h4>
+            <a href="/comecar">Começar</a>
+            <a href="/projetos">Projetos</a>
+            <a href="/skills">Skills</a>
+            <a href="/busca">Busca</a>
+          </div>
+          <div>
+            <h4>Também aqui</h4>
+            <a href="/avulsas">Skills avulsas</a>
+            <a href="/benchmarking">Benchmarking</a>
+          </div>
+        </div>
+        <div class="base">
+          <span>ACTA Advisory · uso interno</span>
+          <span>Gerado de <code>acta-sistema-de-conhecimento</code></span>
+        </div>
       </div>
     </footer>
+
+    <script is:inline>
+      // Copiar o comando de instalação é a ação principal do portal; o botão evita
+      // a seleção manual de uma linha longa que quebra em telas estreitas.
+      document.querySelectorAll('.comando').forEach((bloco) => {
+        const botao = document.createElement('button');
+        botao.type = 'button';
+        botao.className = 'copiar';
+        botao.textContent = 'copiar';
+        botao.addEventListener('click', async () => {
+          const texto = bloco.querySelector('code')?.textContent ?? '';
+          try {
+            await navigator.clipboard.writeText(texto);
+            botao.textContent = 'copiado';
+          } catch {
+            botao.textContent = 'falhou';
+          }
+          setTimeout(() => { botao.textContent = 'copiar'; }, 1800);
+        });
+        bloco.appendChild(botao);
+      });
+    </script>
   </body>
 </html>

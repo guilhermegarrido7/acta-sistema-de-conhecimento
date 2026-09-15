@@ -1,0 +1,21 @@
+---
+/* Página interna: faixa de título mais o corpo. Existe para que as oito páginas
+   internas não repitam a mesma marcação de cabeçalho. */
+import Base from './Base.astro';
+const { titulo, descricao, sobrescrito, abertura, voltar } = Astro.props;
+---
+<Base titulo={titulo} descricao={descricao}>
+  <div class="capa">
+    <div class="envelope">
+      {voltar && <p class="rastro"><a href={voltar.href}>← {voltar.rotulo}</a></p>}
+      {sobrescrito && <span class="sobrescrito">{sobrescrito}</span>}
+      <h1>{titulo}</h1>
+      {abertura && <p class="abertura">{abertura}</p>}
+      <slot name="meta" />
+    </div>
+  </div>
+
+  <div class="envelope conteudo">
+    <slot />
+  </div>
+</Base>

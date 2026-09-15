@@ -48,6 +48,14 @@ function statusDoRoadmap() {
   return mapa;
 }
 
+/** H1 do README: é o único título legível que já existe no repositório. */
+function tituloDoReadme(dir) {
+  const p = path.join(dir, 'README.md');
+  if (!existe(p)) return '';
+  const m = fs.readFileSync(p, 'utf-8').match(/^#\s+(.+)$/m);
+  return m ? m[1].trim() : '';
+}
+
 /** Primeiro parágrafo de prosa do README, para usar como resumo. */
 function resumoDoReadme(dir) {
   const p = path.join(dir, 'README.md');
@@ -109,9 +117,14 @@ export function catalogo() {
       projeto = { ...dados, corpo, corpoHtml: marked.parse(corpo) };
     }
 
+    const slug = manifesto.name.replace(/^acta-/, '');
+
     return {
       nome: manifesto.name,
-      slug: manifesto.name.replace(/^acta-/, ''),
+      slug,
+      // O projeto.md manda quando existe; o H1 do README é o recurso para os
+      // plugins que ainda não têm página editorial. O slug é só o último recurso.
+      titulo: projeto?.titulo || tituloDoReadme(dirPlugin) || slug,
       versao: manifesto.version,
       descricao: entrada.description || manifesto.description,
       categoria: entrada.category,

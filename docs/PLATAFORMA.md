@@ -103,39 +103,45 @@ de catálogo em memória de firma.
 
 ## 4. Segurança: a decisão que condiciona todo o resto
 
-O repositório foi tornado **privado** porque contém a metodologia proprietária da casa. **Um portal
-público com esse mesmo conteúdo desfaz a decisão.** A plataforma é, necessariamente, autenticada.
+O repositório permanece **privado** — é onde vive o método por extenso, incluindo o que ainda não
+passou pela revisão de anonimização. Mas o **portal é uma vitrine**: mostra o catálogo de plugins,
+o que cada skill faz e o método já anonimizado (sem nome de cliente, sem dado de projeto real — ver
+`scripts/validar-skills.py` e `clientes.local.txt`). Não existe conta de usuário, não existe login,
+e essa é uma decisão deliberada, não uma pendência.
 
-Isso elimina hospedagem estática pública (GitHub Pages em repositório privado, bucket aberto) e torna
-a autenticação requisito de arquitetura, não recurso opcional.
+Consequência prática: **nenhuma autenticação é necessária.** O portal é HTML estático, público, sem
+sessão e sem senha — porque não há nada nele que dependa de quem está lendo. Confidencial fica no
+repositório (privado) e no SharePoint/OneDrive dos projetos executados (seção 4.2); o que chega ao
+portal já passou pelo filtro que existe exatamente para poder ser mostrado sem crachá.
+
+Isso também reabre uma opção descartada antes por engano: **GitHub Pages** funciona aqui, porque a
+objeção original (site público expõe conteúdo confidencial) não se aplica mais — o conteúdo público
+é, por desenho, o que pode ser público. Ainda assim mantém-se o Cloudflare (seção 5): já está no ar,
+já resolve o build a partir de `site/`, e evita mudar de fornecedor sem necessidade.
 
 ### Por que não o Vercel no plano grátis
 
 O plano Hobby do Vercel declara, na própria documentação de planos: *"the Hobby plan restricts users
 to non-commercial, personal use only"*. A ACTA é uma empresa e o portal é ferramenta de trabalho —
-o uso é comercial. O plano grátis não cobre, e a proteção por senha do Vercel é recurso de plano
-pago. Usar assim seria violar os termos, com risco de derrubada sem aviso.
+o uso é comercial. O plano grátis não cobre. Essa objeção continua valendo independentemente da
+autenticação, porque é sobre os termos de uso, não sobre acesso.
 
 ### A recomendação
 
-**Cloudflare Pages + Cloudflare Access (Zero Trust), ambos no plano gratuito.**
+**Cloudflare Workers/Pages, no plano gratuito, sem Cloudflare Access.**
 O passo a passo de execução está em [DEPLOY.md](DEPLOY.md).
 
 | Requisito | Como é atendido | Custo |
 |---|---|---|
-| Hospedagem de site estático | Cloudflare Pages, build a partir do repositório privado | grátis, sem restrição de uso comercial |
-| Autenticação | Cloudflare Access, plano Zero Trust gratuito, **limite de 50 usuários** | grátis |
-| Identidade, fase 1 | código de uso único por e-mail, restrito ao domínio `@acta.com.br` | grátis |
-| Identidade, fase 2 | Microsoft Entra ID — a firma já usa Microsoft 365 | já contratado |
-| Revogação de acesso | na fase 2, quem sai da firma perde o acesso ao sair do diretório, automaticamente | — |
-| Código de autenticação no site | **nenhum**. O Access fica na frente; o site não tem login, sessão nem senha para vazar | — |
+| Hospedagem de site estático | Cloudflare Workers (assets), build a partir do repositório privado | grátis, sem restrição de uso comercial, sem cartão |
+| Autenticação | nenhuma — o conteúdo publicado já é o que pode circular sem controle de acesso | — |
+| Controle de quem pode publicar | permanece no GitHub: só quem tem acesso ao repositório privado consegue mudar o conteúdo | já existente |
+| Revisão de conteúdo | `scripts/validar-skills.py`, rodado antes de qualquer pull request | grátis |
 
-A identidade é a única peça que muda entre as fases, e a troca é de configuração, não de código. A
-fase 1 sobe hoje sem depender de quem administra o Microsoft 365.
-
-O ganho de não ter autenticação no código é maior do que parece: sem formulário de login, sem
-sessão, sem banco de usuários, não há o que ser mal implementado nem o que vazar. O site é HTML
-estático atrás de um porteiro gerenciado.
+Não ter autenticação no site é um ganho, não uma concessão: sem formulário de login, sem sessão, sem
+banco de usuários, não há o que ser mal implementado nem o que vazar. A superfície de risco vira
+"o que entra no `master`", que já é controlada pelo validador e pela revisão do pull request — não
+"quem consegue abrir a URL".
 
 ### Onde o acervo de projetos fica (fase 2)
 
@@ -153,14 +159,14 @@ do SharePoint, que a firma já administra.
 | Gerador | **Astro** com content collections | Feito para site de conteúdo derivado de arquivos. Gera HTML estático, envia zero JavaScript por padrão. Sem servidor, sem banco, sem segredo |
 | Conteúdo | Markdown do próprio repositório + `projeto.md` | Fonte única de verdade (seção 3) |
 | Busca | **Pagefind** | Índice estático gerado no build. Sem backend, sem serviço externo |
-| Hospedagem | **Cloudflare Pages** | Grátis, uso comercial permitido, conecta em repositório privado |
-| Acesso | **Cloudflare Access** + Entra ID | Grátis até 50 usuários, SSO com o diretório da firma |
+| Hospedagem | **Cloudflare Workers (assets)** | Grátis, uso comercial permitido, conecta em repositório privado, sem cartão |
+| Acesso | nenhum — portal público | O conteúdo publicado já passou pela anonimização; não há o que proteger com login |
 | Acervo de projetos | SharePoint, referenciado | Não duplica arquivo confidencial |
 
-Deliberadamente **fora** do stack: banco de dados, backend, Supabase, autenticação própria. Nada
-disso é necessário para o que a plataforma faz, e cada um deles seria mais uma superfície para
-manter e para proteger. Se a fase 2 exigir estado (por exemplo, marcar um projeto como favorito),
-isso se reavalia — não antes.
+Deliberadamente **fora** do stack: banco de dados, backend, Supabase, autenticação própria, Cloudflare
+Access. Nada disso é necessário para o que a plataforma faz, e cada um deles seria mais uma
+superfície para manter e para proteger. Se algum dia a plataforma precisar mostrar algo não
+anonimizado, essa decisão se reabre — não antes.
 
 ---
 
@@ -178,8 +184,8 @@ isso se reavalia — não antes.
 /skills                  Índice de todas as skills, com busca
 /skills/<slug>           Detalhe da skill: o que faz, quando dispara, em que plugin vive
 /avulsas                 Skills e plugins de terceiros que a firma usa (ex.: find-skills)
-/benchmarking            (fase 2) projetos executados, por tipo de projeto
-/benchmarking/<slug>     (fase 2) registro de um engajamento: contexto, o que foi
+/benchmarking            (fase 3) projetos executados, por tipo de projeto
+/benchmarking/<slug>     (fase 3) registro de um engajamento: contexto, o que foi
                            entregue, o que se aprendeu, link para os arquivos no SharePoint
 ```
 
@@ -192,7 +198,7 @@ ter, como instalo, e por onde começo no meu tipo de projeto.
 
 ### Fase 1 — o portal do marketplace
 Home, guia de instalação, catálogo de projetos gerado do repositório, páginas de plugin e de skill,
-busca. Publicado no Cloudflare Pages atrás do Access.
+busca. Publicado no Cloudflare, público, sem autenticação — ver seção 4.
 
 ### Fase 2 — as páginas de projeto
 Um `projeto.md` por plugin de projeto, começando pelos que já têm método escrito. É trabalho

@@ -1,20 +1,31 @@
 ---
-import Base from '../layouts/Base.astro';
+import Pagina from '../layouts/Pagina.astro';
 ---
-<Base titulo="Página não encontrada">
-  <h1>Esta página não existe</h1>
-  <p class="chamada">
-    O endereço pode estar errado, ou o conteúdo pode ter mudado de lugar — o catálogo é gerado do
-    repositório, então uma skill renomeada muda de endereço junto.
-  </p>
 
-  <h2>Por onde seguir</h2>
-  <table>
-    <tbody>
-      <tr><td style="width:12rem"><a href="/projetos">Projetos</a></td><td>O catálogo por tipo de engajamento. É a porta certa quando você sabe o trabalho, não a ferramenta.</td></tr>
-      <tr><td><a href="/skills">Skills</a></td><td>Todas as skills, agrupadas pelo plugin em que vivem.</td></tr>
-      <tr><td><a href="/busca">Busca</a></td><td>Procura no texto de todas as páginas.</td></tr>
-      <tr><td><a href="/comecar">Começar</a></td><td>Instalação, pré-requisitos e o que fazer quando não funciona.</td></tr>
-    </tbody>
-  </table>
-</Base>
+<Pagina
+  titulo="Esta página não existe"
+  sobrescrito="Erro 404"
+  abertura="O endereço pode estar errado, ou o conteúdo pode ter mudado de lugar: o catálogo é gerado do repositório, então uma skill renomeada muda de endereço junto."
+>
+  <section class="secao">
+    <h2>Por onde seguir</h2>
+    <div class="grade">
+      <article class="cartao">
+        <h3><a href="/projetos">Projetos</a></h3>
+        <p>O catálogo por tipo de engajamento. É a porta certa quando você sabe o trabalho, não a ferramenta.</p>
+      </article>
+      <article class="cartao">
+        <h3><a href="/skills">Skills</a></h3>
+        <p>Todas as skills, agrupadas pelo plugin em que vivem.</p>
+      </article>
+      <article class="cartao">
+        <h3><a href="/busca">Busca</a></h3>
+        <p>Procura no texto de todas as páginas do portal.</p>
+      </article>
+      <article class="cartao">
+        <h3><a href="/comecar">Começar</a></h3>
+        <p>Instalação, pré-requisitos e o que fazer quando não funciona.</p>
+      </article>
+    </div>
+  </section>
+</Pagina>

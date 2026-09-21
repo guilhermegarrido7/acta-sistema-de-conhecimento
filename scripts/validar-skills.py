@@ -131,6 +131,24 @@ def validar(raiz):
                 "Avalie dividir o plugin ou fundir skills próximas."
             )
 
+    # projeto.md e fundamentos.md também vão para o portal. Ficaram fora da varredura
+    # acima porque ela procura SKILL.md, e conteúdo publicado sem checagem de nome de
+    # cliente é exatamente o buraco que este script existe para fechar.
+    if clientes:
+        for dirpath, dirnames, filenames in os.walk(raiz):
+            dirnames[:] = [d for d in dirnames if d not in IGNORAR and d != ".git"]
+            if ".git" in dirpath:
+                continue
+            for nome_arq in ("projeto.md", "fundamentos.md"):
+                if nome_arq not in filenames:
+                    continue
+                caminho = os.path.join(dirpath, nome_arq)
+                rel = os.path.relpath(caminho, raiz)
+                txt = open(caminho, encoding="utf-8").read()
+                achados = sorted({n for n, padrao in clientes.items() if padrao.search(txt)})
+                if achados:
+                    erros.append(f"{rel}: nome de cliente no texto: {', '.join(achados)}. Anonimize.")
+
     return erros, avisos, por_plugin
 
 

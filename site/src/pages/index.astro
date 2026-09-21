@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { catalogo } from '../lib/catalogo.js';
+import { catalogo, MARKETPLACE } from '../lib/catalogo.js';
 const { plugins, categorias } = catalogo();
 
 const totalSkills = plugins.reduce((t, p) => t + p.skills.length, 0);
@@ -29,7 +29,7 @@ const praticas = categorias.length;
         <a href="/projetos" class="botao botao--claro">Ver os tipos de projeto</a>
       </div>
       <div class="comando comando--claro" style="margin-top:2.25rem; max-width:46rem">
-        <code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code>
+        <code>{`claude plugin marketplace add ${MARKETPLACE} --scope user`}</code>
       </div>
     </div>
   </section>
@@ -110,7 +110,7 @@ const praticas = categorias.length;
         <li>
           <h3>Registre o marketplace</h3>
           <p>Uma vez por máquina. Exige acesso ao repositório privado no GitHub.</p>
-          <div class="comando"><code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code></div>
+          <div class="comando"><code>{`claude plugin marketplace add ${MARKETPLACE} --scope user`}</code></div>
         </li>
         <li>
           <h3>Instale a fundação</h3>
@@ -122,9 +122,10 @@ const praticas = categorias.length;
         </li>
       </ol>
       <p>
-        Daí em diante, só o plugin do engajamento em que você está.
-        <a href="/comecar">O guia completo</a> cobre verificação, atualização e o que fazer quando
-        não funciona.
+        Daí em diante, só o plugin do engajamento em que você está. Quem usa o Claude Desktop instala
+        pela interface, sem terminal, e há ainda um terceiro caminho por upload que não recebe
+        atualização. <a href="/comecar">O guia completo</a> cobre os três, além de como atualizar e
+        como remover.
       </p>
     </section>
 

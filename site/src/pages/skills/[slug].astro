@@ -82,15 +82,22 @@ const listaGatilhos = gatilhos.join('').replace(/\.$/, '');
 
   <section class="secao">
     <h2>Como obter</h2>
-    <p>Ela vem com o plugin <a href={`/projetos/${p.slug}`}><code>{p.nome}</code></a>:</p>
+    <p>
+      Skill não se instala sozinha: ela vem com o plugin
+      <a href={`/projetos/${p.slug}`}><code>{p.nome}</code></a>.
+    </p>
     <div class="comando"><code>{p.instalacao}</code></div>
+    <p>
+      O <a href="/comecar">guia de instalação</a> cobre os três métodos, incluindo o Claude Desktop
+      pela interface, e como remover depois.
+    </p>
   </section>
 
   <section class="secao">
     <h2>Onde o texto vive</h2>
     <p>
-      A fonte é <code>{p.caminho}/skills/{s.slug}/SKILL.md</code> no repositório. Esta página é
-      gerada dele: corrigir a skill corrige a página.
+      A fonte é <a href={`${p.repositorio}/skills/${s.slug}/SKILL.md`}><code>{s.slug}/SKILL.md</code></a>
+      no repositório. Esta página é gerada dele: corrigir a skill corrige a página no próximo build.
     </p>
   </section>
 </Pagina>

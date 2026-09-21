@@ -60,9 +60,9 @@ const deProjeto = plugins.filter(
     <div class="grade">
       {deProjeto.map((p) => (
         <article class="cartao">
-          <h3>{p.titulo}</h3>
+          <h3><a href={`/projetos/${p.slug}`}>{p.titulo}</a></h3>
           <p>Aguardando registro de engajamentos.</p>
-          <div class="pe"><a href={`/projetos/${p.slug}`}>Ver o método →</a></div>
+          <div class="pe"><span>Ver o método →</span></div>
         </article>
       ))}
     </div>

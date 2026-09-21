@@ -10,7 +10,7 @@ const total = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x + p.s
   titulo="Skills"
   sobrescrito="Índice"
   descricao="Todas as skills publicadas, agrupadas por plugin."
-  abertura={`As ${total} skills publicadas, agrupadas pelo plugin em que vivem. Se você ainda não sabe qual instalar, comece pelo tipo de projeto — é a pergunta certa.`}
+  abertura={`As ${total} skills publicadas, agrupadas pelo plugin em que vivem. Se você ainda não sabe qual instalar, comece pelo tipo de projeto: é a pergunta certa.`}
 >
   {categorias.map((c) => (
     <section class="secao">
@@ -29,7 +29,7 @@ const total = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x + p.s
                   {!s.invocavelPeloUsuario && <span class="etiqueta">de fundo</span>}
                   {(s.esqueleto || !s.roteavel) && <span class="etiqueta parcial">a escrever</span>}
                 </span>
-                <span class="oque">{s.descricao ? resumo(s.descricao) : '—'}</span>
+                <span class="oque">{s.descricao ? resumo(s.descricao) : ''}</span>
               </a>
             ))}
           </div>

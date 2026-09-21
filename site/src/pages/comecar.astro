@@ -1,14 +1,14 @@
 ---
 import Pagina from '../layouts/Pagina.astro';
-import { catalogo } from '../lib/catalogo.js';
+import { catalogo, REPO, MARKETPLACE } from '../lib/catalogo.js';
 const { plugins } = catalogo();
 ---
 
 <Pagina
   titulo="Começar"
   sobrescrito="Guia de instalação"
-  descricao="Instalar, verificar, atualizar e resolver problema."
-  abertura="Do zero ao primeiro plugin funcionando. A seção do fim cobre os erros que mais aparecem, na ordem em que costumam acontecer."
+  descricao="Os três jeitos de instalar, como atualizar, como remover e o que fazer quando não funciona."
+  abertura="Há três caminhos de instalação e eles não são equivalentes: dois recebem atualização, um não. A seção final cobre os erros que mais aparecem, na ordem em que costumam acontecer."
 >
   <section class="secao">
     <h2>Pré-requisitos</h2>
@@ -16,24 +16,26 @@ const { plugins } = catalogo();
       <table>
         <tbody>
           <tr>
-            <th style="width:14rem">Claude Code</th>
+            <th style="width:14rem">Claude Code ou Claude Desktop</th>
             <td>
-              Instalado e autenticado na sua conta. Confira com <code>claude --version</code>. Este
-              portal não substitui o Claude Code: ele diz o que instalar dentro dele.
+              Instalado e autenticado na sua conta. No Claude Code, confira com
+              <code>claude --version</code>. Este portal não substitui o aplicativo: ele diz o que
+              instalar dentro dele.
             </td>
           </tr>
           <tr>
             <th>Acesso ao repositório</th>
             <td>
               O marketplace vive num repositório <strong>privado</strong> no GitHub. Sem acesso
-              concedido à sua conta, o passo 1 falha na autenticação. Peça antes de começar.
+              concedido à sua conta, os métodos 1 e 2 falham na autenticação. Peça antes de começar.
             </td>
           </tr>
           <tr>
             <th>Git autenticado</th>
             <td>
-              O Claude Code usa o seu Git para clonar o marketplace. Se <code>git clone</code> de um
-              repositório privado funciona na sua máquina, isto já está resolvido.
+              Só para o método 1. O Claude Code usa o seu Git para clonar o marketplace. Se
+              <code>git clone</code> de um repositório privado funciona na sua máquina, isto já está
+              resolvido.
             </td>
           </tr>
         </tbody>
@@ -42,12 +44,49 @@ const { plugins } = catalogo();
   </section>
 
   <section class="secao">
-    <h2>Instalação</h2>
+    <h2>Qual método escolher</h2>
+    <div class="quadro">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:17rem">Método</th>
+            <th>Onde usar</th>
+            <th style="width:11rem">Recebe atualização</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#metodo-1">1. Linha de comando</a></td>
+            <td>Claude Code, no terminal</td>
+            <td>Sim, com um comando</td>
+          </tr>
+          <tr>
+            <td><a href="#metodo-2">2. Marketplace por URL</a></td>
+            <td>Claude Desktop, pela interface</td>
+            <td>Sim, pela interface</td>
+          </tr>
+          <tr>
+            <td><a href="#metodo-3">3. Upload da máquina</a></td>
+            <td>Quando os dois acima estão indisponíveis</td>
+            <td><strong>Não</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Prefira o 1 ou o 2. O método 3 instala uma cópia congelada, e é a diferença que mais gera
+      confusão depois, porque o consultor segue trabalhando com metodologia antiga sem perceber.
+    </p>
+  </section>
+
+  <section class="secao" id="metodo-1">
+    <h2>Método 1: linha de comando, no Claude Code</h2>
+    <p>É o caminho mais curto para quem já trabalha no terminal.</p>
     <ol class="passos">
       <li>
         <h3>Registre o marketplace</h3>
         <p>Uma vez por máquina. A partir daí ela conhece todos os plugins da firma.</p>
-        <div class="comando"><code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code></div>
+        <div class="comando"><code>{`claude plugin marketplace add ${MARKETPLACE} --scope user`}</code></div>
       </li>
       <li>
         <h3>Instale o <code>acta-way</code></h3>
@@ -65,29 +104,134 @@ const { plugins } = catalogo();
         <div class="comando"><code>claude plugin install acta-metodo-auditoria@acta-sistema-de-conhecimento --scope user</code></div>
       </li>
       <li>
-        <h3>Reinicie o Claude Code</h3>
+        <h3>Reinicie e confirme</h3>
         <p>
-          As skills só entram em operação na sessão seguinte. Sem reiniciar, o menu de
-          <code>/</code> continua igual e parece que a instalação falhou.
+          As skills só entram em operação na sessão seguinte. Sem reiniciar, o menu de <code>/</code>
+          continua igual e parece que a instalação falhou.
         </p>
-      </li>
-      <li>
-        <h3>Confirme</h3>
-        <p>Deve listar as skills do plugin e o custo de contexto que ele adiciona.</p>
         <div class="comando"><code>claude plugin details acta-metodo-auditoria@acta-sistema-de-conhecimento</code></div>
       </li>
     </ol>
   </section>
 
+  <section class="secao" id="metodo-2">
+    <h2>Método 2: marketplace por URL, no Claude Desktop</h2>
+    <p>
+      Mesma fonte do método 1, pela interface gráfica. Serve para quem usa o aplicativo de desktop e
+      não quer abrir terminal.
+    </p>
+    <ol class="passos">
+      <li>
+        <h3>Abra o painel de plugins</h3>
+        <p>Na barra lateral do Claude, vá em <b class="ui">Personalizar</b> e abra a aba <b class="ui">Plugins</b>.</p>
+      </li>
+      <li>
+        <h3>Adicione o marketplace</h3>
+        <p>
+          No canto superior direito, clique em <b class="ui">Adicionar</b> e escolha
+          <b class="ui">Adicionar marketplace</b>. Cole o endereço do repositório:
+        </p>
+        <div class="comando"><code>{REPO}</code></div>
+      </li>
+      <li>
+        <h3>Instale os plugins que vai usar</h3>
+        <p>
+          Eles passam a aparecer no bloco <b class="ui">Dos marketplaces que você adicionou</b>.
+          Instale o <code>acta-way</code> e o do seu engajamento. Vale a mesma regra do método 1:
+          instale pouco.
+        </p>
+      </li>
+    </ol>
+    <div class="aviso">
+      <p>
+        O repositório é privado. Se o Claude não conseguir ler o endereço, o problema costuma ser
+        permissão da sua conta do GitHub, não o aplicativo.
+      </p>
+    </div>
+  </section>
+
+  <section class="secao" id="metodo-3">
+    <h2>Método 3: upload do plugin direto da máquina</h2>
+    <p>
+      Você baixa a pasta do plugin e envia o arquivo para o Claude. Use quando os outros dois não
+      estiverem disponíveis, por exemplo se o acesso ao repositório ainda não foi concedido e alguém
+      já tiver lhe passado a pasta.
+    </p>
+    <ol class="passos">
+      <li>
+        <h3>Baixe a pasta do plugin</h3>
+        <p>
+          No <a href={REPO}>repositório</a>, baixe o projeto e localize a pasta do plugin que
+          interessa. Cada página de projeto deste portal aponta a pasta exata dele.
+        </p>
+      </li>
+      <li>
+        <h3>Envie pelo painel</h3>
+        <p>
+          Em <b class="ui">Personalizar</b>, aba <b class="ui">Plugins</b>, clique em
+          <b class="ui">Adicionar</b> e escolha <b class="ui">Fazer upload de plugin</b>. Aponte para
+          a pasta que você baixou.
+        </p>
+      </li>
+    </ol>
+    <div class="aviso aviso--atencao">
+      <p>
+        <strong>Esta cópia não se atualiza.</strong> O plugin enviado por upload não conhece o
+        marketplace de onde veio, então ele fica congelado na versão do dia em que você baixou.
+        Correção de método, skill nova e mudança de regra não chegam nele.
+      </p>
+      <p>
+        Para atualizar, repita o processo: baixe a pasta de novo e envie por cima. Ou, melhor,
+        migre para o método 1 ou 2 assim que tiver acesso ao repositório.
+      </p>
+    </div>
+  </section>
+
   <section class="secao">
     <h2>Manter atualizado</h2>
     <p>
-      O repositório muda quando alguém escreve metodologia nova. O marketplace registrado na sua
-      máquina é uma cópia e não se atualiza sozinho.
+      O repositório muda quando alguém escreve metodologia nova. Nos métodos 1 e 2 a sua máquina tem
+      uma cópia do marketplace, e essa cópia não se atualiza sozinha.
     </p>
+    <p>No Claude Code, atualize primeiro o marketplace e depois os plugins que você usa:</p>
     <div class="comando"><code>claude plugin marketplace update acta-sistema-de-conhecimento</code></div>
-    <p>Depois, atualize os plugins que você usa:</p>
     <div class="comando"><code>claude plugin update acta-metodo-auditoria@acta-sistema-de-conhecimento</code></div>
+    <p>
+      No Claude Desktop, a mesma coisa é feita pelo menu de três pontos à direita do plugin, em
+      <b class="ui">Personalizar</b> → <b class="ui">Plugins</b>.
+    </p>
+  </section>
+
+  <section class="secao">
+    <h2>Desativar e remover</h2>
+    <p>
+      São duas coisas diferentes, e a maior parte do tempo você quer a primeira. Desativar tira o
+      plugin de operação e devolve o contexto que ele consumia, mantendo-o instalado. Remover apaga.
+    </p>
+
+    <h3>Desativar, mantendo instalado</h3>
+    <p>É o que fazer ao terminar um engajamento. Reversível a qualquer momento.</p>
+    <div class="comando"><code>claude plugin disable acta-pesquisa-salarial@acta-sistema-de-conhecimento</code></div>
+    <p>Para voltar a usar:</p>
+    <div class="comando"><code>claude plugin enable acta-pesquisa-salarial@acta-sistema-de-conhecimento</code></div>
+
+    <h3>Remover pelo Claude Desktop</h3>
+    <p>
+      Em <b class="ui">Personalizar</b>, aba <b class="ui">Plugins</b>, localize o plugin na lista.
+      Clique no menu de três pontos à direita da linha dele e escolha <b class="ui">Remover</b>.
+    </p>
+    <p>
+      Remover o plugin não remove o marketplace: ele continua registrado, e o plugin volta a aparecer
+      disponível para instalar. Para tirar o marketplace inteiro, use a mesma interface no cartão do
+      marketplace.
+    </p>
+
+    <h3>Remover pelo Claude Code</h3>
+    <div class="comando"><code>claude plugin uninstall acta-pesquisa-salarial@acta-sistema-de-conhecimento</code></div>
+    <p>
+      Nada do seu trabalho é apagado junto. Os plugins contêm metodologia, não dados de projeto: o
+      checkpoint e os arquivos do engajamento vivem na pasta do cliente e continuam onde estão.
+    </p>
   </section>
 
   <section class="secao">
@@ -113,8 +257,6 @@ const { plugins } = catalogo();
         </tbody>
       </table>
     </div>
-    <p>Desative o que não é do engajamento corrente. É reversível a qualquer momento.</p>
-    <div class="comando"><code>claude plugin disable acta-pesquisa-salarial@acta-sistema-de-conhecimento</code></div>
   </section>
 
   <section class="secao">
@@ -123,8 +265,8 @@ const { plugins } = catalogo();
     <h3>O comando de marketplace falha na autenticação</h3>
     <p>
       Quase sempre é falta de acesso ao repositório privado. Teste com
-      <code>git clone https://github.com/guilhermegarrido7/acta-sistema-de-conhecimento</code>. Se
-      isso falha, o problema é permissão no GitHub, não o Claude Code.
+      <code>{`git clone ${REPO}`}</code>. Se isso falha, o problema é permissão no GitHub, não o
+      Claude Code.
     </p>
 
     <h3>Instalei mas as skills não aparecem</h3>
@@ -145,9 +287,15 @@ const { plugins } = catalogo();
     <h3>Vejo a skill duplicada</h3>
     <p>
       Acontece quando o mesmo plugin chega por dois caminhos: instalado localmente no Claude Code
-      <em>e</em> habilitado na sua conta claude.ai, em Customize. São sistemas independentes e o app
-      carrega os dois. Escolha um: se você trabalha no Claude Code, mantenha o local e remova da
-      conta.
+      <em>e</em> habilitado na sua conta claude.ai, em Personalizar. São sistemas independentes e o
+      aplicativo carrega os dois. Escolha um: se você trabalha no Claude Code, mantenha o local e
+      remova da conta.
+    </p>
+
+    <h3>A metodologia parece antiga</h3>
+    <p>
+      Verifique por qual método o plugin foi instalado. Se veio por upload, ele está congelado na
+      versão do dia do download e a atualização não chega nele. Ver o método 3.
     </p>
 
     <h3>A skill dispara na hora errada, ou não dispara</h3>
@@ -161,9 +309,9 @@ const { plugins } = catalogo();
   <section class="secao">
     <h2>Contribuir</h2>
     <p>
-      A metodologia é escrita em arquivos <code>SKILL.md</code> no repositório. Antes de abrir um
-      pull request, rode o validador da raiz: ele aplica os limites da casa e barra nome de cliente e
-      de pessoa no texto publicado.
+      A metodologia é escrita em arquivos <code>SKILL.md</code> no
+      <a href={REPO}>repositório</a>. Antes de abrir um pull request, rode o validador da raiz: ele
+      aplica os limites da casa e barra nome de cliente e de pessoa no texto publicado.
     </p>
     <div class="comando"><code>python scripts/validar-skills.py</code></div>
   </section>

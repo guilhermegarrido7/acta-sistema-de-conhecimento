@@ -90,7 +90,7 @@ a code { color: inherit; background: rgba(0, 110, 99, .09); }
 
 main { display: block; }
 /* padding-block, nunca o atalho padding: .conteudo divide o elemento com .envelope,
-   e o atalho zeraria a calha lateral dele — o texto encosta na borda no celular. */
+   e o atalho zeraria a calha lateral dele: o texto encostaria na borda no celular. */
 .conteudo { padding-block: 3rem 5rem; }
 
 /* ---------- cabeçalho ---------- */
@@ -120,6 +120,9 @@ main { display: block; }
 }
 .topo nav a:hover { color: var(--teal); background: var(--papel-suave); text-decoration: none; }
 .topo nav a[aria-current="page"] { color: var(--teal); background: rgba(0, 110, 99, .08); font-weight: 600; }
+
+.topo nav a.lupa { display: inline-flex; align-items: center; padding: .45rem .6rem; }
+.topo nav a.lupa svg { display: block; }
 
 /* ---------- herói ---------- */
 
@@ -221,6 +224,16 @@ h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; font-weight: 650; letter-spacin
 .secao { margin-top: 3.5rem; }
 .secao:first-child { margin-top: 0; }
 .secao > h2:first-child { margin-top: 0; }
+/* O cabeçalho é fixo: sem isto o link de âncora para a seção a esconde atrás dele. */
+.secao[id] { scroll-margin-top: 5.5rem; }
+
+/* Rótulo de botão ou de aba da interface do Claude, para distinguir do que o leitor
+   digita (code) do que ele clica. */
+.ui {
+  font-weight: 650; color: var(--teal);
+  background: rgba(0, 110, 99, .07); border: 1px solid rgba(0, 110, 99, .16);
+  border-radius: 4px; padding: .05em .34em; white-space: nowrap;
+}
 
 /* ---------- números ---------- */
 
@@ -235,15 +248,27 @@ h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; font-weight: 650; letter-spacin
 .grade--dupla { grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr)); }
 
 .cartao {
+  position: relative;
   border: 1px solid var(--linha); border-radius: var(--raio);
   padding: 1.35rem 1.4rem; background: var(--papel);
   display: flex; flex-direction: column; gap: .45rem;
   transition: border-color .15s, box-shadow .15s, transform .15s;
 }
+.cartao:has(h3 a) { cursor: pointer; }
 .cartao:hover { border-color: var(--turquesa); box-shadow: var(--sombra); transform: translateY(-2px); }
+.cartao:focus-within { border-color: var(--teal); box-shadow: var(--sombra); }
 .cartao h3 { margin: 0; font-size: 1.0625rem; font-weight: 650; }
 .cartao h3 a { color: var(--tinta); }
 .cartao h3 a:hover { color: var(--teal); text-decoration: none; }
+
+/* O cartão inteiro vira área de clique: o link do título estica uma camada
+   invisível sobre a caixa. Continua sendo um único link, então leitor de tela e
+   navegação por teclado seguem anunciando um destino só. */
+.cartao h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: 1; }
+.cartao h3 a:focus-visible { outline: none; }
+.cartao:focus-within { outline: 2px solid var(--teal); outline-offset: 2px; }
+/* Link que precise ficar clicável por cima da camada esticada. */
+.cartao .pe a { position: relative; z-index: 2; }
 .cartao p { margin: 0; font-size: .9125rem; color: var(--tinta-media); }
 .cartao .pe {
   margin-top: auto; padding-top: .9rem; font-size: .8125rem; color: var(--tinta-fraca);

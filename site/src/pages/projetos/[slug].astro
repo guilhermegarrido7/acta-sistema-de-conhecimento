@@ -41,30 +41,12 @@ const titulo = p.titulo;
     </div>
   )}
 
-  <section class="secao">
-    <h2>Como instalar</h2>
-    <ol class="passos">
-      <li>
-        <h3>Registre o marketplace</h3>
-        <p>Uma vez por máquina. Exige acesso ao repositório privado no GitHub.</p>
-        <div class="comando"><code>claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user</code></div>
-      </li>
-      <li>
-        <h3>Instale a fundação</h3>
-        <p>Pré-requisito de todos os plugins: é onde vive o checkpoint entre sessões e consultores.</p>
-        <div class="comando"><code>claude plugin install acta-way@acta-sistema-de-conhecimento --scope user</code></div>
-      </li>
-      <li>
-        <h3>Instale este plugin</h3>
-        <div class="comando"><code>{p.instalacao}</code></div>
-      </li>
-      <li>
-        <h3>Reinicie a sessão e confirme</h3>
-        <p>As skills só aparecem depois de reiniciar o Claude Code.</p>
-        <div class="comando"><code>{`claude plugin details ${p.nome}@acta-sistema-de-conhecimento`}</code></div>
-      </li>
-    </ol>
-  </section>
+  {p.fundamentos && (
+    <section class="secao">
+      <span class="sobrescrito">Embasamento teórico</span>
+      <div class="prosa" set:html={p.fundamentos.corpoHtml} />
+    </section>
+  )}
 
   <section class="secao">
     <h2>O que vem no plugin</h2>
@@ -116,5 +98,30 @@ const titulo = p.titulo;
         </p>
       </>
     )}
+  </section>
+
+  <section class="secao">
+    <h2>Como obter</h2>
+    <p>
+      No Claude Code, com o marketplace já registrado, é um comando. O <code>acta-way</code> é
+      pré-requisito e precisa estar instalado antes.
+    </p>
+    <div class="comando"><code>{p.instalacao}</code></div>
+    <p>
+      Se você ainda não registrou o marketplace, ou usa o Claude Desktop em vez do terminal, o
+      <a href="/comecar">guia de instalação</a> cobre os três métodos, como atualizar e como remover.
+    </p>
+    <p class="acoes" style="margin-top:1.4rem">
+      <a href="/comecar" class="botao botao--teal">Guia de instalação</a>
+      <a href={p.repositorio} class="botao botao--linha">Ver a pasta no GitHub</a>
+    </p>
+  </section>
+
+  <section class="secao">
+    <h2>Onde o texto vive</h2>
+    <p>
+      A metodologia deste plugin fica em <code>{p.caminho.replace(/^\.\//, '')}</code> no
+      repositório. Esta página é gerada de lá: corrigir o plugin corrige a página no próximo build.
+    </p>
   </section>
 </Pagina>

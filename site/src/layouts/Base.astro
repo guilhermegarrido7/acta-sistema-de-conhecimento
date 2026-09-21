@@ -8,7 +8,6 @@ const itens = [
   { href: '/skills',       rotulo: 'Skills' },
   { href: '/avulsas',      rotulo: 'Avulsas' },
   { href: '/benchmarking', rotulo: 'Benchmarking' },
-  { href: '/busca',        rotulo: 'Busca' },
 ];
 const ativo = (href) => rota === href || rota.startsWith(href + '/');
 ---
@@ -35,6 +34,18 @@ const ativo = (href) => rota === href || rota.startsWith(href + '/');
           {itens.map((i) => (
             <a href={i.href} aria-current={ativo(i.href) ? 'page' : undefined}>{i.rotulo}</a>
           ))}
+          <a
+            href="/busca"
+            class="lupa"
+            aria-label="Buscar no portal"
+            title="Buscar no portal"
+            aria-current={ativo('/busca') ? 'page' : undefined}
+          >
+            <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false">
+              <circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.9" />
+              <line x1="13.4" y1="13.4" x2="17.5" y2="17.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" />
+            </svg>
+          </a>
         </nav>
       </div>
     </header>

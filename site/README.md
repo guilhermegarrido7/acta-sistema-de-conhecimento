@@ -52,7 +52,7 @@ plugin: acta-pesquisa-salarial
 ```
 
 `consultoria-empresarial/pesquisa-salarial/projeto.md` é o modelo. A seção **"onde dá errado"** é a
-que mais vale e a que ninguém escreve — é o que transforma o portal de catálogo em memória de firma.
+que mais vale e a que ninguém escreve; é o que transforma o portal de catálogo em memória de firma.
 
 ## Publicar
 

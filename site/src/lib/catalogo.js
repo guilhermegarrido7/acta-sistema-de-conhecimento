@@ -1,5 +1,5 @@
 /**
- * Deriva o catálogo do repositório — não há catálogo escrito à mão.
+ * Deriva o catálogo do repositório: não há catálogo escrito à mão.
  *
  * Fontes de verdade, todas fora desta pasta (ver docs/PLATAFORMA.md seção 3):
  *   .claude-plugin/marketplace.json     quais plugins estão publicados
@@ -17,10 +17,13 @@ import path from 'node:path';
 
 const RAIZ = path.resolve(process.cwd(), '..');
 
+export const REPO = 'https://github.com/guilhermegarrido7/acta-sistema-de-conhecimento';
+export const MARKETPLACE = 'guilhermegarrido7/acta-sistema-de-conhecimento';
+
 const lerJSON = (p) => JSON.parse(fs.readFileSync(p, 'utf-8'));
 const existe = (p) => fs.existsSync(p);
 
-/** Frontmatter YAML raso — só o suficiente para os campos que as skills usam. */
+/** Frontmatter YAML raso, com suporte apenas aos campos que as skills usam. */
 export function frontmatter(texto) {
   const m = texto.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!m) return { dados: {}, corpo: texto };
@@ -110,12 +113,15 @@ export function catalogo() {
     const manifesto = lerJSON(path.join(dirPlugin, '.claude-plugin', 'plugin.json'));
     const skills = lerSkills(dirPlugin, manifesto.name);
 
-    const arqProjeto = path.join(dirPlugin, 'projeto.md');
-    let projeto = null;
-    if (existe(arqProjeto)) {
-      const { dados, corpo } = frontmatter(fs.readFileSync(arqProjeto, 'utf-8'));
-      projeto = { ...dados, corpo, corpoHtml: marked.parse(corpo) };
-    }
+    const lerEditorial = (arquivo) => {
+      const caminho = path.join(dirPlugin, arquivo);
+      if (!existe(caminho)) return null;
+      const { dados, corpo } = frontmatter(fs.readFileSync(caminho, 'utf-8'));
+      return { ...dados, corpo, corpoHtml: marked.parse(corpo) };
+    };
+
+    const projeto = lerEditorial('projeto.md');
+    const fundamentos = lerEditorial('fundamentos.md');
 
     const slug = manifesto.name.replace(/^acta-/, '');
 
@@ -130,7 +136,7 @@ export function catalogo() {
       categoria: entrada.category,
       caminho: entrada.source,
       resumo: resumoDoReadme(dirPlugin),
-      status: roadmap[manifesto.name]?.status ?? '—',
+      status: roadmap[manifesto.name]?.status ?? '-',
       skills,
       // Só as roteáveis custam contexto em toda sessão. É o número que decide
       // se vale a pena manter o plugin instalado.
@@ -138,7 +144,9 @@ export function catalogo() {
         .filter((s) => s.roteavel)
         .reduce((t, s) => t + Math.round(s.descricao.length / 4), 0),
       projeto,
+      fundamentos,
       instalacao: `claude plugin install ${manifesto.name}@acta-sistema-de-conhecimento --scope user`,
+      repositorio: `${REPO}/tree/master/${entrada.source.replace(/^\.\//, '')}`,
     };
   });
 

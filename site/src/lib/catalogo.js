@@ -74,6 +74,26 @@ function resumoDoReadme(dir) {
   return buf.join(' ');
 }
 
+/**
+ * Divide o HTML de um editorial em blocos por H2, para a página renderizar cada
+ * bloco como um item de acordeão em vez de despejar tudo como texto corrido.
+ * O primeiro bloco (o "porquê") continua sempre visível; os demais entram
+ * fechados por padrão.
+ */
+function dividirEmSecoes(html) {
+  if (!html) return [];
+  return html
+    .split(/(?=<h2>)/)
+    .filter((bloco) => bloco.trim())
+    .map((bloco) => {
+      const m = bloco.match(/^<h2>([\s\S]*?)<\/h2>/);
+      return {
+        titulo: m ? m[1].replace(/<[^>]+>/g, '') : '',
+        html: m ? bloco.slice(m[0].length).trim() : bloco.trim(),
+      };
+    });
+}
+
 function lerSkills(dirPlugin, nomePlugin) {
   const dir = path.join(dirPlugin, 'skills');
   if (!existe(dir)) return [];
@@ -117,7 +137,8 @@ export function catalogo() {
       const caminho = path.join(dirPlugin, arquivo);
       if (!existe(caminho)) return null;
       const { dados, corpo } = frontmatter(fs.readFileSync(caminho, 'utf-8'));
-      return { ...dados, corpo, corpoHtml: marked.parse(corpo) };
+      const corpoHtml = marked.parse(corpo);
+      return { ...dados, corpo, corpoHtml, secoes: dividirEmSecoes(corpoHtml) };
     };
 
     const projeto = lerEditorial('projeto.md');

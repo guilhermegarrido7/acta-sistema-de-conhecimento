@@ -382,6 +382,86 @@ tbody tr:hover { background: var(--papel-suave); }
 }
 .prosa strong { font-weight: 650; }
 
+/* ---------- ícone circular ---------- */
+
+.icone {
+  display: flex; align-items: center; justify-content: center; flex: none;
+  width: 2.75rem; height: 2.75rem; border-radius: 50%;
+  background: rgba(0, 110, 99, .08); color: var(--teal);
+}
+.icone svg { width: 1.375rem; height: 1.375rem; }
+.icone--grande { width: 3.25rem; height: 3.25rem; }
+.icone--grande svg { width: 1.625rem; height: 1.625rem; }
+.icone--claro { background: rgba(36, 190, 182, .14); color: var(--turquesa-claro); }
+
+/* ---------- fluxo (como funciona) ---------- */
+
+.fluxo {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  counter-reset: etapa; margin: 2rem 0;
+}
+.fluxo .no {
+  position: relative; text-align: center; padding: 0 1rem;
+  display: flex; flex-direction: column; align-items: center; gap: .85rem;
+}
+.fluxo .no .icone { background: var(--papel); border: 2px solid var(--teal); position: relative; z-index: 1; }
+.fluxo .no h3 { margin: 0; font-size: .9375rem; }
+.fluxo .no p { margin: 0; font-size: .8375rem; color: var(--tinta-media); max-width: 15rem; }
+/* A linha conecta o centro de um nó ao centro do seguinte, por cima do ícone
+   por trás (z-index 0) para virar uma esteira contínua, não setas soltas. */
+.fluxo .no:not(:last-child)::after {
+  content: ""; position: absolute; top: 1.375rem; left: 50%; width: 100%;
+  height: 2px; background: var(--linha-forte); z-index: 0;
+}
+.fluxo--ciclo .no:last-child .icone { border-color: var(--turquesa); }
+.fluxo--ciclo .no:last-child::before {
+  content: "↻ repete no próximo projeto";
+  position: absolute; bottom: -1.6rem; left: 50%; transform: translateX(-50%);
+  font-size: .7rem; color: var(--tinta-fraca); white-space: nowrap;
+}
+
+/* ---------- cartão de benefício ---------- */
+
+.beneficio {
+  display: flex; gap: 1rem; align-items: flex-start;
+  padding: 1.1rem 0; border-top: 1px solid var(--linha);
+}
+.beneficio:first-child { border-top: none; padding-top: 0; }
+.beneficio h3 { margin: 0 0 .25rem; font-size: .9375rem; }
+.beneficio p { margin: 0; font-size: .875rem; color: var(--tinta-media); }
+
+/* ---------- acordeão (embasamento teórico e catálogos longos) ---------- */
+
+.sanfona {
+  border: 1px solid var(--linha); border-radius: var(--raio);
+  background: var(--papel); margin: .6rem 0; overflow: hidden;
+}
+.sanfona + .sanfona { margin-top: .7rem; }
+.sanfona > summary {
+  cursor: pointer; list-style: none; padding: 1rem 1.2rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  font-weight: 650; color: var(--tinta); font-size: .9375rem;
+}
+.sanfona > summary::-webkit-details-marker { display: none; }
+.sanfona > summary::after {
+  content: ""; flex: none; width: .6rem; height: .6rem;
+  border-right: 2px solid var(--tinta-fraca); border-bottom: 2px solid var(--tinta-fraca);
+  transform: rotate(45deg); transition: transform .15s;
+}
+.sanfona[open] > summary::after { transform: rotate(-135deg); }
+.sanfona > summary:hover { background: var(--papel-suave); }
+.sanfona .miolo { padding: 0 1.2rem 1.3rem; }
+.sanfona .miolo .prosa { max-width: none; }
+
+/* Painel de destaque para o parágrafo de abertura do embasamento: fica sempre
+   visível, fora do acordeão, para não esconder o "porquê" atrás de um clique. */
+.painel {
+  background: var(--papel-suave); border: 1px solid var(--linha);
+  border-radius: var(--raio); padding: 1.35rem 1.5rem; margin: 1.25rem 0;
+}
+.painel .prosa { max-width: none; }
+.painel .prosa p:last-child { margin-bottom: 0; }
+
 /* ---------- lista de skills ---------- */
 
 .lista { border: 1px solid var(--linha); border-radius: var(--raio); overflow: hidden; }
@@ -422,6 +502,13 @@ footer code { background: rgba(255, 255, 255, .1); color: rgba(255, 255, 255, .8
 @media (max-width: 860px) {
   footer .colunas { grid-template-columns: 1fr 1fr; }
   .lista > a { grid-template-columns: 1fr; gap: .3rem; }
+  .fluxo { grid-template-columns: 1fr; gap: 1.75rem; text-align: left; }
+  .fluxo .no { flex-direction: row; text-align: left; padding: 0; }
+  .fluxo .no p { max-width: none; }
+  /* Na coluna única a esteira vira vertical, ligando o topo de um ícone ao
+     próximo em vez de atravessar a largura da tela. */
+  .fluxo .no::after { top: 2.75rem; left: 1.375rem; width: 2px; height: calc(100% + 1.75rem - 1.5rem); }
+  .fluxo--ciclo .no:last-child::before { position: static; display: block; transform: none; margin-top: .4rem; }
 }
 
 @media (max-width: 640px) {

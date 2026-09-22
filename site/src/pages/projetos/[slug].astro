@@ -11,6 +11,12 @@ const defundo = p.skills.filter((s) => !s.invocavelPeloUsuario);
 const pendentes = p.skills.filter((s) => s.esqueleto || !s.roteavel);
 const resumo = (d) => d.split('. Acionar')[0].replace(/\.$/, '') + '.';
 const titulo = p.titulo;
+
+// A primeira seção do projeto.md ("o que é, e quando a ACTA é contratada") fica
+// sempre visível, num painel de destaque. As demais viram itens de acordeão:
+// é o mesmo conteúdo, só que sem despejar tudo como parede de texto.
+const [abreProjeto, ...restoProjeto] = p.projeto?.secoes ?? [];
+const [abreFundamentos, ...restoFundamentos] = p.fundamentos?.secoes ?? [];
 ---
 
 <Pagina
@@ -24,27 +30,52 @@ const titulo = p.titulo;
     <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>
     <span class="etiqueta">v{p.versao}</span>
     <span class="etiqueta">{p.skills.length} skills</span>
-    <span class="etiqueta">~{p.custoAlwaysOn} tok/sessão</span>
     {p.projeto?.duracao_tipica && <span class="etiqueta">{p.projeto.duracao_tipica}</span>}
   </div>
 
-  {p.projeto ? (
-    <div class="prosa" set:html={p.projeto.corpoHtml} />
+  {abreProjeto ? (
+    <section class="secao">
+      <div class="painel">
+        {abreProjeto.titulo && <h2 style="margin-top:0">{abreProjeto.titulo}</h2>}
+        <div class="prosa" set:html={abreProjeto.html} />
+      </div>
+    </section>
   ) : (
     <div class="aviso aviso--atencao">
       <p>
         <strong>A página editorial deste projeto ainda não foi escrita.</strong> O que você vê abaixo
-        é derivado do plugin. O que falta (etapas do ciclo de vida, onde o projeto dá errado,
-        entregáveis, quem participa de cada lado) vive num arquivo <code>projeto.md</code> dentro da
-        pasta do plugin.
+        é derivado do plugin: a lista de skills, mas não as etapas, os riscos nem os entregáveis.
       </p>
     </div>
   )}
 
-  {p.fundamentos && (
+  {restoProjeto.length > 0 && (
+    <section class="secao">
+      {restoProjeto.map((s) => (
+        <details class="sanfona">
+          <summary>{s.titulo}</summary>
+          <div class="miolo"><div class="prosa" set:html={s.html} /></div>
+        </details>
+      ))}
+    </section>
+  )}
+
+  {(abreFundamentos || restoFundamentos.length > 0) && (
     <section class="secao">
       <span class="sobrescrito">Embasamento teórico</span>
-      <div class="prosa" set:html={p.fundamentos.corpoHtml} />
+      <h2>De onde vem o método</h2>
+      {abreFundamentos && (
+        <div class="painel">
+          {abreFundamentos.titulo && <h3 style="margin-top:0">{abreFundamentos.titulo}</h3>}
+          <div class="prosa" set:html={abreFundamentos.html} />
+        </div>
+      )}
+      {restoFundamentos.map((s) => (
+        <details class="sanfona">
+          <summary>{s.titulo}</summary>
+          <div class="miolo"><div class="prosa" set:html={s.html} /></div>
+        </details>
+      ))}
     </section>
   )}
 
@@ -54,49 +85,55 @@ const titulo = p.titulo;
     {invocaveis.length > 0 && (
       <>
         <p>
-          Estas você chama digitando <code>/</code> seguido do nome, e o Claude também as carrega
-          sozinho quando o assunto aparece na conversa.
+          O Claude carrega estas sozinho quando o assunto aparece na conversa. Não é preciso digitar
+          nada especial.
         </p>
-        <div class="lista">
+        <div class="grade">
           {invocaveis.map((s) => (
-            <a href={`/skills/${s.slug}`}>
-              <span class="nome">{s.nome}</span>
-              <span class="oque">{resumo(s.descricao)}</span>
-            </a>
+            <article class="cartao">
+              <h3><a href={`/skills/${s.slug}`}>{s.nome}</a></h3>
+              <p>{resumo(s.descricao)}</p>
+            </article>
           ))}
         </div>
       </>
     )}
 
-    {defundo.length > 0 && (
-      <>
-        <h3>Carregadas por outras skills</h3>
-        <p>
-          Não aparecem no menu de <code>/</code>: são conhecimento de fundo que outra skill puxa
-          quando precisa do conceito exato.
-        </p>
-        <div class="lista">
-          {defundo.map((s) => (
-            <a href={`/skills/${s.slug}`}>
-              <span class="nome">{s.nome}</span>
-              <span class="oque">{resumo(s.descricao)}</span>
-            </a>
-          ))}
+    {(defundo.length > 0 || pendentes.length > 0) && (
+      <details class="sanfona" style="margin-top:1.25rem">
+        <summary>Detalhe técnico: skills de fundo e etapas ainda não escritas</summary>
+        <div class="miolo">
+          {defundo.length > 0 && (
+            <>
+              <h3>Carregadas por outras skills</h3>
+              <p>
+                Não aparecem no menu de <code>/</code>: são conhecimento de fundo que outra skill
+                puxa quando precisa do conceito exato.
+              </p>
+              <div class="lista">
+                {defundo.map((s) => (
+                  <a href={`/skills/${s.slug}`}>
+                    <span class="nome">{s.nome}</span>
+                    <span class="oque">{resumo(s.descricao)}</span>
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
+          {pendentes.length > 0 && (
+            <>
+              <h3>Etapas ainda não escritas</h3>
+              <p>
+                Estão fora do roteamento e <strong>não custam contexto</strong>. Existem como
+                marcador do que falta.
+              </p>
+              <p class="pe">
+                {pendentes.map((s) => <span class="etiqueta">{s.nome}</span>)}
+              </p>
+            </>
+          )}
         </div>
-      </>
-    )}
-
-    {pendentes.length > 0 && (
-      <>
-        <h3>Etapas ainda não escritas</h3>
-        <p>
-          Estão fora do roteamento e <strong>não custam contexto</strong>. Existem como marcador do
-          que falta: quando a metodologia da etapa for escrita, a skill entra em operação.
-        </p>
-        <p class="pe">
-          {pendentes.map((s) => <span class="etiqueta">{s.nome}</span>)}
-        </p>
-      </>
+      </details>
     )}
   </section>
 
@@ -109,19 +146,11 @@ const titulo = p.titulo;
     <div class="comando"><code>{p.instalacao}</code></div>
     <p>
       Se você ainda não registrou o marketplace, ou usa o Claude Desktop em vez do terminal, o
-      <a href="/comecar">guia de instalação</a> cobre os três métodos, como atualizar e como remover.
+      guia de instalação cobre os três métodos.
     </p>
     <p class="acoes" style="margin-top:1.4rem">
       <a href="/comecar" class="botao botao--teal">Guia de instalação</a>
       <a href={p.repositorio} class="botao botao--linha">Ver a pasta no GitHub</a>
-    </p>
-  </section>
-
-  <section class="secao">
-    <h2>Onde o texto vive</h2>
-    <p>
-      A metodologia deste plugin fica em <code>{p.caminho.replace(/^\.\//, '')}</code> no
-      repositório. Esta página é gerada de lá: corrigir o plugin corrige a página no próximo build.
     </p>
   </section>
 </Pagina>

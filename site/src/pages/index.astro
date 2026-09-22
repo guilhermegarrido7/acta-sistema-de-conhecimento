@@ -1,90 +1,147 @@
 ---
 import Base from '../layouts/Base.astro';
-import { catalogo, MARKETPLACE } from '../lib/catalogo.js';
+import { catalogo } from '../lib/catalogo.js';
 const { plugins, categorias } = catalogo();
 
 const totalSkills = plugins.reduce((t, p) => t + p.skills.length, 0);
-const completos = plugins.filter((p) => p.status === 'Completo').length;
 const deProjeto = plugins.filter(
   (p) => p.categoria === 'consultoria-empresarial' || p.categoria === 'governanca-riscos-compliance'
 );
-const praticas = categorias.length;
 ---
 
 <Base
   titulo="Início"
-  descricao="A metodologia da ACTA Advisory escrita em plugins instaláveis no Claude Code."
+  descricao="O Claude configurado para trabalhar do jeito que a ACTA trabalha, sem precisar aprender comando nenhum."
 >
   <section class="heroi">
     <div class="envelope">
-      <span class="selo">{plugins.length} plugins · {totalSkills} skills</span>
-      <h1>A metodologia da casa, <em>instalável</em>.</h1>
+      <span class="selo">Para toda a equipe, sem experiência prévia</span>
+      <h1>O Claude já sabe como a ACTA <em>trabalha</em>.</h1>
       <p class="abertura">
-        Cada tipo de projeto da ACTA tem um plugin com o método escrito: as etapas do ciclo de vida,
-        as regras que não se negociam e o formato de cada entregável. Você instala o do seu
-        engajamento e o Claude passa a trabalhar no padrão da firma em vez do padrão genérico dele.
+        Este site liga o Claude ao jeito da casa de fazer cada tipo de projeto. Você não precisa
+        aprender comando nenhum: instala uma vez e, nas conversas seguintes, o Claude já entende as
+        etapas, as regras e o formato de entrega da ACTA sem você pedir.
       </p>
       <div class="acoes">
-        <a href="/comecar" class="botao botao--forte">Como instalar</a>
-        <a href="/projetos" class="botao botao--claro">Ver os tipos de projeto</a>
-      </div>
-      <div class="comando comando--claro" style="margin-top:2.25rem; max-width:46rem">
-        <code>{`claude plugin marketplace add ${MARKETPLACE} --scope user`}</code>
-      </div>
-    </div>
-  </section>
-
-  <section class="faixa faixa--suave faixa--fina">
-    <div class="envelope">
-      <div class="numeros">
-        <div><b>{plugins.length}</b><span>plugins publicados</span></div>
-        <div><b>{completos}</b><span>com método completo</span></div>
-        <div><b>{totalSkills}</b><span>skills disponíveis</span></div>
-        <div><b>{praticas}</b><span>práticas cobertas</span></div>
+        <a href="/comecar" class="botao botao--forte">Instalar em 5 minutos</a>
+        <a href="/projetos" class="botao botao--claro">Ver o método do meu projeto</a>
       </div>
     </div>
   </section>
 
   <div class="envelope conteudo">
     <section class="secao">
-      <span class="sobrescrito">O que você instala</span>
-      <h2>Três palavras que aparecem o tempo todo aqui</h2>
-      <p class="abertura" style="margin-bottom:1.75rem">
-        Vale ler antes de instalar qualquer coisa. O portal inteiro usa esses três termos.
+      <span class="sobrescrito">Como funciona</span>
+      <h2>Quatro passos, e o segundo em diante acontece sozinho</h2>
+      <p class="abertura" style="margin-bottom:1rem">
+        A parte que dá trabalho é só a primeira: instalar. Depois disso, você conversa com o Claude
+        normalmente sobre o seu projeto, e ele reconhece a etapa e usa o método certo por conta
+        própria, sem você digitar nenhum comando especial.
       </p>
-      <div class="grade">
-        <article class="cartao">
-          <h3>Plugin</h3>
-          <p>
-            O método de um tipo de projeto inteiro, do kick-off ao encerramento. É a unidade que você
-            instala e desinstala. <code>acta-metodo-auditoria</code> é um plugin.
-          </p>
-        </article>
-        <article class="cartao">
-          <h3>Skill</h3>
-          <p>
-            Uma etapa dentro desse método, com as regras e o formato de saída daquela etapa. Um
-            plugin traz entre cinco e doze delas. O Claude carrega a skill certa quando o assunto
-            aparece na conversa.
-          </p>
-        </article>
-        <article class="cartao">
-          <h3>Checkpoint</h3>
-          <p>
-            O arquivo que registra onde o engajamento parou. Sessão de Claude não passa de um
-            consultor para outro; o checkpoint passa. Vive no <code>acta-way</code>, que todo mundo
-            instala.
-          </p>
-        </article>
+
+      <div class="fluxo fluxo--ciclo">
+        <div class="no">
+          <span class="icone icone--grande" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>1. Você instala</h3>
+          <p>Um comando, uma vez, para o tipo de projeto em que está trabalhando.</p>
+        </div>
+        <div class="no">
+          <span class="icone icone--grande" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 4.5 4 8l8 3.5L20 8l-8-3.5ZM4 12l8 3.5L20 12M4 16l8 3.5L20 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>2. O Claude aprende o método</h3>
+          <p>As etapas, os limites e o formato de entrega daquele tipo de projeto na ACTA.</p>
+        </div>
+        <div class="no">
+          <span class="icone icone--grande" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 1 1-3-6.7M21 3v5h-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>3. Ele reconhece a etapa sozinho</h3>
+          <p>Você conta o que precisa fazer, em português normal, e o Claude identifica o método certo.</p>
+        </div>
+        <div class="no">
+          <span class="icone icone--grande" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12.5 11 15l4.5-5M4 6.5 12 3l8 3.5v6c0 4.5-3.4 7.6-8 8.5-4.6-.9-8-4-8-8.5v-6Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>4. O resultado sai no padrão da casa</h3>
+          <p>Sem depender de quem está conduzindo lembrar de todas as regras de cor.</p>
+        </div>
       </div>
+    </section>
+
+    <section class="secao">
+      <span class="sobrescrito">Por que vale instalar</span>
+      <h2>O que muda no seu dia a dia</h2>
+      <div class="grade grade--dupla" style="margin-top:1.5rem">
+        <div class="beneficio">
+          <span class="icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 19h16M6 15l4-5 3 3 5-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <div>
+            <h3>Padrão consistente</h3>
+            <p>O entregável sai parecido, seja quem for que conduziu o trabalho.</p>
+          </div>
+        </div>
+        <div class="beneficio">
+          <span class="icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          <div>
+            <h3>Menos retrabalho</h3>
+            <p>A regra que a firma já aprendeu na prática não precisa ser redescoberta a cada projeto.</p>
+          </div>
+        </div>
+        <div class="beneficio">
+          <span class="icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7v5c0 4.5 3.4 7.6 8 9 4.6-1.4 8-4.5 8-9V7l-8-4Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <div>
+            <h3>Confidencialidade por desenho</h3>
+            <p>A metodologia é revisada antes de publicar; nome de cliente não entra em texto compartilhado.</p>
+          </div>
+        </div>
+        <div class="beneficio">
+          <span class="icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5a1 1 0 0 1 1-1h10l5 5v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 4v5h5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </span>
+          <div>
+            <h3>Nada se perde entre sessões</h3>
+            <p>Um arquivo guarda onde o trabalho parou, então trocar de consultor não reinicia o projeto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao">
+      <span class="sobrescrito">O que é preciso ter</span>
+      <h2>Antes de instalar</h2>
+      <div class="grade" style="margin-top:1.5rem">
+        <div class="cartao">
+          <h3>Claude Code ou Claude Desktop</h3>
+          <p>O aplicativo instalado e com a sua conta já conectada.</p>
+        </div>
+        <div class="cartao">
+          <h3>Acesso ao repositório</h3>
+          <p>O material da firma fica num endereço privado no GitHub. Peça o acesso antes de instalar.</p>
+        </div>
+        <div class="cartao">
+          <h3>Cinco minutos</h3>
+          <p>É um comando, ou alguns cliques na interface. Não precisa saber programar.</p>
+        </div>
+      </div>
+      <p style="margin-top:1.5rem">
+        <a href="/comecar" class="botao botao--teal">Ver o passo a passo completo</a>
+      </p>
     </section>
 
     <section class="secao">
       <span class="sobrescrito">Por onde começar</span>
       <h2>Escolha pelo projeto, não pela ferramenta</h2>
       <p class="abertura" style="margin-bottom:1.75rem">
-        Ninguém acorda querendo instalar uma skill: acorda tendo que conduzir um projeto. Cada
-        cartão abaixo leva ao método daquele tipo de engajamento e ao comando que o instala.
+        Você não precisa decidir qual peça instalar: decide qual projeto está conduzindo, e a peça
+        certa vem junto.
       </p>
       <div class="grade">
         {deProjeto.map((p) => (
@@ -104,54 +161,12 @@ const praticas = categorias.length;
     </section>
 
     <section class="secao">
-      <span class="sobrescrito">Instalação</span>
-      <h2>Dois comandos antes do primeiro uso</h2>
-      <ol class="passos">
-        <li>
-          <h3>Registre o marketplace</h3>
-          <p>Uma vez por máquina. Exige acesso ao repositório privado no GitHub.</p>
-          <div class="comando"><code>{`claude plugin marketplace add ${MARKETPLACE} --scope user`}</code></div>
-        </li>
-        <li>
-          <h3>Instale a fundação</h3>
-          <p>
-            O <code>acta-way</code> é pré-requisito de todos os outros: é onde vivem o checkpoint e
-            as convenções da casa.
-          </p>
-          <div class="comando"><code>claude plugin install acta-way@acta-sistema-de-conhecimento --scope user</code></div>
-        </li>
-      </ol>
-      <p>
-        Daí em diante, só o plugin do engajamento em que você está. Quem usa o Claude Desktop instala
-        pela interface, sem terminal, e há ainda um terceiro caminho por upload que não recebe
-        atualização. <a href="/comecar">O guia completo</a> cobre os três, além de como atualizar e
-        como remover.
-      </p>
-    </section>
-
-    <section class="secao">
-      <span class="sobrescrito">Antes de sair instalando</span>
-      <h2>Três coisas que evitam problema</h2>
-      <div class="aviso">
-        <p>
-          <strong>Instale só o que está em uso.</strong> Cada plugin habilitado custa contexto em
-          toda sessão, mesmo naquelas que não têm relação com ele. O preço é a descrição das skills,
-          que fica carregada para o Claude saber o que existe. Desative o que não é do engajamento
-          corrente com <code>claude plugin disable &lt;nome&gt;</code>, reversível a qualquer momento.
-        </p>
-      </div>
-      <div class="aviso">
-        <p>
-          <strong>Feche a sessão pelo checkpoint.</strong> Fechar o chat direto perde o estado do
-          engajamento. O checkpoint grava onde parou num arquivo da pasta do projeto, que é o que
-          outro consultor consegue abrir depois.
-        </p>
-      </div>
-      <div class="aviso aviso--atencao">
-        <p>
-          <strong>Nome de cliente não entra em skill.</strong> O repositório é compartilhado na firma
-          e há verificação automática antes de cada publicação. Caso real vira exemplo anonimizado.
-        </p>
+      <span class="sobrescrito">Números</span>
+      <h2>O que já está pronto</h2>
+      <div class="numeros" style="margin-top:1.5rem">
+        <div><b>{plugins.length}</b><span>tipos de projeto cobertos</span></div>
+        <div><b>{totalSkills}</b><span>etapas de método escritas</span></div>
+        <div><b>{categorias.length}</b><span>áreas da firma</span></div>
       </div>
     </section>
   </div>

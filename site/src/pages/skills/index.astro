@@ -3,40 +3,116 @@ import Pagina from '../../layouts/Pagina.astro';
 import { catalogo } from '../../lib/catalogo.js';
 const { categorias } = catalogo();
 const resumo = (d) => d.split('. Acionar')[0].replace(/\.$/, '') + '.';
-const total = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x + p.skills.length, 0), 0);
+const totalDaCasa = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x + p.skills.length, 0), 0);
+
+// Skills de terceiros: não vêm do marketplace da ACTA, então não são derivadas do
+// repositório como o resto do catálogo. É a mesma lista que vivia em /avulsas antes
+// de as duas abas virarem uma só, por pedido explícito: "no fim é tudo skill".
+const terceiros = [
+  {
+    grupo: 'Descoberta',
+    itens: [
+      {
+        nome: 'find-skills',
+        oque: 'Procura skills instaláveis quando você descreve o que precisa fazer. Útil quando desconfia que já existe ferramenta para um problema, mas não sabe o nome dela.',
+      },
+    ],
+  },
+  {
+    grupo: 'Escrita e revisão',
+    itens: [
+      {
+        nome: 'avoid-ai-writing',
+        oque: 'Audita e reescreve texto para remover padrões característicos de escrita de IA. Vale antes de qualquer coisa que vá ao cliente.',
+      },
+      {
+        nome: 'sabatina',
+        oque: 'Argumenta contra a versão mais forte de uma posição, não a mais fraca. Usada para estressar uma projeção antes de travar o número.',
+      },
+    ],
+  },
+  {
+    grupo: 'Formatos de arquivo',
+    itens: [
+      {
+        nome: 'xlsx · docx · pptx · pdf',
+        oque: 'Skills da Anthropic para ler e gerar esses formatos. Valem a instalação para quem produz entregável em Office, que é praticamente todo mundo na firma.',
+      },
+    ],
+  },
+];
 ---
 
 <Pagina
   titulo="Skills"
-  sobrescrito="Índice"
-  descricao="Todas as skills publicadas, agrupadas por plugin."
-  abertura={`As ${total} skills publicadas, agrupadas pelo plugin em que vivem. Se você ainda não sabe qual instalar, comece pelo tipo de projeto: é a pergunta certa.`}
+  sobrescrito="Catálogo"
+  descricao="Todas as skills da ACTA e as de uso geral, num só lugar."
+  abertura={`As ${totalDaCasa} skills da metodologia da casa, mais as de uso geral que valem para qualquer projeto. Se você não sabe qual instalar, comece por tipo de projeto: é a pergunta mais fácil de responder.`}
 >
-  {categorias.map((c) => (
-    <section class="secao">
-      <h2>{c.rotulo}</h2>
-      {c.plugins.map((p) => (
-        <>
-          <h3>
-            <a href={`/projetos/${p.slug}`}><code>{p.nome}</code></a>
-            <span class="etiqueta" style="margin-left:.5rem">{p.skills.length}</span>
-          </h3>
-          <div class="lista">
-            {p.skills.map((s) => (
-              <a href={`/skills/${s.slug}`}>
-                <span class="nome">
-                  {s.nome}
-                  {!s.invocavelPeloUsuario && <span class="etiqueta">de fundo</span>}
-                  {(s.esqueleto || !s.roteavel) && <span class="etiqueta parcial">a escrever</span>}
-                </span>
-                <span class="oque">{s.descricao ? resumo(s.descricao) : ''}</span>
-              </a>
-            ))}
-          </div>
-        </>
-      ))}
-    </section>
-  ))}
+  <p class="acoes" style="margin:1.25rem 0 0">
+    <a href="/projetos" class="botao botao--linha">Prefiro escolher pelo tipo de projeto →</a>
+  </p>
+
+  <section class="secao">
+    <h2>Metodologia da ACTA</h2>
+    {categorias.map((c, i) => (
+      <details class="sanfona" open={i === 0}>
+        <summary>{c.rotulo} <span class="etiqueta" style="margin-left:.5rem">{c.plugins.reduce((t, p) => t + p.skills.length, 0)} skills</span></summary>
+        <div class="miolo">
+          {c.plugins.map((p) => (
+            <>
+              <h3>
+                <a href={`/projetos/${p.slug}`}>{p.titulo}</a>
+                <span class="etiqueta" style="margin-left:.5rem">{p.skills.length}</span>
+              </h3>
+              <div class="grade">
+                {p.skills.map((s) => (
+                  <article class="cartao">
+                    <h3 style="margin:0">
+                      <a href={`/skills/${s.slug}`}>{s.nome}</a>
+                    </h3>
+                    <p>{s.descricao ? resumo(s.descricao) : 'Etapa mapeada, metodologia ainda não escrita.'}</p>
+                    <div class="pe">
+                      {!s.invocavelPeloUsuario && <span class="etiqueta">de fundo</span>}
+                      {(s.esqueleto || !s.roteavel) && <span class="etiqueta parcial">a escrever</span>}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </>
+          ))}
+        </div>
+      </details>
+    ))}
+  </section>
+
+  <section class="secao">
+    <h2>De uso geral</h2>
+    <p>
+      Nem tudo que ajuda no trabalho é metodologia da ACTA. Estas valem em qualquer engajamento e não
+      pertencem a um plugin de projeto.
+    </p>
+    <div class="aviso aviso--atencao">
+      <p>
+        <strong>Não vêm do nosso marketplace.</strong> Instalam por outros caminhos, são mantidas por
+        terceiros e podem mudar sem aviso. Nenhuma delas conhece o método da casa, e nenhuma dispensa
+        as regras de confidencialidade quando o arquivo é de cliente.
+      </p>
+    </div>
+    {terceiros.map((g) => (
+      <>
+        <h3>{g.grupo}</h3>
+        <div class="grade">
+          {g.itens.map((it) => (
+            <article class="cartao">
+              <h3 style="margin:0">{it.nome}</h3>
+              <p>{it.oque}</p>
+            </article>
+          ))}
+        </div>
+      </>
+    ))}
+  </section>
 
   <section class="secao">
     <h2>Como ler os rótulos</h2>

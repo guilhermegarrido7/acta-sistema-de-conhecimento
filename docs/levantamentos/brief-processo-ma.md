@@ -1,4 +1,4 @@
-# Briefing metodológico — processo de M&A sell-side (ACTA Consulting)
+# Briefing metodológico do processo de M&A sell-side (ACTA Consulting)
 
 Destilado de 4 documentos de dois mandatos (Bahia Ecologia, Neufreire). Foco em **estrutura e método**;
 dados de cliente aparecem só quando são inseparáveis do rótulo estrutural.
@@ -99,7 +99,7 @@ ACTA CONSULTING LTDA.
 ## 2. Planejamento da arquitetura do Information Memorandum (IM)
 
 **Arquivo:** `20260429 Planejamento IM.docx`
-**Natureza:** índice anotado do IM — 6 capítulos em numeração romana digitada no próprio texto
+**Natureza:** índice anotado do IM, com 6 capítulos em numeração romana digitada no próprio texto
 (estilo `Normal`, sem Heading real), cada capítulo com um **apelido entre parênteses** que declara
 a função narrativa, e sob ele bullets com o conteúdo e o racional. Cada capítulo usa sua própria
 lista (`numId 1..6`).
@@ -107,12 +107,12 @@ lista (`numId 1..6`).
 ### Esqueleto exato
 
 ```
-I.   Executive Summary & Investment Highlights   (O "Gancho")          — 2 bullets
-II.  Business Model & Operations                 (Como a máquina faz dinheiro) — 3 bullets
-III. Market & Regulatory Tailwinds               (Ventos a favor)      — 3 bullets
-IV.  Projetos de Expansão                        (O "Upside")          — 1 bullet
-V.   Historical Financials                       (A Realidade)         — 3 bullets
-VI.  Financial Projections                       (A Promessa e o Valuation) — 2 bullets
+I.   Executive Summary & Investment Highlights   (O "Gancho")          - 2 bullets
+II.  Business Model & Operations                 (Como a máquina faz dinheiro) - 3 bullets
+III. Market & Regulatory Tailwinds               (Ventos a favor)      - 3 bullets
+IV.  Projetos de Expansão                        (O "Upside")          - 1 bullet
+V.   Historical Financials                       (A Realidade)         - 3 bullets
+VI.  Financial Projections                       (A Promessa e o Valuation) - 2 bullets
 ```
 
 Padrão do título: **título técnico em inglês** (ou português, nos capítulos IV) + **apelido em
@@ -125,9 +125,9 @@ português entre parênteses** que traduz o papel do capítulo na venda.
 - *Investment Highlights (5 a 6 Bullets):* ex.: posição dominante no mercado regional, licenciamento ambiental premium (barreira de entrada), carteira de clientes B2B resiliente, upside de créditos de carbono.
 
 **II. Business Model & Operations (Como a máquina faz dinheiro)**
-- *O Ciclo do Resíduo:* Origem (B2B/B2G) > Processamento (Planta) > Monetização (Commodities, Energia, Certificados). — cadeia em setas, da origem do insumo à monetização.
+- *O Ciclo do Resíduo:* Origem (B2B/B2G) > Processamento (Planta) > Monetização (Commodities, Energia, Certificados). Cadeia em setas, da origem do insumo à monetização.
 - *Capacidade Instalada vs. Utilização:* quantas toneladas a planta suporta e a quantos % está rodando hoje.
-- *Ativos Estratégicos:* detalhamento da frota, maquinário (prensas, esteiras) e, "o mais importante", Licenças Ambientais — rotuladas como **Deal Breakers**.
+- *Ativos Estratégicos:* detalhamento da frota, maquinário (prensas, esteiras) e, "o mais importante", Licenças Ambientais, rotuladas como **Deal Breakers**.
 
 **III. Market & Regulatory Tailwinds (Ventos a favor)**
 - *Dinâmica Local:* oferta e demanda no raio de atuação logística. Racional literal: "frete é o que mata a margem, mostre que o modelo de vocês é eficiente".
@@ -146,7 +146,7 @@ português entre parênteses** que traduz o papel do capítulo na venda.
 - *Premissas Macro e Micro:* inflação, crescimento do PIB, preço unitário do produto/serviço, aumento de market share.
 - *Projeção de DRE e NOPAT.*
 
-> Nota de completude: o documento **termina** em "Projeção de DRE e NOPAT" — não há capítulos VII+
+> Nota de completude: o documento **termina** em "Projeção de DRE e NOPAT". Não há capítulos VII+
 > nem seção de estrutura societária/processo. É um planejamento em aberto.
 
 ### Lógica narrativa embutida (o método por trás dos apelidos)
@@ -160,7 +160,7 @@ Isto é: **primeiro sedução, depois mecanismo, depois legitimação externa, d
 
 **Arquivo:** `20260522 Anotações Bahia Ecologia.docx`
 **Natureza:** ata de reunião de validação de material em construção com a gestão da empresa-alvo.
-Não é ata de decisões societárias — é um **log de correções e instruções de edição** sobre o
+Não é ata de decisões societárias: é um **log de correções e instruções de edição** sobre o
 material (IM/apresentação) já rascunhado pela ACTA.
 
 ### Estrutura exata
@@ -210,7 +210,7 @@ Uma única lista multinível (`numId 1`, estilo `List Paragraph`) atravessa as t
 
 1. **(edição de rubrica)** "No mix de receitas: retirar `<linha guarda-chuva>`, já que abarca os itens que já estão presentes na tabela. Substituir por `<linha mais específica e de maior valor>`."
 2. **(correção de premissa econômica)** "O custo da matéria-prima não é zero ou negativo; em média, é marginal. Em alguns casos, como `<item específico>`, o cliente paga para a empresa recolhê-lo."
-3. **(fragilidade contratual + calibração)** "O relacionamento com `<cliente âncora>` não é mais exclusivo e ainda não é contratualizado — possui apenas memorando (média de `<volume>`/mês)."
+3. **(fragilidade contratual + calibração)** "O relacionamento com `<cliente âncora>` não é mais exclusivo e ainda não é contratualizado, possui apenas memorando (média de `<volume>`/mês)."
 4. **(calibração de projeção)** "`<Nova avenida de receita>` é um projeto de médio a longo prazo e depende de certificação; difícil de sensibilizar nas projeções financeiras." + sub-item: "Não é demanda compulsória a partir de `<ano>`, mas progressiva entre `<ano>` e `<ano>`."
 5. **(status de projeto arquivado com gatilho)** "Projeto `<X>`: era um projeto em `<ano>`, mas decidiram não realizar por conta de `<risco contratual>` e da ausência de demanda para esse aumento de capacidade. Possuem o projeto em mãos e poderiam executar se houvesse contrato de take-or-pay com `<cliente>` para viabilizá-lo."
 
@@ -227,23 +227,23 @@ Uma única lista multinível (`numId 1`, estilo `List Paragraph`) atravessa as t
 ```
 Resumo Executivo                                  ← 1 parágrafo
 (linha em branco)
-Bloco 1 — A Companhia                             ← 3 parágrafos
-Bloco 2 — Modelo Operacional & Cadeia de Valor    ← 2 parágrafos
-Bloco 3 — Clientes & Contratos                    ← 2 parágrafos
-Bloco 4 — Track Record & Backlog                  ← 2 parágrafos
-Bloco 5 — Destaques Financeiros                   ← 1 parágrafo
-Bloco 6 — Ativos & Estrutura Própria              ← 1 parágrafo
-Bloco 7 — Vantagens Competitivas                  ← 1 parágrafo
+Bloco 1 - A Companhia                             ← 3 parágrafos
+Bloco 2 - Modelo Operacional & Cadeia de Valor    ← 2 parágrafos
+Bloco 3 - Clientes & Contratos                    ← 2 parágrafos
+Bloco 4 - Track Record & Backlog                  ← 2 parágrafos
+Bloco 5 - Destaques Financeiros                   ← 1 parágrafo
+Bloco 6 - Ativos & Estrutura Própria              ← 1 parágrafo
+Bloco 7 - Vantagens Competitivas                  ← 1 parágrafo
 (linha em branco)
 Pendências para fechamento do teaser              ← rubrica + tabela 5x3
 (linha em branco)
 Implicação estratégica para o teaser: <parágrafo único>
 ```
 
-Rótulo dos blocos: `Bloco N — <Título temático>` (travessão em em-dash, sem numeração automática;
-tudo em estilo `Normal`). Sem bullets — **prosa corrida**, porque a saída é texto de teaser.
+Rótulo dos blocos: `Bloco N - <Título temático>` (no original, travessão longo, sem numeração automática;
+tudo em estilo `Normal`). Sem bullets: prosa corrida, porque a saída é texto de teaser.
 
-### Resumo Executivo — o que deve conter (literal, no método)
+### Resumo Executivo: o que deve conter (literal, no método)
 Uma frase de identidade (setor + geografia + ativo estratégico raro) + o **pivot/inflexão em curso**
 (de onde para onde, em que prazo, por qual mecanismo) e a diretriz de tom:
 > "O teaser deve carregar essa tese de inflexão, não apenas o histórico. Abaixo, as notas
@@ -251,7 +251,7 @@ Uma frase de identidade (setor + geografia + ativo estratégico raro) + o **pivo
 
 ### O que cada bloco deve conter
 
-**Bloco 1 — A Companhia**
+**Bloco 1 - A Companhia**
 Superlativos verificáveis (maior/única em X na região) e o diferencial de processo, com nota de que
 o investimento já está amortizado; verticalização, frota própria, sistema de gestão/BI; histórico
 societário e operacional (fundação, hiato de inatividade, retomada, consolidação em cliente âncora);
@@ -260,39 +260,39 @@ e potencial adicional, com teto e renovabilidade do instrumento; atuação geogr
 principal + estados adjacentes); **mix de receita em %** por linha; headcount (próprios + terceiros);
 faturamento do segmento atual, com ressalva de tamanho relativo do segmento no setor.
 
-**Bloco 2 — Modelo Operacional & Cadeia de Valor**
+**Bloco 2 - Modelo Operacional & Cadeia de Valor**
 Unidades produtivas com **capacidade nominal e localização** (e observação de mobilidade/fixação de
 fato); valor do pátio de máquinas **e o capex de renovação estimado** (declarar a necessidade, não
 esconder); garantia de **insumo crítico** via contrato e o que isso faz com o custo logístico, com a
 ressalva do que **não** é próprio; controle de qualidade (laboratório/equipamentos); **licenças
 ambientais ativas por município e âmbito**.
 
-**Bloco 3 — Clientes & Contratos**
+**Bloco 3 - Clientes & Contratos**
 Peso % do segmento hoje vs. o que se projeta, com a comparação que dramatiza a inflexão (um único
 contrato futuro > faturamento total do segmento atual); **concentração por cliente em %**;
 qualificação da carteira (pulverizada, por tipo de cliente); ressalva metodológica explícita sobre
 métrica não aplicável ("ticket médio por contrato não é métrica relevante dado o peso de `<linha de
 volume variável>`"); **nº de contratos ativos** e sua tipologia.
 
-**Bloco 4 — Track Record & Backlog**
+**Bloco 4 - Track Record & Backlog**
 Histórico operacional em unidades físicas acumuladas; **backlog decomposto** (saldo de contrato +
 instrumento de registro de preço) com **meses de cobertura** e as exclusões declaradas (obras
 menores, contratos em standby); métrica de produtividade por frente de serviço (faturamento
 mínimo/dia); **pipeline em negociação** separado do backlog contratado; acervo técnico/habilitações
 que credenciam a obras de porte.
 
-**Bloco 5 — Destaques Financeiros**
+**Bloco 5 - Destaques Financeiros**
 Regime tributário e sua alternância por ano, com o critério (eleição fiscal); **endividamento
-(empréstimos, financiamento de equipamentos, leasing — dívida bruta e líquida)**.
-No documento este bloco está **majoritariamente pendente** — e isso é registrado no próprio texto.
+(empréstimos, financiamento de equipamentos, leasing), com dívida bruta e líquida**.
+No documento este bloco está majoritariamente pendente, e isso é registrado no próprio texto.
 
-**Bloco 6 — Ativos & Estrutura Própria**
+**Bloco 6 - Ativos & Estrutura Própria**
 Frota/equipamentos por tipo e **idade média**; imóveis próprios (sede, pátio/garagem, jazidas);
 **valor total do imobilizado**. Também registrado como pendente no texto.
 
-**Bloco 7 — Vantagens Competitivas**
+**Bloco 7 - Vantagens Competitivas**
 Método explícito de separar **atributo comum** de **moat defensável**:
-> "…opera hoje em um nicho restrito, com `<atributos>` — atributos que alguns concorrentes também
+> "…opera hoje em um nicho restrito, com `<atributos>`, atributos que alguns concorrentes também
 > possuem. O diferencial defensável é único: é a única empresa `<no estado>` com `<processo>`,
 > gerando redução de ~`<%>` no custo de `<insumo>` frente a concorrentes que usam `<alternativa
 > convencional>`. Esse é o ponto de moat a destacar no teaser, já que reduz custo variável de forma
@@ -309,9 +309,9 @@ Tabela 3 colunas × 5 linhas (1 cabeçalho + 4 pendências):
 |---|---|---|
 | `<documento ou dado faltante, com o detalhamento exigido entre parênteses>` | `Bloco N` ou `Solicitações finais` | `A solicitar por e-mail` |
 
-- **Item** — descreve o entregável e, entre parênteses, o nível de detalhe esperado; aceita fallback ("ou estimativa").
-- **Bloco** — rastreia a pendência ao bloco do roteiro que ela alimenta; pendências transversais recebem um pseudo-bloco ("Solicitações finais").
-- **Status** — vocabulário fechado e curto; no documento, todas as 4 linhas estão em "A solicitar por e-mail" (i.e., o status carrega **o canal de cobrança**, não só o estágio).
+- **Item**: descreve o entregável e, entre parênteses, o nível de detalhe esperado; aceita fallback ("ou estimativa").
+- **Bloco**: rastreia a pendência ao bloco do roteiro que ela alimenta; pendências transversais recebem um pseudo-bloco ("Solicitações finais").
+- **Status**: vocabulário fechado e curto; no documento, todas as 4 linhas estão em "A solicitar por e-mail" (i.e., o status carrega o canal de cobrança, não só o estágio).
 - As pendências típicas: demonstrações financeiras de 3 anos, relação de imobilizado valorada, endividamento bruto e líquido, detalhamento de frota (quantidade e idade média).
 
 ### Formato do parágrafo de "implicação estratégica"
@@ -319,12 +319,12 @@ Tabela 3 colunas × 5 linhas (1 cabeçalho + 4 pendências):
 Rótulo fixo em abertura: **"Implicação estratégica para o teaser:"** seguido de **um único parágrafo**
 com 4 movimentos encadeados:
 
-1. **Ancoragem em dois eixos numerados** — "a narrativa de venda deve ancorar em dois eixos — (i) `<moat operacional comprovado>` e (ii) `<inflexão de mix já contratada, não projetada>`."
-2. **Consequência de negociação** — "Isso desloca a conversa do múltiplo histórico para o múltiplo forward,"
-3. **Efeito esperado em preço, hedgeado** — "o que **tende a** sustentar valuation mais alto numa negociação de M&A"
-4. **Condicionante de execução, com o risco nomeado** — "— **mas exige** que os dados financeiros pendentes (Bloco 5/6) cheguem antes da rodada de teaser para **não criar gap de credibilidade** com potenciais compradores."
+1. **Ancoragem em dois eixos numerados**: "a narrativa de venda deve ancorar em dois eixos, (i) `<moat operacional comprovado>` e (ii) `<inflexão de mix já contratada, não projetada>`."
+2. **Consequência de negociação**: "Isso desloca a conversa do múltiplo histórico para o múltiplo forward,"
+3. **Efeito esperado em preço, hedgeado**: "o que tende a sustentar valuation mais alto numa negociação de M&A"
+4. **Condicionante de execução, com o risco nomeado**: "mas exige que os dados financeiros pendentes (Bloco 5/6) cheguem antes da rodada de teaser para não criar gap de credibilidade com potenciais compradores."
 
-Marcas de estilo: em-dash para introduzir a enumeração e a ressalva; numeração romana minúscula
+Marcas de estilo: travessão longo para introduzir a enumeração e a ressalva; numeração romana minúscula
 entre parênteses; verbo modal atenuado ("tende a") no efeito de preço; a ressalva final sempre
 aponta para uma pendência rastreável a um bloco.
 
@@ -343,12 +343,12 @@ Coleta primeiro, arquitetura narrativa em paralelo, validação com o dono, cons
 - Os 4 eixos de solicitação: **Financeiro/Contábil · Operacional/Capacidade · Comercial/Mercado · Ambiental/Regulatório/Passivos**, + bloco de Confidencialidade que fecha a carta.
 - Janela padrão de 3 exercícios + YTD, em Excel.
 - Segregações já embutidas no pedido: CapEx Expansão vs. Manutenção; frota própria vs. terceirizada; tudo "por linha de serviço"; headcount por setor.
-- Granularidade desejada **com fallback aceitável** declarado — evita travar a coleta.
+- Granularidade desejada **com fallback aceitável** declarado, o que evita travar a coleta.
 - Pontuação de lista jurídica (`;` / `; e` / `.`) e rubricas em caixa alta.
 - Referência ao NDA vigente + restrição de acesso à equipe técnica.
 
 **Do planejamento de IM (2)**
-- Título técnico + **apelido funcional entre parênteses** para cada capítulo — força cada seção a declarar seu papel na venda.
+- Título técnico + **apelido funcional entre parênteses** para cada capítulo, o que força cada seção a declarar seu papel na venda.
 - Arco fixo: Gancho → Mecânica → Vento regulatório/de mercado → Upside com capital → Realidade histórica → Promessa/Valuation.
 - Executive Summary com Revenue & EBITDA LTM e **5 a 6 Investment Highlights**.
 - Cadeia de valor desenhada em setas: Origem → Processamento → Monetização.
@@ -363,7 +363,7 @@ Coleta primeiro, arquitetura narrativa em paralelo, validação com o dono, cons
 **Da ata de validação (3)**
 - Formato: `Anotações <Empresa>` + rubricas com dois-pontos + lista multinível; sub-item só como evidência/nuance do pai.
 - Três rubricas recorrentes: **Observações gerais**, **Atualização da timeline**, **Projetos**.
-- A ata registra **instruções de edição do material**, não só fatos — o material é o objeto da reunião.
+- A ata registra instruções de edição do material, não só fatos: o material é o objeto da reunião.
 - Toda fragilidade (não exclusividade, ausência de contrato, dependência de certificação) é registrada como tal.
 - Inflexões históricas sempre com causa nomeada ("o que dificultou / o que ajudou o crescimento em `<ano>`").
 - Pendências de pesquisa e de dado ficam no mesmo log ("Pesquisar sobre…", "a solicitar").
@@ -385,7 +385,7 @@ Coleta primeiro, arquitetura narrativa em paralelo, validação com o dono, cons
 - Todos os números: faturamento, EBITDA, backlog, capacidade (ton/h, ton/mês), %, valores de capex, tetos de ata, headcount.
 - Nomes de clientes, concorrentes, certificadoras, fornecedores, sistemas de gestão e municípios/licenças.
 - O conteúdo setorial das rubricas: "O Ciclo do Resíduo", CBIOs/CCRLR/créditos de carbono, Política Nacional de Resíduos Sólidos e Logística Reversa, CBUQ/usina a gás natural, DNIT/ata de registro de preço, brita/agregados.
-- A linha de moat concreta (gás natural; licenciamento premium; virar certificador) — o **método** de isolar o moat é reutilizável; o moat, não.
+- A linha de moat concreta (gás natural; licenciamento premium; virar certificador). O **método** de isolar o moat é reutilizável; o moat, não.
 - Os projetos nominais (biomassa/pellets, automação PET, resina de polipropileno, biogás) e os marcos da timeline (incêndio, troca de ERP, entrada em obra pública).
 - O mix de receita, a concentração por cliente e os regimes tributários efetivamente aplicáveis.
 - As pendências listadas na tabela (o **formato** da tabela é método; as 4 linhas são do mandato).

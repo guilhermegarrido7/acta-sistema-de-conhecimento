@@ -1,46 +1,11 @@
 ---
 import Pagina from '../../layouts/Pagina.astro';
 import { catalogo } from '../../lib/catalogo.js';
+import { gruposDeTerceiros } from '../../lib/terceiros.js';
 const { categorias } = catalogo();
 const resumo = (d) => d.split('. Acionar')[0].replace(/\.$/, '') + '.';
 const totalDaCasa = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x + p.skills.length, 0), 0);
 
-// Skills de terceiros: não vêm do marketplace da ACTA, então não são derivadas do
-// repositório como o resto do catálogo. É a mesma lista que vivia em /avulsas antes
-// de as duas abas virarem uma só, por pedido explícito: "no fim é tudo skill".
-const terceiros = [
-  {
-    grupo: 'Descoberta',
-    itens: [
-      {
-        nome: 'find-skills',
-        oque: 'Procura skills instaláveis quando você descreve o que precisa fazer. Útil quando desconfia que já existe ferramenta para um problema, mas não sabe o nome dela.',
-      },
-    ],
-  },
-  {
-    grupo: 'Escrita e revisão',
-    itens: [
-      {
-        nome: 'avoid-ai-writing',
-        oque: 'Audita e reescreve texto para remover padrões característicos de escrita de IA. Vale antes de qualquer coisa que vá ao cliente.',
-      },
-      {
-        nome: 'sabatina',
-        oque: 'Argumenta contra a versão mais forte de uma posição, não a mais fraca. Usada para estressar uma projeção antes de travar o número.',
-      },
-    ],
-  },
-  {
-    grupo: 'Formatos de arquivo',
-    itens: [
-      {
-        nome: 'xlsx · docx · pptx · pdf',
-        oque: 'Skills da Anthropic para ler e gerar esses formatos. Valem a instalação para quem produz entregável em Office, que é praticamente todo mundo na firma.',
-      },
-    ],
-  },
-];
 ---
 
 <Pagina
@@ -99,14 +64,14 @@ const terceiros = [
         as regras de confidencialidade quando o arquivo é de cliente.
       </p>
     </div>
-    {terceiros.map((g) => (
+    {gruposDeTerceiros.map((g) => (
       <>
         <h3>{g.grupo}</h3>
         <div class="grade">
           {g.itens.map((it) => (
             <article class="cartao">
-              <h3 style="margin:0">{it.nome}</h3>
-              <p>{it.oque}</p>
+              <h3 style="margin:0"><a href={`/skills/uso-geral/${it.slug}`}>{it.nome}</a></h3>
+              <p>{it.resumo}</p>
             </article>
           ))}
         </div>

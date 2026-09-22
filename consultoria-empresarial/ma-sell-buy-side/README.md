@@ -2,7 +2,7 @@
 
 Assessoria em fusões e aquisições sell side e buy side: convenções de mandato, tese setorial, teaser, information memorandum, segmentação de compradores, solicitação de informações, transações precedentes e negociação/LOI.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`) — é onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
 >
 > **Status: completo.** As 9 skills do ciclo de vida sell-side estão escritas.
 > Publicado em `marketplace.json`. Ver [docs/ROADMAP.md](../../docs/ROADMAP.md).
@@ -12,7 +12,7 @@ Assessoria em fusões e aquisições sell side e buy side: convenções de manda
 Conduz um mandato de M&A sell-side (e as etapas espelhadas de buy-side) do início ao fim: abertura e
 convenções do projeto, tese setorial e estratégica, levantamento de transações precedentes, gate de
 prontidão antes de ir a mercado, teaser pré-NDA, segmentação e priorização de compradores, information
-memorandum, condução da solicitação de informações/data room, e a negociação até o LOI — com
+memorandum, condução da solicitação de informações/data room, e a negociação até o LOI, com
 handoff explícito para o plugin de valuation (`acta-modelagem-economico-financeira`) sempre que a
 tese setorial ou as transações precedentes precisam virar múltiplo ou faixa de valor.
 

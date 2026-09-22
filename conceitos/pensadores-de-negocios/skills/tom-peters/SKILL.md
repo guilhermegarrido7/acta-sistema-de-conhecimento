@@ -1,24 +1,24 @@
 ---
 name: tom-peters
-description: Diagnosticar alinhamento organizacional pelo modelo 7S — estratégia, estrutura, sistemas, pessoal, estilo, habilidades e valores — e localizar onde a cultura sabota a execução. Acionar ao avaliar risco de integração pós-fusão, ao explicar sinergia não capturada, ao medir viés à ação de uma organização, ou ao avaliar cultura em diligência qualitativa.
+description: Diagnosticar alinhamento organizacional pelo modelo 7S (estratégia, estrutura, sistemas, pessoal, estilo, habilidades e valores) e localizar onde a cultura sabota a execução. Acionar ao avaliar risco de integração pós-fusão, ao explicar sinergia não capturada, ao medir viés à ação de uma organização, ou ao avaliar cultura em diligência qualitativa.
 user-invocable: false
 ---
 
-# Tom Peters — organização não é o organograma; é o que as pessoas fazem todo dia sem que ninguém peça
+# Tom Peters: a organização é o que as pessoas fazem todo dia sem que ninguém peça, não o organograma
 
 ## O que esta lente enxerga
 
-A pergunta central de Peters é: **por que uma empresa com boa estratégia e boa estrutura não entrega, e outra com estratégia mediana entrega muito?** A unidade de análise é a **ORGANIZAÇÃO COMO CULTURA E AÇÃO** — o conjunto de hábitos, valores praticados (não declarados), estilo de liderança e sistemas informais que determinam o que de fato acontece quando nenhum plano está sendo consultado.
+A pergunta central de Peters é: **por que uma empresa com boa estratégia e boa estrutura não entrega, e outra com estratégia mediana entrega muito?** A unidade de análise é a **ORGANIZAÇÃO COMO CULTURA E AÇÃO**: o conjunto de hábitos, valores praticados (não declarados), estilo de liderança e sistemas informais que determinam o que de fato acontece quando nenhum plano está sendo consultado.
 
-O contexto histórico importa para entender o que a obra é e o que não é. *In Search of Excellence* (1982) foi escrito num momento em que a consultoria e a academia americanas tratavam gestão essencialmente como problema de **estratégia e estrutura** — o legado de Chandler e Ansoff, com a matriz BCG e o planejamento de portfólio como estado da arte. Peters e Waterman deslocaram a atenção para **pessoas, cliente e cultura**, e o fizeram numa linguagem que operadores entendiam. Foi o livro de negócios mais vendido da década e o marco fundador de todo o gênero de literatura gerencial popular — incluindo `collins` e `jack-welch`. Essa influência é real; a base empírica, como se verá, é frágil.
+O contexto histórico importa para entender o que a obra é e o que não é. *In Search of Excellence* (1982) foi escrito num momento em que a consultoria e a academia americanas tratavam gestão essencialmente como problema de **estratégia e estrutura**, o legado de Chandler e Ansoff, com a matriz BCG e o planejamento de portfólio como estado da arte. Peters e Waterman deslocaram a atenção para **pessoas, cliente e cultura**, e o fizeram numa linguagem que operadores entendiam. Foi o livro de negócios mais vendido da década e o marco fundador de todo o gênero de literatura gerencial popular, incluindo `collins` e `jack-welch`. Essa influência é real; a base empírica, como se verá, é frágil.
 
-O que sobra de mais utilizável não é a lista de oito características. É o **modelo 7S**, desenvolvido na McKinsey junto com Robert Waterman, Julien Phillips e Richard Pascale — um framework de **diagnóstico de alinhamento**, não de prescrição. A tese do 7S é simples e resistente: uma organização funciona quando os sete elementos se reforçam mutuamente, e falha quando um é mudado sozinho. É por isso que reorganizar a estrutura sem mudar sistemas de medição e estilo de liderança não produz efeito — o que se vê em quase toda integração pós-fusão malfeita.
+O que sobra de mais utilizável é o **modelo 7S**, e não a lista de oito características. Ele foi desenvolvido na McKinsey junto com Robert Waterman, Julien Phillips e Richard Pascale: um framework de **diagnóstico de alinhamento**, não de prescrição. A tese do 7S é simples e resistente: uma organização funciona quando os sete elementos se reforçam mutuamente, e falha quando um é mudado sozinho. É por isso que reorganizar a estrutura sem mudar sistemas de medição e estilo de liderança não produz efeito, o que se vê em quase toda integração pós-fusão malfeita.
 
 Isso distingue Peters de todas as lentes analíticas. `porter` dá o campo de jogo; `koller` dá o valor; `ram-charan` dá o processo de gestão; `collins` dá o padrão de longo prazo. Peters pergunta: **o organismo está internamente coerente, e ele age?** É a lente de cultura do plugin, e o instrumento certo quando o problema não é o que decidir, mas por que a decisão não se propaga.
 
 ## Os frameworks
 
-### 1. O modelo 7S — diagnóstico de alinhamento (o mais utilizável da obra)
+### 1. O modelo 7S: diagnóstico de alinhamento (o mais utilizável da obra)
 
 **O que é.** *Framework analítico de diagnóstico* (McKinsey, final dos anos 1970; Peters, Waterman, Phillips e Pascale). Sete elementos interdependentes, divididos em "duros" (mais fáceis de descrever e mudar por decisão) e "moles" (mais lentos, mais determinantes).
 
@@ -28,7 +28,7 @@ Isso distingue Peters de todas as lentes analíticas. `porter` dá o campo de jo
 | **Structure** | Estrutura | Como o trabalho é dividido, a quem se reporta, onde a decisão mora | Organograma real × formal; alçadas; quantos níveis; centralização por função |
 | **Systems** | Sistemas | Processos, rotinas, medição, TI, orçamento, remuneração | Como se apura resultado, com que atraso, com que sistema; sobre o que incide o variável |
 | **Staff** | Pessoal | Quem está na empresa: perfis, quadro, pipeline, contratação | Tempo de casa, rotatividade, origem das contratações de liderança, quadro por função |
-| **Style** | Estilo | Como a liderança de fato se comporta — onde gasta tempo, o que pergunta, como reage a erro | Agenda do fundador/diretoria; comportamento em reunião; tratamento da má notícia |
+| **Style** | Estilo | Como a liderança de fato se comporta: onde gasta tempo, o que pergunta, como reage a erro | Agenda do fundador/diretoria; comportamento em reunião; tratamento da má notícia |
 | **Skills** | Habilidades | O que a organização coletivamente sabe fazer bem (capacidade, não currículo individual) | O que a empresa entrega que concorrente não entrega; onde ela falha repetidamente |
 | **Shared values** | Valores compartilhados | O que realmente se premia e se pune; o núcleo cultural (originalmente "superordinate goals") | O que aconteceu com quem entregou resultado violando norma; e com quem fez o oposto |
 
@@ -48,7 +48,7 @@ Isso distingue Peters de todas as lentes analíticas. `porter` dá o campo de jo
    para um problema de desempenho observado.
 
 4. Para cada contradição, identifique qual dos dois S é o
-   ELEMENTO ÂNCORA — o que não vai mudar no horizonte relevante
+   ELEMENTO ÂNCORA: o que não vai mudar no horizonte relevante
    (normalmente valores, estilo ou habilidades).
    A mudança tem de vir do outro lado do par.
 
@@ -93,21 +93,21 @@ Isso distingue Peters de todas as lentes analíticas. `porter` dá o campo de jo
 | 7 | Forma simples, equipe enxuta | Quantas pessoas na estrutura corporativa em relação à operação? |
 | 8 | Propriedades simultaneamente frouxas e apertadas (*simultaneous loose-tight*) | O que é rigidamente controlado (poucas coisas) e o que é livre? |
 
-A oitava é a mais interessante e a menos citada: excelência exige **poucos controles absolutamente rígidos** (valores, segurança, integridade do número, qualidade técnica) combinados com **ampla liberdade em todo o resto**. Organização que controla tudo mata iniciativa; a que não controla nada perde o núcleo. Em diligência, pergunte quais são as três coisas inegociáveis — se a lista tem quinze itens ou nenhum, o *loose-tight* está quebrado.
+A oitava é a mais interessante e a menos citada: excelência exige **poucos controles absolutamente rígidos** (valores, segurança, integridade do número, qualidade técnica) combinados com **ampla liberdade em todo o resto**. Organização que controla tudo mata iniciativa; a que não controla nada perde o núcleo. Em diligência, pergunte quais são as três coisas inegociáveis. Se a lista tem quinze itens ou nenhum, o *loose-tight* está quebrado.
 
 ### 3. Viés à ação, "try it, fix it" e excelência como comportamento diário
 
 **O que é.** *Doutrina.* O núcleo persistente de Peters ao longo de quatro décadas: excelência não é um estado alcançado, é o que se faz nos próximos cinco minutos. Do experimento barato e rápido ("*try it, fix it, try it again*") à obsessão com detalhe de execução e com a experiência de quem é atendido.
 
-**Mecânica utilizável — o teste de velocidade organizacional.** Escolha três problemas conhecidos da empresa e reconstrua a linha do tempo: quando foi identificado, quando alguém foi designado, quando a primeira tentativa aconteceu, quando se aprendeu algo. O intervalo entre identificar e **tentar** é a melhor medida única de viés à ação, e é observável em diligência a partir de atas e e-mails. Organização com meses entre identificar e tentar não executará plano de melhoria pós-transação no prazo prometido, por mais bem desenhado que ele seja.
+**Mecânica utilizável: o teste de velocidade organizacional.** Escolha três problemas conhecidos da empresa e reconstrua a linha do tempo: quando foi identificado, quando alguém foi designado, quando a primeira tentativa aconteceu, quando se aprendeu algo. O intervalo entre identificar e **tentar** é a melhor medida única de viés à ação, e é observável em diligência a partir de atas e e-mails. Organização com meses entre identificar e tentar não executará plano de melhoria pós-transação no prazo prometido, por mais bem desenhado que ele seja.
 
-*The Excellence Dividend* (2018) reafirma isso contra a automação: a tese é que, quanto mais commoditizável a parte técnica, mais o diferencial se concentra em execução humana e em detalhe de atendimento. É uma tese de valor plausível e não demonstrada — é opinião informada, e deve ser apresentada como tal.
+*The Excellence Dividend* (2018) reafirma isso contra a automação: a tese é que, quanto mais commoditizável a parte técnica, mais o diferencial se concentra em execução humana e em detalhe de atendimento. É uma tese de valor plausível e não demonstrada: é opinião informada e deve ser apresentada como tal.
 
 ### 4. *Liberation Management* (1992) e *The Brand You 50* (1999)
 
-**Liberation Management**: contra a hierarquia; organização por projeto, estruturas efêmeras, redes e mercados internos; a tese de que a estrutura fixa é o inimigo da adaptação. Utilidade concreta: em empresa de projeto — engenharia, construção, consultoria, TI — a organização matricial por projeto é a norma, e o 7S deve ser aplicado reconhecendo que a **Estrutura real é o portfólio de projetos**, não o organograma. A pergunta que importa passa a ser: quem tem autoridade sobre o gerente de projeto, e o resultado do projeto é apurado individualmente?
+**Liberation Management**: contra a hierarquia; organização por projeto, estruturas efêmeras, redes e mercados internos; a tese de que a estrutura fixa é o inimigo da adaptação. Utilidade concreta: em empresa de projeto (engenharia, construção, consultoria, TI), a organização matricial por projeto é a norma, e o 7S deve ser aplicado reconhecendo que a **Estrutura real é o portfólio de projetos**, não o organograma. A pergunta que importa passa a ser: quem tem autoridade sobre o gerente de projeto, e o resultado do projeto é apurado individualmente?
 
-**The Brand You 50**: a tese da marca pessoal e do profissional como prestador autônomo de valor. Interesse histórico e cultural (antecipou a economia de portfólio de carreira); pouca mecânica aplicável a diagnóstico de empresa. Em diligência, sua única leitura útil é de risco: quando o valor da empresa está na marca pessoal de dois ou três profissionais, o ativo é transferível apenas parcialmente — o que é problema de estrutura de transação, não de cultura.
+**The Brand You 50**: a tese da marca pessoal e do profissional como prestador autônomo de valor. Interesse histórico e cultural (antecipou a economia de portfólio de carreira); pouca mecânica aplicável a diagnóstico de empresa. Em diligência, sua única leitura útil é de risco: quando o valor da empresa está na marca pessoal de dois ou três profissionais, o ativo é transferível apenas parcialmente, o que é problema de estrutura de transação, não de cultura.
 
 ## Como aplicar
 
@@ -127,7 +127,7 @@ A oitava é a mais interessante e a menos citada: excelência exige **poucos con
 4. **Traduza em risco de transação:** dependência do fundador (Estrutura × Estilo), fragilidade de time (Pessoal), incapacidade de executar o plano (Estratégia × Pessoal/Habilidades), risco de saída de gente-chave (Valores × Sistemas).
 5. **Feche com o teste de velocidade** (item 3). É o melhor indicador único de que o plano pós-transação será cumprido.
 
-**Roteiro para integração pós-fusão — o uso de maior retorno desta lente.** O desalinhamento entre Sistemas, Estilo e Valores é a causa mais comum de sinergia não capturada, e é sistematicamente subestimada em relação às sinergias de custo modeladas em planilha.
+**Roteiro para integração pós-fusão: o uso de maior retorno desta lente.** O desalinhamento entre Sistemas, Estilo e Valores é a causa mais comum de sinergia não capturada, e é sistematicamente subestimada em relação às sinergias de custo modeladas em planilha.
 
 ```
 Para cada empresa (adquirente e adquirida), descreva os 7S separadamente.
@@ -153,17 +153,17 @@ Regras práticas:
 
 ## O que esta lente NÃO vê
 
-**A base empírica de *In Search of Excellence* não se sustenta, e isso precisa ser dito de frente.** As 43 empresas "excelentes" de 1982 foram selecionadas por desempenho passado e depois descritas em busca de traços comuns — seleção na variável dependente, sem grupo de controle. Poucos anos depois, uma parcela substancial havia deteriorado: a *BusinessWeek* publicou em 1984 a reportagem "Oops! Who's Excellent Now?", mostrando que cerca de um terço das empresas enfrentava dificuldades sérias em dois anos. Vários nomes celebrados no livro — entre eles Atari, Wang Labs, Data General, NCR, Kmart — encolheram, foram absorvidos ou desapareceram. Um livro que prometia identificar os traços da excelência duradoura não sobreviveu ao próprio prazo.
+**A base empírica de *In Search of Excellence* não se sustenta, e isso precisa ser dito de frente.** As 43 empresas "excelentes" de 1982 foram selecionadas por desempenho passado e depois descritas em busca de traços comuns: seleção na variável dependente, sem grupo de controle. Poucos anos depois, uma parcela substancial havia deteriorado: a *BusinessWeek* publicou em 1984 a reportagem "Oops! Who's Excellent Now?", mostrando que cerca de um terço das empresas enfrentava dificuldades sérias em dois anos. Vários nomes celebrados no livro (entre eles Atari, Wang Labs, Data General, NCR, Kmart) encolheram, foram absorvidos ou desapareceram. Um livro que prometia identificar os traços da excelência duradoura não sobreviveu ao próprio prazo.
 
-**Peters posteriormente fez declarações públicas polêmicas sobre os dados originais.** Em artigo de 2001 na *Fast Company* ("Tom Peters's True Confessions"), ele afirmou, em tom provocativo, que havia "falsificado os dados" — declaração que depois qualificou, explicando que se referia ao fato de a seleção das empresas ter partido de julgamento e intuição, e não de um procedimento estatístico rigoroso, e não a fraude deliberada. **A leitura honesta e cautelosa: a controvérsia é real e documentada, a interpretação exata do que ele quis dizer é disputada, e o efeito prático é o mesmo — não se pode citar as oito características como evidência empírica.** Elas são hipóteses de praticante experiente. Diga isso, sem transformar o episódio em acusação de fraude, que a evidência não sustenta.
+**Peters posteriormente fez declarações públicas polêmicas sobre os dados originais.** Em artigo de 2001 na *Fast Company* ("Tom Peters's True Confessions"), ele afirmou, em tom provocativo, que havia "falsificado os dados", declaração que depois qualificou, explicando que se referia ao fato de a seleção das empresas ter partido de julgamento e intuição, e não de um procedimento estatístico rigoroso, e não a fraude deliberada. **A leitura honesta e cautelosa: a controvérsia é real e documentada, a interpretação exata do que ele quis dizer é disputada, e o efeito prático é o mesmo: não se pode citar as oito características como evidência empírica.** Elas são hipóteses de praticante experiente. Diga isso, sem transformar o episódio em acusação de fraude, que a evidência não sustenta.
 
-**Phil Rosenzweig, em *The Halo Effect* (2007), é a crítica de referência**, e Peters é um de seus alvos centrais junto com `collins`. O argumento: quando se sabe que uma empresa foi bem-sucedida, tudo nela é descrito favoravelmente — a cultura vira "forte", o estilo "visionário", o foco "disciplinado". Estudos baseados em entrevistas e imprensa produzidas **depois** do resultado medem essa auréola, não a causa. Some-se reversão à média e o fato de que desempenho relativo é, por definição, difícil de sustentar.
+**Phil Rosenzweig, em *The Halo Effect* (2007), é a crítica de referência**, e Peters é um de seus alvos centrais junto com `collins`. O argumento: quando se sabe que uma empresa foi bem-sucedida, tudo nela é descrito favoravelmente: a cultura vira "forte", o estilo "visionário", o foco "disciplinado". Estudos baseados em entrevistas e imprensa produzidas **depois** do resultado medem essa auréola, não a causa. Some-se reversão à média e o fato de que desempenho relativo é, por definição, difícil de sustentar.
 
-**O que sobrevive.** (a) O **7S como framework de diagnóstico de alinhamento** — que não faz nenhuma afirmação preditiva sobre desempenho, apenas sobre coerência interna, e por isso não é atingido pela crítica. É a peça de valor duradouro, e é a que se usa. (b) A **contribuição histórica** de deslocar a atenção de estrutura/estratégia para pessoas e cultura, que hoje é senso comum. (c) A doutrina de **viés à ação e experimento barato**, que tem apoio independente em literatura de inovação (`mcgrath`, `christensen`) e cuja versão operacional é testável.
+**O que sobrevive.** (a) O **7S como framework de diagnóstico de alinhamento**, que não faz nenhuma afirmação preditiva sobre desempenho, apenas sobre coerência interna, e por isso não é atingido pela crítica. É a peça de valor duradouro, e é a que se usa. (b) A **contribuição histórica** de deslocar a atenção de estrutura/estratégia para pessoas e cultura, que hoje é senso comum. (c) A doutrina de **viés à ação e experimento barato**, que tem apoio independente em literatura de inovação (`mcgrath`, `christensen`) e cuja versão operacional é testável.
 
-**Ausências relevantes.** (a) Nenhuma economia: nada sobre estrutura de setor, barreira de entrada, retorno sobre capital ou custo de capital. Uma organização culturalmente exemplar em setor com cinco forças destrutivas continua com retorno baixo — e este é o erro de diagnóstico mais grave desta lente, porque ela sempre encontra algo cultural para explicar um resultado que é estrutural. Correção: `porter`, `greenwald`, `koller`. (b) Nenhum tratamento de estratégia como escolha e trade-off: "fique no que você conhece" não distingue foco de miopia. (c) Nenhuma métrica: o 7S não gera número, e por isso resiste mal ao escrutínio de um comitê de investimento se não for amarrado a consequência financeira. (d) Contexto de grande corporação americana; empresa familiar brasileira tem Estilo e Valores fundidos na pessoa do fundador, o que o modelo não prevê. (e) Peters tende ao excesso retórico e à moda gerencial — muitos de seus livros posteriores são exortação, não análise; separar o que é mecânica do que é entusiasmo é trabalho de quem aplica.
+**Ausências relevantes.** (a) Nenhuma economia: nada sobre estrutura de setor, barreira de entrada, retorno sobre capital ou custo de capital. Uma organização culturalmente exemplar em setor com cinco forças destrutivas continua com retorno baixo, e este é o erro de diagnóstico mais grave desta lente, porque ela sempre encontra algo cultural para explicar um resultado que é estrutural. Correção: `porter`, `greenwald`, `koller`. (b) Nenhum tratamento de estratégia como escolha e trade-off: "fique no que você conhece" não distingue foco de miopia. (c) Nenhuma métrica: o 7S não gera número, e por isso resiste mal ao escrutínio de um comitê de investimento se não for amarrado a consequência financeira. (d) Contexto de grande corporação americana; empresa familiar brasileira tem Estilo e Valores fundidos na pessoa do fundador, o que o modelo não prevê. (e) Peters tende ao excesso retórico e à moda gerencial: muitos de seus livros posteriores são exortação, não análise; separar o que é mecânica do que é entusiasmo é trabalho de quem aplica.
 
-**Onde leva a conclusão errada.** Ao atribuir a cultura o que é estrutura de setor ou precificação. Ao recomendar programa de cultura para um problema de portfólio (`jack-welch`) ou de posicionamento (`porter`). Ao confundir valores declarados no quadro da recepção com valores compartilhados — o 7S exige o teste do que foi premiado e punido, não a leitura do código de conduta. Ao concluir que uma empresa informal e sem sistemas é "ágil e com viés à ação", quando na verdade não tem controle nenhum — em mid-market brasileiro essa confusão é frequente e caríssima.
+**Onde leva a conclusão errada.** Ao atribuir a cultura o que é estrutura de setor ou precificação. Ao recomendar programa de cultura para um problema de portfólio (`jack-welch`) ou de posicionamento (`porter`). Ao confundir valores declarados no quadro da recepção com valores compartilhados: o 7S exige o teste do que foi premiado e punido, não a leitura do código de conduta. Ao concluir que uma empresa informal e sem sistemas é "ágil e com viés à ação", quando na verdade não tem controle nenhum. Em mid-market brasileiro essa confusão é frequente e caríssima.
 
 ## Onde colide ou complementa
 
@@ -182,17 +182,17 @@ Regras práticas:
 | `jack-welch` | Colidem em pessoas: Welch prescreve diferenciação forçada e demissão do decil inferior, o que o 7S diria ser incoerente com valores de colaboração. Convergem em candura ≈ proximidade e em estrutura enxuta | Welch para portfólio e decisão dura; Peters para coesão organizacional |
 | `musk` | Colisão de temperamento: Peters valoriza pessoas, autonomia e clima; Musk valoriza intensidade, velocidade e reengenharia. Ambos têm forte viés à ação, por razões opostas | Musk quando a meta é custo/engenharia; Peters quando é engajamento e continuidade |
 | `amodei` | Colisão frontal de tese: Peters (*The Excellence Dividend*) aposta que o diferencial humano cresce com a automação; Amodei projeta capacidade tecnológica que desloca justamente parte desse trabalho | Amodei para a fronteira tecnológica; Peters para o componente humano de serviço que permanece |
-| `diamandis` | Pouca interação; escalas distintas — Diamandis em ruptura exponencial, Peters no hábito de amanhã | Diamandis para cenário; Peters para a organização de hoje |
-| `lentes` | Roteadora; aciona esta lente quando a pergunta é sobre cultura, alinhamento organizacional, integração pós-fusão ou capacidade de agir | — |
+| `diamandis` | Pouca interação; escalas distintas: Diamandis em ruptura exponencial, Peters no hábito de amanhã | Diamandis para cenário; Peters para a organização de hoje |
+| `lentes` | Roteadora; aciona esta lente quando a pergunta é sobre cultura, alinhamento organizacional, integração pós-fusão ou capacidade de agir | - |
 
 ## Fontes
 
-- Thomas J. Peters e Robert H. Waterman Jr., *In Search of Excellence: Lessons from America's Best-Run Companies* (1982) — as oito características; o 7S está no arcabouço subjacente.
-- Robert H. Waterman Jr., Thomas J. Peters e Julien R. Phillips, "Structure Is Not Organization", *Business Horizons* (1980) — a exposição original do modelo 7S; Richard Pascale e Anthony Athos são coautores intelectuais do modelo na McKinsey.
+- Thomas J. Peters e Robert H. Waterman Jr., *In Search of Excellence: Lessons from America's Best-Run Companies* (1982): as oito características; o 7S está no arcabouço subjacente.
+- Robert H. Waterman Jr., Thomas J. Peters e Julien R. Phillips, "Structure Is Not Organization", *Business Horizons* (1980): a exposição original do modelo 7S; Richard Pascale e Anthony Athos são coautores intelectuais do modelo na McKinsey.
 - Tom Peters e Nancy Austin, *A Passion for Excellence* (1985).
 - Tom Peters, *Thriving on Chaos* (1987); *Liberation Management* (1992); *The Brand You 50* (1999); *The Excellence Dividend* (2018).
-- "Oops! Who's Excellent Now?", *BusinessWeek*, 5 de novembro de 1984 — a revisão crítica do desempenho posterior das empresas do livro.
-- Tom Peters, "Tom Peters's True Confessions", *Fast Company*, nov. 2001 — a declaração sobre os dados originais e sua posterior qualificação.
-- Phil Rosenzweig, *The Halo Effect* (2007) — crítica metodológica de referência.
+- "Oops! Who's Excellent Now?", *BusinessWeek*, 5 de novembro de 1984: a revisão crítica do desempenho posterior das empresas do livro.
+- Tom Peters, "Tom Peters's True Confessions", *Fast Company*, nov. 2001: a declaração sobre os dados originais e sua posterior qualificação.
+- Phil Rosenzweig, *The Halo Effect* (2007): crítica metodológica de referência.
 
 **Nota de atribuição.** O 7S é criação coletiva da McKinsey (Waterman, Peters, Phillips, Pascale, Athos), não de Peters individualmente; atribuí-lo a ele é abreviação corrente e imprecisa. **Leitura desta casa, não de Peters:** a matriz de pares como procedimento de diagnóstico, a tabela de contradições típicas em mid-market brasileiro, o teste de velocidade organizacional, a tabela de choque de 7S para integração pós-fusão, e a exigência de amarrar todo achado cultural a uma consequência financeira. Peters não escreve sobre M&A, sobre empresa familiar de capital fechado, nem sobre o contexto brasileiro.

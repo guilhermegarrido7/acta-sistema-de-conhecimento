@@ -11,25 +11,25 @@ repetidas. Este plugin é de processo auditado; o método vive no plugin de mét
 
 Elo 6 do ciclo (`ciclo-da-receita` §2). Bloco **REC.06**.
 
-O elo em que o direito vira caixa — ou não vira. Dois riscos dominam, e o segundo é invisível no
+O elo em que o direito vira caixa, ou não vira. Dois riscos dominam, e o segundo é invisível no
 relatório que todo mundo olha: **o título baixado sem ingresso efetivo de recursos** e **o encargo de
 mora que não foi cobrado**.
 
 ## 1. O aging, e o que ele não mostra
 
 Peça o relatório de contas a receber em aging na data-base, e **reconcilie o total contra um número
-que você não calculou** — o saldo da conta no razão. Se não bate, você ainda não entendeu a base
+que você não calculou**: o saldo da conta no razão. Se não bate, você ainda não entendeu a base
 (`bases-e-conciliacao` §1.4). Só depois disso o aging vira evidência.
 
 Cortes sobre a carteira:
 
 1. **Faixas de vencimento** e concentração por faixa, com o percentual sobre o total.
-2. **Concentração por cliente** — quanto do vencido está em um só sacado.
-3. **Títulos vencidos há mais tempo** — há tratativa registrada, ou apenas idade?
-4. **Recebimentos parciais** — a diferença foi glosa reconhecida, encargo não cobrado, desconto
+2. **Concentração por cliente**: quanto do vencido está em um só sacado.
+3. **Títulos vencidos há mais tempo**: há tratativa registrada, ou apenas idade?
+4. **Recebimentos parciais**: a diferença foi glosa reconhecida, encargo não cobrado, desconto
    concedido, ou simplesmente não recebido? São quatro naturezas distintas e o aging não as separa.
-5. **Recebimentos pós-vencimento** — população de entrada da seção 3.
-6. **Títulos com saldo negativo ou zerado no aging** e não baixados — resíduo de baixa manual.
+5. **Recebimentos pós-vencimento**: população de entrada da seção 3.
+6. **Títulos com saldo negativo ou zerado no aging** e não baixados: resíduo de baixa manual.
 
 > **Evite a armadilha da assertiva.** Quando a administração declara que não há contas a receber em
 > aberto, a pergunta não é se o aging está zerado: é **por que** está. Título liquidado sem o efetivo
@@ -46,19 +46,19 @@ os mesmos de qualquer conciliação; o que interessa aqui são os resíduos:
 | Resíduo | O que investigar |
 |---|---|
 | Baixa sem crédito correspondente | Liquidação sem ingresso: baixa manual, compensação não documentada, ou erro. É o achado mais grave do elo |
-| Crédito sem baixa | Recebimento não aplicado ao título — carteira e caixa divergem |
+| Crédito sem baixa | Recebimento não aplicado ao título; carteira e caixa divergem |
 | Baixa por compensação | Contra o quê? Exige documento de encontro de contas com alçada |
 | Quase-pares (diferença de centavos) | Não acontece em conciliação automática, só em digitação |
 
 Isole as **baixas manuais** e teste 100% delas: quem lançou, com que autorização, contra qual
-documento. População pequena, risco alto — o mesmo critério das notas canceladas.
+documento. População pequena, risco alto: o mesmo critério das notas canceladas.
 
 ## 3. Juros e multa: o encargo que não aparece no aging
 
 Um dos quatro riscos que faltavam nos programas de receita da casa
 (`matriz-de-riscos-da-receita` §2), e o mais fácil de deixar passar.
 
-> **Encargo de mora não cobrado é receita renunciada sem decisão formal — e ele não aparece no
+> **Encargo de mora não cobrado é receita renunciada sem decisão formal, e ele não aparece no
 > aging.** O título pago em atraso, sem encargo, é liquidado e some do relatório. Quem audita só o
 > aging nunca o encontra.
 
@@ -67,7 +67,7 @@ população é contável e o cálculo é aritmético.
 
 1. Extraia todos os títulos com data de liquidação posterior à data de vencimento.
 2. Recalcule, para cada um, os encargos devidos segundo a cláusula contratual: multa, juros de mora e
-   correção, na base e na periodicidade contratadas. **A cláusula é do contrato do mandato** — não
+   correção, na base e na periodicidade contratadas. **A cláusula é do contrato do mandato**. Não
    presuma percentual de praxe.
 3. Confronte o encargo devido com o efetivamente cobrado. Três resultados: cobrado corretamente,
    cobrado a menor, não cobrado.
@@ -82,13 +82,13 @@ desfavorável é decisão de gestão, mas decisão de gestão precisa de alçada
 
 ### Planos A/B/C
 
-- **Plano A** — base de títulos com emissão, vencimento, liquidação e valores, mais a cláusula
+- **Plano A**: base de títulos com emissão, vencimento, liquidação e valores, mais a cláusula
   contratual de encargos; reperformance em 100%.
-- **Plano B** — sem data de liquidação na base: use a data do crédito no extrato, casada por valor, e
+- **Plano B**: sem data de liquidação na base: use a data do crédito no extrato, casada por valor, e
   declare que a data de liquidação foi inferida do ingresso bancário.
-- **Plano C** — sem base de títulos liquidados: o teste cai. Conclua sobre o desenho (existe política
+- **Plano C**: sem base de títulos liquidados: o teste cai. Conclua sobre o desenho (existe política
   de encargos? existe alçada de dispensa?) e declare que a efetividade não foi testável.
-- **Limitação** — *"A reperformance de encargos cobriu [N] títulos liquidados após o vencimento,
+- **Limitação**: *"A reperformance de encargos cobriu [N] títulos liquidados após o vencimento,
   [X]% da população informada; a cláusula aplicada é a do contrato vigente no período."*
 
 ## 4. Cobrança, interrupção e provisão
@@ -100,12 +100,12 @@ operação do controle, não de desenho.
 **Interrupção do serviço por inadimplência.** É controle usual em cliente privado e **frequentemente
 inaplicável em contrato com ente público**, por vedação contratual ou legal. Confirme no contrato do
 mandato antes de escrever o teste: testar corte onde ele não é permitido produz achado falso. Onde
-não se aplica, testa-se **registro e cobrança**, não bloqueio — e a inaplicabilidade se declara.
+não se aplica, testa-se **registro e cobrança**, não bloqueio, e a inaplicabilidade se declara.
 
 **Concessão de crédito.** Quando há originação de venda a cliente privado, o elo ganha dois testes
 que não existem em contrato único: análise de crédito prévia com limite aprovado em alçada, e venda a
-cliente com restrição, limite vencido ou excedido. Em mandato de cliente único não há o que testar —
-declare a inaplicabilidade em vez de omitir o bloco.
+cliente com restrição, limite vencido ou excedido. Em mandato de cliente único não há o que testar.
+Declare a inaplicabilidade em vez de omitir o bloco.
 
 **Provisão para perdas.** Confronte o critério de provisão adotado com o aging efetivo: título em
 faixa que o critério manda provisionar e que não está provisionado é subavaliação de perda, e o

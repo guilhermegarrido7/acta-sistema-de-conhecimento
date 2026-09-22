@@ -1,21 +1,21 @@
-# Contexto Brasil — Adaptações CPC/IFRS para o Framework Koller
+# Contexto Brasil: adaptações CPC/IFRS para o framework Koller
 
 ## 1. Mapa de Equivalências CPC ↔ Koller
 
 | Conceito Koller | CPC Equivalente | Notas |
 |---|---|---|
 | Operating Leases capitalizados | CPC 06 R2 (IFRS 16) | Obrigatório desde 2019; mid-market frequentemente subestima passivos |
-| Pension obligations (benefit defined) | CPC 33 (IAS 19) | Raro em mid-market BR — concentrado em grandes empresas |
+| Pension obligations (benefit defined) | CPC 33 (IAS 19) | Raro em mid-market BR, concentrado em grandes empresas |
 | Goodwill e intangíveis adquiridos | CPC 15 (IFRS 3) | Não amortizado; impairment test anual (CPC 01) |
 | Imposto Diferido | CPC 32 (IAS 12) | Passivo líquido = equivalente de patrimônio |
 | Contingências/Provisões | CPC 25 (IAS 37) | Passivos prováveis = equivalentes de dívida |
-| Benefícios a empregados (CP) | CPC 33 (IAS 19) | Férias, 13º, PLR — entram em passivo operacional |
+| Benefícios a empregados (CP) | CPC 33 (IAS 19) | Férias, 13º, PLR: entram em passivo operacional |
 | Reconhecimento de receita | CPC 47 (IFRS 15) | Impacta timing de receita e adiantamentos de clientes |
 | Instrumentos financeiros | CPC 48 (IFRS 9) | Derivativos de hedge, aplicações financeiras |
 
 ---
 
-## 2. CPC 06 R2 / IFRS 16 — Arrendamentos
+## 2. CPC 06 R2 / IFRS 16: arrendamentos
 
 ### Impacto no NOPLAT e IC
 
@@ -30,7 +30,7 @@ EBITDA: incluía a despesa de aluguel como custo operacional
 ```
 DRE:
   - D&A sobre Ativo ROU (operacional)
-  - Encargos financeiros sobre Passivo de Arrendamento (financeiro — excluir do NOPLAT)
+  - Encargos financeiros sobre Passivo de Arrendamento (financeiro, excluir do NOPLAT)
 
 Balanço:
   - Ativo ROU (operacional) → entra no IC
@@ -69,7 +69,7 @@ EV implícito na transação
 
 ---
 
-## 3. CPC 33 — Benefícios a Empregados
+## 3. CPC 33: benefícios a empregados
 
 ### Benefício Definido vs. Contribuição Definida
 
@@ -89,7 +89,7 @@ Juros sobre o passivo líquido → não operacional (excluir do NOPLAT)
 
 ---
 
-## 4. CPC 15 — Combinações de Negócios (Goodwill)
+## 4. CPC 15: combinações de negócios (goodwill)
 
 ```
 Goodwill = Preço pago − Fair value dos ativos líquidos identificáveis do target
@@ -104,7 +104,7 @@ Tratamento IFRS/CPC:
 - ROIC excl. goodwill: exclui goodwill do IC → mede performance operacional pura
 - ROIC incl. goodwill: inclui goodwill (e intangíveis PPA) → mede retorno sobre capital total deployed
 
-**Intangíveis adquiridos (PPA — Purchase Price Allocation):**
+**Intangíveis adquiridos (PPA, Purchase Price Allocation):**
 ```
 Marcas adquiridas, carteira de clientes, tecnologia, contratos →
 São amortizados (vida útil definida) ou testados por impairment (vida útil indefinida)
@@ -113,7 +113,7 @@ A amortização vai para EBIT contábil → excluir ao calcular EBITA (é amorti
 
 ---
 
-## 5. Ajustes de Normalização EBITDA — Contexto Brasil
+## 5. Ajustes de normalização de EBITDA no contexto Brasil
 
 ### Pró-labore acima/abaixo do mercado
 
@@ -148,12 +148,12 @@ Se a empresa recebe adiantamentos e reconhece receita antes da entrega, o EBITDA
 
 ### Qualidade de Resultados
 
-- [ ] Estoque: reconciliar saldo contábil com contagem física — divergências indicam baixas não realizadas (inflam margem bruta)
+- [ ] Estoque: reconciliar saldo contábil com contagem física; divergências indicam baixas não realizadas (inflam margem bruta)
 - [ ] CPC 06 R2: todos os contratos de arrendamento identificados e capitalizados?
 - [ ] Pró-labore: ajustado a mercado?
 - [ ] Transações com partes relacionadas: imóveis, empréstimos entre sócios e empresa, serviços
-- [ ] Contingências fiscais/trabalhistas: levantamento atualizado — comum ser material em BR
-- [ ] Regime tributário: Simples / Presumido / Real — e implicações para normalização
+- [ ] Contingências fiscais/trabalhistas: levantamento atualizado, comum ser material em BR
+- [ ] Regime tributário: Simples / Presumido / Real, e implicações para normalização
 - [ ] Receita: concentração em poucos clientes? (risco de churn pós-transação)
 - [ ] CAPEX de manutenção vs. expansão: separar para estimar FCF sustentável
 
@@ -162,11 +162,11 @@ Se a empresa recebe adiantamentos e reconhece receita antes da entrega, o EBITDA
 - [ ] Dívida financeira com garantia real (alienação fiduciária, hipoteca)?
 - [ ] Dívidas com sócios (mútuo): tratar como dívida financeira ou equity dependendo da intenção
 - [ ] Subvenções governamentais (BNDES, FINEP, Fundos regionais): verificar cláusulas de change of control
-- [ ] Passivos de arrendamento CPC 06 R2 — levantamento completo de contratos
+- [ ] Passivos de arrendamento CPC 06 R2: levantamento completo de contratos
 
 ---
 
-## 7. Taxa de Desconto — Peculiaridades Brasil
+## 7. Taxa de desconto: peculiaridades do Brasil
 
 ### WACC em BRL
 

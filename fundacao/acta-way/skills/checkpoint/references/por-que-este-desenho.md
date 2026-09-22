@@ -29,7 +29,7 @@ de agente é desenho da ACTA**: não existe padrão de mercado consolidado para 
 # A pergunta diária, em detalhe
 
 Independente dos gatilhos da seção 4, ofereça gerar o checkpoint em até **duas janelas por dia
-corrido** — nunca mais que isso, mesmo que a conversa continue por horas ou vire outro chat.
+corrido**. Nunca mais que isso, mesmo que a conversa continue por horas ou vire outro chat.
 
 | Janela | Dispara quando | Só pergunta se |
 |---|---|---|
@@ -52,10 +52,10 @@ A pergunta é curta e sempre informa a versão atual, para o consultor decidir c
 Última pergunta pós-17h: {{AAAAMMDD}}
 ```
 
-Isso não gera uma nova versão do checkpoint sozinho — é só a marcação do lembrete, para outro chat
+Isso não gera uma nova versão do checkpoint sozinho: é só a marcação do lembrete, para outro chat
 aberto mais tarde no mesmo dia não perguntar de novo. O registro está no arquivo, não na sessão, e
 por isso qualquer chat novo o enxerga.
 
 **O que isto não é:** um lembrete a cada meia hora, nem cobrança. É uma pergunta, no máximo duas
-vezes por dia, pensada para caber no hábito de quem já pausa no fim da manhã e no fim da tarde —
+vezes por dia, pensada para caber no hábito de quem já pausa no fim da manhã e no fim da tarde,
 sem custar mais que isso em tokens.

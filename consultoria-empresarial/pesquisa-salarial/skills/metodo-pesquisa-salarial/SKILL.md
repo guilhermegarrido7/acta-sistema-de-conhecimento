@@ -1,6 +1,6 @@
 ---
 name: metodo-pesquisa-salarial
-description: Aplique o método ACTA de pesquisa de remuneração — regras de ouro, cartão de identidade do projeto, mínimos de agregação e anonimização, convenções de base e protocolo de checkpoint. Acionar ao abrir um projeto de pesquisa salarial, ao decidir metodologia, ao definir o que pode ou não ser publicado, ou ao retomar um projeto em andamento.
+description: Aplique o método ACTA de pesquisa de remuneração, com regras de ouro, cartão de identidade do projeto, mínimos de agregação e anonimização, convenções de base e protocolo de checkpoint. Acionar ao abrir um projeto de pesquisa salarial, ao decidir metodologia, ao definir o que pode ou não ser publicado, ou ao retomar um projeto em andamento.
 user-invocable: false
 ---
 
@@ -17,7 +17,7 @@ qualquer tarefa:
 2. Leia a seção 2 (regras de ouro). Não são negociáveis, valem para todo projeto.
 3. Identifique a etapa da tarefa na seção 3 e carregue apenas os módulos
    indicados.
-4. O checkpoint do projeto **não** se registra ao fim de cada etapa — só nos gatilhos da seção 7
+4. O checkpoint do projeto **não** se registra ao fim de cada etapa, só nos gatilhos da seção 7
    (pedido do consultor, encerrar sessão ou trocar de chat, conversa pesada, ou a pergunta diária).
 
 **Módulos de referência** (ler sob demanda, não todos de uma vez):

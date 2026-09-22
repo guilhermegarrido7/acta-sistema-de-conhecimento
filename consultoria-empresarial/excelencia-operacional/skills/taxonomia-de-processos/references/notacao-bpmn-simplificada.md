@@ -1,4 +1,4 @@
-# Notação simplificada — legenda para o cliente
+# Notação simplificada: legenda para o cliente
 
 Conteúdo do slide de legenda que abre o workshop e que reaparece como anexo do manual. A redação
 abaixo é deliberadamente leiga: quem lê o fluxograma é o analista que executa o processo, não o
@@ -11,7 +11,7 @@ modelador.
 - Cada **faixa horizontal (raia)** é uma área ou um ator. A caixa está na raia de quem executa.
 - O **logo do sistema** dentro da caixa diz onde a atividade acontece.
 
-## Eventos — o que dispara e o que encerra
+## Eventos: o que dispara e o que encerra
 
 | Símbolo | Nome | Em linguagem leiga |
 |---|---|---|
@@ -21,7 +21,7 @@ modelador.
 | Círculo com envelope | Mensagem | Chegou ou foi enviado um e-mail / uma notificação. |
 | Círculo vermelho com envelope | Fim por mensagem | O processo encerra enviando um comunicado. |
 
-## Atividades — o que se faz
+## Atividades: o que se faz
 
 | Símbolo | Nome | Em linguagem leiga |
 |---|---|---|
@@ -30,14 +30,14 @@ modelador.
 | Retângulo com marcador de engrenagem | Atividade automática | Integração entre sistemas. **Não há ação humana.** |
 | Retângulo com `+` | Subprocesso | Um conjunto de atividades detalhado em outro fluxograma. |
 
-O marcador `M` não é decoração. Ele é o mapa do que está fora de sistema — e, por consequência, o
+O marcador `M` não é decoração. Ele é o mapa do que está fora de sistema e, por consequência, o
 mapa de onde estão as oportunidades de automação. Quem lê o fluxo procurando quick win procura `M`.
 
 ## Decisões
 
 Losango, **com a condicionante escrita**. Cada saída do losango recebe o rótulo da condição
 ("Aprovado" / "Reprovado", "Acima da alçada" / "Dentro da alçada"). Losango sem pergunta e sem
-rótulo nas saídas não é decisão — é ruído, e trava a leitura do grupo no workshop.
+rótulo nas saídas não é decisão; é ruído, e trava a leitura do grupo no workshop.
 
 ## Conexões e apoio
 
@@ -55,6 +55,6 @@ Gateway paralelo e inclusivo, evento de compensação, pool múltiplo, sinaliza�
 de evento. São elementos legítimos em BPMN 2.0 e inúteis num workshop de homologação: cada símbolo a
 mais é um minuto de explicação e um risco de o grupo discutir notação em vez de processo.
 
-Quando o processo real exige essa semântica — duas coisas que ocorrem em paralelo, um caminho de
-exceção raro —, descreva em **anotação de texto** ao lado do fluxo. O leitor entende; o modelador
+Quando o processo real exige essa semântica (duas coisas que ocorrem em paralelo, um caminho de
+exceção raro), descreva em **anotação de texto** ao lado do fluxo. O leitor entende; o modelador
 purista reclama; o workshop anda.

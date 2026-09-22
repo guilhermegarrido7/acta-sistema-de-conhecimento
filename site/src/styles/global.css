@@ -244,8 +244,11 @@ h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; font-weight: 650; letter-spacin
 
 /* ---------- cartões ---------- */
 
-.grade { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); }
-.grade--dupla { grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr)); }
+/* O min() na coluna mínima não é enfeite: sem ele, numa tela de 390px a coluna de
+   24rem (384px) é maior que o espaço disponível e a página inteira ganha rolagem
+   horizontal. O min() deixa a coluna encolher até a largura da tela. */
+.grade { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr)); }
+.grade--dupla { grid-template-columns: repeat(auto-fill, minmax(min(24rem, 100%), 1fr)); }
 
 .cartao {
   position: relative;
@@ -257,6 +260,7 @@ h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; font-weight: 650; letter-spacin
 .cartao:has(h3 a) { cursor: pointer; }
 .cartao:hover { border-color: var(--turquesa); box-shadow: var(--sombra); transform: translateY(-2px); }
 .cartao:focus-within { border-color: var(--teal); box-shadow: var(--sombra); }
+.cartao > .icone { margin-bottom: .4rem; }
 .cartao h3 { margin: 0; font-size: 1.0625rem; font-weight: 650; }
 .cartao h3 a { color: var(--tinta); }
 .cartao h3 a:hover { color: var(--teal); text-decoration: none; }
@@ -489,6 +493,17 @@ footer code { background: rgba(255, 255, 255, .1); color: rgba(255, 255, 255, .8
 
 /* ---------- busca (Pagefind) ---------- */
 
+.sugestoes {
+  display: flex; flex-wrap: wrap; gap: .45rem; align-items: center;
+  margin: 1.1rem 0 0; font-size: .875rem; color: var(--tinta-fraca);
+}
+.sugestoes button {
+  font-family: inherit; font-size: .8125rem; font-weight: 550; cursor: pointer;
+  color: var(--teal); background: var(--papel-suave);
+  border: 1px solid var(--linha); border-radius: 999px; padding: .28rem .7rem;
+}
+.sugestoes button:hover { border-color: var(--teal); background: var(--papel-medio); }
+
 .pagefind-ui {
   --pagefind-ui-primary: var(--teal);
   --pagefind-ui-text: var(--tinta);
@@ -506,8 +521,13 @@ footer code { background: rgba(255, 255, 255, .1); color: rgba(255, 255, 255, .8
   .fluxo .no { flex-direction: row; text-align: left; padding: 0; }
   .fluxo .no p { max-width: none; }
   /* Na coluna única a esteira vira vertical, ligando o topo de um ícone ao
-     próximo em vez de atravessar a largura da tela. */
-  .fluxo .no::after { top: 2.75rem; left: 1.375rem; width: 2px; height: calc(100% + 1.75rem - 1.5rem); }
+     próximo em vez de atravessar a largura da tela.
+     O seletor repete o :not(:last-child) de propósito: sem ele a regra de desktop
+     tem especificidade maior, continua valendo aqui, e o width:100% deslocado em
+     left:50% joga 184px para fora da tela. */
+  .fluxo .no:not(:last-child)::after {
+    top: 2.75rem; left: 1.375rem; width: 2px; height: calc(100% + .25rem);
+  }
   .fluxo--ciclo .no:last-child::before { position: static; display: block; transform: none; margin-top: .4rem; }
 }
 

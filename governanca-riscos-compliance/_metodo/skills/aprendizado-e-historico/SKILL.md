@@ -6,7 +6,7 @@ description: Feche um bloco de trabalho de auditoria e decida o destino da liç�
 # Aprendizado e histórico
 
 Esta skill é o **ritual de auditoria** rodando sobre o mecanismo comum. O protocolo de checkpoint,
-os templates e a regra de defasagem vivem em `acta-way`, skill `checkpoint` — carregue-a primeiro.
+os templates e a regra de defasagem vivem em `acta-way`, skill `checkpoint`. Carregue-a primeiro.
 Aqui está só o que a auditoria acrescenta.
 
 Carregue também `metodo-auditoria`: as regras invioláveis e a doutrina do número exato valem
@@ -20,8 +20,8 @@ O momento de aprendizado **precede** a gravação. Nunca registre uma lição qu
 corrigiu.
 
 1. **Apresente no chat**, em bloco curto e destacado:
-   - O que aprendi — a técnica, 2 a 4 linhas, já escrita de forma reutilizável.
-   - O que errei e como descobri — inclusive o erro que morreu no rascunho.
+   - O que aprendi: a técnica, 2 a 4 linhas, já escrita de forma reutilizável.
+   - O que errei e como descobri, inclusive o erro que morreu no rascunho.
    - O que ficou em aberto.
 2. **Espere a reflexão do auditor.** É aqui que a lição é corrigida. Foi assim que "não existe regra
    no benefício" virou "a regra existe e fecha ao centavo": a primeira versão da lição estava errada, e
@@ -54,7 +54,7 @@ Pular o passo 2 é o erro que esta skill existe para impedir.
 **Nunca dentro da pasta do cliente.** Regra R1, sem exceção.
 
 O "não feito" tem o mesmo peso do "feito". Registrar o que não foi possível concluir e o que falta
-solicitar é parte do checklist de conclusão do método de auditoria — e é o que impede que uma
+solicitar é parte do checklist de conclusão do método de auditoria, e é o que impede que uma
 limitação de escopo desapareça silenciosamente entre uma sessão e outra.
 
 ---
@@ -87,5 +87,5 @@ permita a um auditor informado e prudente **repetir o trabalho e chegar ao mesmo
 lista como obrigatório o nome de quem executou e de quem supervisionou.
 
 Por isso toda entrada de sessão carrega **fonte do dado**, **preparado por / em**, e **revisado por
-/ em** — os campos já estão no template comum. Ao fechar a sessão, confira que estão preenchidos:
+/ em**. Os campos já estão no template comum. Ao fechar a sessão, confira que estão preenchidos:
 entrada sem fonte do dado não sustenta reperformance, e entrada sem revisão não sustenta supervisão.

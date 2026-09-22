@@ -2,7 +2,7 @@
 
 Construção de modelo econômico-financeiro: projeção de resultado e caixa, capital de giro, valuation, cenários e análise de sensibilidade, no framework Koller/McKinsey (NOPLAT, ROIC, lucro econômico, DCF) adaptado a mid-market fechado brasileiro (CPC/IFRS).
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`) — é onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É ali que vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
 >
 > **Status: completo.** As 14 skills do ciclo de vida estão escritas, com a camada de
 > fundamento teórico (`fundamentos-koller`) e suas 5 referências detalhadas.
@@ -10,10 +10,10 @@ Construção de modelo econômico-financeiro: projeção de resultado e caixa, c
 
 ## O que faz
 
-Conduz a construção e o julgamento de um modelo econômico-financeiro completo — da reorganização
+Conduz a construção e o julgamento de um modelo econômico-financeiro completo, da reorganização
 das demonstrações contábeis ao diagnóstico de ROIC, projeção de mercado e cenários, custo de
 capital, valor terminal, triangulação de faixa de valor, revisão final do modelo e o relatório de
-valuation na identidade visual da casa — sempre ancorado no framework Koller/McKinsey e com os
+valuation na identidade visual da casa, sempre ancorado no framework Koller/McKinsey e com os
 ajustes de CPC 06 R2 (arrendamentos), CPC 33 (pensões) e CPC 15 (goodwill) para o contexto de
 mid-market fechado no Brasil.
 
@@ -21,7 +21,7 @@ mid-market fechado no Brasil.
 
 | Skill | Etapa | Descrição |
 |---|---|---|
-| `fundamentos-koller` | Referência transversal | Camada teórica: NOPLAT, capital investido, ROIC, lucro econômico, FCF, key value driver formula. `user-invocable: false` — carregada pelas demais quando o conceito exato é necessário. |
+| `fundamentos-koller` | Referência transversal | Camada teórica: NOPLAT, capital investido, ROIC, lucro econômico, FCF, key value driver formula. `user-invocable: false`, carregada pelas demais quando o conceito exato é necessário. |
 | `reorganizacao-contabil` | 1 | Reorganização das demonstrações contábeis em base NOPLAT/capital investido, com reconciliação obrigatória entre as duas perspectivas. |
 | `qualidade-de-resultados` | 2 | Normalização de EBITDA e checagem de qualidade de resultado antes de qualquer diagnóstico de retorno. |
 | `diagnostico-de-roic` | 3 | Diagnóstico de criação de valor pelo ROIC: decomposição margem × giro, lucro econômico, spread contra o WACC, duração da vantagem competitiva (CAP). |

@@ -36,7 +36,7 @@ run.font.size = Pt(7.5)                                  # ver escala por nº de
 ```
 
 `RGBColor` é subclasse de `tuple`: **não** use `isinstance(x, tuple)` para distinguir uma cor de uma
-lista de valores — dá falso positivo. E atribuir string a `.rgb` levanta
+lista de valores, porque dá falso positivo. E atribuir string a `.rgb` levanta
 `ValueError: assigned value must be type RGBColor`.
 
 ## 3. Largura de coluna
@@ -67,7 +67,7 @@ shape = slide.shapes.add_chart(
 ```
 
 > **Nunca ponha identificador sensível no rótulo de série.** Final de cartão, CPF/CNPJ, número de
-> conta, matrícula e nome de pessoa ficam fora do rótulo — use o papel ou um rótulo genérico
+> conta, matrícula e nome de pessoa ficam fora do rótulo. Use o papel ou um rótulo genérico
 > (`Meio de pagamento A`, `Centro de custo 1`). O dado identificador vive no papel de trabalho, com
 > acesso restrito, não num deck que circula.
 
@@ -95,7 +95,7 @@ o rótulo. Nesses casos:
 
 ```python
 tf.word_wrap = True
-# piso de fonte 6,2 pt — abaixo disso é ilegível no projetor
+# piso de fonte 6,2 pt, abaixo disso é ilegível no projetor
 ```
 
 Se for reformar o slide, prefira converter a grade em tabela real.
@@ -107,7 +107,7 @@ Se for reformar o slide, prefira converter a grade em tabela real.
 A ordem das seções, o desenho da matriz II.A e a geometria da página estão no SKILL.md, §8. Aqui só
 o caminho de código.
 
-**Passo 1 — extrair o deck para JSON.**
+**Passo 1: extrair o deck para JSON.**
 
 ```python
 from pptx import Presentation
@@ -129,10 +129,10 @@ for i, s in enumerate(prs.slides, 1):
 Filtre logo e faixa decorativa **por dimensão** antes de reinserir: imagem abaixo de um limiar de
 largura/altura, ou ancorada na banda lateral, é elemento de identidade, não evidência.
 
-**Passo 2 — agrupar e numerar.** Slides viram aspectos numerados em sequência; um bloco temático
+**Passo 2: agrupar e numerar.** Slides viram aspectos numerados em sequência; um bloco temático
 vira um título em caixa alta. A numeração é contínua no documento inteiro, não reinicia por bloco.
 
-**Passo 3 — sanitizar todo texto antes de escrever.**
+**Passo 3: sanitizar todo texto antes de escrever.**
 
 ```python
 import re
@@ -145,7 +145,7 @@ def sanitiza(txt):
     return "".join(ch for ch in txt if ch == "\n" or ch == "\t" or ord(ch) >= 32)
 ```
 
-**Passo 4 — geometria da página.**
+**Passo 4: geometria da página.**
 
 ```python
 from docx.shared import Cm
@@ -159,7 +159,7 @@ Cabeçalho: logo à esquerda, rótulo do trabalho à direita, linha na cor insti
 de confidencialidade e campo `PAGE`. O índice usa remissão textual às seções (I, II.A, II.B, III,
 Anexos); a paginação é atualizada no Word pelo próprio usuário ao abrir.
 
-**Passo 5 — verificar por render.** Exporte para PDF com `ExportAsFixedFormat` via Word COM,
+**Passo 5: verificar por render.** Exporte para PDF com `ExportAsFixedFormat` via Word COM,
 converta as páginas com `fitz` e **olhe**. Foi assim que apareceram a remissão interna vazada e a
 fonte substituída. Receita de COM e armadilhas do ambiente: `acta-way:ambiente-tecnico`.
 

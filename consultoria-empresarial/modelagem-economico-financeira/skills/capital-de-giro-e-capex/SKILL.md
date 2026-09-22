@@ -1,9 +1,9 @@
 ---
 name: capital-de-giro-e-capex
-description: Direcionar os cronogramas operacionais do modelo — prazos médios, necessidade de capital de giro, roll-forward de imobilizado e a separação entre capex de manutenção e de expansão. Acionar ao projetar capital de giro, ao modelar CapEx e depreciação, ou ao checar coerência entre prazos projetados e histórico.
+description: Direcionar os cronogramas operacionais do modelo, com prazos médios, necessidade de capital de giro, roll-forward de imobilizado e a separação entre capex de manutenção e de expansão. Acionar ao projetar capital de giro, ao modelar CapEx e depreciação, ou ao checar coerência entre prazos projetados e histórico.
 ---
 
-# Capital de giro e CapEx — onde o caixa some
+# Capital de giro e CapEx: onde o caixa some
 
 ## Papel desta skill
 
@@ -13,15 +13,15 @@ e contesta as premissas que não se sustentam. Quem digita é o analista.
 ## Por que estes dois andam juntos
 
 São os dois usos de caixa que ficam **entre o EBITDA e o fluxo de caixa livre**. Uma empresa pode
-crescer, ter EBITDA de 20% e não gerar um real de caixa — porque cada real de receita nova exige
+crescer, ter EBITDA de 20% e não gerar um real de caixa, porque cada real de receita nova exige
 capital de giro e cada unidade de capacidade nova exige CapEx. É aqui que a diferença entre "empresa
 lucrativa" e "empresa que gera caixa" se decide, e é aqui que o modelo do mid-market mais erra por
 otimismo silencioso.
 
-E são também os dois lugares onde o *comprador* vai olhar primeiro depois do EBITDA — porque
+E são também os dois lugares onde o *comprador* vai olhar primeiro depois do EBITDA, porque
 determinam o capital que ele terá de aportar depois de pagar o preço.
 
-## Parte 1 — Capital de giro
+## Parte 1: capital de giro
 
 ### Os três prazos
 
@@ -50,7 +50,7 @@ NCG                 = ativo operacional circulante − passivo operacional circu
 
 **O sinal importa e é fonte constante de erro:** aumento de NCG **consome** caixa (entra negativo no
 fluxo). Um modelo em que a receita cresce 30% e a ΔNCG aparece positiva no fluxo está com o sinal
-invertido — cheque isso antes de qualquer outra coisa.
+invertido. Cheque isso antes de qualquer outra coisa.
 
 ### Ciclo financeiro negativo
 
@@ -58,7 +58,7 @@ Alguns negócios recebem antes de pagar: escola com mensalidade antecipada, empr
 de cliente, varejo com prazo de fornecedor longo. O capital de giro é **fonte** de caixa, e o
 crescimento se autofinancia.
 
-É uma vantagem econômica real e merece destaque no equity story — mas exige duas verificações:
+É uma vantagem econômica real e merece destaque no equity story, mas exige duas verificações:
 
 1. **É estrutural ou é aperto de caixa?** Fornecedor sendo pago com atraso por dificuldade
    financeira produz o mesmo PMP alto de um fornecedor com prazo negociado. Cheque o aging de
@@ -74,10 +74,10 @@ perde a relação com a receita e produz capital de giro incoerente no ano 5.
 Regras de coerência que o oráculo deve verificar:
 
 - **O dia projetado tem de ter uma razão.** Se o PMR histórico é 45 dias e o modelo projeta 35,
-  qual é a ação que causa isso — mudança de política de crédito, troca de mix de cliente,
+  qual é a ação que causa isso: mudança de política de crédito, troca de mix de cliente,
   antecipação de recebíveis? Sem ação nomeada, volte para a média histórica.
 - **Melhoria de capital de giro é ganho de caixa não recorrente.** Reduzir o PMR de 45 para 35 dias
-  libera caixa uma vez. O modelo não pode manter o ganho todo ano — e o valor terminal não pode
+  libera caixa uma vez. O modelo não pode manter o ganho todo ano, e o valor terminal não pode
   embutir melhoria contínua.
 - **Média histórica de qual período?** Se o negócio mudou de mix, a média de 3 anos não representa.
   Pergunte ao usuário; não escolha calado.
@@ -88,15 +88,15 @@ Regras de coerência que o oráculo deve verificar:
 
 ### Red flags de capital de giro
 
-- PMR subindo ano a ano com receita estável — deterioração de crédito ou receita que não vira caixa.
+- PMR subindo ano a ano com receita estável: deterioração de crédito ou receita que não vira caixa.
 - Aging de recebíveis com concentração crescente acima de 90 dias e PDD irrisória.
-- PME subindo sem mudança de mix — obsolescência não provisionada.
+- PME subindo sem mudança de mix: obsolescência não provisionada.
 - Recebível de parte relacionada dentro do contas a receber operacional. Não é operacional.
 - Antecipação de recebíveis (factoring, desconto de duplicata) tratada como redução de PMR. **É
   dívida**, não eficiência: o recebível saiu do ativo mas a empresa pagou juros por isso. Verifique
-  o resultado financeiro e reclassifique — ver `reorganizacao-contabil`.
+  o resultado financeiro e reclassifique; ver `reorganizacao-contabil`.
 
-## Parte 2 — CapEx e depreciação
+## Parte 2: CapEx e depreciação
 
 ### O roll-forward, que não é opcional
 
@@ -115,7 +115,7 @@ PP&E líquido = bruto final − acumulada final
 ```
 
 Se o modelo não tem roll-forward e apenas projeta "imobilizado líquido = anterior + capex −
-depreciação", ele funciona enquanto não há baixa — e passa a errar silenciosamente quando há.
+depreciação", ele funciona enquanto não há baixa, e passa a errar silenciosamente quando há.
 Sinalize.
 
 ### A separação que muda o valuation
@@ -127,12 +127,12 @@ Sinalize.
 
 **Por que a distinção decide o preço.** Uma empresa cujo CapEx é quase todo de manutenção converte
 EBITDA em caixa e vale mais por EBITDA. Uma empresa que precisa investir para crescer consome o
-próprio EBITDA — e se o ROIC do investimento incremental não superar o WACC, **crescer reduz o
+próprio EBITDA. E se o ROIC do investimento incremental não superar o WACC, **crescer reduz o
 valor** (ver `diagnostico-de-roic`).
 
 Projetar CapEx como um único percentual da receita apaga essa distinção e é o atalho mais comum. Ele
-é aceitável em duas situações — negócio maduro sem plano de expansão, ou horizonte longe demais para
-detalhar — e nas duas o percentual deve vir da média histórica, com a nota de que expansão e
+é aceitável em duas situações (negócio maduro sem plano de expansão, ou horizonte longe demais para
+detalhar), e nas duas o percentual deve vir da média histórica, com a nota de que expansão e
 manutenção estão fundidas.
 
 **Peça o CapEx histórico segregado.** A carta de solicitação de informações da casa já pede isso
@@ -143,12 +143,12 @@ usuário a partir do razão do imobilizado, ou declare a limitação.
 
 O erro que mais infla valuation: o modelo projeta o CapEx de expansão (porque o vendedor apresentou
 o plano) mas projeta a receita pela tendência histórica. Resultado: capital investido cresce, receita
-não acompanha na proporção, e o ROIC projetado cai sem que ninguém repare — ou, pior, a receita
+não acompanha na proporção, e o ROIC projetado cai sem que ninguém repare; ou, pior, a receita
 cresce sem CapEx nenhum e o ROIC projetado explode.
 
 **Regra:** todo real de CapEx de expansão precisa da receita incremental correspondente, do prazo de
 ramp-up, e da margem esperada. Se o usuário não tem esses três, o projeto de expansão não entra no
-cenário base — entra como cenário separado ou como upside declarado fora do valuation.
+cenário base: entra como cenário separado ou como upside declarado fora do valuation.
 
 ### Depreciação
 
@@ -156,10 +156,10 @@ cenário base — entra como cenário separado ou como upside declarado fora do 
   veículo e benfeitoria têm vidas muito diferentes, e a mistura distorce EBIT e NOPAT.
 - **Convenção de meio-ano** no CapEx novo: ativo adquirido ao longo do ano deprecia meio ano. Sem
   isso, o primeiro ano de um investimento grande fica sobre-depreciado.
-- Depreciação fiscal ≠ depreciação contábil. A diferença gera imposto diferido — ver
+- Depreciação fiscal ≠ depreciação contábil. A diferença gera imposto diferido; ver
   `impostos-e-prejuizos-fiscais`.
 - **Em regime estacionário, CapEx ≈ depreciação.** Se o valor terminal do modelo tem CapEx muito
-  abaixo da depreciação, ele está liquidando a base de ativos na perpetuidade — o que gera fluxo
+  abaixo da depreciação, ele está liquidando a base de ativos na perpetuidade, o que gera fluxo
   alto e insustentável. É um dos testes da skill `valor-terminal`.
 - Ativo substancialmente depreciado em operação que depende dele: não projetar a depreciação futura exclusivamente com base na despesa histórica, pois a redução da depreciação pode inflar artificialmente EBIT, NOPAT e ROIC. AVALIAR se os ativos precisarão ser substituídos para sustentar a capacidade operacional. SE houver necessidade econômica de reposição, utilizar uma das seguintes abordagens: (i) projetar a depreciação com base no valor bruto do imobilizado; ou (ii) estimar o custo de reposição dos ativos e ajustar simultaneamente o CapEx e a depreciação futura. VALIDAR que CapEx e depreciação sejam economicamente consistentes com a manutenção da capacidade operacional.
 

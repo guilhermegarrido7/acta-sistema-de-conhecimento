@@ -1,10 +1,10 @@
-# APRENDIZADOS — {{CLIENTE}} · {{PROJETO}}
+# APRENDIZADOS · {{CLIENTE}} · {{PROJETO}}
 
 > Lição que vale para **outro cliente**. Se vale só para este engajamento, é decisão de projeto e
 > pertence ao `CHECKPOINT.md`.
 >
 > Este arquivo é o **estágio intermediário**. A lição nasce aqui, no calor do trabalho. Quando se
-> prova reutilizável, sobe para a skill no repositório do plugin — e só então chega nos colegas que
+> prova reutilizável, sobe para a skill no repositório do plugin, e só então chega nos colegas que
 > nunca trabalharam neste cliente.
 
 Append-only, mais recente no topo.
@@ -14,7 +14,7 @@ Append-only, mais recente no topo.
 ## {{AAAAMMDD}} · {{CONSULTOR}} · {{título curto da lição}}
 
 **O que aprendi**
-`{{a técnica, em 2 a 4 linhas, escrita de forma reutilizável — sem nome de cliente, sem caminho de
+`{{a técnica, em 2 a 4 linhas, escrita de forma reutilizável, sem nome de cliente, sem caminho de
 máquina, sem detalhe que só existe neste engajamento}}`
 
 **O que errei e como descobri**

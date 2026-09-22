@@ -13,7 +13,7 @@ De `programa-de-testes` vale integralmente, e não é repetido: o vocabulário f
 (`Eficaz` · `Parcialmente Eficaz` · `Ineficaz`), o vocabulário de status de desenho
 (`Implementado` · `Parcialmente Implementado` · `Não Implementado` · `Não Aplicável` · `A avaliar`),
 as duas colunas em que eles vivem e a fórmula do grau de eficácia. Esta skill é a **regra R6 do
-método** — desenho não é efetividade — desdobrada em procedimento.
+método** (desenho não é efetividade) desdobrada em procedimento.
 
 ## Papel desta skill
 
@@ -45,7 +45,7 @@ Desenho se avalia **lendo**, não amostrando. Cinco perguntas, na ordem, e a pri
 conclui:
 
 1. **O controle endereça o risco declarado?** Confira contra o risco associado no RACM, pelo código.
-   Controle de conferência de nota não mitiga risco de compra sem necessidade — mitiga risco de
+   Controle de conferência de nota não mitiga risco de compra sem necessidade; mitiga risco de
    pagamento indevido. Desalinhamento entre controle e risco é deficiência de desenho, ainda que o
    controle seja excelente para outra coisa.
 2. **A natureza é compatível com o momento do risco?** Controle detectivo não previne evento cujo
@@ -58,7 +58,7 @@ conclui:
    verificar o que aprova é carimbo. Executor que também é a parte interessada é conflito, e o
    controle é mal desenhado por construção, mesmo que opere com disciplina.
 5. **O controle deixa rastro suficiente para ser testado por terceiro?** Controle sem rastro é, na
-   prática, controle não evidenciável. Isso é achado de desenho, e não de efetividade — a lacuna
+   prática, controle não evidenciável. Isso é achado de desenho, e não de efetividade: a lacuna
    está na concepção, não na execução.
 
 **O walkthrough é o insumo principal desta avaliação**, e não o substitui: percorrer uma transação
@@ -68,7 +68,7 @@ a descrição, não sobre a amostra de um.
 **Vocabulário de saída.** `Implementado` quando as cinco passam. `Parcialmente Implementado` quando o
 controle existe e mitiga parte do risco, ou existe sem formalização, ou cobre parte dos atributos.
 `Não Implementado` quando o controle não existe ou não endereça o risco. `Não Aplicável` quando o
-risco não se materializa naquela entidade, **com a razão declarada** — nunca como fuga de avaliação.
+risco não se materializa naquela entidade, **com a razão declarada**, nunca como fuga de avaliação.
 
 ## 2. Avaliação de efetividade: o que se pergunta
 
@@ -76,7 +76,7 @@ Efetividade se avalia **testando**, sobre a população do período. As pergunta
 
 1. **A população existe e é completa?** Sem população íntegra não há teste de efetividade, há
    impressão. A integridade da população, quando extraída de sistema, depende de ITGC e de teste de
-   completude do relatório — ver `itgc`.
+   completude do relatório. Ver `itgc`.
 2. **O controle operou em cada item da amostra, atributo por atributo?** Os atributos vêm do RACM
    (`matriz-riscos-controles` §5). Falha isolada do atributo de tempestividade e falha do atributo de
    competência do aprovador são conclusões diferentes.
@@ -102,7 +102,7 @@ porque `Eficaz` na coluna de efetividade convive com risco integralmente descobe
 Três consequências operacionais:
 
 - **Declare a decisão, nunca a ausência.** No RACM, desenho `Não Implementado` e efetividade
-  `Ineficaz` com razão (i) — o controle não existe. Branco, "N/T" ou "Não testado" são
+  `Ineficaz` com razão (i): o controle não existe. Branco, "N/T" ou "Não testado" são
   proibidos; o Conselho lê branco como esquecimento.
 - **Redirecione as horas e registre o redirecionamento.** As horas liberadas vão para os processos
   onde há o que testar, e a realocação entra no ledger do engajamento.
@@ -128,7 +128,7 @@ descuido de preenchimento: é decisão de modelagem que apaga informação, e o 
 
 O prejuízo concreto: **nenhuma das quatro leituras acionáveis sobrevive**. Não se consegue extrair o
 backlog de implantação (que sai dos `Não Implementado`), nem o backlog de correção operacional (que
-sai dos `Ineficaz` com desenho `Implementado`) — e são planos de ação com donos, prazos e custos
+sai dos `Ineficaz` com desenho `Implementado`), e são planos de ação com donos, prazos e custos
 completamente diferentes. Implantar controle que não existe é projeto; corrigir execução de controle
 existente é disciplina de gestão.
 
@@ -141,7 +141,7 @@ proposta, e não como ajuste de formatação.
 
 A regra vem de `programa-de-testes` e aqui ela recebe o procedimento. **Nunca existe "não testado"
 como resultado.** Se não houve como testar, o controle não é evidenciável no período, portanto não se
-pode afirmar que operou — e a conclusão é `Ineficaz`.
+pode afirmar que operou, e a conclusão é `Ineficaz`.
 
 O que a torna defensável é a **razão registrada ao lado**, em três situações que parecem iguais no
 resultado e são completamente diferentes na recomendação:
@@ -174,7 +174,7 @@ regime da empresa:
   avaliar desenho antes de testar efetividade, e exige que a efetividade seja avaliada **em data-base
   específica** (as-of date), com evidência de operação ao longo de período suficiente antes dela.
   Controle implantado em novembro raramente sustenta conclusão de efetividade no encerramento de
-  dezembro — o período de operação é curto demais para amostra.
+  dezembro; o período de operação é curto demais para amostra.
 - **Empresa fechada brasileira, diagnóstico de controles.** Não há exigência de opinião sobre
   controles internos, e não há data-base normativa. A separação vale como **boa prática, e como a
   única forma de o entregável gerar plano de ação utilizável**. O período de avaliação é o acordado

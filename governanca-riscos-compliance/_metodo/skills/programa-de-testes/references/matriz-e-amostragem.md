@@ -11,7 +11,7 @@ referência e são o que torna a matriz operável e rastreável.
 | # | Coluna | Conteúdo |
 |---|---|---|
 | 1 | Área | área da Companhia (ex.: `Excelência Comercial`, `Operações e Suprimentos`, `Finanças & Planejamento`) |
-| 2 | Cód. Processo | a sigla (`CTR`, `EST`, `CTP`, `FPG`) — prefixo do ID de teste e do código de risco |
+| 2 | Cód. Processo | a sigla (`CTR`, `EST`, `CTP`, `FPG`), prefixo do ID de teste e do código de risco |
 | 3 | Processo | Compras, Contas a Pagar, Contas a Receber, Estoque, Tesouraria, Aspectos Gerais, Pessoal |
 | 4 | Subprocesso | etapa do ciclo (ex.: Identificação da necessidade, Cotação, Pagamento) |
 | 5 | **Bloco** | o agrupamento que antes era faixa mesclada (`3. Balança e Pesagem`). **Coluna, nunca merge** |
@@ -35,13 +35,13 @@ referência e são o que torna a matriz operável e rastreável.
 | 23 | Crítica ACTA | a leitura de auditor sobre o controle |
 | 24 | Responsável | o auditor designado |
 | 25 | Status do teste | `Pendente` · `Em andamento` · `Concluído`. Sem estado de revisão |
-| 26 | Doc. Recebida? | `Sim` · `Não` · `Pendente` · `Não aplicável` — operacionaliza a razão da não testabilidade |
+| 26 | Doc. Recebida? | `Sim` · `Não` · `Pendente` · `Não aplicável`. Operacionaliza a razão da não testabilidade |
 
 **Não** crie coluna `Key control` separada. No RACM corporativo de referência essa coluna estava
 oculta e valia `Sim` em 100% das linhas: era o critério do filtro que gerou o arquivo, não
 informação. `Key control` é atributo do Tipo de Controle (coluna 11).
 
-**Nada de célula mesclada** — a matriz é retangular, sempre. Regra completa e verificação em
+**Nada de célula mesclada**: a matriz é retangular, sempre. Regra completa e verificação em
 `papel-de-trabalho`.
 
 ## 2. Abrangência e a régua de amostragem
@@ -82,7 +82,7 @@ Nesta ordem: `Cód.` · `Bloco / Subprocesso` · `Risco (categoria)` · `Evento 
 `Fator de risco` · `Impacto` · `Vulnerabilidade` · `Origem` · `Controles associados` · `Qtd.`
 
 `Controles associados` é o índice reverso e a coluna mais útil do registro: vazia significa risco sem
-cobertura — ou o risco não é real, ou falta controle. Gere-a **por código**, a partir da coluna
+cobertura: ou o risco não é real, ou falta controle. Gere-a **por código**, a partir da coluna
 `Riscos (Cód.)` da matriz, nunca à mão.
 
 `Origem` distingue as duas fontes do risco: os do **ciclo do processo**, mapeados no planejamento, e
@@ -99,7 +99,7 @@ os **identificados na execução**, recolhidos de dentro dos achados.
 
 **Armadilha real, vista num RACM corporativo de referência:** um risco tinha como evento *"Autuações
 fiscais decorrentes de pagamentos sem suporte fiscal adequado"* e como fator *"Multas ou sanções
-fiscais pelo não recolhimento de tributos"* — o fator estava preenchido com o **impacto**. O fator
+fiscais pelo não recolhimento de tributos"*. O fator estava preenchido com o **impacto**. O fator
 verdadeiro era "ausência de conferência do suporte fiscal antes do pagamento". Fator preenchido com
 impacto quebra a associação do controle preventivo: não sobra condição para o controle atacar.
 
@@ -119,6 +119,6 @@ pertencem à mesma atividade, a atividade ocupa as linhas dos seus riscos. Se n�
 divida por origem (ciclo × execução) em vez de reduzir a fonte até ficar ilegível.
 
 **No slide** (PPTX), mesclar verticalmente a célula da Atividade é aceitável: é figura, não planilha.
-**No Excel, jamais** — repita o valor da atividade em cada linha. Se o mesmo dado alimenta o slide e a
+**No Excel, jamais**: repita o valor da atividade em cada linha. Se o mesmo dado alimenta o slide e a
 planilha, mantenha a planilha retangular e mescle só na hora de desenhar o slide. Layout, gráficos e
 mecânica de slide em `relatorio-de-auditoria`.

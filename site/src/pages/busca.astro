@@ -10,9 +10,40 @@ import Pagina from '../layouts/Pagina.astro';
 >
   <div id="busca"></div>
 
+  <p class="sugestoes">
+    Comece por:
+    <button type="button" data-busca="checkpoint">checkpoint</button>
+    <button type="button" data-busca="amostragem">amostragem</button>
+    <button type="button" data-busca="valuation">valuation</button>
+    <button type="button" data-busca="matriz de riscos">matriz de riscos</button>
+    <button type="button" data-busca="relatório">relatório</button>
+  </p>
+
+  <div class="aviso" style="margin-top:2rem">
+    <p>
+      A busca cobre o texto das páginas deste portal. Se você está procurando o que instalar para um
+      trabalho específico, <a href="/projetos">a lista por tipo de projeto</a> costuma responder mais
+      rápido do que uma palavra solta.
+    </p>
+  </div>
+
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
   <script is:inline src="/pagefind/pagefind-ui.js"></script>
   <script is:inline>
+    // Os atalhos preenchem a caixa do Pagefind e disparam o evento que ele escuta.
+    // Sem o input event a UI dele não reage, porque ela não observa o valor do campo.
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.sugestoes button').forEach((b) => {
+        b.addEventListener('click', () => {
+          const campo = document.querySelector('#busca input');
+          if (!campo) return;
+          campo.value = b.dataset.busca;
+          campo.dispatchEvent(new Event('input', { bubbles: true }));
+          campo.focus();
+        });
+      });
+    });
+
     window.addEventListener('DOMContentLoaded', () => {
       new PagefindUI({
         element: '#busca',

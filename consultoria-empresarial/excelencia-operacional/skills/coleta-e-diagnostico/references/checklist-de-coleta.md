@@ -1,8 +1,8 @@
-# Checklist de coleta — oito blocos
+# Checklist de coleta: oito blocos
 
 Estrutura de referência para montar a planilha enviada ao cliente. Um mandato típico fecha em torno
-de **54 itens**. Adapte ao ciclo (PTP, OTC, RTR, HTR) trocando o vocabulário do objeto — "fornecedor"
-vira "cliente" no OTC, "colaborador" no HTR —, mantendo os blocos e a ordem de prioridade.
+de **54 itens**. Adapte ao ciclo (PTP, OTC, RTR, HTR) trocando o vocabulário do objeto ("fornecedor"
+vira "cliente" no OTC, "colaborador" no HTR), mantendo os blocos e a ordem de prioridade.
 
 Colunas da planilha, na ordem:
 
@@ -13,7 +13,7 @@ subprocesso definidos em `taxonomia-de-processos`.
 
 ---
 
-## B1 — Contexto institucional · prioridade 1ª
+## B1: Contexto institucional · prioridade 1ª
 
 | Informação | Formato esperado | Fonte |
 |---|---|---|
@@ -29,7 +29,7 @@ subprocesso definidos em `taxonomia-de-processos`.
 Versão e módulos não são detalhe técnico: eles decidem se uma oportunidade é parametrização (semanas)
 ou projeto de sistema (trimestres).
 
-## B2 — Organograma e equipe · prioridade 1ª
+## B2: Organograma e equipe · prioridade 1ª
 
 | Informação | Formato esperado | Fonte |
 |---|---|---|
@@ -40,10 +40,10 @@ ou projeto de sistema (trimestres).
 | Comitês existentes: composição, periodicidade, alçada | Tabela | Diretoria |
 | Perfis de acesso no ERP por cargo do ciclo | Tabela ou print | TI |
 
-Acúmulo de papéis descoberto aqui vira regra de negócio e vira oportunidade — ver
+Acúmulo de papéis descoberto aqui vira regra de negócio e vira oportunidade. Ver
 `oportunidades-e-quick-wins`, pilar `O&P`.
 
-## B3 — Alçadas de aprovação · prioridade 2ª · **CRÍTICO**
+## B3: Alçadas de aprovação · prioridade 2ª · **CRÍTICO**
 
 | Informação | Formato esperado | Fonte |
 |---|---|---|
@@ -55,9 +55,9 @@ Acúmulo de papéis descoberto aqui vira regra de negócio e vira oportunidade �
 | Alçada de exceção: quem pode furar a regra e como se registra | Sim/Não + descrição | Controller |
 
 **Sem B3 o manual não tem valor prático.** Não avance para o desenho do subprocesso de aprovação com
-este bloco aberto — escale.
+este bloco aberto, escale.
 
-## B4 — Tipos e categorias · prioridade 3ª
+## B4: Tipos e categorias · prioridade 3ª
 
 | Informação | Formato esperado | Fonte |
 |---|---|---|
@@ -68,7 +68,7 @@ este bloco aberto — escale.
 | Fundo fixo / caixa pequeno: existe, limite, prestação de contas | Sim/Não + descrição | Controller |
 | Itens recorrentes (contratos continuados, assinaturas) | Lista | Comprador |
 
-## B5 — Políticas e regras · prioridade 3ª
+## B5: Políticas e regras · prioridade 3ª
 
 | Informação | Formato esperado | Fonte |
 |---|---|---|
@@ -84,7 +84,7 @@ este bloco aberto — escale.
 Lead time alvo declarado aqui é a matéria-prima da coluna SUGESTÕES de `sla-e-indicadores`. Quando não
 existe, o SLA sugerido nasce do que a entrevista AS IS mediu, e isso se declara.
 
-## B6 — Base de cadastro · prioridade 4ª
+## B6: Base de cadastro · prioridade 4ª
 
 | Informação | Formato esperado | Fonte |
 |---|---|---|
@@ -98,7 +98,7 @@ existe, o SLA sugerido nasce do que a entrevista AS IS mediu, e isso se declara.
 O pedido é da **estrutura** e dos **critérios**. Dado bancário e fiscal de terceiro não é necessário
 para mapear processo, e recebê-lo cria passivo de LGPD sem contrapartida.
 
-## B7 — Processo atual AS IS · **CRÍTICO**
+## B7: Processo atual AS IS · **CRÍTICO**
 
 Coletado por entrevista, não por formulário. Ver §3 da skill.
 
@@ -110,10 +110,10 @@ Coletado por entrevista, não por formulário. Ver §3 da skill.
 | Contornos do processo formal e o motivo de cada um | Notas | Executor da ponta | na mesma |
 | Ciclo financeiro: prazo médio **real** por etapa | Entrevista + extração | Controller | 60 min |
 | Conferência automática entre pedido, recebimento e documento fiscal: existe? é automática? | Sim/Não + descrição | Controller / TI | na mesma |
-| Formalização de contrato: quando ocorre na prática | Descrição | Jurídico | — |
-| Volume das exceções relatadas ("às vezes acontece" → número) | Número ou % | Gestor da área | — |
+| Formalização de contrato: quando ocorre na prática | Descrição | Jurídico | - |
+| Volume das exceções relatadas ("às vezes acontece" → número) | Número ou % | Gestor da área | - |
 
-## B8 — KPIs e metas · prioridade 5ª
+## B8: KPIs e metas · prioridade 5ª
 
 | Informação | Formato esperado | Fonte |
 |---|---|---|

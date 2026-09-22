@@ -1,9 +1,9 @@
 ---
 name: information-memorandum
-description: Arquitetar e redigir o information memorandum — planejamento escrito antes do deck, arco narrativo em seis capítulos, títulos-asserção e espelhamento entre histórico e projetado. Acionar ao planejar ou produzir IM, ao definir a estrutura de capítulos, ao revisar slides, ou ao mapear o que falta para fechá-lo.
+description: Arquitetar e redigir o information memorandum (planejamento escrito antes do deck, arco narrativo em seis capítulos, títulos-asserção e espelhamento entre histórico e projetado). Acionar ao planejar ou produzir IM, ao definir a estrutura de capítulos, ao revisar slides, ou ao mapear o que falta para fechá-lo.
 ---
 
-# Information Memorandum — o documento que sustenta o preço
+# Information Memorandum: o documento que sustenta o preço
 
 ## Papel desta skill
 
@@ -15,7 +15,7 @@ o texto dos slides quando pedido. Não gera nem edita o `.pptx` sem que o usuár
 > **Planejamento escrito antes de abrir o PowerPoint.**
 
 Um IM construído slide a slide dentro do PowerPoint vira uma coleção de gráficos com divisores. Um IM
-planejado em documento — capítulo por capítulo, com o papel narrativo de cada um declarado — vira
+planejado em documento, capítulo por capítulo, com o papel narrativo de cada um declarado, vira
 argumento. A diferença aparece na décima página, quando o leitor entende o que está sendo provado.
 
 O planejamento é um `.docx` ou `.md` em `~~pasta de trabalho/3- Apresentações/`, versionado.
@@ -36,8 +36,8 @@ VI.  Financial Projections                       (A Promessa e o Valuation)
 ```
 
 A lógica da ordem: **primeiro sedução, depois mecanismo, depois legitimação externa, depois
-opcionalidade, depois lastro, depois preço.** Inverter isso — começar pelo histórico financeiro, como
-é tentador — mata o documento na primeira página, porque pede ao leitor que se interesse por números
+opcionalidade, depois lastro, depois preço.** Inverter isso, começando pelo histórico financeiro, como
+é tentador, mata o documento na primeira página, porque pede ao leitor que se interesse por números
 de uma empresa que ele ainda não sabe por que deveria querer.
 
 ### O que cada capítulo precisa provar
@@ -57,7 +57,7 @@ Três instruções de calibragem que vêm da prática e evitam os erros mais cus
   ativo mais forte do documento. Apresente-a como vetor de demanda.
 - **Licença é deal breaker.** Trate as autorizações como o que são: a barreira de entrada que o
   comprador não consegue replicar comprando equipamento.
-- **Mercado adjacente é "cereja do bolo", nunca a base do caso** — a menos que já fature de forma
+- **Mercado adjacente é "cereja do bolo", nunca a base do caso**, a menos que já fature de forma
   relevante. Construir o IM sobre uma receita que ainda não existe é o que faz o comprador
   desqualificar o documento inteiro.
 
@@ -66,9 +66,9 @@ Três instruções de calibragem que vêm da prática e evitam os erros mais cus
 Padrão de referência, com a numeração de slide como ordem de grandeza:
 
 ```
- 1     Capa — codinome (nome real) · "Information Memorandum | M&A Sell Side Advisor" · mês/ano
- 2     Introdução — aviso legal + contato do sócio responsável
- 3     Sumário — índice com páginas, espelhando exatamente os capítulos
+ 1     Capa: codinome (nome real) · "Information Memorandum | M&A Sell Side Advisor" · mês/ano
+ 2     Introdução: aviso legal + contato do sócio responsável
+ 3     Sumário: índice com páginas, espelhando exatamente os capítulos
  4     ── divisor: Sumário Executivo ──
  5     A tese, em um título-asserção. 3 colunas (Operação / Desempenho / Avenidas), cada uma com
        big number + bullets
@@ -88,7 +88,7 @@ Padrão de referência, com a numeração de slide como ordem de grandeza:
 32     Fechamento
 ```
 
-Cada capítulo abre com **divisor dedicado** — título grande centralizado, nada mais. E o sumário do
+Cada capítulo abre com **divisor dedicado**: título grande centralizado, nada mais. E o sumário do
 slide 3 espelha exatamente essa estrutura: se divergirem, o leitor perde a confiança na navegação.
 
 ### O espelhamento histórico ↔ projetado
@@ -110,14 +110,14 @@ números**. Ver plugin de valuation, skills `diagnostico-de-roic` e `reorganizac
 
 ## Títulos-asserção
 
-Todo título de slide de conteúdo carrega a conclusão. Não é rótulo do que está no slide — é a
+Todo título de slide de conteúdo carrega a conclusão. Não é rótulo do que está no slide, e sim a
 afirmação que o slide prova.
 
 | Rótulo (evitar) | Asserção (usar) |
 |---|---|
 | "Reciclagem no G20" | "O país apresenta o maior gap estrutural de reciclagem do G20, configurando a maior oportunidade de consolidação do setor" |
 | "Frota" | "Frota própria de 20 veículos amplamente depreciada e CapEx recente em máquinas: imobilizado líquido de R$ 2,8 MM em 2025" |
-| "Dados Gerais" | — sem asserção, o slide não sabe o que está provando; reescreva ou corte |
+| "Dados Gerais" | sem asserção, o slide não sabe o que está provando; reescreva ou corte |
 
 Regra prática: se o título serviria para o mesmo slide de outra empresa, ele é rótulo. Reescreva.
 
@@ -128,15 +128,15 @@ na cabeça. É esse o teste.
 
 Convenção que mantém o deck legível:
 
-- **Gráfico de série temporal** — reservado aos **KPIs financeiros centrais**: receita, EBITDA, ROIC,
+- **Gráfico de série temporal**: reservado aos **KPIs financeiros centrais**: receita, EBITDA, ROIC,
   capital investido. Nada mais.
-- **Tabela, card e diagrama de fluxo** — dados estruturais e qualitativos: organograma, mix de
+- **Tabela, card e diagrama de fluxo**: dados estruturais e qualitativos: organograma, mix de
   receita, vantagens competitivas, benchmarking, frota.
 
 Gráfico de série temporal para tudo transforma o deck em ruído e faz os quatro KPIs que importam
 desaparecerem no meio.
 
-Gráficos **nativos** do PowerPoint, não imagem colada — permitem correção sem refazer, e o comprador
+Gráficos **nativos** do PowerPoint, não imagem colada, o que permite correção sem refazer, e o comprador
 que pede o arquivo consegue inspecionar.
 
 Identidade visual (paleta, tipografia, grid, layouts mestre) vive em `acta-way`. Carregue-a.
@@ -145,7 +145,7 @@ Identidade visual (paleta, tipografia, grid, layouts mestre) vive em `acta-way`.
 
 O método que faz o IM avançar sem inventar dado:
 
-1. Monte o **esqueleto completo** — todos os slides, todos os títulos, todos os divisores.
+1. Monte o **esqueleto completo**: todos os slides, todos os títulos, todos os divisores.
 2. Em cada slide incompleto, uma **caixa de aviso visível** que lista exatamente o que falta **e o
    arquivo do repositório que serve de base**.
 3. Preencha por rodadas, removendo a caixa quando o slide fecha.
@@ -159,12 +159,12 @@ Métrica derivada é declarada com a conta. Se um deck foi gerado por script, re
 
 ## Mapa de disponibilidade
 
-Antes de redigir, produza o mapa — e ele é **estritamente** um inventário:
+Antes de redigir, produza o mapa, e ele é **estritamente** um inventário:
 
 | Seção do IM | Já no teaser | Já no data room | Pendente |
 |---|---|---|---|
 
-Mais uma seção final: **lacunas que não foram pedidas nem estão disponíveis** — as que ninguém sabia
+Mais uma seção final: **lacunas que não foram pedidas nem estão disponíveis**, as que ninguém sabia
 que faltavam.
 
 **O mapa não contém opinião, conclusão ou análise.** Isso é produzido separadamente, quando pedido.
@@ -173,7 +173,7 @@ Misturar as duas coisas faz o mapa parecer análise rasa e a análise parecer in
 
 ## Validação com a gestão
 
-O IM v1 vai à gestão do alvo e volta com correções. Registre em ata — que não é ata de decisão
+O IM v1 vai à gestão do alvo e volta com correções. Registre em ata, que não é ata de decisão
 societária, é **log de instruções de edição do material**.
 
 Formato: `Anotações <alvo>` + rubricas com dois-pontos (`Observações gerais:`, `Atualização da
@@ -188,7 +188,7 @@ Redação das entradas:
 - Ano como prefixo em marco de timeline: "2024: ...".
 - Sigla expandida na primeira menção.
 - Contraste hoje vs. planejado explicitado com "Porém" / "Entretanto".
-- **Fragilidade é registrada como fragilidade** — "não é mais exclusivo", "ainda não é
+- **Fragilidade é registrada como fragilidade**: "não é mais exclusivo", "ainda não é
   contratualizado, possui apenas memorando", "difícil de sensibilizar nas projeções". É esse registro
   que impede que uma expectativa do vendedor entre no IM como fato.
 - Inflexão histórica sempre com a causa nomeada: "o que dificultou o crescimento em `<ano>` foi...".
@@ -199,7 +199,7 @@ Cada entrada da ata deve virar uma edição rastreável no IM v2, ou uma justifi
 
 Teaser, IM e valuation têm de contar a mesma história com os mesmos números. É item explícito do gate
 de go-to-market (ver skill `go-to-market`), e a incoerência mais comum e mais custosa é a amostra de
-transações precedentes divergir entre o estudo, o IM e o deck de valuation — mesma transação com
+transações precedentes divergir entre o estudo, o IM e o deck de valuation, com a mesma transação com
 múltiplo diferente em dois documentos que o comprador tem nas mãos.
 
 Checagem antes de emitir:
@@ -224,7 +224,7 @@ tipo de erro que o comprador nota e que barateia tudo o mais.
 
 ## Próximo passo
 
-`go-to-market` — o gate que decide se o material está pronto para ir ao mercado.
+`go-to-market`: o gate que decide se o material está pronto para ir ao mercado.
 
 # Característica particular
 

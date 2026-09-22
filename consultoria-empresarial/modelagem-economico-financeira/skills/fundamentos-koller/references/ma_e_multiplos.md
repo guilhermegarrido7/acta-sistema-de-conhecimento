@@ -1,4 +1,4 @@
-# M&A e Múltiplos — Aplicações do Framework Koller
+# M&A e múltiplos: aplicações do framework Koller
 
 ## 1. Múltiplos e sua Fundação Koller
 
@@ -161,22 +161,22 @@ EBITDA contábil (DRE)
 (+) Pro-forma de aquisições recentes (anualize resultado de empresas adquiridas no período)
 (+) Run-rate de iniciativas implementadas mas não totalmente capturadas no histórico
 (+/−) Ajustes de remuneração de sócios (pró-labore acima/abaixo do mercado)
-(+/−) Ajustes de transações com partes relacionadas (aluguéis, serviços — a mercado?)
+(+/−) Ajustes de transações com partes relacionadas (aluguéis, serviços: a mercado?)
 = EBITDA Normalizado M&A
 ```
 
-**Atenção:** cada ajuste deve ser documentado e defensável em due diligence. Adquirentes compram EBITDA futuro, não histórico — o EBITDA normalizado deve refletir a capacidade recorrente.
+**Atenção:** cada ajuste deve ser documentado e defensável em due diligence. Adquirentes compram EBITDA futuro, não histórico. O EBITDA normalizado deve refletir a capacidade recorrente.
 
 ---
 
-## 8. Due Diligence Financeira — Checklist de Qualidade de Resultados
+## 8. Due diligence financeira: checklist de qualidade de resultados
 
 - [ ] Estoques: divergência entre saldo sistêmico e físico? (baixas não realizadas inflam margem bruta)
 - [ ] Receita: política de reconhecimento consistente com IFRS 15/CPC 47? Adiantamentos de clientes reconhecidos prematuramente?
 - [ ] Provisões: provisões operacionais adequadas (garantias, devoluções, contingências)?
 - [ ] Partes relacionadas: transações a preços de mercado?
 - [ ] CAPEX vs. OPEX: despesas operacionais capitalizadas indevidamente?
-- [ ] Capital de giro: tendência de DSO (prazo de recebimento), DIO (giro de estoque), DPO (prazo de pagamento) — pressão de liquidez?
+- [ ] Capital de giro: tendência de DSO (prazo de recebimento), DIO (giro de estoque), DPO (prazo de pagamento): pressão de liquidez?
 - [ ] Caixa: caixa restrito ou comprometido? Caixa excedente de fato disponível?
 - [ ] Dívida: passivos contingentes relevantes não provisionados?
 - [ ] Leases: todos os contratos de arrendamento mapeados e capitalizados (CPC 06 R2)?

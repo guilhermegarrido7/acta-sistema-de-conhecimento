@@ -21,7 +21,7 @@ construir conclusão sobre referência que ainda pode mudar.
 Consequência prática: **leia o contrato inteiro antes de pedir base**. A lista do que pedir sai da
 leitura, não de um checklist genérico.
 
-## 1. REC.01 — Avaliação contratual
+## 1. REC.01: Avaliação contratual
 
 ### O que se testa
 
@@ -29,7 +29,7 @@ leitura, não de um checklist genérico.
 |---|---|
 | Existência e vigência | Instrumento assinado pelas duas partes, com prazo vigente no período auditado, e aditivos identificados em sequência. |
 | Anterioridade | **Assinatura antes do início da prestação.** Serviço prestado antes da assinatura é prestação sem direito formalizado, ainda que faturado e recebido. |
-| Alçada | Evidência de aprovação pela alçada competente — não a assinatura, que é o ato final, mas a aprovação que a autoriza. |
+| Alçada | Evidência de aprovação pela alçada competente, não a assinatura, que é o ato final, mas a aprovação que a autoriza. |
 | Chancela jurídica | Registro de revisão pela área jurídica, ou uso de minuta padrão já chancelada. |
 | Cláusulas mandatórias | Objeto, preço e forma de reajuste, prazo, glosa e penalidade, rescisão, e cláusula anticorrupção. |
 
@@ -42,49 +42,49 @@ Se o instrumento já estava assinado quando o trabalho começou e o escopo não 
 contratação, a avaliação é **de cláusulas e chancelas vigentes**, não de aderência ao edital.
 Declare isso: um leitor do papel de trabalho presume o contrário.
 
-Nesse caso, o edital e o projeto básico assumem o papel que a proposta comercial teria — são eles
+Nesse caso, o edital e o projeto básico assumem o papel que a proposta comercial teria: são eles
 que trazem a planilha de preços, os níveis de serviço e os critérios de glosa. Peça os dois.
 
 ### Planos A/B/C
 
-- **Plano A** — instrumento assinado + evidência de aprovação em alçada + chancela jurídica;
+- **Plano A**: instrumento assinado + evidência de aprovação em alçada + chancela jurídica;
   checklist de cláusulas conferido linha a linha.
-- **Plano B** — sem a trilha de aprovação: ateste as cláusulas presentes no instrumento e registre a
+- **Plano B**: sem a trilha de aprovação: ateste as cláusulas presentes no instrumento e registre a
   ausência da trilha como **deficiência de desenho atual**, não como ressalva de escopo.
-- **Plano C** — só cópia não assinada: indagação formal ao mandato e limitação declarada.
-- **Limitação** — *"Avaliamos as cláusulas do contrato vigente; não nos foi disponibilizada a trilha
+- **Plano C**: só cópia não assinada: indagação formal ao mandato e limitação declarada.
+- **Limitação**: *"Avaliamos as cláusulas do contrato vigente; não nos foi disponibilizada a trilha
   de aprovação por alçada nem a evidência de chancela jurídica."*
 
-## 2. REC.02 — Cadastro do contrato no sistema e aditivos
+## 2. REC.02: Cadastro do contrato no sistema e aditivos
 
 O contrato só produz controle se o sistema o conhece. Três camadas, em ordem de força:
 
-1. **Existência do cadastro** — o contrato consta, vinculado ao cliente correto, com vigência e
+1. **Existência do cadastro**: o contrato consta, vinculado ao cliente correto, com vigência e
    objeto coerentes com o instrumento.
-2. **Parametrização de valor** — o valor cadastrado é o valor contratual, e não um valor simbólico.
+2. **Parametrização de valor**: o valor cadastrado é o valor contratual, e não um valor simbólico.
    Cadastro por valor simbólico existe, aparece na tela e **não parametriza nada**: não limita
    faturamento, não sinaliza estouro, não sustenta consumo. É achado próprio.
-3. **Bloqueio operante** — o sistema **impede** alocar recurso, emitir medição ou faturar sem
+3. **Bloqueio operante**: o sistema **impede** alocar recurso, emitir medição ou faturar sem
    contrato vigente cadastrado. Peça a **demonstração em tela** da tentativa bloqueada. Bloqueio
    declarado em política não é bloqueio operante, e a diferença entre os dois é o achado.
 
 **Aditivos.** Todo aditivo de prazo, valor, escopo ou preço tem de estar refletido no cadastro, com a
 mesma trilha de alçada do contrato original. Aditivo assinado e não cadastrado produz faturamento
-contra parâmetro vencido — sintoma clássico: divergência de PU que começa exatamente na competência
+contra parâmetro vencido. Sintoma clássico: divergência de PU que começa exatamente na competência
 seguinte à do aditivo.
 
 ### Planos A/B/C
 
-- **Plano A** — tela do sistema com o contrato vinculado e pelo valor correto, mais o teste do
+- **Plano A**: tela do sistema com o contrato vinculado e pelo valor correto, mais o teste do
   bloqueio demonstrado em tela.
-- **Plano B** — cadastro existe mas por valor simbólico: ateste a existência e aponte que o valor não
+- **Plano B**: cadastro existe mas por valor simbólico: ateste a existência e aponte que o valor não
   parametriza a alocação nem o faturamento.
-- **Plano C** — sem acesso ao sistema: relatório de contratos extraído pelo cliente, com declaração
+- **Plano C**: sem acesso ao sistema: relatório de contratos extraído pelo cliente, com declaração
   de quem extraiu, quando e de qual módulo. A conclusão passa a ser de existência, não de desenho.
-- **Limitação** — *"O contrato consta cadastrado; o valor registrado é simbólico e não parametriza a
+- **Limitação**: *"O contrato consta cadastrado; o valor registrado é simbólico e não parametriza a
   alocação. O bloqueio de faturamento sem contrato vigente não foi demonstrado em tela."*
 
-## 3. REC.03 — Preço unitário, tabela e reajuste
+## 3. REC.03: Preço unitário, tabela e reajuste
 
 ### Preço
 
@@ -101,7 +101,7 @@ Três padrões de divergência, com leituras diferentes:
 | Um item só, valor muito diferente | Item errado da tabela, ou item fora de contrato sendo faturado. |
 
 **Nem todo mandato tem tabela de preços comercial.** Quando há cliente único e o preço nasce da
-planilha contratual ou do edital, não existe política de precificação a testar — o teste é de
+planilha contratual ou do edital, não existe política de precificação a testar: o teste é de
 aderência à planilha contratual. Diga isso no papel de trabalho, senão o bloco parece incompleto.
 
 ### Reajuste
@@ -119,14 +119,14 @@ O reajuste é o teste mais reperformável do elo e o mais frequentemente errado.
 
 ### Planos A/B/C
 
-- **Plano A** — proposta ou tabela vigente + memória de cálculo do reajuste pelo índice contratual;
+- **Plano A**: proposta ou tabela vigente + memória de cálculo do reajuste pelo índice contratual;
   confronto PU faturado × PU vigente em 100% dos itens, competência a competência.
-- **Plano B** — sem tabela comercial: use a planilha de preços do contrato ou do edital como
+- **Plano B**: sem tabela comercial: use a planilha de preços do contrato ou do edital como
   referência, e a cláusula de reajuste como critério, reperformando o índice você mesmo.
-- **Plano C** — proposta/planilha não disponibilizada: o confronto de PU trava. Indague formalmente,
-  registre a data do pedido e declare. Não estime o preço a partir da própria nota — isso é
+- **Plano C**: proposta/planilha não disponibilizada: o confronto de PU trava. Indague formalmente,
+  registre a data do pedido e declare. Não estime o preço a partir da própria nota; isso é
   reconstruir o critério a partir do que se queria testar.
-- **Limitação** — *"O confronto de preço unitário foi feito contra a planilha contratual; não há
+- **Limitação**: *"O confronto de preço unitário foi feito contra a planilha contratual; não há
   tabela de preços comercial aplicável a cliente único. A memória de reajuste não foi
   disponibilizada; o índice foi reperformado pela auditoria a partir da série pública."*
 
@@ -140,7 +140,7 @@ contrato para contrato, e o auditor lê o contrato do mandato antes de calcular 
   indicadores de qualidade, de execução e de atendimento ao usuário. A estrutura é
   `índice = Σ (peso_i × indicador_i)`, e um fator de modulação aplica esse índice ao valor medido,
   normalmente dentro de uma faixa contratada. **Os indicadores, os pesos e a faixa são cláusula do
-  contrato** — leia-os antes de reperformar, e reperforme a partir dos indicadores-fonte, nunca a
+  contrato**: leia-os antes de reperformar, e reperforme a partir dos indicadores-fonte, nunca a
   partir do índice já calculado pelo cliente.
 - **Take-or-pay.** Cobra-se um percentual contratual do volume contratado e não retirado pelo
   cliente. **O percentual é a própria base da conta** e varia por contrato: confirme-o no instrumento
@@ -166,5 +166,5 @@ contrato para contrato, e o auditor lê o contrato do mandato antes de calcular 
 
 ## Próximo passo
 
-`medicao-e-aceite`. O preço unitário fixado aqui é o critério do confronto lá — se o critério não
+`medicao-e-aceite`. O preço unitário fixado aqui é o critério do confronto lá. Se o critério não
 fechou, o teste de medição não se sustenta e o programa volta a `programa-de-testes`.

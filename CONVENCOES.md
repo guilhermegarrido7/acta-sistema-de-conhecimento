@@ -16,7 +16,7 @@ Onde a skill precisa se referir a um lugar, usa um placeholder `~~`:
 | `~~pasta de trabalho` | Raiz ACTA do engajamento, onde o trabalho é produzido. |
 | `~~controle` | Pasta de controle do engajamento: `HISTORICO.md`, `APRENDIZADOS.md`. |
 | `~~entregaveis` | Saída de decks, planilhas e relatórios finais. |
-| `~~interpretador python` | Python local, resolvido em execução — nunca escrito literalmente. |
+| `~~interpretador python` | Python local, resolvido em execução, nunca escrito literalmente. |
 
 A convenção é a mesma que a Anthropic usa em `CONNECTORS.md` para conectores: descrever a
 **categoria**, não o produto.
@@ -39,7 +39,7 @@ qual recorte, qual data de referência.
 | Camada | Onde | O que |
 |---|---|---|
 | Fundação | `fundacao/acta-way` | Método transversal a **toda** a firma: identidade visual, convenções de entregável, ambiente técnico, anonimização e LGPD, checkpoint, ritual de aprendizado. |
-| Método de prática | `<pratica>/_metodo` | Como se conduz um trabalho **daquela prática** — auditoria ou consultoria. |
+| Método de prática | `<pratica>/_metodo` | Como se conduz um trabalho **daquela prática**: auditoria ou consultoria. |
 | Projeto | `<pratica>/<projeto>` | Só o que é **particular daquele projeto**: as skills de etapa do ciclo de vida. |
 
 **Não repita camada de baixo na de cima.** Se a regra vale para todo projeto, ela mora em `acta-way`
@@ -67,19 +67,19 @@ Duas regras que não se negociam:
 O protocolo completo está em `acta-way`, skill `checkpoint`. Skill de projeto **não redefine** o
 mecanismo: aponta para ele e acrescenta só o que é específico daquele tipo de trabalho.
 
-**Isso não é imposto pelo marketplace — não existe campo de dependência em `plugin.json`.** Instalar
+**Isso não é imposto pelo marketplace: não existe campo de dependência em `plugin.json`.** Instalar
 `acta-pesquisa-salarial` não instala `acta-way` junto; o texto "carregue `acta-way`, skill
 `checkpoint`" dentro de uma skill só funciona se o plugin `acta-way` também estiver instalado. Sem
 ele, a instrução aponta para uma skill que não existe na sessão, e falha calada.
 
 **Regra de todo plugin de projeto:** o `README.md` precisa listar `acta-way` como pré-requisito de
-instalação, em destaque, antes do plugin em si — não é opcional, é o que faz o checkpoint existir de
+instalação, em destaque, antes do plugin em si. Não é opcional: é o que faz o checkpoint existir de
 fato.
 
 ## 3c. Custo always-on: instale só o que está em uso
 
 Todo plugin **habilitado** soma tokens fixos em **toda sessão nova**, mesmo em conversas sem relação
-nenhuma com ele — é o preço de manter a `description` de cada skill disponível para o roteamento
+nenhuma com ele. É o preço de manter a `description` de cada skill disponível para o roteamento
 antes mesmo de o Claude saber do que você vai falar. Não é cobrado por skill usada, é cobrado por
 plugin ligado.
 
@@ -99,7 +99,7 @@ Regra prática: habilite o plugin do projeto em que você está trabalhando; des
 
 ```
 <pratica>/<projeto>/
-├── .claude-plugin/plugin.json     name, version, description, author — e nada mais
+├── .claude-plugin/plugin.json     name, version, description, author, e nada mais
 ├── README.md                      o que faz, tabela de skills, fluxo típico
 ├── skills/<etapa>/SKILL.md        uma pasta por skill
 │   └── references/                material de apoio daquela skill
@@ -120,7 +120,7 @@ user-invocable: false   # só para skill de conhecimento de fundo, que não é u
 ---
 ```
 
-- `description` entre **220 e 380 caracteres**. Ela carrega em **toda sessão** — é o que custa
+- `description` entre **220 e 380 caracteres**. Ela carrega em **toda sessão**: é o que custa
   contexto permanente e é o que faz o roteamento. Longa demais desperdiça; vaga demais não dispara.
 - **Nome de cliente não entra na `description`.** Cliente é caso de benchmark, vive em `casos/`.
 - Nome de pessoa não entra em lugar nenhum do método: use o papel (*o auditor responsável*,
@@ -130,8 +130,8 @@ user-invocable: false   # só para skill de conhecimento de fundo, que não é u
 
 Cliente tem valor como referência de engajamento, não como gatilho de skill:
 
-- `casos/<cliente>.md` — o que foi feito, como, o que deu errado, quanto custou.
-- `benchmarks/<cliente>.md` — o que dali se generaliza e vale no próximo cliente.
+- `casos/<cliente>.md`: o que foi feito, como, o que deu errado, quanto custou.
+- `benchmarks/<cliente>.md`: o que dali se generaliza e vale no próximo cliente.
 
 Fora da `description`, o caso não custa contexto permanente e fica onde é consultável quando se
 quer comparar com um engajamento anterior.

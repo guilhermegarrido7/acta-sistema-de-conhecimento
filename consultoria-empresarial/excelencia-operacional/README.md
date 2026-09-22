@@ -2,7 +2,7 @@
 
 Modelagem e otimização de processos ponta a ponta, incluindo os ciclos PTP, OTC, RTR e HTR: mapeamento, gargalos, redesenho e indicadores.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`) — é onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
 >
 > **Status: completo.** As 7 skills do ciclo de vida de um mandato de mapeamento estão escritas.
 > Ver [docs/ROADMAP.md](../../docs/ROADMAP.md).
@@ -16,7 +16,7 @@ desenho do To-Be com regras de negócio codificadas, oportunidades de melhoria p
 e a consolidação no Manual de Processos e Regras de Negócio aprovado.
 
 A inversão que define o método: **a consultoria chega ao workshop com o To-Be já desenhado**. O
-cliente não desenha — ele critica e homologa. O esforço do mandato mora na véspera, e é isso que
+cliente não desenha, ele critica e homologa. O esforço do mandato mora na véspera, e é isso que
 organiza a ordem das skills abaixo.
 
 ## Skills
@@ -24,10 +24,10 @@ organiza a ordem das skills abaixo.
 | Skill | Etapa | Descrição |
 |---|---|---|
 | `taxonomia-de-processos` | 1 | A régua: os cinco níveis de modelagem, a notação BPMN simplificada, a codificação de subprocessos e regras, e a matriz de processos com o fora de escopo em amarelo. |
-| `coleta-e-diagnostico` | 2 | Checklist de oito blocos com formato esperado e fonte por cargo, e as entrevistas AS IS — o insumo que permite desenhar antes do workshop. |
+| `coleta-e-diagnostico` | 2 | Checklist de oito blocos com formato esperado e fonte por cargo, e as entrevistas AS IS: o insumo que permite desenhar antes do workshop. |
 | `fluxo-e-regras-de-negocio` | 3 | Fluxograma To-Be com raias, marcadores `M`, SLA inline e interfaces, e a tabela de regras codificadas com descrição sugerida × aprovada. |
 | `oportunidades-e-quick-wins` | 3 | Tabela de seis colunas com pilar O&P/P&C, matriz valor × complexidade, e a declaração explícita de ausência quando não há oportunidade. |
-| `sla-e-indicadores` | 3 | Quadro de duas colunas — sugestões × definição workshop — com indicador principal, secundários e governança por cargo. |
+| `sla-e-indicadores` | 3 | Quadro de duas colunas (sugestões × definição workshop) com indicador principal, secundários e governança por cargo. |
 | `workshop-de-mapeamento` | 4 | O dia de homologação: seis elementos por subprocesso, mecânica do A3 em quatro zonas, dois grupos, três facilitadores. |
 | `manual-de-processos` | 5 | O entregável final: capítulo por subprocesso, versionamento `vPósWS` → `v1.0`, aprovação formal e o acordo de sustentação que evita o manual de gaveta. |
 

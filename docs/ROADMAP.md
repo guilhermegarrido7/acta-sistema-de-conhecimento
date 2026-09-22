@@ -1,6 +1,6 @@
 # Roadmap
 
-Status de cada plugin. **Só entra no `marketplace.json` o que tem conteúdo** — assim ninguém
+Status de cada plugin. **Só entra no `marketplace.json` o que tem conteúdo**, assim ninguém
 instala plugin vazio. Promover um plugin = escrever as skills, depois adicionar a entrada no
 marketplace.
 
@@ -11,7 +11,7 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 | Plugin | Status | No marketplace | Observação |
 |---|---|---|---|
-| `acta-way` | Parcial | sim | `checkpoint` (com handoff e detecção de bifurcação), `ambiente-tecnico` e `edicao-em-massa` prontos. Faltam identidade visual, convenções de entregável, anonimização/LGPD e redação ACTA. |
+| `acta-way` | Completo | sim | 7 de 7 skills com conteúdo real: `checkpoint` (com handoff e detecção de bifurcação), `ambiente-tecnico`, `edicao-em-massa`, `identidade-visual` (paleta, tipografia, contraste e a reconciliação com o tema do PowerPoint), `convencoes-de-entregavel`, `anonimizacao-e-lgpd` e `redacao-acta`. |
 
 ## Conceitos
 
@@ -38,7 +38,7 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 | `acta-segregacao-de-funcoes` | Esqueleto | não | Revisão de perfis de acesso e segregação de funções: matriz de SoD, identificação de confl… |
 | `acta-dados-e-analytics` | Esqueleto | não | Projetos de dados e analytics: diagnóstico de maturidade, arquitetura de dados, modelagem,… |
 | `acta-pccr` | Esqueleto | não | Construção de PCCR: descrição e avaliação de cargos, arquitetura de carreira, tabela salar… |
-| `acta-pesquisa-salarial` | Parcial | sim | 4 de 18 skills com conteúdo real (matching, estatística, planilhas, Power BI) + método. 13 etapas do ciclo de vida em esqueleto, cada uma com a fonte a consolidar apontada. |
+| `acta-pesquisa-salarial` | Completo | sim | 18 de 18 skills com conteúdo real: o método da casa, as 13 etapas do ciclo de vida (de escopo e proposta a encerramento e lições aprendidas), matching de cargos, estatística de remuneração, modelagem de planilhas e painel em Power BI. |
 | `acta-avaliacao-de-desempenho` | Esqueleto | não | Desenho de avaliação de desempenho: modelo e ciclo, competências e metas, calibração, feed… |
 | `acta-remuneracao-variavel` | Esqueleto | não | Desenho de remuneração variável: elegibilidade, indicadores e metas, curva de pagamento, s… |
 
@@ -64,9 +64,8 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 ## Ordem sugerida
 
-1. **`acta-way`**, completando as quatro skills que faltam (identidade visual, convenções de
-   entregável, anonimização/LGPD, redação). O `checkpoint` já está pronto e é o que sustenta o
-   trabalho em equipe entre sessões diferentes.
+1. ~~**`acta-way`**~~ concluído. As sete skills da fundação estão escritas, e skill de projeto passa
+   a apontar para elas em vez de redefinir paleta, nomenclatura, anonimização ou padrão de escrita.
 2. **`acta-metodo-auditoria`**, completando as 5 skills de mecânica restantes. Elas destravam os 5 plugins
    de processo auditado de uma vez.
 3. **`acta-pesquisa-salarial`**, que já tem o ciclo de vida mapeado e a fonte de cada etapa
@@ -77,7 +76,7 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 1. Escrever as skills em `skills/<etapa>/SKILL.md`.
 2. Atualizar o `README.md` do plugin com a tabela de skills e o fluxo típico. **Manter o aviso de
-   pré-requisito `acta-way` no topo** — o manifesto de plugin não tem campo de dependência, então
+   pré-requisito `acta-way` no topo**: o manifesto de plugin não tem campo de dependência, então
    é o único lugar que garante que quem instala não perde o checkpoint.
 3. Subir a `version` no `plugin.json`.
 4. Adicionar a entrada em `.claude-plugin/marketplace.json`.

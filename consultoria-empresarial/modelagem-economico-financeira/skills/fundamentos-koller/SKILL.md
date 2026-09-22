@@ -1,18 +1,18 @@
 ---
 name: fundamentos-koller
-description: Fundamentar o valuation no framework Koller/McKinsey — NOPLAT, capital investido, ROIC, lucro econômico, FCF e a key value driver formula. Acionar ao reorganizar demonstrações contábeis, ao calcular ROIC ou lucro econômico, ao montar DCF ou valor terminal, ou ao interpretar múltiplos de enterprise value.
+description: Fundamentar o valuation no framework Koller/McKinsey, com NOPLAT, capital investido, ROIC, lucro econômico, FCF e a key value driver formula. Acionar ao reorganizar demonstrações contábeis, ao calcular ROIC ou lucro econômico, ao montar DCF ou valor terminal, ou ao interpretar múltiplos de enterprise value.
 user-invocable: false
 ---
 
-# Fundamentos Koller — camada de referência
+# Fundamentos Koller: camada de referência
 
 Esta é a **camada de fundamento teórico** do plugin. Ela não é uma etapa do trabalho: é o que as
 outras skills invocam quando precisam do conceito exato.
 
 As skills de etapa (`reorganizacao-contabil`, `diagnostico-de-roic`, `custo-de-capital`,
 `valor-terminal`, `triangulacao-e-faixa`, `revisao-de-modelo`, ...) dizem *o que fazer e em que
-ordem*. Esta diz *por que a conta é essa*. Quando houver conflito aparente, o método da etapa manda —
-ele já traduziu Koller para a realidade de mid-market fechado brasileiro.
+ordem*. Esta diz *por que a conta é essa*. Quando houver conflito aparente, o método da etapa manda: ele
+já traduziu Koller para a realidade de mid-market fechado brasileiro.
 
 Este documento é o ponto de entrada para análises de valuation no framework Koller (McKinsey). Para tópicos avançados, carregue o arquivo de referência apropriado conforme indicado em cada seção.
 
@@ -59,7 +59,7 @@ Demonstrações Contábeis (GAAP/IFRS/CPC)
 
 ---
 
-## 1. NOPLAT — Net Operating Profit Less Adjusted Taxes
+## 1. NOPLAT: Net Operating Profit Less Adjusted Taxes
 
 ### Lógica de construção
 
@@ -262,9 +262,9 @@ Principais adaptações ao framework Koller para empresas mid-market brasileiras
 | Item | Tratamento Koller | Adaptação CPC |
 |---|---|---|
 | Arrendamentos | Capitaliza como dívida | CPC 06 R2 / IFRS 16 obrigatório |
-| Pensões benefício definido | Passivo atuarial = equiv. dívida | CPC 33 — raro em mid-market |
+| Pensões benefício definido | Passivo atuarial = equiv. dívida | CPC 33, raro em mid-market |
 | Impostos diferidos | Equiv. patrimônio (passivo liq.) | Reconhecer via DRE/balanço |
-| Goodwill | Não amortizado (IFRS 3) | CPC 15 — teste de impairment |
+| Goodwill | Não amortizado (IFRS 3) | CPC 15: teste de impairment |
 | NOPLAT base | EBITA | Usar EBIT + juros CPC 06 R2 |
 
 > Para tratamentos detalhados por item contábil CPC, ajustes de normalização de EBITDA para M&A e checklist de due diligence financeira: `references/contexto_brasil_cpc.md`

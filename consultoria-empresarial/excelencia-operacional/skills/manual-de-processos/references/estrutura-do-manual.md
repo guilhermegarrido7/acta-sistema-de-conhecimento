@@ -1,21 +1,21 @@
 # Estrutura do Manual de Processos e Regras de Negócio
 
 Árvore de seções do entregável final de um mandato de mapeamento de ciclo. Ajuste o número de
-capítulos ao número de subprocessos da matriz — **sem** alterar a grade interna do capítulo, que é
+capítulos ao número de subprocessos da matriz, **sem** alterar a grade interna do capítulo, que é
 fixa.
 
 ## Folha de rosto
 
 | Campo | Conteúdo |
 |---|---|
-| Título | Manual de Processos e Regras de Negócio — Ciclo `<PTP / OTC / RTR / HTR>` |
+| Título | Manual de Processos e Regras de Negócio: Ciclo `<PTP / OTC / RTR / HTR>` |
 | Versão | `v1.0` (ou a corrente) |
 | Data de aprovação | Data da última aprovação formal |
-| Próxima revisão | Mês/ano — obrigatório. Sem data, a revisão nunca vence. |
+| Próxima revisão | Mês/ano, obrigatório. Sem data, a revisão nunca vence. |
 | Elaboração | ACTA Advisory |
 | Aprovação | Cargos aprovadores, nunca nomes |
 
-## Parte I — Abertura
+## Parte I: Abertura
 
 | Seção | Conteúdo |
 |---|---|
@@ -25,7 +25,7 @@ fixa.
 | 4. Legenda da notação | Antes do primeiro fluxograma. Nunca em anexo. |
 | 5. Glossário e tabela de prefixos | Termos do ciclo; subprocesso → prefixo, sem colisão. |
 
-## Parte II — Capítulos por subprocesso
+## Parte II: Capítulos por subprocesso
 
 Um capítulo por subprocesso da matriz. Grade fixa, mesma ordem, sempre:
 
@@ -37,12 +37,12 @@ Um capítulo por subprocesso da matriz. Grade fixa, mesma ordem, sempre:
 | 4 | Fluxograma To-Be `vPósWS` | Raias em caixa alta, marcadores `M`, SLA inline, conectores, interfaces. |
 | 5 | Regras de negócio | Código, nome, **descrição aprovada**, nível de importância, impacto. |
 | 6 | SLA acordado | Indicador principal com definição operacional, secundários, medição e governança por cargo. |
-| 7 | Oportunidades abertas | As não implantadas até o fecho, com pilar, valor e complexidade — ou a declaração de ausência. |
+| 7 | Oportunidades abertas | As não implantadas até o fecho, com pilar, valor e complexidade, ou a declaração de ausência. |
 
 Quando o subprocesso não tem oportunidade mapeada, a seção 7 traz a frase explícita
 **"Não foram mapeadas oportunidades de melhoria"**. Seção suprimida é ambígua.
 
-## Parte III — Consolidados
+## Parte III: Consolidados
 
 | Seção | Conteúdo |
 |---|---|
@@ -51,7 +51,7 @@ Quando o subprocesso não tem oportunidade mapeada, a seção 7 traz a frase exp
 | Consolidado de oportunidades | Matriz valor × complexidade do ciclo inteiro, com os quatro quadrantes. Insumo de roadmap. |
 | Interfaces do ciclo | Mapa de quem entrega o quê a quem, entre subprocessos. É onde a checagem de fechamento fica visível. |
 
-## Parte IV — Governança do documento
+## Parte IV: Governança do documento
 
 | Seção | Conteúdo |
 |---|---|
@@ -69,7 +69,7 @@ Além do calendário, o manual é revisto quando ocorre qualquer um destes:
 - meta de SLA descumprida por dois períodos consecutivos;
 - implantação de oportunidade que estava na seção 7 de um capítulo.
 
-## Anexos — homologação
+## Anexos: homologação
 
 Sustentam cada decisão registrada no corpo. Não se consultam no dia a dia; existem para responder
 "por que ficou assim".

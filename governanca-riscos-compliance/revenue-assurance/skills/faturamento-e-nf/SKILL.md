@@ -28,7 +28,7 @@ resultados possíveis, e todos são achado exceto o primeiro:
 | Aceite sem nota | Entrega sem faturamento. O risco mais silencioso do elo |
 
 O quarto é o que escapa de quase todo programa, porque o teste usual parte da nota e vai para a
-medição — caminho que **nunca** encontra a medição que não virou nota. Parta dos dois lados: a
+medição, caminho que **nunca** encontra a medição que não virou nota. Parta dos dois lados: a
 população de aceites e a população de notas, casadas com consumo de pool (`bases-e-conciliacao` §4).
 
 A mesma lógica vale para venda de material valorizado, sucata e subproduto: saída sem nota é
@@ -50,7 +50,7 @@ faltavam nos programas de receita da casa (ver `matriz-de-riscos-da-receita` §2
 | Nota de **serviço** | Enquadramento do serviço, município de prestação e de incidência, alíquota, retenções aplicáveis e sua evidência |
 | Nota de **produto** | Código de operação, classificação fiscal da mercadoria, base de cálculo, alíquotas, substituição tributária, unidade da federação de destino |
 
-**A exposição é substancialmente maior no produto** — não transporte o teste de um para o outro, nem
+**A exposição é substancialmente maior no produto**, não transporte o teste de um para o outro, nem
 a conclusão. Confirme a espécie de documento emitida em cada linha de receita do mandato antes de
 escrever o teste: uma mesma empresa costuma emitir as duas.
 
@@ -65,44 +65,44 @@ competência correta e observância do prazo legal**.
 
 Cortes que revelam o que a relação de cancelamentos esconde:
 
-- **Cancelamento sem reemissão** — a receita simplesmente desapareceu. Confronte cada nota cancelada
+- **Cancelamento sem reemissão**: a receita simplesmente desapareceu. Confronte cada nota cancelada
   contra a nota substituta, por competência.
-- **Reemissão em competência posterior** — cancelou em uma competência e reemitiu em outra: é erro de
+- **Reemissão em competência posterior**: cancelou em uma competência e reemitiu em outra: é erro de
   corte disfarçado de cancelamento (§4).
-- **Concentração em fim de período** — cancelamentos agrupados nos últimos dias do mês ou do
+- **Concentração em fim de período**: cancelamentos agrupados nos últimos dias do mês ou do
   exercício merecem leitura própria.
-- **Mesmo tomador, cancelamentos repetidos** — sintoma de divergência recorrente de medição ou de
+- **Mesmo tomador, cancelamentos repetidos**: sintoma de divergência recorrente de medição ou de
   aceite, não de erro de digitação.
 
 ### Planos A/B/C
 
-- **Plano A** — relação sistêmica de cancelamentos × motivo × alçada × reemissão, conferida contra o
+- **Plano A**: relação sistêmica de cancelamentos × motivo × alçada × reemissão, conferida contra o
   prazo legal aplicável.
-- **Plano B** — sem relação sistêmica: cruze notas canceladas × reemitidas por competência a partir
+- **Plano B**: sem relação sistêmica: cruze notas canceladas × reemitidas por competência a partir
   dos arquivos eletrônicos ou do relatório fiscal.
-- **Plano C** — sem qualquer relação: conclua pela ausência do controle de aprovação e declare.
-- **Nota de leitura** — a data de cancelamento nem sempre está no topo do documento; já apareceu em
+- **Plano C**: sem qualquer relação: conclua pela ausência do controle de aprovação e declare.
+- **Nota de leitura**: a data de cancelamento nem sempre está no topo do documento; já apareceu em
   campo de observações gerais. Varra o documento inteiro antes de declarar ausência.
-- **Limitação** — *"O prazo de cancelamento foi avaliado contra a legislação vigente aplicável à
+- **Limitação**: *"O prazo de cancelamento foi avaliado contra a legislação vigente aplicável à
   espécie de documento emitida; a evidência de aprovação em alçada [foi / não foi] disponibilizada."*
 
 ## 4. Cut-off: a receita está na competência certa?
 
 Programas de receita costumam parar no aging e **nunca perguntar se a receita está na competência
-certa**. O risco existe sempre que o fato gerador e a emissão não coincidem — e neste domínio eles
+certa**. O risco existe sempre que o fato gerador e a emissão não coincidem, e neste domínio eles
 quase nunca coincidem: a execução é diária, a medição é mensal, o aceite vem depois da medição, a
 emissão vem depois do aceite, e o faturamento costuma ocorrer em data fixa.
 
 **Teste as viradas de mês, e a virada de exercício em dobro.** A bateria:
 
-1. **Janela em torno do corte** — selecione as notas emitidas nos últimos dias de uma competência e
+1. **Janela em torno do corte**: selecione as notas emitidas nos últimos dias de uma competência e
    nos primeiros da seguinte, e confronte a data do **fato gerador** (execução medida) com a
    competência de reconhecimento.
-2. **Aceite de uma competência, nota de outra** — mapeie a defasagem média entre aceite e emissão. A
+2. **Aceite de uma competência, nota de outra**: mapeie a defasagem média entre aceite e emissão. A
    defasagem em si não é achado; a defasagem que atravessa o corte é.
-3. **Serviço executado e ainda não medido na data-base** — existe receita a faturar reconhecida? A
+3. **Serviço executado e ainda não medido na data-base**: existe receita a faturar reconhecida? A
    ausência de reconhecimento é subavaliação da receita do período.
-4. **Nota emitida sem execução no período** — o espelho do anterior.
+4. **Nota emitida sem execução no período**: o espelho do anterior.
 5. **Cancelamento e reemissão atravessando o corte** (§3).
 
 Quantifique o efeito líquido **e o efeito em módulo**: valores positivos e negativos que se anulam no
@@ -118,27 +118,27 @@ do elo. Concilie **por competência e por produto** (ou por linha de receita).
 
 O que a conciliação tem de produzir:
 
-1. **Confronto global** — quantidade e valor de notas emitidas × receita registrada no razão, por
+1. **Confronto global**: quantidade e valor de notas emitidas × receita registrada no razão, por
    competência, com a diferença e o percentual sobre a base maior.
-2. **Abertura por produto ou linha de receita** — a mesma conta, um nível abaixo.
-3. **Lançamentos manuais diretos na conta de receita** — identifique todos: quem lançou, quando, com
+2. **Abertura por produto ou linha de receita**: a mesma conta, um nível abaixo.
+3. **Lançamentos manuais diretos na conta de receita**: identifique todos: quem lançou, quando, com
    que histórico e com que documento suporte. Lançamento manual em conta de receita é a via clássica
    de ajuste sem lastro.
-4. **Diferenças de arredondamento e de tributo** — separe o que é diferença de critério (receita
+4. **Diferenças de arredondamento e de tributo**: separe o que é diferença de critério (receita
    bruta × líquida, tributos destacados) do que é divergência real. Declare o critério usado.
 
 A mecânica de casar as duas bases com consumo de pool e os quadros de saída estão em
-`bases-e-conciliacao` §4 — referencie, não repita.
+`bases-e-conciliacao` §4; referencie, não repita.
 
 ### Planos A/B/C
 
-- **Plano A** — razão analítico da conta de receita + relatório completo de notas emitidas, ambos por
+- **Plano A**: razão analítico da conta de receita + relatório completo de notas emitidas, ambos por
   competência, conciliados ao centavo com os quase-pares isolados.
-- **Plano B** — só razão sintético: conciliação por competência sem abertura por produto. Declare que
+- **Plano B**: só razão sintético: conciliação por competência sem abertura por produto. Declare que
   a compensação entre produtos não foi testável.
-- **Plano C** — sem acesso ao razão: o elo 7 cai inteiro. Conclua sobre o faturamento e declare
+- **Plano C**: sem acesso ao razão: o elo 7 cai inteiro. Conclua sobre o faturamento e declare
   explicitamente que a integridade do registro contábil da receita não foi objeto do trabalho.
-- **Limitação** — *"A conciliação abrange [N] competências e [X]% do valor faturado; a abertura por
+- **Limitação**: *"A conciliação abrange [N] competências e [X]% do valor faturado; a abertura por
   linha de receita [foi / não foi] possível; foram identificados [N] lançamentos manuais na conta de
   receita, no valor de R$ [valor]."*
 

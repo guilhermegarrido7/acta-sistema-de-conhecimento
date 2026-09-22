@@ -1,0 +1,54 @@
+---
+import Pagina from '../../../layouts/Pagina.astro';
+import { terceiros } from '../../../lib/terceiros.js';
+
+export async function getStaticPaths() {
+  return terceiros.map((t) => ({ params: { slug: t.slug }, props: { t } }));
+}
+const { t } = Astro.props;
+---
+
+<Pagina
+  titulo={t.nome}
+  sobrescrito="Skill de uso geral"
+  descricao={t.resumo}
+  abertura={t.resumo}
+  voltar={{ href: '/skills', rotulo: 'Skills' }}
+>
+  <div slot="meta" class="pe" style="margin-top:1.15rem">
+    <span class="etiqueta">{t.grupo}</span>
+    <span class="etiqueta">de terceiros</span>
+  </div>
+
+  <div class="aviso aviso--atencao">
+    <p>
+      <strong>Esta skill não é da ACTA.</strong> Ela não vem do nosso marketplace, é mantida por
+      terceiros e pode mudar sem aviso. Ela não conhece o método da casa, e usá-la não dispensa
+      nenhuma regra de confidencialidade quando o arquivo é de cliente.
+    </p>
+  </div>
+
+  <section class="secao">
+    <h2>Quando ela ajuda</h2>
+    <ul>
+      {t.quando.map((q) => <li>{q}</li>)}
+    </ul>
+  </section>
+
+  <section class="secao">
+    <h2>Como obter</h2>
+    <p>{t.comoObter}</p>
+    {t.ligacao && (
+      <p class="acoes" style="margin-top:1.25rem">
+        <a href={t.ligacao.href} class="botao botao--linha">{t.ligacao.rotulo}</a>
+      </p>
+    )}
+  </section>
+
+  <section class="secao">
+    <h2>O que observar</h2>
+    <div class="aviso">
+      <p>{t.cuidado}</p>
+    </div>
+  </section>
+</Pagina>

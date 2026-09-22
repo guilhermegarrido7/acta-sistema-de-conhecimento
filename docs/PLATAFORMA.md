@@ -14,7 +14,7 @@ resolve:
 1. **Porta de entrada.** Um consultor que chega não tem onde ler o que é isso, como instalar, o que
    precisa ter antes, e o que fazer quando não funciona.
 2. **Contexto do projeto, não só da ferramenta.** Saber que existe `acta-pesquisa-salarial` não é o
-   mesmo que saber como se conduz uma pesquisa salarial — quais são as etapas, onde o projeto
+   mesmo que saber como se conduz uma pesquisa salarial: quais são as etapas, onde o projeto
    costuma dar errado, o que se entrega em cada fase. A skill ensina a fazer; falta o mapa do
    engajamento.
 3. **Memória de projeto.** Hoje o que foi executado vive em pastas do OneDrive, achável por quem
@@ -37,7 +37,7 @@ Arquitetura de informação observada:
 | Badges de compatibilidade | "funciona com Claude Code, Cursor, Codex…" | Parcial. Interessa dizer onde a skill roda (Claude Code, Desktop, Cowork) |
 | Métricas sociais | estrelas, downloads | **Não.** Dentro de uma firma isso vira ranking de colegas, não sinal de qualidade |
 | Docs separados do catálogo | seção *Getting Started* / *CLI Reference* | **Sim.** É o que falta hoje |
-| Autenticação | sign in / create account | **Sim, e obrigatória** — ver seção 4 |
+| Autenticação | sign in / create account | **Sim, e obrigatória** (ver seção 4) |
 
 ### O que registry público faz e a ACTA **não** deve copiar
 
@@ -51,7 +51,7 @@ Arquitetura de informação observada:
 
 ### Referência mais próxima do que a ACTA precisa
 
-Não é um registry — é um **manual de metodologia com catálogo acoplado**. O modelo mental certo é o
+Isto é um **manual de metodologia com catálogo acoplado**, e não um registry. O modelo mental certo é o
 de um *engagement handbook* de firma grande (o "como se faz aqui", por tipo de projeto), com a
 diferença de que cada capítulo termina em ferramenta instalável.
 
@@ -62,7 +62,7 @@ diferença de que cada capítulo termina em ferramenta instalável.
 > **O site é gerado do repositório. Nada é mantido em paralelo.**
 
 Todo portal interno morre do mesmo jeito: alguém escreve a documentação uma vez, o código evolui, e
-seis meses depois o portal mente. A defesa é estrutural — o catálogo não é escrito, é **derivado**:
+seis meses depois o portal mente. A defesa é estrutural: o catálogo é **derivado**, não escrito à mão.
 
 | O que aparece no site | De onde vem, sem digitação manual |
 |---|---|
@@ -103,27 +103,27 @@ de catálogo em memória de firma.
 
 ## 4. Segurança: a decisão que condiciona todo o resto
 
-O repositório permanece **privado** — é onde vive o método por extenso, incluindo o que ainda não
+O repositório permanece **privado**, porque é onde vive o método por extenso, incluindo o que ainda não
 passou pela revisão de anonimização. Mas o **portal é uma vitrine**: mostra o catálogo de plugins,
-o que cada skill faz e o método já anonimizado (sem nome de cliente, sem dado de projeto real — ver
+o que cada skill faz e o método já anonimizado (sem nome de cliente, sem dado de projeto real; ver
 `scripts/validar-skills.py` e `clientes.local.txt`). Não existe conta de usuário, não existe login,
 e essa é uma decisão deliberada, não uma pendência.
 
 Consequência prática: **nenhuma autenticação é necessária.** O portal é HTML estático, público, sem
-sessão e sem senha — porque não há nada nele que dependa de quem está lendo. Confidencial fica no
+sessão e sem senha, porque não há nada nele que dependa de quem está lendo. Confidencial fica no
 repositório (privado) e no SharePoint/OneDrive dos projetos executados (seção 4.2); o que chega ao
 portal já passou pelo filtro que existe exatamente para poder ser mostrado sem crachá.
 
 Isso também reabre uma opção descartada antes por engano: **GitHub Pages** funciona aqui, porque a
-objeção original (site público expõe conteúdo confidencial) não se aplica mais — o conteúdo público
+objeção original (site público expõe conteúdo confidencial) não se aplica mais: o conteúdo público
 é, por desenho, o que pode ser público. Ainda assim mantém-se o Cloudflare (seção 5): já está no ar,
 já resolve o build a partir de `site/`, e evita mudar de fornecedor sem necessidade.
 
 ### Por que não o Vercel no plano grátis
 
 O plano Hobby do Vercel declara, na própria documentação de planos: *"the Hobby plan restricts users
-to non-commercial, personal use only"*. A ACTA é uma empresa e o portal é ferramenta de trabalho —
-o uso é comercial. O plano grátis não cobre. Essa objeção continua valendo independentemente da
+to non-commercial, personal use only"*. A ACTA é uma empresa e o portal é ferramenta de trabalho,
+logo o uso é comercial. O plano grátis não cobre. Essa objeção continua valendo independentemente da
 autenticação, porque é sobre os termos de uso, não sobre acesso.
 
 ### A recomendação
@@ -134,18 +134,18 @@ O passo a passo de execução está em [DEPLOY.md](DEPLOY.md).
 | Requisito | Como é atendido | Custo |
 |---|---|---|
 | Hospedagem de site estático | Cloudflare Workers (assets), build a partir do repositório privado | grátis, sem restrição de uso comercial, sem cartão |
-| Autenticação | nenhuma — o conteúdo publicado já é o que pode circular sem controle de acesso | — |
+| Autenticação | nenhuma; o conteúdo publicado já é o que pode circular sem controle de acesso | - |
 | Controle de quem pode publicar | permanece no GitHub: só quem tem acesso ao repositório privado consegue mudar o conteúdo | já existente |
 | Revisão de conteúdo | `scripts/validar-skills.py`, rodado antes de qualquer pull request | grátis |
 
 Não ter autenticação no site é um ganho, não uma concessão: sem formulário de login, sem sessão, sem
 banco de usuários, não há o que ser mal implementado nem o que vazar. A superfície de risco vira
-"o que entra no `master`", que já é controlada pelo validador e pela revisão do pull request — não
+"o que entra no `master`", que já é controlada pelo validador e pela revisão do pull request, e não
 "quem consegue abrir a URL".
 
 ### Onde o acervo de projetos fica (fase 2)
 
-Os entregáveis executados — relatórios, planilhas, painéis — **continuam no SharePoint/OneDrive**. A
+Os entregáveis executados (relatórios, planilhas, painéis) **continuam no SharePoint/OneDrive**. A
 plataforma indexa e aponta; não copia. Duplicar arquivo confidencial num segundo sistema cria um
 segundo lugar para vazar e um segundo lugar para ficar desatualizado. A permissão continua sendo a
 do SharePoint, que a firma já administra.
@@ -160,20 +160,20 @@ do SharePoint, que a firma já administra.
 | Conteúdo | Markdown do próprio repositório + `projeto.md` | Fonte única de verdade (seção 3) |
 | Busca | **Pagefind** | Índice estático gerado no build. Sem backend, sem serviço externo |
 | Hospedagem | **Cloudflare Workers (assets)** | Grátis, uso comercial permitido, conecta em repositório privado, sem cartão |
-| Acesso | nenhum — portal público | O conteúdo publicado já passou pela anonimização; não há o que proteger com login |
+| Acesso | nenhum, portal público | O conteúdo publicado já passou pela anonimização; não há o que proteger com login |
 | Acervo de projetos | SharePoint, referenciado | Não duplica arquivo confidencial |
 
 Deliberadamente **fora** do stack: banco de dados, backend, Supabase, autenticação própria, Cloudflare
 Access. Nada disso é necessário para o que a plataforma faz, e cada um deles seria mais uma
 superfície para manter e para proteger. Se algum dia a plataforma precisar mostrar algo não
-anonimizado, essa decisão se reabre — não antes.
+anonimizado, essa decisão se reabre, mas não antes.
 
 ---
 
 ## 6. Arquitetura de informação
 
 ```
-/                        Início — o que é, pré-requisitos, instalação, dicas de uso
+/                        Início: o que é, pré-requisitos, instalação, dicas de uso
 /comecar                 Guia completo: instalar, verificar, atualizar, resolver problema
 /projetos                Catálogo por tipo de projeto, agrupado por prática
 /projetos/<slug>         A página que o consultor lê antes de começar:
@@ -189,22 +189,22 @@ anonimizado, essa decisão se reabre — não antes.
                            entregue, o que se aprendeu, link para os arquivos no SharePoint
 ```
 
-A home **não** é uma caixa de busca. É a página que responde, em ordem: o que é isto, o que preciso
-ter, como instalo, e por onde começo no meu tipo de projeto.
+A home responde, em ordem: o que é isto, o que preciso ter, como instalo, e por onde começo no meu
+tipo de projeto. Caixa de busca não é o centro dela.
 
 ---
 
 ## 7. Fases
 
-### Fase 1 — o portal do marketplace
+### Fase 1: o portal do marketplace
 Home, guia de instalação, catálogo de projetos gerado do repositório, páginas de plugin e de skill,
-busca. Publicado no Cloudflare, público, sem autenticação — ver seção 4.
+busca. Publicado no Cloudflare, público, sem autenticação (ver seção 4).
 
-### Fase 2 — as páginas de projeto
+### Fase 2: as páginas de projeto
 Um `projeto.md` por plugin de projeto, começando pelos que já têm método escrito. É trabalho
 editorial, não de código, e é onde está o valor que nenhum `marketplace.json` entrega.
 
-### Fase 3 — o acervo de benchmarking
+### Fase 3: o acervo de benchmarking
 Registro dos engajamentos executados por tipo de projeto, com o que se aprendeu e o apontador para os
 arquivos no SharePoint. Depende de uma decisão de governança: **o que pode ser referenciado e o que
 não pode**, dado que engajamento tem cláusula de confidencialidade. Essa decisão precede a
@@ -215,8 +215,8 @@ implementação.
 ## 8. O que precisa de decisão antes da fase 3
 
 1. **Confidencialidade do acervo.** Referenciar entregável de cliente, ainda que só por link e
-   atrás de autenticação, exige clareza sobre o que o contrato permite. A regra da casa hoje —
-   caso vira exemplo anonimizado — precisa ser estendida ou explicitamente excepcionada aqui.
+   atrás de autenticação, exige clareza sobre o que o contrato permite. A regra da casa hoje, a de
+   que caso vira exemplo anonimizado, precisa ser estendida ou explicitamente excepcionada aqui.
 2. **Quem mantém.** O catálogo se mantém sozinho porque é derivado. As páginas de projeto e o acervo
    não: alguém precisa ser dono de cada um, ou envelhecem.
 3. **Domínio.** `conhecimento.acta.com.br` ou subdomínio equivalente, apontado ao Cloudflare.

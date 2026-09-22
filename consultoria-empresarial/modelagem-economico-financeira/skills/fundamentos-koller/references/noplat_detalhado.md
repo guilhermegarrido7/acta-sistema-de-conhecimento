@@ -1,4 +1,4 @@
-# NOPLAT — Construção Detalhada e Casos Especiais
+# NOPLAT: construção detalhada e casos especiais
 
 ## 1. Ponto de Partida: Reorganização da DRE
 
@@ -12,7 +12,7 @@ Receita líquida de vendas
 (−) Depreciação e amortização operacional
 (+) Adição: juros implícitos de arrendamentos capitalizados (CPC 06 R2)
     [porque o aluguel contábil é substituído por D&A + juros; só D&A é operacional]
-(−) Amortização de intangíveis adquiridos (excluir — vai para EBITA, não EBIT)
+(−) Amortização de intangíveis adquiridos (excluir; vai para EBITA, e não para EBIT)
 = EBITA (Earnings Before Interest, Tax, and Amortization of acquired intangibles)
 ```
 
@@ -52,17 +52,17 @@ Após CPC 06 R2, a empresa reconhece:
 - Despesa financeira sobre o passivo de arrendamento
 
 **Impacto no NOPLAT:**
-- A D&A do ROU já está no resultado — permanece operacional ✓
+- A D&A do ROU já está no resultado, e permanece operacional ✓
 - A despesa financeira deve ser **excluída** do NOPLAT (é financiamento)
 - No EBITA, adicionar de volta a despesa financeira de arrendamentos
 
 ```
 EBITA = EBIT contábil (pós-CPC 06 R2)
-      + Despesa de juros de arrendamentos (linha "Encargos financeiros — arrendamentos")
+      + Despesa de juros de arrendamentos (linha "Encargos financeiros de arrendamentos")
       − Amortização de intangíveis adquiridos
 ```
 
-**No Capital Investido:** o passivo de arrendamento é um **equivalente de dívida** — entra em IC pela perspectiva de financiamento, e o ativo ROU líquido de D&A acumulada entra pela perspectiva operacional.
+**No Capital Investido:** o passivo de arrendamento é um **equivalente de dívida**: entra em IC pela perspectiva de financiamento, e o ativo ROU líquido de D&A acumulada entra pela perspectiva operacional.
 
 ### 3.2 Despesas de P&D Capitalizadas
 
@@ -70,7 +70,7 @@ Koller recomenda tratar P&D como investimento de capital (não despesa).
 
 ```
 Ajuste no NOPLAT:
-(+) Despesa de P&D do período (adicionar de volta — não é despesa operacional corrente)
+(+) Despesa de P&D do período (adicionar de volta, porque não é despesa operacional corrente)
 (−) Amortização do P&D capitalizado acumulado
 
 Ajuste no Capital Investido:
@@ -96,7 +96,7 @@ No IC: não inclui os efeitos não realizados de planos de stock option em abert
 
 ### 3.5 Imposto Diferido Ativo/Passivo
 
-- **Passivo de imposto diferido líquido:** é um **equivalente de patrimônio** — inclui no IC pela perspectiva de financiamento (não é dívida, mas também não é operacional).
+- **Passivo de imposto diferido líquido:** é um **equivalente de patrimônio**: inclui no IC pela perspectiva de financiamento (não é dívida, mas também não é operacional).
 - Na DRE: a variação no imposto diferido geralmente está embutida na linha de IR. Para o NOPLAT, usar o imposto corrente + efeitos operacionais do diferido. Na prática, Koller aceita usar o imposto total (corrente + diferido) como base e ajustar apenas pelo escudo fiscal e itens não operacionais.
 
 ---
@@ -125,7 +125,7 @@ IR = Investimento Líquido em IC / NOPLAT = g / ROIC
 ```
 
 Se ROIC for constante: crescimento de NOPLAT = crescimento de receita (margem estável).
-Se margem expande: NOPLAT cresce mais rápido que receita — fonte de valor via eficiência operacional.
+Se margem expande: NOPLAT cresce mais rápido que receita, o que é fonte de valor via eficiência operacional.
 
 ---
 

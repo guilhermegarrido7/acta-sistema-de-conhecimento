@@ -1,9 +1,9 @@
 ---
 name: relatorio-de-auditoria
-description: Produza e altere o relatório de auditoria — deck em PowerPoint e relatório detalhado em Word — na identidade visual ACTA. Acionar ao montar ou alterar slide, ao inserir tabela ou gráfico em PPTX, ao desenhar organograma ou fluxo AS IS, ao converter o deck em relatório detalhado em Word, ou ao conferir o render antes de entregar.
+description: Produza e altere o relatório de auditoria (deck em PowerPoint e relatório detalhado em Word) na identidade visual ACTA. Acionar ao montar ou alterar slide, ao inserir tabela ou gráfico em PPTX, ao desenhar organograma ou fluxo AS IS, ao converter o deck em relatório detalhado em Word, ou ao conferir o render antes de entregar.
 ---
 
-# Relatório de auditoria — o deck em PPTX e o relatório detalhado em Word
+# Relatório de auditoria: o deck em PPTX e o relatório detalhado em Word
 
 ## Papel desta skill
 
@@ -13,13 +13,13 @@ são repetidas.
 
 Esta skill organiza a **apresentação** do trabalho, não o cálculo: o conteúdo do ponto vem de
 `redacao-de-achados`, o número vem de `bases-e-conciliacao`. Foi a área que mais gerou retrabalho
-estético — as regras abaixo são o que sobrou depois de descobrir, uma a uma, por que cada tentativa
+estético, e as regras abaixo são o que sobrou depois de descobrir, uma a uma, por que cada tentativa
 falhava.
 
 A mecânica de código (python-pptx, `replace_data`, extração PPTX → JSON → DOCX) está em
 [references/mecanica-pptx-docx.md](references/mecanica-pptx-docx.md). Armadilhas de ambiente
 (arquivo travado, encoding, cache do OneDrive, COM, fluxo de cópia para o scratchpad antes de
-operar) vivem em `acta-way:ambiente-tecnico` — carregue-a antes de mexer em render ou COM.
+operar) vivem em `acta-way:ambiente-tecnico`. Carregue-a antes de mexer em render ou COM.
 
 ---
 
@@ -42,19 +42,19 @@ Slide **13,33" × 7,50"** (16:9 · 12192000 × 6858000 EMU).
   espaço quebra a identidade do deck e é rejeitado na revisão.
 - **Conteúdo:** começa em `x = 3,18"`; largura útil **9,80"**. Nada pode invadir a banda.
 - **Tipografia:** fonte institucional **Rawline** no deck; **Arial** nos papéis de trabalho em Excel
-  e nos documentos em Word. Se a Rawline causar problema visual real no deck, caia para Arial — só
+  e nos documentos em Word. Se a Rawline causar problema visual real no deck, caia para Arial, só
   nesse caso, e avisando.
 
 **Paleta institucional:** vive em `acta-way`. O que é específico do relatório e fica aqui é a
 **regra de aplicação em série de gráfico**:
 
 > Primeira série: verde institucional. Segunda: **preta**. Terceira: cinza escuro. Quarta: cinza
-> claro. **Nunca dois verdes no mesmo gráfico** — tinta derivada do verde institucional é um segundo
+> claro. **Nunca dois verdes no mesmo gráfico**: tinta derivada do verde institucional é um segundo
 > verde e é pega a olho na revisão. Onde você usaria verde claro, use cinza neutro; onde usaria
 > verde médio para dar peso, use preto. Se precisar de mais de quatro séries, reveja o gráfico antes
 > de rever a paleta.
 
-O verde de farol (semáforo: divergência, severidade, grau de implementação) é exceção — é sinal, não
+O verde de farol (semáforo: divergência, severidade, grau de implementação) é exceção: é sinal, não
 decoração, e não conta como segunda cor da série.
 
 ---
@@ -63,7 +63,7 @@ decoração, e não conta como segunda cor da série.
 
 **O primeiro passo é matar o estilo nativo.** Remova o `tableStyleId` e zere as flags de banding
 (`firstRow`, `firstCol`, `lastRow`, `lastCol`, `bandRow`, `bandCol`). Sem isso o PowerPoint
-reaplica o estilo do tema **por cima** dos seus preenchimentos — foi assim que um cabeçalho teimou
+reaplica o estilo do tema **por cima** dos seus preenchimentos. Foi assim que um cabeçalho teimou
 em voltar laranja depois de três correções. O código está na reference.
 
 Depois:
@@ -105,7 +105,7 @@ reformar o slide, prefira converter a grade em tabela real.
 ## 3. Gráficos nativos, nunca imagem
 
 O gráfico entra como **objeto nativo do PowerPoint**, não como PNG. O motivo é operacional: o
-auditor responsável edita os dados depois, direto no arquivo, sem precisar de nova geração — e o
+auditor responsável edita os dados depois, direto no arquivo, sem precisar de nova geração, e o
 revisor consegue conferir a série contra o papel de trabalho. Gráfico como imagem é um beco sem
 saída na primeira correção de número.
 
@@ -116,7 +116,7 @@ recriar o shape.
 **Rótulo de série nunca carrega identificador.** Final de cartão, número de conta, CPF/CNPJ,
 matrícula, nome de pessoa e nome de fornecedor ficam **fora** do rótulo do gráfico e do título do
 slide: use o papel ou um rótulo genérico (`Meio de pagamento A`, `Centro de custo 1`). O
-identificador vive no papel de trabalho, de acesso restrito — o deck circula.
+identificador vive no papel de trabalho, de acesso restrito. O deck circula.
 
 **Ênfase.** Quando o slide tem tabela e gráfico, o gráfico manda no espaço. Se não couber, divida em
 dois slides antes de encolher a fonte.
@@ -130,7 +130,7 @@ duplicados, e o auditor apaga a que não quiser. Funciona melhor que tentar acer
 
 **Duplique o último slide e escreva no fim.** É o padrão, sem exceção. Mover slide depois de criado
 desloca os índices de todos os demais, e uma segunda operação sobre um índice antigo atinge outro
-slide — já apagou um ponto inteiro do relatório, recuperado só porque existia a versão anterior na
+slide. Já apagou um ponto inteiro do relatório, recuperado só porque existia a versão anterior na
 pasta. Se a posição final importa, mova **uma única vez** e reconfira contagem e títulos antes de
 qualquer outra operação.
 
@@ -138,7 +138,7 @@ qualquer outra operação.
 turnos. Índice de ontem não vale hoje; título vale.
 
 **Não remova slide editando `sldIdLst`** sem tratar a relação correspondente: gera partes duplicadas
-e aviso de reparo ao abrir. Prefira editar no lugar — limpe as shapes e redesenhe.
+e aviso de reparo ao abrir. Prefira editar no lugar: limpe as shapes e redesenhe.
 
 **Preserve o que o auditor mexeu.** O arquivo mais recente é a verdade, inclusive quando contradiz o
 que você gerou. Leia o estado atual antes de reescrever qualquer bloco. Quando a alteração é pequena
@@ -168,7 +168,7 @@ n        cada ponto: 1+ slides + slide de Riscos e Recomendações com o MESMO t
 ```
 
 **Escada de maturidade** (slide 4): barra mais alta = mais controle = mais segurança. A visão é
-ascendente e **nunca se achata** em blocos de altura igual — achatar destrói a leitura, que é o
+ascendente e **nunca se achata** em blocos de altura igual, porque achatar destrói a leitura, que é o
 único conteúdo do slide. E **não posicione processo sem resultado de teste concluído**: inventar
 nível num slide que a Diretoria vai ler como retrato do ambiente é pior que omitir o processo.
 
@@ -176,7 +176,7 @@ nível num slide que a Diretoria vai ler como retrato do ambiente é pior que om
 vazio alinhado à grade e diga em qual slide ele está.
 
 **Faixa preta / tarja.** Tarja num slide serve para cobrir dado sensível antes de circular. Aplique
-como retângulo sólido sobre a região — não apague o conteúdo por baixo, ele é a evidência.
+como retângulo sólido sobre a região, e não apague o conteúdo por baixo, ele é a evidência.
 
 ---
 
@@ -204,7 +204,7 @@ O que procurar no PNG:
 - rótulo de gráfico ilegível ou truncado;
 - vão morto entre colunas (tabela estreita demais para a largura útil);
 - título em duas linhas empurrando o conteúdo para fora do slide;
-- cor fora da paleta — um segundo verde aparece no PNG antes de aparecer no XML.
+- cor fora da paleta: um segundo verde aparece no PNG antes de aparecer no XML.
 
 Se o render mostrar conteúdo velho duas vezes seguidas, suspeite do ambiente antes de "corrigir" o
 que já está certo (ver `acta-way:ambiente-tecnico`).
@@ -215,7 +215,7 @@ que já está certo (ver `acta-way:ambiente-tecnico`).
 
 Quando o cliente pede o relatório em Word, o deck **não é convertido slide a slide**: ele é
 reorganizado na estrutura do relatório detalhado, que é outro documento, com outra lógica de
-leitura — o deck argumenta em blocos visuais, o relatório detalhado amarra risco, controle, teste e
+leitura: o deck argumenta em blocos visuais, o relatório detalhado amarra risco, controle, teste e
 ação em texto corrido auditável.
 
 **Ordem das seções:**
@@ -230,7 +230,7 @@ Anexo I  mapa de riscos: impacto versus vulnerabilidade
 Anexo II análise dos riscos de negócio
 ```
 
-**A matriz de II.A é duas tabelas por subprocesso, empilhadas** — nunca uma tabela larga só:
+**A matriz de II.A é duas tabelas por subprocesso, empilhadas**, nunca uma tabela larga só:
 
 | Tabela de cima (riscos) | Tabela de baixo (controles) |
 |---|---|
@@ -246,7 +246,7 @@ remissão textual às seções; a paginação é atualizada no Word pelo própri
 
 **Sanitize toda referência interna antes de escrever.** Versão de deck, número de slide e código de
 papel de trabalho são vocabulário de produção, não do entregável: troque por *"Vide Seção II.B"*.
-Já vazou remissão interna para a versão entregue — o que a pegou foi o render, não a leitura.
+Já vazou remissão interna para a versão entregue. O que a pegou foi o render, não a leitura.
 
 **Numeração dos aspectos é contínua** no documento inteiro e não reinicia por bloco temático: um
 bloco vira um título em caixa alta, cada slide de origem vira um aspecto numerado em sequência.
@@ -263,11 +263,11 @@ A mecânica de extração, sanitização e montagem está em
 2. Quando o cliente pedir o formato, o **relatório detalhado em Word** na estrutura da §8,
    verificado por render em PDF.
 3. O aviso ao auditor responsável, em uma linha: quantos slides tem a versão, onde o conteúdo novo
-   entrou, o que mudou em relação à versão anterior — e o que ficou reservado para ele (espaço de
+   entrou, o que mudou em relação à versão anterior, e o que ficou reservado para ele (espaço de
    print, conferência tipográfica, atualização de índice).
 
 ## Próximo passo
 
-Nenhum — este é o artefato final do trabalho de auditoria. Se ao montar o slide aparecer um número
+Nenhum. Este é o artefato final do trabalho de auditoria. Se ao montar o slide aparecer um número
 que não fecha, volte para `bases-e-conciliacao` antes de desenhar; se o texto do ponto não sustentar
 o título, volte para `redacao-de-achados`. Nunca ajuste o número ao slide.

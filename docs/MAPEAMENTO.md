@@ -9,7 +9,7 @@ que regras impedem o marketplace de ficar pesado.** O status corrente de cada pl
 ## 1. Diagnóstico
 
 **Linha de base**, medida antes da rodada de trabalho que este documento organiza. Os números
-abaixo são o problema que a seção 4 ataca — não o estado atual. O estado atual vive em
+abaixo são o problema que a seção 4 ataca, não o estado atual. O estado atual vive em
 [ROADMAP.md](ROADMAP.md).
 
 | Métrica | Valor |
@@ -25,13 +25,13 @@ abaixo são o problema que a seção 4 ataca — não o estado atual. O estado a
 ### Os três problemas que o diagnóstico revelou
 
 **1. Valor pronto e invisível.** `acta-pensadores-de-negocios` tem 15 skills escritas, com disciplina
-de fronteira entre si e com os outros plugins — e não está no `marketplace.json`, nem aparece no
+de fronteira entre si e com os outros plugins, e não está no `marketplace.json`, nem aparece no
 README raiz. Ninguém na firma consegue instalá-lo. O `README.md` da raiz também está defasado: marca
 como prontos apenas `_metodo` e Pesquisa Salarial, quando Modelagem Econômico-Financeira e M&A também
 já estão publicados.
 
 **2. O custo always-on não tem teto declarado.** A arquitetura acertou ao separar um plugin por
-projeto — o custo permanente é por *skill*, e paga-se só pelo plugin instalado. Mas não existe regra
+projeto: o custo permanente é por *skill*, e paga-se só pelo plugin instalado. Mas não existe regra
 escrita limitando o tamanho da `description`, que é exatamente o que se paga em toda sessão. Sem
 teto, o marketplace engorda sozinho a cada contribuição.
 
@@ -43,7 +43,7 @@ uso.
 
 ## 2. Padrão de skill (o teto que impede o marketplace de engordar)
 
-As regras já existiam em [CONVENCOES.md](../CONVENCOES.md) §5 — o que faltava era aplicá-las.
+As regras já existiam em [CONVENCOES.md](../CONVENCOES.md) §5. O que faltava era aplicá-las.
 `scripts/validar-skills.py` passa a fazer isso:
 
 | Regra | Limite | Severidade | Por quê |
@@ -53,9 +53,9 @@ As regras já existiam em [CONVENCOES.md](../CONVENCOES.md) §5 — o que faltav
 | Skills por plugin | **5 a 12** | aviso | Abaixo de 5, o plugin provavelmente não merece existir sozinho; acima de 12, o custo always-on passa de ~1 mil tokens. |
 | Nome de cliente real | **Proibido** | erro | O marketplace é compartilhado na firma. Casos viram exemplo anonimizado em `casos/`. |
 | Nome de pessoa | **Proibido** | erro | A metodologia é da casa, não de um consultor. |
-| Repetição entre camadas | **Proibida** | manual | Fundação (`acta-way`) e método de prática (`_metodo`) não são repetidos no plugin de projeto — referencie. |
+| Repetição entre camadas | **Proibida** | manual | Fundação (`acta-way`) e método de prática (`_metodo`) não são repetidos no plugin de projeto; referencie. |
 
-O corpo da skill pode e deve ser denso — ele só custa quando dispara. O que precisa ser enxuto é a
+O corpo da skill pode e deve ser denso, porque só custa quando dispara. O que precisa ser enxuto é a
 `description`. Escrever skill longa é barato; escrever *muitas* skills, e com descrição inchada, é
 que é caro.
 
@@ -72,8 +72,8 @@ o mesmo vazamento que o script existe para impedir. Um nome por linha; acrescent
 mandato novo. Sem o arquivo, o script roda e **avisa** que a checagem de cliente não foi executada,
 em vez de dar por feita.
 
-Quando o nome do cliente colide com palavra comum — há cliente chamado *Célula*, e "célula
-mesclada" aparece em quase toda skill de auditoria —, prefixe a linha com `=` para forçar
+Quando o nome do cliente colide com palavra comum (há cliente chamado *Célula*, e "célula
+mesclada" aparece em quase toda skill de auditoria), prefixe a linha com `=` para forçar
 casamento sensível a maiúsculas. Sem isso, o alarme falso é tão frequente que a equipe desliga a
 verificação, que é o pior desfecho possível.
 
@@ -147,17 +147,17 @@ ACTA a mid-market brasileiro.
 A ordem abaixo é por valor entregue sobre esforço, com peso para o que já tem matéria-prima escrita
 e para o que destrava outros plugins.
 
-### P0 — Higiene do catálogo ✅
+### P0: higiene do catálogo ✅
 
 Destrava valor que já existe. Esforço de horas.
 
-1. ✅ Publicar `acta-pensadores-de-negocios` no `marketplace.json` — 15 skills prontas, que estavam
+1. ✅ Publicar `acta-pensadores-de-negocios` no `marketplace.json`, com 15 skills prontas que estavam
    invisíveis.
 2. ✅ Atualizar o `README.md` da raiz: marcar o que está publicado, incluir a categoria Conceitos.
-3. ✅ Criar o **guia de instalação por engajamento** — "vou fazer uma auditoria de folha: instalo o
+3. ✅ Criar o **guia de instalação por engajamento**, do tipo "vou fazer uma auditoria de folha: instalo o
    quê?".
 
-### P1 — Absorver a metodologia de auditoria já escrita
+### P1: absorver a metodologia de auditoria já escrita
 
 O maior ativo disponível: metodologia de auditoria testada em campo, que preenche cinco esqueletos
 existentes e origina um plugin novo.
@@ -165,32 +165,32 @@ existentes e origina um plugin novo.
 4. ✅ Merge nos esqueletos de `acta-metodo-auditoria`: bases-e-conciliacao, papel-de-trabalho,
    programa-de-testes, redacao-de-achados, relatorio-de-auditoria.
 5. ✅ Escrever `acta-revenue-assurance` a partir do material de ciclo de receita.
-6. ✅ Deduplicar contra `acta-way` — o que é fundação ficou na fundação. Os três blocos órfãos
+6. ✅ Deduplicar contra `acta-way`. O que é fundação ficou na fundação. Os três blocos órfãos
    ganharam destino: edição em massa virou skill própria (`acta-way:edicao-em-massa`), e handoff
    entre sessões e detecção de bifurcação entraram em `acta-way:checkpoint` (§7.1 e §6.1).
 7. ✅ No merge, aplicar o padrão da seção 2 e remover nome de pessoa e de cliente.
 
-### P2 — Guardrails ✅
+### P2: guardrails ✅
 
 Sem isso, o padrão da seção 2 é só intenção.
 
-8. ✅ O padrão de skill já estava em `CONVENCOES.md` §5 — o que faltava era aplicá-lo.
+8. ✅ O padrão de skill já estava em `CONVENCOES.md` §5. O que faltava era aplicá-lo.
 9. ✅ `scripts/validar-skills.py`. A relação de clientes vive em `clientes.local.txt`, fora do
    versionamento: publicar a carteira da firma seria o mesmo vazamento que o script impede.
 
-### P3 — Plugins com matéria-prima real
+### P3: plugins com matéria-prima real
 
 Nesta ordem, porque cada um tem projeto real de onde extrair:
 
-10. ✅ `acta-excelencia-operacional` — escrito a partir do material de mapeamento de ciclo PTP.
-11. ✅ `acta-controles-internos` — escrito a partir de material de SOX de projeto real.
-12. ✅ `acta-planejamento-estrategico` — escrito a partir do material de dois engajamentos.
-13. `acta-auditoria-compras` — reaproveita o ciclo PTP mapeado em (10).
+10. ✅ `acta-excelencia-operacional`, escrito a partir do material de mapeamento de ciclo PTP.
+11. ✅ `acta-controles-internos`, escrito a partir de material de SOX de projeto real.
+12. ✅ `acta-planejamento-estrategico`, escrito a partir do material de dois engajamentos.
+13. `acta-auditoria-compras`, que reaproveita o ciclo PTP mapeado em (10).
 
-### P4 — Demais plugins
+### P4: demais plugins
 
 Por demanda de engajamento real, seguindo o desenho da seção 3. Um plugin só sai de esqueleto quando
-houver projeto que justifique — escrever metodologia sem caso de uso produz conteúdo genérico, que é
+houver projeto que justifique. Escrever metodologia sem caso de uso produz conteúdo genérico, que é
 pior que esqueleto honesto.
 
 ---

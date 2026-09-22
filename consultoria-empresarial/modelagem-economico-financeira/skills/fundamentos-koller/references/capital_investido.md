@@ -1,4 +1,4 @@
-# Capital Investido Operacional — Construção Detalhada
+# Capital Investido Operacional: construção detalhada
 
 ## 1. Princípio de Separação
 
@@ -15,7 +15,7 @@ O Capital Investido (IC) isola apenas os **ativos necessários para operar o neg
 ```
 Ativo Circulante Operacional:
 (+) Caixa mínimo operacional (≈ 1–2% da receita, ou saldo mínimo para operações)
-    [NÃO inclui caixa excedente — este é ativo não operacional]
+    [NÃO inclui caixa excedente; este é ativo não operacional]
 (+) Contas a receber (clientes)
 (+) Estoques
 (+) Outros ativos circulantes operacionais (adiantamentos, despesas antecipadas operacionais)
@@ -41,8 +41,8 @@ Passivo Circulante Operacional:
 ## 3. Ativos de Longo Prazo Operacionais
 
 ```
-(+) Imobilizado líquido (PP&E) — terrenos, edificações, máquinas, veículos
-(+) Ativo de Direito de Uso (ROU) líquido — CPC 06 R2 / IFRS 16
+(+) Imobilizado líquido (PP&E): terrenos, edificações, máquinas, veículos
+(+) Ativo de Direito de Uso (ROU) líquido, CPC 06 R2 / IFRS 16
     [= valor presente dos pagamentos futuros de arrendamento, menos amortizações]
 (+) Intangíveis operacionais (software, licenças, marcas desenvolvidas internamente)
 (−) Amortização acumulada dos intangíveis operacionais
@@ -70,14 +70,14 @@ CGOL
 
 ```
 (+) Goodwill bruto contábil
-(+) Goodwill amortizado acumulado (aquisições realizadas antes do IFRS — equivalente de patrimônio)
+(+) Goodwill amortizado acumulado (aquisições realizadas antes do IFRS, equivalente de patrimônio)
     [necessário para comparabilidade histórica]
 = Goodwill ajustado
 ```
 
 ### Intangíveis adquiridos em M&A (marcas, carteira de clientes, tecnologia)
 
-- Estes **não** entram no IC operacional — são alocação do preço de compra (PPA)
+- Estes **não** entram no IC operacional; são alocação do preço de compra (PPA)
 - Para ROIC excl. goodwill: excluir intangíveis adquiridos e goodwill
 - Para ROIC incl. goodwill: incluir ambos
 
@@ -86,16 +86,16 @@ Em transações com PPA não realizado ou simplificado, tratar goodwill + intang
 
 ---
 
-## 6. Equivalentes de Dívida (Debt Equivalents — DE)
+## 6. Equivalentes de Dívida (Debt Equivalents, DE)
 
 São passivos que funcionam economicamente como dívida, mas são classificados fora das linhas de dívida financeira no balanço.
 
 | Item | Tratamento | Relevância Mid-Market BR |
 |---|---|---|
-| Passivo de arrendamento (CPC 06 R2) | DE — subtrair do EV para chegar ao equity | Alta — desde 2019 obrigatório |
-| Provisões de reestruturação | DE — se material e provável | Média |
-| Obrigações previdenciárias não cobertas (CPC 33) | DE — deficit atuarial | Baixa — raro em mid-market |
-| Passivos contingentes (provisão para processos) | Analisar caso a caso | Alta — comum em BR |
+| Passivo de arrendamento (CPC 06 R2) | DE: subtrair do EV para chegar ao equity | Alta, desde 2019 obrigatório |
+| Provisões de reestruturação | DE: se material e provável | Média |
+| Obrigações previdenciárias não cobertas (CPC 33) | DE: deficit atuarial | Baixa, raro em mid-market |
+| Passivos contingentes (provisão para processos) | Analisar caso a caso | Alta, comum em BR |
 | Receita diferida (se exigir entrega futura significativa) | Pode ser DE | Baixa |
 
 **Passivos de arrendamento CPC 06 R2:**
@@ -109,16 +109,16 @@ Validação: IC(financiamento) deve incluir passivo de arrendamento como DE
 
 ---
 
-## 7. Equivalentes de Patrimônio (Equity Equivalents — EE)
+## 7. Equivalentes de Patrimônio (Equity Equivalents, EE)
 
 São reservas contábeis que representam capital próprio econômico mas são classificadas fora do PL contábil.
 
 | Item | Tratamento | Relevância Mid-Market BR |
 |---|---|---|
-| Passivo de IR diferido líquido | EE — adicionar ao PL | Alta |
+| Passivo de IR diferido líquido | EE: adicionar ao PL | Alta |
 | Ativo de IR diferido | Diminui EE (ou é ativo não operacional se de origem financeira) | Média |
 | Goodwill amortizado acumulado (pré-IFRS) | EE | Baixa (histórico antigo) |
-| Reservas de AFAC (adiantamentos para futuro aumento de capital) | EE | Média — comum em empresas fechadas BR |
+| Reservas de AFAC (adiantamentos para futuro aumento de capital) | EE | Média, comum em empresas fechadas BR |
 
 **IR diferido:**
 ```

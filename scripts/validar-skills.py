@@ -13,16 +13,17 @@ import os
 import re
 import sys
 
-# Os limites de descrição são os de CONVENCOES.md §5, que já eram a regra da casa — este script
+# Os limites de descrição são os de CONVENCOES.md §5, que já eram a regra da casa. Este script
 # só passou a aplicá-la. Mudou lá, mude aqui.
 MIN_DESC = 220          # abaixo disso a skill é vaga demais e não dispara
 MAX_DESC = 380          # acima disso desperdiça contexto em toda sessão
 MAX_LINHAS = 300        # corpo do SKILL.md; acima disso, mover para references/
 MAX_SKILLS_PLUGIN = 12  # acima disso o plugin passa de ~1 mil tokens always-on
 
-# A lista de nomes de cliente NÃO vive neste arquivo, e não pode viver: o repositório é público,
-# e uma relação da carteira da firma versionada aqui seria o mesmo vazamento que este script existe
-# para impedir. Ela fica em `clientes.local.txt` na raiz — um nome por linha, ignorado pelo git.
+# A lista de nomes de cliente NÃO vive neste arquivo, e não pode viver: o portal gerado deste
+# repositório é público, e uma relação da carteira da firma versionada aqui seria o mesmo vazamento
+# que este script existe para impedir. Ela fica em `clientes.local.txt` na raiz, um nome por linha,
+# ignorado pelo git.
 # Sem esse arquivo o script roda e avisa que a checagem de cliente não foi executada.
 ARQUIVO_CLIENTES = "clientes.local.txt"
 
@@ -74,7 +75,7 @@ def validar(raiz):
     clientes = carregar_clientes(raiz)
     if clientes is None:
         avisos.append(
-            f"{ARQUIVO_CLIENTES} não encontrado na raiz — a checagem de nome de cliente NÃO rodou. "
+            f"{ARQUIVO_CLIENTES} não encontrado na raiz, e a checagem de nome de cliente NÃO rodou. "
             "Crie o arquivo (um nome por linha) para que ela passe a valer nesta máquina."
         )
 
@@ -96,7 +97,7 @@ def validar(raiz):
 
         desc = campos.get("description", "")
         if not desc:
-            erros.append(f"{rel}: sem `description` — é o que o Claude usa para rotear.")
+            erros.append(f"{rel}: sem `description`, que é o que o Claude usa para rotear.")
         elif len(desc) > MAX_DESC:
             erros.append(
                 f"{rel}: description com {len(desc)} caracteres (teto {MAX_DESC}). "
@@ -105,7 +106,7 @@ def validar(raiz):
         elif len(desc) < MIN_DESC:
             avisos.append(
                 f"{rel}: description com {len(desc)} caracteres (mínimo {MIN_DESC}). "
-                "Vaga demais tende a não disparar — acrescente gatilhos concretos."
+                "Vaga demais tende a não disparar. Acrescente gatilhos concretos."
             )
 
         n_linhas = len(corpo.splitlines())

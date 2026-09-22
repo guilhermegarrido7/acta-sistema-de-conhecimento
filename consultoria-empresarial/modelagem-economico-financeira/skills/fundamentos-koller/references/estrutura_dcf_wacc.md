@@ -1,6 +1,6 @@
 # Estrutura do DCF, WACC e Valor Terminal
 
-## 1. Enterprise DCF — Fluxo Completo
+## 1. Enterprise DCF: fluxo completo
 
 ```
 Período Explícito (5–10 anos)
@@ -74,7 +74,7 @@ t = alíquota marginal de imposto (34% no Brasil para IR+CSLL)
 Ke = custo do equity (CAPM ou build-up)
 ```
 
-### Custo do Equity (Ke) — CAPM
+### Custo do Equity (Ke) pelo CAPM
 
 ```
 Ke = Rf + β × (Rm − Rf) + Prêmio_país (se aplicável)
@@ -100,7 +100,7 @@ Usar estrutura-alvo (não corrente se distorcida por ciclo ou aquisição). Para
 Alternativa ao WACC quando a estrutura de capital muda significativamente ao longo do tempo (ex: LBO, aquisição alavancada).
 
 ```
-APV = VP(FCF descontado ao Ku — custo do equity sem alavancagem)
+APV = VP(FCF descontado ao Ku, custo do equity sem alavancagem)
     + VP(Escudos Fiscais da dívida)
 
 Ku = Ke desalavancado = custo do equity para empresa 100% equity
@@ -120,22 +120,22 @@ VP(Escudos Fiscais) depende da política de endividamento:
 
 ```
 Valor das Operações (VP FCFs + VP VT)
-(+) Caixa e equivalentes (excedente — acima do mínimo operacional)
+(+) Caixa e equivalentes (excedente, acima do mínimo operacional)
 (+) Aplicações financeiras de curto prazo
 (+) Participações em coligadas/JVs (avaliar separadamente)
 (+) Outros ativos não operacionais (imóveis não utilizados, créditos fiscais não operacionais)
 = Enterprise Value
 
 (−) Dívidas financeiras (CP + LP, valor de mercado)
-(−) Passivos de arrendamento (CPC 06 R2) — valor contábil do passivo
-(−) Obrigações previdenciárias não cobertas (CPC 33) — deficit atuarial
+(−) Passivos de arrendamento (CPC 06 R2), valor contábil do passivo
+(−) Obrigações previdenciárias não cobertas (CPC 33), deficit atuarial
 (−) Passivos contingentes material (processos judiciais provisionados)
 (−) Outras obrigações assemelhadas a dívida
 
 = Equity Value (100%)
 ```
 
-**Em M&A:** o preço de transação em base "cash free / debt free" (CFDF) implica ajustar pelo caixa e dívida na data de fechamento — mecanismo de preço de compra (PPC).
+**Em M&A:** o preço de transação em base "cash free / debt free" (CFDF) implica ajustar pelo caixa e dívida na data de fechamento, pelo mecanismo de preço de compra (PPC).
 
 ---
 

@@ -1,4 +1,4 @@
-# ACTA — Sistema de Conhecimento
+# ACTA: Sistema de Conhecimento
 
 Marketplace privado de plugins do Claude Code com a metodologia da ACTA Advisory. Um plugin por tipo
 de projeto, organizado pelas duas práticas da firma.
@@ -9,7 +9,7 @@ de projeto, organizado pelas duas práticas da firma.
 ## Estrutura
 
 ```
-ACTA — Sistema de Conhecimento
+ACTA: Sistema de Conhecimento
 │
 ├── Fundação
 │   └── acta-way ✅ ...................... método transversal a toda a firma
@@ -40,7 +40,7 @@ ACTA — Sistema de Conhecimento
     └── ESG
 ```
 
-✅ = tem conteúdo e está no marketplace. Os demais são esqueleto — ver
+✅ = tem conteúdo e está no marketplace. Os demais são esqueleto. Ver
 [docs/ROADMAP.md](docs/ROADMAP.md) para o status e [docs/MAPEAMENTO.md](docs/MAPEAMENTO.md) para o
 desenho alvo de cada um e a ordem em que serão escritos.
 
@@ -69,13 +69,13 @@ contexto de quem não está naquele projeto.
 O raciocínio completo, com os números que sustentam a decisão, está em
 **[docs/ARQUITETURA.md](docs/ARQUITETURA.md)**.
 
-As regras que todo plugin segue — placeholders de pasta, a regra de perguntar em vez de presumir,
-formato de frontmatter, onde vive cada camada — estão em **[CONVENCOES.md](CONVENCOES.md)**.
+As regras que todo plugin segue (placeholders de pasta, a regra de perguntar em vez de presumir,
+formato de frontmatter, onde vive cada camada) estão em **[CONVENCOES.md](CONVENCOES.md)**.
 
 ## Instalação
 
 **`acta-way` é pré-requisito de todo projeto.** O manifesto de plugin do Claude Code não tem campo
-de dependência — nenhum `plugin.json` consegue forçar a instalação de outro. Instale sempre primeiro,
+de dependência: nenhum `plugin.json` consegue forçar a instalação de outro. Instale sempre primeiro,
 manualmente, senão o checkpoint e o resto do método comum não existem na sua sessão.
 
 ```bash
@@ -97,17 +97,17 @@ claude plugin install acta-pesquisa-salarial@acta-sistema-de-conhecimento --scop
 ```
 
 Só plugins com conteúdo entram no marketplace. Um plugin em esqueleto existe no repositório mas não
-é instalável até ter metodologia escrita — evita que alguém instale casca vazia.
+é instalável até ter metodologia escrita, o que evita que alguém instale casca vazia.
 
 ## Material de referência solto
 
 `evitar-escrita-de-IA/` guarda a skill pública [avoid-ai-writing](https://agentskills.io) (Conor
-Bronsdon, MIT) — ajuda a revisar texto para remover padrões característicos de escrita de IA. É
+Bronsdon, MIT), ajuda a revisar texto para remover padrões característicos de escrita de IA. É
 genérica, não específica de um projeto ACTA.
 
 **Ainda não é um plugin instalável.** Não tem `.claude-plugin/plugin.json`, não está listada no
 `marketplace.json`, e não é auto-descoberta por `claude plugin install`. Fica aqui como referência
-até alguém decidir formalizá-la — nesse caso, seguir a convenção de `fundacao/acta-way`.
+até alguém decidir formalizá-la. Nesse caso, seguir a convenção de `fundacao/acta-way`.
 
 ## Contribuindo
 

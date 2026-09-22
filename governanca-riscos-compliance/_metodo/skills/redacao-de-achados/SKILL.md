@@ -25,7 +25,7 @@ em clientes diferentes, e é o que o sócio responsável espera encontrar ao rev
 
 ## 1. Pontuação: vírgula, nunca travessão
 
-**Não use travessão**, nem o longo (—) nem o médio (–), como conectivo, aposto ou pausa. Use
+**Não use travessão**, nem o longo (&mdash;) nem o médio (&ndash;), como conectivo, aposto ou pausa. Use
 vírgula, ou dois pontos quando o que vem depois é definição ou lista, ou reescreva a frase. Vale
 para todo texto de entregável e também para a conversa no chat.
 
@@ -33,9 +33,9 @@ O hífen continua normal onde a ortografia pede e em intervalos (itens 4.5.8 e 4
 
 | Em vez de | Escreva |
 |---|---|
-| 1.412 compras, R$ 742.300,00 — 4,6× o esperado | 1.412 compras, R$ 742.300,00, ou 4,6 vezes o esperado |
-| A política cita a homologação — porém não existe o processo | A política cita a homologação, porém não existe o processo |
-| Cartões corporativos — natureza e controles | Cartões corporativos: natureza e controles |
+| 1.412 compras, R$ 742.300,00 &mdash; 4,6× o esperado | 1.412 compras, R$ 742.300,00, ou 4,6 vezes o esperado |
+| A política cita a homologação &mdash; porém não existe o processo | A política cita a homologação, porém não existe o processo |
+| Cartões corporativos &mdash; natureza e controles | Cartões corporativos: natureza e controles |
 
 ## 2. Pessoa, tempo e voz
 

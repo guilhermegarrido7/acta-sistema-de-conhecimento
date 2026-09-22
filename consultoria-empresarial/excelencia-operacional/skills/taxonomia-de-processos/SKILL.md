@@ -6,8 +6,8 @@ description: Classifique o ciclo nos cinco níveis de modelagem e codifique proc
 # Taxonomia de processos
 
 Carregue `acta-way` antes desta skill: ambiente técnico, convenções de entregável e o protocolo de
-checkpoint valem aqui integralmente e **não** são repetidos. O método de prática — diagnóstico,
-entrevista, desenho TO BE, priorização — virá de `acta-metodo-consultoria`; enquanto esse plugin for
+checkpoint valem aqui integralmente e **não** são repetidos. O método de prática (diagnóstico,
+entrevista, desenho TO BE, priorização) virá de `acta-metodo-consultoria`; enquanto esse plugin for
 esqueleto, o que esta skill precisa dele está dito aqui e em mais nada.
 
 ## Papel desta skill
@@ -17,7 +17,7 @@ classificado: sem isso, um workshop discute objetivo de tarefa achando que discu
 fluxograma mistura decisão de negócio com clique de sistema, e o manual final não tem nível de
 detalhe constante de um capítulo para o outro.
 
-O erro mais caro do mapeamento não é desenhar errado — é desenhar **no nível errado**, e só perceber
+O erro mais caro do mapeamento é desenhar **no nível errado**, e só perceber
 quando o cliente diz, no workshop, que aquilo "é muito raso" ou "é minúcia demais".
 
 ## 1. Os cinco níveis
@@ -31,7 +31,7 @@ quando o cliente diz, no workshop, que aquilo "é muito raso" ou "é minúcia de
 | 5 | Tarefa | O "como fazer": POP, manual passo a passo, instrução de trabalho. | Execução |
 
 **Âncora:** o **APQC Process Classification Framework** é a referência de mercado para hierarquia de
-processos — ele contribui o vocabulário e a ideia de categorias/grupos/processos/atividades como
+processos. Ele contribui o vocabulário e a ideia de categorias/grupos/processos/atividades como
 níveis estáveis e comparáveis entre empresas. A ACTA usa a mesma lógica de níveis, com a nomenclatura
 acima, que é a que o cliente mid-market brasileiro reconhece.
 
@@ -39,7 +39,7 @@ acima, que é a que o cliente mid-market brasileiro reconhece.
 
 Um mandato de mapeamento de ciclo (PTP, OTC, RTR, HTR) contrata **níveis 2 a 4**: o macroprocesso
 inteiro, quebrado em subprocessos, cada um com fluxograma de atividades. O **nível 5 é escopo à
-parte** — POP por tarefa multiplica o esforço e quase nunca cabe no mesmo prazo. Diga isso na
+parte**: POP por tarefa multiplica o esforço e quase nunca cabe no mesmo prazo. Diga isso na
 proposta, não no meio do projeto.
 
 ### Três testes para decidir o nível de um item
@@ -55,7 +55,7 @@ proposta, não no meio do projeto.
 
 **Âncora:** **BPMN 2.0 (OMG)** é a notação padrão de modelagem de processos de negócio; ela contribui
 a semântica dos elementos (evento, atividade, gateway, raia) e a garantia de que o desenho é legível
-por qualquer analista treinado. A ACTA usa um **subconjunto** dela — o suficiente para o cliente ler
+por qualquer analista treinado. A ACTA usa um **subconjunto** dela, o suficiente para o cliente ler
 sem treinamento e não o bastante para virar exercício de notação.
 
 Duas regras que vão em toda legenda entregue ao cliente:
@@ -67,12 +67,12 @@ Duas regras que vão em toda legenda entregue ao cliente:
 |---|---|
 | Eventos | início · término · tempo/espera (marca SLA) · mensagem (e-mail) · fim por mensagem |
 | Atividades | Tarefa · Tarefa manual (marcador `M`) · Atividade automática (integração entre sistemas, sem ação humana) · Subprocesso |
-| Decisões | Losango, **com a condicionante escrita dentro ou ao lado** — losango sem pergunta não é decisão, é enfeite |
+| Decisões | Losango, **com a condicionante escrita dentro ou ao lado**; losango sem pergunta não é decisão, é enfeite |
 | Conexões | Sequência · Associação · Conector `A`/`B` para continuar o fluxo em outra faixa ou slide · Anotação |
 | Estrutura | **Raias = áreas ou atores** · logos de sistema dentro das caixas |
 
-A legenda completa, com a explicação em linguagem leiga de cada símbolo — a que se projeta no
-primeiro slide do workshop —, está em `references/notacao-bpmn-simplificada.md`.
+A legenda completa, com a explicação em linguagem leiga de cada símbolo (a que se projeta no
+primeiro slide do workshop), está em `references/notacao-bpmn-simplificada.md`.
 
 O que **não** se usa: gateway paralelo/inclusivo, evento intermediário de compensação, pool múltiplo,
 sinalização de erro. Se o processo real precisa deles, ele é exceção e se descreve em anotação de
@@ -87,7 +87,7 @@ treinamento sem ambiguidade, e é o que faz o manual final ter índice remissivo
 alta. Exemplos de derivação: Política → `POL`, Cadastro → `CAD`, Medição → `MED`, Recebimento →
 `REC`.
 
-**Regra de negócio.** `<PREFIXO>.<NN>` — prefixo do subprocesso + sequencial de dois dígitos:
+**Regra de negócio.** `<PREFIXO>.<NN>`: prefixo do subprocesso + sequencial de dois dígitos:
 `POL.01`, `CAD.01`, `MED.07`, `REC.12`.
 
 Três regras de higiene:
@@ -107,14 +107,14 @@ Artefato de **duas vidas**: é o mapa mural que abre todo workshop e é o índic
 O que ela mostra:
 
 - Os processos do ciclo em colunas ou faixas, e os subprocessos dentro de cada um.
-- O **fora de escopo marcado em amarelo** — visível, nomeado, no mesmo mapa. Esta é a decisão de
+- O **fora de escopo marcado em amarelo**: visível, nomeado, no mesmo mapa. Esta é a decisão de
   desenho mais útil do artefato: escopo negativo que fica pendurado num anexo de proposta é escopo
   que vai ser cobrado depois; escopo negativo impresso na parede, que o cliente olha o dia inteiro,
   é escopo acordado.
 - O prefixo de codificação de cada subprocesso, discreto, junto ao nome.
 
 É **artefato vivo**: sai do diagnóstico como hipótese, é criticado no primeiro workshop, e reemite a
-cada rodada. Quando um subprocesso se revela dois, a matriz muda — e a mudança é registrada, porque
+cada rodada. Quando um subprocesso se revela dois, a matriz muda, e a mudança é registrada, porque
 ela altera o esforço contratado.
 
 Ao abrir o dia, a matriz é o primeiro slide e o facilitador marca nela onde o grupo está. Grupo que
@@ -125,7 +125,7 @@ perde a noção de onde está no ciclo discute o mesmo assunto duas vezes.
 `AAAAMMDD_WS<n>_<Projeto>_<NomeDoProcesso>[_v<Versão>]`
 
 O sufixo **`vPósWS`** marca o material reemitido depois do workshop, com os resultados da crítica já
-incorporados. É a única versão que alimenta o manual — material pré-workshop nunca entra no
+incorporados. É a única versão que alimenta o manual. Material pré-workshop nunca entra no
 entregável final, por mais bonito que esteja.
 
 `<Projeto>` é o codinome do mandato, nunca o nome do cliente. Ver `acta-way` para a convenção geral de

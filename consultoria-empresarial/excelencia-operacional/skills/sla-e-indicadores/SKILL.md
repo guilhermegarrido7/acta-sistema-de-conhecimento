@@ -1,13 +1,13 @@
 ---
 name: sla-e-indicadores
-description: Monte o quadro de duas colunas — sugestões da consultoria × definição do workshop — com indicador principal, secundários e governança. Acionar ao propor SLA e metas de um subprocesso, ao escrever a definição operacional de um indicador, ao posicionar caixas de SLA no fluxograma, ou ao registrar o que foi acordado em sala.
+description: Monte o quadro de duas colunas (sugestões da consultoria × definição do workshop) com indicador principal, secundários e governança. Acionar ao propor SLA e metas de um subprocesso, ao escrever a definição operacional de um indicador, ao posicionar caixas de SLA no fluxograma, ou ao registrar o que foi acordado em sala.
 ---
 
 # SLA e indicadores
 
 Carregue `acta-way` antes desta skill: convenções de entregável, identidade visual e o protocolo de
-checkpoint valem aqui e **não** são repetidos. O método de prática — construção de painel, rituais de
-gestão, gestão de desempenho — virá de `acta-metodo-consultoria`; enquanto esse plugin for esqueleto,
+checkpoint valem aqui e **não** são repetidos. O método de prática (construção de painel, rituais de
+gestão, gestão de desempenho) virá de `acta-metodo-consultoria`; enquanto esse plugin for esqueleto,
 o que esta skill assume dele está dito aqui.
 
 O posicionamento das caixas de SLA no desenho é de `fluxo-e-regras-de-negocio`; o conteúdo do que
@@ -17,13 +17,13 @@ está escrito dentro delas é desta skill. A folha 3 do A3 e a dinâmica de sala
 ## Papel desta skill
 
 O SLA é o que faz o processo mapeado ser cobrável. Sem ele, o manual descreve como se faz e ninguém
-consegue dizer se foi bem feito — e um processo que não se consegue avaliar é um processo que volta a
+consegue dizer se foi bem feito, e um processo que não se consegue avaliar é um processo que volta a
 degradar assim que o projeto termina.
 
 A regra que governa tudo o que vem abaixo:
 
 > **Indicador sem definição operacional não é indicador, é intenção.** Se duas pessoas apuram o mesmo
-> indicador e chegam a números diferentes, a definição está incompleta — e o problema é da definição,
+> indicador e chegam a números diferentes, a definição está incompleta, e o problema é da definição,
 > nunca de quem apurou.
 
 ## 1. O padrão de duas colunas
@@ -36,7 +36,7 @@ O quadro do subprocesso é dividido ao meio, e as duas metades convivem no mater
 
 Por que lado a lado, e não substituição: **o registro do sugerido ao lado do decidido é o que torna a
 homologação auditável.** Quando, meses depois, a meta não é atingida e alguém pergunta de onde ela
-veio, as duas redações estão no mesmo slide — a proposta técnica e a decisão do cliente, com data. A
+veio, as duas redações estão no mesmo slide: a proposta técnica e a decisão do cliente, com data. A
 diferença entre as colunas é informação de gestão, não rascunho a ser apagado.
 
 É o mesmo mecanismo de `DESCRIÇÃO SUGERIDA` × `DESCRIÇÃO APROVADA` nas regras de negócio, aplicado a
@@ -50,11 +50,11 @@ vez do mais útil.
 
 Ambas as colunas têm a mesma estrutura, na mesma ordem.
 
-### Bloco 1 — INDICADOR PRINCIPAL
+### Bloco 1: INDICADOR PRINCIPAL
 
 **Um só.** Nome, meta e **definição operacional entre parênteses**.
 
-> **Prazo médio de atendimento da solicitação — meta: até 10 dias úteis**
+> **Prazo médio de atendimento da solicitação, meta: até 10 dias úteis**
 > (contado da data de abertura da solicitação no sistema até a data de conclusão registrada;
 > população: todas as solicitações encerradas no mês, incluindo as canceladas pelo solicitante;
 > exclui período de suspensão por pendência do solicitante.)
@@ -62,7 +62,7 @@ Ambas as colunas têm a mesma estrutura, na mesma ordem.
 A definição operacional responde a três perguntas, e as três são obrigatórias:
 
 1. **De onde sai o número.** Qual sistema, qual campo, qual relatório. "Do ERP" não é resposta.
-2. **Qual população.** O que entra na conta e o que fica de fora — e a exclusão é sempre nomeada. A
+2. **Qual população.** O que entra na conta e o que fica de fora, e a exclusão é sempre nomeada. A
    maior parte das divergências de apuração mora aqui.
 3. **Qual recorte de tempo.** Data de abertura ou data de encerramento, mês de competência ou mês de
    caixa, dias corridos ou dias úteis.
@@ -70,9 +70,9 @@ A definição operacional responde a três perguntas, e as três são obrigatór
 Um indicador principal por subprocesso, porque é o que o dono do processo responde quando lhe
 perguntam se o processo vai bem. Dois principais é nenhum principal.
 
-### Bloco 2 — SECUNDÁRIOS
+### Bloco 2: SECUNDÁRIOS
 
-**De três a cinco métricas**, cada uma com a mesma disciplina de definição — mais enxuta, mas com
+**De três a cinco métricas**, cada uma com a mesma disciplina de definição, mais enxuta, mas com
 fonte, população e recorte declarados.
 
 Menos de três não cobre o subprocesso; mais de cinco vira painel que ninguém olha e cuja apuração
@@ -82,18 +82,18 @@ Os secundários existem para **explicar o principal quando ele piora**. Prazo m�
 foi retrabalho, foi uma etapa específica? Se os secundários não respondem a essa pergunta, eles foram
 escolhidos por disponibilidade e não por utilidade.
 
-**Âncora — indicador de esforço/entrega × indicador de resultado.** Volume processado, horas gastas e
+**Âncora: indicador de esforço/entrega × indicador de resultado.** Volume processado, horas gastas e
 número de solicitações são **esforço**: dizem quanto se trabalhou. Prazo cumprido, taxa de
 retrabalho, percepção do solicitante e custo por transação são **resultado**: dizem o que se
 entregou. Um conjunto só de esforço mede atividade e chama de desempenho. O principal é quase sempre
 de resultado; os secundários equilibram os dois, e os de esforço servem para contextualizar, não para
 avaliar.
 
-### Bloco 3 — MEDIÇÃO & GOVERNANÇA
+### Bloco 3: MEDIÇÃO & GOVERNANÇA
 
 Duas informações, sempre:
 
-- **Frequência de apuração** — diária, semanal, mensal, por ciclo de fechamento. A frequência
+- **Frequência de apuração**: diária, semanal, mensal, por ciclo de fechamento. A frequência
   acompanha a velocidade do processo: indicador de processo diário apurado trimestralmente não
   permite correção.
 - **Responsável, sempre por cargo.** "Coordenador de Suprimentos", "Controller", "Supervisor de
@@ -101,7 +101,7 @@ Duas informações, sempre:
 
 A regra do cargo não é formalidade. Indicador com dono nomeado por pessoa morre na primeira troca de
 time, e a troca acontece dentro do horizonte do manual. Por cargo, a responsabilidade transfere
-sozinha — e é a mesma convenção que `coleta-e-diagnostico` aplica à coluna `FONTE SUGERIDA`.
+sozinha, e é a mesma convenção que `coleta-e-diagnostico` aplica à coluna `FONTE SUGERIDA`.
 
 Declare também, quando houver, **o ritual onde o indicador é lido**: a reunião em que o número é
 apresentado. Indicador apurado e não lido é custo sem gestão.
@@ -123,7 +123,7 @@ Convenções:
 - **Um SLA por etapa crítica, não por caixa.** Etapa crítica é aquela onde o processo espera. SLA em
   toda caixa polui o desenho e dilui a cobrança.
 - **A soma dos SLAs de etapa conversa com o SLA ponta a ponta.** Se somar mais que o prazo total
-  prometido, um dos dois está errado — e é a checagem que quase ninguém faz.
+  prometido, um dos dois está errado, e é a checagem que quase ninguém faz.
 - **Todo SLA inline tem indicador correspondente no quadro.** É a terceira das checagens de
   consistência de `fluxo-e-regras-de-negocio`. Prazo desenhado que ninguém mede é promessa.
 
@@ -133,13 +133,13 @@ Quase todo fluxo de atendimento termina com **"realiza avaliação de qualidade 
 1–5)"**, e a métrica dela entra no quadro ao lado do tempo.
 
 Por que ela não é opcional: prazo mede se a entrega chegou na hora; percepção mede se ela resolveu. Um
-processo pode cumprir 100% do SLA e ser considerado ruim por quem o usa — e sem a avaliação, essa
+processo pode cumprir 100% do SLA e ser considerado ruim por quem o usa, e sem a avaliação essa
 informação só chega por reclamação em reunião de diretoria.
 
 A definição operacional da avaliação exige os mesmos três elementos, e o segundo é onde ela costuma
 falhar: **qual população**. Média de nota calculada só sobre quem respondeu, com 12% de resposta,
 mede quem respondeu. Declare a taxa de resposta como métrica secundária obrigatória ao lado da nota
-média — sem ela, a nota não é interpretável.
+média. Sem ela, a nota não é interpretável.
 
 ## 5. Como se constrói a coluna SUGESTÕES
 
@@ -150,23 +150,23 @@ média — sem ela, a nota não é interpretável.
    não exista.
 3. **Teste a fonte antes de sugerir.** Indicador cuja apuração exige um dado que o sistema não
    registra é proposta de projeto de TI travestida de meta. Se a fonte não existe, diga isso na
-   sugestão — a oportunidade correspondente vai para `oportunidades-e-quick-wins`.
+   sugestão. A oportunidade correspondente vai para `oportunidades-e-quick-wins`.
 4. **Proponha meta, não só métrica.** Métrica sem meta devolve ao grupo a parte difícil. Meta
-   sugerida ancora a discussão, e o grupo move o número — o movimento é o dado.
+   sugerida ancora a discussão, e o grupo move o número; o movimento é o dado.
 5. **Ancore a meta no histórico quando houver.** "Reduzir de 18 para 10 dias úteis" é discutível;
    "até 10 dias úteis", sem referência, é arbitrário.
 
-A biblioteca de indicadores usuais por ciclo — PTP, OTC, RTR, HTR — com definição operacional
+A biblioteca de indicadores usuais por ciclo (PTP, OTC, RTR, HTR), com definição operacional
 modelo, está em `references/biblioteca-de-indicadores.md`.
 
 ## 6. O que a sala decide, e como se registra
 
 Na folha 3 do A3, a coluna SUGESTÕES vai impressa e a DEFINIÇÃO WORKSHOP vai vazia. O grupo pode:
 
-- **aceitar** a sugestão como está — registra-se igual, e a igualdade é informação;
-- **mover a meta** — registra-se o número acordado, e o motivo em anotação;
-- **trocar o indicador** — registra-se o novo, com definição operacional escrita ali, na hora;
-- **recusar sem substituir** — registra-se a recusa e o subprocesso fica sem aquele indicador, o que
+- **aceitar** a sugestão como está: registra-se igual, e a igualdade é informação;
+- **mover a meta**: registra-se o número acordado, e o motivo em anotação;
+- **trocar o indicador**: registra-se o novo, com definição operacional escrita ali, na hora;
+- **recusar sem substituir**: registra-se a recusa e o subprocesso fica sem aquele indicador, o que
   é uma decisão do cliente e precisa estar visível.
 
 Três cuidados de facilitação:
@@ -176,7 +176,7 @@ Três cuidados de facilitação:
 2. **Meta acordada precisa de responsável por cargo dito em voz alta na sala.** Meta sem dono
    declarado é meta de ninguém.
 3. **Meta impossível hoje é meta com data.** Se o grupo aceita 10 dias mas o processo faz 25,
-   registre a meta e a trajetória — não registre a meta sozinha, porque ela nasce descumprida.
+   registre a meta e a trajetória. Não registre a meta sozinha, porque ela nasce descumprida.
 
 ## O que entregar
 

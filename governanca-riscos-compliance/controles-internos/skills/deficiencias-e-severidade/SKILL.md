@@ -21,7 +21,7 @@ A fronteira é explícita e não se atravessa nos dois sentidos:
 | a régua `ALTA` · `MÉDIA` · `BAIXA` do relatório de auditoria interna | quem precisa ser comunicado, e em que instrumento |
 
 Em uma frase: **a redação do ponto é lá; a classificação de severidade é aqui.** As duas réguas
-convivem e não são a mesma — o §6 faz a ponte entre elas, e é o ponto em que a maioria dos trabalhos
+convivem e não são a mesma; o §6 faz a ponte entre elas, e é o ponto em que a maioria dos trabalhos
 mistura as coisas.
 
 ## 1. O que é deficiência de controle
@@ -55,14 +55,14 @@ não funcionando é, no mínimo, deficiência significativa). Três níveis, e n
 - **Magnitude potencial.** Não o erro que ocorreu, mas o **maior erro que poderia ocorrer** por
   aquela falha. A pergunta é sobre exposição, não sobre histórico: qual é o volume de transações que
   passa pelo controle, e qual valor por transação.
-- **Probabilidade.** A chance de o erro ocorrer e não ser detectado. O padrão é *chance razoável* —
+- **Probabilidade.** A chance de o erro ocorrer e não ser detectado. O padrão é *chance razoável*,
   não "provável", não "certo". O limiar é baixo de propósito, e a tentação de lê-lo como "provável"
   é o que mais desclassifica deficiência para baixo.
 
 **Controles compensatórios entram na avaliação da probabilidade, e só valem se forem testados.**
 Alegar que outro controle captura o erro sem ter testado esse outro controle é rebaixar severidade
 por hipótese. Se o compensatório foi testado e é eficaz, ele reduz a probabilidade e pode baixar o
-nível — e isso se registra, com o código do controle compensatório.
+nível, e isso se registra, com o código do controle compensatório.
 
 **Indicadores que puxam para fraqueza material,** independentemente do resto da avaliação:
 
@@ -88,18 +88,18 @@ O procedimento, e é procedimento, não leitura:
    simultaneamente, qual é o maior erro que poderia atravessar sem ser detectado naquela asserção?
 3. **Verifique se sobrou algum controle de pé no grupo.** Três deficiências simples em controles que
    cobriam a mesma asserção, sem nenhum controle remanescente eficaz sobre ela, deixam a asserção
-   **descoberta** — e asserção descoberta em conta significativa é, no mínimo, deficiência
+   **descoberta**, e asserção descoberta em conta significativa é, no mínimo, deficiência
    significativa.
 4. **Agregue também por processo e por causa comum.** Deficiências em contas distintas que têm a
    mesma causa-raiz (o mesmo executor sem segregação, o mesmo sistema sem ITGC, a mesma ausência de
    supervisão) formam um grupo, ainda que as asserções sejam diferentes.
 5. **Registre a agregação, não só o resultado.** O ponto agregado cita os códigos das deficiências
-   que o compõem, e cada deficiência individual permanece no memorando com o seu código — agregar
+   que o compõem, e cada deficiência individual permanece no memorando com o seu código; agregar
    não é fundir nem apagar.
 
 **A agregação que mais aparece na prática:** ITGC deficiente somado a controles de aplicação que
 dependem dele. Individualmente, "revisão de acesso não é formalizada" parece deficiência simples;
-agregada aos oito controles automatizados que dependem daquele ambiente, muda de patamar — é a
+agregada aos oito controles automatizados que dependem daquele ambiente, muda de patamar. É a
 conclusão de `itgc`, e ela é conclusão, não ressalva.
 
 **Agregação não é média.** Cinco simples não viram automaticamente uma significativa; a pergunta
@@ -112,13 +112,13 @@ Duas coisas independentes, e confundi-las produz os dois erros opostos:
 | Situação | Existe? | Comentário |
 |---|---|---|
 | Controle deficiente, **sem** erro material no período | sim, e é frequente | a exposição existiu e nada ocorreu. A deficiência permanece: avalia-se o que **poderia** ter passado, não o que passou. "Não houve prejuízo" não é defesa |
-| Erro material, **sem** deficiência de controle | sim, e é raro | o controle operou e o erro veio de fora do seu alcance. Exige demonstração, não alegação — na maioria das vezes o erro que passou revela o controle que faltava |
+| Erro material, **sem** deficiência de controle | sim, e é raro | o controle operou e o erro veio de fora do seu alcance. Exige demonstração, não alegação; na maioria das vezes o erro que passou revela o controle que faltava |
 | Controle deficiente **e** erro ocorrido | sim | o erro é evidência da materialização; entra no ponto como fato, com número exato e referência |
 | Nenhum erro, nenhum controle | não é conclusão | é ausência de teste. Ver `desenho-vs-efetividade` §5 |
 
 A consequência prática mais útil na discussão com o cliente: quando a resposta for *"mas nunca
 aconteceu nada"*, a réplica não é retórica, é metodológica. A escala avalia **chance razoável de erro
-material**, e o histórico limpo de um período informa a probabilidade, não a elimina — sobretudo
+material**, e o histórico limpo de um período informa a probabilidade, não a elimina, sobretudo
 quando o controle que deveria detectar é justamente o que não opera, caso em que o histórico limpo
 pode significar apenas que nada foi detectado.
 
@@ -157,7 +157,7 @@ Três regras de comunicação:
 - **A materialidade precisa estar declarada.** A palavra "material" só significa algo contra um
   número. Em auditoria de demonstrações financeiras ela vem da materialidade do trabalho; em
   diagnóstico de controles de empresa fechada, **acorde e registre um patamar de referência com o
-  cliente** — receita, resultado, patrimônio ou fluxo de caixa do período. Sem patamar declarado,
+  cliente**: receita, resultado, patrimônio ou fluxo de caixa do período. Sem patamar declarado,
   "fraqueza material" é opinião, e a primeira pergunta do cliente derruba o ponto.
 
 **A ponte com a régua de `redacao-de-achados`.** O relatório de auditoria interna da casa comunica
@@ -182,7 +182,7 @@ transforma a classificação técnica em rótulo decorativo.
    (desenho ou operação), asserção afetada, magnitude potencial, probabilidade, nível e razão do
    nível em uma frase.
 2. A análise de agregação por asserção, por conta significativa e por causa comum, com os grupos
-   nomeados e o resultado de cada — inclusive os grupos que **não** subiram de nível.
+   nomeados e o resultado de cada, inclusive os grupos que **não** subiram de nível.
 3. A lista de asserções que ficaram descobertas depois de considerada a agregação.
 4. Os controles compensatórios invocados, cada um com o código e a evidência de que foi **testado**.
 5. O patamar de materialidade adotado, declarado com a base e o valor de referência.

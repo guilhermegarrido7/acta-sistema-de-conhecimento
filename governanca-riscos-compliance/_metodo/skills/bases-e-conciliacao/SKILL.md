@@ -15,7 +15,7 @@ Esta é a **mecânica** da doutrina do número. A skill mãe diz por que o núme
 como fazer ele fechar, arquivo a arquivo.
 
 A razão de ela existir no lugar que ocupa: **quase todo erro de número que chega ao cliente nasce
-aqui**, na leitura e na agregação, não na conclusão. A ordem das seções abaixo não é burocracia — é o
+aqui**, na leitura e na agregação, não na conclusão. A ordem das seções abaixo não é burocracia: é o
 que separa um achado auditável de um número que vai ser retratado.
 
 ## 1. Antes de somar qualquer coisa, entenda o arquivo
@@ -34,7 +34,7 @@ seção, subtotal, total, rodapé repetido de página, linha de continuação?
 
 > O caso que define a regra: num lote de faturas, 48 linhas cuja descrição era literalmente `'R` eram
 > os **totais de cada fatura**. Somadas junto com as compras, inflaram o gasto do cartão em **4,6×**
-> o valor real. Excluídas e capturadas em separado, viraram a base da conciliação — o mesmo dado que
+> o valor real. Excluídas e capturadas em separado, viraram a base da conciliação, e o mesmo dado que
 > destruiria o número passou a prová-lo.
 
 **1.4 Reconcilie contra um total que você não calculou.** O total impresso na fatura, o saldo final
@@ -98,7 +98,7 @@ distintos afetados.
 
 **Meça o resíduo e reporte-o.** Quanto ficou em "outros" ou "não classificado"? Acima de ~5% o
 revisor devolve. Baixar de 10,2% para 0,8% se faz abrindo a lista de estabelecimentos e criando
-categorias reais — nunca inventando um balde maior.
+categorias reais, nunca inventando um balde maior.
 
 **Separe fenômenos que se parecem.** É o padrão de erro mais caro da etapa:
 
@@ -115,7 +115,7 @@ evidência do papel de trabalho.
 ## 4. Cruzamento de duas bases
 
 O casamento valor a valor com **consumo de pool** é o método. Sem consumo, homônimo e repetição
-contam em dobro — foi assim que um fornecedor apareceu com exatamente o dobro do valor real.
+contam em dobro. Foi assim que um fornecedor apareceu com exatamente o dobro do valor real.
 
 ```python
 import collections
@@ -135,14 +135,14 @@ sobra = [x for v in pool.values() for x in v]  # lado B sem par
 
 Depois do casamento, sempre produza **quatro quadros**:
 
-1. **Confronto global** — quantidade e valor de cada lado, a diferença, e o percentual sobre a base
+1. **Confronto global**: quantidade e valor de cada lado, a diferença, e o percentual sobre a base
    maior.
-2. **Quem cada lado registra** — num caso, 97,9% dos lançamentos da base traziam o **banco** como
+2. **Quem cada lado registra**: num caso, 97,9% dos lançamentos da base traziam o **banco** como
    fornecedor, e o estabelecimento real não existia no cadastro. É por isso que aquele canal de gasto
    não aparecia em nenhum teste de Compras.
-3. **Resultado do casamento** — casados, sem contrapartida (com valor e percentual), e a sobra do
+3. **Resultado do casamento**: casados, sem contrapartida (com valor e percentual), e a sobra do
    outro lado.
-4. **Por competência** — a divergência quase nunca é uniforme no tempo, e o mês que destoa é o
+4. **Por competência**: a divergência quase nunca é uniforme no tempo, e o mês que destoa é o
    achado.
 
 **Os quase-pares são achado próprio.** Diferença de centavos entre fatura e sistema (R$ 2.720,16 ×
@@ -157,7 +157,7 @@ em evidência de rigor.
 
 Há universo em que o documento não existe do outro lado e nenhuma chave de documento fecha. O caso
 canônico é o **bem de projeto**: ele nasce do agrupamento de várias notas e é cadastrado pelo valor
-total do movimento, então **não tem nota fiscal própria**. Procurar nota ali produz órfão em massa —
+total do movimento, então **não tem nota fiscal própria**. Procurar nota ali produz órfão em massa,
 e o órfão é falso.
 
 > **A pergunta certa não é "que campos eu tenho", é "como o registro é criado".**
@@ -174,7 +174,7 @@ Três regras que vieram de aprender isso do jeito difícil:
    agregação, e não chave errada. Descartar chave boa custa mais do que testá-la mais uma vez.
 3. **Órfão em massa é suspeita de chave faltando**, não de base incompleta. Se a régua nova
    reetiqueta centenas de linhas **sem mover um centavo** do ajuste, o defeito era de leitura, não de
-   dado — e essa é a assinatura de chave ausente.
+   dado, e essa é a assinatura de chave ausente.
 
 **Chave nova entra como passada terminal**, depois das anteriores, nunca afrouxando parâmetro de
 régua já rodada: afrouxar altera todo par já casado e desfaz, em silêncio, casamento que estava
@@ -187,7 +187,7 @@ Não é checklist a cumprir cego. Escolha o que a base sustenta e **diga o que n
 **Inventário e segregação.** Quantos instrumentos (cartões, contas, usuários)? Quem é titular, quem
 gasta, quem paga, quem aprova? A separação entre quem paga e quem gasta é achado forte: um titular
 com zero compras e apenas os débitos automáticos da fatura significa que **quem paga não é quem
-gasta** — e o nome pode não estar nem na base de colaboradores.
+gasta**, e o nome pode não estar nem na base de colaboradores.
 
 **Contorno de processo.** Quanto do valor caiu em naturezas que exigiriam requisição, cotação, pedido
 e recebimento? Num mandato, 53,9% do valor em 946 compras. É a quantificação do bypass, e costuma ser
@@ -216,12 +216,12 @@ reportar qualquer número.
 
 Diga sempre: universo, tamanho, critério de seleção e por quê. Os critérios em uso:
 
-- **Dirigida por risco** — maiores valores, naturezas sensíveis, fornecedor sem contrato, favorecido
+- **Dirigida por risco**: maiores valores, naturezas sensíveis, fornecedor sem contrato, favorecido
   divergente.
-- **Por classe ou canal** — 5 a 10 por tipo, quando o objetivo é entender o processo.
-- **Volumétrica** — quantidade fixa por teste, calibrada pela régua frequência × risco de
+- **Por classe ou canal**: 5 a 10 por tipo, quando o objetivo é entender o processo.
+- **Volumétrica**: quantidade fixa por teste, calibrada pela régua frequência × risco de
   `programa-de-testes`.
-- **Universo completo** — quando é contável, conte tudo. Não amostre o que dá para fechar a 100%.
+- **Universo completo**: quando é contável, conte tudo. Não amostre o que dá para fechar a 100%.
 
 ## O que entregar
 

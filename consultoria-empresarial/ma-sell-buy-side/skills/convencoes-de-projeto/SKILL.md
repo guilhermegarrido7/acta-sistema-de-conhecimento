@@ -1,6 +1,6 @@
 ---
 name: convencoes-de-projeto
-description: Aplicar as convenções de um mandato de M&A — árvore de pastas pela ordem do processo, nomenclatura datada e versionada, quarentena de legado, codinome de projeto e propagação do entregável para o benchmarking do mandato seguinte. Acionar ao abrir mandato, ao nomear ou versionar arquivo, ou ao organizar a pasta do projeto.
+description: Aplicar as convenções de um mandato de M&A (árvore de pastas pela ordem do processo, nomenclatura datada e versionada, quarentena de legado, codinome de projeto e propagação do entregável para o benchmarking do mandato seguinte). Acionar ao abrir mandato, ao nomear ou versionar arquivo, ou ao organizar a pasta do projeto.
 ---
 
 # Convenções de um mandato de M&A
@@ -11,7 +11,7 @@ Direciona a organização do mandato. Não move nem renomeia arquivo sem confirm
 mandato em andamento é memória compartilhada da equipe, e reorganização silenciosa destrói rastro.
 
 **O mecanismo genérico não vive aqui.** `CLAUDE.md`, `CHECKPOINT.md`, `Sessoes/` e `APRENDIZADOS.md`
-são de `acta-way`, skill `checkpoint` — carregue-a para isso. Esta skill cobre apenas o que é próprio
+são de `acta-way`, skill `checkpoint`. Carregue-a para isso. Esta skill cobre apenas o que é próprio
 de um mandato de M&A.
 
 > Se `acta-way` não estiver instalado, **avise o usuário** em vez de improvisar o protocolo de
@@ -24,7 +24,7 @@ estrutura societária do alvo.
 
 Essa é a decisão estrutural que mais separa um mandato bem executado de um malconduzido. Organizar
 por entidade jurídica (uma pasta por empresa do grupo, com o processo replicado dentro de cada uma)
-parece natural quando o alvo é um grupo — e produz, na prática: contrato de mandato duplicado
+parece natural quando o alvo é um grupo, e produz, na prática: contrato de mandato duplicado
 byte-a-byte em duas pastas, estudos setoriais dispersos que nunca consolidam numa tese, pastas
 `Versões anteriores` vazias porque ninguém sabe em qual delas mover, e nenhuma visão de em que etapa
 o projeto está.
@@ -83,20 +83,20 @@ Exemplo: `20260812 Mapeamento Conteúdo IM v1 GGF.md`
 
 | Elemento | Regra |
 |---|---|
-| `YYYYMMDD` | Data absoluta, sem separador, sempre **prefixo** — ordena cronologicamente no explorador de arquivos. Nunca data relativa. |
+| `YYYYMMDD` | Data absoluta, sem separador, sempre **prefixo**, ordena cronologicamente no explorador de arquivos. Nunca data relativa. |
 | `<Nome da atividade>` | Curto e descritivo da atividade, não do arquivo. |
 | `v<N>` | Sequencial **por documento**, não por dia nem por atividade. Um documento tem sua própria contagem v1, v2, v3. |
 | `<INICIAIS>` | Iniciais do responsável. Em coautoria, as de quem produziu aquela versão. Autoria rastreável. |
 
 **A data é a da criação da atividade, não da última edição.** Um IM criado em 06/05 e revisado em
 01/06 mantém `20260506` no nome e sobe a versão. Isso preserva a identidade do documento ao longo do
-mandato — o que se perde quando a data acompanha a edição.
+mandato, o que se perde quando a data acompanha a edição.
 
 **Ao revisar:** mova a versão antiga para `Versões anteriores/` e crie a nova com `v<N+1>` do mesmo
 nome de atividade. Não edite por cima silenciosamente um arquivo que já foi compartilhado ou que é
 entregável.
 
-### O prefixo `@` — template canônico
+### O prefixo `@`: template canônico
 
 `@` marca template ou referência canônica da casa, e serve também para fixar no topo da ordenação
 alfabética. O número de `@` marca a geração: `@@` é a geração mais nova, `@` a anterior. Ao encontrar
@@ -123,7 +123,7 @@ circular material antes do NDA.
 | Material | Momento | Identificação |
 |---|---|---|
 | **Teaser** | Pré-NDA | **Somente o codinome.** Nada que permita identificar o alvo: nem nome, nem cidade específica, nem cliente nominal, nem nome de licença. |
-| **IM** | Pós-NDA | Revela o nome real, **mantendo o codinome no título** — o comprador já conhece o projeto por ele. |
+| **IM** | Pós-NDA | Revela o nome real, **mantendo o codinome no título**, porque o comprador já conhece o projeto por ele. |
 | **Modelo e análises** | Interno | Codinome no nome do arquivo. |
 
 Ao redigir teaser, verifique ativamente o que identifica: uma foto do galpão com placa, um número de
@@ -133,7 +133,7 @@ o alvo tão bem quanto o nome. Ver skill `teaser`.
 ## Memória do mandato
 
 `Memórias/` guarda a memória central; `Memórias/checkpoint/` guarda um `.md` por etapa concluída.
-Registre **decisão e lacuna no arquivo, não só na conversa** — para que qualquer sessão nova retome o
+Registre **decisão e lacuna no arquivo, não só na conversa**, para que qualquer sessão nova retome o
 contexto sem depender do histórico de chat de outra pessoa.
 
 Cada checkpoint traz: o que foi feito · decisões tomadas e por quê · o que ficou pendente · próximos
@@ -145,7 +145,7 @@ passos.
 ## Diretrizes de processo
 
 1. **Mapear antes de analisar.** Antes de produzir análise, valuation ou conteúdo de IM, mapeie o que
-   já existe (teaser, data room, solicitações) contra o que falta. Não pule por pressão de prazo — é
+   já existe (teaser, data room, solicitações) contra o que falta. Não pule por pressão de prazo. É
    justamente sob prazo que se produz sobre o arquivo errado.
 2. **Nunca sobrescrever sem checar.** Antes de editar, mover ou apagar arquivo que não foi criado
    nesta sessão: leia primeiro, e confirme com o usuário se o conteúdo divergir do esperado.
@@ -161,7 +161,7 @@ passos.
    citada. Métrica derivada é declarada com a conta que a produziu. Em deck gerado por script,
    registre que o script não deve ser reexecutado depois de edição manual.
 
-## Propagação — o mecanismo que faz o padrão subir
+## Propagação: o mecanismo que faz o padrão subir
 
 Ao concluir um mandato, **copie os entregáveis finais (teaser, IM, deck de valuation) para o
 `0- Benchmarking` do mandato seguinte.** É assim que o padrão da casa se propaga: o próximo projeto

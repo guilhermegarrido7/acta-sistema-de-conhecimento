@@ -8,13 +8,13 @@ Legenda de tipo: **R** = resultado · **E** = esforço/entrega.
 
 ## Modelo de definição operacional
 
-> **Nome do indicador — meta: X**
+> **Nome do indicador, meta: X**
 > (fonte: sistema/relatório e campo; população: o que entra e o que fica de fora, com as exclusões
 > nomeadas; recorte de tempo: data de referência, dias úteis ou corridos, competência ou caixa.)
 
 Sem os três elementos, o item fica na lista de hipóteses, não na coluna SUGESTÕES.
 
-## Transversais — servem a qualquer ciclo
+## Transversais: servem a qualquer ciclo
 
 | Indicador | Tipo | Observação de definição |
 |---|---|---|
@@ -27,7 +27,7 @@ Sem os três elementos, o item fica na lista de hipóteses, não na coluna SUGES
 | Idade média da fila de pendências | R | Medir no fim do período, não a média do período. |
 | % de execuções fora do fluxo formal | R | Mede aderência ao processo mapeado. Fonte costuma não existir no dia 1. |
 
-## PTP — Purchase to Pay
+## PTP: Purchase to Pay
 
 | Indicador | Tipo |
 |---|---|
@@ -41,7 +41,7 @@ Sem os três elementos, o item fica na lista de hipóteses, não na coluna SUGES
 | % de itens comprados via catálogo | R |
 | Volume de requisições por comprador | E |
 
-## OTC — Order to Cash
+## OTC: Order to Cash
 
 | Indicador | Tipo |
 |---|---|
@@ -54,7 +54,7 @@ Sem os três elementos, o item fica na lista de hipóteses, não na coluna SUGES
 | Prazo médio de resolução de disputa de fatura | R |
 | Volume de pedidos por período | E |
 
-## RTR — Record to Report
+## RTR: Record to Report
 
 | Indicador | Tipo |
 |---|---|
@@ -66,7 +66,7 @@ Sem os três elementos, o item fica na lista de hipóteses, não na coluna SUGES
 | % de lançamentos manuais sobre o total | R |
 | Horas de esforço no fechamento | E |
 
-## HTR — Hire to Retire
+## HTR: Hire to Retire
 
 | Indicador | Tipo |
 |---|---|
@@ -81,7 +81,7 @@ Sem os três elementos, o item fica na lista de hipóteses, não na coluna SUGES
 ## Armadilhas recorrentes de definição
 
 - **Média de prazo sem tratar suspensão.** O relógio que não para durante pendência do solicitante
-  mede a resposta do cliente, não a do processo — e vice-versa. Escolha e declare.
+  mede a resposta do cliente, não a do processo, e vice-versa. Escolha e declare.
 - **Percentual sem denominador explícito.** "95% de aderência" é insuficiente: aderência de quê,
   sobre qual base.
 - **Dias úteis × corridos.** A diferença é de cerca de 40% no mesmo período. Declare sempre.

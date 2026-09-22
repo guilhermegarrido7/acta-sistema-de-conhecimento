@@ -1,12 +1,12 @@
 # Publicar o portal
 
 Passo a passo para colocar `site/` no ar no Cloudflare. Plano gratuito, sem cartão, sem
-autenticação — o portal é uma vitrine pública do catálogo e da metodologia já anonimizada.
+autenticação. O portal é uma vitrine pública do catálogo e da metodologia já anonimizada.
 
 A justificativa das escolhas está em [PLATAFORMA.md](PLATAFORMA.md) seção 4. Aqui é só execução.
 
-**Não há segunda fase de autenticação.** O repositório fonte continua privado no GitHub — só quem
-tem acesso a ele consegue mudar o conteúdo. O que é publicado no site já passou pelo validador
+**Não há segunda fase de autenticação.** O repositório fonte continua privado no GitHub, e só
+quem tem acesso a ele consegue mudar o conteúdo. O que é publicado no site já passou pelo validador
 (`scripts/validar-skills.py`), que barra nome de cliente e de pessoa. Não existe login de portal
 porque não existe, no portal, nada que dependa de quem está lendo.
 
@@ -25,7 +25,7 @@ Então, antes de seguir: confirme que o **2FA está ativo no GitHub**
 1. Em [dash.cloudflare.com](https://dash.cloudflare.com), já logado pelo GitHub, vá em
    **Workers & Pages → Create → Pages → Connect to Git**.
 2. Autorize o app da Cloudflare no GitHub e selecione `acta-sistema-de-conhecimento`.
-   O repositório é privado — é essa autorização que dá acesso a ele.
+   O repositório é privado, e é essa autorização que dá acesso a ele.
 3. Na tela de build, preencha exatamente:
 
    | Campo | Valor |
@@ -41,7 +41,7 @@ Então, antes de seguir: confirme que o **2FA está ativo no GitHub**
    passa a ser relativo a `site/`.
 
    > **O fluxo "Workers & Pages" cria um Worker, não um projeto Pages.** É o padrão atual da
-   > Cloudflare, e funciona igual para um site estático — mas o comando de deploy passa a ser
+   > Cloudflare, e funciona igual para um site estático, mas o comando de deploy passa a ser
    > `npx wrangler versions upload`, que lê o `site/wrangler.toml`. Por isso esse arquivo declara
    > `[assets] directory = "./dist"`, e não a chave `pages_build_output_dir`, que só um projeto Pages
    > entenderia. Se o deploy falhar com *"Missing entry-point to Worker script or to assets
@@ -53,17 +53,17 @@ Então, antes de seguir: confirme que o **2FA está ativo no GitHub**
 
 4. **Save and Deploy.** O primeiro build leva dois ou três minutos.
 5. Você recebe uma URL `https://<projeto>.workers.dev` (ou `.pages.dev`, dependendo do fluxo). É a
-   URL final — não precisa de mais nenhuma etapa de proteção.
+   URL final, e não precisa de mais nenhuma etapa de proteção.
 
 ## 2. Domínio (opcional)
 
-A URL gerada pela Cloudflare já serve para uso interno — basta compartilhar o link. Um domínio
+A URL gerada pela Cloudflare já serve para uso interno: basta compartilhar o link. Um domínio
 próprio (ex.: `conhecimento.acta.com.br`) é só conveniência, não requisito:
 
 1. Aponte o DNS de `acta.com.br` para a Cloudflare (decisão de infraestrutura da firma).
 2. Crie `conhecimento.acta.com.br` em **Workers & Pages → seu projeto → Custom domains**.
 
-Não faça isso antes de ter o domínio decidido — a URL padrão já funciona sem ele.
+Não faça isso antes de ter o domínio decidido. A URL padrão já funciona sem ele.
 
 ---
 

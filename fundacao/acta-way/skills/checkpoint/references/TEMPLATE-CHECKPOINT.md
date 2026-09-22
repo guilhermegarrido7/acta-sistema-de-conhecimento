@@ -1,4 +1,4 @@
-# CHECKPOINT — {{CLIENTE}} · {{PROJETO}}
+# CHECKPOINT · {{CLIENTE}} · {{PROJETO}}
 
 > Documento vivo, consolidado pelo Claude ao fim de cada sessão.
 > **Quem retoma o projeto lê este arquivo primeiro.**
@@ -18,9 +18,9 @@
 | Projeto | `{{projeto}}` |
 | Prática | `{{Consultoria Empresarial / Governança, Riscos e Compliance}}` |
 | Plugin ACTA em uso | `{{acta-pesquisa-salarial, acta-auditoria-folha, ...}}` |
-| Pasta de trabalho | `{{caminho completo — ~~pasta de trabalho}}` |
-| Pasta do cliente (somente leitura) | `{{caminho — ~~arquivos recebidos}}` |
-| Pasta de entregáveis | `{{caminho — ~~entregaveis}}` |
+| Pasta de trabalho | `{{caminho completo, ~~pasta de trabalho}}` |
+| Pasta do cliente (somente leitura) | `{{caminho, ~~arquivos recebidos}}` |
+| Pasta de entregáveis | `{{caminho, ~~entregaveis}}` |
 | Sócio responsável | `{{nome}}` |
 | Consultores ativos | `{{nomes, separados por vírgula}}` |
 | D0 | `{{dd/mm/aaaa}}` |

@@ -19,7 +19,7 @@ escrever e ler esse arquivo.
 
 **A responsabilidade de saber em que versão está é do consultor, não do Claude.** Esta skill não
 fica anunciando "estamos na v14" a cada resposta, nem grava a cada etapa concluída ou decisão
-tomada — isso é ruído, e checkpoint que interrompe demais vira checkpoint ignorado. O Claude informa
+tomada. Isso é ruído, e checkpoint que interrompe demais vira checkpoint ignorado. O Claude informa
 a versão nos momentos definidos abaixo: ao abrir a sessão, na pergunta diária, e ao fechar. Fora
 disso, se o consultor perder a conta, a saída é simples: perguntar "em que versão estamos", que
 aciona a leitura do arquivo.
@@ -70,7 +70,7 @@ que é exatamente o problema que este mecanismo resolve. **Detecte tentando alca
 | Defasagem | **detecta de fato** | **estima pela idade** |
 | Cópia conflitante | **detecta** | invisível |
 
-O que **precisa** ser perguntado uma vez por engajamento é o **caminho da pasta** — nunca presuma
+O que **precisa** ser perguntado uma vez por engajamento é o **caminho da pasta**. Nunca presuma
 (regra da casa). Uma vez sabido, ele fica registrado na seção 0 do `CHECKPOINT.md`, onde todo
 consultor lê do mesmo lugar.
 
@@ -88,7 +88,7 @@ consultor lê do mesmo lugar.
    avisar: houve edição simultânea e alguém precisa reconciliar. O OneDrive guarda no máximo
    **5** dessas e não avisa ninguém.
 4. Avaliar defasagem (seção 6).
-5. Avaliar se é caso da pergunta diária (seção 5) — não é a mesma coisa que a leitura de volta
+5. Avaliar se é caso da pergunta diária (seção 5), que não é a mesma coisa que a leitura de volta
    abaixo: a leitura de volta confirma entendimento, a pergunta diária oferece gerar um checkpoint
    novo.
 6. **Fazer a leitura de volta e esperar confirmação.**
@@ -123,15 +123,15 @@ Não consigo verificar se existe versão mais nova. Confira na pasta antes de pr
 
 ## 4. Momento 2: quando GRAVAR
 
-Só quatro gatilhos escrevem checkpoint. Fora deles, o trabalho segue normalmente na conversa — o
+Só quatro gatilhos escrevem checkpoint. Fora deles, o trabalho segue normalmente na conversa: o
 que foi feito, decidido ou pendente fica ali, e só vira uma entrada de sessão quando um destes
 ocorrer:
 
-1. **O consultor pede o checkpoint** — explicitamente, invocando a skill ou simplesmente pedindo
+1. **O consultor pede o checkpoint**, explicitamente, invocando a skill ou simplesmente pedindo
    "atualiza o checkpoint" / "gera o arquivo".
 2. **O consultor sinaliza que está encerrando** a sessão, ou que vai trocar de chat.
-3. **A conversa está pesada.** Você percebe sinais de contexto extenso — muitas trocas, muita
-   ferramenta chamada, o próprio Claude Code oferecendo resumir/compactar a sessão — e é hora de
+3. **A conversa está pesada.** Você percebe sinais de contexto extenso (muitas trocas, muita
+   ferramenta chamada, o próprio Claude Code oferecendo resumir/compactar a sessão) e é hora de
    sugerir abrir um chat novo. Nesse caso, **avise antes de agir:**
 
    > Esta conversa está ficando pesada em contexto. Vou gerar o checkpoint agora para você abrir um
@@ -140,7 +140,7 @@ ocorrer:
    e só então grave.
 4. **A pergunta diária** (seção 5), quando o consultor responde que sim.
 
-**Não grave fora destes quatro casos** — nem a cada etapa concluída, nem a cada entregável criado,
+**Não grave fora destes quatro casos**: nem a cada etapa concluída, nem a cada entregável criado,
 nem a cada decisão isolada. Acumule na conversa; consolide no gatilho.
 
 **Sempre, nos quatro casos:** apresente o que vai entrar na entrada de sessão, **espere a
@@ -152,7 +152,7 @@ validação**, só então grave. Nunca escreva calado.
 
 Uma vez por jornada, na abertura, e uma vez no fim da tarde: um lembrete curto de que sessão longa
 custa contexto e de que fechar a sessão preserva o estado. **Nunca duas vezes na mesma janela**,
-mesmo entre chats diferentes — o registro de que já perguntou mora no `CHECKPOINT.md`, não na
+mesmo entre chats diferentes. O registro de que já perguntou mora no `CHECKPOINT.md`, não na
 sessão, e é isso que torna o nudge compatível com hábito de equipe.
 
 O texto da pergunta, os dois campos de estado na seção 0 do `CHECKPOINT.md` e o comportamento em
@@ -176,7 +176,7 @@ conferiu a pasta. Não é obstrução, é o que impede refazer o trabalho que o 
 ### 6.1 Bifurcação de sessão
 
 Defasagem é o estado ficar velho. **Bifurcação é pior**: duas sessões partem do mesmo ponto e
-seguem em paralelo, cada uma achando que é a única. Nenhuma das duas fica desatualizada — as duas
+seguem em paralelo, cada uma achando que é a única. Nenhuma das duas fica desatualizada: as duas
 ficam certas e incompatíveis, e a descoberta acontece tarde, quando os dois trabalhos já não se
 somam. Já custou um retrabalho inteiro.
 
@@ -194,7 +194,7 @@ UUIDs iniciais e divergem a partir de certo ponto são uma bifurcação, não du
 independentes.
 
 **Ao detectar, não unifique por conta própria.** Apresente as duas linhas de trabalho, o ponto em que
-divergiram, e pergunte qual prevalece — a mesma regra da seção 3 para cópia conflitante de arquivo.
+divergiram, e pergunte qual prevalece, pela mesma regra da seção 3 para cópia conflitante de arquivo.
 
 ---
 
@@ -214,14 +214,14 @@ Acionado por qualquer um dos quatro gatilhos da seção 4.
 
 ### 7.1 Handoff: quando a próxima sessão começa antes de esta acabar
 
-Fechar é para quando o trabalho para. **Handoff é para quando o trabalho continua em outro lugar** —
+Fechar é para quando o trabalho para. **Handoff é para quando o trabalho continua em outro lugar**:
 a janela de contexto encheu no meio de uma tarefa, ou outro consultor assume a frente hoje à tarde.
 A entrada de sessão normal não basta, porque ela descreve o que ficou pronto, e o handoff precisa
 descrever o que está **no meio**.
 
 Além do conteúdo da entrada de sessão, o handoff carrega:
 
-- **A tarefa em curso, no ponto exato em que parou** — não "estava tratando as bases", e sim "as
+- **A tarefa em curso, no ponto exato em que parou**. Não "estava tratando as bases", e sim "as
   bases 1 a 4 estão tratadas e reconciliadas; a 5 está lida mas o total não fecha por R$ 1.240 e a
   hipótese em teste é linha de subtotal não classificada".
 - **O que já foi tentado e não funcionou**, para a próxima sessão não repetir. É a parte que mais se
@@ -231,7 +231,7 @@ Além do conteúdo da entrada de sessão, o handoff carrega:
   dela. Handoff que não declara isso é a causa direta da bifurcação da seção 6.1.
 - **O próximo passo concreto**, em uma frase imperativa, não uma área de trabalho.
 
-O handoff é gravado como entrada de sessão normal, com `[handoff]` no início do resumo — assim ele
+O handoff é gravado como entrada de sessão normal, com `[handoff]` no início do resumo. Assim ele
 aparece na listagem de `Sessoes/` sem precisar de um mecanismo próprio.
 
 ---
@@ -287,7 +287,7 @@ auditoria, é conformidade. O mesmo ato satisfaz os dois.
 
 ## 12. Por que este desenho
 
-Cada componente vem de um padrão estabelecido e citável — event sourcing, I-PASS, Y-statement, o
+Cada componente vem de um padrão estabelecido e citável: event sourcing, I-PASS, Y-statement, o
 comportamento documentado do OneDrive em edição simultânea. **A combinação deles para handoff entre
 sessões de agente é desenho da ACTA**: não existe padrão de mercado consolidado para essa camada.
 O racional item a item está em [references/por-que-este-desenho.md](references/por-que-este-desenho.md).

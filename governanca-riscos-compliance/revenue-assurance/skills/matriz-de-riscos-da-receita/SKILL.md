@@ -10,7 +10,7 @@ exato e a regra R8 (nunca presumir caminho, sempre perguntar) valem aqui integra
 repetidas. Este plugin é de processo auditado; o método vive no plugin de método.
 
 A taxonomia de tipo de teste, a régua de amostragem, os conceitos de risco (categoria, evento,
-fator) e o formato do código `<CódProcesso>.R<NN>` estão em `programa-de-testes` — esta skill traz
+fator) e o formato do código `<CódProcesso>.R<NN>` estão em `programa-de-testes`. Esta skill traz
 apenas **o conteúdo de receita**: quais riscos existem no ciclo, que controle de melhor prática os
 mitiga, e como cada um se testa.
 
@@ -18,7 +18,7 @@ mitiga, e como cada um se testa.
 
 Processo `REC`. O controle da terceira coluna é o de **melhor prática de mercado**, não o normativo
 interno do cliente: quando a política interna do mandato tratar do tema, cite-a pelo assunto, sem
-transcrever código de item. Severidade é sugestão de partida — calibre no caso, com
+transcrever código de item. Severidade é sugestão de partida; calibre no caso, com
 `redacao-de-achados`.
 
 | Código | Elo | Risco | Controle (melhor prática) | Como se testa | WP | Sev. |
@@ -45,12 +45,12 @@ vendas e faturamento de referência. Ver §2.
 
 Um registro de riscos de vendas e faturamento usado como referência trouxe quatro eventos que os
 programas de receita da casa não cobriam. **Acrescente os quatro por padrão em todo mandato de
-receita** — e, quando estiver revisando a matriz do próprio cliente, é por eles que se começa,
+receita**. Quando estiver revisando a matriz do próprio cliente, é por eles que se começa,
 porque são exatamente os que costumam faltar também lá.
 
 **1. Aderência fiscal na emissão (`REC.R09`).** Testava-se emissão e cancelamento de nota sem nunca
 verificar a correção tributária da própria nota. Exposição substancialmente maior na nota de produto
-que na de serviço — não transporte o teste de uma para a outra.
+que na de serviço; não transporte o teste de uma para a outra.
 
 **2. Dispensa não autorizada de juros e multa (`REC.R12`).** Encargo de mora não cobrado é receita
 renunciada sem decisão formal e **não aparece no aging**: o título pago em atraso sem encargo é
@@ -58,7 +58,7 @@ liquidado e some do relatório. Quem audita só o aging nunca o encontra. O test
 100% dos títulos liquidados após o vencimento.
 
 **3. Cut-off da receita (`REC.R13`).** Os programas paravam no aging e não perguntavam se a receita
-está na competência certa. O risco existe sempre que o fato gerador e a emissão não coincidem — e
+está na competência certa. O risco existe sempre que o fato gerador e a emissão não coincidem, e
 neste domínio eles nunca coincidem: execução diária, medição mensal, aceite posterior à medição,
 emissão posterior ao aceite, faturamento em data fixa.
 
@@ -76,16 +76,16 @@ exatamente o risco por trás da assertiva de que não há contas a receber em ab
 **Uma nota de categoria.** No registro de referência, o risco de multa e sanção fiscal estava
 classificado como falha de produto ou serviço, o que é erro de taxonomia: falha fiscal não é falha de
 entrega. Se a taxonomia do mandato não tiver uma categoria fiscal e regulatória, crie-a antes de
-classificar — categoria errada some do mapa de calor da área errada.
+classificar: categoria errada some do mapa de calor da área errada.
 
 ## 3. Como usar a matriz num mandato
 
 1. **Parta dos quatorze.** Eles são o piso, não o teto.
 2. **Marque a aplicabilidade elo a elo**, usando as seis perguntas de dimensionamento de
-   `ciclo-da-receita` §6. Risco inaplicável **se declara com a razão** — `REC.R05` não se aplica a
+   `ciclo-da-receita` §6. Risco inaplicável **se declara com a razão**: `REC.R05` não se aplica a
    remuneração por carga ou por quantidade fixa; a interrupção por inadimplência dentro de `REC.R11`
    costuma não se aplicar a contrato com ente público.
-3. **Acrescente o que o mandato trouxer.** Cada setor traz estrutura contratual própria — modulação
+3. **Acrescente o que o mandato trouxer.** Cada setor traz estrutura contratual própria: modulação
    por desempenho, take-or-pay, preço variável por atributo de qualidade, apuração por agente externo.
    O risco nasce da estrutura, não do setor.
 4. **Associe controle e teste por código**, nunca repetindo o texto do risco na linha do controle
@@ -107,7 +107,7 @@ nesta ordem:
   controle; risco sem controle associado é decisão de aceitação que precisa de dono.
 
 A ausência de um risco na matriz do cliente é achado de desenho do processo de gestão de riscos, e
-entra no relatório como tal — não se corrige em silêncio acrescentando o risco ao programa e seguindo
+entra no relatório como tal, não se corrige em silêncio acrescentando o risco ao programa e seguindo
 adiante.
 
 ## O que entregar

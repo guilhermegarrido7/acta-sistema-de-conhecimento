@@ -3,7 +3,7 @@ name: reorganizacao-contabil
 description: Reorganizar demonstrações contábeis em NOPAT e capital investido operacional, separando o operacional do financeiro e do não operacional. Acionar ao receber balancete ou DRE do data room, ao montar a base histórica do modelo, ao decidir se uma conta é operacional, ou ao fechar a reconciliação de capital.
 ---
 
-# Reorganização contábil — da contabilidade para a economia
+# Reorganização contábil: da contabilidade para a economia
 
 ## Papel desta skill
 
@@ -20,7 +20,7 @@ A DRE e o balanço que a empresa entrega respondem a uma pergunta fiscal e socie
 responde a outra: *quanto capital está empregado na operação e quanto ela devolve sobre esse
 capital*. As duas perguntas não usam as mesmas linhas.
 
-Sem essa reorganização, ROIC não existe — e sem ROIC não há como separar crescimento que cria valor
+Sem essa reorganização, ROIC não existe, e sem ROIC não há como separar crescimento que cria valor
 de crescimento que destrói. É o que separa um valuation econômico de uma projeção de DRE com
 múltiplo colado no fim.
 
@@ -30,7 +30,7 @@ Koller usa **NOPLAT** (net operating profit less adjusted taxes) sobre **EBITA**
 usa **NOPAT** sobre EBIT. A diferença material é a amortização de intangíveis adquiridos: EBITA a
 exclui, EBIT não. Em alvo mid-market fechado sem histórico de aquisições, os dois coincidem e a
 distinção é acadêmica. **Passa a importar quando o alvo já fez aquisições e carrega intangível
-identificado** (carteira de clientes, marca, tecnologia) — aí é obrigatório usar EBITA, ou o ROIC
+identificado** (carteira de clientes, marca, tecnologia), aí é obrigatório usar EBITA, ou o ROIC
 sai deprimido por uma despesa que não consome capital novo.
 
 Ao usar o modelo da casa, não renomeie a linha: registre em nota que "NOPAT" ali é EBITA menos
@@ -38,7 +38,7 @@ impostos operacionais ajustados quando houver intangível adquirido.
 
 ## O insumo mínimo
 
-Antes de reorganizar, confirme que existe — e **pergunte se não foi informado, não deduza pelo nome
+Antes de reorganizar, confirme que existe, e **pergunte se não foi informado, não deduza pelo nome
 do arquivo**:
 
 | Insumo | Por que é indispensável |
@@ -54,7 +54,7 @@ Se só houver PDF de balanço assinado e não Excel de balancete, **diga isso ao
 limitação** antes de começar: a reorganização vai ficar no nível sintético e o ROIC terá margem de
 erro que precisa ser declarada no deck.
 
-## Passo 1 — Da DRE reportada ao NOPAT
+## Passo 1: da DRE reportada ao NOPAT
 
 Reconstrua de cima para baixo, e a cada linha pergunte *isto pertence à operação?*
 
@@ -73,12 +73,12 @@ Receita bruta
 
 Fora do NOPAT, sempre:
 
-- **Resultado financeiro inteiro** — juros pagos e recebidos. O custo da dívida vive no WACC, não na
+- **Resultado financeiro inteiro**: juros pagos e recebidos. O custo da dívida vive no WACC, não na
   operação. Deixar juros dentro contamina o ROIC com estrutura de capital.
-- **Equivalência patrimonial** e resultado de participações — não operacional, entra no bridge de EV.
-- **Outras receitas e despesas não operacionais** — venda de imobilizado, indenização, recuperação
+- **Equivalência patrimonial** e resultado de participações: não operacional, entra no bridge de EV.
+- **Outras receitas e despesas não operacionais**: venda de imobilizado, indenização, recuperação
   fiscal extraordinária.
-- **Itens não recorrentes** — vão para a skill `qualidade-de-resultados`, que decide o add-back; aqui
+- **Itens não recorrentes**: vão para a skill `qualidade-de-resultados`, que decide o add-back; aqui
   só se marca a linha.
 
 ### Impostos operacionais ajustados
@@ -98,13 +98,13 @@ como teste da sua própria conta.
 
 Alíquota: 34% no lucro real (25% de IRPJ com adicional + 9% de CSLL). Ver skill
 `impostos-e-prejuizos-fiscais` quando o alvo estiver no presumido, tiver prejuízo fiscal acumulado ou
-benefício estadual — casos em que a alíquota efetiva não é 34% e usar 34% erra o NOPAT.
+benefício estadual, casos em que a alíquota efetiva não é 34% e usar 34% erra o NOPAT.
 
 # Ponto de atenção
 
 Sempre checar se o ativo imobilizado utilizado no cálculo do capital investido é coerente e não está muito depreciado ou antigo (ver skill 'capital-de-giro-e-capex'). Isso será pré-requisito para o cálculo de ROIC. Além de realizar a revisão se a classificação de capital investido e fundos investidos está economicamente coerente com o contexto da empresa.
 
-## Passo 2 — Capital investido operacional (perspectiva de cima)
+## Passo 2: capital investido operacional (perspectiva de cima)
 
 O capital que a operação consome:
 
@@ -135,13 +135,13 @@ CAPITAL DE GIRO OPERACIONAL
 investido, o que infla o denominador e afunda o ROIC. Empresa familiar frequentemente acumula caixa
 como poupança do sócio, não como capital de giro. Estime o mínimo operacional por dias de custo
 caixa (tipicamente 5 a 20 dias, conforme sazonalidade e prazo de recebimento) e trate o excedente
-como **excesso de caixa** — que sai do capital investido e entra no bridge de EV para equity value.
+como **excesso de caixa**, que sai do capital investido e entra no bridge de EV para equity value.
 Pergunte ao usuário qual critério ele quer adotar e registre-o; não escolha calado.
 
 **Contingências.** Provisão para contingência trabalhista ou tributária não é passivo operacional de
 giro: é equivalente de dívida. Sai daqui e entra nos fundos investidos.
 
-## Passo 3 — Fundos investidos (perspectiva de baixo)
+## Passo 3: fundos investidos (perspectiva de baixo)
 
 Quem financia aquele capital:
 
@@ -164,7 +164,7 @@ DÍVIDA LÍQUIDA
 = FUNDOS INVESTIDOS
 ```
 
-### Equivalentes de dívida — o que o mid-market brasileiro esconde
+### Equivalentes de dívida: o que o mid-market brasileiro esconde
 
 | Item | Onde aparece | Por que é dívida |
 |---|---|---|
@@ -175,13 +175,13 @@ DÍVIDA LÍQUIDA
 | Previdência a descoberto (CPC 33) | Nota explicativa | Raro em mid-market, mas verifique. |
 
 **Nota de leases.** Se o alvo aplica CPC 06 R2, o direito de uso já está no ativo e o passivo de
-arrendamento no passivo — capitalize os dois de forma consistente. Se o alvo é pequeno e **não**
+arrendamento no passivo; capitalize os dois de forma consistente. Se o alvo é pequeno e **não**
 aplica (aluguel direto na despesa), há duas opções: (a) manter o aluguel na despesa e não capitalizar
 nada, ou (b) capitalizar por múltiplo do aluguel anual. **Escolha uma e mantenha em todos os anos e
-em todos os comparáveis** — a incoerência entre alvo e comparável é o erro que passa desapercebido e
+em todos os comparáveis**: a incoerência entre alvo e comparável é o erro que passa desapercebido e
 distorce o múltiplo. Registre a escolha em nota.
 
-## Passo 4 — A reconciliação, que não é opcional
+## Passo 4: a reconciliação, que não é opcional
 
 ```
 Capital investido operacional  −  Fundos investidos  =  0
@@ -191,7 +191,7 @@ O modelo da casa traz essa checagem explícita, com a convenção de sinal inver
 **Ela precisa fechar em todos os anos históricos.** Não fechar significa uma de quatro coisas:
 
 1. Uma conta foi classificada em duas perspectivas ao mesmo tempo, ou em nenhuma.
-2. O balanço recebido não fecha — acontece mais do que se admite em mid-market. Confira
+2. O balanço recebido não fecha, e isso acontece mais do que se admite em mid-market. Confira
    Ativo = Passivo + PL antes de acusar a sua classificação.
 3. Excesso de caixa foi subtraído do capital investido mas não somado aos fundos investidos.
 4. Um equivalente de dívida ficou dentro do capital de giro operacional.
@@ -204,7 +204,7 @@ na frente do comprador.
 
 1. A DRE reorganizada até NOPAT, ano a ano, com cada exclusão nomeada.
 2. O capital investido operacional pelas duas perspectivas, com a reconciliação fechada e visível.
-3. **A lista de decisões de classificação** — cada conta ambígua, a escolha feita, o motivo. É este
+3. **A lista de decisões de classificação**: cada conta ambígua, a escolha feita, o motivo. É este
    documento que sustenta a resposta na due diligence quando o comprador perguntar por que tal conta
    está onde está.
 4. As limitações: o que não foi possível classificar por falta de analítico.
@@ -213,9 +213,9 @@ na frente do comprador.
 
 - Balanço que não fecha, ou que fecha por conta de "outros" com saldo relevante.
 - Caixa acima de 3 meses de custo caixa sem justificativa operacional.
-- Contas a receber crescendo muito acima da receita — ver `capital-de-giro-e-capex`.
+- Contas a receber crescendo muito acima da receita; ver `capital-de-giro-e-capex`.
 - Imobilizado quase todo depreciado numa operação que depende dele: o capital investido contábil
-  subestima o capital econômico e o ROIC sai inflado. Sinalize — pode ser necessário discutir valor
+  subestima o capital econômico e o ROIC sai inflado. Sinalize, porque pode ser necessário discutir valor
   de reposição.
 - Ativo de uso operacional registrado na pessoa física do sócio ou em outra empresa do grupo: o
   capital investido está incompleto e a despesa correspondente pode não estar na DRE.

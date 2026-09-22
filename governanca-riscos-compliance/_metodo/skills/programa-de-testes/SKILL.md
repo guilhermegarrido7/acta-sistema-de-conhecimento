@@ -11,15 +11,14 @@ são repetidas.
 
 ## Papel desta skill
 
-**Documento de comando do trabalho.** O programa define o que se testa, por quê, com qual técnica —
-e concentra o resultado. Tudo o que se conclui em papel de trabalho, achado ou slide volta para cá.
+**Documento de comando do trabalho.** O programa define o que se testa, por quê e com qual técnica, e concentra o resultado. Tudo o que se conclui em papel de trabalho, achado ou slide volta para cá.
 
-Artefato em `~~pasta de trabalho`, pasta do programa de trabalho: `Matriz de Testes — <cliente>
+Artefato em `~~pasta de trabalho`, pasta do programa de trabalho: `Matriz de Testes - <cliente>
 (vN).xlsx`, com uma aba de matriz, uma de riscos e uma de régua de amostragem. **Sem célula mesclada
-em nenhuma delas** — regra e verificação em `papel-de-trabalho`.
+em nenhuma delas**. Regra e verificação em `papel-de-trabalho`.
 
-Detalhe operacional — as 26 colunas, a régua de amostragem, o formato do ID, as colunas da aba de
-riscos e a matriz limpa do relatório — em
+Detalhe operacional (as 26 colunas, a régua de amostragem, o formato do ID, as colunas da aba de
+riscos e a matriz limpa do relatório) em
 [references/matriz-e-amostragem.md](references/matriz-e-amostragem.md).
 
 ## 1. A regra estruturante: política não limita controle
@@ -31,13 +30,13 @@ riscos e a matriz limpa do relatório — em
 | **Política** | onde está no normativo do cliente e o que diz, de forma simples | *"Aprovação conforme alçada (Coord R$ 5 mil / Ger R$ 10 mil / Diretoria R$ 100 mil), item 6.11"* |
 | **Controle** | o que se verifica de fato, completo, em melhor prática de mercado | *"Verificar a existência de compras aprovadas conforme alçada, verificando se: (i) houve aprovação da solicitação de compra; (ii) houve aprovação da cotação/pedido, se material; (iii) houve aprovação da cotação, se contrato; (iv) houve aprovação e formalização do contrato."* |
 
-Quando a política é pobre, o controle testado **continua sendo o completo** — e o resultado provável
+Quando a política é pobre, o controle testado **continua sendo o completo**, e o resultado provável
 é que não exista aprovação em uma ou mais etapas. O que a política **exige mas não operacionaliza**
 é achado de desenho por si só.
 
 O mesmo vale para o mínimo declarado. Se a política pede cinco campos na requisição, esse é o
 **piso**: o controle verifica se a requisição traz informação suficiente para a área técnica apreciar
-— especificação, quantidade, setor, finalidade, urgência, descrição —, o que pega não só a compra sem
+(especificação, quantidade, setor, finalidade, urgência, descrição), o que pega não só a compra sem
 necessidade como a compra sem cobertura de informação.
 
 ## 2. Um teste, uma conclusão
@@ -48,7 +47,7 @@ política, contemplando (i) a (ix)". **Não faça.**
 
 Um teste produz **uma** conclusão. As etapas de um roteiro falham por razões diferentes, com
 recomendações e severidades diferentes: comprimir nove pontos em um destrói oito conclusões e some
-com oito achados. Desdobre o roteiro nas suas fases — uma linha por ponto de controle, cada uma com
+com oito achados. Desdobre o roteiro nas suas fases: uma linha por ponto de controle, cada uma com
 ID, evidência, técnica e conclusão próprias. Se o roteiro tem fases (pré, durante, pós), use-as como
 Subprocesso: a estrutura do roteiro costuma ser a melhor estrutura do programa.
 
@@ -74,7 +73,7 @@ a coluna Evidência requerida. Três cuidados:
   Procure o equivalente reperformável antes de aceitar que só resta desenho.
 - **Procedimento próprio da auditoria não é o ciclo do cliente.** Contagem amostral feita pelo
   auditor na visita é teste substantivo, não inventário da unidade. Mantenha-a, mas nomeie e declare
-  assim — senão parece que você reintroduziu o que foi excluído do escopo.
+  assim, senão parece que você reintroduziu o que foi excluído do escopo.
 
 ### Processos que se cruzam num item: teste recíproco
 
@@ -119,7 +118,7 @@ físico, e a comparação com o saldo sistêmico vem depois. `Testes de base` é
 - `Reperformance`, `Amostragem` e `Teste de base 100%` são **atributos** que vivem dentro de um dos
   cinco. Reperformar um cálculo é `Testes de base`; conferir documento por amostra é
   `Análise documental` com abrangência amostral.
-- `Walkthrough` não é teste nem tipo de teste — walkthrough de processo é, por si, entregável de
+- `Walkthrough` não é teste nem tipo de teste: walkthrough de processo é, por si, entregável de
   nível consultoria. Usa-se a técnica de forma isolada para **entender** o processo, mas ela nunca
   entra na matriz como linha e nunca recebe conclusão: *"Nunca um teste, mas uma técnica que podemos
   usar."*
@@ -127,7 +126,7 @@ físico, e a comparação com o saldo sistêmico vem depois. `Testes de base` é
   tipo pelo **que a conclusão se apoia**, não pelo gesto de obter a evidência.
 
 **Um tipo só por linha.** Se o teste usa dois, quebre em dois testes: facilita concluir e evita
-conclusão ambígua. **Abrangência é coluna própria**, ao lado do tipo: `100%` ou `Amostral` — critério
+conclusão ambígua. **Abrangência é coluna própria**, ao lado do tipo: `100%` ou `Amostral`. Critério
 e régua de dimensionamento por frequência × risco na reference.
 
 **Não existe coluna "Tipo de Teste: desenho / efetividade / ambos".** Foi removida por decisão do
@@ -153,7 +152,7 @@ Duas colunas:
 | `Conclusão do Teste (efetividade)` | ele funcionou no período, caso a caso? | `Eficaz` · `Parcialmente Eficaz` · `Ineficaz` |
 
 O grau de eficácia sai da coluna de **efetividade**; o percentual de implementação, quando pedido,
-sai da de **desenho** — e os `Não Implementado` / `Parcialmente Implementado` são o backlog de
+sai da de **desenho**, e os `Não Implementado` / `Parcialmente Implementado` são o backlog de
 recomendação.
 
 **Controle que não pôde ser testado é `Ineficaz` por default.** Se não houve como testar, o controle
@@ -164,7 +163,7 @@ auditoria não obteve. Sem essa distinção o Conselho não diferencia ausência
 de evidência. A coluna `Doc. Recebida?` operacionaliza a razão (ii).
 
 **Nunca deixe célula no valor default do dropdown.** Num RACM corporativo de referência, 9 de 68
-controles ficaram com `Selecionar` — na prática, controle sem conclusão, o mesmo vício do "Não
+controles ficaram com `Selecionar`: na prática, controle sem conclusão, o mesmo vício do "Não
 testado".
 
 **Grau de eficácia por processo**, com a fórmula declarada no slide em que ele aparece:
@@ -175,7 +174,7 @@ grau = (eficazes + 0,5 × parcialmente eficazes) / total de controles
 
 ### Coluna `Solicitação`: amarre cada teste ao item da carta
 
-Cada teste aponta o item da solicitação documental que o alimenta (`C.8`, `E.1`) — assim, item não
+Cada teste aponta o item da solicitação documental que o alimenta (`C.8`, `E.1`). Assim, item não
 atendido mostra imediatamente quais testes caem. Teste cuja evidência é produzida em campo pela
 auditoria recebe `In loco`: não há documento a pedir, e deixar em branco parece omissão. Gere esse
 índice **por código**, a partir da própria aba de solicitação, nunca à mão.
@@ -190,8 +189,8 @@ aquilo que era fator de risco, e tiveram de ser reescritos.
 | **Risco (categoria)** | a **natureza da perda**, usada para agrupar e para a régua do relatório. Taxonomia fechada, abaixo |
 | **Evento de risco** | o **acontecimento futuro e incerto** que, se ocorrer, prejudica o objetivo do processo. Substantivo de acontecimento, curto, sem descrever causa nem controle ausente |
 | **Fator de risco** | a **condição presente e observável** que torna o evento provável. É a causa, e é aqui que entra o achado. **Vários por evento**, em bullets |
-| **Impacto** | a **consequência** nas operações — Alto, Médio ou Baixo — **caso** o evento se materialize |
-| **Vulnerabilidade** | o **risco residual** — Alto, Médio ou Baixo — resultante das práticas de controle que **estão operando** |
+| **Impacto** | a **consequência** nas operações (Alto, Médio ou Baixo) **caso** o evento se materialize |
+| **Vulnerabilidade** | o **risco residual** (Alto, Médio ou Baixo) resultante das práticas de controle que **estão operando** |
 
 `Risco` e `Evento de risco` são **colunas separadas**, não sinônimos: `Inadimplência` é a categoria;
 *"Concessão de crédito superior à capacidade financeira do cliente"* é o evento. **A cadeia causal:**
@@ -225,13 +224,13 @@ Use estas antes de inventar categoria nova: `Aderência às Regras` · `Falha de
 `Confiabilidade da Medição`.
 
 As três últimas foram acrescentadas por serem estruturais e não existirem no RACM de referência, que
-classificava multa fiscal como falha de serviço — erro. `Confiabilidade da Medição` vale para todo
+classificava multa fiscal como falha de serviço, o que é erro. `Confiabilidade da Medição` vale para todo
 processo cuja receita ou cujo saldo é apurado por instrumento: balança, medidor de vazão, apuração
 por agente externo, contagem física.
 
 ### Código de risco: `<CódProcesso>.R<NN>`
 
-`CTR.R01`, `EST.R01`, `TRV.R01` — `TRV` para o que é transversal a dois processos. Substitui a
+`CTR.R01`, `EST.R01`, `TRV.R01`, em que `TRV` marca o que é transversal a dois processos. Substitui a
 numeração simples `R1..Rx`, que **colide** quando há mais de um processo no mesmo registro: com `R13`
 não se sabe se é risco de receita ou de estoque. Ordene por prefixo, depois por número.
 
@@ -243,7 +242,7 @@ de ordenação.
 
 **Toda atividade do fluxo recebe risco, e todo controle recebe risco.** E **não declare risco de
 processo não concluído**: sem os testes fechados não há como afirmar a vulnerabilidade, que depende
-dos controles que operam — deixe a coluna como *a definir* e sinalize. **Melhoria sua entra como
+dos controles que operam. Deixe a coluna como *a definir* e sinalize. **Melhoria sua entra como
 sub-ID em cor diferente:** se o `R2` do cliente é incompleto, proponha `R2.1` em outra cor,
 preservando o original.
 
@@ -255,8 +254,8 @@ Acontece. Renumeração é operação de **três frentes no mesmo passo**, senã
 2. A coluna `Riscos (Cód.)` de **todos** os controles da matriz de testes.
 3. A régua de riscos e a matriz no **relatório**.
 
-Faça o mapa `antigo → novo` explícito, aplique por substituição de **token inteiro** — cuidado:
-`R1` casa dentro de `R12`, use fronteira de palavra — e **reconte** ao final: quantos IDs distintos,
+Faça o mapa `antigo → novo` explícito, aplique por substituição de **token inteiro**. Cuidado:
+`R1` casa dentro de `R12`, então use fronteira de palavra. E **reconte** ao final: quantos IDs distintos,
 quantas células de associação, nenhum órfão.
 
 ## 7. Revisar um programa existente

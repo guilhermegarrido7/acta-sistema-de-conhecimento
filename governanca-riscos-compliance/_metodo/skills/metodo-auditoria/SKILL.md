@@ -1,6 +1,6 @@
 ---
 name: metodo-auditoria
-description: Conduza auditoria interna no método ACTA — regras invioláveis, doutrina do número exato, evidência e rastreabilidade. Acionar ao montar papel de trabalho ou programa de testes, ao cruzar bases e apurar divergência, ao redigir ponto de auditoria ou memorando de deficiências, ou ao produzir relatório e status report de auditoria.
+description: Conduza auditoria interna no método ACTA, com as regras invioláveis, a doutrina do número exato, evidência e rastreabilidade. Acionar ao montar papel de trabalho ou programa de testes, ao cruzar bases e apurar divergência, ao redigir ponto de auditoria ou memorando de deficiências, ou ao produzir relatório e status report de auditoria.
 user-invocable: false
 ---
 
@@ -12,8 +12,8 @@ user-invocable: false
 > visual, dados cadastrais, quem é quem e como o auditor responsável quer trabalhar. Depois, o `CLAUDE.md` da raiz
 > do engajamento, o `HISTORICO.md` e o `APRENDIZADOS.md` em `~~controle`.
 >
-> **Se o ambiente tiver uma skill própria de memória do usuário** — no ambiente de alguns auditores ela se chama
-> `memoria` — carregue-a para o protocolo completo: a armadilha da chave por diretório,
+> **Se o ambiente tiver uma skill própria de memória do usuário** (no ambiente de alguns auditores ela se chama
+> `memoria`), carregue-a para o protocolo completo: a armadilha da chave por diretório,
 > onde gravar cada tipo de fato, e a regra de que **divergência entre registros se pergunta, nunca se
 > unifica por conta própria**.
 >
@@ -78,8 +78,8 @@ retroativa a norma que não existia. Declare isso.
 **R8, Nunca presuma um caminho, um arquivo ou uma base.** Esta skill não contém caminho de
 máquina nenhum: ela usa os placeholders de `CONVENCOES.md` (`~~arquivos recebidos`,
 `~~pasta de trabalho`, `~~controle`, `~~entregaveis`, `~~interpretador python`). Se o insumo
-necessário para a tarefa não foi informado — qual extrato, qual competência, qual pasta do
-engajamento, qual versão do WP — **pergunte antes de agir**. Uma pergunta custa um turno; um
+necessário para a tarefa não foi informado (qual extrato, qual competência, qual pasta do
+engajamento, qual versão do WP), **pergunte antes de agir**. Uma pergunta custa um turno; um
 entregável construído sobre o arquivo errado custa o trabalho inteiro e a confiança do número.
 Não deduza pelo nome do arquivo, não escolha "o mais recente", não assuma a pasta padrão.
 
@@ -162,7 +162,7 @@ farol."*
 
 | Uso | Cor |
 |---|---|
-| Verde ACTA, **único verde do arquivo** | `167D73` — RGB 22, 125, 115 |
+| Verde ACTA, **único verde do arquivo** | `167D73`, RGB 22, 125, 115 |
 | Preto, **também cor ACTA e preferido** | `000000` |
 | Cinzas neutros (zebra / borda / destaque) | `F7F7F7` · `BFBFBF` · `E6E6E6` |
 | Cinza de subtítulo | `595959` |
@@ -178,7 +178,7 @@ validar a 2", isso é ordem de execução, não sugestão.
 **Regra nova entra DEPOIS, e não altera regra anterior.** *"essa regra para pegar esses casos tem
 que aplicar uma nova regra que vem DEPOIS, não mudar as regras anteriores, pra não dar falso negativo"*
 (19/08/2026). Vale para qualquer régua de casamento, classificação ou conciliação. O caso que gerou:
-num mandato, um bem legítimo foi dado como inexistente porque o nome do fornecedor não batia — a FAF
+num mandato, um bem legítimo foi dado como inexistente porque o nome do fornecedor não batia. A FAF
 cadastra **nome fantasia** e o razão **razão social**, e `SAT` contra `SISTEMA DE AUTOMACAO E
 TECNOLOGIA` dá similaridade 0,00. A correção certa não foi baixar o limiar de similaridade, que
 mexeria em milhares de pares já casados, e sim acrescentar uma **passada terminal** que casa o que
@@ -307,7 +307,7 @@ revisão: registrar o checkpoint satisfaz a norma no mesmo ato.
 **Memória NÃO é skill da ACTA.** Ler ou gravar memória de longo prazo, decidir se o fato é do
 usuário ou do projeto, resolver divergência entre registros: isso é protocolo **pessoal do
 usuário**, não metodologia da ACTA. Se o ambiente tiver uma skill de memória, carregue-a **antes
-de produzir qualquer coisa** — no ambiente de alguns auditores ela se chama **`memoria`**. **Se não tiver, siga
+de produzir qualquer coisa**; no ambiente de alguns auditores ela se chama **`memoria`**. **Se não tiver, siga
 sem:** nada nesta skill depende dela, e o mínimo é ler o `CLAUDE.md` global e o do engajamento
 antes de produzir.
 
@@ -316,7 +316,7 @@ Mais de uma pode valer ao mesmo tempo, um ponto novo no relatório normalmente p
 
 As seis primeiras linhas são skills de **mecânica** (como fazer o entregável) e vivem neste
 mesmo plugin. A última é uma skill de **domínio** (o que testar num processo) e vive em plugin
-próprio: cada processo auditado — receita, folha, estoques, compras, marketing, produção — é um
+próprio: cada processo auditado (receita, folha, estoques, compras, marketing, produção) é um
 plugin do repositório, que orquestra estas skills de mecânica e se retroalimenta a cada execução.
 
 ---

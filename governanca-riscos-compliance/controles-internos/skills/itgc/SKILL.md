@@ -22,8 +22,8 @@ sistema, e a razão é lógica, não normativa:
 > **Controle de aplicação e relatório gerado por sistema só são confiáveis se os ITGCs forem
 > efetivos.**
 
-Um bloqueio parametrizado impede o pagamento a fornecedor não cadastrado. Isso vale se — e somente se
-— ninguém puder alterar o parâmetro sem autorização (gestão de mudanças), ninguém tiver acesso
+Um bloqueio parametrizado impede o pagamento a fornecedor não cadastrado. Isso vale se, e somente se,
+ninguém puder alterar o parâmetro sem autorização (gestão de mudanças), ninguém tiver acesso
 privilegiado para contornar a regra (gestão de acessos), e a rotina que executa a validação rodar
 como previsto (operações). Sem esses três, o bloqueio testado hoje não diz nada sobre ontem.
 
@@ -43,7 +43,7 @@ Daí decorrem quatro consequências práticas, e a quarta é a que costuma ser s
   Escrever isso como observação lateral é o erro que esvazia o trabalho de TI inteiro.
 
 **Escopo: quais sistemas entram.** Não todos. Entram as aplicações de que dependem controles chave,
-contas significativas ou relatórios usados como evidência — a mesma disciplina *top-down* de
+contas significativas ou relatórios usados como evidência: a mesma disciplina *top-down* de
 `matriz-riscos-controles` §2. A coluna `Aplicações envolvidas` do RACM é exatamente o que gera essa
 lista, e é por isso que ela existe. Para cada aplicação em escopo, o ITGC alcança as **camadas**:
 aplicação, banco de dados, sistema operacional e rede, quando o acesso por camada inferior permite
@@ -101,7 +101,7 @@ Cinco armadilhas recorrentes:
 A segregação entre desenvolvimento e promoção é o ponto de controle que sustenta todos os demais do
 domínio: sem ela, o fluxo de aprovação é contornável por quem tiver pressa. **O caminho emergencial é
 onde mora o risco real**: quando a maioria das mudanças do período entrou como emergencial, o
-processo formal existe no papel e não opera — e essa contagem é o teste mais barato do domínio.
+processo formal existe no papel e não opera, e essa contagem é o teste mais barato do domínio.
 Sistema sem nenhuma mudança registrada no período também é sinal, não é conforto: ou não houve
 mudança (verificável) ou elas não passam pelo processo.
 
@@ -116,7 +116,7 @@ mudança (verificável) ou elas não passam pelo processo.
 
 **Backup sem teste de restauração é backup presumido.** É o achado mais comum e o mais fácil de
 demonstrar: peça a evidência do último teste de restauração e a data. Se nunca houve, o controle não
-existe — a fita que não restaura tem valor zero no dia em que precisa.
+existe: a fita que não restaura tem valor zero no dia em que precisa.
 
 ### Desenvolvimento e aquisição de sistemas
 
@@ -124,15 +124,15 @@ Domínio que só entra em escopo quando houve implantação, migração ou aquis
 Pontos: requisitos aprovados pelo negócio; **migração de dados com conciliação antes e depois**, com
 saldos batidos e documentados; testes de aceitação com aceite formal; segregação entre ambientes; e
 controles do sistema legado mantidos até o desligamento efetivo. A migração é o momento de maior
-exposição do ciclo inteiro e tipicamente não tem controle desenhado — um saldo que muda na migração
+exposição do ciclo inteiro e tipicamente não tem controle desenhado: um saldo que muda na migração
 sem conciliação não volta a ser reconstituível depois.
 
 ## 4. Relatório gerado por sistema (IPE)
 
 **A lacuna mais comum do mercado**, e a que mais rapidamente invalida teste bem executado.
 
-Sempre que o auditor usa um relatório do ERP como evidência — a população para amostrar, o saldo para
-conciliar, a relação de usuários, o razão auxiliar, o relatório de aging —, aquele relatório é
+Sempre que o auditor usa um relatório do ERP como evidência (a população para amostrar, o saldo para
+conciliar, a relação de usuários, o razão auxiliar, o relatório de aging), aquele relatório é
 **informação produzida pela entidade** (*information produced by the entity*), e não é evidência
 pronta. Ele precisa ser testado quanto a **completude** e **exatidão**, e a razão é direta: uma
 amostra impecável extraída de um relatório que omite uma filial conclui sobre uma população que não é
@@ -152,7 +152,7 @@ auditor extraiu:
    sistema que deveriam estar no relatório e confira se estão.
 4. **Avalie o risco do próprio relatório.** Relatório padrão do sistema, não parametrizável, tem
    risco menor. Relatório customizado, query construída sob demanda, ou extração exportada para
-   planilha e editada têm risco alto — e **planilha intermediária entre a extração e o uso é ponto de
+   planilha e editada têm risco alto, e **planilha intermediária entre a extração e o uso é ponto de
    quebra**: sem log, sem versionamento, editável por qualquer um.
 5. **Extraia você mesmo sempre que possível.** Extração feita pelo auditor, com os parâmetros
    registrados, elimina a discussão sobre o que foi filtrado. Quando a extração é da Companhia, peça
@@ -167,7 +167,7 @@ e essa é a cadeia que quase nunca é fechada.
 
 ## 5. Codificação de controle por domínio
 
-Exemplo de **padrão de codificação**, e nada além disso — a estrutura é útil, o conteúdo é de quem
+Exemplo de **padrão de codificação**, e nada além disso: a estrutura é útil, o conteúdo é de quem
 escreve a sua própria matriz. Prefixo de domínio mais numeração hierárquica:
 
 ```
@@ -184,7 +184,7 @@ escreve a sua própria matriz. Prefixo de domínio mais numeração hierárquica
 Composto com prefixo de entidade e de aplicação, como em `matriz-riscos-controles` §4, um código
 passa a ser legível sem abrir nada: entidade, domínio, aplicação e referência numérica. As três
 propriedades que fazem o padrão servir são as mesmas de lá, e a principal é que **a referência
-numérica é estável entre entidades e entre ciclos** — o controle de concessão de acesso tem o mesmo
+numérica é estável entre entidades e entre ciclos**: o controle de concessão de acesso tem o mesmo
 número em toda entidade, o que permite consolidar sem mapa de-para. Nunca renumere código já emitido.
 
 ## 6. ITGC ineficaz: o que fazer com o resto do trabalho
@@ -227,7 +227,7 @@ formalizada" parece simples; agregada aos controles que dependem daquele ambient
 - **Nada aqui é exigência SOX para empresa fechada.** ITGC estruturado por domínio, com evidência
   formal e recertificação periódica, é exigência para companhia registrada na SEC; para empresa
   fechada é **boa prática**, e a gradação se faz pelos sistemas que sustentam as contas
-  significativas — não pelo inventário completo de aplicações.
+  significativas, não pelo inventário completo de aplicações.
 - **A planilha é o sistema.** Quando o controle roda em Excel, o ITGC aplicável é o controle sobre a
   planilha: quem tem acesso, como se versiona, se as fórmulas são protegidas, e quem valida os
   vínculos. Mapeie as planilhas críticas com dono e finalidade, como em `walkthrough-e-narrativa` §6.

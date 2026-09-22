@@ -8,7 +8,7 @@ casos FJS e PASB. Uma skill por etapa do ciclo de vida, do escopo comercial ao e
 > claude plugin install acta-way@acta-sistema-de-conhecimento --scope user
 > ```
 > É onde vive o mecanismo de checkpoint entre sessões e consultores (seção 7 do método, abaixo). Sem
-> ele instalado, a instrução "carregue `acta-way`, skill `checkpoint`" não encontra nada — o
+> ele instalado, a instrução "carregue `acta-way`, skill `checkpoint`" não encontra nada. O
 > manifesto de plugin não tem campo de dependência, ninguém instala isso por você.
 
 Vizinho de `acta-pccr`: a pesquisa alimenta a tabela salarial do Plano de Cargos, mas é um projeto
@@ -18,7 +18,7 @@ com metodologia, entregáveis e ciclo próprios.
 
 | # | Skill | Etapa | Status |
 |---|---|---|---|
-| — | `metodo-pesquisa-salarial` | Regras de ouro, cartão de identidade, mínimos de anonimização, checkpoint | ✅ |
+| - | `metodo-pesquisa-salarial` | Regras de ouro, cartão de identidade, mínimos de anonimização, checkpoint | ✅ |
 | 1 | `escopo-e-proposta` | Qualificação da demanda, fronteira de escopo, precificação | esqueleto |
 | 2 | `abertura-e-cartao-de-identidade` | Kick-off, particularidades estruturais, inventário de insumos | esqueleto |
 | 3 | `painel-de-participantes` | Comparabilidade, dimensionamento, aprovação do painel | esqueleto |
@@ -37,7 +37,7 @@ com metodologia, entregáveis e ciclo próprios.
 | 16 | `relatorios-individuais-participantes` | Contrapartida a cada participante, piloto, distribuição | esqueleto |
 | 17 | `encerramento-e-licoes-aprendidas` | Pacote de encerramento, arquivamento, escrita do benchmark | esqueleto |
 
-Cada skill em esqueleto já traz, no próprio arquivo, **a fonte a consolidar** — em qual reference e
+Cada skill em esqueleto já traz, no próprio arquivo, **a fonte a consolidar**: em qual reference e
 em qual seção está o material que vira aquela etapa. Onde não há material, o esqueleto diz
 explicitamente que é lacuna.
 

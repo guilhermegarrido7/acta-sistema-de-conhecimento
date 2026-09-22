@@ -3,16 +3,16 @@ name: lentes
 description: Escolher a lente teórica adequada a uma análise e carregá-la, apresentando o que cada candidata enxerga e o que ela ignora antes de aplicar. Acionar ao pedir análise competitiva ou setorial, ao avaliar barreira de entrada, moat ou plano de crescimento, ao diagnosticar gestão ou modelo de negócio, ou ao aprofundar uma tese.
 ---
 
-# Lentes — a porta de entrada da biblioteca teórica
+# Lentes: a porta de entrada da biblioteca teórica
 
 ## O que esta skill faz
 
 É a **roteadora** do plugin. Todas as skills de pensador são `user-invocable: false` e são carregadas
-a partir daqui — ou por outra skill que peça uma lente específica.
+a partir daqui, ou por outra skill que peça uma lente específica.
 
 Ela existe porque **pensador não é a unidade da pergunta.** Quando alguém pede uma análise
 competitiva de um setor, não está pedindo Porter: está pedindo análise competitiva, e Porter é uma
-lente entre várias — que responde a uma pergunta bem específica e é cega para outras.
+lente entre várias, que responde a uma pergunta bem específica e é cega para outras.
 
 ## O protocolo
 
@@ -30,7 +30,7 @@ do setor de construção civil" pode ser, na verdade:
 - *o plano de crescimento que me apresentaram é sério?* → premissas e incerteza
 
 São perguntas diferentes, com lentes diferentes, e a resposta certa para uma é irrelevante para a
-outra. **A pergunta mais comum e mais mal atendida é a segunda** — usar cinco forças para explicar
+outra. **A pergunta mais comum e mais mal atendida é a segunda**: usar cinco forças para explicar
 por que uma empresa tem retorno acima da média não funciona, porque cinco forças explica a média, não
 o desvio.
 
@@ -38,7 +38,7 @@ o desvio.
 
 ### 3. Apresente as candidatas e pergunte pelo contexto
 
-**Este é o passo que não se pula.** Antes de aplicar, apresente 2 a 4 lentes candidatas — e para
+**Este é o passo que não se pula.** Antes de aplicar, apresente 2 a 4 lentes candidatas, e para
 cada uma, em uma linha cada:
 
 - **o que ela enxerga**
@@ -46,7 +46,7 @@ cada uma, em uma linha cada:
 - **de que dado ela precisa** para ser aplicada de verdade
 
 E então pergunte. **A pergunta não é "qual autor você quer".** É uma pergunta de contexto, cuja
-resposta determina a lente — formulada a partir da distinção que separa as candidatas. Exemplos do
+resposta determina a lente, formulada a partir da distinção que separa as candidatas. Exemplos do
 que perguntar:
 
 | Candidatas em disputa | O que perguntar |
@@ -59,7 +59,7 @@ que perguntar:
 | `collins` vs. `ram-charan` | "O diagnóstico é de **articulação** (a empresa não sabe dizer o que é) ou de **execução** (sabe, mas não sai do papel)?" |
 | `koller` vs. qualquer estratégica | "Você quer o mecanismo econômico quantificado, ou a explicação estratégica de por que ele existe?" |
 
-Quando a resposta do usuário indicar que **mais de uma lente se aplica**, aplique mais de uma — e
+Quando a resposta do usuário indicar que **mais de uma lente se aplica**, aplique mais de uma, e
 explicite onde elas discordam. Divergência entre lentes é informação, não problema: quando Porter diz
 que o setor é ruim e Greenwald diz que a empresa tem barreira local, as duas coisas são verdade ao
 mesmo tempo, e é exatamente essa combinação que sustenta a tese de um ativo regional.
@@ -75,7 +75,7 @@ Carregue a skill escolhida e siga a mecânica dela. Ao aplicar, respeite duas re
 - **Traga a seção "o que esta lente não vê" para a conclusão.** Toda skill de pensador tem essa
   seção. Uma análise que não declara o próprio ponto cego é propaganda.
 
-## O mapa — tipo de pergunta para lente
+## O mapa: tipo de pergunta para lente
 
 ### Estrutura, competição e vantagem
 
@@ -97,7 +97,7 @@ Carregue a skill escolhida e siga a mecânica dela. Ao aplicar, respeite duas re
 | Quem deveria ser o dono deste ativo? | `koller` (best owner) |
 | Qual o valor do poder de lucro atual, separado do valor de crescimento? | `greenwald` (EPV) |
 
-Para o **cálculo** — NOPAT, capital investido, ROIC, WACC, DCF, valor terminal, múltiplos — a
+Para o **cálculo** (NOPAT, capital investido, ROIC, WACC, DCF, valor terminal, múltiplos), a
 resposta não está neste plugin. Está em `acta-modelagem-economico-financeira`. Este plugin dá a
 explicação estratégica; aquele dá o número.
 
@@ -120,7 +120,7 @@ explicação estratégica; aquele dá o número.
 | Por que o plano existe e não sai do papel? | `ram-charan` |
 | A empresa sabe dizer o que ela é e onde é a melhor? | `collins` (porco-espinho) |
 | Como se descreve a estratégia de um negócio verticalizado? | `collins` (flywheel) |
-| A organização está alinhada — sistemas, estilo, valores, gente? | `tom-peters` (7S) |
+| A organização está alinhada em sistemas, estilo, valores e gente? | `tom-peters` (7S) |
 | A gestão depende do fundador? Há profundidade de time? | `ram-charan` + `prahalad` |
 | Este negócio deve ser consertado, vendido ou fechado? | `jack-welch` + `koller` |
 
@@ -133,7 +133,7 @@ explicação estratégica; aquele dá o número.
 | Esta tecnologia vai desabar de preço e destravar demanda? | `diamandis` |
 
 **Ressalva sobre este bloco:** `musk`, `amodei` e `diamandis` são **doutrina de operador, não
-framework analítico** — vivem em ensaio, entrevista e biografia, mudam no tempo, e os autores têm
+framework analítico**: vivem em ensaio, entrevista e biografia, mudam no tempo, e os autores têm
 interesse comercial no resultado. As skills dizem isso na abertura. Não são a lente certa para a
 maioria dos diagnósticos de empresa tradicional, e o roteador deve dizer isso quando o usuário pedir
 uma delas para uma pergunta que outra lente responde melhor.
@@ -158,14 +158,14 @@ As colisões mais frequentes, e o critério:
 |---|---|
 | Estudo setorial | `porter` para a estrutura, `greenwald` para a barreira, `mcgrath` para a inflexão, `jack-welch` para a tese de consolidação |
 | Equity story e teaser | `greenwald` para o moat, `collins` (flywheel) para negócio verticalizado, `prahalad` para competência |
-| Tese de CAP no valuation | `greenwald` e `mcgrath` — a duração da vantagem é a mesma tese do moat, e o material não pode contradizer o modelo |
+| Tese de CAP no valuation | `greenwald` e `mcgrath`: a duração da vantagem é a mesma tese do moat, e o material não pode contradizer o modelo |
 | Avaliação do plano do vendedor | `mcgrath` (discovery-driven planning: premissas ordenadas por incerteza × impacto), `ram-charan` (os três processos) |
 | Diagnóstico de consultoria | `ram-charan`, `collins`, `tom-peters` |
 | Segmentação de compradores | `koller` (best owner), `jack-welch` (portfólio) |
 
 ## O que esta skill não faz
 
-Não substitui a análise. Ela escolhe a ferramenta e carrega a mecânica — a evidência do caso concreto
+Não substitui a análise. Ela escolhe a ferramenta e carrega a mecânica; a evidência do caso concreto
 continua vindo do data room, das fontes primárias do setor e das entrevistas. **Uma lente aplicada a
 dado que não existe produz uma conclusão bonita e falsa**, e é obrigação desta skill dizer, no passo
 3, de que dado cada lente precisa.

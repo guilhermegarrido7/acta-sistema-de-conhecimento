@@ -21,7 +21,7 @@ e não é `Não Implementado`.
 
 ## 1. As quatro técnicas, e a hierarquia entre elas
 
-As técnicas não são tipos de teste (isso é `programa-de-testes` §4) — são **meios de obter
+As técnicas não são tipos de teste (isso é `programa-de-testes` §4): são **meios de obter
 evidência**, e têm força probatória desigual. A ordem abaixo é crescente:
 
 | Técnica | O que é | O que prova | O que não prova |
@@ -49,7 +49,7 @@ rastro apenas uma assinatura ou um e-mail de "ok". Assinatura prova que o docume
 não que houve revisão. Para concluir sobre controle de revisão, o teste precisa alcançar a
 **precisão** da revisão: que critério o revisor aplica, qual limiar dispara investigação, e o que
 aconteceu nas ocasiões em que o limiar foi ultrapassado. Peça os casos em que o controle **detectou**
-algo — se nunca detectou nada em doze meses, ou o processo é perfeito, ou a revisão não tem precisão
+algo: se nunca detectou nada em doze meses, ou o processo é perfeito, ou a revisão não tem precisão
 que detecte.
 
 ## 2. O roteiro de teste
@@ -63,12 +63,12 @@ extração e a quantidade exata**. Duas exigências:
 - **Declare o período** com data inicial e final. Amostra de período diferente do período de
   conclusão é o erro que mais invalida teste na revisão.
 - **Teste a completude da população antes de amostrar.** Se ela veio de relatório do ERP, a
-  completude e a exatidão daquele relatório precisam ser testadas — é o tema de IPE em `itgc`, e a
+  completude e a exatidão daquele relatório precisam ser testadas; é o tema de IPE em `itgc`, e a
   lacuna mais comum do mercado. Amostra perfeita de população incompleta conclui sobre nada.
 
 **2. Critério de seleção.** Como os itens saíram da população: aleatório com semente registrada,
 sistemático com intervalo declarado, ou direcionado por atributo de risco. **Registre o método, e não
-apenas o resultado** — seleção que não se reproduz é seleção que se suspeita. Seleção direcionada
+apenas o resultado**: seleção que não se reproduz é seleção que se suspeita. Seleção direcionada
 (maiores valores, fornecedores novos, lançamentos manuais, itens em fim de período) é legítima, mas
 **não é amostra estatística**: conclui sobre os itens selecionados e sobre mais nada, e isso precisa
 estar escrito.
@@ -79,7 +79,7 @@ letra, com a evidência esperada de cada. É o que transforma "conferi" em teste
 **4. O que caracteriza exceção.** Definido **antes** de olhar o primeiro item, senão o critério se
 acomoda ao que se encontra. Escreva a condição de falha atributo a atributo: aprovação ausente,
 aprovação posterior à execução, aprovador fora da alçada, evidência não localizada. **Evidência não
-localizada é exceção**, não item neutro — controle sem rastro não se distingue de controle não
+localizada é exceção**, não item neutro: controle sem rastro não se distingue de controle não
 executado.
 
 **5. A conclusão.** No vocabulário fechado, com a taxa de exceção e os atributos que falharam
@@ -120,8 +120,8 @@ Quatro cuidados que a tabela sozinha não resolve:
 
 ### Controle automatizado: amostra de 1, mais teste de configuração
 
-Controle **integralmente** automatizado — bloqueio parametrizado, cálculo do sistema, validação de
-campo, regra de tolerância, impedimento de pagamento a fornecedor não cadastrado — testa-se de forma
+Controle **integralmente** automatizado (bloqueio parametrizado, cálculo do sistema, validação de
+campo, regra de tolerância, impedimento de pagamento a fornecedor não cadastrado) testa-se de forma
 estruturalmente diferente, e a razão é simples: **o sistema não varia.** Se a regra está
 parametrizada e o ambiente é controlado, ela produz o mesmo resultado na primeira e na milésima
 transação. Testar 40 itens de comportamento idêntico não acrescenta evidência, acrescenta horas.
@@ -132,13 +132,13 @@ O teste tem duas pernas, e **as duas são obrigatórias**:
    tentativa de **violar** o bloqueio (tipo de teste `Simulação sistêmica` em `programa-de-testes`),
    porque prova que a regra impede, e não apenas que o caso testado estava em conformidade.
 2. **Inspeção da configuração e da sua estabilidade no período.** A tela ou o extrato do parâmetro,
-   mais a evidência de que ele não mudou durante o período — e, se mudou, a mudança correspondente no
+   mais a evidência de que ele não mudou durante o período e, se mudou, a mudança correspondente no
    controle de gestão de mudanças.
 
 > **A perna 2 não existe sem ITGC efetivo.** A amostra de 1 só se sustenta porque se presume que o
 > sistema não foi alterado sem controle e que ninguém tem acesso para alterar o parâmetro à revelia.
 > Essa presunção **é** o ITGC. Com ITGC ineficaz, a amostra de 1 perde a base e o controle
-> automatizado precisa ser testado como manual, ou não pode ser testado — ver `itgc`.
+> automatizado precisa ser testado como manual, ou não pode ser testado. Ver `itgc`.
 
 **Controle semiautomático (IT-dependent manual)** é híbrido e exige as duas abordagens: a parte
 sistêmica testa-se como automatizada, a parte humana pela frequência. O caso típico é o relatório de
@@ -154,7 +154,7 @@ extrapolar a taxa linearmente para a população.
 
 **Uma exceção em amostra pequena não se extrapola linearmente.** Uma falha em 25 itens não significa
 4% de falha na população: o intervalo de confiança de uma amostra não estatística desse tamanho é
-largo demais para sustentar a conta, e publicar "4% dos pagamentos" é precisão inventada — precisão
+largo demais para sustentar a conta, e publicar "4% dos pagamentos" é precisão inventada, e precisão
 inventada é o que a doutrina do número exato proíbe. Reporte **a contagem observada**, com o tamanho
 da amostra e o período, e nada além: *"identificamos 1 exceção em amostra de 25 pagamentos do
 período"*.
@@ -180,7 +180,7 @@ A sequência obrigatória antes de concluir:
 
 **Ampliação de amostra não converte `Ineficaz` em `Eficaz`.** Ampliar é procedimento para entender a
 extensão, não para diluir a taxa até o resultado desejado. Quando a ampliação for feita, registre o
-tamanho original, a exceção que a motivou e o tamanho final — ampliação silenciosa é o que mais
+tamanho original, a exceção que a motivou e o tamanho final; ampliação silenciosa é o que mais
 compromete a credibilidade de um papel de trabalho em revisão.
 
 ## 5. Evidência: o que fica no papel de trabalho
@@ -192,7 +192,7 @@ Para teste de controle, isso significa oito itens, e a falta de qualquer um queb
 2. O período coberto, com data inicial e final.
 3. A população: fonte, data e forma da extração, quantidade exata, e o teste de completude aplicado.
 4. O critério de seleção, reproduzível, e a lista dos itens selecionados com identificador estável.
-5. Os atributos testados, um por letra, e o resultado de cada atributo **por item** — a matriz
+5. Os atributos testados, um por letra, e o resultado de cada atributo **por item**: a matriz
    item × atributo, não um "OK" agregado.
 6. A evidência de cada item, arquivada e referenciada pelo identificador, não descrita de memória.
 7. As exceções, com a causa investigada e a extensão delimitada.

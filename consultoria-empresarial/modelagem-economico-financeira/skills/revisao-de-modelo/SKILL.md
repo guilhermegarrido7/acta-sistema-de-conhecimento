@@ -1,20 +1,20 @@
 ---
 name: revisao-de-modelo
-description: Auditar o modelo financeiro em três camadas — robustez técnica, consistência econômica e plausibilidade dos resultados — sem escrever na planilha. Acionar ao revisar ou validar um modelo de valuation, ao desconfiar de um resultado, antes de levar o número ao cliente, ou ao preparar a defesa para a due diligence.
+description: Auditar o modelo financeiro em três camadas (robustez técnica, consistência econômica e plausibilidade dos resultados), sem escrever na planilha. Acionar ao revisar ou validar um modelo de valuation, ao desconfiar de um resultado, antes de levar o número ao cliente, ou ao preparar a defesa para a due diligence.
 ---
 
-# Revisão de modelo — a bateria antes de o número sair da casa
+# Revisão de modelo: a bateria antes de o número sair da casa
 
 ## Papel desta skill
 
 **Oráculo, e aqui isso é essencial: esta skill LÊ o modelo e NÃO escreve nele.** Abre o `.xlsx` em
 modo somente-leitura, roda as checagens, aponta onde falha e o que investigar. A correção é do
-analista — porque quem corrige precisa entender o erro, e porque uma planilha alterada por terceiros
+analista, porque quem corrige precisa entender o erro, e porque uma planilha alterada por terceiros
 perde a rastreabilidade que o mandato exige.
 
 ## Como usar
 
-Peça ao usuário o caminho do modelo. **Não escolha o arquivo mais recente por dedução** — modelo de
+Peça ao usuário o caminho do modelo. **Não escolha o arquivo mais recente por dedução**; modelo de
 valuation tem versões, e revisar a errada é pior que não revisar. Se houver mais de um candidato,
 pergunte.
 
@@ -24,7 +24,7 @@ modelo que não fecha tecnicamente produz resultados econômicos sem significado
 
 ---
 
-# Camada 1 — O modelo é tecnicamente robusto?
+# Camada 1: o modelo é tecnicamente robusto?
 
 Checagens mecânicas. Todas binárias, todas baratas, e um bom modelo as calcula automaticamente numa
 célula visível de flag.
@@ -32,7 +32,7 @@ célula visível de flag.
 ## Nas demonstrações não ajustadas
 
 ```
-[ ] O balanço fecha em TODOS os anos — históricos e projetados
+[ ] O balanço fecha em TODOS os anos, históricos e projetados
 [ ] O lucro líquido flui corretamente pelo patrimônio líquido
 [ ] Lucro líquido reconcilia com lucros retidos, dividendos e movimentos de capital
 ```
@@ -54,15 +54,15 @@ dois caminhos não chegam ao mesmo número, algum item foi classificado em dupli
 Mude um input-chave para um valor absurdo e veja se a estrutura sobrevive:
 
 ```
-[ ] Margem bruta em 99% — o balanço ainda fecha?
-[ ] Margem bruta em 1% — ainda fecha?
-[ ] Crescimento em 0% em todos os anos — ainda fecha?
+[ ] Margem bruta em 99%: o balanço ainda fecha?
+[ ] Margem bruta em 1%: ainda fecha?
+[ ] Crescimento em 0% em todos os anos: ainda fecha?
 ```
 
 Modelo que quebra nos extremos tem amarração frágil que pode estar errada também no intervalo normal,
 de forma menos visível.
 
-## O teste do payout — a checagem que ninguém faz
+## O teste do payout: a checagem que ninguém faz
 
 A mais elegante do capítulo, e a que detecta a contaminação mais comum em planilha de mid-market.
 
@@ -80,7 +80,7 @@ eles se movem, o modelo tem falha mecânica.
 
 Os três vazamentos típicos, em ordem de frequência:
 
-1. **Juros entrando no NOPAT** — direta ou via imposto operacional calculado sobre o LAIR.
+1. **Juros entrando no NOPAT**, direta ou via imposto operacional calculado sobre o LAIR.
 2. **Caixa excedente dentro do capital de giro operacional.**
 3. **Despesa financeira afetando o imposto operacional ajustado.**
 
@@ -100,11 +100,11 @@ invisíveis porque o modelo continua produzindo um número plausível.
 
 ---
 
-# Camada 2 — O modelo é economicamente consistente?
+# Camada 2: o modelo é economicamente consistente?
 
 Aqui o modelo está tecnicamente certo e pode estar economicamente absurdo. É a camada que mais rende.
 
-## A regra de sinal — custo zero, alto poder de detecção
+## A regra de sinal: custo zero, alto poder de detecção
 
 ```
 ROIC > WACC              ⇒  EV das operações  >   capital investido contábil
@@ -147,14 +147,14 @@ Para cada tendência visível: **ou justifique economicamente, ou remova a premi
 
 ### (b) A tendência é razoável?
 
-Evite **mudança em degrau** de um ano para o outro nas premissas-chave — ela distorce índices e
+Evite **mudança em degrau** de um ano para o outro nas premissas-chave, porque ela distorce índices e
 produz leitura falsa.
 
 O detector mais direto: **CapEx negativo em qualquer ano projetado** é quase sempre artefato de um
 degrau em eficiência de capital, e infla o fluxo de caixa. Venda de imobilizado por caixa a valor
 contábil é improvável; se o modelo a produz, é erro.
 
-### (c) A tesoura preço-custo — a armadilha mais valiosa
+### (c) A tesoura preço-custo: a armadilha mais valiosa
 
 ```
 preço  +3% a.a.   }
@@ -163,7 +163,7 @@ custo  −2% a.a.   }  ⇒ spread de 5 p.p. compostos ao longo de 10 anos
 ```
 
 Cada premissa, isolada, parece inócua e defensável. **Juntas são economicamente impossíveis em setor
-competitivo** — vantagem de custo é difícil de proteger, e concorrente imita e derruba preço.
+competitivo**: vantagem de custo é difícil de proteger, e concorrente imita e derruba preço.
 
 É a armadilha mais relevante para mid-market brasileiro, porque *repasse de inflação a preços* e
 *ganho de eficiência operacional* são as duas histórias que todo vendedor conta ao mesmo tempo.
@@ -183,7 +183,7 @@ estáveis. Se não estão, a fórmula de valor terminal não se aplica. Ver `val
 [ ] Run-rate no EBITDA base NÃO reaparece como crescimento no ano 1 (dupla contagem)
 [ ] WACC, fluxo e g na MESMA base (nominal ou real)
 [ ] Estrutura de capital da realavancagem do beta = a dos pesos do WACC
-[ ] Arrendamento capitalizado no capital investido também sai na ponte EV→equity — e só ali
+[ ] Arrendamento capitalizado no capital investido também sai na ponte EV→equity, e só ali
 [ ] DLOM aplicado no WACC OU no valor, nunca nos dois
 [ ] Prêmio de controle não somado sobre múltiplo de transação precedente
 [ ] Benefício fiscal temporário não embutido na perpetuidade
@@ -192,7 +192,7 @@ estáveis. Se não estão, a fórmula de valor terminal não se aplica. Ver `val
 
 ---
 
-# Camada 3 — Os resultados são plausíveis?
+# Camada 3: os resultados são plausíveis?
 
 ## A checagem do múltiplo implícito
 
@@ -226,7 +226,7 @@ estrutural, ano-base atípico.
 # Sensibilidade e cenários
 
 Depois de validado, aprenda o modelo: **mude um input por vez** e veja o efeito. Descobre-se quais
-premissas movem o valor e quais não movem — e é isso que define onde vale gastar tempo de análise e
+premissas movem o valor e quais não movem, e é isso que define onde vale gastar tempo de análise e
 de coleta de dado.
 
 ## O atalho proibido
@@ -235,11 +235,11 @@ de coleta de dado.
 
 Rodar o modelo com a média das premissas **não** produz o valor médio, porque o modelo não é linear.
 O caminho correto é: construir cada cenário completo e coerente, rodar o valuation de cada um, e
-**ponderar os resultados** pela probabilidade — nunca ponderar os inputs.
+**ponderar os resultados** pela probabilidade, e nunca ponderar os inputs.
 
 ## Sensibilidade não é cenário
 
-- **Sensibilidade** move uma variável e mostra a derivada — WACC, `g`, múltiplo.
+- **Sensibilidade** move uma variável e mostra a derivada: WACC, `g`, múltiplo.
 - **Cenário** move o conjunto operacional de forma correlacionada, e a gestão reage dentro dele.
 
 As duas aparecem no deck, em lugares diferentes. Confundi-las faz parecer que há mais análise do que
@@ -251,14 +251,14 @@ há. Ver `projecao-e-cenarios`.
 
 O entregável desta skill:
 
-1. **Camada 1** — cada checagem com resultado binário, e para cada falha: a célula ou o bloco, o
+1. **Camada 1**: cada checagem com resultado binário, e para cada falha: a célula ou o bloco, o
    sintoma, e a causa provável.
-2. **Camada 2** — a regra de sinal, o guardanapo, os quatro testes de padrão, e a lista de
+2. **Camada 2**: a regra de sinal, o guardanapo, os quatro testes de padrão, e a lista de
    consistências entre etapas.
-3. **Camada 3** — múltiplo implícito vs. pares, comparação com precedentes, plausibilidade do ROIC.
-4. **A lista priorizada** — o que **precisa** ser corrigido antes de o número sair da casa, separado
+3. **Camada 3**: múltiplo implícito vs. pares, comparação com precedentes, plausibilidade do ROIC.
+4. **A lista priorizada**: o que **precisa** ser corrigido antes de o número sair da casa, separado
    do que é refinamento.
-5. **As premissas mais sensíveis**, com o efeito de cada uma no valor — porque é onde o comprador vai
+5. **As premissas mais sensíveis**, com o efeito de cada uma no valor, porque é onde o comprador vai
    atacar, e onde vale reforçar a evidência antes.
 6. **O veredito**: o modelo está pronto para ir ao cliente, pronto com ressalvas declaradas, ou não
    está pronto.
@@ -266,7 +266,7 @@ O entregável desta skill:
 ## Uma nota sobre precisão
 
 Valuation de empresa fechada tem incerteza irredutível. Uma faixa da ordem de ±15% em torno do ponto
-central é o que a metodologia honestamente sustenta — e apresentar três casas decimais sugere uma
+central é o que a metodologia honestamente sustenta, e apresentar três casas decimais sugere uma
 precisão que não existe.
 
 Isso **não** é licença para relaxar o rigor: o rigor é o que garante que o ponto central esteja no
@@ -276,4 +276,4 @@ de SG&A do ano 4 enquanto a camada 1 tem uma reconciliação aberta.
 ## Próximo passo
 
 Com o modelo validado: `relatorio-de-valuation` para converter o resultado em documento, e o
-plugin de M&A, `go-to-market` — o item 4 do gate é justamente o valuation preliminar estruturado.
+plugin de M&A, `go-to-market`: o item 4 do gate é justamente o valuation preliminar estruturado.

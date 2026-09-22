@@ -3,11 +3,11 @@ name: desdobramento-e-metas
 description: Desdobrar cada objetivo estratégico em iniciativa, indicador, meta, responsável e orçamento, fechando o dicionário de indicadores e o roadmap. Acionar ao conduzir o WS4, ao escrever indicador e meta, ao negociar o dono de cada objetivo, ou ao amarrar a meta estratégica ao orçamento do ano.
 ---
 
-# Desdobramento e metas — o WS4
+# Desdobramento e metas: o WS4
 
 ## Subordinação
 
-Esta skill é de **projeto**. O método transversal da firma vive em `acta-way` — carregue-a para o
+Esta skill é de **projeto**. O método transversal da firma vive em `acta-way`. Carregue-a para o
 protocolo de checkpoint entre sessões e consultores, para as convenções de entregável e para a regra
 de anonimização. O **método de prática** (negociação de meta, gestão de mudança, condução de reunião
 de gestor) virá de `acta-metodo-consultoria` quando ele sair do esqueleto; até lá, o que estiver aqui
@@ -25,7 +25,7 @@ A mecânica da sala está em `workshops-de-planejamento`.
 ## O que esta skill entrega
 
 O **plano desdobrado**: cada objetivo do mapa com iniciativa, líder, plano de ação, responsável,
-indicador e meta — mais o dicionário de indicadores, o roadmap e a amarração com o orçamento. É o
+indicador e meta, mais o dicionário de indicadores, o roadmap e a amarração com o orçamento. É o
 artefato que decide se o plano executa. Mapa bonito sem esta camada é documento de gaveta com
 diagramação melhor.
 
@@ -69,7 +69,7 @@ Dois a quatro resultados-chave por objetivo. Um só costuma ser gamificável; ma
 ### 2.2 SMART como filtro de redação
 
 Todo indicador passa por **SMART** antes de entrar: específico, mensurável, acordado, realista e com
-prazo. O "acordado" é o que mais falha e o que mais importa — meta imposta em sala não é acordo, é
+prazo. O "acordado" é o que mais falha e o que mais importa. Meta imposta em sala não é acordo, é
 registro de expectativa, e reaparece como discussão na primeira reunião de acompanhamento.
 
 ### 2.3 Antes de criar indicador novo, analise os que já existem
@@ -92,7 +92,7 @@ Meta do ciclo, com marcos intermediários
 
 **Indicador sem fonte de dado declarada não entra.** É o teste mais barato do plano inteiro: se
 ninguém sabe dizer de onde sai o número, aquele indicador vai parar de ser apurado no segundo mês. E
-quando a fonte não existe ainda, isso não descarta o indicador — cria uma iniciativa de processos
+quando a fonte não existe ainda, isso não descarta o indicador. Crie uma iniciativa de processos
 internos para construí-la, com prazo anterior ao início da medição.
 
 ### 2.5 Equilíbrio de tipos
@@ -105,7 +105,7 @@ já não dá para corrigir.
 ## 3. Metas
 
 - **A meta é negociada, não distribuída.** O consultor fornece diretrizes de formulação e o gestor
-  responsável propõe o número; a diretoria valida. Esse vaivém — o *catchball* do **Hoshin Kanri** —
+  responsável propõe o número; a diretoria valida. Esse vaivém, o *catchball* do **Hoshin Kanri**,
   é o que transforma meta corporativa em compromisso de quem executa, e é a razão de o WS4 ter uma
   **reunião de orientação** com os gestores antes da consolidação, e não só a sessão plenária.
 - **Meta tem linha de base e data.** *"Aumentar a margem"* não é meta. *"Elevar a margem de X% em
@@ -113,7 +113,7 @@ já não dá para corrigir.
 - **Marcos intermediários, sempre.** Meta de três anos sem marco anual é meta que só é cobrada no
   fim. Marque o ponto de verificação de cada ciclo de acompanhamento.
 - **Meta que depende de terceiro precisa dizer disso.** Adjudicação de contrato, decisão de cliente
-  âncora, aprovação regulatória — registre a dependência na ficha. Não é desculpa antecipada; é o que
+  âncora, aprovação regulatória: registre a dependência na ficha. Não é desculpa antecipada; é o que
   permite avaliar o desempenho do dono contra o que ele de fato controla.
 
 ## 4. A ponte com o orçamento
@@ -137,16 +137,16 @@ unidade de negócio**, com o histórico ao lado do orçado:
 Cinco decisões de método estão embutidas nesse desenho, e são elas que valem:
 
 1. **Quantidade e preço são projetados separadamente.** Projetar receita direto em valor esconde qual
-   das duas alavancas o plano está puxando — e são alavancas com donos diferentes.
+   das duas alavancas o plano está puxando, e são alavancas com donos diferentes.
 2. **O que já está contratado é separado do que ainda precisa ser vendido.** A conversa sobre a meta
    muda completamente quando a sala vê quanto do ano já está em carteira.
 3. **A capacidade entra como teto explícito.** Taxa de ocupação obriga a meta de receita a passar
-   pelo ativo que existe — e quando a ocupação projetada ultrapassa o razoável, a meta de receita
+   pelo ativo que existe, e quando a ocupação projetada ultrapassa o razoável, a meta de receita
    acabou de criar uma necessidade de investimento que precisa entrar no plano.
 4. **Dois anos de histórico ao lado do orçado.** Uma série de dois anos é o mínimo para a sala
    perceber se a projeção é continuidade ou é ruptura, e exigir a justificativa quando for ruptura.
 5. **Preço confrontado com o investimento no ativo.** Para negócio intensivo em capital, preço que
-   não devolve o ativo em prazo aceitável é volume que destrói valor — e a planilha deve tornar isso
+   não devolve o ativo em prazo aceitável é volume que destrói valor, e a planilha deve tornar isso
    visível na própria linha, não numa análise separada que ninguém faz.
 
 Distribua a planilha **em branco, com a estrutura montada e rótulos genéricos**, e conduza o
@@ -155,15 +155,15 @@ formato.
 
 ### 4.2 Onde isso continua
 
-O orçamento completo — despesas, custo, investimento, financiamento, demonstrações projetadas,
-ciclo de aprovação e controle orçamentário — **não é escopo do planejamento estratégico**. Ele vive
+O orçamento completo (despesas, custo, investimento, financiamento, demonstrações projetadas,
+ciclo de aprovação e controle orçamentário) **não é escopo do planejamento estratégico**. Ele vive
 em `acta-planejamento-orcamentario` quando esse plugin existir. Enquanto não existir, entregue o
 exercício de projeção de receita amarrado às metas e diga explicitamente ao cliente qual é a
 fronteira: o planejamento estratégico entrega a meta e o driver; o ciclo orçamentário entrega o
 número consolidado e o controle.
 
-Para modelagem econômico-financeira de projeções — drivers, cenários, coerência entre crescimento,
-retorno e reinvestimento — existe `acta-modelagem-economico-financeira`. Não refaça aqui.
+Para modelagem econômico-financeira de projeções (drivers, cenários, coerência entre crescimento,
+retorno e reinvestimento) existe `acta-modelagem-economico-financeira`. Não refaça aqui.
 
 ## 5. O roadmap
 
@@ -174,7 +174,7 @@ interdependência. Duas regras:
   vem antes; roadmap que começa tudo no primeiro trimestre não começa nada.
 - **Capacidade de execução é restrição declarada.** Em mid-market, a mesma primeira linha lidera
   operação e plano. Conte quantas iniciativas cada líder acumula; acima de duas a três simultâneas, o
-  roadmap é ficção — e é melhor descobrir isso no WS4 do que no terceiro mês.
+  roadmap é ficção, e é melhor descobrir isso no WS4 do que no terceiro mês.
 
 ## 6. Fronteiras
 

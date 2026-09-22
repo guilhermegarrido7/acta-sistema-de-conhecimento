@@ -3,11 +3,11 @@
 Auditoria do ciclo de receita e revenue assurance: contrato, cadastro, medição, aceite, faturamento,
 reajuste, glosa, cancelamento de nota, cut-off, inadimplência e conciliação com o razão.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`) — é onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
 >
 > **Segundo pré-requisito: `acta-metodo-auditoria`.** Este plugin é de **processo auditado**. As
 > regras invioláveis, a doutrina do número exato, a regra R8, o papel de trabalho, o programa de
-> testes, a redação de achados e o tratamento de bases vivem lá e **não são repetidos aqui** — cada
+> testes, a redação de achados e o tratamento de bases vivem lá e **não são repetidos aqui**. Cada
 > skill manda carregá-lo antes.
 >
 > **Status: completo.** As 6 skills do ciclo estão escritas.
@@ -59,7 +59,7 @@ Este plugin segue as convenções do repositório, incluindo os placeholders de 
 (`~~pasta de trabalho`, `~~arquivos recebidos`, ...). Ver [CONVENCOES.md](../../CONVENCOES.md).
 
 Método transversal vive em `acta-way`; método da prática, em `acta-metodo-auditoria`. Não repita
-aqui o que já está lá — em particular a doutrina do número, o tratamento de bases e o casamento com
+aqui o que já está lá, em particular a doutrina do número, o tratamento de bases e o casamento com
 consumo de pool, a estrutura do papel de trabalho e o vocabulário do campo Resultado, a taxonomia de
 tipo de teste e a régua de amostragem, os conceitos e o código de risco, a redação de ponto e a
 calibração de severidade, e o ritual de aprendizado.

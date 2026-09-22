@@ -30,7 +30,7 @@ catálogo e não disparam sozinhas.
 | # | Etapa | O que fecha a etapa |
 |---|---|---|
 | 1 | Escopo e proposta | A fronteira do escopo fixada: quais cargos, quais componentes de remuneração, quais recortes |
-| 2 | Abertura e cartão de identidade | O cartão preenchido e as particularidades estruturais registradas — é o que impede a metodologia de ser decidida de novo no meio |
+| 2 | Abertura e cartão de identidade | O cartão preenchido e as particularidades estruturais registradas. É o que impede a metodologia de ser decidida de novo no meio |
 | 3 | Painel de participantes | O painel aprovado formalmente pelo cliente |
 | 4 | Plano de comunicação e convites | Convites enviados e confirmações obtidas |
 | 5 | Instrumento de coleta | Formulário e dicionário de dados homologados com um participante-piloto |
@@ -49,7 +49,7 @@ A parte que mais vale saber antes de começar. Cada item já aconteceu.
 
 **O painel fecha pequeno demais e o recorte não publica.** É o risco número um e ele aparece tarde,
 já com dados coletados. Se um recorte tem menos participantes que o mínimo de agregação, ele não
-pode ser publicado — e o cliente esperava exatamente aquele número. *Prevenção:* dimensionar o número
+pode ser publicado, e o cliente esperava exatamente aquele número. *Prevenção:* dimensionar o número
 de convites contra a taxa histórica de resposta, não contra a meta, e acordar desde o escopo o que
 acontece com recorte insuficiente (consolidar com outro, ou não entregar).
 
@@ -66,7 +66,7 @@ coleta e regras de validação já no instrumento.
 **O matching de cargos é feito por título.** Dois cargos com o mesmo nome fazem coisas diferentes em
 empresas diferentes, e o inverso também. Matching por título infla ou desinfla a mediana sem deixar
 rastro. *Prevenção:* a equivalência é por conteúdo e nível funcional, com grau de match registrado
-por cargo, e é a etapa que mais consome tempo de consultor sênior — dimensione a proposta assim.
+por cargo, e é a etapa que mais consome tempo de consultor sênior. Dimensione a proposta assim.
 
 **O achado sensível aparece na apresentação ao Comitê.** Descobrir ao vivo que o diretor está 40%
 abaixo do mercado, ou que há disparidade interna difícil de justificar, transforma a apresentação em
@@ -94,14 +94,14 @@ segundo consultor antes de sair.
 Nas pesquisas de painel setorial, um interlocutor por empresa participante.
 
 **Do nosso lado:** um consultor responsável pela condução e pelo matching, que é a etapa que mais
-exige senioridade, e um segundo consultor para a revisão independente do release — essa separação não
-é formalidade, é o que a governança de dados exige.
+exige senioridade, e um segundo consultor para a revisão independente do release. Essa separação é o que a governança de dados
+exige.
 
 ## O que é preciso ter antes de começar
 
-- **A base de cargos do cliente**, com descrição — não só o título. Sem descrição, não há matching.
+- **A base de cargos do cliente**, com descrição, não só o título. Sem descrição, não há matching.
 - **A estrutura salarial vigente**, se existir, e a política de remuneração, mesmo que informal.
 - **A definição de quais componentes entram**: salário base apenas, ou remuneração total com variável
   e benefícios. Isso muda o instrumento inteiro e precisa estar fechado no escopo.
-- **A lista de empresas que o cliente considera mercado relevante** — que quase nunca coincide com o
+- **A lista de empresas que o cliente considera mercado relevante**, que quase nunca coincide com o
   setor formal, e é uma discussão de posicionamento, não de código CNAE.

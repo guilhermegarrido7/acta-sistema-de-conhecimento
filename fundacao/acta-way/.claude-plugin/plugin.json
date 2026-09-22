@@ -1,7 +1,7 @@
 {
   "name": "acta-way",
-  "version": "1.1.0",
-  "description": "Método ACTA transversal a qualquer projeto: mecanismo de checkpoint entre sessões e consultores, e ambiente técnico Windows/OneDrive.",
+  "version": "1.2.0",
+  "description": "Método ACTA transversal a qualquer projeto: checkpoint entre sessões e consultores, ambiente técnico Windows/OneDrive, edição em massa, identidade visual, convenções de entregável, anonimização e LGPD, e o padrão de redação da casa.",
   "author": {
     "name": "ACTA Advisory"
   }

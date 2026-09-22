@@ -12,7 +12,7 @@ são repetidas.
 ## Papel desta skill
 
 O papel de trabalho é o **repositório da evidência**: se o número está no relatório, ele tem de ser
-reconstituível aqui. A formulação da casa é literal — *registre no papel de trabalho, tudo tem que
+reconstituível aqui. A formulação da casa é literal: *registre no papel de trabalho, tudo tem que
 ficar lá*.
 
 Um WP bem feito não é uma planilha bonita: é uma planilha que **outra pessoa reproduz sem perguntar
@@ -61,7 +61,7 @@ Resultado:               <vocabulário fechado, abaixo>
 © <ANO> ACTA Advisory. Todos os direitos reservados.   Informações confidenciais.
 ```
 
-O rodapé do modelo vem preenchido com o cliente anterior — **adapte sempre** ao cliente do mandato.
+O rodapé do modelo vem preenchido com o cliente anterior. **Adapte sempre** ao cliente do mandato.
 
 **Campo Resultado: vocabulário fechado.** Escolha exatamente um valor. Duas colunas, porque são duas
 perguntas diferentes:
@@ -93,7 +93,7 @@ extraída do número na mesma frase.
 
 Numere `T1`, `T2`, … `Tn`, com nome curto e falante: `T4 Natureza`, `T8 Parcelamentos`,
 `T15 Conciliação`, `T21.1 Fatura sem contrapartida`. Uma aba por teste ou por corte de análise. Um WP
-já chegou a 27 abas — e isso é bom: **cada número do slide tem uma aba que o reconstrói**.
+já chegou a 27 abas, e isso é bom: **cada número do slide tem uma aba que o reconstrói**.
 
 Padrão visual de cada aba:
 
@@ -134,14 +134,14 @@ assert not ws.merged_cells.ranges
 
 ### Cores
 
-A paleta institucional é da firma, não da auditoria — a fonte definitiva será
+A paleta institucional é da firma, não da auditoria. A fonte definitiva será
 `acta-way:identidade-visual` quando essa skill existir. O que é específico do papel de trabalho, e
 fica aqui, é a **aplicação em Excel**:
 
 | Uso | Cor |
 |---|---|
-| Verde institucional, **único verde do arquivo** | `167D73` — cabeçalho de tabela, rótulo de capa |
-| Preto, **também cor da casa e preferido a variações do verde** | `000000` — título, texto de dado |
+| Verde institucional, **único verde do arquivo** | `167D73`, cabeçalho de tabela, rótulo de capa |
+| Preto, **também cor da casa e preferido a variações do verde** | `000000`, título, texto de dado |
 | Cinza neutro, zebra | `F7F7F7` |
 | Cinza neutro, borda | `BFBFBF` |
 | Cinza neutro, destaque e total | `E6E6E6` |
@@ -165,20 +165,20 @@ corrompe o arquivo) vivem em `acta-way:ambiente-tecnico`.
 ## 4. A aba `Critérios`: o que separa WP de planilha
 
 Toda análise que envolve extração, classificação ou cruzamento ganha uma aba final registrando o
-método. É ela que permite outra pessoa — ou você mesmo daqui a três meses — reproduzir o número, e é
+método. É ela que permite outra pessoa (ou você mesmo daqui a três meses) reproduzir o número, e é
 ela que transforma limitação em **evidência de rigor** em vez de lacuna.
 
 Registre:
 
-- **Origem** — quais arquivos, quantos, de qual pasta, com qual data.
-- **Universo** — total de linhas, quantas são transação, o que foi excluído e por quê (ex.: "48
+- **Origem**: quais arquivos, quantos, de qual pasta, com qual data.
+- **Universo**: total de linhas, quantas são transação, o que foi excluído e por quê (ex.: "48
   linhas de totalização de fatura excluídas da soma e capturadas em separado para conciliação").
-- **Critério de classificação** — as regras de natureza na ordem em que são aplicadas, e o resíduo
+- **Critério de classificação**: as regras de natureza na ordem em que são aplicadas, e o resíduo
   não classificado com o percentual.
-- **Critério de casamento** — chave, tolerância, consumo de pool, o que conta como quase-par (ver
+- **Critério de casamento**: chave, tolerância, consumo de pool, o que conta como quase-par (ver
   `bases-e-conciliacao` §4).
-- **Limitações** — o que não foi possível testar e o que precisa ser solicitado.
-- **Ressalva metodológica** — quando aplicável, por exemplo política emitida após o período auditado.
+- **Limitações**: o que não foi possível testar e o que precisa ser solicitado.
+- **Ressalva metodológica**: quando aplicável, por exemplo política emitida após o período auditado.
 
 ## 5. Atualizar um WP existente
 
@@ -186,17 +186,17 @@ Cenário frequente: o auditor já mexeu no arquivo, ou pede para acrescentar um 
 
 1. **Copie para o scratchpad e trabalhe na cópia.** O arquivo original costuma estar aberto.
 2. **Leia o estado atual antes de escrever.** Pode haver aba renomeada, número ajustado, observação
-   incluída. **A versão do auditor prevalece** — edição manual é soberana.
+   incluída. **A versão do auditor prevalece**: edição manual é soberana.
 3. **Acrescente, não substitua.** Nova aba `Tn` no fim; atualize a capa (`Aspectos identificados`,
    `Recomendação`, `Testes relacionados`) para refletir o teste novo.
 4. **Propague o número.** Se o teste novo altera valor que já está no relatório ou na matriz, corrija
    nos dois no mesmo passo. Número corrigido num lugar e velho no outro é **pior que o erro
    original**.
-5. **Releia o arquivo salvo por caminho independente** antes de publicar — cache de sincronização
+5. **Releia o arquivo salvo por caminho independente** antes de publicar. Cache de sincronização
    mente.
 6. Publique e informe quantas abas o WP passou a ter e o que mudou.
 
-Quando houver mais de um WP cobrindo a mesma coisa, unifique — e, ao unificar, **corrija as
+Quando houver mais de um WP cobrindo a mesma coisa, unifique e, ao unificar, **corrija as
 referências cruzadas** nos outros WPs e no programa de testes. Unificar e deixar referência velha já
 custou um passe inteiro de revisão.
 
@@ -206,7 +206,7 @@ custou um passe inteiro de revisão.
 
 - **Preserve integralmente a análise como aba de evidência.** Não refaça o cálculo por cima.
 - **Confira e reconcilie por fora.** Se divergir, **mostre a divergência** em vez de corrigir em
-  silêncio — a hipótese do revisor também se testa.
+  silêncio. A hipótese do revisor também se testa.
 - Escreva a capa, o `Aspectos identificados` e a `Recomendação`, e mapeie quais testes do programa
   esse WP cobre.
 
@@ -231,13 +231,13 @@ entregável, não o histórico.
 Três restrições que já custaram retrabalho:
 
 - **O limite de 255 caracteres de caminho no Windows é restrição, não detalhe.** Meça o caminho de
-  destino mais longo antes de mover. Se estourar, encurte o **nome do arquivo** — nunca abandone o
+  destino mais longo antes de mover. Se estourar, encurte o **nome do arquivo**, nunca abandone o
   arquivamento.
 - **Arquivo aberto no Excel não se move** (`PermissionError WinError 32`). O desenho já evita o
   problema: a versão vigente, que é a que costuma estar aberta, fica solta e não precisa ser movida.
   Ao mover histórico, trate o erro por arquivo e reporte quais ficaram.
-- **WP por instância precisa de um nível a mais.** Quando o WP é um arquivo por entidade — um por
-  centro de custo, um por projeto, um por conta —, a pasta de histórico recebe centenas de arquivos
+- **WP por instância precisa de um nível a mais.** Quando o WP é um arquivo por entidade (um por
+  centro de custo, um por projeto, um por conta), a pasta de histórico recebe centenas de arquivos
   por versão e o remédio vira a doença. Num mandato, um WP por centro de custo acumulou milhares de
   arquivos em 30 versões. Nesse caso, uma subpasta por versão (`v30/`, `v29/`) dentro da pasta do WP.
 
@@ -249,7 +249,7 @@ esteja consumindo. Mover é irreversível: liste antes e peça confirmação.
 1. O WP com capa completa, `Resultado` no vocabulário fechado e `Aspectos identificados` no padrão de
    redação.
 2. As abas de evidência no padrão visual, sem uma única célula mesclada (com o `assert` rodado).
-3. A aba `Critérios` preenchida — origem, universo, critérios, limitações, ressalvas.
+3. A aba `Critérios` preenchida: origem, universo, critérios, limitações, ressalvas.
 4. As referências cruzadas para os outros WPs e para o programa de testes, conferidas nos dois
    sentidos.
 5. O arquivamento da versão anterior feito, com a pasta do tipo contendo só a vigente.

@@ -7,7 +7,7 @@ description: Mapeie o ciclo da receita em sete elos e monte o escopo do trabalho
 
 Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 (nunca presumir caminho, sempre perguntar) valem aqui integralmente e não são
-repetidas. Este plugin é de **processo auditado** — o método de auditar vive no plugin de método,
+repetidas. Este plugin é de **processo auditado**. O método de auditar vive no plugin de método,
 aqui vive o que é próprio do ciclo de receita.
 
 Esta é a skill de entrada do plugin. Ela decide **o que se audita**; as demais dizem **como**.
@@ -38,13 +38,13 @@ Preço → Contrato e cadastro → Medição → Aceite → Faturamento/NF → R
 | 7 | **Contabilização** | A receita faturada chegou íntegra ao razão, por competência e por produto? | `faturamento-e-nf` |
 
 Um elo mal auditado contamina os seguintes: medição errada faturada e aceita vira recebimento errado
-e receita contabilizada errada. Por isso a ordem importa e **não se pula elo em silêncio** — elo que
+e receita contabilizada errada. Por isso a ordem importa e **não se pula elo em silêncio**: elo que
 não se aplica ao mandato é **declarado inaplicável**, com a razão, e não omitido.
 
 ## 3. Os blocos executáveis e o controle de melhor prática de cada
 
 Numeração no padrão `WP.<PROCESSO>.<NN>`; abreviação sugerida **REC**. O controle da terceira coluna
-é o de **melhor prática de mercado**, não o normativo interno do cliente — quando o cliente tiver
+é o de **melhor prática de mercado**, não o normativo interno do cliente. Quando o cliente tiver
 política própria sobre o tema, cite-a pelo assunto (*a política interna de receitas do cliente, item
 sobre aceite prévio à emissão*) sem transcrever código de item, que é informação não pública dele.
 
@@ -67,14 +67,14 @@ taxonomia de tipo de teste, a régua de amostragem e o código de risco, em `pro
 A doutrina do número está em `acta-metodo-auditoria`; a mecânica de tratar base e casar valor com
 consumo de pool, em `bases-e-conciliacao`. O que é próprio da receita são **quais** pares fecham:
 
-1. **Medição × contrato** — para cada medição, `PU medido = PU contratual vigente` (já reajustado).
+1. **Medição × contrato**: para cada medição, `PU medido = PU contratual vigente` (já reajustado).
    Divergência de centavo é lançamento manual: é achado, não arredondamento.
-2. **Medição × aceite** — toda medição faturada tem aceite formal do cliente. Confirme **quem** tem
+2. **Medição × aceite**: toda medição faturada tem aceite formal do cliente. Confirme **quem** tem
    poder de aceitar no mandato e valide os assinantes um a um.
-3. **Aceite × nota fiscal** — a nota é posterior ao aceite e igual ao valor aceito, líquido de glosa.
-4. **Nota fiscal × recebimento** — o recebido corresponde à nota; parciais e pós-vencimento
+3. **Aceite × nota fiscal**: a nota é posterior ao aceite e igual ao valor aceito, líquido de glosa.
+4. **Nota fiscal × recebimento**: o recebido corresponde à nota; parciais e pós-vencimento
    registrados e explicados.
-5. **Glosa × notificação** — cada glosa tem número e data; concilie a relação de glosas contra o
+5. **Glosa × notificação**: cada glosa tem número e data; concilie a relação de glosas contra o
    controle de notificações **antes** de somar qualquer coisa.
 
 Defina o universo (as competências efetivamente cobertas) e reconcilie ao centavo. Nunca `~`.
@@ -82,14 +82,14 @@ Defina o universo (as competências efetivamente cobertas) e reconcilie ao centa
 ## 5. Planos A, B e C: o padrão de execução deste plugin
 
 É o ativo mais reaproveitável do domínio. Para **cada teste**, registre a forma ideal e os fallbacks,
-porque a forma ideal quase nunca está disponível — e a diferença entre o auditor sênior e o júnior é
+porque a forma ideal quase nunca está disponível, e a diferença entre o auditor sênior e o júnior é
 saber o Plano B sem baixar o rigor da conclusão.
 
 ```
 Teste: <nome>   ·   WP: <código>
 Plano A (forma certa):  a evidência ideal e como obtê-la.
-Plano B:                falta o dado ideal — a evidência substituta e o que ela ainda prova.
-Plano C:                nem isso existe — indagação formal + limitação de escopo declarada.
+Plano B:                falta o dado ideal; a evidência substituta e o que ela ainda prova.
+Plano C:                nem isso existe; indagação formal + limitação de escopo declarada.
 Limitação a declarar:   a frase exata que entra na aba Critérios e, se material, no ponto.
 ```
 
@@ -102,11 +102,11 @@ número bonito e errado.
 
 **Conclusão ≠ ressalva.** Há limitações que não geram ressalva, geram conclusão: se o instrumento que
 apura a quantidade faturada não tem aferição metrológica vigente no período, a receita daquele
-período está contaminada, e isso se conclui — não se ressalva. Ver `medicao-e-aceite` §4.
+período está contaminada, e isso se conclui, não se ressalva. Ver `medicao-e-aceite` §4.
 
 ## 6. Como dimensionar o escopo do mandato
 
-Antes de escrever o programa, responda estas seis perguntas ao mandato — e pergunte, não deduza (R8):
+Antes de escrever o programa, responda estas seis perguntas ao mandato, e pergunte, não deduza (R8):
 
 1. **Como o serviço é medido?** Por quantidade física apurada em instrumento, por carga/viagem, por
    quantidade fixa contratada, ou por disponibilidade? É aqui que o preço se forma, e é o que decide
@@ -114,26 +114,26 @@ Antes de escrever o programa, responda estas seis perguntas ao mandato — e per
 2. **Quantos clientes e de que natureza?** Cliente único de natureza pública colapsa boa parte do
    ciclo: pode não haver tabela de preços comercial (o preço vem do edital e do projeto básico), não
    há originação de venda a testar, e a interrupção do serviço por inadimplência costuma ser
-   contratualmente inaplicável — testa-se registro e cobrança, não corte.
+   contratualmente inaplicável: testa-se registro e cobrança, não corte.
 3. **O valor a receber é modulado por desempenho ou por glosa?** Se sim, o índice e a relação de
    glosas entram no escopo e têm de ser reperformados.
 4. **Que espécie de documento fiscal é emitida?** Nota de serviço e nota de produto têm regras e
    prazos de cancelamento distintos, e exposição fiscal muito diferente. Ver `faturamento-e-nf` §2.
 5. **A receita tem contrapartida em outro processo?** Venda de material valorizado, sucata ou
    subproduto é **receita na venda e baixa de estoque na saída**. Se o escopo cobre os dois, escreva
-   o par recíproco de testes e faça cada um citar o ID do outro — sem isso, cada processo audita
+   o par recíproco de testes e faça cada um citar o ID do outro. Sem isso, cada processo audita
    metade: a saída sem nota é invisível para quem olha só a baixa, e a nota sem baixa é invisível
    para quem olha só a receita.
 6. **O escopo inclui presença física?** Se não inclui, converta cada ponto de roteiro operacional em
    teste retrospectivo: pergunte *que rastro este controle deixou?* e teste o rastro do último ciclo
-   realizado. Um ponto, um teste, uma conclusão — nunca comprima o roteiro num teste-ônibus, porque
+   realizado. Um ponto, um teste, uma conclusão; nunca comprima o roteiro num teste-ônibus, porque
    os pontos falham por razões diferentes. Antes de fechar, varra o programa por resíduo de presença
    ("no momento da auditoria", "acompanhar a contagem", dependência da data do próximo ciclo).
 
 ## 7. O que não transportar de um mandato para o outro
 
 Um ciclo de receita simples não é o ciclo completo. Quando o mandato tem cliente único, serviço por
-carga e contrato único, boa parte dos elos colapsa — e é fundamental registrar **qual** colapsou e
+carga e contrato único, boa parte dos elos colapsa, e registre **qual** colapsou e
 por quê, para que o próximo trabalho não herde a simplificação como se fosse o método.
 
 Não transporte entre mandatos: prazo de cancelamento de nota (varia por espécie de documento e por

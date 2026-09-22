@@ -6,7 +6,7 @@ description: Desenhe o fluxograma To-Be com raias, SLA inline e interfaces, e co
 # Fluxo e regras de negócio
 
 Carregue `acta-way` antes desta skill: identidade visual, convenções de entregável e checkpoint valem
-aqui e **não** são repetidos. O método de prática — desenho TO BE, priorização — virá de
+aqui e **não** são repetidos. O método de prática (desenho TO BE, priorização) virá de
 `acta-metodo-consultoria`; enquanto esse plugin for esqueleto, o que esta skill assume dele está dito
 aqui.
 
@@ -19,8 +19,8 @@ Fluxo e regra são um par, não dois entregáveis. O fluxo diz **o que acontece 
 regra diz **sob que condição**. Fluxo sem regra vira desenho bonito que não decide nada; regra sem
 fluxo vira política que ninguém sabe onde aplicar.
 
-Os dois nascem **antes** do workshop, a partir da coleta — é a inversão descrita em
-`workshop-de-mapeamento` — e os dois se fecham **depois** dele, com a crítica incorporada.
+Os dois nascem **antes** do workshop, a partir da coleta, na inversão descrita em
+`workshop-de-mapeamento`, e os dois se fecham **depois** dele, com a crítica incorporada.
 
 ## 1. O fluxograma To-Be
 
@@ -28,7 +28,7 @@ Os dois nascem **antes** do workshop, a partir da coleta — é a inversão desc
 
 **Raias horizontais por área ou ator**, de **três a quatro** por subprocesso, nome em **caixa alta**.
 
-Por que o teto de quatro: acima disso o slide deixa de ser legível projetado, e — mais importante —
+Por que o teto de quatro: acima disso o slide deixa de ser legível projetado, e, mais importante,
 subprocesso que atravessa cinco áreas provavelmente é dois subprocessos. O número de raias é um teste
 de fronteira, não uma restrição estética.
 
@@ -40,7 +40,7 @@ com uma caixa gasta um quinto do slide para dizer pouco.
 - Marcador **`M`** em toda tarefa manual, sem exceção. É o mapa do que está fora de sistema e a base
   direta das oportunidades de automação.
 - Logo do sistema dentro da caixa, quando a atividade acontece nele.
-- Atividade automática marcada como tal — integração sem ação humana. Confunda-a com tarefa e o
+- Atividade automática marcada como tal, integração sem ação humana. Confunda-a com tarefa e o
   dimensionamento de esforço do processo sai errado.
 
 ### Caixas de SLA inline
@@ -49,18 +49,18 @@ O prazo entra **no fluxo**, junto da atividade a que se refere: *"SLA elaboraç�
 
 Esta é a decisão de desenho que mais diferencia o artefato. SLA que vive só no slide de indicadores é
 SLA que ninguém consulta ao executar; SLA impresso ao lado da caixa é compromisso que o executor vê
-enquanto trabalha. A definição operacional completa do indicador continua em `sla-e-indicadores` — no
+enquanto trabalha. A definição operacional completa do indicador continua em `sla-e-indicadores`. No
 fluxo vai a versão curta.
 
 ### Conectores, anotações e interfaces
 
 - **Conectores `A` / `B`** para continuar o fluxo em outra faixa ou em outra página. Fluxo espremido
   para caber num slide é fluxo ilegível.
-- **Anotações em itálico** para exceção, dependência e alerta — tudo o que a notação simplificada
+- **Anotações em itálico** para exceção, dependência e alerta, tudo o que a notação simplificada
   deliberadamente não simboliza.
 - **Caixas de subprocesso vizinho marcam as interfaces.** Todo subprocesso mostra de onde recebe e
   para onde entrega, nomeando o subprocesso do outro lado pelo mesmo nome da matriz. É o que impede
-  o clássico do mapeamento por partes: dois subprocessos que, juntos, não fecham — um entrega o que o
+  o clássico do mapeamento por partes: dois subprocessos que, juntos, não fecham; um entrega o que o
   outro não recebe, e ninguém percebe até o manual ser montado.
 
 ### A barra lateral "OPORTUNIDADES JÁ MAPEADAS"
@@ -70,7 +70,7 @@ Faixa lateral no slide do fluxo, repetindo os **títulos** das oportunidades daq
 
 O efeito é o que justifica o espaço: **amarra fluxo e gap no mesmo slide**. Quem olha o desenho vê,
 sem trocar de página, onde o processo dói. No workshop, isso faz o grupo criticar o fluxo já sabendo
-o que a consultoria considera problema — e a crítica passa a ser sobre o diagnóstico, não sobre o
+o que a consultoria considera problema, e a crítica passa a ser sobre o diagnóstico, não sobre o
 desenho isolado.
 
 ### O encerramento padrão
@@ -94,13 +94,13 @@ lê não se critica.
 
 `COD. | NOME DA REGRA | DESCRIÇÃO SUGERIDA | NÍVEL DE IMPORTÂNCIA | DESCRIÇÃO APROVADA | IMPACTO`
 
-A coluna `DESCRIÇÃO APROVADA` ao lado da sugerida — e não no lugar dela — é o que preserva o ciclo
+A coluna `DESCRIÇÃO APROVADA` ao lado da sugerida (e não no lugar dela) é o que preserva o ciclo
 **sugerida → aprovada**. Quando, meses depois, alguém questionar por que a regra ficou mais frouxa
 que a proposta, as duas redações estão lado a lado, e a diferença é a decisão do cliente, com data.
 
 ### Codificação
 
-`<PREFIXO>.<NN>` — prefixo mnemônico de 2 a 4 letras do subprocesso + sequencial de dois dígitos:
+`<PREFIXO>.<NN>`: prefixo mnemônico de 2 a 4 letras do subprocesso + sequencial de dois dígitos:
 `POL.01`, `CAD.01`, `MED.01`, `REC.01`. As regras de higiene (prefixo único, código não
 reaproveitado, código nasce no material pré-workshop) estão em `taxonomia-de-processos`.
 
@@ -123,20 +123,20 @@ Três testes antes de a regra entrar na tabela:
 3. **Ela está no fluxo?** Toda regra aponta para pelo menos uma caixa ou decisão. Regra órfã é
    política, e política vive em outro documento.
 
-**Impacto**: o que acontece se a regra não for seguida — em termos de risco, custo ou prazo. É esta
+**Impacto**: o que acontece se a regra não for seguida, em termos de risco, custo ou prazo. É esta
 coluna que o grupo usa para calibrar `NÍVEL DE IMPORTÂNCIA` no workshop.
 
 ## 3. O par fluxo–regra: consistência obrigatória
 
 Antes de imprimir o material, rode as quatro checagens:
 
-1. **Toda decisão do fluxo tem regra correspondente.** Losango sem regra é decisão sem critério — o
+1. **Toda decisão do fluxo tem regra correspondente.** Losango sem regra é decisão sem critério. O
    executor vai decidir por conta, e a variação é garantida.
 2. **Toda regra aponta para uma caixa do fluxo.** Sem órfã.
 3. **Todo SLA inline tem indicador em `sla-e-indicadores`.** Prazo desenhado que ninguém mede é
    promessa.
 4. **Toda interface tem contraparte.** O subprocesso vizinho citado recebe, no desenho dele, o que
-   este entrega — com o mesmo nome de entregável.
+   este entrega, com o mesmo nome de entregável.
 
 A quarta é a que mais falha, e falha em silêncio, porque cada subprocesso é revisado sozinho. Rode-a
 com todos os fluxos lado a lado, uma vez por rodada, antes do workshop.
@@ -148,12 +148,12 @@ Da folha A3 para o desenho, zona a zona:
 | Zona do A3 | Destino |
 |---|---|
 | ✚ PRECISAMOS INCLUIR | Caixa, decisão ou raia nova no fluxo; regra nova se houver condição. |
-| ✕ PRECISAMOS RETIRAR | Remoção — e frequentemente **oportunidade de melhoria**, não só edição de desenho. |
+| ✕ PRECISAMOS RETIRAR | Remoção e, frequentemente, **oportunidade de melhoria**, não só edição de desenho. |
 | ESTÁ ERRADO | Correção do fluxo. Se for erro de premissa, volte à coleta daquele ponto. |
-| ★ ATENÇÃO — IMPLEMENTAÇÃO | Fica no fluxo como desenhado, com **anotação de dependência**, e vai para o roadmap. Não vira exceção no desenho. |
+| ★ ATENÇÃO: IMPLEMENTAÇÃO | Fica no fluxo como desenhado, com **anotação de dependência**, e vai para o roadmap. Não vira exceção no desenho. |
 
 Regra de versionamento: o fluxo reemitido é `vPósWS` e é o único que alimenta o manual. **Código de
-regra não é renumerado** na reemissão — regra descartada deixa buraco na sequência, e o buraco é
+regra não é renumerado** na reemissão: regra descartada deixa buraco na sequência, e o buraco é
 informação.
 
 ## O que entregar

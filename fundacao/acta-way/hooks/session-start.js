@@ -30,7 +30,7 @@ function montarContexto(ativos) {
   return (
     "Plugins do ACTA Sistema de Conhecimento habilitados nesta maquina: " + lista + ".\n\n" +
     "Cada plugin habilitado soma um custo fixo de contexto (\"always-on\") em TODA sessao, " +
-    "mesmo em conversas sem nenhuma relacao com ele — e o preco de manter a descricao das " +
+    "mesmo em conversas sem nenhuma relacao com ele. E o preco de manter a descricao das " +
     "skills disponivel para o roteamento. Nao e cobrado por uso, e cobrado por estar ativo.\n\n" +
     "Se esta conversa nao for sobre um dos projetos acima, mencione isso ao usuario logo na " +
     "primeira resposta, em uma linha curta, e sugira desativar o que nao estiver em uso agora:\n" +
@@ -57,6 +57,6 @@ function main() {
 try {
   main();
 } catch (erro) {
-  // silencioso de proposito — ver comentario no topo do arquivo
+  // silencioso de proposito, ver comentario no topo do arquivo
 }
 process.exit(0);

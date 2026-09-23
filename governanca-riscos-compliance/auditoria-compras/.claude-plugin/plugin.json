@@ -1,7 +1,7 @@
 {
   "name": "acta-auditoria-compras",
-  "version": "0.1.0",
-  "description": "Auditoria do ciclo de compras: requisição e aprovação, cotação e seleção de fornecedor, contrato, recebimento e pagamento.",
+  "version": "1.0.0",
+  "description": "Auditoria do ciclo de compras procure-to-pay: requisição e alçada, fracionamento, cotação e seleção, conflito de interesse, contrato e aditivo, recebimento, três vias e pagamento.",
   "author": {
     "name": "ACTA Advisory"
   }

@@ -100,7 +100,7 @@ ACTA a mid-market brasileiro.
 | `acta-gestao-de-riscos` | taxonomia-de-riscos · apetite-e-tolerancia · avaliacao-impacto-probabilidade · matriz-e-mapa-de-calor · planos-de-resposta · monitoramento-e-kri | COSO ERM 2017; ISO 31000 |
 | `acta-revenue-assurance` ✅ | ciclo-da-receita · contrato-e-cadastro · medicao-e-aceite · faturamento-e-nf · recebimento-e-inadimplencia · matriz-de-riscos-da-receita | Ciclo OTC; IIA |
 | `acta-auditoria-folha` | universo-da-folha · encargos-e-beneficios · horas-extras-e-jornada · admissao-e-desligamento · terceiros-e-pj | CLT; eSocial; IIA |
-| `acta-auditoria-compras` | ciclo-ptp · requisicao-e-alcada · cotacao-e-selecao · contrato-e-aditivo · recebimento-e-pagamento | APQC PCF 4.0; ciclo PTP |
+| `acta-auditoria-compras` ✅ | ciclo-ptp · requisicao-e-alcada · cotacao-e-selecao · contrato-e-aditivo · recebimento-e-pagamento · matriz-de-riscos-de-compras | APQC PCF 4.0; ciclo PTP |
 | `acta-auditoria-estoques` | acuracidade-e-inventario · custeio-e-giro · obsolescencia-e-provisao · movimentacao-e-perdas | CPC 16; IIA |
 | `acta-auditoria-marketing` | verbas-e-patrocinios · contratacao-de-agencias · comprovacao-de-entrega · brindes-e-conflito | ACFE; Lei 12.846 |
 | `acta-auditoria-producao` | apontamento-e-consumo · perdas-e-refugo · produtividade · manutencao | Lean; CPC 16 |
@@ -185,7 +185,8 @@ Nesta ordem, porque cada um tem projeto real de onde extrair:
 10. ✅ `acta-excelencia-operacional`, escrito a partir do material de mapeamento de ciclo PTP.
 11. ✅ `acta-controles-internos`, escrito a partir de material de SOX de projeto real.
 12. ✅ `acta-planejamento-estrategico`, escrito a partir do material de dois engajamentos.
-13. `acta-auditoria-compras`, que reaproveita o ciclo PTP mapeado em (10).
+13. ✅ `acta-auditoria-compras`, escrito a partir do ciclo PTP mapeado em (10), com uma sexta skill de
+    matriz de riscos acrescentada ao desenho da seção 3, no padrão de `acta-revenue-assurance`.
 
 ### P4: demais plugins
 

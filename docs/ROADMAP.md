@@ -56,7 +56,7 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 | `acta-esg` | Esqueleto | não | Diagnóstico e estruturação ESG: materialidade, indicadores e frameworks de reporte, plano … |
 | `acta-auditoria-folha` | Esqueleto | não | Auditoria do ciclo de folha: análise da folha, encargos, horas extras, benefícios, identif… |
 | `acta-auditoria-estoques` | Esqueleto | não | Auditoria do ciclo de estoques: acuracidade e inventário, custeio e giro, obsolescência, p… |
-| `acta-auditoria-compras` | Esqueleto | não | Auditoria do ciclo de compras: requisição e aprovação, cotação e seleção de fornecedor, co… |
+| `acta-auditoria-compras` | Completo | sim | 6 skills do ciclo PTP: ciclo em sete elos, matriz dos quinze riscos, requisição e alçada (com a bateria de fracionamento por população), cotação e seleção (sinais de direcionamento e cruzamento de conflito de interesse), contrato e aditivo, recebimento e pagamento (três vias e as sete variantes de duplicidade). |
 | `acta-auditoria-marketing` | Esqueleto | não | Auditoria de gastos de marketing: verbas e patrocínios, contratação de agências, comprovaç… |
 | `acta-auditoria-producao` | Esqueleto | não | Auditoria do ciclo de produção: apontamento, consumo e perdas, produtividade, manutenção e… |
 

@@ -173,17 +173,17 @@ anonimizado, essa decisão se reabre, mas não antes.
 ## 6. Arquitetura de informação
 
 ```
-/                        Início: o que é, pré-requisitos, instalação, dicas de uso
-/comecar                 Guia completo: instalar, verificar, atualizar, resolver problema
+/                        Início: o que é, como funciona, o que é preciso, benefícios
+/comecar                 Guia completo: os três métodos de instalação, atualizar, remover
 /projetos                Catálogo por tipo de projeto, agrupado por prática
 /projetos/<slug>         A página que o consultor lê antes de começar:
                            o que é · etapas · onde dá errado · entregáveis ·
-                           skills do plugin · como instalar
-/fundacao                acta-way e os métodos de prática
-/conceitos               Lentes teóricas (acta-pensadores-de-negocios)
-/skills                  Índice de todas as skills, com busca
+                           embasamento teórico · skills do plugin · como obter
+/skills                  Índice único, com as skills da casa agrupadas por prática
+                           e as de uso geral na mesma página
 /skills/<slug>           Detalhe da skill: o que faz, quando dispara, em que plugin vive
-/avulsas                 Skills e plugins de terceiros que a firma usa (ex.: find-skills)
+/skills/uso-geral/<slug> Detalhe de skill de terceiro: quando ajuda, como obter, o que observar
+/busca                   Busca em todo o portal, com atalhos de partida
 /benchmarking            (fase 3) projetos executados, por tipo de projeto
 /benchmarking/<slug>     (fase 3) registro de um engajamento: contexto, o que foi
                            entregue, o que se aprendeu, link para os arquivos no SharePoint

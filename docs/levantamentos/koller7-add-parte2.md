@@ -1,4 +1,4 @@
-# Koller 7ª ed. — Parte Dois (Cap 11–19 + Apêndices C, F, G, I)
+# Koller 7ª ed.: Parte Dois (Cap 11–19 + Apêndices C, F, G, I)
 ## O que é ADITIVO ao plugin de valuation da ACTA
 
 > Avaliação capítulo por capítulo. Referência de página = página do PDF (marcador `<<<PAGE N>>>`).
@@ -9,7 +9,7 @@
 
 ---
 
-# Capítulo 11 — Reorganizing the Financial Statements (p315–360)
+# Capítulo 11: Reorganizing the Financial Statements (p315–360)
 
 ## 11.1 A identidade em três blocos e a dupla contabilização de "total funds invested"
 
@@ -54,7 +54,7 @@ Composição recomendada do capital investido, na ordem de agregação de Koller
 ```
 
 **Onde encaixa.** `reorganizacao-contabil`.
-**Veredito.** `JÁ COBERTO` — a skill já tem DRE→NOPAT, capital investido operacional, fundos investidos,
+**Veredito.** `JÁ COBERTO`: a skill já tem DRE→NOPAT, capital investido operacional, fundos investidos,
 equivalentes de dívida e reconciliação obrigatória. **Mas ver 11.2:** o alerta explícito
 "IC ≠ D + E quando há DE/EE" merece virar linha de destaque na skill se ainda não estiver textual.
 **Página.** p316–318.
@@ -64,9 +64,9 @@ equivalentes de dívida e reconciliação obrigatória. **Mas ver 11.2:** o aler
 **O que é.** Koller impõe três checagens de amarração, não apenas a de capital investido. É o principal
 mecanismo antierro do capítulo:
 
-1. **Reconciliação de fundos investidos totais** — visão investimento (IC + NOA) = visão financiamento
+1. **Reconciliação de fundos investidos totais**: visão investimento (IC + NOA) = visão financiamento
    (D + DE + EE + E). Pega omissão de linha e classificação errada no balanço.
-2. **Reconciliação NOPAT ↔ lucro líquido** — caminho bottom-up:
+2. **Reconciliação NOPAT ↔ lucro líquido**, caminho bottom-up:
 ```
   Lucro líquido (atribuível a controladores + não controladores)
 + Aumento (- redução) nos passivos fiscais diferidos operacionais
@@ -100,13 +100,13 @@ Distribuição: Despesa de juros (dívida tradicional + juros de arrendamento)
 ```
    Koller: *"By modeling cash flow to and from investors, you will catch mistakes otherwise missed."*
 
-Nota de método importante: para montar o FCL não basta DRE + balanço — **é obrigatória a Demonstração das
+Nota de método importante: para montar o FCL não basta DRE + balanço. **É obrigatória a Demonstração das
 Mutações do Patrimônio Líquido (DMPL)**, porque só ela reconcilia DRE com balanço e traz a informação de
 emissões/recompras/ORA necessária para fechar a terceira reconciliação.
 
 **Onde encaixa.** `reorganizacao-contabil` (as três reconciliações) e `revisao-de-modelo` (como checklist
 de auditoria do .xlsx).
-**Veredito.** `ADICIONAR-ALTA` — a skill atual menciona "reconciliação obrigatória" (provavelmente a de
+**Veredito.** `ADICIONAR-ALTA`: a skill atual menciona "reconciliação obrigatória" (provavelmente a de
 capital investido). As três, explicitadas linha a linha, com a exigência da DMPL, são upgrade material.
 A terceira reconciliação (fluxo a investidores vs. fluxo de financiamento) é a que quase nenhum analista
 mid-market faz e é justamente a que pega omissão de fluxo.
@@ -135,7 +135,7 @@ income to value excess cash"). Segunda razão (nota 1): caixa excedente tem perf
 menor que o capital operacional, e misturar ativos de perfis diferentes distorce a percepção de performance.
 
 **Onde encaixa.** `reorganizacao-contabil` e `capital-de-giro-e-capex`.
-**Veredito.** `ADICIONAR-ALTA` — número duro, imediatamente aplicável, e resolve a discussão mais comum
+**Veredito.** `ADICIONAR-ALTA`: número duro, imediatamente aplicável, e resolve a discussão mais comum
 em mid-market brasileiro (empresa familiar com caixa "gordo" ou, ao contrário, caixa dividido entre
 pessoa física e jurídica). Vira diretamente o item de dívida líquida/CFDF no bridge. Ancorar o
 benchmarking por par do setor como método preferencial ao 2%.
@@ -165,7 +165,7 @@ EBITA = Receita - CPV - Despesas de vendas - G&A - Depreciação
 ```
 
 **Onde encaixa.** `fundamentos-koller` (já tem EV/EBITA) e `reorganizacao-contabil`.
-**Veredito.** `ADICIONAR-MÉDIA` — o *porquê* articulado em duas pernas (desgaste real vs. dupla
+**Veredito.** `ADICIONAR-MÉDIA`: o *porquê* articulado em duas pernas (desgaste real vs. dupla
 penalização) é munição de argumentação de mesa. Mid-market brasileiro raramente tem intangível adquirido
 material, então a perna "não EBIT" é menos frequente; a perna "não EBITDA" é diretamente aplicável e
 politicamente sensível (o vendedor quer EBITDA, o comprador quer EBITA/capex).
@@ -193,7 +193,7 @@ Nota: goodwill é testado por impairment e não amortizado, então o ajuste (1) 
 adquiridos.
 
 **Onde encaixa.** `diagnostico-de-roic` (que já tem ROIC com/sem goodwill) e `reorganizacao-contabil`.
-**Veredito.** `ADICIONAR-MÉDIA` — a mecânica exata dos dois ajustes provavelmente não está na skill, que
+**Veredito.** `ADICIONAR-MÉDIA`: a mecânica exata dos dois ajustes provavelmente não está na skill, que
 tem o conceito. Relevante quando o alvo mid-market é consolidador que já fez aquisições (comum em saúde,
 educação, serviços B2B). Irrelevante para alvo orgânico puro.
 **Página.** p327–328.
@@ -210,12 +210,12 @@ educação, serviços B2B). Irrelevante para alvo orgânico puro.
 Leitura: o valor criado pela operação foi integralmente transferido aos vendedores via prêmio de aquisição.
 
 **Onde encaixa.** `diagnostico-de-roic`; e é argumento de venda em `triangulacao-e-faixa`.
-**Veredito.** `ADICIONAR-MÉDIA` — não é técnica, é dado retórico poderoso: em sell-side, mostrar que
+**Veredito.** `ADICIONAR-MÉDIA`. Dado retórico, não técnica: em sell-side, mostrar que
 compradores estratégicos historicamente entregaram todo o excedente ao vendedor no prêmio é argumento
 direto de mesa. Barato de guardar.
 **Página.** p327.
 
-## 11.7 Passivos operacionais NÃO são dívida — o argumento de consistência
+## 11.7 Passivos operacionais NÃO são dívida: o argumento de consistência
 
 **O que é.** Há quem defenda tratar fornecedores como financiamento. Koller rejeita por consistência
 numerador/denominador: NOPAT é o resultado disponível a credores e acionistas, então no ROIC divide-se
@@ -241,7 +241,7 @@ E a válvula de escape geral: *"perfect classification is not required. You need
 account is included as part of free cash flow or valued separately."*
 
 **Onde encaixa.** `reorganizacao-contabil`.
-**Veredito.** `ADICIONAR-MÉDIA` — o teste "escala com a receita?" é heurística operacional excelente para
+**Veredito.** `ADICIONAR-MÉDIA`: o teste "escala com a receita?" é heurística operacional excelente para
 as contas de "outros ativos/outros passivos" que sempre aparecem em balanço de empresa fechada brasileira
 sem notas explicativas decentes. Combinado com a regra pequeno-vs-grande e a válvula de escape ("não
 precisa ser perfeito, precisa ser exaustivo e consistente"), destrava analista.
@@ -256,7 +256,7 @@ Capex líquido (de baixas) = Depreciação + Delta PP&E LÍQUIDO
 **Nunca** estimar capex pela variação do PP&E **bruto**: quando a empresa dá baixa (retira) ativos, o
 PP&E bruto cai, e a variação do bruto **subestima** o capex efetivo.
 
-Se possível, usar o capex reportado na DFC — mas **só após reconciliar** o capex reportado com
+Se possível, usar o capex reportado na DFC, mas **só após reconciliar** o capex reportado com
 (Δ PP&E líquido + depreciação). As duas medidas divergem por: (a) translação de moeda, (b) aquisições,
 (c) impairments. Aquisições devem ser analisadas separadamente; impairments tratados como despesa não
 operacional não caixa na DRE.
@@ -271,10 +271,10 @@ DFC; depreciação = D&A da DFC menos amortização de intangíveis adquiridos (
 intangíveis); demais linhas no MD&A ou estimadas.
 
 **Onde encaixa.** `capital-de-giro-e-capex` (que já tem roll-forward de PP&E).
-**Veredito.** `ADICIONAR-MÉDIA` — o roll-forward já está na skill; o aditivo é (a) a fórmula
+**Veredito.** `ADICIONAR-MÉDIA`: o roll-forward já está na skill; o aditivo é (a) a fórmula
 `capex = D + Δ PP&E líquido` como *cross-check obrigatório* contra o capex da DFC, e (b) o alerta
 explícito contra usar PP&E bruto. Em empresa fechada brasileira a DFC muitas vezes é ruim ou inexistente,
-então derivar capex do balanço é o caminho normal — a fórmula é a ferramenta certa.
+então derivar capex do balanço é o caminho normal. A fórmula é a ferramenta certa.
 **Página.** p346–348, nota 10 p359.
 
 ## 11.9 Os cinco componentes do investimento bruto e o FCL
@@ -296,7 +296,7 @@ Investimento BRUTO = Delta capital de giro operacional
                    + Delta outros ativos operacionais LP, líquidos de passivos LP
 ```
 
-**A regra da remuneração baseada em ações (share-based comp):** Koller é explícito — **NÃO** somar de
+**A regra da remuneração baseada em ações (share-based comp):** Koller é explícito. **NÃO** somar de
 volta ao NOPAT para chegar ao fluxo de caixa bruto. Justificativa: os empregados passaram a ter um
 *novo direito* sobre o fluxo de caixa, e esse direito tem de ser incorporado à avaliação, seja dentro do
 fluxo, seja como cálculo separado. Não se pode simplesmente ignorar.
@@ -309,7 +309,7 @@ de caixa negativo espúrio. Ressalva: a conta agrega todos os ativos e passivos 
 operacionais.
 
 **Onde encaixa.** `reorganizacao-contabil`, `capital-de-giro-e-capex`.
-**Veredito.** A estrutura do FCL: `JÁ COBERTO`. A regra do share-based comp: `ADICIONAR-MÉDIA` — cresce
+**Veredito.** A estrutura do FCL: `JÁ COBERTO`. A regra do share-based comp: `ADICIONAR-MÉDIA`. Cresce
 em relevância no mid-market brasileiro (stock option / phantom shares em tech e serviços; alvo com plano
 de ILP para executivos). O ajuste de translação de moeda: `IRRELEVANTE-MIDMARKET` para o alvo típico
 100% Brasil, mas guardar como nota de exceção para alvo com subsidiária no exterior (Paraguai, EUA).
@@ -328,12 +328,12 @@ classifica em quatro tipos, com tratamento distinto:
 | **Provisão não operacional** (ex.: reestruturação/rescisões one-time, se não recorrente) | Despesa não operacional | Reserva tratada como **equivalente de dívida** |
 | **Provisão de income smoothing** (transferir resultado entre períodos) | Despesa não operacional | Reserva tratada como **equivalente de patrimônio** |
 
-Nota-chave: provisões de income smoothing são **não caixa e por isso não afetam valor** — a classificação
+Nota-chave: provisões de income smoothing são **não caixa e por isso não afetam valor**. A classificação
 como equivalente de patrimônio (que não é deduzido do EV) reflete exatamente isso.
 
-**Onde encaixa.** `qualidade-de-resultados` (que já tem 4 famílias de normalização de EBITDA — mas de
+**Onde encaixa.** `qualidade-de-resultados` (que já tem 4 famílias de normalização de EBITDA, mas de
 EBITDA, não de provisões) e `reorganizacao-contabil`.
-**Veredito.** `ADICIONAR-ALTA` — é taxonomia diferente e complementar às 4 famílias de normalização de
+**Veredito.** `ADICIONAR-ALTA`: é taxonomia diferente e complementar às 4 famílias de normalização de
 EBITDA que a skill já tem. Diretamente aplicável ao mid-market brasileiro, onde a **provisão para
 contingências trabalhistas/tributárias** é praticamente universal e onde a classificação (equivalente de
 dívida vs. capital investido vs. equivalente de patrimônio) muda o CFDF e portanto o preço. A distinção
@@ -341,7 +341,7 @@ dívida vs. capital investido vs. equivalente de patrimônio) muda o CFDF e port
 contingências do CPC 25.
 **Página.** p351.
 
-## 11.11 Arrendamentos: IFRS 16 / CPC 06 (R2) — divergência GAAP vs. IFRS na DRE
+## 11.11 Arrendamentos: IFRS 16 / CPC 06 (R2), divergência GAAP vs. IFRS na DRE
 
 **O que é.** A partir de 2019 GAAP e IFRS exigem capitalizar quase todos os arrendamentos. O VP dos
 pagamentos vai ao balanço em ambos. **A diferença está na DRE:**
@@ -363,7 +363,7 @@ Como capitalizar exercícios históricos (pré-adoção), já que não são reap
 ```
 
 **Efeito assimétrico no ROIC.** Capitalizar arrendamento aumenta o NOPAT **e** o capital investido, mas
-não na mesma proporção — no caso Costco o ROIC **cai**. Razão: arrendamento operacional é uma forma de
+não na mesma proporção. No caso Costco o ROIC **cai**. Razão: arrendamento operacional é uma forma de
 dívida; para empresas que ganham retorno acima do custo da dívida, a alavancagem **infla artificialmente
 o retorno**. Logo, não capitalizar superestima o ROIC de empresa asset-light alugada.
 
@@ -373,19 +373,19 @@ apenas a qualidade do *benchmarking* de ROIC.
 
 **Onde encaixa.** `reorganizacao-contabil` (que já cita CPC 06 R2 / IFRS 16 via `fundamentos-koller`) e
 `diagnostico-de-roic`.
-**Veredito.** `ADICIONAR-ALTA` — três itens são aditivos e diretamente aplicáveis: (a) o fato de que sob
-IFRS/CPC **nenhum ajuste de DRE é necessário** (poupa trabalho e evita ajuste em duplicidade — erro comum),
+**Veredito.** `ADICIONAR-ALTA`: três itens são aditivos e diretamente aplicáveis: (a) o fato de que sob
+IFRS/CPC **nenhum ajuste de DRE é necessário** (poupa trabalho e evita ajuste em duplicidade, erro comum),
 (b) a receita completa de capitalização histórica com taxa AA e anuidade para o bloco agregado, e (c) o
 argumento do **efeito assimétrico no ROIC** com o alerta de que a alavancagem infla retorno. O item (c) é
-munição de mesa em qualquer alvo de varejo, restaurante, academia, clínica ou logística — todos
+munição de mesa em qualquer alvo de varejo, restaurante, academia, clínica ou logística, todos
 asset-light-alugados, muito comuns no mandato mid-market. Atenção: no Brasil, empresa fechada de porte
-médio muitas vezes segue CPC PME e **não** capitaliza — o que exige exatamente o procedimento 1–6.
+médio muitas vezes segue CPC PME e **não** capitaliza, o que exige exatamente o procedimento 1–6.
 **Página.** p351–353, notas 12–13 p359–360.
 
-## 11.12 Tributos operacionais em caixa — processo de três passos
+## 11.12 Tributos operacionais em caixa: processo de três passos
 
 **O que é.** Insumo obrigatório: a **tabela de reconciliação fiscal** das notas explicativas (no Brasil, a
-nota de "Conciliação da despesa de imposto de renda e contribuição social" — alíquota efetiva vs. nominal).
+nota de "Conciliação da despesa de imposto de renda e contribuição social", alíquota efetiva vs. nominal).
 Koller: *"the process for adjusting taxes is the most complicated part of reorganizing the financial
 statements."*
 
@@ -414,9 +414,9 @@ PASSO 3 - Converter regime de competência em CAIXA
 **Restrição prática que Koller admite duas vezes:** as notas informam quanto foi diferido, mas **não
 separam diferido operacional de não operacional**, tornando a divulgação inutilizável. Nem toda empresa
 divulga o suficiente. *"When this information is unavailable, we recommend using operating taxes without
-a cash adjustment."* — ou seja, **é legítimo parar no Passo 2**.
+a cash adjustment."* Ou seja, **é legítimo parar no Passo 2**.
 
-**Filtro de mudança orgânica:** contas de diferido sobem e descem por motivos além do diferimento —
+**Filtro de mudança orgânica:** contas de diferido sobem e descem por motivos além do diferimento, como
 aquisições, alienações, reavaliação de alíquota. **Só a variação ORGÂNICA entra nos tributos em caixa.**
 Para estimá-la: calcular qual seria a variação se as alíquotas tivessem permanecido inalteradas. (Caso
 americano: revaluação de 2018 pela Tax Cuts and Jobs Act.)
@@ -438,11 +438,11 @@ anos** para estimar a fração de tributos operacionais que será diferida.
 
 **Onde encaixa.** `impostos-e-prejuizos-fiscais` (que já tem lucro real/presumido, corrente vs. diferido,
 roll-forward de prejuízo fiscal).
-**Veredito.** `ADICIONAR-ALTA` — o processo de 3 passos ancorado na **tabela de reconciliação fiscal** é
+**Veredito.** `ADICIONAR-ALTA`: o processo de 3 passos ancorado na **tabela de reconciliação fiscal** é
 aditivo e é exatamente o que falta no mid-market brasileiro: a nota de conciliação de alíquota efetiva
 existe em qualquer balanço auditado brasileiro e é subutilizada. Quatro itens de altíssimo valor prático:
 (a) multiplicar o percentual por **LAIR e não por EBITA**; (b) a preferência por ajuste em moeda em vez de
-percentual quando o LAIR é pequeno — situação corriqueira em alvo mid-market com resultado apertado;
+percentual quando o LAIR é pequeno, situação corriqueira em alvo mid-market com resultado apertado;
 (c) a permissão explícita de **parar no Passo 2** quando não há divulgação suficiente, o que é a regra e
 não a exceção no Brasil; (d) o **filtro de mudança orgânica** no diferido, que no Brasil se aplica a
 reavaliação de ativo fiscal diferido por mudança de expectativa de realização e a incorporações/cisões
@@ -462,22 +462,22 @@ No balanço reorganizado do Costco, prejuízo fiscal (foreign tax credit carryfo
 dois únicos ativos não operacionais, ao lado do caixa excedente.
 
 **Onde encaixa.** `impostos-e-prejuizos-fiscais` e `reorganizacao-contabil`.
-**Veredito.** `ADICIONAR-ALTA` — a skill já tem roll-forward de prejuízo fiscal, mas a regra de
+**Veredito.** `ADICIONAR-ALTA`: a skill já tem roll-forward de prejuízo fiscal, mas a regra de
 **posicionamento** (ativo não operacional avaliado separadamente, fora do capital investido, e portanto
 somado no bridge EV→equity) é o que importa para preço em M&A. É item recorrente de negociação em
 mid-market brasileiro: alvo com prejuízo fiscal acumulado relevante, com o limite de compensação de 30%
-do lucro real e o risco de perda do saldo em incorporação (art. 33, DL 2.341/87 — não há sucessão de
+do lucro real e o risco de perda do saldo em incorporação (art. 33, DL 2.341/87: não há sucessão de
 prejuízo fiscal). A regra de Koller diz onde ele entra no modelo; a especificidade brasileira tem de ser
 adicionada por cima.
 **Página.** p330–331, nota 7 p359.
 
-## 11.14 Coligadas não consolidadas e subsidiárias financeiras — por que fora do IC
+## 11.14 Coligadas não consolidadas e subsidiárias financeiras: por que fora do IC
 
 **O que é.**
 - **Coligadas não consolidadas / equity investments:** quando a empresa detém participação minoritária,
   registra o investimento em UMA linha do ativo e não registra os ativos individuais da investida; na DRE
   registra só o **resultado de equivalência**, não a receita nem os custos da investida. Como só o
-  resultado — e não a receita — entra, incluir coligadas nas operações **distorce margem e giro do
+  resultado (e não a receita) entra, incluir coligadas nas operações **distorce margem e giro do
   capital**. Recomendação: separar do capital investido e analisar/avaliar em separado.
 - **Subsidiárias financeiras** (ex.: financeira que financia a compra do cliente): cobram juros, se
   parecem com banco. Economia bancária é radicalmente diferente da industrial/de serviços. Separar as
@@ -487,11 +487,11 @@ adicionada por cima.
 
 **Onde encaixa.** `reorganizacao-contabil`; a mecânica de separação remete a `triangulacao-e-faixa` e ao
 Cap 19 (soma das partes).
-**Veredito.** `ADICIONAR-ALTA` — o argumento "só o resultado entra, a receita não, logo margem e giro
+**Veredito.** `ADICIONAR-ALTA`: o argumento "só o resultado entra, a receita não, logo margem e giro
 ficam distorcidos" é a justificativa precisa e é armadilha frequentíssima em mid-market brasileiro:
 grupo familiar com participação em coligada, SCP, consórcio, ou holding com participações minoritárias em
 outras operações. E a regra da subsidiária financeira aplica-se a alvos com **crediário/carteira própria**
-(varejo de móveis, materiais de construção, revenda de veículos, agro com barter) — modelo comum no
+(varejo de móveis, materiais de construção, revenda de veículos, agro com barter), modelo comum no
 Brasil e que rotineiramente é analisado errado como se fosse operação única.
 **Página.** p329–330.
 
@@ -505,26 +505,26 @@ superestimar o retorno sobre capital**. Se optar por capitalizar:
 - Ajustar o patrimônio correspondentemente para fechar a equação do capital investido.
 - Razão pela qual isso importa: como a amortização se baseia em investimentos *passados* (e não em
   desembolsos correntes), a abordagem **impede que cortes em P&D produzam melhora de curto prazo no
-  ROIC** — que é justamente o jogo de gestão que se quer flagrar.
+  ROIC**, que é justamente o jogo de gestão que se quer flagrar.
 
 **Neutralidade de valor:** capitalizar ou não **não afeta o valor calculado**; afeta apenas o *timing* do
 ROIC e do lucro econômico.
 
-**Software capitalizado** (regra separada, p326): tratar como PP&E — amortização como se fosse
+**Software capitalizado** (regra separada, p326): tratar como PP&E, amortização como se fosse
 depreciação, investimento como se fosse capex. **Só intangíveis gerados internamente**, não os adquiridos.
 Alerta prático: a DFC da IBM separa investimento em software de investimento em PP&E; a da UPS combina os
-dois dentro de capex — nesse caso, atribuir todo o capex reportado a PP&E **superestima o investimento
+dois dentro de capex. Nesse caso, atribuir todo o capex reportado a PP&E **superestima o investimento
 real** em imobilizado.
 
 **Onde encaixa.** `diagnostico-de-roic`, `capital-de-giro-e-capex`.
-**Veredito.** `ADICIONAR-MÉDIA` — a neutralidade de valor (só muda o timing do ROIC) é importante para o
+**Veredito.** `ADICIONAR-MÉDIA`: a neutralidade de valor (só muda o timing do ROIC) é importante para o
 analista não perder tempo, e o argumento de "corte de P&D não deve melhorar ROIC" é bom em due diligence.
 Aplicável a alvos de software/SaaS e a alvos com marketing pesado de aquisição de cliente (CAC
 capitalizável), que aparecem no mid-market brasileiro. Menos relevante para indústria e distribuição
 tradicional.
 **Página.** p326, p354–355, nota 16 p360.
 
-## 11.16 Sale-leaseback com ganho diferido — e o princípio geral de materialidade
+## 11.16 Sale-leaseback com ganho diferido, e o princípio geral de materialidade
 
 **O que é.** Caso FedEx 2013: vendeu aeronaves e as arrendou de volta. Se surge ganho na venda, a empresa
 **não pode reconhecer o ganho como resultado**; em vez disso reduz a despesa anual de aluguel ao longo da
@@ -547,10 +547,10 @@ decision making and robust forecasting, not to create an overly engineered model
 unimportant adjustments."*
 
 **Onde encaixa.** `reorganizacao-contabil` (caso); `revisao-de-modelo` (o princípio de materialidade).
-**Veredito.** O caso sale-leaseback: `ADICIONAR-MÉDIA` — sale-leaseback de imóvel é comum em pré-venda de
+**Veredito.** O caso sale-leaseback: `ADICIONAR-MÉDIA`. Sale-leaseback de imóvel é comum em pré-venda de
 mid-market brasileiro (família separa o imóvel da operação numa holding patrimonial antes de vender), e a
 distorção da despesa futura de aluguel é exatamente o problema que gera briga de EBITDA normalizado.
-O princípio de materialidade: `ADICIONAR-ALTA` — deve virar regra de abertura da `revisao-de-modelo` e da
+O princípio de materialidade: `ADICIONAR-ALTA`. Deve virar regra de abertura da `revisao-de-modelo` e da
 `reorganizacao-contabil`: o teste é "esse ajuste muda materialmente ROIC, crescimento ou FCL?"; se não,
 não faça. Combate a hipertrofia de modelo, vício do analista júnior.
 **Página.** p355–356.
@@ -558,7 +558,7 @@ não faça. Combate a hipertrofia de modelo, vício do analista júnior.
 ## 11.17 Exercícios do capítulo como bateria de teste conceitual (Review Questions)
 
 **O que é.** Koller monta três empresas (A, B, C) com a mesma operação e pede ROA, ROE e ROIC das três,
-mostrando que: (a) o ROA de A difere do de B porque B tem investimentos em coligadas — empresas com
+mostrando que: (a) o ROA de A difere do de B porque B tem investimentos em coligadas: empresas com
 equity investments tendem a ter ROA **menor** (o ativo entra, a receita não); (b) o ROE de A difere do de
 C **puramente por alavancagem**, não por performance operacional; (c) portanto nem ROA nem ROE refletem
 performance operacional, e só o ROIC faz. Depois o caso HealthCo (empresa de saúde de US$ 600 MM) pede
@@ -566,20 +566,20 @@ NOPAT, capital investido médio, ROIC de dois anos, comparação com WACC de 10%
 por fim pergunta o que aconteceria com o ROIC se o caixa excedente fosse incluído.
 
 **Onde encaixa.** `diagnostico-de-roic`; `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-MÉDIA` — o par de argumentos "ROA cai por causa de coligada / ROE muda só por
+**Veredito.** `ADICIONAR-MÉDIA`: o par de argumentos "ROA cai por causa de coligada / ROE muda só por
 alavancagem" é um roteiro pronto para desqualificar as métricas que o vendedor familiar e o contador do
 alvo costumam apresentar (ROE, "rentabilidade sobre o patrimônio"). Serve como script de conversa, não
 como técnica nova. Note também o uso de **capital investido MÉDIO** (média do saldo inicial e final) como
-denominador padrão de ROIC — detalhe que a skill `diagnostico-de-roic` já cobre ("ROIC médio").
+denominador padrão de ROIC, detalhe que a skill `diagnostico-de-roic` já cobre ("ROIC médio").
 **Página.** p356–358.
 ---
 
-# Capítulo 12 — Analyzing Performance (p361–389)
+# Capítulo 12: Analyzing Performance (p361–389)
 
 > Este capítulo é a espinha dorsal da skill `diagnostico-de-roic`. Koller organiza a análise histórica em
 > três blocos obrigatórios e nesta ordem: **(1) ROIC e sua decomposição, (2) crescimento de receita e sua
 > decomposição, (3) saúde de crédito e estrutura de capital.** O terceiro bloco é hoje o mais fraco do
-> plugin — não há skill dedicada a crédito/liquidez.
+> plugin. Não há skill dedicada a crédito/liquidez.
 
 ## 12.1 Denominador do ROIC: capital investido MÉDIO, e trimestral se sazonal
 
@@ -595,14 +595,14 @@ Mesma regra vale para os índices operacionais (ex.: dias de estoque) em negóci
 **dados trimestrais**. Koller: *"the differences can be quite substantial."*
 
 **Onde encaixa.** `diagnostico-de-roic` (já tem "ROIC médio"), `capital-de-giro-e-capex`.
-**Veredito.** `ADICIONAR-MÉDIA` — a média simples já está coberta; o aditivo é o **gatilho de
+**Veredito.** `ADICIONAR-MÉDIA`: a média simples já está coberta; o aditivo é o **gatilho de
 sazonalidade → médias trimestrais**. Altamente relevante no Brasil: agro (safra/entressafra), material de
 construção, brinquedos/varejo (Natal), turismo, educação (matrícula), confecção. Empresa fechada
 brasileira frequentemente escolhe a data de balanço no vale do ciclo, o que **infla ROIC e deprime a NCG
 aparente**. É uma armadilha de diligência com efeito direto no capital de giro-alvo do contrato.
 **Página.** p362, p368.
 
-## 12.2 Por que ROIC e não ROE nem ROA — o argumento completo
+## 12.2 Por que ROIC e não ROE nem ROA: o argumento completo
 
 **O que é.**
 - **ROE** mistura performance operacional com estrutura de capital, tornando a análise de pares e a
@@ -617,14 +617,14 @@ ROE = ROIC + (ROIC - kd_após_impostos) x (D / E)     [D/E em valores CONTÁBEIS
 ```
 Leitura de Koller: uma empresa com ROIC de 10% e custo de dívida após impostos de 5% pode elevar o ROE
 (a) melhorando o ROIC via operação, ou (b) elevando o D/E trocando patrimônio por dívida. Ambos produzem a
-**mesma** variação de ROE, mas o caminho (b) torna o ROE **mais sensível a variações do ROIC** — ou seja,
+**mesma** variação de ROE, mas o caminho (b) torna o ROE **mais sensível a variações do ROIC**. Ou seja,
 eleva o ROE apenas aumentando o risco do acionista.
 
 **Onde encaixa.** `diagnostico-de-roic`; e como script de conversa em `benchmark-bancos`.
-**Veredito.** `ADICIONAR-ALTA` — a fórmula `ROE = ROIC + (ROIC − kd)×D/E` é aditiva e é a ferramenta mais
+**Veredito.** `ADICIONAR-ALTA`: a fórmula `ROE = ROIC + (ROIC − kd)×D/E` é aditiva e é a ferramenta mais
 eficaz para desmontar o argumento do vendedor familiar brasileiro que exibe "rentabilidade sobre o
 patrimônio de 40%" quando o patrimônio contábil é pequeno e a alavancagem é alta. Permite decompor
-numericamente quanto do ROE é operação e quanto é alavancagem — conversa obrigatória na preparação do
+numericamente quanto do ROE é operação e quanto é alavancagem, conversa obrigatória na preparação do
 vendedor. As duas críticas específicas ao ROA (inclui não operacional; ignora fornecedores) também são
 aditivas e curtas.
 **Página.** p362, p382, p356–358 (exercícios do Cap 11).
@@ -649,23 +649,23 @@ Regras derivadas que Koller enuncia:
   goodwill = não separável nem identificável, sujeito a impairment. Koller analisa os dois igual e não
   distingue.
 
-**Armadilha 1 — queda do ROIC com goodwill não prova destruição de valor.** Caso Tapestry (ex-Coach):
+**Armadilha 1: queda do ROIC com goodwill não prova destruição de valor.** Caso Tapestry (ex-Coach):
 comprou a Kate Spade por US$ 2,4 bi em caixa em 2017. Como os retornos sobre capital das duas eram
 similares, o **ROIC sem goodwill permaneceu praticamente constante** antes e depois. Já o **ROIC com
-goodwill caiu de 24% para 12%** em 2017. Isso significa que a aquisição destruiu valor? *Not necessarily* —
-sinergias de custo e cross-selling levam tempo para se materializar, e o acesso a novos clientes
+goodwill caiu de 24% para 12%** em 2017. Isso significa que a aquisição destruiu valor? *Not necessarily*.
+Sinergias de custo e cross-selling levam tempo para se materializar, e o acesso a novos clientes
 (millennials) pode acelerar o crescimento das linhas próprias.
 
-**Armadilha 2 — ROIC com goodwill sobe sozinho, sem melhora nenhuma do negócio.** Caso real relatado por
+**Armadilha 2: ROIC com goodwill sobe sozinho, sem melhora nenhuma do negócio.** Caso real relatado por
 Koller: uma unidade de negócio apresentou plano estratégico prevendo melhora de ROIC ao longo do tempo. O
-forecast parecia impressionante — até se descobrir que o ROIC **incluía goodwill**, e que a melhora
+forecast parecia impressionante, até se descobrir que o ROIC **incluía goodwill**, e que a melhora
 esperada vinha **exclusivamente** do goodwill permanecer constante enquanto o lucro crescia organicamente.
 *"The management team would earn accolades for improving ROIC purely as a result of the accounting for
 goodwill, not an underlying improvement to the business."*
 
 **Onde encaixa.** `diagnostico-de-roic`, `projecao-e-cenarios` (a regra de qual ROIC usar para projetar),
 `revisao-de-modelo` (as duas armadilhas como itens de checklist).
-**Veredito.** `ADICIONAR-ALTA` — a skill tem "ROIC com/sem goodwill" como conceito. O aditivo forte é:
+**Veredito.** `ADICIONAR-ALTA`: a skill tem "ROIC com/sem goodwill" como conceito. O aditivo forte é:
 (a) a **regra de decisão** "ROIC alto sem goodwill → o valor vem de crescer; ROIC baixo sem goodwill → o
 valor vem de melhorar ROIC", que direciona toda a construção de cenário; (b) usar o ROIC **sem** goodwill
 como base de projeção; (c) a Armadilha 2 (ROIC com goodwill melhora sozinho com o denominador congelado),
@@ -673,7 +673,7 @@ que é exatamente o vício de plano de negócio de consolidador brasileiro (saú
 agro-distribuição). Relevante em qualquer mandato onde o alvo já fez aquisições.
 **Página.** p363–365.
 
-## 12.4 A árvore de decomposição de ROIC completa — "uma das equações mais poderosas da análise financeira"
+## 12.4 A árvore de decomposição de ROIC completa: "uma das equações mais poderosas da análise financeira"
 
 **O que é.** A identidade-mãe, que Koller chama de *"one of the most powerful equations in financial
 analysis"*:
@@ -688,7 +688,7 @@ Equivalente:  ROIC pré-impostos = Margem operacional x Giro do capital
 Ou seja: o ROIC é dirigido pela capacidade da empresa de **(1) maximizar a rentabilidade**, **(2) otimizar
 o giro do capital** e **(3) minimizar tributos operacionais**.
 
-**Estrutura da árvore (Exhibit 12.3), lida da direita para a esquerda** — cada caixa é função das caixas à
+**Estrutura da árvore (Exhibit 12.3), lida da direita para a esquerda**: cada caixa é função das caixas à
 sua direita, e do lado direito ficam os índices operacionais sobre os quais o gestor tem controle:
 
 ```
@@ -713,27 +713,27 @@ diferenciação, barreiras de entrada e saída) e uma avaliação qualitativa de
 **Exemplo trabalhado (Costco vs. pares, 2018), que é o modelo de raciocínio a replicar:** ROIC com
 goodwill de Costco = 17,7% contra mediana dos pares de 11,6%. Por quê? Costco tem modelo atípico para
 varejo: **não remarca o custo tanto quanto os outros**, logo tem CPV/receita **mais alto**. Compensa com
-despesas de vendas e gerais **mais baixas** — o formato galpão tem depreciação muito menor, e o custo de
+despesas de vendas e gerais **mais baixas**: o formato galpão tem depreciação muito menor, e o custo de
 abastecer prateleira é menor porque não coloca item por item na gôndola, usa a própria embalagem do
 fabricante; vende embalagens maiores com sortimento menor (menos SKU para gerir). Ainda assim, termina com
-**margem operacional MENOR (3,2% contra 5,1%)**. Compensa isso com **produtividade do capital superior —
+**margem operacional MENOR (3,2% contra 5,1%)**. Compensa isso com **produtividade do capital superior,
 principalmente imobilizado muito menor em relação às vendas**.
 → Moral metodológico: **margem menor + giro muito maior = ROIC maior**. A conclusão só aparece se a árvore
 for percorrida inteira; parar na margem levaria à conclusão oposta.
 
 **Onde encaixa.** `diagnostico-de-roic` (que já tem "decomposição margem × giro").
-**Veredito.** `ADICIONAR-ALTA` — a skill tem margem × giro. O aditivo é substancial: (a) a **terceira
+**Veredito.** `ADICIONAR-ALTA`: a skill tem margem × giro. O aditivo é substancial: (a) a **terceira
 alavanca (alíquota operacional)** explicitada na identidade, que no Brasil é a alavanca mais poderosa e
 mais negligenciada (lucro presumido vs. real, benefícios de ICMS, Lei do Bem, SUDENE/SUDAM, Zona Franca,
-crédito presumido — diferenças de 10 a 20 pontos de ROIC entre pares aparentemente idênticos);
+crédito presumido: diferenças de 10 a 20 pontos de ROIC entre pares aparentemente idênticos);
 (b) a **árvore inteira com as sub-ramificações do giro** (giro de capital de giro, de imobilizado, de
-outros ativos, de goodwill — separadas), que é mais granular que "margem × giro"; (c) a regra de leitura
+outros ativos, de goodwill, separadas), que é mais granular que "margem × giro"; (c) a regra de leitura
 direita→esquerda com drivers controláveis na ponta; (d) o padrão de conclusão "margem menor + giro maior"
-como caso-exemplo. Diretamente aplicável a distribuidores e atacadistas brasileiros — cujo pitch é
+como caso-exemplo. Diretamente aplicável a distribuidores e atacadistas brasileiros, cujo pitch é
 exatamente esse e que raramente sabem articulá-lo.
 **Página.** p365–368.
 
-## 12.5 Análise linha a linha: tudo vira índice — e as exceções
+## 12.5 Análise linha a linha: tudo vira índice, e as exceções
 
 **O que é.** Um modelo de valuation completo converte **toda** linha das demonstrações em algum tipo de
 índice.
@@ -750,27 +750,27 @@ Ativos e passivos circulantes operacionais - alternativa em DIAS:
           Dias = (Linha do balanço / Receita) x 365
           (usar a MESMA base - receita - em todos os cálculos, para comparabilidade)
 ```
-Interpretação que Koller destaca: o uso de **dias** se presta a uma leitura operacional simples — *"How
+Interpretação que Koller destaca: o uso de **dias** se presta a uma leitura operacional simples: *"How
 much cash is tied up in the business, and for how long?"*
 
 Exemplo trabalhado (Costco vs. pares, 2018): ambos têm **capital de giro negativo**, o de Costco um pouco
-menor. Estoque: **30,9 dias** (Costco) contra **52,7** (pares) — a mercadoria não fica na prateleira tanto
-tempo. Fornecedores: **30,9 dias** contra **54,4** — Costco paga os fornecedores mais rápido, *"perhaps to
+menor. Estoque: **30,9 dias** (Costco) contra **52,7** (pares), a mercadoria não fica na prateleira tanto
+tempo. Fornecedores: **30,9 dias** contra **54,4**. Costco paga os fornecedores mais rápido, *"perhaps to
 get better prices"*.
 → Leitura: giro alto de estoque financiado por prazo curto de fornecedor, trocando prazo por preço de
 compra. A árvore revela a **política comercial**, não só o número.
 
 **Onde encaixa.** `capital-de-giro-e-capex` (já tem PMR/PME/PMP e NCG), `diagnostico-de-roic`.
-**Veredito.** `ADICIONAR-MÉDIA` — PMR/PME/PMP já estão. O aditivo pontual mas valioso: (a) a exceção de
+**Veredito.** `ADICIONAR-MÉDIA`: PMR/PME/PMP já estão. O aditivo pontual mas valioso: (a) a exceção de
 que **tributos operacionais se projetam sobre o lucro pré-impostos, não sobre a receita** (erro comum em
 planilha de analista); (b) a preferência por **CPV como denominador de estoque e fornecedores** em vez de
-receita, para neutralizar inflação de preços — muito relevante no Brasil em anos de inflação de custo alta
+receita, para neutralizar inflação de preços, muito relevante no Brasil em anos de inflação de custo alta
 (commodity agrícola, aço, embalagem); (c) o insight interpretativo de que **prazo curto de fornecedor pode
-ser escolha estratégica** (troca prazo por desconto), não fragilidade — argumento sell-side útil quando o
+ser escolha estratégica** (troca prazo por desconto), não fragilidade, argumento sell-side útil quando o
 comprador aponta PMP baixo como sinal de aperto de crédito.
 **Página.** p368–369.
 
-## 12.6 Drivers NÃO financeiros amarrados ao ROIC — a metodologia de desagregação
+## 12.6 Drivers NÃO financeiros amarrados ao ROIC: a metodologia de desagregação
 
 **O que é.** Em análise externa os índices ficam confinados a performance financeira. Se você trabalha
 dentro da empresa, ou se a empresa divulga dados operacionais, **amarre os drivers operacionais
@@ -803,7 +803,7 @@ Passo 3 - desagregar o custo por ASM em PREÇO x PRODUTIVIDADE:
 
   Aérea A: salário médio 16,4% MAIOR; produtividade por milha 4,6% MENOR.
 ```
-E a conclusão metodológica de Koller — **a mais importante do capítulo**: *"a thoughtful analysis will
+E a conclusão metodológica de Koller, **a mais importante do capítulo**: *"a thoughtful analysis will
 often raise more questions than it answers."* As perguntas seguintes: a diferença de salário se explica
 pelo **mix de empregados** (piloto custa mais que agente de portão) ou pela **localização** (costas leste
 e oeste custam mais que o Meio-Oeste)? Cada uma dessas análises acrescenta insight sobre a capacidade de
@@ -811,15 +811,15 @@ cada tipo de operador sobreviver e prosperar. (Contexto histórico útil: o dife
 em 2018 era pequeno comparado ao início dos anos 2000, quando os salários médios diferiam por um **fator
 de quase 2**.)
 
-**Case varejo** (mesma metodologia aplicada ao crescimento — ver 12.9).
+**Case varejo** (mesma metodologia aplicada ao crescimento, ver 12.9).
 
 **Onde encaixa.** `diagnostico-de-roic`, `projecao-e-cenarios`.
-**Veredito.** `ADICIONAR-ALTA` — não é o case das aéreas que importa, é o **padrão de desagregação
+**Veredito.** `ADICIONAR-ALTA`. O valor está no **padrão de desagregação
 reutilizável**: (i) achar a unidade física do negócio (ASM, m², leito-dia, tonelada, hectare, aluno,
 assinante, consulta, viagem, cabeça); (ii) decompor `custo/receita` em `custo por unidade ÷ receita por
 unidade` para separar eficiência de precificação; (iii) decompor `custo por unidade` em
 `preço do insumo × inverso da produtividade`. É exatamente a análise que dá credibilidade à projeção
-sell-side de um alvo mid-market — e é o que falta na maioria dos memorandos de informação brasileiros, que
+sell-side de um alvo mid-market, e é o que falta na maioria dos memorandos de informação brasileiros, que
 param na margem consolidada. Como em mandato sell-side o acesso a dado operacional interno é total
 (diferente de análise externa), a condição habilitante que Koller cita está sempre satisfeita.
 **Página.** p369–372.
@@ -831,7 +831,7 @@ culpados principais distorcem o crescimento de receita:** (1) variação cambial
 (3) mudanças de política contábil. Remova as distorções para chegar a um melhor forecast do **crescimento
 orgânico**.
 
-**Caso ilustrativo (Compass, UK, vs. Sodexo, França — refeições coletivas):** em 2017 a receita total da
+**Caso ilustrativo (Compass, UK, vs. Sodexo, França, ambas de refeições coletivas):** em 2017 a receita total da
 Compass cresceu **15,1%** e a da Sodexo **2,2%**. A diferença parece dramática, mas é dirigida
 primordialmente por **variação cambial** (libra vs. euro), não por crescimento orgânico estável. Limpando
 as distorções, o crescimento orgânico *like-for-like* da Compass (**4,0%**) ainda excedia o da Sodexo
@@ -844,7 +844,7 @@ make historical revenue growth extremely volatile, so benchmarking is difficult.
 ### (1) Efeito cambial
 Receitas em moeda estrangeira são convertidas para a moeda-sede no fim de cada período. Se as moedas
 estrangeiras se valorizam contra a moeda-sede, a tradução a taxas melhores gera receita maior. **Um aumento
-de receita pode não refletir maior poder de precificação nem maior volume vendido — apenas depreciação da
+de receita pode não refletir maior poder de precificação nem maior volume vendido, apenas depreciação da
 moeda-sede.** Mecânica do caso: Compass e Sodexo têm mix geográfico similar (quase metade da receita na
 América do Norte), mas traduzem dólar para moedas diferentes. Com o enfraquecimento da libra (US$ 1,51/£ em
 2015 vs. US$ 1,30/£ em 2017), a Compass reportou +5,4% (2016) e +11,3% (2017) de receita **atribuíveis
@@ -852,19 +852,19 @@ apenas à libra fraca**. Para a Sodexo o efeito foi oposto: euro ligeiramente ma
 tradução da receita norte-americana → **−0,4%** (2016) e **−0,8%** (2017). E os movimentos que ajudaram a
 Compass em 2016–2017 **se reverteram em 2018**.
 
-### (2) Fusões e aquisições — a mecânica pro forma de meses parciais
+### (2) Fusões e aquisições: a mecânica pro forma de meses parciais
 Crescimento por aquisição pode ter efeito sobre criação de valor **muito diferente** do crescimento
 interno, por causa dos prêmios elevados pagos. Muitas empresas grandes divulgam tabela de decomposição
 (como Compass e Sodexo). Sem divulgação voluntária, limpar o efeito é difícil: **a menos que a aquisição
 seja considerada material pelos auditores, os arquivamentos não precisam detalhá-la nem reportá-la**. Para
 aquisições maiores, a empresa reporta demonstrações pro forma que refazem o histórico como se a aquisição
-tivesse ocorrido no início do exercício — **o crescimento orgânico deve ser calculado sobre os números pro
+tivesse ocorrido no início do exercício. **O crescimento orgânico deve ser calculado sobre os números pro
 forma**. Se a adquirida reporta seus próprios dados publicamente, é possível construir o pro forma
 manualmente combinando as receitas de adquirente e alvo do ano anterior. **Cuidado:** o comprador incluirá
 receita de **ano parcial** do alvo para o período posterior ao fechamento; para manter consistência ano a
 ano, **os anos anteriores reconstruídos também devem incluir apenas a receita parcial correspondente**.
 
-Exemplo numérico completo (Exhibit 12.8 — aquisição no **7º mês do ano 3**; ambas crescendo organicamente
+Exemplo numérico completo (Exhibit 12.8: aquisição no **7º mês do ano 3**; ambas crescendo organicamente
 a 10%/ano):
 ```
 Receita consolidada REPORTADA cresce 22,8% no ano 3 e 18,2% no ano 4 - ambas ilusórias.
@@ -897,27 +897,27 @@ operadoras de celular passaram a reconhecer a venda do aparelho imediatamente, e
 contrato.
 
 Nota importante (nota 4): mudanças de reconhecimento de receita **também afetam margens e giro do
-capital** — mas **NÃO afetam o fluxo de caixa livre**.
+capital**, mas **NÃO afetam o fluxo de caixa livre**.
 
 **Onde localizar:** se a mudança é material, a empresa documenta na seção de MD&A. E fique atento a
-**exercícios de 53 semanas** — a Sodexo chamou atenção para um em 2017, que **elevou artificialmente o
+**exercícios de 53 semanas**: a Sodexo chamou atenção para um em 2017, que **elevou artificialmente o
 crescimento de 2017 e deprimiu o de 2018**.
 
 **Onde encaixa.** `qualidade-de-resultados` (as três distorções são o análogo, do lado da receita, das 4
 famílias de normalização de EBITDA), `projecao-e-cenarios`, `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-ALTA` — este é provavelmente o maior buraco identificável: a skill
+**Veredito.** `ADICIONAR-ALTA`: este é provavelmente o maior buraco identificável: a skill
 `qualidade-de-resultados` normaliza **EBITDA**, mas não há tratamento sistemático de **normalização de
 CRESCIMENTO DE RECEITA**. Em mid-market brasileiro os três distorcedores aparecem assim:
 (a) **câmbio**: `IRRELEVANTE-MIDMARKET` para alvo 100% BRL, mas relevantíssimo para exportador
-(agro, calçado, autopeças, celulose) e para alvo com receita indexada a dólar — e por analogia,
+(agro, calçado, autopeças, celulose) e para alvo com receita indexada a dólar, e por analogia,
 **a inflação brasileira desempenha o mesmo papel: crescimento nominal vs. real, com deflator de IPCA/IGP-M,
 é o análogo direto do ajuste cambial e deve ser tratado com o mesmo rigor**;
-(b) **M&A**: `ADICIONAR-ALTA` — a mecânica pro forma de meses parciais com o alerta de que **DOIS anos são
+(b) **M&A**: `ADICIONAR-ALTA`. A mecânica pro forma de meses parciais com o alerta de que **DOIS anos são
 contaminados** é diretamente aplicável a consolidador brasileiro, e o dado de que **aquisição não material
 não precisa nem ser reportada** é ainda mais verdadeiro em empresa fechada sem obrigação de arquivamento
 (a resposta é exigir na diligência a lista de aquisições com data de fechamento e receita stand-alone do
 alvo);
-(c) **contábil**: `ADICIONAR-MÉDIA` — CPC 47 é lei no Brasil e o efeito one-time no ano de adoção é real;
+(c) **contábil**: `ADICIONAR-MÉDIA`. CPC 47 é lei no Brasil e o efeito one-time no ano de adoção é real;
 o exercício de 53 semanas é raro no Brasil, mas o análogo (mudança de data de encerramento social,
 exercício-transição de 6 ou 18 meses em reorganização pré-venda) é comum e produz exatamente a mesma
 distorção. Guardar como item de checklist.
@@ -933,22 +933,22 @@ Formalmente:  Receita = Nº de unidades x Receita por unidade
 **Armadilha explícita de Koller:** *"Do not confuse revenue per unit with price; they can be different."*
 Se a receita por unidade está subindo, pode ser (a) aumento de preço **ou** (b) a empresa deslocando o
 **mix** de produtos de itens de preço baixo para itens de preço alto. São coisas econômica e
-estrategicamente distintas — e com sustentabilidade distinta.
+estrategicamente distintas, e com sustentabilidade distinta.
 
 Quais estatísticas operacionais estão disponíveis depende das normas do setor e da prática dos
 concorrentes. Varejistas, por exemplo, tipicamente divulgam **número de lojas, metragem quadrada e número
 de transações anuais**.
 
 **Onde encaixa.** `projecao-e-cenarios` (que já tem "drivers de receita"), `diagnostico-de-roic`.
-**Veredito.** `ADICIONAR-MÉDIA` — preço × quantidade provavelmente já está em `projecao-e-cenarios`. O
+**Veredito.** `ADICIONAR-MÉDIA`: preço × quantidade provavelmente já está em `projecao-e-cenarios`. O
 aditivo é o alerta **preço ≠ receita por unidade (é preço OU mix)**, que é uma distinção de sustentabilidade
 crítica no sell-side: crescimento por mix (subir para produto premium) tem teto e é finito; crescimento por
-preço reflete poder de mercado. No Brasil soma-se uma terceira componente: **inflação** — logo
+preço reflete poder de mercado. No Brasil soma-se uma terceira componente: **inflação**, logo
 `receita/unidade = preço real × inflação × mix`, e a decomposição em três termos é a que realmente
 importa aqui.
 **Página.** p377.
 
-## 12.9 A árvore de crescimento de receita (case varejo) — a lógica de "comps"
+## 12.9 A árvore de crescimento de receita (case varejo): a lógica de "comps"
 
 **O que é.** Mesma metodologia da árvore de ROIC, mas as caixas contêm **o crescimento do índice**, não o
 índice calculado, tudo relacionado de volta ao crescimento da receita.
@@ -967,7 +967,7 @@ ligeiramente**, e **(b) Delta cresceu receita por loja mais rápido**. Descendo 
 **mais fluxo de pessoas** (transações por loja +2,5% vs. +1,2% de Gamma); receita por transação cresceu
 igual nas duas.
 
-**Por que "comps" (same-store sales) é a métrica que importa** — o argumento de Koller, em duas pernas:
+**Por que "comps" (same-store sales) é a métrica que importa.** O argumento de Koller, em duas pernas:
 1. **Quantas lojas abrir é uma DECISÃO DE INVESTIMENTO**, enquanto o crescimento de mesmas lojas reflete a
    **capacidade de cada loja competir efetivamente em seu mercado local**. São coisas diferentes: a
    primeira é alocação de capital, a segunda é qualidade competitiva.
@@ -979,17 +979,17 @@ Nota técnica (nota 7): o crescimento de "receita por loja" da árvore **difere*
 reportado pelas empresas, que inclui apenas lojas abertas por **pelo menos 13 meses**.
 
 **Onde encaixa.** `projecao-e-cenarios`, `diagnostico-de-roic`, `triangulacao-e-faixa`.
-**Veredito.** `ADICIONAR-ALTA` — o argumento em duas pernas de por que **comps > abertura de lojas** é
-diretamente transferível e é o eixo central de valuation de qualquer alvo com rede de unidades — que é
+**Veredito.** `ADICIONAR-ALTA`: o argumento em duas pernas de por que **comps > abertura de lojas** é
+diretamente transferível e é o eixo central de valuation de qualquer alvo com rede de unidades, que é
 uma fatia enorme do mid-market brasileiro: farmácia, pet shop, clínica/odonto, academia, restaurante,
 franquia, escola, oficina, autopeças, distribuição com filiais. A consequência prática para o modelo:
-**separar a projeção em dois motores — crescimento de mesmas unidades (barato em capital, alto ROIC
-marginal) e abertura de unidades (caro em capital, ROIC marginal do investimento novo)** — e precificá-los
+**separar a projeção em dois motores, crescimento de mesmas unidades (barato em capital, alto ROIC
+marginal) e abertura de unidades (caro em capital, ROIC marginal do investimento novo)**, e precificá-los
 diferentemente. É também o teste de credibilidade que o comprador vai aplicar. E a nota das 13 meses é o
 detalhe técnico que evita comparar o número do modelo com o número que o alvo divulga.
 **Página.** p377–379, nota 7 p389.
 
-## 12.10 Saúde de crédito e estrutura de capital — as QUATRO análises obrigatórias
+## 12.10 Saúde de crédito e estrutura de capital: as QUATRO análises obrigatórias
 
 **O que é.** Último passo da análise histórica: como a empresa financiou suas operações. As perguntas de
 Koller: qual proporção do capital investido vem de credores em vez de acionistas? Essa estrutura é
@@ -1002,11 +1002,11 @@ acionistas?
 3. **Payout** → percentual do resultado enviado aos acionistas.
 4. **Valor operacional / EBITDA** → expectativa dos acionistas sobre performance financeira futura.
 
-### (1) Liquidez — as três medidas de resultado e a leitura de cada cobertura
+### (1) Liquidez: as três medidas de resultado e a leitura de cada cobertura
 Três medidas de resultado sustentam os índices:
-- **EBITA** — lucro antes de juros, tributos e amortização
-- **EBITDA** — antes de juros, tributos, depreciação e amortização
-- **EBITDAR** — antes de juros, tributos, depreciação, amortização **e despesa de aluguel**
+- **EBITA**: lucro antes de juros, tributos e amortização
+- **EBITDA**: antes de juros, tributos, depreciação e amortização
+- **EBITDAR**: antes de juros, tributos, depreciação, amortização **e despesa de aluguel**
 
 ```
 Cobertura de juros (versão conservadora) = EBITA / Despesa de juros
@@ -1023,17 +1023,17 @@ Cobertura com aluguel                    = EBITDAR / (Despesa de juros + Despesa
          arrendamentos operacionais.
    Crítico para: varejistas e aéreas - e em geral qualquer negócio alugado.
 ```
-Exemplo (Costco vs. pares, 2018): EBITA/juros = **31,6x** (Costco) vs. **15,3x** (pares) — pouquíssima
+Exemplo (Costco vs. pares, 2018): EBITA/juros = **31,6x** (Costco) vs. **15,3x** (pares), pouquíssima
 dívida, refletida no rating **AA−** da S&P; os pares também são pouco alavancados e bem avaliados, em grau
 menor.
 
-### (2) Alavancagem — por que dívida/EBITDA passou a dominar a cobertura de juros
+### (2) Alavancagem: por que dívida/EBITDA passou a dominar a cobertura de juros
 Koller dá **três razões** para preferir múltiplos de dívida a cobertura de juros:
-1. **Juros em mínimas históricas** tornaram os índices de cobertura de juros **atipicamente altos** —
+1. **Juros em mínimas históricas** tornaram os índices de cobertura de juros **atipicamente altos**, e
    perdem poder discriminante.
 2. Por ter **denominador muito maior**, dívida/EBITDA **é mais estável**, tornando a avaliação ao longo do
    tempo muito mais clara. E o índice **captura melhor as empresas expostas a risco de rolagem
-   (rollover risk) e a alargamento de spreads de default** — **nenhum dos dois é capturado pela cobertura
+   (rollover risk) e a alargamento de spreads de default**. **Nenhum dos dois é capturado pela cobertura
    de juros quando as taxas estão extremamente baixas**.
 3. **Uso crescente de conversíveis**: muitos títulos conversíveis remuneram via a potencial conversão em
    ações em vez de via juros, o que torna a **cobertura de juros artificialmente alta**. Dívida/EBITDA
@@ -1084,13 +1084,13 @@ valor operacional/NOPAT frequentemente dão insights úteis também.
 
 **Onde encaixa.** **Skill nova sugerida: `saude-de-credito`** (ou incorporar como bloco 3 obrigatório em
 `diagnostico-de-roic`). O item (4) encaixa em `triangulacao-e-faixa`.
-**Veredito.** `ADICIONAR-ALTA` — este é o **buraco mais claro do plugin**: nenhuma das 12 skills cobre
-liquidez, cobertura e alavancagem. E em sell-side mid-market brasileiro isso não é acessório, é central:
+**Veredito.** `ADICIONAR-ALTA`: este é o **buraco mais claro do plugin**: nenhuma das 12 skills cobre
+liquidez, cobertura e alavancagem. E em sell-side mid-market brasileiro isso é central, não acessório:
 (a) o comprador estratégico e o fundo vão modelar a capacidade de dívida do alvo, e a **alavancagem
 suportável define o preço que o comprador financeiro pode pagar** (LBO reverso);
 (b) alvo familiar brasileiro tipicamente tem **dívida caríssima e mal estruturada** (capital de giro em
 banco, antecipação de recebível, factoring, dívida no CNPJ com aval do sócio, dívida tributária em
-parcelamento) — e a cobertura de juros calculada com EBITA revela imediatamente se a operação sustenta
+parcelamento), e a cobertura de juros calculada com EBITA revela imediatamente se a operação sustenta
 essa dívida;
 (c) a preferência por **dívida/EBITDA sobre cobertura de juros** é o padrão de mercado brasileiro
 (covenant de debênture e de CCB é dívida líquida/EBITDA), o que alinha a skill com a linguagem do
@@ -1100,10 +1100,10 @@ comprador;
 (e) a **pergunta do downturn** ("a empresa sobrevive a um ciclo setorial ruim?") é exatamente a pergunta
 que o comprador fará e que o vendedor precisa ter respondido antes.
 Ressalva de escopo: **rating de agência e D/E a valor de mercado são `IRRELEVANTE-MIDMARKET`** para
-empresa fechada sem ações listadas — substituir por (i) capacidade de dívida estimada por múltiplo de
+empresa fechada sem ações listadas, substituir por (i) capacidade de dívida estimada por múltiplo de
 EBITDA que o mercado bancário brasileiro concede ao setor, e (ii) D/E a valor de mercado usando o próprio
 EV do valuation como valor do patrimônio, iterativamente. O item (4) (múltiplo de mercado como leitura de
-expectativa) é `ADICIONAR-MÉDIA` — a lógica de usar **valor operacional central, não EV bruto**, no
+expectativa) é `ADICIONAR-MÉDIA`. A lógica de usar **valor operacional central, não EV bruto**, no
 numerador do múltiplo é correta e aditiva a `triangulacao-e-faixa`, mas a série histórica de múltiplo só
 existe para os pares listados, não para o alvo.
 **Página.** p379–384.
@@ -1112,56 +1112,56 @@ existe para os pares listados, não para o alvo.
 
 **O que é.** Koller admite que é impossível dar um checklist exaustivo, e oferece quatro diretrizes:
 
-1. **Olhe para trás o máximo possível — no MÍNIMO dez anos.** Razão explícita: horizontes longos permitem
+1. **Olhe para trás o máximo possível: no MÍNIMO dez anos.** Razão explícita: horizontes longos permitem
    determinar **(a) se a empresa e o setor tendem a reverter a algum nível NORMAL de performance** e
    **(b) se as tendências de curto prazo são provavelmente permanentes**.
-2. **Desagregue os value drivers — ROIC e crescimento de receita — o máximo possível.** Se possível,
+2. **Desagregue os value drivers (ROIC e crescimento de receita) o máximo possível.** Se possível,
    **amarre medidas de performance OPERACIONAL a cada key value driver**.
 3. **Se houver qualquer mudança radical de performance, identifique a FONTE.** E determine se a mudança é
-   **temporária, permanente ou meramente um efeito contábil** — as três categorias.
+   **temporária, permanente ou meramente um efeito contábil**, as três categorias.
 4. **Se possível, faça a análise em nível granular, não só da empresa como um todo.** *"Real insight comes
    from analysis of individual business units, product lines, and, if the data exist, even customers."*
 
 **Onde encaixa.** `diagnostico-de-roic` (abertura), `revisao-de-modelo`, `qualidade-de-resultados`
 (a tricotomia temporário/permanente/contábil).
-**Veredito.** `ADICIONAR-ALTA` — quatro regras curtas de altíssimo valor, especialmente:
-(a) o **piso de 10 anos** — no mid-market brasileiro o padrão de mercado é olhar 3 anos, e 10 anos é o que
+**Veredito.** `ADICIONAR-ALTA`: quatro regras curtas de altíssimo valor, especialmente:
+(a) o **piso de 10 anos**: no mid-market brasileiro o padrão de mercado é olhar 3 anos, e 10 anos é o que
 permite ver reversão à média e o ciclo (2015–2016, 2020–2021, 2022–2023 de juro alto); mesmo quando não
 há demonstração auditada de 10 anos, o **balancete e a receita da DEFIS/ECF existem** e é possível
 reconstruir a série de receita e margem. Levantar 10 anos muda a conversa sobre o que é "EBITDA normal";
 (b) a **tricotomia temporário / permanente / efeito contábil** é uma classificação melhor e mais acionável
 do que "recorrente vs. não recorrente", e complementa as 4 famílias de `qualidade-de-resultados`;
 (c) a exigência de **granularidade por unidade de negócio, linha de produto e cliente** é a ponte
-natural para o Cap 19 (valuation por partes) e, em sell-side, é onde se encontra a história de valor —
+natural para o Cap 19 (valuation por partes) e, em sell-side, é onde se encontra a história de valor:
 quase sempre há uma linha de produto ou um segmento de cliente com ROIC muito acima do consolidado, e
 essa é a peça de equity story.
 **Página.** p384–385.
 
 ## 12.12 Exercícios do capítulo como bateria de teste (Review Questions)
 
-**O que é.** Vale registrar a estrutura, porque é um roteiro de trabalho: (1) ShipCo — calcular ROIC anos
+**O que é.** A estrutura é um roteiro de trabalho: (1) ShipCo: calcular ROIC anos
 2–5 com capital investido **médio**, margem operacional, giro do capital, e julgar se cria mais ou menos
 valor ao longo do tempo (alíquota operacional de 30%, custo de capital de 9%); (2) decompor margem e giro
 do ShipCo e explicar o que dirige o resultado; (3) decompor capital de giro operacional/vendas em **dias
 de caixa operacional, dias de recebíveis, dias de estoque, dias de fornecedores e dias de despesas
-acumuladas** — usando **vendas como base em todos os cálculos, para comparabilidade** — e comparar com
+acumuladas**, usando **vendas como base em todos os cálculos, para comparabilidade**, e comparar com
 DefenseCo; (4) comparar PaperPro (NOPAT 325, CI sem goodwill 2.500, goodwill 950) com ExpertPaper (NOPAT
-750, CI sem goodwill 6.000, sem goodwill), custo de capital 10% para ambas — teste de ROIC com vs. sem
+750, CI sem goodwill 6.000, sem goodwill), custo de capital 10% para ambas, teste de ROIC com vs. sem
 goodwill; (5) calcular crescimento orgânico *apples-to-apples* de PaperPro nos anos 2 e 3 dado o
-fechamento da aquisição em 1º de outubro do ano 2 — teste da mecânica de meses parciais; (6) qual cobertura
+fechamento da aquisição em 1º de outubro do ano 2, teste da mecânica de meses parciais; (6) qual cobertura
 de juros dá número maior (EBITDA/juros), e **quando cada uma é mais apropriada**.
 
 **Onde encaixa.** `revisao-de-modelo`, `diagnostico-de-roic`.
-**Veredito.** `ADICIONAR-MÉDIA` — a lista de **cinco componentes de dias** (caixa operacional, recebíveis,
+**Veredito.** `ADICIONAR-MÉDIA`: a lista de **cinco componentes de dias** (caixa operacional, recebíveis,
 estoque, fornecedores, despesas acumuladas) com a instrução de usar **a mesma base (vendas) em todos** é a
 especificação exata da decomposição da NCG e é aditiva a `capital-de-giro-e-capex`, que provavelmente
 cobre PMR/PME/PMP mas talvez não os **dias de caixa operacional** (que amarram de volta na regra dos 2%
 do Cap 11) nem os **dias de despesas acumuladas** (no Brasil: salários, encargos, férias e 13º
-provisionados — parcela relevante e frequentemente esquecida da NCG de empresa intensiva em mão de obra).
+provisionados, parcela relevante e frequentemente esquecida da NCG de empresa intensiva em mão de obra).
 **Página.** p385–388.
 ---
 
-# Capítulo 13 — Forecasting Performance (p390–428)
+# Capítulo 13: Forecasting Performance (p390–428)
 
 > Este é o capítulo mais operacional da Parte Dois: é literalmente o manual de construção da planilha.
 > Duas skills o consomem: `projecao-e-cenarios` (o conteúdo econômico) e `revisao-de-modelo` (a arquitetura
@@ -1178,7 +1178,7 @@ as ROIC and growth, are consistent with the past performance of the business and
 economics."*
 
 **Onde encaixa.** `projecao-e-cenarios` (abertura), `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-ALTA` — é a regra de triagem que impede o desperdício de esforço mais comum
+**Veredito.** `ADICIONAR-ALTA`: é a regra de triagem que impede o desperdício de esforço mais comum
 (refinar linha imaterial no ano 12 em vez de checar se o ROIC projetado é economicamente possível).
 Combina com o princípio de materialidade do Cap 11 (11.16) para formar a doutrina de esforço do plugin.
 **Página.** p390, p422.
@@ -1215,10 +1215,10 @@ Mas Koller reconhece o problema oposto: um período longo levanta a dificuldade 
 individuais 10 a 15 anos à frente.
 
 **Onde encaixa.** `projecao-e-cenarios`, `valor-terminal`.
-**Veredito.** `ADICIONAR-ALTA` — as **duas condições formais de steady state** e o **piso de 10–15 anos**
+**Veredito.** `ADICIONAR-ALTA`: as **duas condições formais de steady state** e o **piso de 10–15 anos**
 com a justificativa explícita ("5 anos subavalia ou exige g heroico") são aditivos e diretamente úteis: o
 padrão de mercado mid-market brasileiro é **5 anos**, exatamente o que Koller diz que subavalia. Isso é
-argumento sell-side de primeira ordem — o horizonte curto do comprador é uma escolha que joga valor para
+argumento sell-side de primeira ordem: o horizonte curto do comprador é uma escolha que joga valor para
 o terminal e depois questiona o terminal. Ter a doutrina de Koller escrita permite defender 10 anos e,
 quando o comprador insistir em 5, demonstrar numericamente que o g implícito exigido no terminal é
 insustentável. A ressalva de "mais para cíclicas" é crítica no Brasil (agro, construção, siderurgia,
@@ -1248,7 +1248,7 @@ Justificativa explícita: *"Using a simplified intermediate forecast forces you 
 long-term economics, rather than become engrossed in too much detail."*
 
 **Onde encaixa.** `projecao-e-cenarios`, `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-ALTA` — esta é a peça que resolve a tensão que o mid-market brasileiro nunca
+**Veredito.** `ADICIONAR-ALTA`: esta é a peça que resolve a tensão que o mid-market brasileiro nunca
 resolve. A prática local é uma de duas: ou projeta 5 anos detalhados e joga tudo no terminal, ou projeta
 10 anos "detalhados" que são na verdade 10 anos de crescimento constante fingindo detalhe. A estrutura de
 três blocos (5–7 detalhado com drivers físicos → 3–8 simplificado com 3 variáveis → perpetuidade) é
@@ -1311,14 +1311,14 @@ REGRA 4 - Usar fórmulas embutidas do software COM PARCIMÔNIA, como a fórmula 
           Fórmulas embutidas OBSCURECEM a lógica do modelo e dificultam a AUDITORIA.
 ```
 
-**Onde encaixa.** `revisao-de-modelo` (auditoria do .xlsx do analista) — é o núcleo do padrão de referência.
-**Veredito.** `ADICIONAR-ALTA` — é o conteúdo mais diretamente operacionalizável do capítulo para a skill
+**Onde encaixa.** `revisao-de-modelo` (auditoria do .xlsx do analista). É o núcleo do padrão de referência.
+**Veredito.** `ADICIONAR-ALTA`: é o conteúdo mais diretamente operacionalizável do capítulo para a skill
 `revisao-de-modelo`. As sete abas dão um **layout de referência** contra o qual auditar qualquer planilha
 que o analista traga, e as quatro regras são critérios de aprovação/reprovação objetivos. Três delas são
 especialmente frequentes em planilha mid-market brasileira: hard-code em fórmula, referência circular
-(quase sempre por causa de juros sobre dívida do ano corrente — ver 13.8), e uso de `=VPL()` que esconde a
+(quase sempre por causa de juros sobre dívida do ano corrente, ver 13.8), e uso de `=VPL()` que esconde a
 convenção de meio de ano e o timing do primeiro fluxo. Nota importante: a aba 3 gerar a aba 2 (índices
-dirigem demonstrações) é a inversão de arquitetura que a maioria das planilhas locais não faz — elas
+dirigem demonstrações) é a inversão de arquitetura que a maioria das planilhas locais não faz: elas
 projetam valores diretamente, o que mata a capacidade de cenário.
 **Página.** p391–394, notas 1–2 p425.
 
@@ -1357,15 +1357,15 @@ PASSO 6 - Calcular ROIC e FCL nas demonstrações projetadas
 be carried through the entire model."*
 
 **Onde encaixa.** `projecao-e-cenarios`, `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-ALTA` — a sequência de 6 passos é a espinha do procedimento e resolve a ordem de
-trabalho. Dois pontos de altíssimo valor: (a) **FCL é OUTPUT, não input** — construir DRE + balanço e
+**Veredito.** `ADICIONAR-ALTA`: a sequência de 6 passos é a espinha do procedimento e resolve a ordem de
+trabalho. Dois pontos de altíssimo valor: (a) **FCL é OUTPUT, não input**: construir DRE + balanço e
 derivar o FCL, jamais projetar FCL diretamente (erro rotineiro em modelo mid-market brasileiro, que
 projeta "EBITDA − capex − Δcapital de giro − impostos" sem balanço, o que torna impossível calcular ROIC
 e impossível checar consistência); (b) **as mesmas fórmulas devem calcular ROIC e FCL no histórico e na
-projeção, sem modificação** — teste de auditoria objetivo e devastador quando falha.
+projeção, sem modificação**: teste de auditoria objetivo e devastador quando falha.
 **Página.** p394–395.
 
-## 13.5 Passo 1 — dado padronizado vs. dado bruto: o trade-off
+## 13.5 Passo 1, dado padronizado vs. dado bruto: o trade-off
 
 **O que é.** Duas fontes possíveis: serviço profissional (Bloomberg, Capital IQ, Compustat, Thomson ONE)
 ou as demonstrações diretamente. Serviços oferecem **dado padronizado** (formatado num número fixo de
@@ -1391,13 +1391,13 @@ demonstração de FCL.
 **Regra de agregação de linhas imateriais.** Projetar e analisar linhas demais gera confusão, introduz
 erros e torna o modelo intratável. Critério de Koller no caso Honeywell: "tributos a pagar" era menos de
 **0,1% da receita** → pode ser combinado com a conta "outros". Contraste (nota 3): "compensação e
-benefícios acumulados" era **quase 15 vezes maior** que tributos a pagar — dado o tamanho, **não deve** ser
+benefícios acumulados" era **quase 15 vezes maior** que tributos a pagar. Dado o tamanho, **não deve** ser
 agregada com outros passivos acumulados. **Restrição absoluta:** ao agregar, **nunca** combinar contas
-operacionais com não operacionais — se combinadas, é impossível calcular ROIC e FCL corretamente.
+operacionais com não operacionais. Se combinadas, é impossível calcular ROIC e FCL corretamente.
 
 **Onde encaixa.** `reorganizacao-contabil`, `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-MÉDIA` — no Brasil não há Compustat do alvo (empresa fechada), então a discussão
-de dado padronizado é `IRRELEVANTE-MIDMARKET` **para o alvo** — mas é relevantíssima **para os pares**, e
+**Veredito.** `ADICIONAR-MÉDIA`: no Brasil não há Compustat do alvo (empresa fechada), então a discussão
+de dado padronizado é `IRRELEVANTE-MIDMARKET` **para o alvo**, mas é relevantíssima **para os pares**, e
 o alerta se transfere: usar Capital IQ/Bloomberg/Economatica para construir múltiplos de pares brasileiros
 e latino-americanos herda exatamente esse defeito de agregação (o "outros ativos" da Economatica). Já a
 **regra de materialidade quantificada** (agregar abaixo de ~0,1% da receita; nunca agregar se a conta é
@@ -1405,7 +1405,7 @@ uma ordem de magnitude maior que as vizinhas; nunca misturar operacional com nã
 objetiva. E o ponto da **DMPL como ferramenta de error-checking** reforça 11.2.
 **Página.** p395–397, nota 3 p426.
 
-## 13.6 Passo 2 — Projeção de receita: top-down vs. bottom-up
+## 13.6 Passo 2, projeção de receita: top-down vs. bottom-up
 
 **O que é.** Duas abordagens, e a recomendação de usar **as duas** quando possível: *"When possible, use
 both methods to establish bounds for the forecast."*
@@ -1420,12 +1420,12 @@ Aplicável a **qualquer** empresa. Em indústrias maduras, o mercado agregado cr
 fortemente ligado ao crescimento econômico e a tendências de longo prazo (ex.: mudança de preferência do
 consumidor). Nessas situações: **confie em projeções de terceiros para o mercado agregado** e concentre
 seu próprio esforço em **projetar participação de mercado por concorrente**. (Nota 4: exemplos de fontes
-setoriais de terceiros — EvaluatePharma para receita droga por droga, McCoy Power Reports para
+setoriais de terceiros: EvaluatePharma para receita droga por droga, McCoy Power Reports para
 equipamento de geração, RBR para sistemas de ponto de venda.)
 
 Para projetar share, é preciso determinar **quais empresas têm capacidades e recursos para competir
 efetivamente e capturar share**. Bom ponto de partida: a análise financeira histórica. **Mais
-importante:** endereçar como a empresa está posicionada para o **futuro** — ela tem os produtos e serviços
+importante:** endereçar como a empresa está posicionada para o **futuro**: ela tem os produtos e serviços
 necessários para capturar share? Os concorrentes têm produtos e serviços que vão **deslocar** a posição da
 empresa? *"A good forecast will address each of these issues."*
 
@@ -1441,8 +1441,8 @@ lojas domésticas e internacionais.** Alguns analistas fornecem projeções de *
 receita média por transação e outros drivers de receita**. *"Taking a fine-grained look at a company's
 sources of growth will make clear what drives the company's valuation."*
 
-**Mercados de produto NOVO — a metodologia de analogia.** Top-down é especialmente útil mas dá mais
-trabalho. Case June Life (fornos com internet, multifuncionais — torradeira, desidratador, slow cooker,
+**Mercados de produto NOVO: a metodologia de analogia.** Top-down é especialmente útil mas dá mais
+trabalho. Case June Life (fornos com internet, multifuncionais: torradeira, desidratador, slow cooker,
 com app de controle remoto). Sem histórico do produto, como estimar tamanho potencial e velocidade de
 penetração? A receita de Koller, passo a passo:
 ```
@@ -1480,28 +1480,28 @@ Marketing*, 2018.)
 preferences, technologies, and corporate strategies change."* Portanto: **reavalie constantemente se a
 projeção corrente é consistente com (a) a dinâmica da indústria, (b) o posicionamento competitivo e (c) a
 evidência histórica sobre crescimento corporativo** (Cap 9). **Se falta confiança na projeção de receita,
-use MÚLTIPLOS CENÁRIOS para modelar a incerteza** — isso não só delimita a projeção, mas também ajuda a
+use MÚLTIPLOS CENÁRIOS para modelar a incerteza**. Isso não só delimita a projeção, mas também ajuda a
 administração a tomar decisões melhores.
 
 **Onde encaixa.** `projecao-e-cenarios` (que já tem drivers de receita e cenários).
-**Veredito.** `ADICIONAR-ALTA` — a skill tem "drivers de receita"; o que é aditivo e substancial:
-(a) a **dicotomia formal top-down vs. bottom-up com a instrução de usar AMBOS para delimitar a faixa** —
-isso é diretamente aplicável e é o teste de credibilidade que o comprador aplica ao plano de negócio do
+**Veredito.** `ADICIONAR-ALTA`: a skill tem "drivers de receita"; o que é aditivo e substancial:
+(a) a **dicotomia formal top-down vs. bottom-up com a instrução de usar AMBOS para delimitar a faixa**.
+Isso é diretamente aplicável e é o teste de credibilidade que o comprador aplica ao plano de negócio do
 vendedor: se top-down (mercado × share) e bottom-up (clientes atuais − churn + novos) não convergem, a
 projeção não se sustenta. Em sell-side é obrigatório rodar os dois **antes** de o comprador rodar;
 (b) a **decomposição bottom-up em 3 termos (base atual, churn, novos)** é a estrutura correta para alvo
-com receita recorrente/contratual — SaaS, serviço B2B, manutenção, mensalidade escolar, plano de saúde,
-academia, segurança patrimonial, TI gerenciada — que é fatia crescente do mid-market brasileiro;
+com receita recorrente/contratual (SaaS, serviço B2B, manutenção, mensalidade escolar, plano de saúde,
+academia, segurança patrimonial, TI gerenciada), que é fatia crescente do mid-market brasileiro;
 (c) a **metodologia de analogia em 6 passos** para produto/mercado novo é ferramenta pronta para o alvo
 que tem uma linha nova sem histórico (situação comum e onde o vendedor pede valor por opcionalidade);
 (d) a instrução de que **top-down de curto prazo deve se ancorar em intenções e capacidades ANUNCIADAS**
-(plano de abertura de unidades, capacidade instalada, contratos assinados, backlog, carteira) — no
+(plano de abertura de unidades, capacidade instalada, contratos assinados, backlog, carteira). No
 Brasil o backlog/carteira assinada é a evidência mais forte e mais subutilizada no memorando de informação;
 (e) a granularidade por segmento (o case Costco: doméstico/internacional/membership/acessórios) porque os
-drivers físicos diferem entre segmentos — ponte natural para o Cap 19.
+drivers físicos diferem entre segmentos, ponte natural para o Cap 19.
 **Página.** p397–400, notas 4–5 p425–426.
 
-## 13.7 Passo 3 — Projeção da DRE: o processo de três passos por linha, e por que ÍNDICE e não taxa de crescimento
+## 13.7 Passo 3, projeção da DRE: o processo de três passos por linha, e por que ÍNDICE e não taxa de crescimento
 
 **O que é.** Para projetar qualquer linha:
 ```
@@ -1527,7 +1527,7 @@ PASSO C - Multiplicar o índice projetado pela estimativa do seu DRIVER.
 Exemplo trabalhado: CPV histórico = 37,5% da receita → índice projetado inicial = 37,5% →
 37,5% × US$ 288 MM = US$ 108 MM.
 
-**Por que ÍNDICE e não crescimento — o argumento de flexibilidade.** Koller *não* projeta o CPV
+**Por que ÍNDICE e não crescimento: o argumento de flexibilidade.** Koller *não* projeta o CPV
 aumentando o custo do ano anterior em 20% (a mesma taxa da receita). Embora leve à **mesma resposta
 inicial**, isso **reduz a flexibilidade**: usando um índice de projeção em vez de taxa de crescimento,
 é possível (a) **variar a estimativa de receita** e o CPV muda em conjunto, ou (b) **variar o índice de
@@ -1546,7 +1546,7 @@ its complexity. A talented modeler carefully balances realism with simplicity."*
 one-time** (Cap 11), porque a DRE às vezes embute itens não operacionais dentro de despesas operacionais.
 
 **Onde encaixa.** `projecao-e-cenarios`, `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-ALTA` — dois aditivos com efeito prático imediato: (a) o **argumento de por que
+**Veredito.** `ADICIONAR-ALTA`: dois aditivos com efeito prático imediato: (a) o **argumento de por que
 projetar por ÍNDICE e nunca por taxa de crescimento de custo**, que é a diferença entre uma planilha em
 que se pode rodar cenário e uma em que não se pode; é erro estrutural comum em modelo mid-market
 brasileiro que projeta cada linha de custo com "crescimento de X%"; (b) a **tática de construção** (fixar
@@ -1555,7 +1555,7 @@ premissas) é uma disciplina de trabalho que evita o padrão de analista que ref
 modelo fechar. Ambos entram em `revisao-de-modelo` como critério e em `projecao-e-cenarios` como método.
 **Página.** p400–403.
 
-## 13.8 Depreciação, e as três opções — com a regra de PP&E LÍQUIDO
+## 13.8 Depreciação e as três opções: a regra de PP&E LÍQUIDO
 
 **O que é.** Três opções para projetar depreciação: (a) % da receita, (b) % do PP&E, ou (c) se você está
 dentro da empresa, projeções baseadas em **compras específicas de equipamento e cronogramas de
@@ -1567,7 +1567,7 @@ capex a cada poucos anos. Como a depreciação está diretamente ligada a um ati
 aumentar **somente após um desembolso**. Se você amarra a depreciação às vendas, ela **crescerá
 incorretamente conforme a receita cresce, mesmo quando nenhum capex foi feito.**
 
-**A escolha entre PP&E líquido e bruto — a regra prática:**
+**A escolha entre PP&E líquido e bruto, a regra prática:**
 ```
 Projetar depreciação como % do PP&E LÍQUIDO (net), NÃO do bruto.
 
@@ -1582,22 +1582,22 @@ para cada ativo, projete a depreciação usando cronograma, vida útil e valor r
 depreciação da empresa, combine a depreciação anual de cada ativo.
 
 **Onde encaixa.** `capital-de-giro-e-capex`, `projecao-e-cenarios`.
-**Veredito.** `ADICIONAR-ALTA` — a regra "**depreciação sobre PP&E líquido, nunca sobre receita**" com o
+**Veredito.** `ADICIONAR-ALTA`: a regra "**depreciação sobre PP&E líquido, nunca sobre receita**" com o
 argumento do capex lumpy é diretamente aplicável e é erro muito comum: em mid-market brasileiro o capex é
 tipicamente lumpy (compra de máquina, expansão de galpão, frota) e projetar depreciação como % da receita
-gera um tax shield fictício que cresce sem investimento — inflando o FCL. E a explicação de por que **não**
+gera um tax shield fictício que cresce sem investimento, inflando o FCL. E a explicação de por que **não**
 usar PP&E bruto (exigiria modelar baixas; esquecê-las superestima depreciação e tax shield nos anos
 finais) é a justificativa técnica que fecha a escolha. Em sell-side isso importa porque afeta o imposto
 projetado, que é linha material.
 **Página.** p403–404.
 
-## 13.9 Despesa de juros: use a dívida do ANO ANTERIOR — e por que (circularidade)
+## 13.9 Despesa de juros: use a dívida do ANO ANTERIOR, e por que (circularidade)
 
 **O que é.** Despesa (ou receita) de juros deve ser amarrada **diretamente ao passivo (ou ativo) que a
 gera**. O driver apropriado da despesa de juros é a **dívida total**. **Para simplificar a implementação,
 use a dívida do ANO ANTERIOR, não a do fim do ano corrente.**
 
-**O motivo — o loop de retroalimentação:**
+**O motivo, o loop de retroalimentação:**
 ```
 Sobem os custos operacionais
   -> se a empresa usa dívida para necessidades de curto prazo, a dívida total SOBE
@@ -1619,7 +1619,7 @@ Ressalva (nota 6): usando dívida do ano anterior × taxa corrente, **o erro de 
 as variações ano a ano da dívida forem significativas.**
 
 **A neutralidade de valor.** Usar taxas históricas para projetar juros é simples e direto. E **como a
-despesa de juros não faz parte do FCL, a escolha de como projetá-la NÃO afeta o valuation** — só o FCL
+despesa de juros não faz parte do FCL, a escolha de como projetá-la NÃO afeta o valuation**, só o FCL
 dirige o valuation; o custo da dívida é modelado como parte do WACC. (Nota 7: num modelo baseado em WACC,
 o custo da dívida e seus tax shields estão totalmente incorporados no custo de capital; num modelo APV, o
 tax shield de juros é valorado separadamente usando uma projeção de despesa de juros.)
@@ -1637,29 +1637,29 @@ DÍVIDA NOVA      - deve ser paga a TAXAS CORRENTES DE MERCADO, disponíveis em 
 detalhando juros e amortização de principal por ano, para cada contrato de dívida**.)
 
 **Receita financeira:** estimar do mesmo modo, com base no ativo que a gera. **Cuidado:** receita
-financeira pode vir de múltiplos investimentos — caixa excedente, investimentos de curto prazo,
+financeira pode vir de múltiplos investimentos: caixa excedente, investimentos de curto prazo,
 empréstimos a clientes, outros investimentos de longo prazo. Se uma nota detalha a relação histórica entre
 receita financeira e os ativos que a geram (e a relação é material), **faça um cálculo separado para cada
 ativo**.
 
 **Onde encaixa.** `projecao-e-cenarios`, `revisao-de-modelo`, `custo-de-capital` (a neutralidade).
-**Veredito.** `ADICIONAR-ALTA` — três aditivos de alto valor: (a) **usar dívida t−1 para matar a
-circularidade**, com a explicação completa do loop — é a causa nº 1 de referência circular e de planilha
+**Veredito.** `ADICIONAR-ALTA`: três aditivos de alto valor: (a) **usar dívida t−1 para matar a
+circularidade**, com a explicação completa do loop. É a causa nº 1 de referência circular e de planilha
 que não converge em modelo mid-market brasileiro; (b) a **partição dívida existente (taxa contratual das
 notas) vs. dívida nova (taxa de mercado corrente para rating e duration comparáveis)**, que no Brasil é
 essencial porque o alvo típico tem dívida legada barata (BNDES, FINAME, Pronampe, crédito subsidiado
-agrícola) coexistindo com capital de giro caro — projetar tudo pela taxa média destrói a análise;
+agrícola) coexistindo com capital de giro caro, projetar tudo pela taxa média destrói a análise;
 (c) a **neutralidade de valor** (juros não estão no FCL, logo a forma de projetá-los não muda o valuation)
 é a informação que impede o analista de perder tempo e é um argumento útil quando o comprador contesta a
 premissa de juros. A ideia da **aba separada de dívida contrato por contrato** é o padrão correto quando
-há discussão de capacidade de alavancagem — que é sempre, em sell-side com fundo na mesa.
+há discussão de capacidade de alavancagem, que é sempre, em sell-side com fundo na mesa.
 **Página.** p406–407, notas 6–7 p426, nota 13 p427.
 
 ## 13.10 Tributos na projeção: NUNCA como % do LAIR
 
 **O que é.** Regra imperativa: *"Do NOT forecast the provision for income taxes as a percentage of
 earnings before taxes."* Consequência de fazê-lo: **ROIC e FCL nos anos projetados mudariam
-inadvertidamente conforme a alavancagem e a receita não operacional mudam** — ou seja, o valuation
+inadvertidamente conforme a alavancagem e a receita não operacional mudam**. Ou seja, o valuation
 passaria a depender da estrutura de capital pela porta dos fundos.
 
 O procedimento correto:
@@ -1691,19 +1691,19 @@ O procedimento correto:
 ```
 
 **Onde encaixa.** `impostos-e-prejuizos-fiscais`, `projecao-e-cenarios`, `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-ALTA` — regra dura, curta e com efeito direto no valor. Erro extremamente comum
+**Veredito.** `ADICIONAR-ALTA`: regra dura, curta e com efeito direto no valor. Erro extremamente comum
 em modelo mid-market brasileiro: projetar "IR/CS = 34% × LAIR", o que contamina o FCL com o efeito da
 alavancagem e faz o ROIC projetado responder a dívida. A ressalva sobre **incentivos fiscais crescerem ou
 não em linha com o EBITA** é especialmente relevante no Brasil, onde os incentivos são frequentemente
 (a) **de valor fixo ou com teto** (crédito presumido de ICMS por convênio, benefício SUDENE/SUDAM com
-prazo de 10 anos, Lei do Bem limitada ao dispêndio em P&D, PERSE, REIDI) e (b) **com data de vencimento**
-— logo a hipótese implícita de que crescem com o EBITA é geralmente **falsa**, e a instrução de Koller
+prazo de 10 anos, Lei do Bem limitada ao dispêndio em P&D, PERSE, REIDI) e (b) **com data de vencimento**.
+Logo, a hipótese implícita de que crescem com o EBITA é geralmente **falsa**, e a instrução de Koller
 (tributar o EBITA à marginal e projetar os créditos um por um, com prazo) é exatamente o procedimento
 correto. Isso é matéria de negociação: incentivo que expira é risco que o comprador precifica, e ter o
 cronograma explícito no modelo é vantagem do vendedor.
 **Página.** p407–409, nota 8 p426.
 
-## 13.11 Passo 4 — Balanço: STOCK e não FLOW (com a evidência)
+## 13.11 Passo 4, balanço: STOCK e não FLOW (com a evidência)
 
 **O que é.** Questão de método: projetar as linhas do balanço **diretamente (em estoques/saldos)** ou
 **indiretamente (em fluxos/variações)**? Exemplo: a abordagem de **stock** projeta o saldo final de
@@ -1720,7 +1720,7 @@ Variação de recebíveis / Variação de receita -> vai de -1% a 16%  ("too vol
 ```
 
 **Regra de escopo do passo 4:** projetar aqui as linhas de **capital investido e ativos não operacionais**.
-**NÃO** projetar caixa excedente nem fontes de financiamento (dívida e patrimônio) — esses exigem
+**NÃO** projetar caixa excedente nem fontes de financiamento (dívida e patrimônio). Esses exigem
 tratamento especial no passo 5.
 
 As três linhas operacionais primárias: **capital de giro operacional, capital de longo prazo (PP&E
@@ -1728,14 +1728,14 @@ líquido) e intangíveis relacionados a aquisições**. As não operacionais inc
 pensões e tributos diferidos.
 
 **Onde encaixa.** `projecao-e-cenarios`, `capital-de-giro-e-capex`, `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-ALTA` — **stock vs. flow** com a evidência numérica é aditivo, curto e resolve um
+**Veredito.** `ADICIONAR-ALTA`: **stock vs. flow** com a evidência numérica é aditivo, curto e resolve um
 erro estrutural real. Muita planilha mid-market brasileira projeta "Δ capital de giro = X% do Δ receita",
 que é precisamente a abordagem instável que Koller rejeita, e que produz NCG projetada absurda quando o
 crescimento oscila (e no Brasil oscila muito). A banda 9,2–10,1% vs. −1% a 16% é a demonstração que
 convence o analista em uma linha.
 **Página.** p409–410.
 
-## 13.12 Capital de giro operacional na projeção — e a exceção do CPV
+## 13.12 Capital de giro operacional na projeção: a exceção do CPV
 
 **O que é.**
 ```
@@ -1755,7 +1755,7 @@ Conversão (nota 9): Dias de vendas = (% da receita) x 365
 Exemplo do livro: caixa operacional a **7,6 dias de vendas**, estoque a **182,5 dias de CPV**,
 fornecedores a **81,1 dias de CPV**.
 
-**Por que projetar em DIAS — a razão prática:** *"We forecast in days for the added benefit of tying
+**Por que projetar em DIAS, a razão prática:** *"We forecast in days for the added benefit of tying
 forecasts more closely to the velocity of operating activities. For instance, if management announces its
 intention to reduce its inventory holding period from 180 days to 120 days, it is possible to compute
 changes in value by adjusting the forecast directly."*
@@ -1765,22 +1765,22 @@ projecting each working-capital item using revenues. The distinction is material
 expected to deviate significantly from cost per unit."*
 
 **Onde encaixa.** `capital-de-giro-e-capex`, `projecao-e-cenarios`.
-**Veredito.** `ADICIONAR-MÉDIA` — dias e PMR/PME/PMP já estão na skill. Aditivo: (a) a regra da **exceção
+**Veredito.** `ADICIONAR-MÉDIA`: dias e PMR/PME/PMP já estão na skill. Aditivo: (a) a regra da **exceção
 do CPV para estoque e fornecedores** com o critério de materialidade explícito (só importa quando o preço
-deve divergir significativamente do custo por unidade) — no Brasil isso importa em anos de repasse
+deve divergir significativamente do custo por unidade). No Brasil isso importa em anos de repasse
 incompleto de custo (2021–2022) e em alvo com insumo dolarizado e receita em reais; (b) o vínculo
 **salários a pagar como % da folha da DRE** em vez de % da receita, que é o correto para alvo intensivo em
-mão de obra (serviço, saúde, segurança, limpeza, logística — grande parte do mid-market brasileiro), onde
+mão de obra (serviço, saúde, segurança, limpeza, logística, grande parte do mid-market brasileiro), onde
 salários/encargos/férias/13º provisionados são parcela material da NCG; (c) o argumento de que **projetar
 em dias permite valorar diretamente uma promessa de gestão** ("vamos reduzir estoque de 180 para 120
-dias") — que é exatamente como se constrói e se precifica uma iniciativa de melhoria no equity story
+dias"), que é exatamente como se constrói e se precifica uma iniciativa de melhoria no equity story
 sell-side.
 **Página.** p410–411, notas 9–10 p426.
 
 ## 13.13 PP&E: os três passos, e por que NÃO projetar capex como % da receita
 
 **O que é.** Consistente com o argumento stock-vs-flow, **PP&E líquido deve ser projetado como % da
-receita**. A alternativa comum — projetar **capex** como % da receita — *"too easily leads to unintended
+receita**. A alternativa comum (projetar **capex** como % da receita) *"too easily leads to unintended
 increases or decreases in capital turnover (the ratio of PP&E to revenues)."* Ao longo de períodos longos,
 o índice PP&E líquido/receita das empresas tende a ser **bastante estável**.
 
@@ -1802,10 +1802,10 @@ sure to assess the resulting cash flow carefully."*
 **número de unidades em vez de receita** para projetar compras de equipamento.)
 
 **Onde encaixa.** `capital-de-giro-e-capex`, `projecao-e-cenarios`, `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-ALTA` — a inversão de método (**projetar PP&E líquido e DERIVAR o capex**, em vez
+**Veredito.** `ADICIONAR-ALTA`: a inversão de método (**projetar PP&E líquido e DERIVAR o capex**, em vez
 de projetar capex) é aditiva, importante e contra-intuitiva para o analista. A prática mid-market
 brasileira é projetar "capex = X% da receita" (ou "capex = depreciação"), o que solta o giro do capital e
-permite crescer receita sem investir — a inconsistência que o comprador vai encontrar. O método de Koller
+permite crescer receita sem investir, a inconsistência que o comprador vai encontrar. O método de Koller
 **força a consistência entre crescimento e investimento**, que é o núcleo da relação g/ROIC que a skill
 `projecao-e-cenarios` já usa no terminal, mas que precisa valer no período explícito também. E a armadilha
 do **capex negativo** é uma checagem de sanidade concreta para `revisao-de-modelo`. A nota 11 (usar
@@ -1816,7 +1816,7 @@ unidades físicas em vez de receita) conecta com 13.6 e é aplicável a alvo ind
 ## 13.14 Goodwill e aquisições na projeção: a recomendação de ZERAR
 
 **O que é.** Recomendação padrão de Koller: **para a maioria das empresas, NÃO modelar aquisições
-potenciais explicitamente** — fixar o crescimento de receita por novas aquisições em **zero** e manter
+potenciais explicitamente**: fixar o crescimento de receita por novas aquisições em **zero** e manter
 goodwill e intangíveis adquiridos **constantes no nível atual**.
 
 **Justificativa em duas pernas:**
@@ -1827,7 +1827,7 @@ goodwill e intangíveis adquiridos **constantes no nível atual**.
    current financial results, you make implicit (and often hidden) assumptions about the present value of
    acquisitions."* Se o índice projetado de goodwill sobre receita adquirida implica **VPL positivo** para
    o crescimento adquirido, **aumentar a taxa de crescimento por aquisição pode elevar dramaticamente o
-   valuation resultante — mesmo quando bons negócios são difíceis de achar.**
+   valuation resultante, mesmo quando bons negócios são difíceis de achar.**
 
 **Se você decidir projetar aquisições, a mecânica:**
 ```
@@ -1848,11 +1848,11 @@ intangíveis, como software capitalizado e contratos de venda comprados, devem s
 metodologia usada para capex e PP&E.)
 
 **Onde encaixa.** `projecao-e-cenarios`, `triangulacao-e-faixa`, `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-ALTA` — em sell-side mid-market brasileiro isso é doutrina de defesa **e** de
+**Veredito.** `ADICIONAR-ALTA`: em sell-side mid-market brasileiro isso é doutrina de defesa **e** de
 ataque. **Defesa:** quando o alvo é um consolidador e o vendedor quer valor pelo "plano de aquisições",
 Koller dá o argumento rigoroso de que crescimento adquirido é VPL zero e não deve entrar no valuation do
-alvo — o vendedor não recebe pelo M&A que não fez. **Ataque:** quando o comprador estratégico avalia o
-alvo, o alvo *é* a aquisição, e o mesmo argumento diz que **o prêmio pago é onde o valor vai** — combina
+alvo. O vendedor não recebe pelo M&A que não fez. **Ataque:** quando o comprador estratégico avalia o
+alvo, o alvo *é* a aquisição, e o mesmo argumento diz que **o prêmio pago é onde o valor vai**, combina
 com o dado de CPG do Cap 11 (11.6, gap de 17 p.p. entre ROIC com e sem goodwill). O item 3 (reality check
 variando o crescimento adquirido) é checagem concreta para `revisao-de-modelo`. E a distinção da nota 12
 (intangível interno se projeta como capex) é a regra correta para alvo de software brasileiro.
@@ -1864,14 +1864,14 @@ variando o crescimento adquirido) é checagem concreta para `revisao-de-modelo`.
 DCF** (Cap 16), qualquer projeção desses itens serve primordialmente para **planejamento financeiro e
 gestão de caixa, não para o valuation empresarial**.
 
-**Exemplo canônico — pensão a descoberto.** A administração anuncia intenção de reduzir o déficit em 50%
+**Exemplo canônico: pensão a descoberto.** A administração anuncia intenção de reduzir o déficit em 50%
 nos próximos cinco anos. Para valorar a pensão a descoberto, **NÃO desconte as saídas projetadas dos
 próximos cinco anos.** Em vez disso, **use a avaliação atuarial corrente do déficit, que consta na nota de
 pensões.** *"The rate of reduction will have no valuation implications but will affect the ability to pay
 dividends or may require additional financing. To this end, model a reasonable time frame for eliminating
 pension shortfalls."*
 
-**Coligadas e equity investments — cautela extrema.** *"We are extremely cautious about forecasting (and
+**Coligadas e equity investments: cautela extrema.** *"We are extremely cautious about forecasting (and
 valuing) nonconsolidated subsidiaries and other equity investments. Valuations should be based on
 assessing the investments currently owned, not on discounting the forecast changes in their book values
 and/or their corresponding income."* Se uma projeção é necessária para planejamento, lembre que
@@ -1896,20 +1896,20 @@ Na MAIORIA das situações (resultado razoável):
 ```
 
 **Onde encaixa.** `impostos-e-prejuizos-fiscais`, `projecao-e-cenarios`, `reorganizacao-contabil`.
-**Veredito.** `ADICIONAR-MÉDIA` — pensão de benefício definido é `IRRELEVANTE-MIDMARKET` (raríssimo em
+**Veredito.** `ADICIONAR-MÉDIA`: pensão de benefício definido é `IRRELEVANTE-MIDMARKET` (raríssimo em
 empresa fechada brasileira de porte médio), **mas o PRINCÍPIO transfere-se integralmente e com alto
 valor**: para uma obrigação cujo valor já é conhecido/mensurado (contingência trabalhista e tributária
-provisionada, parcelamento tributário — REFIS/PERT/Transação Tributária, passivo de FGTS, débito
+provisionada, parcelamento tributário, REFIS/PERT/Transação Tributária, passivo de FGTS, débito
 previdenciário), **não se desconta o cronograma de pagamento como se fosse fluxo; usa-se o valor atual da
 obrigação como equivalente de dívida no bridge, e o cronograma serve apenas para checar a capacidade de
 pagar dividendos ou a necessidade de financiamento.** Isso é exatamente o tratamento correto do
-parcelamento tributário no CFDF — item presente em quase todo alvo mid-market brasileiro e frequentemente
+parcelamento tributário no CFDF, item presente em quase todo alvo mid-market brasileiro e frequentemente
 mal tratado. A regra dos coligados ("avalie o que se possui hoje, não desconte a variação projetada do
 valor contábil") reforça 11.14. A regra prática da **proporção agregada diferida** (a "fração de um
 quinto") é o mesmo dispositivo da média de 5 anos do Cap 11 e é o atalho utilizável.
 **Página.** p414–415.
 
-## 13.16 Passo 5 — Fechar o balanço: clean surplus e o "plug"
+## 13.16 Passo 5, fechar o balanço: clean surplus e o "plug"
 
 **O que é.** Duas ferramentas contábeis.
 
@@ -1925,7 +1925,7 @@ Exemplo: PL 2019 = US$ 182 MM + lucro líquido 2020 de US$ 72,7 MM − dividendo
 
 **(b) O "plug".** Nesse ponto restam quatro linhas: **caixa excedente, dívida de curto prazo, dívida de
 longo prazo e uma conta nova chamada "dívida recém-emitida"**. Alguma combinação delas tem de fazer o
-balanço fechar — por isso são chamadas de "plug". Em modelos simples, a dívida existente permanece
+balanço fechar, por isso são chamadas de "plug". Em modelos simples, a dívida existente permanece
 constante ou é amortizada conforme cronograma contratual. Procedimento:
 ```
 1. Manter constantes: dívida de curto prazo, dívida de longo prazo e capital social.
@@ -1945,19 +1945,19 @@ passivo + PL ex-nova dívida = 24 + 178 + 80 + 227,6 = **US$ 509,6 MM**. Como pa
 dívida = zero e **caixa excedente = US$ 49,6 MM**, fechando o ativo em US$ 509,6 MM.
 
 **Onde encaixa.** `projecao-e-cenarios`, `revisao-de-modelo`.
-**Veredito.** `ADICIONAR-ALTA` — a mecânica do **plug com função SE de dois lados** é exatamente a peça
-que falta na maioria dos modelos mid-market brasileiros, que **não fecham balanço projetado nenhum** — e
+**Veredito.** `ADICIONAR-ALTA`: a mecânica do **plug com função SE de dois lados** é exatamente a peça
+que falta na maioria dos modelos mid-market brasileiros, que **não fecham balanço projetado nenhum**, e
 sem balanço projetado não há ROIC projetado, não há checagem de consistência, e não há como demonstrar que
 a projeção é financiável. O clean surplus é a ligação DRE→balanço que o Cap 13 exige (aba 2, regra "DRE
 ligada ao balanço via lucros acumulados"). Deve entrar como requisito estrutural em `revisao-de-modelo`:
 **se a planilha não tem balanço projetado que fecha, ela não é auditável.**
 **Página.** p415–417.
 
-## 13.17 O elo entre estrutura de capital projetada e valuation — e o teste de robustez
+## 13.17 O elo entre estrutura de capital projetada e valuation, e o teste de robustez
 
 **O que é.** Efeito colateral previsível de usar caixa excedente e nova dívida como plug: *"as growth
 drops, newly issued debt will drop to zero, and excess cash will become very large."* (Nota 14: sempre que
-o **ROIC é maior que o crescimento de receita**, a empresa gera fluxo de caixa operacional — a taxa de
+o **ROIC é maior que o crescimento de receita**, a empresa gera fluxo de caixa operacional: a taxa de
 investimento é negativa. Se dividendos ou recompras não forem aumentados para desaguar o caixa, a dívida
 cai e/ou o caixa excedente acumula.)
 
@@ -1973,7 +1973,7 @@ são ignoradas.)
 ratio or amount of net share repurchases."* Ao aumentar o payout, os lucros acumulados caem, e isso deve
 fazer o caixa excedente cair também.
 
-**O TESTE DE ROBUSTEZ — item de auditoria de primeira ordem:**
+**O TESTE DE ROBUSTEZ, item de auditoria de primeira ordem:**
 ```
 Variando o payout ratio (dividendos e recompras),
 ROIC, FCL e VALOR **NÃO DEVEM MUDAR**.
@@ -1982,7 +1982,7 @@ Se mudarem -> o modelo de FCL está ERRADO.
 E a versão avançada (com a advertência de custo): para modelos complexos, determine a **dívida líquida**
 (dívida total menos caixa excedente) aplicando o **índice-alvo de dívida líquida sobre valor modelado no
 WACC** em cada ponto do tempo; então, usando o índice-alvo dívida/valor, resolva para o **payout
-necessário**. Mas para isso é preciso **fazer um valuation em cada ano projetado e iterar para trás** —
+necessário**. Mas para isso é preciso **fazer um valuation em cada ano projetado e iterar para trás**,
 *"a time-consuming process for a feature that will not affect the final valuation."* (Nota 16: para
 valorar Costco no Apêndice H, Koller modelou um índice de alavancagem constante ano a ano e iterou para
 trás. A iteração **não é necessária** para valorar uma empresa em geral, mas **é necessária para garantir
@@ -1990,21 +1990,21 @@ que o DCF empresarial amarre com outras metodologias**, como modelos de fluxo de
 
 **Onde encaixa.** `revisao-de-modelo` (o teste), `custo-de-capital` (a estrutura-alvo),
 `projecao-e-cenarios`.
-**Veredito.** `ADICIONAR-ALTA` — o **teste de invariância ao payout** é um dos testes de auditoria mais
+**Veredito.** `ADICIONAR-ALTA`: o **teste de invariância ao payout** é um dos testes de auditoria mais
 poderosos e mais baratos que existem: mude o payout na planilha; se o valor mudar, há erro estrutural
 (tipicamente porque juros ou tributos vazaram para dentro do FCL, ou porque o FCL foi projetado
 diretamente em vez de derivado). Deve entrar em `revisao-de-modelo` como teste obrigatório. O ponto de que
 **a estrutura de capital só afeta o DCF via WACC** é a informação que impede a discussão circular
-"mas o alvo vai desalavancar, então o valor muda" — não muda, a menos que o WACC mude, e aí a discussão é
+"mas o alvo vai desalavancar, então o valor muda". Não muda, a menos que o WACC mude, e aí a discussão é
 sobre estrutura-alvo (ver Cap 15). A nota 15 (WACC constante = premissa implícita de D/V constante) é
 teoricamente importante e conecta com o WACC variável no tempo do Cap 15. A iteração para amarrar com
-fluxo ao acionista é `ADICIONAR-MÉDIA` — vale saber que existe e que é o que garante consistência entre
+fluxo ao acionista é `ADICIONAR-MÉDIA`. Existe, e é o que garante consistência entre
 métodos, mas o custo-benefício em mid-market raramente justifica.
 **Página.** p417–418, notas 14–16 p427.
 
-## 13.18 Passo 6 — Os TRÊS padrões admissíveis de ROIC futuro
+## 13.18 Passo 6: os TRÊS padrões admissíveis de ROIC futuro
 
-**O que é.** Calcule ROIC e FCL para cada ano projetado — trivial se você já os calculou no histórico:
+**O que é.** Calcule ROIC e FCL para cada ano projetado, trivial se você já os calculou no histórico:
 *"merely copy the two calculations from historical financials to projected financials."*
 
 **A regra de sanidade:** para empresas que criam valor, os ROICs futuros devem se encaixar em **um de três
@@ -2019,11 +2019,11 @@ PADRÃO 3 - Convergir para o CUSTO DE CAPITAL.
 ```
 (Referência cruzada: tendências de longo prazo de ROIC no Cap 8.)
 
-**Onde encaixa.** `projecao-e-cenarios`, `diagnostico-de-roic` (CAP — competitive advantage period),
+**Onde encaixa.** `projecao-e-cenarios`, `diagnostico-de-roic` (CAP, competitive advantage period),
 `revisao-de-modelo`, `valor-terminal`.
-**Veredito.** `ADICIONAR-ALTA` — os **três padrões admissíveis** são um filtro de sanidade curto e
+**Veredito.** `ADICIONAR-ALTA`: os **três padrões admissíveis** são um filtro de sanidade curto e
 decisivo, e amarram diretamente com o CAP que `diagnostico-de-roic` já tem. É o teste que reprova o plano
-de negócio típico de vendedor familiar brasileiro, no qual o ROIC **sobe indefinidamente** — padrão que
+de negócio típico de vendedor familiar brasileiro, no qual o ROIC **sobe indefinidamente**, padrão que
 não está na lista de três e que portanto exige justificativa de vantagem competitiva que quase nunca
 existe. E do lado sell-side, é o que permite defender o Padrão 1 quando há vantagem real e demonstrável
 (licença, concessão, marca regional, ativo insubstituível, custo de troca, densidade de rede), em vez de
@@ -2031,14 +2031,14 @@ aceitar por default a convergência ao WACC que o comprador vai propor. A escolh
 na prática, **a decisão de valor mais importante do modelo depois da receita**.
 **Página.** p418.
 
-## 13.19 Forecast avançado 1 — drivers operacionais NÃO financeiros na projeção
+## 13.19 Forecast avançado 1: drivers operacionais NÃO financeiros na projeção
 
 **O que é.** Em indústrias em que **preços estão mudando** ou **tecnologia está avançando**, as projeções
 devem incorporar índices **não financeiros**, como volume e produtividade.
 
 **Case aéreas (início dos anos 2000).** Tarifas que exigiam pernoite de sábado e compra antecipada
 desapareceram com a intensificação da concorrência de low-cost. As companhias de rede não conseguiam mais
-distinguir o viajante de negócios — sua principal fonte de lucro — do viajante de lazer. **Conforme o
+distinguir o viajante de negócios (sua principal fonte de lucro) do viajante de lazer. **Conforme o
 preço médio caía, os custos subiam como percentual das vendas. Mas as aéreas estavam realmente ficando
 mais caras?** (Nota 17: a Spirit dedica percentual **maior** de receita a mão de obra que a American;
 **em custo por assento-milha, no entanto, a American é a mais cara das duas.**) *"To forecast changes
@@ -2051,19 +2051,19 @@ de obra permite **modelar uma relação direta entre ganhos de produtividade da 
 estimada em unidades por empregado.**
 
 **Onde encaixa.** `projecao-e-cenarios`, `diagnostico-de-roic`.
-**Veredito.** `ADICIONAR-ALTA` — é a contraparte projetiva do 12.6 (drivers não financeiros na análise
+**Veredito.** `ADICIONAR-ALTA`: é a contraparte projetiva do 12.6 (drivers não financeiros na análise
 histórica) e fecha o ciclo: se a análise histórica foi decomposta em preço × quantidade × produtividade, a
 projeção tem de ser feita nas mesmas unidades. Consequência prática decisiva no Brasil: **em ambiente de
 custo de insumo volátil e repasse parcial, projetar custo como % da receita esconde exatamente o
-fenômeno econômico** — o alvo parece ficar mais eficiente quando o preço sobe e menos eficiente quando o
+fenômeno econômico**: o alvo parece ficar mais eficiente quando o preço sobe e menos eficiente quando o
 preço cai, sem que nada tenha mudado na operação. Aplica-se de forma imediata a proteína, grãos, açúcar,
 combustível, aço, embalagem, energia, frete. E a técnica de projetar mão de obra como
 `unidades/empregado × salário/empregado` é a única forma correta de modelar ganho de produtividade e
-dissídio separadamente — ambos materiais e ambos negociados no Brasil (dissídio anual por convenção
+dissídio separadamente, ambos materiais e ambos negociados no Brasil (dissídio anual por convenção
 coletiva).
 **Página.** p419.
 
-## 13.20 Forecast avançado 2 — custo fixo vs. variável: "quase tudo é variável"
+## 13.20 Forecast avançado 2, custo fixo vs. variável: "quase tudo é variável"
 
 **O que é.** Posição de Koller, contra-intuitiva e importante:
 ```
@@ -2080,7 +2080,7 @@ isso só é verdade **para um dado número de assinantes**. Conforme os assinant
 limite, **novas torres têm de ser adicionadas, mesmo numa área com cobertura preexistente.** (E: uma
 empresa pequena adicionando 1.000 clientes alavanca economias de escala mais do que uma grande adicionando
 100.000.) **O que é custo fixo no curto prazo, para pequenos incrementos de atividade, torna-se variável
-no longo prazo mesmo a taxas de crescimento razoáveis** — *"10 percent annual growth doubles the size of a
+no longo prazo mesmo a taxas de crescimento razoáveis**, *"10 percent annual growth doubles the size of a
 company in about seven years."* Como valuation corporativo é sobre lucratividade e crescimento de **longo
 prazo**, **quase todo custo deve ser tratado como VARIÁVEL.**
 
@@ -2091,24 +2091,24 @@ remain competitive. In this case, a cost deemed fixed actually requires repeated
 in traditional ways."*
 
 **Onde encaixa.** `projecao-e-cenarios`, `qualidade-de-resultados`.
-**Veredito.** `ADICIONAR-ALTA` — é doutrina anti-otimismo de alto valor no sell-side brasileiro, e vale
+**Veredito.** `ADICIONAR-ALTA`: é doutrina anti-otimismo de alto valor no sell-side brasileiro, e vale
 tanto na defesa quanto no ataque. **Contra o excesso de otimismo:** o plano de negócio do vendedor
-tipicamente assume alavancagem operacional infinita — "a estrutura já está montada, o crescimento cai
-direto na margem" — e Koller dá o argumento rigoroso de que no horizonte de valuation isso é falso
+tipicamente assume alavancagem operacional infinita ("a estrutura já está montada, o crescimento cai
+direto na margem"), e Koller dá o argumento rigoroso de que no horizonte de valuation isso é falso
 (10% a.a. dobra a empresa em 7 anos; a capacidade tem degraus). **A favor do vendedor:** quando existe
 capacidade ociosa **real e documentável** (segundo turno disponível, galpão com área livre, linha
-subutilizada, sistema já licenciado), a alavancagem operacional de curto prazo é legítima e vale valor —
+subutilizada, sistema já licenciado), a alavancagem operacional de curto prazo é legítima e vale valor,
 mas tem de ser quantificada com o degrau explícito (até que volume, e qual o capex do próximo degrau).
 Colocar isso na skill converte uma discussão retórica em uma tabela de capacidade. A ressalva sobre
 software que obsoleta é a resposta correta ao alvo de tecnologia que apresenta desenvolvimento como
 investimento único.
 **Página.** p419–420.
 
-## 13.21 Forecast avançado 3 — Inflação: nominal, e a fórmula de extração da curva
+## 13.21 Forecast avançado 3, inflação: nominal, e a fórmula de extração da curva
 
 **O que é.** Recomendação (do Cap 10): projeções de demonstrações **e** custo de capital estimados em
 **unidades monetárias NOMINAIS** (com inflação), não reais. Para manter consistência, **a projeção nominal
-e o custo de capital nominal têm de refletir a MESMA taxa de inflação geral esperada** — e a inflação
+e o custo de capital nominal têm de refletir a MESMA taxa de inflação geral esperada**, e a inflação
 embutida na projeção **tem de ser derivada da inflação implícita no custo de capital**.
 
 ```
@@ -2119,7 +2119,7 @@ mais um prêmio pela inflação ESPERADA.
 Inflação esperada = (1 + taxa NOMINAL) / (1 + taxa REAL) - 1
 ```
 **Como achar a taxa real:** muitos países (EUA, Reino Unido, Japão) emitem **títulos indexados à
-inflação** (ILBs) — o título protege contra inflação corrigindo cupons e principal pelo índice de preços
+inflação** (ILBs): o título protege contra inflação corrigindo cupons e principal pelo índice de preços
 ao consumidor. Consequentemente, **o yield to maturity de um ILB é a expectativa do mercado para a taxa de
 juros REAL ao longo da vida do título.**
 
@@ -2129,11 +2129,11 @@ diferentemente de décadas anteriores, quando a taxa real ficava em torno de 2%,
 nos últimos dez anos, chegando a ficar NEGATIVA em 2012.**
 
 **Vantagem de estabilidade (Exhibit 13.14):** como o TIPS de 10 anos se baseia em inflação de longo prazo,
-**a inflação implícita é MUITO mais estável que a variação de 12 meses do índice de preços** — em meados
+**a inflação implícita é MUITO mais estável que a variação de 12 meses do índice de preços**. Em meados
 de 2008 o CPI cresceu mais de 5% com o pico do petróleo, para depois desabar na recessão. Desde 2000,
 inflação efetiva e implícita rondaram 2% ao ano.
 
-**Decomposição obrigatória por linha (nota 18) — a regra de coerência:**
+**Decomposição obrigatória por linha (nota 18), a regra de coerência:**
 ```
 Linhas individuais podem ter inflação MAIOR ou MENOR que a geral,
 mas devem SEMPRE DERIVAR da taxa geral.
@@ -2156,7 +2156,7 @@ exceeds 5 percent annually. In these situations, historical financials should be
 operating performance independent of inflation."* (Detalhamento no Cap 26.)
 
 **Onde encaixa.** `projecao-e-cenarios`, `custo-de-capital`, `qualidade-de-resultados`.
-**Veredito.** `ADICIONAR-ALTA` — é o item **mais diretamente adaptável ao Brasil de todo o capítulo**, com
+**Veredito.** `ADICIONAR-ALTA`: é o item **mais diretamente adaptável ao Brasil de todo o capítulo**, com
 duas consequências:
 (1) **A fórmula de extração da inflação implícita tem análogo brasileiro exato e melhor:** a NTN-B
 (Tesouro IPCA+) é o ILB brasileiro, com liquidez e curva completa. Logo:
@@ -2170,7 +2170,7 @@ implícita no custo de capital. Isso amarra `projecao-e-cenarios` a `custo-de-ca
 é diferencial técnico real contra a prática de mercado local.
 (2) **O gatilho de 5% de inflação é praticamente permanente no Brasil**, o que significa que a instrução
 de Koller "ajustar as demonstrações históricas para refletir performance operacional independente da
-inflação" **não é exceção aqui, é procedimento padrão** — deflacionar a série histórica de receita e
+inflação" **é procedimento padrão aqui, não exceção**: deflacionar a série histórica de receita e
 margem por IPCA/IGP-M antes de analisar tendência é obrigatório, e conecta com o piso de 10 anos de
 histórico (12.11): em 10 anos de série brasileira, o crescimento nominal acumulado é dominado pela
 inflação e a análise sem deflacionar é inútil.
@@ -2181,24 +2181,24 @@ de somar inflação e crescimento real.
 
 ## 13.22 Exercícios do capítulo como bateria de teste (Review Questions)
 
-**O que é.** Vale registrar porque são testes reutilizáveis: (1) HouseholdCo — R$ 6,2 bi em "passivos
+**O que é.** São testes reutilizáveis: (1) HouseholdCo, R$ 6,2 bi em "passivos
 acumulados e outros" sobre US$ 49,0 bi de receita (12,6%); usando a nota 4 do relatório, **explicar por que
 projetar 12,6% adiante distorceria a projeção de FCL e como o balanço deve ser reorganizado para
 impedir** (resposta: a conta mistura operacional com equivalente de dívida); (2) PartsCo (fornecedor de
-peças de US$ 1,2 bi, crescendo 8% a.a. por cinco anos) — projetar cinco anos de DRE com **depreciação como
+peças de US$ 1,2 bi, crescendo 8% a.a. por cinco anos), projetar cinco anos de DRE com **depreciação como
 % do PP&E do ano ANTERIOR** e **juros como % da dívida total do ano ANTERIOR**; (3) projetar os itens
 operacionais do balanço, tudo como função da receita **exceto estoque e fornecedores, que são função do
 CPV**; (4) projetar os itens de financiamento usando **nova dívida OU caixa excedente como plug**, com
 dívida de curto prazo em US$ 90 MM, longo prazo em US$ 210 MM, sem emissão de capital e mesmo payout;
-(5) **rodar a 3% de crescimento** — se a empresa gera mais caixa do que precisa, como ajustar o balanço, e
-quais alternativas existem para o caixa novo; (6) **rodar a 25% de crescimento** — como isso afeta o
+(5) **rodar a 3% de crescimento**, se a empresa gera mais caixa do que precisa, como ajustar o balanço, e
+quais alternativas existem para o caixa novo; (6) **rodar a 25% de crescimento**, como isso afeta o
 balanço pro forma, e **quais contas ficam notavelmente diferentes**.
 
 **Onde encaixa.** `revisao-de-modelo`, `projecao-e-cenarios`.
-**Veredito.** `ADICIONAR-MÉDIA` — os exercícios 5 e 6 são, na verdade, um **par de testes de estresse
+**Veredito.** `ADICIONAR-MÉDIA`: os exercícios 5 e 6 são, na verdade, um **par de testes de estresse
 estrutural** que vale institucionalizar em `revisao-de-modelo`: rodar o modelo a **crescimento baixo**
-(o plug vira caixa excedente crescente — e a pergunta é o que fazer com ele: dividendo, recompra,
-amortização) e a **crescimento alto** (o plug vira dívida nova — e a pergunta é se essa dívida é
+(o plug vira caixa excedente crescente, e a pergunta é o que fazer com ele: dividendo, recompra,
+amortização) e a **crescimento alto** (o plug vira dívida nova, e a pergunta é se essa dívida é
 financiável, o que amarra em 12.10 saúde de crédito). Em sell-side isso é a análise de **financiabilidade
 do plano**: se o plano do vendedor exige dívida nova que o alvo não consegue levantar, o plano não é
 crível e o comprador vai dizer isso.

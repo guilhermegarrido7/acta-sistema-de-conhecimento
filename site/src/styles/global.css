@@ -482,7 +482,10 @@ tbody tr:hover { background: var(--papel-suave); }
 
 footer { background: var(--petroleo); color: rgba(255, 255, 255, .62); padding: 3rem 0 2.25rem; margin-top: 5rem; font-size: .875rem; }
 footer .colunas { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 2.5rem; }
-footer h4 { color: #fff; font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; margin: 0 0 .85rem; }
+/* h2, não h4: o rodapé fecha o documento depois das seções da página, e pular de
+   h2 para h4 quebra a hierarquia de cabeçalho para quem navega por leitor de tela.
+   O tamanho pequeno é decisão visual, não de nível semântico. */
+footer h2 { color: #fff; font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; margin: 0 0 .85rem; }
 footer a { color: rgba(255, 255, 255, .7); display: block; padding: .18rem 0; }
 footer a:hover { color: var(--turquesa); text-decoration: none; }
 footer p { margin: 0 0 .6rem; max-width: 26rem; line-height: 1.6; }

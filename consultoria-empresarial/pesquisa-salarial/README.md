@@ -19,27 +19,26 @@ com metodologia, entregáveis e ciclo próprios.
 | # | Skill | Etapa | Status |
 |---|---|---|---|
 | - | `metodo-pesquisa-salarial` | Regras de ouro, cartão de identidade, mínimos de anonimização, checkpoint | ✅ |
-| 1 | `escopo-e-proposta` | Qualificação da demanda, fronteira de escopo, precificação | esqueleto |
-| 2 | `abertura-e-cartao-de-identidade` | Kick-off, particularidades estruturais, inventário de insumos | esqueleto |
-| 3 | `painel-de-participantes` | Comparabilidade, dimensionamento, aprovação do painel | esqueleto |
-| 4 | `plano-de-comunicacao-e-convites` | Identidade da pesquisa, contrapartida, carta-convite, follow-up | esqueleto |
-| 5 | `instrumento-de-coleta` | Formulário, dicionário de dados, validação na entrada, piloto | esqueleto |
-| 6 | `conducao-da-coleta` | Recebimento, triagem, saneamento, escalonamento, corte | esqueleto |
-| 7 | `tratamento-e-validacao-da-base` | Normalizações, outliers, checks de consistência, exclusões | esqueleto |
+| 1 | `escopo-e-proposta` | Qualificação da demanda, fronteira de escopo, precificação | ✅ |
+| 2 | `abertura-e-cartao-de-identidade` | Kick-off, particularidades estruturais, inventário de insumos | ✅ |
+| 3 | `painel-de-participantes` | Comparabilidade, dimensionamento, aprovação do painel | ✅ |
+| 4 | `plano-de-comunicacao-e-convites` | Identidade da pesquisa, contrapartida, carta-convite, follow-up | ✅ |
+| 5 | `instrumento-de-coleta` | Formulário, dicionário de dados, validação na entrada, piloto | ✅ |
+| 6 | `conducao-da-coleta` | Recebimento, triagem, saneamento, escalonamento, corte | ✅ |
+| 7 | `tratamento-e-validacao-da-base` | Normalizações, outliers, checks de consistência, exclusões | ✅ |
 | 8 | `matching-cargos` | Equivalência de cargos, quatro fatores, graus de match | ✅ |
 | 9 | `estatistica-remuneracao` | Mínimos amostrais, qual medida usar, quando não publicar | ✅ |
-| 10 | `analise-de-competitividade` | Comparatio, gap, custo de equalização, priorização | esqueleto |
-| 11 | `release-e-governanca-de-dados` | Congelamento R1.0, revisão independente, versionamento | esqueleto |
+| 10 | `analise-de-competitividade` | Comparatio, gap, custo de equalização, priorização | ✅ |
+| 11 | `release-e-governanca-de-dados` | Congelamento R1.0, revisão independente, versionamento | ✅ |
 | 12 | `modelagem-planilhas` | Arquitetura de abas, fórmulas auditáveis, Excel de consulta | ✅ |
-| 13 | `relatorio-e-storyline` | Ghost deck, títulos de ação, arco de três atos, design ACTA | esqueleto |
+| 13 | `relatorio-e-storyline` | Ghost deck, títulos de ação, arco de três atos, design ACTA | ✅ |
 | 14 | `dashboard-powerbi` | Modelo estrela, medidas DAX, páginas, supressão, publicação | ✅ |
-| 15 | `apresentacao-ao-cliente` | Pré-leitura, ensaio, coerência entre artefatos, Comitê Gestor | esqueleto |
-| 16 | `relatorios-individuais-participantes` | Contrapartida a cada participante, piloto, distribuição | esqueleto |
-| 17 | `encerramento-e-licoes-aprendidas` | Pacote de encerramento, arquivamento, escrita do benchmark | esqueleto |
+| 15 | `apresentacao-ao-cliente` | Pré-leitura, ensaio, coerência entre artefatos, Comitê Gestor | ✅ |
+| 16 | `relatorios-individuais-participantes` | Contrapartida a cada participante, piloto, distribuição | ✅ |
+| 17 | `encerramento-e-licoes-aprendidas` | Pacote de encerramento, arquivamento, escrita do benchmark | ✅ |
 
-Cada skill em esqueleto já traz, no próprio arquivo, **a fonte a consolidar**: em qual reference e
-em qual seção está o material que vira aquela etapa. Onde não há material, o esqueleto diz
-explicitamente que é lacuna.
+As 18 skills têm metodologia escrita. O material de apoio que sustenta cada etapa continua em
+`references/`, que só carrega quando a skill precisa do detalhe.
 
 ## Onde está o material
 

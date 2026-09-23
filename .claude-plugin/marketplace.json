@@ -65,6 +65,12 @@
       "source": "./governanca-riscos-compliance/controles-internos",
       "category": "governanca-riscos-compliance",
       "description": "Desenho e teste de controles internos no framework COSO: matriz de riscos e controles, walkthrough e narrativa, desenho versus efetividade, teste e amostragem, classificação de deficiência e controles gerais de TI."
+    },
+    {
+      "name": "acta-auditoria-compras",
+      "source": "./governanca-riscos-compliance/auditoria-compras",
+      "category": "governanca-riscos-compliance",
+      "description": "Auditoria do ciclo de compras procure-to-pay: requisição e alçada, caça ao fracionamento, cotação e sinais de direcionamento, conflito de interesse com fornecedor, contrato e aditivo, recebimento, conferência de três vias e pagamento em duplicidade."
     }
   ]
 }

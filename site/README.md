@@ -17,8 +17,15 @@ a decisão de hospedagem estão em [`docs/PLATAFORMA.md`](../docs/PLATAFORMA.md)
 | Status (Completo / Parcial) | `docs/ROADMAP.md` |
 | Custo de contexto por plugin | soma das descrições das skills roteáveis |
 | Página editorial do projeto | `<plugin>/projeto.md` (opcional) |
+| Embasamento teórico do plugin | `<plugin>/fundamentos.md` (opcional) |
 
 Corrigir a skill corrige a página. É isso que impede o portal de mentir seis meses depois.
+
+Os dois arquivos editoriais são divididos por `<h2>` no build: o primeiro bloco fica visível num
+painel de destaque e os demais viram acordeão, para a página não virar parede de texto.
+
+A única exceção ao princípio é `src/lib/terceiros.js`, a lista de skills de uso geral. Elas não são
+da ACTA nem vivem no nosso marketplace, então não há de onde derivá-las.
 
 ## Rodar local
 
@@ -56,11 +63,12 @@ que mais vale e a que ninguém escreve; é o que transforma o portal de catálog
 
 ## Publicar
 
-Cloudflare Pages, atrás do Cloudflare Access. Configuração em `wrangler.toml` e no painel:
+Cloudflare, no plano gratuito. Configuração em `wrangler.toml` e no painel:
 
 - **Build command:** `npm run build`
 - **Build output:** `site/dist`
 - **Root directory:** `site`
 
-Nenhum segredo, nenhuma variável de ambiente: o site é HTML estático e a autenticação fica no Access,
-na frente. Ver `docs/PLATAFORMA.md` seção 4.
+Nenhum segredo, nenhuma variável de ambiente, nenhuma autenticação. O portal é uma vitrine pública:
+o que chega nele já passou pelo validador, que barra nome de cliente e de pessoa. O controle está em
+quem pode publicar, não em quem pode ler. Ver `docs/PLATAFORMA.md` seção 4 e `docs/DEPLOY.md`.

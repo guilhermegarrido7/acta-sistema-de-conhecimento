@@ -1,4 +1,4 @@
-# Koller 7ª ed. — O que é ADITIVO (Parte Quatro: Managing for Value + Parte Um: Fundamentos)
+# Koller 7ª ed.: o que é ADITIVO (Parte Quatro: Managing for Value + Parte Um: Fundamentos)
 
 Avaliação de aditividade frente a dois plugins existentes de uma boutique brasileira de M&A
 mid-market sell-side (alvos R$ 50-500 MM de receita, capital fechado, vendedor familiar).
@@ -14,9 +14,9 @@ mid-market sell-side (alvos R$ 50-500 MM de receita, capital fechado, vendedor f
 Vereditos: `ADICIONAR-ALTA` / `ADICIONAR-MÉDIA` / `JÁ COBERTO` / `IRRELEVANTE-MIDMARKET`.
 
 ---
-# PARTE QUATRO — MANAGING FOR VALUE
+# PARTE QUATRO: MANAGING FOR VALUE
 
-## Cap 31 — Mergers and Acquisitions (p818-855)
+## Cap 31: Mergers and Acquisitions (p818-855)
 
 > Capítulo mais aditivo de toda a faixa. Praticamente nada dele está nos plugins atuais, e quase
 > tudo é diretamente operacionalizável em `negociacao-e-loi`, `segmentacao-de-compradores` e
@@ -24,7 +24,7 @@ Vereditos: `ADICIONAR-ALTA` / `ADICIONAR-MÉDIA` / `JÁ COBERTO` / `IRRELEVANTE-
 
 ### 31.1 A equação canônica de criação de valor em M&A (p819-821)
 
-**O que é** — A aritmética que governa quem ganha o quê numa transação:
+**O que é**: A aritmética que governa quem ganha o quê numa transação:
 
 ```
 Valor criado para os acionistas do COMPRADOR
@@ -47,10 +47,10 @@ Valor criado para o comprador = Valor das melhorias − Prêmio pago
 **Corolário direto (a frase mais útil do capítulo para o sell-side)**: *"se a empresa paga um
 prêmio de 30%, ela precisa aumentar o valor do alvo em pelo menos 30% só para não destruir valor"*
 (p820). Ou seja, o prêmio que o comprador consegue pagar é **limitado pela melhoria que ele
-consegue produzir** — e o comprador que consegue produzir mais melhoria é o que pode pagar mais.
+consegue produzir**. E o comprador que consegue produzir mais melhoria é o que pode pagar mais.
 Isso é a espinha dorsal analítica da segmentação de compradores.
 
-**Exemplo numérico do Exhibit 31.1 (p819-821)** — Empresa A compra Empresa B:
+**Exemplo numérico do Exhibit 31.1 (p819-821)**: Empresa A compra Empresa B:
 - Valor de mercado de B: US$ 1,0 bi
 - Preço pago: US$ 1,3 bi (prêmio de 30%)
 - Melhorias operacionais esperadas: +40% do valor de B → valor de B para A = US$ 1,4 bi
@@ -61,20 +61,20 @@ Isso é a espinha dorsal analítica da segmentação de compradores.
   (100/3.000). Lição: *"é difícil para um comprador criar um montante substancial de valor via
   aquisições"*.
 
-**Calibração empírica das melhorias (Exhibit 31.3, p821)** — Em amostra de deals dos últimos 20
+**Calibração empírica das melhorias (Exhibit 31.3, p821)**: Em amostra de deals dos últimos 20
 anos, McKinsey descontou as melhorias de desempenho anunciadas pelo WACC. As melhorias
 **tipicamente excederam 50% do valor do alvo**. Kellogg e PepsiCo pagaram prêmios
 excepcionalmente baixos e por isso capturaram mais valor. Ou seja: melhoria de 40% "parece
 agressiva, mas é o que os melhores compradores frequentemente conseguem" (p821).
 
-**Onde encaixa** — `negociacao-e-loi` (núcleo: a skill deve calcular, para cada comprador,
+**Onde encaixa**: `negociacao-e-loi` (núcleo: a skill deve calcular, para cada comprador,
 o "prêmio máximo suportável = valor das melhorias que AQUELE comprador consegue"), e
 `segmentacao-de-compradores` (ordenar compradores por capacidade de melhoria).
 **Veredito: ADICIONAR-ALTA.** **Página: p819-821.**
 
-### 31.2 Evidência empírica — para quem a aquisição cria valor (p822-827)
+### 31.2 Evidência empírica: para quem a aquisição cria valor (p822-827)
 
-**O que é** — O bloco de números que sustenta o argumento do assessor sell-side de que **o vendedor
+**O que é**: O bloco de números que sustenta o argumento do assessor sell-side de que **o vendedor
 é o lado que historicamente captura o valor**. Extração exaustiva:
 
 | Achado | Número | Fonte no texto |
@@ -88,7 +88,7 @@ o "prêmio máximo suportável = valor das melhorias que AQUELE comprador conseg
 | % das aquisições de grandes empresas cujo alvo é < 5% do market cap do comprador | **95%** | p823 |
 
 Nota metodológica de Koller (p823-825): a maioria dos estudos mede a reação do preço da ação ao
-anúncio, o que faz com que **deals grandes dominem os resultados** — a avaliação do mercado sobre
+anúncio, o que faz com que **deals grandes dominem os resultados**: a avaliação do mercado sobre
 deals pequenos é difícil de discernir. Sobre persistência do efeito-anúncio a evidência é
 inconsistente: Sirower & Sahna mostram que a reação inicial é persistente e indica desempenho
 futuro no ano seguinte; outros colegas de McKinsey, em amostra diferente de transações maiores em
@@ -97,44 +97,44 @@ acionistas em aquisições grandes: Becht/Polo/Rossi mostraram que **quando os a
 reação do preço da compradora foi muito mais provavelmente positiva** do que quando não votaram; e
 que em transações maiores nos EUA, onde não há voto, as reações foram mais provavelmente negativas.
 
-**Ondas de M&A (Exhibit 31.4, p822-823)** — atividade ocorre em ondas, dirigida por: (i) preços de
+**Ondas de M&A (Exhibit 31.4, p822-823)**: atividade ocorre em ondas, dirigida por: (i) preços de
 ações em alta e gestores otimistas (embora o racional fosse comprar na baixa); (ii) juros baixos,
-especialmente para aquisições alavancadas de private equity; (iii) efeito imitação — uma grande
+especialmente para aquisições alavancadas de private equity; (iii) efeito imitação: uma grande
 aquisição num setor estimula as demais a comprar também. **Uso no sell-side brasileiro**: timing de
-go-to-market — janela de juros e de consolidação setorial é argumento de urgência legítimo.
+go-to-market. A janela de juros e de consolidação setorial é argumento de urgência legítimo.
 
-**Onde encaixa** — `go-to-market` (timing e janela), `negociacao-e-loi` (municiar o vendedor:
-"a evidência mostra que o vendedor captura a maior parte — não aceite o discurso do comprador de
+**Onde encaixa**: `go-to-market` (timing e janela), `negociacao-e-loi` (municiar o vendedor:
+"a evidência mostra que o vendedor captura a maior parte; não aceite o discurso do comprador de
 que ele está pagando caro"), `information-memorandum` (racional de por que agora).
 **Veredito: ADICIONAR-ALTA.** **Página: p818, p822-827.**
 
 ### 31.3 Os quatro arquétipos de comprador por programa de M&A (Exhibit 31.5, p825-826)
 
-**O que é** — Para contornar o viés de "deal grande" dos estudos de anúncio, McKinsey classificou
+**O que é**: Para contornar o viés de "deal grande" dos estudos de anúncio, McKinsey classificou
 **1.645 empresas não-bancárias, 2007-2017**, em quatro categorias, e mediu TSR mediano vs. peers:
 
-1. **Programmatic acquirers** — muitas aquisições (definição na nota 9: *mais de dois deals
+1. **Programmatic acquirers**: muitas aquisições (definição na nota 9: *mais de dois deals
    pequenos ou médios por ano*). **Melhor desempenho: outperformance mediana de +0,9% de TSR por
    ano.** Distribuição com a assimetria mais positiva e o maior percentual de empresas superando
    os peers. Foram os **únicos que superaram os peers na maioria dos setores**.
-2. **Large-deal companies** — ao menos um deal maior que 30% do valor do comprador.
+2. **Large-deal companies**: ao menos um deal maior que 30% do valor do comprador.
    **Pior desempenho**, consistente com os estudos de efeito-anúncio. Distribuição
    fortemente assimétrica para o negativo.
-3. **Organic companies** — quase nenhum M&A. Distribuição muito ampla (mistura de empresas jovens
+3. **Organic companies**: quase nenhum M&A. Distribuição muito ampla (mistura de empresas jovens
    de alto crescimento com empresas em declínio gerenciando a queda).
-4. **Selective acquirers** — o resíduo (não se encaixa nas outras três).
+4. **Selective acquirers**: o resíduo (não se encaixa nas outras três).
 
 Ressalvas explícitas do texto: as bandas P25-P75 são muito largas e **se sobrepõem entre as
-estratégias** — a mediana esconde muito. Variação setorial: **deals grandes funcionam melhor em
+estratégias**. A mediana esconde muito. Variação setorial: **deals grandes funcionam melhor em
 setores maduros de crescimento lento** (onde há valor em retirar capacidade excedente) e
 **subperformam significativamente em setores de crescimento rápido** (o foco interno da integração
 desvia a atenção da inovação contínua de produto). Fich/Nguyen/Officer (2017): **empresas grandes
 comprando empresas pequenas criam mais valor do que quando compram empresas grandes**.
 
-**Onde encaixa** — **`segmentacao-de-compradores` (uso direto)**: classificar cada comprador
+**Onde encaixa**: **`segmentacao-de-compradores` (uso direto)**: classificar cada comprador
 potencial da long list como programmatic / large-deal / organic / selective. Um alvo mid-market
 brasileiro de R$ 50-500 MM é, para quase qualquer estratégico relevante, um deal **pequeno**
-(< 5% do valor do comprador) — exatamente o perfil em que a evidência diz que o comprador
+(< 5% do valor do comprador), exatamente o perfil em que a evidência diz que o comprador
 tende a ganhar. Isso é um **argumento de venda para o comprador** ("este deal está no quadrante
 que funciona") e um filtro de qualificação de comprador ("o programmatic acquirer tem
 processo, decide mais rápido, e o board dele já aprovou a tese").
@@ -142,7 +142,7 @@ processo, decide mais rápido, e o board dele já aprovou a tese").
 
 ### 31.4 Os quatro fatores que diferenciam deals bem-sucedidos (p827)
 
-**O que é** — Características com evidência empírica de correlação com retorno positivo ao
+**O que é**: Características com evidência empírica de correlação com retorno positivo ao
 comprador:
 
 1. **Bons operadores têm mais sucesso.** Compradores cujos lucros e preço de ação cresceram acima
@@ -150,9 +150,9 @@ comprador:
    significativos no anúncio (Morck/Shleifer/Vishny). Resultado similar usando market-to-book
    como medida de desempenho (Servaes; Fich et al.).
 2. **Prêmios baixos são melhores.** Compradores que pagam prêmio alto obtêm retorno negativo no
-   anúncio (Sirower, *The Synergy Trap*; Travlos — significativo em Sirower, não em Travlos).
+   anúncio (Sirower, *The Synergy Trap*; Travlos: significativo em Sirower, não em Travlos).
 3. **Ser o único proponente ajuda.** Retorno da ação do comprador é **negativamente correlacionado
-   com o número de proponentes** — quanto mais empresas tentando comprar, mais alto o preço
+   com o número de proponentes**: quanto mais empresas tentando comprar, mais alto o preço
    (Morck et al.; Datta/Narayanan/Pinches, meta-análise).
 4. **Deals privados performam melhor.** Aquisições de **empresas de capital fechado** e de
    subsidiárias de grandes empresas têm **retornos anormais mais altos** que aquisições de
@@ -165,14 +165,14 @@ comprador:
 - se o deal é feito com economia forte ou fraca.
 
 **Conclusão do texto** (p827-828): *não existe fórmula mágica*. Aquisições não são
-inerentemente boas nem ruins — assim como marketing ou P&D não são. Cada deal precisa de lógica
+inerentemente boas nem ruins, assim como marketing ou P&D não são. Cada deal precisa de lógica
 estratégica própria, e a empresa precisa ter as competências relevantes para executar deals ou
 programas de deals. Nos deals mais bem-sucedidos, os compradores têm **ideias de criação de valor
 bem articuladas e específicas** antes de entrar. Os racionais dos deals menos bem-sucedidos são
 vagos: "buscar escala internacional", "preencher lacunas de portfólio", "construir a terceira
 perna do portfólio".
 
-**Onde encaixa** — Dois usos poderosos e simétricos:
+**Onde encaixa**: Dois usos poderosos e simétricos:
 - **Ponto 3 (número de proponentes) é a justificativa acadêmica do processo competitivo
   sell-side**: mais compradores → preço mais alto para o vendedor. Vai em `go-to-market` como
   fundamentação da arquitetura do processo, e em `negociacao-e-loi` como razão para não conceder
@@ -183,14 +183,14 @@ perna do portfólio".
 - **Ponto 1** é filtro de qualificação: comprador que vem performando abaixo do setor é
   comprador de execução ruim e de risco de fechamento.
 - A lista de "fatores que não importam" (especialmente accretion/dilution e código SIC) serve
-  para desarmar objeções bobas do comprador na negociação — e, no caso do SIC, para justificar
+  para desarmar objeções bobas do comprador na negociação e, no caso do SIC, para justificar
   incluir compradores de setores adjacentes na long list.
 
 **Veredito: ADICIONAR-ALTA.** **Página: p827.**
 
 ### 31.5 Os SEIS arquétipos de aquisição criadora de valor (p828-833)
 
-**O que é** — Na ausência de pesquisa empírica capaz de classificar estratégias, Koller propõe seis
+**O que é**: Na ausência de pesquisa empírica capaz de classificar estratégias, Koller propõe seis
 arquétipos derivados da prática. **Regra dura do texto: "se uma aquisição não se encaixa em um ou
 mais desses arquétipos, é improvável que crie valor"** (p828). E: o racional estratégico deve ser
 a **articulação específica** de um arquétipo, não um conceito vago como "crescimento" ou
@@ -201,25 +201,25 @@ Comprar e reduzir custos radicalmente para melhorar margem e fluxo de caixa; em 
 também acelerar receita. É o que os melhores fundos de private equity fazem. **Evidência**:
 Acharya/Hahn/Kehoe estudaram aquisições de PE bem-sucedidas (comprada, melhorada, vendida, sem
 aquisições adicionais no meio) e acharam **aumento de margem de lucro operacional ~2,5 p.p. acima
-dos peers** durante a propriedade do fundo — o que significa que muitas transações aumentaram a
+dos peers** durante a propriedade do fundo, o que significa que muitas transações aumentaram a
 margem ainda mais.
-**A aritmética da alavancagem de margem (numericamente explícita, p829)** — é *mais fácil* melhorar
+**A aritmética da alavancagem de margem (numericamente explícita, p829)**: é *mais fácil* melhorar
 empresa de margem e ROIC baixos:
 - Alvo com margem operacional de **6%**: cortar custos de 94% para 91% da receita eleva a margem a
   9% e **pode aumentar o valor da empresa em 50%**.
-- Alvo com margem de **30%**: para aumentar o valor em 50% seria preciso ir a **45%** de margem —
+- Alvo com margem de **30%**: para aumentar o valor em 50% seria preciso ir a **45%** de margem:
   custos de 70% para 55% da receita, uma **redução de 21% da base de custos**. Expectativa
   provavelmente irrealista.
 > **Implicação sell-side contraintuitiva e valiosa**: um alvo com margem baixa e ROIC baixo tem
 > *mais espaço de melhoria para o comprador* e portanto suporta *prêmio maior*. Vender uma
-> empresa familiar ineficiente não é um problema — é o arquétipo 1. A "gordura" (custos de
+> empresa familiar ineficiente é o arquétipo 1. A "gordura" (custos de
 > família, estrutura inflada, capital de giro solto) é a fonte de sinergia do comprador, e o
 > assessor deve **quantificá-la e cobrar por ela**, não esconder. Isso conecta diretamente com
 > `reorganizacao-contabil` e `qualidade-de-resultados`: os ajustes normalizadores não são só
 > limpeza contábil, são a **mensuração da sinergia disponível ao comprador**.
 
 **2. Consolidar para retirar capacidade excedente do setor** (p829-830)
-Setores maduros desenvolvem capacidade excedente (exemplo: químicos — empresas buscam
+Setores maduros desenvolvem capacidade excedente (exemplo: químicos, onde empresas buscam
 constantemente mais produção das mesmas plantas enquanto novos competidores, como a Arábia Saudita
 em petroquímicos, entram; produção maior da capacidade existente + capacidade nova de entrantes →
 mais oferta que demanda). Não é do interesse de nenhum competidor isolado fechar uma planta, mas é
@@ -228,7 +228,7 @@ fechar as próprias plantas menos produtivas e terminar uma empresa menor. Não 
 consolidação farmacêutica reduziu significativamente capacidade de força de vendas (com portfólios
 alterados e nova forma de interagir com médicos) e de P&D.
 **Duas ressalvas críticas**: (i) o **grosso do valor tende a ir para o vendedor**, não para o
-comprador; (ii) **problema do free-rider** — todos os outros competidores do setor se beneficiam
+comprador; (ii) **problema do free-rider**: todos os outros competidores do setor se beneficiam
 da redução de capacidade sem tomar qualquer ação.
 
 **3. Criar acesso a mercado para os produtos do alvo (ou, em alguns casos, do comprador)** (p830-831)
@@ -237,12 +237,12 @@ potencial (farmacêuticas pequenas não têm a força de vendas para visitar os 
 **IBM**: entre 2010 e 2013 adquiriu **43 empresas por média de US$ 350 MM cada**; empurrando os
 produtos delas pela força de vendas global, estimou acelerar substancialmente a receita das
 adquiridas, **às vezes em mais de 40% nos primeiros dois anos** após cada aquisição.
-**P&G/Gillette**: fluxo nos dois sentidos — P&G forte em alguns emergentes, Gillette com share
+**P&G/Gillette**: fluxo nos dois sentidos, P&G forte em alguns emergentes, Gillette com share
 maior em outros; juntas introduziram produtos em novos mercados muito mais rápido.
 > **Implicação sell-side**: este é o arquétipo mais frequentemente aplicável a um alvo brasileiro
 > mid-market bom: produto/serviço/licença/base de clientes regional que um comprador com
 > capilaridade nacional ou internacional escala. É o que o IM deve provar com dados
-> (penetração atual vs. mercado endereçável, e por que o alvo não conseguiu chegar lá sozinho —
+> (penetração atual vs. mercado endereçável, e por que o alvo não conseguiu chegar lá sozinho, por
 > restrição de capital, de força de vendas, de marca ou de licenças).
 
 **4. Adquirir competências ou tecnologias mais rápido ou mais barato do que construir** (p831)
@@ -257,23 +257,23 @@ aquisições**.
 
 **5. Explorar escalabilidade específica do setor** (p831-832)
 **Alerta forte**: é preciso muito cuidado ao justificar aquisição por economias de escala,
-especialmente em deals grandes, porque **empresas grandes já operam em escala** — combiná-las
+especialmente em deals grandes, porque **empresas grandes já operam em escala**: combiná-las
 provavelmente não reduz custo unitário (exemplo: transportadoras de encomendas já operam algumas
 das maiores frotas aéreas do mundo, muito eficientemente; combiná-las não geraria economia
 substancial em operação de voo).
-Escala **importa** quando: (i) **a unidade de capacidade incremental é grande** — custo de
+Escala **importa** quando: (i) **a unidade de capacidade incremental é grande**: o custo de
 desenvolver uma nova plataforma automotiva é enorme, então montadoras minimizam o número de
 plataformas; a combinação Audi + Porsche + VW permite compartilhar plataformas (Audi Q7, Porsche
 Cayenne e VW Touareg são baseados na mesma plataforma); (ii) **uma empresa grande compra uma
 empresa subescala**. Compras/procurement geram escala mas com nuance: seguradoras de saúde
-combinadas negociam melhores taxas com sistemas hospitalares — economia que podem passar aos
-clientes — mas tipicamente **apenas nas cidades onde ambas já atuam**, porque a maioria dos
+combinadas negociam melhores taxas com sistemas hospitalares (economia que podem passar aos
+clientes), mas tipicamente **apenas nas cidades onde ambas já atuam**, porque a maioria dos
 sistemas hospitalares é local; seguradoras que operam em cidades diferentes não ganham poder de
 compra ao se combinar.
 **Regra prática**: *"raramente economias de escala genéricas, como economia de back-office, são
 grandes o suficiente para justificar uma aquisição. Economias de escala precisam ser
 **únicas** para serem grandes o bastante para justificar uma aquisição."* (p832)
-> **Implicação sell-side**: item (ii) é ouro — *empresa grande comprando empresa subescala* é
+> **Implicação sell-side**: item (ii) é ouro. *Empresa grande comprando empresa subescala* é
 > exatamente o formato do mid-market brasileiro. O alvo de R$ 50-500 MM tipicamente é subescala em
 > compras, logística, backoffice, custo de capital e capacidade de investimento. Quantificar isso
 > é quantificar sinergia real e defensável.
@@ -282,15 +282,15 @@ grandes o suficiente para justificar uma aquisição. Economias de escala precis
 Aquisições no início do ciclo de vida de um novo produto ou setor, muito antes de os outros
 reconhecerem que vai crescer. Típico em dispositivos médicos: grandes compram jovens inovadoras,
 ajudam a refinar a tecnologia e aceleram/turbinam os lançamentos. **Payoff frequentemente leva 5+
-anos.** Alto risco (exemplo do capítulo: cannabis nos EUA — legalizado em alguns estados, ilegal
+anos.** Alto risco (exemplo do capítulo: cannabis nos EUA, legalizado em alguns estados, ilegal
 no âmbito federal; algumas empresas de bens de consumo compraram players antecipando crescimento
 alto apesar da incerteza). Requer disciplina em três dimensões: (i) investir cedo, antes de
 concorrentes e mercado verem o potencial; (ii) **fazer múltiplas apostas e esperar que algumas
 falhem**; (iii) ter as competências e a paciência para nutrir os negócios adquiridos.
 
-**Onde encaixa** — Uso central em **`segmentacao-de-compradores`**: a segmentação deveria ser
+**Onde encaixa**: Uso central em **`segmentacao-de-compradores`**: a segmentação deveria ser
 feita **por arquétipo**, não por setor. Para cada comprador da long list, responder "qual dos seis
-arquétipos ele executa com este alvo, e quanto vale?" — e o comprador que não encaixa em nenhum
+arquétipos ele executa com este alvo, e quanto vale?". E o comprador que não encaixa em nenhum
 arquétipo é comprador de baixa probabilidade e prêmio zero, e deve ser desqualificado ou tratado
 como preenchimento de processo. Também alimenta `information-memorandum` (a seção de racional
 estratégico do IM deve ser escrita **em várias versões, uma por arquétipo/cluster de comprador**)
@@ -300,47 +300,47 @@ função do arquétipo.
 
 ### 31.6 Estratégias de "odds mais longas" (p833-836)
 
-**O que é** — Quatro estratégias que podem criar valor, mas são mais difíceis de executar:
+**O que é**: Quatro estratégias que podem criar valor, mas são mais difíceis de executar:
 
-**a) Roll-up** (p833-834) — Consolidar mercados altamente fragmentados onde os competidores atuais
+**a) Roll-up** (p833-834): consolidar mercados altamente fragmentados onde os competidores atuais
 são pequenos demais para alcançar economias de escala. Exemplo: **Service Corporation
 International** cresceu de uma casa funerária em Houston (anos 1960) para quase **2.000 casas
 funerárias e cemitérios em 2018**. Funciona quando os negócios **como grupo** realizam economias de
 custo substanciais ou receitas maiores que as unidades individuais (casas funerárias de uma mesma
 cidade compartilham veículos, compras e backoffice; coordenam publicidade na cidade para reduzir
 custo e obter receita maior). **Regra prática decisiva**: *"tamanho por si só não é o que cria um
-roll-up bem-sucedido; o que importa é o **tipo certo de tamanho**"* — para a Service Corporation,
+roll-up bem-sucedido; o que importa é o **tipo certo de tamanho**"*: para a Service Corporation,
 ter múltiplas localizações **na mesma cidade** foi mais importante que simplesmente ter muitas
 filiais espalhadas por muitas cidades, porque as economias (compartilhar veículos) só se realizam
-se as filiais são próximas. **Risco**: roll-ups são difíceis de disfarçar e **atraem imitadores** —
-quando outros tentaram copiar a Service Corporation, os preços de algumas casas funerárias foram
-levados a níveis que tornaram novas aquisições antieconômicas.
+se as filiais são próximas. **Risco**: roll-ups são difíceis de disfarçar e **atraem imitadores**.
+Quando outros tentaram copiar a Service Corporation, os preços de algumas casas funerárias
+foram levados a níveis que tornaram novas aquisições antieconômicas.
 > **Implicação sell-side muito relevante ao Brasil**: o roll-up é o arquétipo dominante de PE e
 > de estratégico em vários setores mid-market brasileiros (saúde, educação, serviços ambientais e
 > resíduos, distribuição, farmácias, TI, agro-serviços). Três consequências operacionais: (1) na
 > `segmentacao-de-compradores`, mapear **plataformas de roll-up já ativas** (quem já é
-> consolidador financiado, com quantos add-ons e quanto de dry powder) — são os compradores de
+> consolidador financiado, com quantos add-ons e quanto de dry powder), são os compradores de
 > maior prêmio e maior velocidade; (2) o critério de "tipo certo de tamanho" diz **quais
 > compradores especificamente pagam mais pelo seu alvo**: aquele cuja malha existente é
-> *adjacente/sobreposta* à do alvo, não simplesmente o maior — o que permite ranquear compradores
+> *adjacente/sobreposta* à do alvo, não simplesmente o maior, o que permite ranquear compradores
 > por **densidade geográfica ou de rota sobreposta**, um critério objetivo e raramente usado;
 > (3) o risco de imitador/preço inflado é argumento de urgência: a janela de múltiplo de roll-up
 > fecha.
 
-**b) Consolidar para melhorar o comportamento competitivo** (p834) — Muitos executivos em setores
+**b) Consolidar para melhorar o comportamento competitivo** (p834): muitos executivos em setores
 muito competitivos esperam que a consolidação leve os concorrentes a focar menos em competição por
 preço, melhorando o ROIC do setor. **A evidência mostra que, a menos que o setor consolide para
 apenas três ou quatro competidores E consiga manter entrantes fora, o comportamento de preço dos
-competidores não muda** — há frequentemente incentivo para empresas menores ou novos entrantes
+competidores não muda**: há frequentemente incentivo para empresas menores ou novos entrantes
 ganharem share via competição de preço. Num setor com dez competidores, **muitos deals precisam
 ser concluídos antes de a base da competição mudar**.
 
-**c) Fusão transformacional** (p834-835) — Rara, porque as circunstâncias precisam ser exatamente
+**c) Fusão transformacional** (p834-835): rara, porque as circunstâncias precisam ser exatamente
 as certas e o time de gestão precisa executar bem. Exemplo: **Novartis**, formada pela fusão de
 US$ 30 bi entre Sandoz e Ciba-Geigy (anunciada em 1996). Sob o novo CEO Daniel Vasella, as duas
 foram transformadas numa empresa inteiramente nova, usando a fusão como catalisador de mudança:
 capturou **US$ 1,4 bi de sinergias de custo** *e* redefiniu missão, estratégia, portfólio,
-organização e todos os processos-chave, de pesquisa a vendas — sem escolha automática pelo "jeito
+organização e todos os processos-chave, de pesquisa a vendas, sem escolha automática pelo "jeito
 Ciba" ou pelo "jeito Sandoz", com esforço sistemático de achar o melhor jeito em todas as áreas.
 Deslocou o foco estratégico para inovação em life sciences (farmacêuticos, nutrição, agrícola) e
 fez spin-off do negócio de US$ 7 bi da Ciba Specialty Chemicals (1997); reorganizou P&D
@@ -348,7 +348,7 @@ mundialmente **por área terapêutica em vez de geográfica** (permitindo constr
 mundial em oncologia); e criou cultura orientada a desempenho em todos os departamentos e camadas,
 trocando remuneração **baseada em senioridade por baseada em desempenho**.
 
-**d) Comprar barato** (p835-836) — Comprar a preço abaixo do valor intrínseco do alvo. *"Na nossa
+**d) Comprar barato** (p835-836): comprar a preço abaixo do valor intrínseco do alvo. *"Na nossa
 experiência, oportunidades de criar valor dessa forma são raras e relativamente pequenas."*
 Valores de mercado revertem ao intrínseco em prazos longos, mas há momentos breves de
 desalinhamento: mercados às vezes reagem em excesso a notícias negativas (investigação criminal de
@@ -357,7 +357,7 @@ setores cíclicos**, onde ativos costumam estar subvalorizados no fundo do ciclo
 valuations de mercado reais com valores intrínsecos baseados num modelo de "previsão perfeita",
 empresas em setores cíclicos **poderiam mais que dobrar o retorno ao acionista** (relativo ao
 retorno real) se adquirissem ativos no fundo do ciclo e vendessem no topo (Koller & de Heer). Mas
-para obter controle o comprador precisa pagar prêmio sobre o valor de mercado corrente — os
+para obter controle o comprador precisa pagar prêmio sobre o valor de mercado corrente. Os
 prêmios variam muito, mas a média para controle corporativo é bastante estável, **perto de 30% do
 preço pré-anúncio do equity do alvo**.
 **Risco simétrico**: como valores de mercado podem desviar do intrínseco, a gestão precisa se
@@ -368,11 +368,11 @@ séria, porque **a atividade de M&A parece aumentar após períodos de forte des
 Se os preços estão artificialmente altos, grandes melhorias são necessárias para justificar a
 aquisição **mesmo quando o alvo pode ser comprado sem prêmio sobre o valor de mercado**.
 
-**Winner's curse (p835-836)** — Para alvos perseguidos por múltiplos compradores, o prêmio sobe
+**Winner's curse (p835-836)**: para alvos perseguidos por múltiplos compradores, o prêmio sobe
 dramaticamente. *Se várias empresas avaliam um dado alvo e todas identificam mais ou menos as
 mesmas sinergias, aquela que **superestima mais** as sinergias potenciais oferecerá o preço mais
 alto.* Como o preço ofertado é baseado numa superestimativa do valor a ser criado, o suposto
-vencedor **paga demais e é, no fim, o perdedor** (Rock, 1986). Problema relacionado: **hubris** —
+vencedor **paga demais e é, no fim, o perdedor** (Rock, 1986). Problema relacionado: **hubris**,
 a tendência da gestão do comprador de superestimar sua capacidade de capturar melhorias de
 desempenho da aquisição (Roll, 1986).
 > **Implicação sell-side (usar com honestidade, é uma faca de dois gumes)**: o winner's curse é
@@ -385,45 +385,45 @@ desempenho da aquisição (Roll, 1986).
 > número de proponentes), a evidência é inequívoca: **número de proponentes é a variável de
 > processo que mais move o preço para o vendedor**.
 
-**Onde encaixa** — Roll-up: `segmentacao-de-compradores` e `estudo-setorial`. Consolidação por
-comportamento competitivo (regra dos 3-4 competidores): `estudo-setorial` — é um teste concreto
+**Onde encaixa**: Roll-up: `segmentacao-de-compradores` e `estudo-setorial`. Consolidação por
+comportamento competitivo (regra dos 3-4 competidores): `estudo-setorial`, é um teste concreto
 de quando a tese de consolidação de um setor é crível, e um filtro contra teses de consolidação
 infundadas. Winner's curse e hubris: `go-to-market` + `negociacao-e-loi`. Comprar barato /
 ciclicidade e "M&A aumenta após mercado forte": `projecao-e-cenarios` e `go-to-market` (timing de
-saída no ciclo — o espelho do "comprar no fundo" é "vender no topo").
+saída no ciclo: o espelho do "comprar no fundo" é "vender no topo").
 **Veredito: ADICIONAR-ALTA** (roll-up, winner's curse, regra dos 3-4 competidores, ciclicidade);
 **IRRELEVANTE-MIDMARKET** (fusão transformacional).
 **Página: p833-836.**
-### 31.7 Estimativa de sinergias — o protocolo completo (p836-842)
+### 31.7 Estimativa de sinergias: o protocolo completo (p836-842)
 
-**O que é** — A parte mais operacional do capítulo, e a mais diretamente convertível em
+**O que é**: A parte mais operacional do capítulo, e a mais diretamente convertível em
 checklist de skill. Koller separa **custo/capital** de **receita**, e trata custo de
 implementação e timing como itens de primeira classe.
 
 **Princípio de abertura (p836)**: as fontes principais de valor em M&A são melhorias de **custo,
 capital e receita** (as "sinergias") que a empresa combinada realiza. *Raramente um preço de compra
 barato faz a mesma diferença.* Estimar as melhorias potenciais é um dos fatores de sucesso mais
-importantes de M&A — junto com executá-las depois do fechamento.
+importantes de M&A, junto com executá-las depois do fechamento.
 
-**Sinergia é estimada TRÊS vezes, não uma (p836)** — (1) antes de as negociações começarem;
+**Sinergia é estimada TRÊS vezes, não uma (p836)**: (1) antes de as negociações começarem;
 (2) durante as negociações, à medida que o comprador obtém mais informação; (3) **depois do
 fechamento**. Muitas empresas negligenciam a terceira, mas ela é crítica: colegas de McKinsey
 (Engert & Rosiello) acharam que **em quase 50% dos casos as estimativas pré-fechamento falharam em
 fornecer um roteiro adequado para identificar plenamente as oportunidades de melhoria**.
 
-**A assimetria custo vs. receita — o número mais útil do bloco (p836-837)**
+**A assimetria custo vs. receita: o número mais útil do bloco (p836-837)**
 McKinsey Merger Management Practice analisou **90 aquisições**:
 - **86% dos compradores conseguiram capturar ao menos 70% das economias de custo estimadas.**
 - **Quase metade dos compradores realizou menos de 70% das melhorias de receita almejadas.**
 - **Em quase 1/4 das aquisições observadas, o comprador realizou menos de 30% das melhorias de
   receita almejadas.**
 > **Uso sell-side**: sinergia de custo é moeda forte e defensável na negociação de preço; sinergia
-> de receita é moeda fraca — o comprador vai descontá-la agressivamente e a evidência lhe dá
+> de receita é moeda fraca: o comprador vai descontá-la agressivamente e a evidência lhe dá
 > razão. Consequência tática: ao construir o argumento de prêmio, **ancorar em sinergia de custo e
 > capital**; usar sinergia de receita como upside qualitativo e como justificativa de earn-out (o
 > vendedor participa da sinergia de receita se ela se materializar, em vez de brigar por ela no
 > preço à vista). Simetricamente: se o comprador quer descontar do preço a incerteza da sinergia
-> de receita, ofereça earn-out sobre ela — quem acredita na incerteza deve pagar contingente.
+> de receita, ofereça earn-out sobre ela. Quem acredita na incerteza deve pagar contingente.
 
 **Protocolo de estimativa de economias de custo e capital (p837-839)**
 Erro comum a evitar: *estimar economias simplesmente calculando a diferença de desempenho
@@ -453,7 +453,7 @@ sistemático em três passos:
    competitiva, mais é preciso reduzir gradualmente as melhorias de desempenho no longo prazo."**
    ← ponte direta e explícita com CAP / `diagnostico-de-roic` e `valor-terminal`.
 
-**Envolver gestores de linha, não só finanças (p838)** — Ao amarrar economias a drivers
+**Envolver gestores de linha, não só finanças (p838)**: Ao amarrar economias a drivers
 operacionais, envolver gestores de linha experientes. Um time integrado com analistas financeiros
 *e* gestores de linha experientes tende a ser mais preciso que um time puramente de finanças.
 Gestores de linha experientes frequentemente **já sabem detalhes sobre o alvo**, e nesse caso
@@ -465,7 +465,7 @@ sobre os **requisitos incomuns de manufatura de uma linha-chave de produtos** e 
 **necessidades iminentes de investimento na planta principal do alvo** melhorou substancialmente
 as estimativas. Além disso, numa entrevista de due diligence com o head de operações do alvo,
 descobriu que **o alvo não tinha sistema ERP**. Cada um desses fatos **melhorou as negociações e a
-estruturação do deal** — por exemplo, permitindo à gestão prometer que a principal localização
+estruturação do deal**, por exemplo, permitindo à gestão prometer que a principal localização
 europeia do alvo seria mantida, mantendo flexibilidade sobre a principal planta americana. E o
 envolvimento do gestor de operações garantiu que a empresa estava preparada para **agir rápido e
 decisivamente** para capturar as economias após o fechamento.
@@ -475,13 +475,13 @@ decisivamente** para capturar as economias após o fechamento.
 > qualidade de ERP, capex latente/diferido na planta principal, contratos de fornecedores) e a
 > `revisao-de-modelo`/`qualidade-de-resultados` deve preparar as respostas antes de o comprador
 > achar as surpresas. Note também dois pontos táticos: (a) descobertas de diligência **viram
-> moeda de negociação e de estruturação** — o comprador troca compromissos (manter uma planta,
+> moeda de negociação e de estruturação**: o comprador troca compromissos (manter uma planta,
 > manter o time) por preço, o que é exatamente o tipo de item que o assessor deve precificar em
 > vez de conceder de graça; (b) capex latente e ausência de ERP são achados **recorrentes e
 > previsíveis** em mid-market familiar brasileiro, e portanto devem ser tratados
 > proativamente na preparação, não descobertos pelo comprador.
 
-**Dispersão de economias por categoria (Exhibit 31.7, p839)** — Aquisição no setor automotivo:
+**Dispersão de economias por categoria (Exhibit 31.7, p839)**: Aquisição no setor automotivo:
 economia de custo total estimada em **~10% dos custos combinados**, mas variando consideravelmente
 por categoria:
 - **Procurement**: embora seja a maior categoria de custo isolada de montadoras, a maioria das
@@ -495,10 +495,10 @@ por categoria:
   marketing** da empresa combinada.
 > Lição transportável: **nunca aplicar um percentual único de sinergia à base de custo total**;
 > decompor por categoria. E o percentual mais alto costuma estar onde há **duplicação de
-> desenvolvimento/estrutura**, não onde há maior volume de gasto — o intuitivo (compras, a maior
+> desenvolvimento/estrutura**, não onde há maior volume de gasto. O intuitivo (compras, a maior
 > linha) é justamente o de menor percentual, porque a escala já existia.
 
-**Estimativa de melhorias de receita (p840-841)** — Tentador supor que a receita da combinada será
+**Estimativa de melhorias de receita (p840-841)**: Tentador supor que a receita da combinada será
 a soma stand-alone mais o novo cross-selling; a realidade costuma ser bem diferente. Os quatro
 vazamentos:
 (i) a fusão frequentemente **rompe relacionamentos existentes com clientes**, levando a perda de
@@ -517,7 +517,7 @@ melhoria de vendas nos cinco anos seguintes, incluindo crescimento de lucro de d
 primeiro ano. Mas o crescimento global do mercado era limitado, então o único jeito de atingir
 essas metas de vendas era **baixar preços**. O **crescimento real de lucro foi de meros 2%**.
 
-**As quatro fontes legítimas de melhoria de receita (p840)** — ser explícito sobre de onde se
+**As quatro fontes legítimas de melhoria de receita (p840)**: ser explícito sobre de onde se
 espera que venha qualquer crescimento de receita além do caso-base. As melhorias tipicamente vêm
 de uma ou mais de quatro fontes:
 1. **Aumentar o nível de vendas de pico de cada produto**
@@ -527,14 +527,14 @@ de uma ou mais de quatro fontes:
    empresas tivessem permanecido independentes**
 
 Alternativamente, aumentos de receita poderiam vir de **preços mais altos**, viabilizados pela
-redução de competição — mas *a regulação antitruste existe precisamente para impedir que empresas
+redução de competição, mas *a regulação antitruste existe precisamente para impedir que empresas
 usem essa alavanca*, que transferiria valor de clientes para acionistas. Qualquer aumento de preço
 tem de ser **diretamente atribuível a um aumento de valor para o cliente**, e não a redução de
 escolha.
 
 **Regra de modelagem (p841)**: projetar melhorias de receita em **valores absolutos por ano ou
-como percentual da receita stand-alone**, e **não como aumento da taxa de crescimento da receita**
-— com a abordagem de taxa de crescimento é fácil superestimar o impacto real das melhorias.
+como percentual da receita stand-alone**, e **não como aumento da taxa de crescimento da receita**:
+com a abordagem de taxa de crescimento é fácil superestimar o impacto real das melhorias.
 
 **Custos de implementação, requisitos e timing (p841-842)**
 - Embora as melhorias de desempenho resultem de "fazer mais com menos", mudar ou combinar sistemas
@@ -554,16 +554,16 @@ como percentual da receita stand-alone**, e **não como aumento da taxa de cresc
   ano orçamentário completo após a consolidação podem nunca ser capturadas"*, porque o ímpeto de
   capturá-las é atropelado por eventos subsequentes. **Atenção gerencial persistente importa.**
 - **Data de validade das economias (p841-842)**: negligenciar a "use by date" de certas economias é
-  igualmente problemático — muitas economias potenciais não ficam na mesa para sempre. Exemplo:
+  igualmente problemático: muitas economias potenciais não ficam na mesa para sempre. Exemplo:
   uma fonte de economia de custo é eliminar capacidade excedente cíclica num setor em crescimento;
   mas nessas circunstâncias, a capacidade excedente **acabará sendo eliminada pelo crescimento
   natural**. Portanto, reduzir capacidade só gera economia incremental se a redução ocorrer
   **dentro da duração esperada do excesso de capacidade**.
 
-**Onde encaixa** — Este bloco inteiro é a base de uma seção nova de `negociacao-e-loi`
+**Onde encaixa**: Este bloco inteiro é a base de uma seção nova de `negociacao-e-loi`
 ("quantificação de sinergia e prêmio suportável") e de um checklist de antecipação em
 `solicitacao-de-informacoes`. Também sugere **skill nova: `sinergias-e-tese-de-comprador` no
-plugin de M&A** — dedicada a construir, para cada comprador da short list, uma estimativa de
+plugin de M&A**, dedicada a construir, para cada comprador da short list, uma estimativa de
 sinergia de custo/capital/receita com baseline consistente com o valuation intrínseco, decomposição
 por categoria, teste contra benchmark setorial, custo de implementação (~1 ano de economias),
 timing (janela do primeiro ano orçamentário) e **prêmio suportável resultante**. Não existe
@@ -572,9 +572,9 @@ equivalente hoje: `transacoes-precedentes` dá múltiplo observado, não sinergi
 projeta o alvo isolado.
 **Veredito: ADICIONAR-ALTA.** **Página: p836-842.**
 
-### 31.8 Pagar em caixa ou em ações — e a alocação de risco (p842-844)
+### 31.8 Pagar em caixa ou em ações: a alocação de risco (p842-844)
 
-**O que é** — Pesquisa mostra que, em média, o retorno da ação do comprador em torno do anúncio é
+**O que é**: Pesquisa mostra que, em média, o retorno da ação do comprador em torno do anúncio é
 **mais alto quando o comprador oferece caixa** do que quando oferece ações. Koller hesita em tirar
 conclusão a partir de estatística agregada (mesmo empresas que pagam em caixa podem pagar demais).
 Assumindo que o comprador não é restrito de capital, **a questão real é se os riscos e as
@@ -583,17 +583,17 @@ recompensas do deal devem ser compartilhados com os acionistas do alvo**:
   pago demais.
 - **Ações**: os acionistas do alvo **assumem parte do risco**.
 
-**Exemplo numérico (Exhibit 31.8, p842-844)** — Comprador com market cap de US$ 1,0 bi, alvo com
+**Exemplo numérico (Exhibit 31.8, p842-844)**: Comprador com market cap de US$ 1,0 bi, alvo com
 US$ 500 MM. Preço total pago: **US$ 650 MM (prêmio de 30%)**. Dois cenários de DCF pós-transação:
 melhorias **US$ 50 MM abaixo** do prêmio pago (downside) e **US$ 50 MM acima** (upside).
 (Simplificação: valor de mercado = valor intrínseco para ambas.)
 - **100% caixa**: os acionistas do alvo recebem US$ 650 MM **independentemente** de as melhorias
-  serem suficientes para justificar o prêmio — não compartilham o risco de implementação. Os
+  serem suficientes para justificar o prêmio. Não compartilham o risco de implementação. Os
   acionistas do comprador vêem sua participação valorizar +US$ 50 MM no upside e desvalorizar
   −US$ 50 MM no downside; **carregam o risco integral**.
 - **100% ações**: os acionistas do alvo participam do risco de implementação por virtude de serem
   acionistas da nova entidade combinada. No **upside**, o payout deles cresce com as melhorias:
-  recebem **US$ 670 MM** em valor em vez de US$ 650 MM — efetivamente, **ainda mais valor foi
+  recebem **US$ 670 MM** em valor em vez de US$ 650 MM: efetivamente, **ainda mais valor foi
   transferido dos acionistas do comprador para os do alvo**. Os acionistas do comprador aceitam
   essa forma de pagamento porque **estão protegidos se a implementação for mal**: se o deal
   destrói valor, os acionistas do alvo ficam com menos do que antes, mas ainda com um bom prêmio,
@@ -601,7 +601,7 @@ melhorias **US$ 50 MM abaixo** do prêmio pago (downside) e **US$ 50 MM acima** 
   pré-deal.
 Nota 25: acionistas do alvo com participações pequenas podem vender suas ações no mercado para
 evitar o risco de implementação; acionistas influentes com participações grandes, como fundadores
-e executivos seniores, **frequentemente concordam em não vender por um período determinado** — e
+e executivos seniores, **frequentemente concordam em não vender por um período determinado**, e
 nesse caso compartilham o risco de implementação. (Isto é, literalmente, a lógica de **lock-up /
 rollover do fundador**.)
 
@@ -611,12 +611,12 @@ rollover do fundador**.)
    Nesse cenário, desenvolver uma visão sobre a **supervalorização relativa** dos dois negócios. Se
    você acredita que suas ações estão mais supervalorizadas que as do alvo, elas **têm valor
    próprio como moeda de transação**. (Nota 26: o efeito de sinalização da contraprestação em ações
-   é similar ao de uma emissão de ações — o mercado usará essa nova informação, de que as ações
+   é similar ao de uma emissão de ações: o mercado usará essa nova informação, de que as ações
    podem estar supervalorizadas, ao precificá-las.)
 2. **Quanta confiança você tem na capacidade do deal de criar valor?** Quanto mais confiante,
    mais inclinado a pagar em **caixa**.
 
-**Terceiro critério — estrutura de capital (p844)**: ao ponderar caixa vs. ações, considerar também
+**Terceiro critério, estrutura de capital (p844)**: ao ponderar caixa vs. ações, considerar também
 qual será a estrutura de capital ótima. A empresa consegue levantar caixa suficiente via oferta de
 dívida para pagar o alvo inteiramente em caixa? **Estender demais as linhas de crédito para
 adquirir uma empresa pode devastar o tomador.** Caso: um fornecedor automotivo tomou caixa
@@ -627,7 +627,7 @@ estrutura de capital da entidade combinada não acomoda a dívida extra incorrid
 é preciso pagar parcial ou totalmente em ações, **independentemente de qualquer desejo de
 compartilhar risco**.
 
-**Onde encaixa** — `negociacao-e-loi`. Adaptação ao mid-market brasileiro: "ações" raramente é a
+**Onde encaixa**: `negociacao-e-loi`. Adaptação ao mid-market brasileiro: "ações" raramente é a
 moeda, mas a **lógica de alocação de risco é idêntica** e se aplica às moedas que realmente
 aparecem: **earn-out, rollover de participação (equity roll), preço diferido, escrow/holdback e
 vendor finance**. A leitura de Koller dá o vocabulário econômico correto:
@@ -643,7 +643,7 @@ vendor finance**. A leitura de Koller dá o vocabulário econômico correto:
   earn-out ancorado em **métricas que o vendedor controla e pode auditar**.
 - O lock-up de fundador da nota 25 é o análogo direto do rollover: o comprador **quer** que o
   fundador compartilhe risco; o vendedor deve cobrar por isso.
-- Também: **a capacidade de endividamento do comprador é due diligence reversa obrigatória** —
+- Também: **a capacidade de endividamento do comprador é due diligence reversa obrigatória**:
   o caso do fornecedor automotivo é simultaneamente risco de fechamento e risco de solvência do
   comprador (relevante quando há preço diferido, earn-out ou rollover, porque o vendedor fica
   credor ou sócio). Entra em `segmentacao-de-compradores` como critério de qualificação
@@ -651,10 +651,10 @@ vendor finance**. A leitura de Koller dá o vocabulário econômico correto:
   capacidade de pagamento antes de acesso a informação sensível).
 **Veredito: ADICIONAR-ALTA.** **Página: p842-844.**
 
-### 31.9 Foco em valor, não em contabilidade — accretion/dilution é ruído (p844-847)
+### 31.9 Foco em valor, não em contabilidade: accretion/dilution é ruído (p844-847)
 
-**O que é** — Muitos gestores focam na accretion/dilution de lucros trazida pela aquisição em vez
-do valor que ela pode criar — e fazem isso apesar de numerosos estudos mostrarem que os mercados
+**O que é**: Muitos gestores focam na accretion/dilution de lucros trazida pela aquisição em vez
+do valor que ela pode criar, e fazem isso apesar de numerosos estudos mostrarem que os mercados
 **não prestam atenção nenhuma** ao efeito da aquisição sobre números contábeis, reagindo apenas ao
 valor que se estima que o deal crie. Focar em medidas contábeis é, portanto, perigoso e facilmente
 leva a decisões ruins.
@@ -665,7 +665,7 @@ accretive. Em deals de caixa, a única diluição vem da despesa de juros adicio
 é tipicamente **menos de 4% do valor do deal**. Em deals de ações, o deal é accretive se o **P/E do
 comprador for maior que o do alvo**. Mas *mudar a contabilidade não muda a economia dos deals*.
 
-**Exemplo 1 — accretive destruindo valor (Exhibit 31.9, p845-846)**: você decide se compra por
+**Exemplo 1, accretive destruindo valor (Exhibit 31.9, p845-846)**: você decide se compra por
 **US$ 500 MM em caixa** uma empresa precificada no mercado a **US$ 400 MM**. Sua empresa (o
 comprador) vale US$ 1,6 bi e tem lucro líquido de US$ 80 MM. Por simplicidade, **nenhuma melhoria
 operacional**. Financia o deal levantando dívida a **6% de juro pré-imposto**. O deal **destrói
@@ -673,7 +673,7 @@ valor: você paga US$ 100 MM demais**. Ainda assim, o lucro e o lucro por ação
 **aumentam**, porque o lucro após impostos da empresa adquirida (**US$ 30 MM**) excede o juro após
 impostos exigido pela nova dívida (**US$ 19,5 MM**).
 **Por que o lucro aumenta e o valor é destruído (p846)**: o comprador está tomando emprestado
-**100% do valor do deal** com base nos fluxos de caixa combinados das duas empresas — mas o negócio
+**100% do valor do deal** com base nos fluxos de caixa combinados das duas empresas, mas o negócio
 adquirido **não sustentaria esse nível de dívida por conta própria**. Como o comprador coloca um
 endividamento maior sobre os acionistas existentes **sem compensá-los adequadamente pelo risco
 adicional**, está destruindo valor.
@@ -689,7 +689,7 @@ ações e lucro de US$ 110 MM → o **LPA sobe para US$ 2,10**, e o deal é **no
 ter criado nenhum valor subjacente**. O aumento é **resultado de matemática, não de valor criado
 pelo deal**.
 
-**Exemplo 2 — dilutivo criando valor (p846)**: inversamente, empresas às vezes **abandonam
+**Exemplo 2, dilutivo criando valor (p846)**: inversamente, empresas às vezes **abandonam
 aquisições que podem criar valor** só porque são dilutivas de lucros nos primeiros anos. Suponha
 gastar **US$ 100 MM** para comprar uma empresa de crescimento rápido num mercado atraente, com
 **P/E de 30×**. Antes das melhorias de desempenho, os lucros da aquisição serão **US$ 3,3 MM**. Se
@@ -699,33 +699,33 @@ do alvo para **20% nos cinco anos seguintes** e o alvo obtém **25% de retorno s
 provavelmente **criará valor para os acionistas**, ainda que os lucros e o ROIC fiquem deprimidos
 por alguns anos.
 
-**Evidência de mercado (Exhibit 31.10, p846-847)** — Os mercados financeiros entendem a diferença
+**Evidência de mercado (Exhibit 31.10, p846-847)**: Os mercados financeiros entendem a diferença
 entre criar valor real e aumentar LPA. Num estudo de **117 transações americanas maiores que
 US$ 3 bi**, colegas de McKinsey acharam que a accretion ou dilution de lucros resultante dos deals
 **não foi um fator na reação do mercado**. Independentemente de o LPA esperado ser maior, menor ou
 igual **dois anos após** o deal, a reação do mercado foi similar (dentro dos limites de
 significância estatística) tanto **um mês** após o anúncio quanto **um ano** após o anúncio.
 
-**Onde encaixa** — `negociacao-e-loi`: munição para **desarmar a objeção "esse múltiplo não fecha
+**Onde encaixa**: `negociacao-e-loi`: munição para **desarmar a objeção "esse múltiplo não fecha
 para mim / o deal fica dilutivo / não passa no meu comitê por causa do impacto no resultado"**.
 Duas frases utilizáveis: (a) diluição de LPA não tem relação empírica com criação de valor
 (117 deals, nenhum efeito, a 1 mês e a 1 ano); (b) o teste correto é **ROIC do deal (lucro do alvo
-+ melhorias ÷ preço total de compra) vs. WACC do comprador** — e essa reformulação **desloca a
++ melhorias ÷ preço total de compra) vs. WACC do comprador**, e essa reformulação **desloca a
 conversa do múltiplo para as melhorias**, que é exatamente onde o vendedor tem argumento
 (§31.5, arquétipo 1: quanto mais gordura no alvo, mais melhoria disponível). O teste
 "ROIC do deal > WACC" é também uma **calculadora simples e defensável do preço-teto do comprador**,
-complementar ao "prêmio ≤ melhorias" da §31.1 — e as duas devem ser calculadas lado a lado por
+complementar ao "prêmio ≤ melhorias" da §31.1, e as duas devem ser calculadas lado a lado por
 comprador. Também: `benchmark-bancos` (bancos de investimento costumam apresentar análise de
 accretion/dilution ao comprador; Koller dá a base para relativizá-la quando ela é usada contra o
 vendedor).
 **Veredito: ADICIONAR-ALTA.** **Página: p844-847.**
-### 31.10 Características dos melhores compradores — as quatro capacidades institucionais (p847-851)
+### 31.10 Características dos melhores compradores: as quatro capacidades institucionais (p847-851)
 
-**O que é** — Empresas são mais bem-sucedidas em M&A quando aplicam a ele o mesmo foco,
+**O que é**: Empresas são mais bem-sucedidas em M&A quando aplicam a ele o mesmo foco,
 consistência e profissionalismo que aplicam a outras disciplinas críticas (Ferrer/Uhlaner/West).
 Isso requer construir quatro capacidades institucionais frequentemente negligenciadas.
 
-**1. Fazer M&A tematicamente (p847-848)** — Empresas bem-sucedidas desenvolvem um **pipeline** de
+**1. Fazer M&A tematicamente (p847-848)**: Empresas bem-sucedidas desenvolvem um **pipeline** de
 aquisições potenciais em torno de **dois ou três temas explícitos de M&A** que apoiam a estratégia
 corporativa. Os temas são efetivamente **planos de negócio** que usam tanto M&A quanto
 investimento orgânico para atingir um objetivo específico, **considerando explicitamente as
@@ -733,17 +733,17 @@ capacidades da organização e suas características como best owner de um negó
 prioritários são aqueles em que a empresa **precisa** de M&A para entregar sua estratégia **e** tem
 a capacidade de agregar valor aos alvos. São também altamente detalhados, e seu efeito é mensurável
 em market share, segmento de cliente ou metas de desenvolvimento de produto.
-**Exemplo do nível de especificidade (p848)** — tema de M&A de uma varejista global: *crescer via
+**Exemplo do nível de especificidade (p848)**: tema de M&A de uma varejista global: *crescer via
 entrada em dois mercados emergentes adquirindo apenas empresas locais que sejam **não lucrativas**
 mas estejam **entre as três maiores** de seus mercados*. "Esse é um nível de especificidade que
 poucas empresas alcançam." Como chegaram lá: partiram da meta estratégica (ser a terceira maior do
 setor em cinco anos, atingível só com entrada agressiva em emergentes); uma empresa menos
 disciplinada aceitaria essa meta estratégica como objetivo de M&A e passaria a um scan amplo de
-alvos; mas eles refinaram mais — concluíram que entrar em mercados demais ao mesmo tempo era
+alvos; mas eles refinaram mais: concluíram que entrar em mercados demais ao mesmo tempo era
 impraticável (restrição de tempo de gestão e complexidade de entrar em novas geografias), então
 limitaram a busca às **duas regiões mais promissoras**; sabiam que suas operações enxutas
-ofereceriam melhorias de custo em empresas com **operações inflados** — especialmente dada a
-importância de economias de escala no setor — e que **branding local e atender preferências locais
+ofereceriam melhorias de custo em empresas com **operações inflados** (especialmente dada a
+importância de economias de escala no setor) e que **branding local e atender preferências locais
 eram críticos**. Com o tema de M&A definido tão precisamente, conseguiram reduzir a lista de
 candidatos a um punhado de empresas.
 > **Uso sell-side (muito potente)**: isto é o **manual de engenharia reversa da
@@ -754,11 +754,11 @@ candidatos a um punhado de empresas.
 > genérico. Um alvo que se encaixa num tema declarado tem probabilidade de resposta e prêmio
 > muito maiores, e um caminho de aprovação interna já pavimentado. Também explica o critério
 > aparentemente estranho "não lucrativa mas top-3": compradores disciplinados podem
-> **preferir ativamente** o alvo com margem baixa e posição de mercado forte — mais uma vez o
+> **preferir ativamente** o alvo com margem baixa e posição de mercado forte, mais uma vez o
 > arquétipo 1 (§31.5), e um argumento adicional para não maquiar a ineficiência do alvo, mas
 > enquadrá-la como espaço de melhoria mensurado.
 
-**2. Gerenciar a reputação como comprador (p848-849)** — Poucas empresas consideram como são
+**2. Gerenciar a reputação como comprador (p848-849)**: Poucas empresas consideram como são
 percebidas pelos alvos, ou como sua proposta de valor como comprador se compara à dos
 concorrentes. Muitas são lentas e reativas em identificar alvos potenciais, **tímidas demais em
 cortejar e construir relacionamentos com eles**, ou táticas demais ao iniciar conversas; podem ter
@@ -774,11 +774,11 @@ maiores e mais complexas podem ser percebidas como compradores atraentes por alv
 - têm **funções escaláveis** e um **processo de M&A previsível e transparente**, fácil de navegar
   para os alvos.
 Resultado: conseguem usar sua posição no mercado para **ter sucesso em dimensões que vão além do
-preço** — e frequentemente **são abordados por alvos que ainda nem estão à venda**. Isso é uma
+preço**, e frequentemente **são abordados por alvos que ainda nem estão à venda**. Isso é uma
 vantagem competitiva real, porque os melhores ativos migram para as empresas que percebem como
 agregadoras de valor, e isso **reduz o tempo de busca, a complexidade da integração e as chances de
 uma guerra de lances**.
-**Exemplo (p849)** — numa empresa de alta tecnologia, esses conceitos se juntaram em torno do tema
+**Exemplo (p849)**: numa empresa de alta tecnologia, esses conceitos se juntaram em torno do tema
 "habilitar inovação". O investimento em reputação como comprador começou como campanha de
 marketing externa, mas rapidamente entrou fundo no processo de M&A. Em discussões em conferências e
 em comunidades de engenharia, os gestores usavam **depoimentos de funcionários de empresas
@@ -789,7 +789,7 @@ do contexto de um deal (ou em vez de um deal)**. E quando chegava a hora de apre
 integração e modelos de investimento futuro aos alvos, os gestores garantiam que as propostas
 fossem **consistentes com a reputação** da compradora.
 > **Uso sell-side de dupla mão**: (a) é um **critério de avaliação de comprador para o vendedor
-> familiar** — que quase sempre se importa com o destino da empresa, do time e do nome. A skill
+> familiar**, que quase sempre se importa com o destino da empresa, do time e do nome. A skill
 > `segmentacao-de-compradores` deveria produzir, além de capacidade de pagamento, um perfil de
 > **reputação e track record de integração** de cada comprador: o que aconteceu com as últimas
 > 3 empresas que ele comprou? Os sócios ficaram e por quanto tempo? A marca sobreviveu? A sede
@@ -797,7 +797,7 @@ fossem **consistentes com a reputação** da compradora.
 > diferencial de assessoria raramente entregue. (b) Explica por que existem compradores que
 > "competem além do preço": o processo sell-side deve **extrair valor dessas dimensões**
 > (permanência da marca, continuidade do time, autonomia operacional, papel do fundador,
-> manutenção da unidade/planta) e **precificá-las** — trocá-las por preço — em vez de
+> manutenção da unidade/planta) e **precificá-las** (trocá-las por preço) em vez de
 > entregá-las de graça.
 > **Alerta simétrico e importante**: "ser abordado por alvos que ainda nem estão à venda" é
 > exatamente o *approach direto* que subtrai valor do vendedor por eliminar competição. Koller
@@ -806,7 +806,7 @@ fossem **consistentes com a reputação** da compradora.
 > comprador que bateu à porta: aquele comprador investiu anos em capacidade de comprar sem
 > concorrência.
 
-**3. Confirmar a visão estratégica — due diligence ESTRATÉGICA (p849-850)** — Para muitas empresas,
+**3. Confirmar a visão estratégica, due diligence ESTRATÉGICA (p849-850)**: para muitas empresas,
 o elo entre estratégia e transação **se rompe durante a due diligence**. Ao focar estritamente em
 questões financeiras, legais, tributárias e operacionais, a diligência típica **falha em trazer os
 dados críticos para testar se a visão estratégica do deal é válida**.
@@ -817,30 +817,30 @@ se sua visão do modelo operacional futuro é de fato alcançável. Uma diligên
 **confirmar explicitamente os ativos, as capacidades e os relacionamentos que fazem de um
 comprador o best owner de uma empresa-alvo específica**, e deve reforçar a confiança do time
 executivo de que ele é **verdadeiramente um comprador vantajoso** daquele ativo.
-É crítico que os executivos sejam honestos e minuciosos ao avaliar suas vantagens — idealmente
+É crítico que os executivos sejam honestos e minuciosos ao avaliar suas vantagens, idealmente
 desenvolvendo um ponto de vista baseado em fatos sobre suas crenças, **testando-as com todos os
 responsáveis por entregar valor no deal**, incluindo vendedores, engenheiros de P&D, RH e finanças.
-**Caso de falha (p850)** — Tal abordagem teria ajudado uma grande empresa financeira cuja
+**Caso de falha (p850)**: Tal abordagem teria ajudado uma grande empresa financeira cuja
 diligência focou em **auditar as operações existentes** em vez de **testar a viabilidade dos
 modelos operacionais futuros**. Os critérios de "comprador vantajoso" assumidos pela empresa
 focavam em ser um dos operadores mais eficazes do setor, apoiado por sistemas e processos de TI
 fortes. Os executivos seguiram com o deal **sem nunca saber que o time de TI tinha uma visão
 diferente do estado final**, e descobriram **apenas após o fechamento** que os sistemas de TI das
 duas empresas **não podiam ser integrados**.
-> **Uso sell-side crítico**: note o timing — a diligência estratégica ocorre **depois da LOI**.
+> **Uso sell-side crítico**: note o timing. A diligência estratégica ocorre **depois da LOI**.
 > Isso significa que a fase pós-LOI não é apenas confirmação de números: o comprador está
 > **retestando a própria tese de best owner**, e é aí que ele **reprecifica ou desiste**. A skill
 > `negociacao-e-loi` deve tratar isso explicitamente: (a) antecipar quais elementos da tese
 > estratégica do comprador serão testados e **pré-validá-los** com o vendedor antes da LOI, para
 > não haver surpresa que justifique reabertura de preço; (b) estruturar a LOI para **limitar o
-> escopo de reabertura** — escopo de diligência fechado, prazos curtos, cláusulas de ajuste de
+> escopo de reabertura**: escopo de diligência fechado, prazos curtos, cláusulas de ajuste de
 > preço vinculadas apenas a itens objetivos e mensuráveis (dívida líquida, capital de giro,
 > contingências quantificadas), não a "revisão da tese estratégica"; (c) o risco de integração de
 > TI/sistemas do exemplo é altamente recorrente em mid-market brasileiro (ERPs precários ou
-> ausentes, controles informais, múltiplos CNPJs, contabilidade gerencial paralela) — deve estar
+> ausentes, controles informais, múltiplos CNPJs, contabilidade gerencial paralela); deve estar
 > em `solicitacao-de-informacoes` e ser resolvido na preparação, não descoberto na diligência.
 
-**4. Reavaliar as metas de melhoria de desempenho ao longo do ciclo de vida do M&A (p850-851)** —
+**4. Reavaliar as metas de melhoria de desempenho ao longo do ciclo de vida do M&A (p850-851)**:
 Uma das armadilhas mais comuns mas evitáveis em qualquer transação é **falhar em atualizar as
 expectativas de melhoria de desempenho** à medida que o comprador aprende mais sobre o alvo durante
 a integração. Empresas que tratam M&A como um projeto tipicamente constroem e obtêm aprovação para
@@ -851,7 +851,7 @@ com o potencial real do deal.
 **Casos de upside (p850)**: uma empresa de bens de consumo embalados **elevou as sinergias em
 run-rate em 75%** depois que os gestores reconheceram que a **abordagem superior do alvo para
 promoções em loja** podia ser usada para melhorar o negócio-base da compradora (note: **sinergia
-reversa — do alvo para o comprador**). Uma farmacêutica **elevou suas sinergias em mais de 40%**
+reversa, do alvo para o comprador**). Uma farmacêutica **elevou suas sinergias em mais de 40%**
 numa transação muito grande ao revisitar ativamente as estimativas imediatamente após o fechamento,
 criando um **ambiente livre de risco** para os gestores apresentarem ideias novas; alguns anos
 depois, havia capturado essas sinergias maiores.
@@ -859,17 +859,17 @@ depois, havia capturado essas sinergias maiores.
 **"value creation summits"** que imitam a intensidade e o foco de um esforço de diligência mas
 **mudam os incentivos para focar no upside**; e compradores experientes adotam uma abordagem de
 **folha em branco** para fomentar criatividade, em vez de ancorar o exercício num modelo de
-diligência financeira — que muitas vezes leva a sinergias apenas incrementais. Essas atividades
+diligência financeira, que muitas vezes leva a sinergias apenas incrementais. Essas atividades
 permitem reforçar a ideia de que **as estimativas de melhoria da diligência são o desempenho
 mínimo aceitável**, e habituam os gestores a mirar mais alto.
-> **Uso sell-side — talvez o insight de negociação mais valioso do capítulo**: se as estimativas
-> de sinergia da diligência são reconhecidamente **o piso** — e o próprio Koller documenta upside
+> **Uso sell-side, talvez o insight de negociação mais valioso do capítulo**: se as estimativas
+> de sinergia da diligência são reconhecidamente **o piso** (o próprio Koller documenta upside
 > de 40% a 75% capturado após o fechamento, além de que em ~50% dos casos a estimativa
-> pré-fechamento não era roteiro adequado (§31.7) — então o número de sinergia que o comprador
+> pré-fechamento não era roteiro adequado, §31.7), então o número de sinergia que o comprador
 > apresenta ao vendedor na negociação é **estruturalmente conservador e sistematicamente
 > subestimado**. Isso é argumento direto e citável para (a) resistir ao desconto de sinergia no
 > preço ("sua própria literatura diz que essa é a estimativa mínima"), e (b) preferir
-> earn-out/rollover quando o comprador insiste que a sinergia é incerta — se ele acredita que é
+> earn-out/rollover quando o comprador insiste que a sinergia é incerta: se ele acredita que é
 > incerta, deixe-o pagar quando ela aparecer.
 > Segundo ponto: a **sinergia reversa** (melhoria no negócio do comprador vinda de uma capacidade
 > do alvo) é sistematicamente subestimada e quase nunca é paga. Ela aparece explicitamente na
@@ -880,7 +880,7 @@ mínimo aceitável**, e habituam os gestores a mirar mais alto.
 > o vendedor tem e o comprador não.
 **Veredito: ADICIONAR-ALTA.** **Página: p847-851.**
 
-### 31.11 Erros clássicos — síntese consolidada do capítulo
+### 31.11 Erros clássicos: síntese consolidada do capítulo
 
 Compilação dos erros que Koller identifica ao longo do Cap 31, útil como checklist único de
 `negociacao-e-loi` (cada erro do comprador é simultaneamente uma alavanca de preço e um risco de
@@ -890,14 +890,14 @@ fechamento para o vendedor):
 |---|---|---|
 | 1 | Racional estratégico vago ("escala internacional", "preencher lacunas de portfólio", "terceira perna do portfólio") em vez de um arquétipo específico | p828 |
 | 2 | Pagar prêmio acima do valor das melhorias que se consegue efetivamente produzir | p820, p827 |
-| 3 | Winner's curse — vencer o leilão por ter superestimado mais as sinergias que os demais | p835-836 |
-| 4 | Hubris — superestimar a própria capacidade de capturar melhorias | p836 |
+| 3 | Winner's curse: vencer o leilão por ter superestimado mais as sinergias que os demais | p835-836 |
+| 4 | Hubris: superestimar a própria capacidade de capturar melhorias | p836 |
 | 5 | Justificar deal por economias de escala **genéricas** (back-office) quando ambas já operam em escala | p831-832 |
 | 6 | Estimar sinergia pela diferença de margem entre comprador e alvo (regra de bolso) em vez de análise detalhada por categoria | p837 |
 | 7 | Dupla contagem, por falta de baseline detalhado consistente com o valuation intrínseco | p837 |
 | 8 | Superestimar sinergia de receita (metade dos compradores captura <70%; 1/4 captura <30%) | p836-837 |
 | 9 | Modelar melhoria de receita como aumento da taxa de crescimento em vez de valor absoluto ou % da receita stand-alone | p841 |
-| 10 | Esquecer custos de implementação (rebranding, integração de TI, retreinamento, severance) — tipicamente ≥ 1 ano de economias | p841 |
+| 10 | Esquecer custos de implementação (rebranding, integração de TI, retreinamento, severance), tipicamente ≥ 1 ano de economias | p841 |
 | 11 | Otimismo sobre timing; melhorias não capturadas no primeiro ano orçamentário completo podem nunca ser capturadas | p841 |
 | 12 | Ignorar a "data de validade" das economias (capacidade excedente cíclica que o crescimento natural eliminaria de qualquer forma) | p841-842 |
 | 13 | Congelar as metas de sinergia no valuation da diligência e nunca reavaliá-las | p850 |
@@ -910,9 +910,9 @@ fechamento para o vendedor):
 | 20 | Roll-up com o "tipo errado de tamanho" (filiais dispersas em vez de densas) e convite a imitadores que inflam preços | p833-834 |
 | 21 | Supor que a receita combinada = soma stand-alone + cross-selling, ignorando ruptura de clientes, caça a vendedores, dupla-fonte e concessões de preço | p840 |
 | 22 | Comprar em mercado inflado (M&A aumenta após períodos de forte desempenho de mercado) | p836 |
-| 23 | Deal grande em setor de crescimento rápido — o foco interno da integração desvia da inovação de produto | p826 |
+| 23 | Deal grande em setor de crescimento rápido: o foco interno da integração desvia da inovação de produto | p826 |
 
-**Onde encaixa** — `negociacao-e-loi` e `revisao-de-modelo` (auditoria de modelo com sinergia).
+**Onde encaixa**: `negociacao-e-loi` e `revisao-de-modelo` (auditoria de modelo com sinergia).
 **Veredito: ADICIONAR-ALTA.** **Página: p818-851.**
 
 ### 31.12 Síntese de aditividade do Cap 31
@@ -944,11 +944,11 @@ fechamento para o vendedor):
 | Sinergia da diligência é o piso (upside 40-75% pós-close); sinergia reversa | `negociacao-e-loi`, `information-memorandum` | ADICIONAR-ALTA |
 | 23 erros clássicos (tabela) | `negociacao-e-loi`, `revisao-de-modelo` | ADICIONAR-ALTA |
 | Ondas de M&A; comprar no fundo do ciclo (espelho: vender no topo) | `go-to-market` | ADICIONAR-MÉDIA |
-| Fusão transformacional (Novartis) | — | IRRELEVANTE-MIDMARKET |
-| Voto de acionistas em aquisições (UK vs. EUA) | — | IRRELEVANTE-MIDMARKET |
+| Fusão transformacional (Novartis) | - | IRRELEVANTE-MIDMARKET |
+| Voto de acionistas em aquisições (UK vs. EUA) | - | IRRELEVANTE-MIDMARKET |
 
 ---
-## Cap 28 — Corporate Portfolio Strategy (p746-771)
+## Cap 28: Corporate Portfolio Strategy (p746-771)
 
 > Este é o capítulo do **best owner**. É a fundamentação econômica do pitch ao vendedor
 > ("por que vender vale mais que manter") e a taxonomia analítica da `segmentacao-de-compradores`.
@@ -958,7 +958,7 @@ fechamento para o vendedor):
 
 ### 28.1 Aposte no cavalo ou no jóquei? (p746-748)
 
-**O que é** — Kaplan, Sensoy & Strömberg (JoF 2009) analisaram startups financiadas por venture
+**O que é**: Kaplan, Sensoy & Strömberg (JoF 2009) analisaram startups financiadas por venture
 capital e rastrearam se acabaram grandes e bem-sucedidas o suficiente para abrir capital.
 Conclusão: **é melhor ter vantagem competitiva (o cavalo) do que ter um bom time de gestão (o
 jóquei)**. Com vantagem competitiva, o VC pode sempre trocar um time fraco; mas até o melhor time
@@ -966,7 +966,7 @@ pode não conseguir transformar um pangaré em puro-sangue. Buffett, citado (p74
 de gestão com reputação de brilhantismo se junta a um negócio com má economia fundamental, é a
 reputação do negócio que permanece intacta."*
 Contexto adjacente (p747): uma empresa de químicos commodity é improvável de jamais ganhar tanto
-retorno sobre capital quanto uma que faz cereal de café da manhã de marca — a escolha do negócio é
+retorno sobre capital quanto uma que faz cereal de café da manhã de marca. A escolha do negócio é
 determinante crítico do destino. **Mas** donos e gestores diferentes podem extrair mais ou menos
 valor do *mesmo* negócio. Portanto, criar o máximo de valor exige **escolher negócios atrativos
 combinado com identificar o dono capaz de gerar os maiores fluxos de caixa daquele negócio**.
@@ -978,18 +978,18 @@ empresa participa, mais **cinco ações de gestão estratégica**: (1) mudar o p
 (via aquisições programáticas e desinvestimentos), (2) alocar recursos, (3) gastar capital,
 (4) melhorar produtividade, (5) inovar para diferenciar produtos e serviços.
 
-**Onde encaixa** — `estudo-setorial` (o argumento "setor e geografia são determinantes de primeira
+**Onde encaixa**: `estudo-setorial` (o argumento "setor e geografia são determinantes de primeira
 ordem do ROIC alcançável" é a justificativa de por que o estudo setorial precede o valuation);
 `diagnostico-de-roic` (cavalo > jóquei: a vantagem competitiva estrutural manda mais que a
-qualidade da gestão — o que valida projetar CAP a partir da fonte de vantagem, não da qualidade do
+qualidade da gestão, o que valida projetar CAP a partir da fonte de vantagem, não da qualidade do
 time). No pitch ao vendedor familiar, é também um argumento delicado mas verdadeiro: **o valor do
 negócio não depende principalmente de o fundador continuar**.
 **Veredito: ADICIONAR-MÉDIA.** **Página: p746-748.**
 
 ### 28.2 O princípio do best owner e o caso General Mills/Pillsbury (p747-749)
 
-**O que é** — O princípio central: **o valor de um negócio não é um número único, é um número por
-dono potencial.** Caso clássico, com números (p748):
+**O que é**: O princípio central: **o valor de um negócio é um número por dono
+potencial, e não um número único.** Caso clássico, com números (p748):
 - **General Mills comprou a Pillsbury da Diageo em 2001 por US$ 10,4 bi.**
 - Pouco depois, aumentou os **fluxos de caixa pré-imposto do negócio em mais de US$ 400 MM por
   ano**, elevando o **lucro operacional da Pillsbury em ~70%**.
@@ -1004,7 +1004,7 @@ dono potencial.** Caso clássico, com números (p748):
   distribuir a nova linha de refeições refrigeradas da General Mills. (← o exemplo canônico de
   **sinergia reversa**, cf. Cap 31 §31.10.)
 
-**A dupla condição de um deal atrativo (p748)** — A Pillsbury representava valor de pelo menos duas
+**A dupla condição de um deal atrativo (p748)**: A Pillsbury representava valor de pelo menos duas
 formas no momento da venda: **seu valor para a General Mills e seu valor para a Diageo**.
 - Para a General Mills achar o deal atrativo: o valor da Pillsbury **sob propriedade da General
   Mills** tinha de ser maior que o preço de US$ 10,4 bi.
@@ -1016,16 +1016,16 @@ formas no momento da venda: **seu valor para a General Mills e seu valor para a 
 > ele mesmo criaria mantendo o negócio (o "valor de continuar"). E a **zona de acordo** existe
 > porque valor-para-o-comprador > valor-para-o-vendedor. A skill `negociacao-e-loi` deveria
 > calcular explicitamente os dois lados; a `triangulacao-e-faixa` hoje produz uma faixa de valor
-> "objetiva", que na prática é o **valor stand-alone sob o dono atual** — insuficiente.
+> "objetiva", que na prática é o **valor stand-alone sob o dono atual**, insuficiente.
 
-**Ressalva honesta de Koller (p748)** — "Na prática, nunca se consegue apontar o dono ideal de uma
+**Ressalva honesta de Koller (p748)**: "Na prática, nunca se consegue apontar o dono ideal de uma
 empresa, apenas o melhor entre os donos potenciais nas circunstâncias dadas." É teoricamente
 possível que alguma outra empresa gerasse fluxos ainda maiores que a General Mills. Mas o caso
 ilustra que **uma mudança de dono pode fazer uma diferença enorme no valor: 70% neste caso**.
 
 **Exemplos adicionais de reordenamento por best owner (p747-748)**: por muitos anos, negócios de
 farmacêuticos veterinários eram de empresas que também faziam farmacêuticos humanos; de **2009 a
-2019** uma reestruturação massiva transformou o setor de saúde animal — com economia, vendas e
+2019** uma reestruturação massiva transformou o setor de saúde animal: com economia, vendas e
 canais de distribuição diferentes, **cinco das maiores farmacêuticas (Bayer, J&J, Novartis, Pfizer,
 Sanofi) venderam ou fizeram spin-off** de seus negócios de saúde animal. A **Elanco**, divisão da
 Eli Lilly, **comprou seis empresas de saúde animal** nesse período e em **2019 foi ela mesma
@@ -1033,41 +1033,41 @@ spun-off** como empresa independente. No mesmo período, muitas farmacêuticas g
 Pfizer) venderam partes significativas de seus negócios de consumo.
 
 Benefício social (p748-749): a melhor propriedade também ajuda a economia ao **redirecionar
-recursos para seu uso de maior valor** — atividades significativas podem ser realizadas a custo
+recursos para seu uso de maior valor**: atividades significativas podem ser realizadas a custo
 muito mais baixo, liberando capital e recursos humanos para outras atividades.
 
-**Onde encaixa** — `segmentacao-de-compradores` (valor é por dono), `information-memorandum`
+**Onde encaixa**: `segmentacao-de-compradores` (valor é por dono), `information-memorandum`
 (estruturar o racional de valor por cluster de comprador), `negociacao-e-loi` (preço de reserva do
-vendedor = valor de continuar; ZOPA), `triangulacao-e-faixa` (a faixa objetiva não é a resposta
-final — há uma faixa por comprador).
+vendedor = valor de continuar; ZOPA), `triangulacao-e-faixa` (há uma faixa por comprador, e não
+uma única faixa objetiva).
 **Veredito: ADICIONAR-ALTA.** **Página: p747-749.**
 
-### 28.3 As CINCO fontes de best ownership (p749-753) — a taxonomia mais aditiva do capítulo
+### 28.3 As CINCO fontes de best ownership (p749-753): a taxonomia mais aditiva do capítulo
 
-**O que é** — Para identificar o melhor dono de um negócio, é preciso primeiro entender as fontes
+**O que é**: Para identificar o melhor dono de um negócio, é preciso primeiro entender as fontes
 de valor de que os donos potenciais podem se valer. Koller cataloga cinco (um dono pode combinar
 duas ou mais):
 
-**1. Vínculos únicos com outros negócios (p749)** — A forma mais direta de um dono adicionar valor
+**1. Vínculos únicos com outros negócios (p749)**: A forma mais direta de um dono adicionar valor
 é criar **vínculos entre negócios do seu portfólio, especialmente quando só a controladora
 consegue fazer tal vínculo**. Exemplo canônico: uma mineradora tem os direitos de desenvolver um
 campo de carvão em local remoto, longe de ferrovias ou infraestrutura. **Outra mineradora já opera
 uma mina de carvão a dez milhas de distância** e já construiu a infraestrutura necessária,
 incluindo a ferrovia. A segunda seria a melhor dona da nova mina porque **seu custo incremental de
-desenvolver a mina é muito mais baixo que o de qualquer outro** — e portanto ela **pode comprar a
+desenvolver a mina é muito mais baixo que o de qualquer outro**, e portanto ela **pode comprar a
 mina não desenvolvida a um preço mais alto que qualquer outra empresa do mercado e ainda obter
 ROIC atrativo**. Tais vínculos podem ocorrer em qualquer ponto da cadeia de valor: de P&D a
 manufatura, distribuição e vendas. Ex.: uma farmacêutica grande com força de vendas dedicada a
 oncologia pode ser a melhor dona de uma farmacêutica pequena com um novo medicamento oncológico
 promissor mas **sem força de vendas**.
-> **Uso direto**: este é o **teste operacional de "quem pode pagar mais"** — custo incremental mais
+> **Uso direto**: este é o **teste operacional de "quem pode pagar mais"**, custo incremental mais
 > baixo (ou receita incremental mais alta) por proximidade de ativo, rede, licença ou canal. Em
 > mid-market brasileiro isso é mapeável objetivamente: sobreposição/adjacência de malha logística,
 > de área de concessão ou licença ambiental, de base de clientes, de CD, de rota, de registro
 > regulatório (ANVISA, MAPA, licenças estaduais), de canal de distribuição. Combina exatamente com
 > o critério de "tipo certo de tamanho" do roll-up (Cap 31 §31.6a).
 
-**2. Competências distintivas (p750)** — O dono melhor pode ter competências funcionais ou
+**2. Competências distintivas (p750)**: O dono melhor pode ter competências funcionais ou
 gerenciais distintivas de que o novo negócio se beneficia. Podem residir em qualquer parte do
 sistema de negócio: desenvolvimento de produto, processos de manufatura, vendas e marketing.
 **Mas para fazer diferença, a competência tem de ser um driver importante de sucesso naquele
@@ -1085,7 +1085,7 @@ tornar uma empresa melhor dona.
 - **Danaher (p750-751)**: empresa diversificada com receita de **US$ 19 bi**, cujo sucesso vem do
   **Danaher Business System**. A Danaher **faz aquisições apenas onde acredita poder aplicar sua
   abordagem de gestão para melhorar substancialmente as margens**. Aplicando essa estratégia nos
-  **25 anos anteriores**, aumentou consistentemente as margens das empresas adquiridas —
+  **25 anos anteriores**, aumentou consistentemente as margens das empresas adquiridas:
   **Gilbarco Veeder-Root** (soluções de ponto de venda) e **Videojet Technologies** (equipamento e
   software de codificação e marcação) tiveram **margens melhoradas em mais de 700 basis points**
   após a aquisição. Conforme cresceu em tamanho e complexidade, a Danaher também começou a
@@ -1094,11 +1094,11 @@ tornar uma empresa melhor dona.
   que incluía Gilbarco Veeder-Root e **21 outros negócios** que a Danaher havia adquirido e
   melhorado; em **2018** anunciou o spin-off do negócio dental.
 > **Uso direto**: o **+700 bps de margem da Danaher** é o benchmark quantitativo de quanto um
-> comprador com sistema operacional distintivo consegue melhorar um alvo — número citável em
+> comprador com sistema operacional distintivo consegue melhorar um alvo, número citável em
 > `negociacao-e-loi`. E o teste "a competência tem de ser driver importante *neste* setor" é o
 > filtro que separa comprador que realmente paga prêmio de comprador que só tem discurso.
 
-**3. Melhor governança (p751)** — Independentemente de estarem ou não rodando a operação do dia a
+**3. Melhor governança (p751)**: Independentemente de estarem ou não rodando a operação do dia a
 dia, donos melhores podem adicionar valor pela **governança**, isto é, pela forma como eles (ou
 seus representantes) interagem com o time de gestão para criar valor máximo no longo prazo. Os
 melhores fundos de private equity não apenas recapitalizam empresas com dívida; **melhoram o
@@ -1107,10 +1107,10 @@ desempenho via melhor governança**.
 de private equity** (Kehoe & Heel). Acharam que em **quase dois terços das transações, a fonte
 primária de novo valor foi a melhoria do desempenho operacional da empresa relativamente aos
 peers, via interação frutífera entre donos e time de gestão**. **Alavancagem financeira e timing
-esperto dos investimentos — frequentemente citados como as fontes de sucesso mais importantes do
-PE — não foram tão importantes quanto a governança melhorada.**
+esperto dos investimentos (frequentemente citados como as fontes de sucesso mais importantes do
+PE) não foram tão importantes quanto a governança melhorada.**
 Como o PE governa diferente (p751): não têm tempo nem competência para rodar as investidas no dia a
-dia, mas os fundos de melhor desempenho governam **muito diferentemente** de empresas listadas — e
+dia, mas os fundos de melhor desempenho governam **muito diferentemente** de empresas listadas, e
 isso é fonte-chave de sua sobreperformance. Tipicamente: introduzem **cultura de desempenho mais
 forte**; fazem **mudanças rápidas de gestão** quando necessário; **encorajam gestores a abandonar
 vacas sagradas**; dão aos gestores **liberdade para focar em horizonte mais longo, digamos cinco
@@ -1119,42 +1119,42 @@ de private equity dedicam três vezes mais dias a seu papel** que os de empresas
 e **gastam a maior parte do tempo em estratégia e gestão de desempenho**, em vez de compliance e
 aversão a risco, onde os conselhos de listadas tipicamente focam (Acharya/Kehoe/Reyner).
 > **Uso direto e muito relevante ao mid-market familiar brasileiro**: (a) é a explicação econômica
-> honesta do que um fundo de PE traz — e serve para **preparar o vendedor familiar** para o que
+> honesta do que um fundo de PE traz, e serve para **preparar o vendedor familiar** para o que
 > vai mudar (cultura de desempenho, troca de gestores, fim das vacas sagradas, conselho ativo),
 > reduzindo ruptura na negociação e no pós-deal; (b) "2/3 do valor vem de melhoria operacional via
 > governança, não de alavancagem" é **argumento contra a objeção comum do vendedor de que "o
 > fundo só quer alavancar e vender"**; (c) é também critério de qualificação: um fundo cujo track
 > record é só alavancagem é comprador de prêmio menor que um com sistema operacional; (d) o
 > corolário para o pitch: **a empresa familiar com governança fraca tem, por definição, essa fonte
-> de valor disponível ao comprador** — e portanto suporta prêmio. Entra em
+> de valor disponível ao comprador**, e portanto suporta prêmio. Entra em
 > `segmentacao-de-compradores` e no diagnóstico de preparação.
 
-**4. Melhor insight e previsão (p751-752)** — Empresas que agem sobre seu insight de como um
+**4. Melhor insight e previsão (p751-752)**: Empresas que agem sobre seu insight de como um
 mercado e um setor vão evoluir, para expandir negócios existentes ou desenvolver novos, podem ser
-melhores donas porque capitalizam ideias inovadoras. Exemplos: **Alibaba/Alipay** — os líderes
+melhores donas porque capitalizam ideias inovadoras. Exemplos: **Alibaba/Alipay**: os líderes
 percebem que a **falta de confiança entre compradores e vendedores era barreira ao crescimento de
 marketplaces online na China**, e em **2004** (cinco anos após a fundação) lançaram o **Alipay**,
 um serviço de escrow (o comprador deposita o dinheiro com o Alipay; assim que as mercadorias são
 enviadas e aceitas, o Alipay libera os fundos ao vendedor); o Alipay serve não só os negócios do
 Alibaba mas **milhares de outros comerciantes**, e em **2011 foi spun-off** como empresa
-independente. **Amazon/AWS** — como maior empresa de e-commerce do mundo, a Amazon desenvolveu
+independente. **Amazon/AWS**: como maior empresa de e-commerce do mundo, a Amazon desenvolveu
 competências únicas em rodar sistemas de computação distribuída; em **2006** lançou oficialmente o
 AWS vendendo cloud a empresas, governos e indivíduos; em **2012** a receita era estimada em
 **US$ 1,8 bi** (a Amazon não divulgou o AWS como unidade separada até 2015); em **2018** o AWS
 gerou **US$ 25 bi de receita e US$ 7,3 bi de lucro operacional**.
 
-**5. Acesso distintivo a stakeholders críticos (p752-753)** — Acesso distintivo a talento, capital,
+**5. Acesso distintivo a stakeholders críticos (p752-753)**: Acesso distintivo a talento, capital,
 governo, fornecedores e clientes **beneficia primariamente empresas em alguns mercados asiáticos e
 emergentes**. Vários fatores complicam operar em emergentes: **pools relativamente pequenos de
 talento gerencial**, **mercados de capitais subdesenvolvidos** e **governos fortemente envolvidos
 no negócio** como clientes, fornecedores e reguladores. Nesses mercados, conglomerados
-diversificados de larga escala — **Tata e Reliance na Índia, Samsung e Hyundai na Coreia do Sul** —
+diversificados de larga escala (**Tata e Reliance na Índia, Samsung e Hyundai na Coreia do Sul**)
 podem ser melhores donos de muitos negócios porque são **empregadores mais atrativos** (podendo
 selecionar os melhores talentos); quanto a capital, muitos países emergentes ainda precisam
 construir infraestrutura, e tais projetos requerem **grandes montantes de capital que empresas
 menores não conseguem levantar**; empresas também frequentemente precisam de **aprovação
 governamental** para comprar terra e construir fábricas, além de garantias de infraestrutura e
-eletricidade suficientes — e grandes conglomerados tipicamente têm os recursos e as relações para
+eletricidade suficientes, e grandes conglomerados tipicamente têm os recursos e as relações para
 **navegar o labirinto de regulação governamental**.
 Em mercados desenvolvidos, acesso a talento e capital raramente é problema (nos EUA, empresas
 menores de alto crescimento são frequentemente **mais** atrativas a talento que as grandes; capital
@@ -1163,22 +1163,22 @@ governo raramente confere vantagem**, dados processos de compras governamentais 
 > **Relevância brasileira ALTA e específica**: o Brasil é mercado emergente, e essa fonte de best
 > ownership **se aplica aqui de forma que não se aplica nos EUA**. Traduzida para o mid-market
 > brasileiro sell-side, ela nomeia compradores que pagam prêmio por razões que o vendedor familiar
-> normalmente não enxerga: (a) **acesso a capital barato** — o comprador com rating, acesso a
+> normalmente não enxerga: (a) **acesso a capital barato**: o comprador com rating, acesso a
 > mercado de capitais, funding de banco de fomento ou balanço em moeda forte vale mais que o
 > alvo com custo de capital de empresa fechada (ver também Cap 4 sobre risco não diversificado);
-> (b) **acesso a talento** — grupo consolidado atrai o gestor que a empresa familiar não consegue
-> contratar; (c) **acesso a governo/regulador** — licenciamento ambiental, concessões, contratos
+> (b) **acesso a talento**: grupo consolidado atrai o gestor que a empresa familiar não consegue
+> contratar; (c) **acesso a governo/regulador**: licenciamento ambiental, concessões, contratos
 > públicos, agências setoriais, incentivos fiscais estaduais: isso é fonte real de melhor
 > propriedade no Brasil, especialmente em setores regulados (resíduos, saneamento, saúde, energia,
 > transporte). Deve virar critério explícito da `segmentacao-de-compradores` e argumento no IM.
 > Nota adicional (p761-762): pesquisa preliminar não publicada da McKinsey mostra que
 > **empresas mais diversificadas em mercados emergentes superam suas pares menos
-> diversificadas** — o oposto do observado em mercados desenvolvidos. Isso significa que o
+> diversificadas**, o oposto do observado em mercados desenvolvidos. Isso significa que o
 > **conglomerado diversificado brasileiro é comprador legítimo e potencialmente pagador de
 > prêmio**, e não deve ser descartado da long list pelo argumento de "falta de sinergia" válido
 > em mercado desenvolvido.
 
-**Onde encaixa** — Núcleo de `segmentacao-de-compradores`: as cinco fontes são as **cinco colunas
+**Onde encaixa**: Núcleo de `segmentacao-de-compradores`: as cinco fontes são as **cinco colunas
 da matriz de avaliação de comprador**. Também `information-memorandum` (o IM deve ser escrito para
 ativar cada fonte) e `negociacao-e-loi` (o prêmio suportável por comprador é a soma das fontes que
 ele consegue ativar).
@@ -1186,7 +1186,7 @@ ele consegue ativar).
 
 ### 28.4 O ciclo de vida do best owner (p753-755)
 
-**O que é** — **A definição de best owner não é estática**, e os melhores donos mudam ao longo do
+**O que é**: **A definição de best owner não é estática**, e os melhores donos mudam ao longo do
 tempo conforme as circunstâncias do negócio mudam. O melhor dono de um negócio pode, em momentos
 diferentes, ser: **uma empresa maior, um fundo de private equity, um governo, um fundo soberano,
 uma família, os clientes do negócio, seus funcionários, ou acionistas dispersos** quando o negócio
@@ -1204,11 +1204,11 @@ Além disso, os candidatos a best owner evoluem diferentemente em partes diferen
 > Este último parágrafo é a descrição literal do cliente-vendedor da boutique. Koller reconhece
 > explicitamente que a **preocupação com legado é uma característica estrutural** do controlador
 > familiar sul-americano, não uma idiossincrasia. Isso legitima tratar "legado, continuidade do
-> nome, do time e da comunidade" como **critério de decisão de primeira classe** ao lado do preço
-> — e o Cap 31 §31.10 mostra que compradores competem nessas dimensões, o que significa que elas
+> nome, do time e da comunidade" como **critério de decisão de primeira classe** ao lado do preço.
+> E o Cap 31 §31.10 mostra que compradores competem nessas dimensões, o que significa que elas
 > são **precificáveis**.
 
-**A sequência canônica (p753-755)** — Koller narra o ciclo completo, e cada etapa vem com a
+**A sequência canônica (p753-755)**: Koller narra o ciclo completo, e cada etapa vem com a
 justificativa econômica de por que o dono muda:
 1. **Fundadores** são quase sempre os primeiros melhores donos: energia empreendedora, paixão e
    comprometimento tangível são essenciais para tirar a empresa do chão.
@@ -1223,17 +1223,17 @@ justificativa econômica de por que o dono muda:
    conselho independente** (embora os fundadores mantenham influência importante se continuarem
    com participações substanciais).
 4. **Venda a uma empresa maior**: conforme o setor evolui, a empresa pode descobrir que **não
-   consegue competir com empresas maiores** — por exemplo, porque precisa de **capacidade de
+   consegue competir com empresas maiores**, por exemplo, porque precisa de **capacidade de
    distribuição muito além do que consegue construir sozinha em prazo razoável** para desafiar
    competidores globais. Outros fatores externos, como **mudanças regulatórias ou tecnológicas**,
    também podem criar necessidade de trocar de dono. Em resposta, a empresa pode se vender a uma
-   empresa maior que tem a capacidade necessária — tornando-se uma linha de produto ou negócio
+   empresa maior que tem a capacidade necessária, tornando-se uma linha de produto ou negócio
    dentro de uma divisão de uma corporação multinegócios, fundindo-se às funções de manufatura,
    vendas, distribuição e administrativas da divisão.
 5. **Venda a private equity**: conforme os mercados da divisão maturam, o dono corporativo pode
    decidir focar em outros negócios de crescimento mais rápido, e **vender a divisão a um fundo de
    private equity**. Agora, com a divisão isolada, o fundo consegue ver que ela **acumulou um
-   overhead central muito mais alto do que o necessário para um mercado de baixo crescimento** —
+   overhead central muito mais alto do que o necessário para um mercado de baixo crescimento**,
    e a resposta é **reestruturá-la para dar-lhe estrutura de custo mais enxuta**.
 6. **Venda a especialista em marcas de baixo crescimento**: concluída a reestruturação, o fundo
    vende a divisão a uma empresa grande **especializada em rodar marcas de crescimento lento**.
@@ -1246,8 +1246,8 @@ distribuição; o fundo de PE reestruturou quando o crescimento desacelerou; e a
 aplicou suas competências em gerenciar marcas de baixo crescimento. **Todas as trocas de dono
 faziam sentido em termos de criação de valor.**
 
-**Onde encaixa** — **Este é o esqueleto do pitch ao vendedor familiar**, e é o argumento mais
-elegante que existe para "por que agora": não é que o vendedor fez algo errado, é que **as
+**Onde encaixa**: **Este é o esqueleto do pitch ao vendedor familiar**, e é o argumento mais
+elegante que existe para "por que agora": **as
 circunstâncias mudaram e outro dono passou a ser o melhor**. Sugere **skill nova:
 `tese-de-venda-e-best-owner` no plugin de M&A** (ou uma seção obrigatória em
 `convencoes-de-projeto` / `information-memorandum`) que responda: (i) por que o dono atual foi o
@@ -1258,7 +1258,7 @@ fontes; (iv) o que o vendedor perde ao esperar. Também `go-to-market` (timing: 
 
 ### 28.5 Gestão dinâmica de portfólio e a evidência sobre desinvestimento (p755-758)
 
-**O que é** — Aplicando a sequência de best owner, executivos devem continuamente identificar e
+**O que é**: Aplicando a sequência de best owner, executivos devem continuamente identificar e
 desenvolver ou adquirir empresas de que poderiam ser os melhores donos, **e desinvestir negócios de
 que eram os melhores donos mas para os quais agora têm menos a contribuir que outro dono
 potencial**. Como o melhor dono muda com o tempo, é preciso um **processo estruturado e regular de
@@ -1270,15 +1270,15 @@ donos do negócio**. E a qualquer momento na história de um negócio, um grupo 
 melhor equipado para gerenciá-lo que outro. Nesses momentos, **aquisições e desinvestimentos são
 frequentemente a melhor ou a única forma de alocar recursos sensatamente**.
 
-**Evidência: portfólio ativo bate portfólio passivo (p755)** — Estudo McKinsey de **200 grandes
+**Evidência: portfólio ativo bate portfólio passivo (p755)**: Estudo McKinsey de **200 grandes
 empresas americanas ao longo de dez anos** (Brandimarte/Fallon/McNish) mostrou que empresas com
-**abordagem passiva de portfólio** — aquelas que **não vendiam negócios, ou só vendiam negócios
-ruins sob pressão** — **subperformaram** empresas com abordagem ativa. **Os melhores desempenhos
+**abordagem passiva de portfólio** (aquelas que **não vendiam negócios, ou só vendiam negócios
+ruins sob pressão**) **subperformaram** empresas com abordagem ativa. **Os melhores desempenhos
 desinvestiam e adquiriam sistematicamente.** O processo é natural e nunca termina: uma unidade
 desinvestida pode muito bem buscar novas separações mais tarde em sua vida, especialmente em
 setores dinâmicos em rápido crescimento e mudança tecnológica.
 
-**Caso General Dynamics (p755-756)** — No início dos anos 1990, a General Dynamics enfrentava
+**Caso General Dynamics (p755-756)**: No início dos anos 1990, a General Dynamics enfrentava
 ambiente setorial desfavorável: previa-se declínio significativo dos gastos de defesa americanos, o
 que prejudicaria a empresa como fornecedora de sistemas de armas. Quando o CEO **William A. Anders**
 assumiu em **1991**, iniciou uma série de desinvestimentos. **A receita foi cortada pela metade em
@@ -1291,7 +1291,7 @@ setor.
 > e o mercado recompensa. Muito útil quando o vendedor familiar resiste a vender uma unidade ou a
 > empresa por associar tamanho a sucesso.
 
-**A tela de aquisição pelo prisma de best owner é DIFERENTE da tela tradicional (p756)** — Item
+**A tela de aquisição pelo prisma de best owner é DIFERENTE da tela tradicional (p756)**: Item
 extremamente aditivo: *"Para aquisições, aplicar o princípio do best owner frequentemente leva
 compradores potenciais a alvos muito diferentes daqueles produzidos por abordagens tradicionais de
 triagem. As abordagens tradicionais frequentemente focam em achar alvos potenciais que **performem
@@ -1303,15 +1303,15 @@ melhorar desempenho. Focar atenção em **oportunidades tangíveis de reduzir cu
 **identificar clientes comuns** pode ser mais recompensador no longo prazo que investigar um alvo
 pela razão vaga de que ele é de alguma forma relacionado à sua empresa."*
 > **Uso direto e forte**: (a) confirma, de outro ângulo, a §31.5 arquétipo 1 e o §31.10 tema de
-> M&A da varejista ("não lucrativa mas top-3"): **um alvo com desempenho financeiro fraco não é
-> um alvo pior — para o comprador certo é o alvo melhor**. Isso reenquadra completamente como
+> M&A da varejista ("não lucrativa mas top-3"): **um alvo com desempenho financeiro fraco é,
+> para o comprador certo, o alvo melhor**. Isso reenquadra completamente como
 > apresentar uma empresa familiar com margens baixas: não como problema a esconder, mas como
 > **potencial de melhoria a quantificar**; (b) "identificar clientes comuns" e "oportunidades
 > tangíveis de reduzir custos" são os **dois critérios objetivos** que devem substituir
 > "adjacência setorial" na construção da long list de `segmentacao-de-compradores`, o que também
 > corrobora o achado do Cap 31 de que **código SIC não prediz criação de valor**.
 
-**A evidência sobre reação do mercado a desinvestimentos (p757)** — Executivos frequentemente se
+**A evidência sobre reação do mercado a desinvestimentos (p757)**: Executivos frequentemente se
 preocupam que desinvestimentos pareçam admissão de fracasso, tornem a empresa menor e reduzam seu
 valor de mercado. **A pesquisa mostra o contrário**:
 - **O mercado reage consistentemente de forma POSITIVA a desinvestimentos, tanto vendas quanto
@@ -1321,19 +1321,19 @@ valor de mercado. **A pesquisa mostra o contrário**:
 - **Portanto, desinvestimentos planejados são um sinal de criação de valor bem-sucedida.**
 > Números diretamente citáveis no pitch ao vendedor e no IM. O "+1/3 de margem em 3 anos após
 > spin-off" é a evidência quantitativa de que **sair do guarda-chuva de um dono que não é o melhor
-> dono libera desempenho** — argumento aplicável a carve-out de unidade familiar e a venda de
+> dono libera desempenho**, argumento aplicável a carve-out de unidade familiar e a venda de
 > empresa cujo controlador está desengajado ou descapitalizado.
 
-**Encolher de propósito (p757-758)** — P&G (2014): descontinuar/desinvestir 90-100 marcas pequenas,
-vender os negócios de ração e fazer spin-off da Duracell — "esse tipo de encolhimento pensado
+**Encolher de propósito (p757-758)**: P&G (2014): descontinuar/desinvestir 90-100 marcas pequenas,
+vender os negócios de ração e fazer spin-off da Duracell: "esse tipo de encolhimento pensado
 permite que negócios disparatados foquem em suas necessidades únicas e situações competitivas".
-Kraft (2012): dividida em **Mondelez International** (snacks global — biscoitos, crackers,
-chocolate) e **Kraft Foods Group** (produtos de mercearia majoritariamente norte-americanos —
+Kraft (2012): dividida em **Mondelez International** (snacks global: biscoitos, crackers,
+chocolate) e **Kraft Foods Group** (produtos de mercearia majoritariamente norte-americanos:
 queijo, carnes, molhos, café); ambas em alimentos de marca, mas a gestão acreditava que os desafios
 e oportunidades eram **diferentes o suficiente para serem melhor gerenciados como empresas
 separadas**. (Nota 9: em 2015 a Kraft se fundiu com a Heinz.)
 Outros casos de gestão dinâmica (p757): três das quatro maiores refinarias americanas por
-capacidade nasceram de spin-off — **Marathon Petroleum** (a maior, spun-off da Marathon Oil em
+capacidade nasceram de spin-off: **Marathon Petroleum** (a maior, spun-off da Marathon Oil em
 2011), **Phillips 66** (a quarta, spin-off da ConocoPhillips em 2012), **Valero Energy** (a
 segunda, originalmente spun-off da Coastal States Gas em 1980, cresceu por aquisições em 2000,
 2001, 2005 e 2011, e em 2013 fez spin-off do varejo de gasolina para se tornar refinaria pura; em
@@ -1348,13 +1348,13 @@ sofisticada, processo de aprovação regulatória e relações com governo** em 
 estatais que compram medicamentos. Por isso **quase todas as antigas empresas químico-farmacêuticas
 combinadas se separaram** (Zeneca separada da Imperial Chemical Industries em 1993, depois fundida
 formando AstraZeneca; Aventis separada da Hoechst em 1999, depois comprada pela Sanofi Synthelabo).
-> **Uso**: o mecanismo aqui é o **teste de divergência de fatores-chave de sucesso** — dois
+> **Uso**: o mecanismo aqui é o **teste de divergência de fatores-chave de sucesso**: dois
 > negócios sob o mesmo dono deixam de fazer sentido quando os drivers de sucesso divergem. É o
 > teste analítico que justifica um **carve-out**, situação comum no mid-market brasileiro (grupo
 > familiar com 3-4 negócios sem relação, vendendo um). Deve entrar em `convencoes-de-projeto` /
 > `estudo-setorial` como diagnóstico de escopo do que se vende.
 
-**Onde encaixa** — `information-memorandum` e a tese de venda (evidência de reação positiva a
+**Onde encaixa**: `information-memorandum` e a tese de venda (evidência de reação positiva a
 desinvestimentos, +1/3 de margem pós-spin-off, portfólio ativo > passivo, General Dynamics);
 `segmentacao-de-compradores` (a tela de best owner substitui a tela de adjacência setorial);
 `estudo-setorial` (teste de divergência de fatores-chave de sucesso para escopo de carve-out).
@@ -1362,11 +1362,11 @@ desinvestimentos, +1/3 de margem pós-spin-off, portfólio ativo > passivo, Gene
 
 ### 28.6 O mito da diversificação (p758-762)
 
-**O que é** — Pergunta perene: empresas devem manter portfólio diversificado de negócios? A ideia
+**O que é**: Pergunta perene: empresas devem manter portfólio diversificado de negócios? A ideia
 pareceu desacreditada nos anos 1970, mas executivos ainda dizem coisas como *"é a terceira perna do
 banquinho que dá estabilidade à empresa"*. Perspectiva de Koller: **diversificação não é
 intrinsecamente boa nem ruim; depende de a controladora adicionar mais valor aos negócios que
-possui do que qualquer outro dono potencial poderia** — isto é, de ela ser a melhor dona nas
+possui do que qualquer outro dono potencial poderia**, isto é, de ela ser a melhor dona nas
 circunstâncias.
 
 **Refutação de "suavizar fluxo de caixa" (p758-759)**:
@@ -1380,7 +1380,7 @@ circunstâncias.
   substancialmente diferente do valor de mercado da empresa consolidada".
 - **Argumento de mais dívida/benefício fiscal**: pode fazer sentido em teoria, mas "nunca
   encontramos empresas diversificadas que sistematicamente usassem mais dívida que seus pares".
-- **Argumento mais sofisticado — aproveitar ciclos diferentes** (usar caixa de negócios no topo do
+- **Argumento mais sofisticado: aproveitar ciclos diferentes** (usar caixa de negócios no topo do
   ciclo para investir em negócios no fundo, quando competidores não diversificados não podem):
   "não encontramos empresas diversificadas que efetivamente se comportem assim. Na verdade,
   tipicamente encontramos o oposto: **os executivos seniores de empresas diversificadas não
@@ -1390,24 +1390,24 @@ circunstâncias.
 
 **Benefícios elusivos, custos reais (p759-760)**:
 - **Investidores conseguem diversificar suas carteiras a custo mais baixo** do que empresas
-  conseguem diversificar seus portfólios de negócios, porque só precisam comprar e vender ações —
+  conseguem diversificar seus portfólios de negócios, porque só precisam comprar e vender ações,
   algo que fazem facilmente e relativamente barato muitas vezes por ano. Em contraste, **mudar
   substancialmente a forma de um portfólio de negócios reais envolve custos de transação e
   disrupção consideráveis, e tipicamente leva muitos anos**.
 - **As unidades de negócio de empresas diversificadas frequentemente performam pior que as de
   pares mais focados**, em parte por **complexidade e burocracia adicionais**.
-- Nos EUA, ao final de **2010** havia apenas **22 conglomerados verdadeiros** (definição da nota 10
-  — Cyriac/Koller/Thomsen: empresa com três ou mais unidades de negócio que **não têm clientes,
+- Nos EUA, ao final de **2010** havia apenas **22 conglomerados verdadeiros** (definição da nota 10,
+  Cyriac/Koller/Thomsen: empresa com três ou mais unidades de negócio que **não têm clientes,
   sistemas de distribuição, tecnologias ou instalações de manufatura em comum**). Desde então,
   cinco anunciaram que se dividiriam ou desinvestiriam negócios importantes.
 
-**A descoberta sobre a DISTRIBUIÇÃO de TSR (Exhibit 28.1, p760)** — Item analiticamente elegante:
+**A descoberta sobre a DISTRIBUIÇÃO de TSR (Exhibit 28.1, p760)**: Item analiticamente elegante:
 *"O insight marcante não foi que o TSR médio era mais baixo para conglomerados, mas que
 **o topo da distribuição foi decapitado**."*
 - **Nenhum conglomerado do estudo excedeu TSR acima de 20%**, enquanto **o TSR de empresas mais
   focadas passou de 30%**.
 - Por quê: os ganhos de upside são limitados porque **é improvável que todos os negócios diversos
-  sobreperformem ao mesmo tempo** — os retornos das unidades que sobreperformam são **anulados
+  sobreperformem ao mesmo tempo**: os retornos das unidades que sobreperformam são **anulados
   pelas que subperformam**. Além disso, conglomerados são usualmente compostos de **negócios
   relativamente maduros**, muito além do ponto em que gerariam retornos altos inesperados.
 - **Mas o downside não é limitado**, porque o desempenho de negócios mais maduros **pode cair muito
@@ -1421,26 +1421,26 @@ circunstâncias.
 > **Uso sell-side ALTO em contexto brasileiro**: o grupo familiar brasileiro típico com 3-4
 > negócios sem relação (indústria + fazenda + imobiliária + participação em banco) **é exatamente
 > o conglomerado da definição da nota 10**. Este bloco é o argumento analítico de por que separar
-> os negócios cria valor — e, notavelmente, o argumento não é "a média é pior", é
-> **"você renunciou ao upside"**. Isso é muito mais persuasivo com um controlador familiar do que
-> um argumento de média, porque nomeia o custo de oportunidade concreto: nenhuma das suas
+> os negócios cria valor, e o argumento é
+> **"você renunciou ao upside"**, não "a média é pior". Isso é muito mais persuasivo com um
+> controlador familiar do que um argumento de média, porque nomeia o custo de oportunidade concreto: nenhuma das suas
 > unidades pode jamais entregar o retorno que entregaria isolada, e uma unidade ruim pode
 > arrastar tudo. Vai em `information-memorandum` e no pitch/tese de venda.
 
-**O que de fato importa — as três práticas de conglomerados de alto desempenho (p761)**:
+**O que de fato importa, as três práticas de conglomerados de alto desempenho (p761)**:
 1. **Rebalanceiam continuamente seus portfólios comprando empresas cujo desempenho conseguem
    melhorar** (remissão explícita ao Cap 31).
 2. **Gerenciam agressivamente a alocação de capital entre unidades no nível corporativo**: todo o
    caixa que excede as necessidades operacionais é **transferido à controladora**, que decide como
    alocá-lo entre oportunidades de negócio ou investimento atuais e novas, **com base no potencial
    de crescimento e nos retornos sobre capital investido**. Exemplo: as unidades da **Berkshire
-   Hathaway** são racionalizadas do ponto de vista de capital — capital excedente é enviado para
+   Hathaway** são racionalizadas do ponto de vista de capital: capital excedente é enviado para
    onde é mais produtivo, e **todos os investimentos pagam pelo capital que usam**.
 3. **Operam de forma muito parecida com os melhores fundos de private equity**: com um **centro
    corporativo enxuto** que restringe seu envolvimento na gestão das unidades a **selecionar
    líderes, alocar capital, avaliar estratégia, definir metas de desempenho e monitorar
    desempenho**. E igualmente importante: **não criam processos corporativos extensos nem grandes
-   centros de serviços compartilhados** — "você não vai encontrar programas corporativos de
+   centros de serviços compartilhados**: "você não vai encontrar programas corporativos de
    redução de capital de giro, porque isso pode não ser prioridade para todas as partes da
    empresa". Na **Illinois Tool Works**, as unidades são primariamente autossuficientes, com ampla
    autoridade para se autogerir desde que os gestores adiram à **regra 80/20** da empresa (80% da
@@ -1448,19 +1448,19 @@ circunstâncias.
    largamente de impostos, auditoria, relações com investidores e algumas funções centralizadas de
    RH.
 
-**Conglomerados em mercados emergentes (p761-762)** — A situação econômica em emergentes é distinta
+**Conglomerados em mercados emergentes (p761-762)**: A situação econômica em emergentes é distinta
 o suficiente para Koller ser cauteloso ao aplicar insights de empresas do mundo desenvolvido.
 **Pesquisa preliminar não publicada da McKinsey mostra que empresas mais diversificadas em
-mercados emergentes SUPERAM suas pares menos diversificadas — o que não é o caso em mercados
+mercados emergentes SUPERAM suas pares menos diversificadas, o que não é o caso em mercados
 desenvolvidos.** Espera-se que a estrutura de conglomerado desapareça eventualmente, mas o ritmo
 varia por país e setor. Contornos da mudança: negócios de infraestrutura e outros intensivos em
 capital provavelmente continuarão parte de grandes conglomerados enquanto o acesso a capital e
 conexões for importante; empresas que dependem menos de acesso a capital e conexões tendem a focar
-em oportunidades diferentes das dos grandes conglomerados — incluindo as orientadas a exportação,
+em oportunidades diferentes das dos grandes conglomerados, incluindo as orientadas a exportação,
 como serviços de TI e farmacêuticos. A ascensão de serviços de TI e farmacêuticos na Índia e de
 empresas de internet na China mostra que **a vantagem dos grandes conglomerados em acesso a talento
 gerencial já caiu**; conforme os emergentes se abrem a mais investidores estrangeiros, sua vantagem
-em acesso a capital também pode declinar — **deixando o acesso a governo como sua última força
+em acesso a capital também pode declinar, **deixando o acesso a governo como sua última força
 remanescente**, restringindo ainda mais suas oportunidades a setores onde essa influência
 permanece importante. Embora possa levar décadas, tamanho e diversificação de conglomerados
 **eventualmente se tornarão impedimentos em vez de vantagens**.
@@ -1469,27 +1469,27 @@ permanece importante. Embora possa levar décadas, tamanho e diversificação de
 > descartar conglomerado brasileiro da long list por "falta de encaixe estratégico";
 > (b) ao argumentar com um vendedor familiar diversificado que ele deve vender uma unidade, o
 > argumento do "topo da distribuição decapitado" é válido, mas o argumento de "diversificação
-> destrói valor por si" **não é** — no Brasil, acesso a capital e a governo ainda é fonte real de
+> destrói valor por si" **não é**: no Brasil, acesso a capital e a governo ainda é fonte real de
 > best ownership. Ser honesto sobre isso aumenta a credibilidade do assessor.
 
-**Onde encaixa** — `information-memorandum` e tese de venda (upside decapitado; custos reais da
+**Onde encaixa**: `information-memorandum` e tese de venda (upside decapitado; custos reais da
 diversificação; investidor diversifica mais barato que a empresa); `estudo-setorial` (definição
 operacional de conglomerado; ressalva emergente). O bloco sobre "as três práticas" é sobre gestão
 corporativa e é **IRRELEVANTE-MIDMARKET** para o uso sell-side, exceto o item 1 (que já está no
 Cap 31) e a alocação de capital baseada em ROIC.
-**Veredito: ADICIONAR-MÉDIA** (mito da diversificação e distribuição de TSR — útil, mas
+**Veredito: ADICIONAR-MÉDIA** (mito da diversificação e distribuição de TSR; útil, mas
 secundário e requer cuidado no contexto emergente); **IRRELEVANTE-MIDMARKET** (as três práticas de
 conglomerados de alto desempenho; conglomerados emergentes como tópico de gestão).
 **Página: p758-762.**
 
-### 28.7 Construindo o portfólio — o checklist de avaliação de unidade e as quatro cenários de valor (p762-769)
+### 28.7 Construindo o portfólio: o checklist de avaliação de unidade e os quatro cenários de valor (p762-769)
 
-**O que é** — Abordagem sistemática de 30 anos de prática. Dois passos: avaliação das unidades e
+**O que é**: Abordagem sistemática de 30 anos de prática. Dois passos: avaliação das unidades e
 análise de cenários.
 
-**Passo 1 — Perguntas de avaliação de cada unidade (Exhibit 28.2, p762-763)**
+**Passo 1: perguntas de avaliação de cada unidade (Exhibit 28.2, p762-763)**
 Perguntas primárias:
-- A unidade está num **mercado atrativo** — especificamente, um mercado com **ROIC e oportunidades
+- A unidade está num **mercado atrativo**, especificamente, um mercado com **ROIC e oportunidades
   de crescimento atrativos**?
 - A unidade tem **vantagem competitiva sobre os pares**, evidenciada por crescimento ou ROIC mais
   altos? **Quais são as fontes da vantagem? São sustentáveis?**
@@ -1505,11 +1505,11 @@ Fatores secundários:
 - A unidade **consome muito mais tempo de gestão** que as outras, relativamente a seu potencial de
   criação de valor?
 
-**Passo 2 — Os QUATRO cenários de valor por unidade (p764)** — Item muito aditivo:
+**Passo 2: os QUATRO cenários de valor por unidade (p764)**. Item muito aditivo:
 1. **Valor DCF de baseline ou "momentum"**: cresce em linha com seus mercados de produto
    subjacentes, **sem qualquer mudança de desempenho relativo aos pares** (pode ser complementado
    com um valuation por múltiplos relativo aos pares, para ver se há um gap a fechar).
-2. **Valor DCF baseado em melhorias operacionais potenciais ou planejadas** — por exemplo,
+2. **Valor DCF baseado em melhorias operacionais potenciais ou planejadas**: por exemplo,
    aumentando margens, acelerando o crescimento de receita do core e melhorando a eficiência de
    capital.
 3. **Valor para donos alternativos, caso a unidade fosse desinvestida.**
@@ -1517,14 +1517,14 @@ Fatores secundários:
 > **Uso direto e importante**: esta é **exatamente a arquitetura de cenários que uma
 > `triangulacao-e-faixa` sell-side deveria produzir**, e é diferente do que ela provavelmente
 > produz hoje. O cenário 1 (momentum, sem melhoria relativa) é o **piso honesto**; o cenário 2 é o
-> **valor sob gestão melhorada** (que é o que o comprador vai capturar — logo, o que sustenta o
+> **valor sob gestão melhorada** (que é o que o comprador vai capturar, logo, o que sustenta o
 > prêmio); o cenário 3 é o **valor para dono alternativo** (o teto por comprador, cf. Cap 31
 > §31.1); o cenário 4 é o **upside de crescimento** (a moeda de earn-out). Recomendação: adotar
 > estes quatro cenários como padrão em `projecao-e-cenarios` e `triangulacao-e-faixa`, no lugar de
-> um "base/otimista/pessimista" genérico — porque estes quatro cenários **mapeiam para partes
+> um "base/otimista/pessimista" genérico, porque estes quatro cenários **mapeiam para partes
 > diferentes da negociação**.
 
-**O caso Hexa Corporation (p764-769)** — Empresa de **US$ 10,65 bi** com seis negócios. Bom modelo
+**O caso Hexa Corporation (p764-769)**: Empresa de **US$ 10,65 bi** com seis negócios. Bom modelo
 de raciocínio de "vender vs. manter", com números:
 - **Consumerco** (bens de consumo embalados de marca): **ROIC alto**, mas crescimento apenas
   acompanhando a inflação; por tamanho e ROIC alto, respondia por **~72% do valor total da Hexa**.
@@ -1546,29 +1546,29 @@ emprestado para pagar dividendos**.
 > sustenta tanto o argumento de venda quanto o de escopo (vender qual unidade).
 
 Diagnóstico por unidade e valor destravado:
-- **Consumerco (manter e melhorar; +≥37% de valor)** — Apesar de marcas fortes e liderança de share
+- **Consumerco (manter e melhorar; +≥37% de valor)**: Apesar de marcas fortes e liderança de share
   na maioria das linhas, havia espaço para aumentar receita significativamente e ganhar margens
   ainda maiores: (i) a Consumerco vinha **cortando P&D e publicidade** para gerar caixa para os
-  esforços de diversificação da Hexa e amortecer o desempenho ruim de outras partes do portfólio —
+  esforços de diversificação da Hexa e amortecer o desempenho ruim de outras partes do portfólio;
   aumentar esses investimentos levaria a volumes mais altos nos produtos existentes e encorajaria
   a introdução de produtos adicionais de margem alta; (ii) apesar da posição de liderança,
-  **seus preços eram mais baixos que os de marcas menos populares** — o valor criado por aumentos
+  **seus preços eram mais baixos que os de marcas menos populares**, e o valor criado por aumentos
   de preço mais que compensaria qualquer perda de volume; (iii) **sua força de vendas era menos da
-  metade tão produtiva** quanto as de outras empresas vendendo pelos mesmos canais — a
+  metade tão produtiva** quanto as de outras empresas vendendo pelos mesmos canais, e a
   produtividade poderia subir para perto do nível dos pares; (iv) havia espaço para cortar custos,
-  particularmente em **compras e gestão de estoques** — o custo das vendas poderia ser reduzido
+  particularmente em **compras e gestão de estoques**, e o custo das vendas poderia ser reduzido
   facilmente em **um ponto percentual**. Somando: **o valor da Consumerco poderia aumentar em ao
   menos 37%**.
-- **Foodco (vender)** — Claramente candidata a desinvestimento: **ROIC menor que o custo de
+- **Foodco (vender)**: Claramente candidata a desinvestimento: **ROIC menor que o custo de
   capital, então seu crescimento estava destruindo valor**. O setor como um todo era extremamente
-  competitivo, embora alguns grandes players ganhassem retornos respeitáveis — mas até os retornos
+  competitivo, embora alguns grandes players ganhassem retornos respeitáveis, mas até os retornos
   deles começavam a declinar. **A marca Consumerco, usada pela Foodco, tinha pouco valor** na
   construção do negócio, e a Foodco seria **incapaz de desenvolver economias de escala
   significativas**, ao menos no curto prazo. Pior, tinha **apetite voraz por capital** para
   construir instalações, mas não gerava retorno sobre novo investimento suficiente para cobrir o
   custo de capital. Por fim, era candidata **particularmente forte** porque **um novo dono, um
   competidor maior e em crescimento, poderia melhorar dramaticamente seu desempenho**.
-- **Woodco (melhorar primeiro, vender depois; +33%)** — Também podia melhorar dramaticamente sob
+- **Woodco (melhorar primeiro, vender depois; +33%)**: Também podia melhorar dramaticamente sob
   propriedade da Hexa, se atingisse o nível de desempenho das melhores empresas de móveis: isso
   exigiria **focar menos em crescimento e mais em margens mais altas**, construir **melhores
   sistemas de informação gerencial e de controle**, e **manter-se em seus produtos familiares de
@@ -1580,29 +1580,29 @@ Diagnóstico por unidade e valor destravado:
   um preço muito mais alto em 12 a 18 meses**, e o valor da Woodco poderia aumentar **33%** como
   resultado.
   > **Item de altíssimo valor prático para a boutique**: é a articulação canônica de **"quando NÃO
-  > vender agora"** — e portanto de quando recomendar um projeto de preparação de 12-18 meses em
+  > vender agora"**, e portanto de quando recomendar um projeto de preparação de 12-18 meses em
   > vez de ir a mercado. O critério é específico: **não venda no meio de uma integração ou
   > transformação incompleta, porque o comprador desconta o risco de o negócio desmoronar.**
   > Isso deve ser um teste explícito em `convencoes-de-projeto` (diagnóstico de prontidão para
   > mercado) e em `go-to-market` (timing).
-- **Newsco e Propco (vender)** — ambas **subescala** e **incapazes de atrair os melhores talentos**
+- **Newsco e Propco (vender)**: ambas **subescala** e **incapazes de atrair os melhores talentos**
   como parte da Hexa; além disso, **existiam compradores prontos para ambas**, então
   desinvestimento era a escolha clara.
-- **Finco (liquidar)** — O setor de crédito ao consumo se tornou tão competitivo que **o spread
+- **Finco (liquidar)**: O setor de crédito ao consumo se tornou tão competitivo que **o spread
   entre custos de captação e as taxas que a Finco ganhava em novos empréstimos não cobria seus
   custos operacionais**. Descobriu-se que **a carteira de empréstimos existente poderia ser
-  vendida por mais do que o negócio inteiro valia** — em efeito, **cada ano de novos negócios
+  vendida por mais do que o negócio inteiro valia**: em efeito, **cada ano de novos negócios
   estava dissipando parte do valor inerente à carteira existente**. Recomendação: **liquidar a
   carteira e fechar a Finco**.
   > Mecanismo transportável: quando o **valor de liquidação dos ativos excede o valor do negócio em
   > continuidade**, a nova originação está destruindo valor. Teste útil em ativos brasileiros
-  > intensivos em ativos (imóveis, frota, terra, carteira de crédito) — e frequentemente é o que
+  > intensivos em ativos (imóveis, frota, terra, carteira de crédito), e frequentemente é o que
   > define o piso da faixa de valor.
-- **Overhead corporativo (p768)** — A equipe achou que o staff corporativo da Hexa havia crescido
+- **Overhead corporativo (p768)**: A equipe achou que o staff corporativo da Hexa havia crescido
   com a complexidade do portfólio ao ponto de **as unidades terem sido obrigadas a contratar staff
   apenas para interagir com o staff corporativo**. Simplificando o portfólio, a Hexa poderia
   **cortar custos corporativos em 50%**.
-- **Crescimento (p768)** — Do lado da receita, a Hexa tinha feito pouco para aproveitar as marcas
+- **Crescimento (p768)**: Do lado da receita, a Hexa tinha feito pouco para aproveitar as marcas
   fortes da Consumerco para incubar novos negócios. Análise rápida mostrou que, se conseguisse
   achar novas oportunidades de crescimento gerando **US$ 1,5 bi a US$ 3 bi em vendas**, poderia
   **aumentar o valor de mercado da Consumerco em US$ 2,4 bi ou mais**.
@@ -1610,7 +1610,7 @@ Diagnóstico por unidade e valor destravado:
   em 48% sem as iniciativas extras de crescimento, e em até 78% com iniciativas de crescimento
   bem-sucedidas** (embora estas pudessem ser difíceis de realizar).
 
-**Síntese do capítulo (p769)** — Para construir um portfólio de negócios criadores de valor, os
+**Síntese do capítulo (p769)**: Para construir um portfólio de negócios criadores de valor, os
 gestores devem colocar **a questão da melhor propriedade em primeiro plano** em qualquer análise da
 linha de negócios atual. **Se outra empresa seria uma melhor dona de um negócio, então esse negócio
 é candidato a desinvestimento. Inversamente, se você identifica negócios dos quais sua empresa
@@ -1618,13 +1618,13 @@ poderia criar mais valor que seus donos atuais, esses negócios são alvos aprop
 O dono que se qualifica como melhor pode mudar ao longo do ciclo de vida do negócio e pode variar
 com a geografia.
 
-**Onde encaixa** — Os quatro cenários de valor: `projecao-e-cenarios` e `triangulacao-e-faixa`
+**Onde encaixa**: Os quatro cenários de valor: `projecao-e-cenarios` e `triangulacao-e-faixa`
 (**ADICIONAR-ALTA**). O checklist de avaliação de unidade: `convencoes-de-projeto` (diagnóstico
-inicial de escopo) e `estudo-setorial` — **ADICIONAR-MÉDIA**, é essencialmente uma versão
+inicial de escopo) e `estudo-setorial`: **ADICIONAR-MÉDIA**. É essencialmente uma versão
 condensada do que o valuation já faz, mas o item "por que a controladora é melhor dona?" é novo e
 valioso. O critério "não vender no meio de uma transformação incompleta": `go-to-market` e
-`convencoes-de-projeto` — **ADICIONAR-ALTA**. O teste de valor de liquidação > valor em
-continuidade: `triangulacao-e-faixa` — **ADICIONAR-MÉDIA**. A narrativa Hexa em si:
+`convencoes-de-projeto`, **ADICIONAR-ALTA**. O teste de valor de liquidação > valor em
+continuidade: `triangulacao-e-faixa`, **ADICIONAR-MÉDIA**. A narrativa Hexa em si:
 **ADICIONAR-MÉDIA** como material de pitch (padrão "o negócio bom subsidia o ruim").
 **Página: p762-769.**
 
@@ -1653,7 +1653,7 @@ continuidade: `triangulacao-e-faixa` — **ADICIONAR-MÉDIA**. A narrativa Hexa 
 | Ressalva: em mercado emergente, diversificadas SUPERAM as focadas | `segmentacao-de-compradores` (não descartar conglomerado) | ADICIONAR-MÉDIA |
 | Checklist de avaliação de unidade de negócio | `convencoes-de-projeto` | ADICIONAR-MÉDIA |
 | Cavalo vs. jóquei (vantagem competitiva > time de gestão) | `diagnostico-de-roic`, `estudo-setorial` | ADICIONAR-MÉDIA |
-| As três práticas de conglomerados de alto desempenho (alocação central de capital, centro enxuto) | — | IRRELEVANTE-MIDMARKET |
-| Conglomerados em emergentes como tópico de gestão corporativa | — | IRRELEVANTE-MIDMARKET |
+| As três práticas de conglomerados de alto desempenho (alocação central de capital, centro enxuto) | - | IRRELEVANTE-MIDMARKET |
+| Conglomerados em emergentes como tópico de gestão corporativa | - | IRRELEVANTE-MIDMARKET |
 
 ---

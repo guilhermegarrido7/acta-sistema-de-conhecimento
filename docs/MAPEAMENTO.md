@@ -225,6 +225,15 @@ Nesta ordem, porque cada um tem projeto real de onde extrair:
     `acta-auditoria-compras`, com quem ele divide a due diligence de fornecedor. Seis skills, com o
     programa de teste completo e o formato da matriz de achados em `references/`.
 
+20. ✅ `acta-programa-de-integridade`, **por matéria-prima real**: três casos executados de due
+    diligence de terceiro, com o dossiê completo de evidência. O material mostrou que são **dois
+    gêneros de trabalho**, e não um: homologação de fornecedor novo, e investigação de vínculo entre
+    fornecedor e pessoa da contratante. O segundo tem papel de trabalho no padrão de auditoria e
+    produziu o teste de maior retorno da skill, o padrão de interposta pessoa (sócio que sai do
+    quadro logo depois de o cônjuge entrar, tendo sido sócio do fornecedor enquanto ocupava cargo na
+    contratante). As outras cinco skills se apoiam na lei anticorrupção e no decreto que a
+    regulamenta, que enumeram os parâmetros do programa, mais o guia do DOJ e a ISO 37001.
+
 ### P4: demais plugins
 
 Por demanda de engajamento real, seguindo o desenho da seção 3. Um plugin só sai de esqueleto quando

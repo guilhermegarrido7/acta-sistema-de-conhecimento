@@ -107,6 +107,12 @@
       "source": "./governanca-riscos-compliance/auditoria-convenios",
       "category": "governanca-riscos-compliance",
       "description": "Auditoria de convênio e prestação de contas de recurso repassado: estruturação e formalização, habilitação do parceiro, execução e fornecedores, reconciliação do extrato contra o sistema de prestação de contas, desvio de finalidade, contrapartida e encerramento, com a matriz de riscos e os indícios de glosa."
+    },
+    {
+      "name": "acta-programa-de-integridade",
+      "source": "./governanca-riscos-compliance/programa-de-integridade",
+      "category": "governanca-riscos-compliance",
+      "description": "Implantação e teste de programa de integridade: pilares exigidos pela lei anticorrupção, código de conduta, canal de denúncias, due diligence de terceiros nos dois modos (homologação e investigação de vínculo), treinamento e comunicação, e o teste de efetividade do programa."
     }
   ]
 }

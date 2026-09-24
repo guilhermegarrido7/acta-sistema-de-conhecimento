@@ -196,11 +196,35 @@ Nesta ordem, porque cada um tem projeto real de onde extrair:
     completa foi extraída e registrada em
     `governanca-riscos-compliance/gestao-de-riscos/skills/taxonomia-de-riscos/references/dicionario-de-riscos.md`.
 
+15. ✅ `acta-metodo-consultoria`, que **saiu do P4 por matéria-prima real**: a metodologia registrada
+    de um diagnóstico econômico-financeiro e operacional de 17 meses, com hierarquia de autoridade
+    entre fontes divergentes, reconstrução de demonstração de resultado a partir de balancete,
+    tratamento de anomalia com flag e override, e convenções de planilha-mestre. Somada à estrutura
+    repetida de um contrato com catorze ordens de serviço. É a camada de método da prática de
+    Consultoria Empresarial, equivalente ao que `acta-metodo-auditoria` é para GRC. Ganhou uma sexta
+    skill fora do desenho da seção 3, `defesa-tecnica-e-limitacoes`, que registra decisão
+    metodológica revista com o efeito numérico da mudança.
+16. ✅ `acta-segregacao-de-funcoes`, **por matéria-prima real**: dois ciclos completos de SOX IT, com
+    biblioteca de políticas de controles gerais de TI codificada e régua de amostragem por frequência
+    de controle. A pasta foi movida de `consultoria-empresarial/` para
+    `governanca-riscos-compliance/`, que é onde esta seção já a listava e onde a disciplina pertence.
+17. ✅ `acta-auditoria-folha`, **por matéria-prima real**: programa de trabalho de auditoria de folha
+    e base consolidada de um engajamento.
+18. ✅ `acta-auditoria-estoques`, **por matéria-prima real**: um inventário físico com planilhas de
+    contagem versionadas, segunda contagem marcada em coluna própria, conferência por meio
+    independente e consolidação de v7 a v10. As colunas das planilhas é que revelaram o método, entre
+    elas a validação mecânica da descrição por contagem de separadores, que pega o erro com o item
+    ainda no corredor.
+
 ### P4: demais plugins
 
 Por demanda de engajamento real, seguindo o desenho da seção 3. Um plugin só sai de esqueleto quando
 houver projeto que justifique. Escrever metodologia sem caso de uso produz conteúdo genérico, que é
 pior que esqueleto honesto.
+
+Os itens 14 a 18 saíram daqui depois que a pasta de projetos executados da firma foi mapeada contra
+os esqueletos. O critério foi o mesmo em todos: existe entregável real de onde extrair método, ou
+seria conteúdo de manual? O que não passou nesse teste continua em esqueleto.
 
 ---
 

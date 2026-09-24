@@ -59,8 +59,8 @@ estruturado por atributo, com separador fixo:
 
 ```
 TIPO | MARCA | MODELO | CARACTERÍSTICA | COR
-CADEIRA | METADIL | ARIA 4711ES.6 | ASSENTO ESTOFADO 46 CM | CINZA
-CÂMERA IP | HIK VISION | DS-2CD1143G2-I 2.8MM 4MP | DOMO | BRANCA
+CADEIRA | FABRICANTE A | MODELO 4711 | ASSENTO ESTOFADO 46 CM | CINZA
+CABO DE REDE | FABRICANTE B | CAT6 | ROLO 305 M | AZUL
 ```
 
 Atributo ausente deixa o campo vazio, e o separador permanece. Isso dá um teste mecânico que roda

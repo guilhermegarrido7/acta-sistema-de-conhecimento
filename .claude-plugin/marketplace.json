@@ -95,6 +95,12 @@
       "source": "./governanca-riscos-compliance/auditoria-folha",
       "category": "governanca-riscos-compliance",
       "description": "Auditoria do ciclo de folha de pagamento: universo e conciliação com a contabilidade, encargos e benefícios com a base de incidência, cruzamento do ponto com a folha, admissão e desligamento, terceiros e pejotização, com a matriz de riscos da folha."
+    },
+    {
+      "name": "acta-auditoria-estoques",
+      "source": "./governanca-riscos-compliance/auditoria-estoques",
+      "category": "governanca-riscos-compliance",
+      "description": "Auditoria do ciclo de estoques: planejamento e execução do inventário com segunda contagem cega e recontagem dirigida por bloco físico, acuracidade por item e por valor, custeio e giro, obsolescência e provisão, movimentação e perdas, com a matriz de riscos do ciclo."
     }
   ]
 }

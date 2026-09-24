@@ -1,0 +1,8 @@
+{
+  "name": "acta-auditoria-convenios",
+  "version": "1.0.0",
+  "description": "Auditoria do ciclo de convênios e parcerias: estruturação e habilitação do parceiro, aportes e contrapartida, fornecedores do convênio, reconciliação de extrato contra sistema de prestação de contas, desvio de finalidade, glosa e termo de encerramento.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

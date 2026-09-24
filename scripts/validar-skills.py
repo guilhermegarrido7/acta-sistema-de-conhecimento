@@ -121,8 +121,11 @@ def validar(raiz):
             if achados:
                 erros.append(f"{rel}: nome de cliente no texto: {', '.join(achados)}. Anonimize.")
 
+        # O identificador é o caminho até a pasta do plugin, não só o nome dela: há dois
+        # `_metodo`, um por prática, e usar só o nome os fundia num plugin de 13 skills
+        # que não existe, disparando um aviso de teto falso.
         partes = os.path.normpath(rel).split(os.sep)
-        plugin = partes[partes.index("skills") - 1] if "skills" in partes else partes[0]
+        plugin = "/".join(partes[:partes.index("skills")]) if "skills" in partes else partes[0]
         por_plugin.setdefault(plugin, []).append(rel)
 
     for plugin, skills in sorted(por_plugin.items()):
@@ -132,20 +135,23 @@ def validar(raiz):
                 "Avalie dividir o plugin ou fundir skills próximas."
             )
 
-    # projeto.md e fundamentos.md também vão para o portal. Ficaram fora da varredura
-    # acima porque ela procura SKILL.md, e conteúdo publicado sem checagem de nome de
-    # cliente é exatamente o buraco que este script existe para fechar.
+    # O resto do conteúdo publicado: projeto.md, fundamentos.md, README.md do plugin e
+    # tudo em references/. Ficou fora da varredura acima porque ela procura SKILL.md.
+    # references/ é o que mais preocupa: é onde vai o detalhe extraído do material do
+    # cliente, justamente o texto com maior chance de carregar um nome esquecido.
     if clientes:
+        publicados = ("projeto.md", "fundamentos.md", "README.md")
         for dirpath, dirnames, filenames in os.walk(raiz):
             dirnames[:] = [d for d in dirnames if d not in IGNORAR and d != ".git"]
-            if ".git" in dirpath:
+            if ".git" in dirpath or "node_modules" in dirpath:
                 continue
-            for nome_arq in ("projeto.md", "fundamentos.md"):
-                if nome_arq not in filenames:
+            em_references = os.path.basename(dirpath) == "references"
+            for nome_arq in filenames:
+                if not (nome_arq in publicados or (em_references and nome_arq.endswith(".md"))):
                     continue
                 caminho = os.path.join(dirpath, nome_arq)
                 rel = os.path.relpath(caminho, raiz)
-                txt = open(caminho, encoding="utf-8").read()
+                txt = open(caminho, encoding="utf-8", errors="replace").read()
                 achados = sorted({n for n, padrao in clientes.items() if padrao.search(txt)})
                 if achados:
                     erros.append(f"{rel}: nome de cliente no texto: {', '.join(achados)}. Anonimize.")

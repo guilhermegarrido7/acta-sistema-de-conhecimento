@@ -1,7 +1,7 @@
 {
   "name": "acta-metodo-consultoria",
-  "version": "0.1.0",
-  "description": "Como a ACTA conduz um projeto de consultoria: diagnóstico, entrevistas, mapeamento AS IS e desenho TO BE, storyline de recomendação e gestão de escopo.",
+  "version": "1.0.0",
+  "description": "Como a ACTA conduz um projeto de consultoria: escopo e recortes, solicitação de informações e cobrança de pendência, base analítica reconstruída da fonte bruta, referência de comparação, priorização e plano de ação, acompanhamento pós-relatório e defesa técnica.",
   "author": {
     "name": "ACTA Advisory"
   }

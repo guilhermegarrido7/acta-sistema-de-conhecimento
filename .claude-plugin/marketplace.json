@@ -71,6 +71,30 @@
       "source": "./governanca-riscos-compliance/auditoria-compras",
       "category": "governanca-riscos-compliance",
       "description": "Auditoria do ciclo de compras procure-to-pay: requisição e alçada, caça ao fracionamento, cotação e sinais de direcionamento, conflito de interesse com fornecedor, contrato e aditivo, recebimento, conferência de três vias e pagamento em duplicidade."
+    },
+    {
+      "name": "acta-gestao-de-riscos",
+      "source": "./governanca-riscos-compliance/gestao-de-riscos",
+      "category": "governanca-riscos-compliance",
+      "description": "Implantação de gestão de riscos ancorada em COSO ERM 2017 e ISO 31000: o dicionário de riscos da casa com 52 categorias, apetite e tolerância revelados da prática, escalas de impacto e probabilidade, matriz e mapa de calor por zonas, planos de resposta com dono e prazo, e KRI com gatilho de escalonamento."
+    },
+    {
+      "name": "acta-metodo-consultoria",
+      "source": "./consultoria-empresarial/_metodo",
+      "category": "consultoria-empresarial",
+      "description": "Como a ACTA conduz um projeto de consultoria: escopo e recortes analíticos, solicitação de informações e cobrança de pendência, hierarquia de autoridade entre fontes divergentes, base analítica reconstruída da fonte bruta, priorização e plano de ação, e a defesa técnica do número."
+    },
+    {
+      "name": "acta-segregacao-de-funcoes",
+      "source": "./governanca-riscos-compliance/segregacao-de-funcoes",
+      "category": "governanca-riscos-compliance",
+      "description": "Segregação de funções e ciclo de vida do acesso: matriz de SoD, catálogo de conflitos críticos, concessão, revisão periódica e revogação no desligamento, e o controle compensatório para quando não há gente suficiente para segregar."
+    },
+    {
+      "name": "acta-auditoria-folha",
+      "source": "./governanca-riscos-compliance/auditoria-folha",
+      "category": "governanca-riscos-compliance",
+      "description": "Auditoria do ciclo de folha de pagamento: universo e conciliação com a contabilidade, encargos e benefícios com a base de incidência, cruzamento do ponto com a folha, admissão e desligamento, terceiros e pejotização, com a matriz de riscos da folha."
     }
   ]
 }

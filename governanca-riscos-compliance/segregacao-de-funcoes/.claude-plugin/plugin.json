@@ -1,0 +1,8 @@
+{
+  "name": "acta-segregacao-de-funcoes",
+  "version": "1.0.0",
+  "description": "Segregação de funções e ciclo de vida do acesso: matriz de SoD, catálogo de conflitos críticos, concessão, revisão periódica e revogação no desligamento, e controle compensatório quando não há gente para segregar.",
+  "author": {
+    "name": "ACTA Advisory"
+  }
+}

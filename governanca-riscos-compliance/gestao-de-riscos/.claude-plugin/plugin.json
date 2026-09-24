@@ -1,7 +1,7 @@
 {
   "name": "acta-gestao-de-riscos",
-  "version": "0.1.0",
-  "description": "Implantação de gestão de riscos: identificação e taxonomia, avaliação de impacto e probabilidade, apetite, resposta e monitoramento.",
+  "version": "1.0.0",
+  "description": "Implantação de gestão de riscos: o Dicionário de Riscos da ACTA com 52 categorias, apetite e tolerância, escalas de impacto e probabilidade, matriz e mapa de calor, planos de resposta e KRI.",
   "author": {
     "name": "ACTA Advisory"
   }

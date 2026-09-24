@@ -187,6 +187,14 @@ Nesta ordem, porque cada um tem projeto real de onde extrair:
 12. ✅ `acta-planejamento-estrategico`, escrito a partir do material de dois engajamentos.
 13. ✅ `acta-auditoria-compras`, escrito a partir do ciclo PTP mapeado em (10), com uma sexta skill de
     matriz de riscos acrescentada ao desenho da seção 3, no padrão de `acta-revenue-assurance`.
+14. ✅ `acta-gestao-de-riscos`, que **saiu do P4 porque apareceu matéria-prima real**: o Dicionário de
+    Riscos da ACTA Consultores, taxonomia proprietária de quatro componentes, oito grupos e 52
+    categorias numeradas, encontrado no template de mapa de riscos e no laudo de background check de
+    terceiro de um engajamento de due diligence, já em uso em produção para classificar risco de
+    fornecedor. Junto com ele veio a escala de avaliação de quatro níveis do laudo, com o nível
+    Limitação de Escopo, que separa "avaliei e está baixo" de "não consegui avaliar". A taxonomia
+    completa foi extraída e registrada em
+    `governanca-riscos-compliance/gestao-de-riscos/skills/taxonomia-de-riscos/references/dicionario-de-riscos.md`.
 
 ### P4: demais plugins
 

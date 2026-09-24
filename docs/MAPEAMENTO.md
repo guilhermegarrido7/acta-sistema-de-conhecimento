@@ -106,6 +106,7 @@ ACTA a mid-market brasileiro.
 | `acta-auditoria-producao` | apontamento-e-consumo · perdas-e-refugo · produtividade · manutencao | Lean; CPC 16 |
 | `acta-programa-de-integridade` | pilares-do-programa · codigo-de-conduta · canal-de-denuncias · due-diligence-de-terceiros · treinamento-e-comunicacao · monitoramento-e-teste | Lei 12.846 + Decreto 11.129/2022; DOJ ECCP; ISO 37001 |
 | `acta-forense` | preservacao-de-evidencia · analise-documental-e-de-dados · entrevista-investigativa · relatorio-forense | ACFE Fraud Examiners Manual; triângulo da fraude |
+| `acta-auditoria-convenios` | ciclo-do-convenio · matriz-de-riscos-do-convenio · estruturacao-e-formalizacao · execucao-e-fornecedores · prestacao-de-contas · contrapartida-e-encerramento | Lei 13.019/2014; jurisprudência do TCU; IIA; instrução normativa do concedente |
 | `acta-governanca` | instancias-e-alcadas · estatuto-e-regimento · composicao-de-conselho · politicas-corporativas | IBGC Código das Melhores Práticas |
 | `acta-esg` | materialidade · indicadores-e-frameworks · coleta-e-asseguracao · plano-e-reporte | GRI; SASB; ISSB (IFRS S1/S2) |
 | `acta-segregacao-de-funcoes` | matriz-de-sod · conflitos-criticos · perfis-e-acessos · mitigacao-e-monitoramento | SoD; COBIT; controles de acesso |
@@ -215,6 +216,14 @@ Nesta ordem, porque cada um tem projeto real de onde extrair:
     independente e consolidação de v7 a v10. As colunas das planilhas é que revelaram o método, entre
     elas a validação mecânica da descrição por contagem de separadores, que pega o erro com o item
     ainda no corredor.
+
+19. ✅ `acta-auditoria-convenios`, **plugin novo, fora do desenho da seção 3**. Ele não estava previsto
+    em lugar nenhum, e apareceu ao mapear a pasta de projetos: catorze ordens de serviço do mesmo
+    tipo de trabalho, todas com a mesma árvore de pastas e o mesmo programa de teste. Catorze
+    repetições é o lastro mais forte do repositório. O desfecho do trabalho é **valor a devolver**,
+    registrado como indício de glosa, e não recomendação de melhoria: é isso que o separa de
+    `acta-auditoria-compras`, com quem ele divide a due diligence de fornecedor. Seis skills, com o
+    programa de teste completo e o formato da matriz de achados em `references/`.
 
 ### P4: demais plugins
 

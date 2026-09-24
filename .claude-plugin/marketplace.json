@@ -101,6 +101,12 @@
       "source": "./governanca-riscos-compliance/auditoria-estoques",
       "category": "governanca-riscos-compliance",
       "description": "Auditoria do ciclo de estoques: planejamento e execução do inventário com segunda contagem cega e recontagem dirigida por bloco físico, acuracidade por item e por valor, custeio e giro, obsolescência e provisão, movimentação e perdas, com a matriz de riscos do ciclo."
+    },
+    {
+      "name": "acta-auditoria-convenios",
+      "source": "./governanca-riscos-compliance/auditoria-convenios",
+      "category": "governanca-riscos-compliance",
+      "description": "Auditoria de convênio e prestação de contas de recurso repassado: estruturação e formalização, habilitação do parceiro, execução e fornecedores, reconciliação do extrato contra o sistema de prestação de contas, desvio de finalidade, contrapartida e encerramento, com a matriz de riscos e os indícios de glosa."
     }
   ]
 }

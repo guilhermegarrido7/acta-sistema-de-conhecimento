@@ -1,6 +1,6 @@
 ---
 name: custo-de-capital
-description: Direcionar o WACC em reais para empresa fechada, com CAPM de beta setorial realavancado, risco-país, prêmio de porte, iliquidez e custo de dívida sintético. Acionar ao montar ou revisar o WACC, ao escolher beta ou estrutura de capital, ao discutir risco-país, ou ao defender a taxa de desconto diante do comprador.
+description: Direcionar o WACC em reais para empresa fechada, com CAPM de beta setorial realavancado, risco-país, prêmio de porte, iliquidez e custo de dívida sintético. Acionar ao montar ou revisar o WACC, ao escolher beta ou estrutura de capital, ou ao defender a taxa de desconto diante do comprador.
 ---
 
 # Custo de capital: a taxa que se defende

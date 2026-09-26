@@ -1,6 +1,6 @@
 ---
 name: reorganizacao-contabil
-description: Reorganizar demonstrações contábeis em NOPAT e capital investido operacional, separando o operacional do financeiro e do não operacional. Acionar ao receber balancete ou DRE do data room, ao montar a base histórica do modelo, ao decidir se uma conta é operacional, ou ao fechar a reconciliação de capital.
+description: Reorganizar demonstrações contábeis em NOPAT e capital investido operacional, separando o operacional do financeiro e do não operacional. Acionar ao receber balancete ou DRE do data room, ao montar a base histórica do modelo, ou ao fechar a reconciliação de capital.
 ---
 
 # Reorganização contábil: da contabilidade para a economia

@@ -1,6 +1,6 @@
 ---
 name: revisao-de-modelo
-description: Auditar o modelo financeiro em três camadas (robustez técnica, consistência econômica e plausibilidade dos resultados), sem escrever na planilha. Acionar ao revisar ou validar um modelo de valuation, ao desconfiar de um resultado, antes de levar o número ao cliente, ou ao preparar a defesa para a due diligence.
+description: Auditar o modelo financeiro em três camadas (robustez técnica, consistência econômica e plausibilidade dos resultados), sem escrever na planilha. Acionar ao revisar ou validar um modelo de valuation, ao desconfiar de um resultado, ou ao preparar a defesa para a due diligence.
 ---
 
 # Revisão de modelo: a bateria antes de o número sair da casa

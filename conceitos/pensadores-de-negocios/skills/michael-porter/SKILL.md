@@ -1,6 +1,6 @@
 ---
 name: porter
-description: Analisar a estrutura econômica de um setor para explicar por que sua rentabilidade média é alta ou baixa, e onde estão barreiras, poder de barganha e os trade-offs que sustentam posição. Acionar ao estudar atratividade setorial, ao mapear concorrência e poder de barganha, ao definir posicionamento genérico e trade-offs, ou ao separar estratégia de eficácia operacional.
+description: Analisar a estrutura econômica de um setor para explicar por que sua rentabilidade média é alta ou baixa, e onde estão barreiras e poder de barganha. Acionar ao estudar atratividade setorial, ao definir posicionamento genérico, ou ao separar estratégia de eficácia operacional.
 user-invocable: false
 ---
 

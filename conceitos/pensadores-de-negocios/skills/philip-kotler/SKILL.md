@@ -1,6 +1,6 @@
 ---
 name: kotler
-description: Estruturar mercado e demanda com STP, mix, jornada e valor do cliente, e confrontar a doutrina de segmentação com a evidência de painel do Ehrenberg-Bass. Acionar ao dimensionar e segmentar mercado endereçável, ao diagnosticar mix de produto e precificação, ao avaliar plano comercial de crescimento, ou ao escrever posicionamento em material de venda.
+description: Estruturar mercado e demanda com STP, mix, jornada e valor do cliente, e confrontar a segmentação com a evidência de painel do Ehrenberg-Bass. Acionar ao dimensionar mercado endereçável, ao diagnosticar mix e precificação, ou ao escrever posicionamento de venda.
 user-invocable: false
 ---
 

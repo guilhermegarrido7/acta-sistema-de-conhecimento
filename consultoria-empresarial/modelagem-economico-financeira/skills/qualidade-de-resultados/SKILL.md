@@ -1,6 +1,6 @@
 ---
 name: qualidade-de-resultados
-description: Normalizar EBITDA em quatro famílias de ajuste (não recorrentes, pró-forma, contábeis e run-rate) e produzir a tabela de add-backs auditável. Acionar ao normalizar EBITDA, ao discutir add-backs com o vendedor, ao avaliar qualidade de resultados, ou ao defender o EBITDA de referência diante do comprador.
+description: Normalizar EBITDA em quatro famílias de ajuste (não recorrentes, pró-forma, contábeis e run-rate) e produzir a tabela de add-backs auditável. Acionar ao normalizar EBITDA, ao discutir add-backs com o vendedor, ou ao defender o EBITDA de referência diante do comprador.
 ---
 
 # Qualidade de resultados: o EBITDA que se defende

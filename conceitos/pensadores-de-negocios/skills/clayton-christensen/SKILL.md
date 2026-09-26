@@ -1,6 +1,6 @@
 ---
 name: christensen
-description: Ler a empresa como um modelo de negócio preso à própria estrutura de custos e margem-alvo, e o cliente como alguém contratando uma solução para um progresso que quer alcançar. Acionar ao avaliar ameaça de entrante de baixo custo ou de novo mercado, ao explicar por que o incumbente não reage, ao redesenhar proposta de valor, ou ao investigar o que o cliente realmente compra.
+description: Ler a empresa como modelo de negócio preso à própria estrutura de custos, e o cliente como alguém contratando uma solução para um progresso. Acionar ao avaliar ameaça de entrante de baixo custo, ao explicar por que o incumbente não reage, ou ao ver o que o cliente compra.
 user-invocable: false
 ---
 

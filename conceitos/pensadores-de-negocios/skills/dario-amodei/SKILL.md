@@ -1,6 +1,6 @@
 ---
 name: amodei
-description: Projete a trajetória de capacidade de sistemas de IA e traduza-a em exposição de custo, preço e vantagem competitiva. Acionar ao avaliar o efeito de IA sobre um setor ou sobre o negócio do cliente, ao estimar quanto do custo de um alvo é trabalho cognitivo rotineiro, ao julgar tese de negócio intensivo em software, ou ao discutir uso auditável de modelo em decisão.
+description: Projetar a trajetória de capacidade de sistemas de IA e traduzi-la em exposição de custo, preço e vantagem competitiva. Acionar ao avaliar o efeito de IA sobre um setor, ao estimar quanto do custo de um alvo é cognitivo rotineiro, ou ao julgar tese intensiva em software.
 user-invocable: false
 ---
 

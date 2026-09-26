@@ -1,6 +1,6 @@
 ---
 name: instrumento-de-coleta
-description: Desenhe e homologue o formulário de coleta e o dicionário de dados do projeto. Acionar ao estruturar os blocos do instrumento, ao ativar módulo condicional de moeda, horista ou encargos, ao definir validação na entrada e tabelas de domínio, ao escolher a tecnologia de coleta, ou ao homologar com participante-piloto.
+description: Desenhe e homologue o formulário de coleta e o dicionário de dados do projeto. Acionar ao estruturar os blocos do instrumento, ao ativar módulo condicional de moeda, horista ou encargos, ao definir validação na entrada, ou ao homologar com participante-piloto.
 ---
 
 # Instrumento de coleta

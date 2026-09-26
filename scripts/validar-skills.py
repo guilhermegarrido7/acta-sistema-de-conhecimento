@@ -11,6 +11,7 @@ cada contribuição.
 """
 import os
 import re
+import subprocess
 import sys
 
 # Os limites de descrição são os de CONVENCOES.md §5, que já eram a regra da casa. Este script
@@ -18,7 +19,8 @@ import sys
 MIN_DESC = 220          # abaixo disso a skill é vaga demais e não dispara
 MAX_DESC = 380          # acima disso desperdiça contexto em toda sessão
 MAX_LINHAS = 300        # corpo do SKILL.md; acima disso, mover para references/
-MAX_SKILLS_PLUGIN = 12  # acima disso o plugin passa de ~1 mil tokens always-on
+MAX_SKILLS_PLUGIN = 12  # proxy grosseiro; o que vale mesmo e MAX_TOKENS_PLUGIN abaixo
+MAX_TOKENS_PLUGIN = 1000  # custo always-on do plugin inteiro, que e o que a regra sempre quis dizer
 
 # A lista de nomes de cliente NÃO vive neste arquivo, e não pode viver: o portal gerado deste
 # repositório é público, e uma relação da carteira da firma versionada aqui seria o mesmo vazamento
@@ -58,6 +60,33 @@ def carregar_clientes(raiz):
 IGNORAR = {"evitar-escrita-de-IA"}
 
 
+def ignorados_pelo_git(raiz, caminhos):
+    """Devolve o subconjunto de `caminhos` que o .gitignore exclui.
+
+    A varredura de nome de cliente percorre o disco, e o disco tem arquivo que de proposito nao
+    e versionado: nota bruta de material de cliente, a propria relacao de clientes. Sem este
+    filtro, o validador acusa erro em arquivo que ja esta corretamente fora do repositorio, e o
+    erro nunca some. Fora de um repositorio git, nada e filtrado.
+    """
+    if not caminhos:
+        return set()
+    try:
+        # NUL separando entrada e saida (-z). A forma com uma linha por caminho parece correta
+        # e nao e: nesta plataforma o git processa apenas o ultimo caminho enviado e devolve
+        # resultado incompleto, o que aqui significaria acusar arquivo ignorado como se
+        # estivesse versionado.
+        sep = chr(0)
+        dados = sep.join(c.replace(os.sep, "/") for c in caminhos).encode("utf-8")
+        r = subprocess.run(
+            ["git", "check-ignore", "--stdin", "-z"],
+            cwd=raiz, input=dados, capture_output=True,
+        )
+    except (OSError, ValueError):
+        return set()
+    saida = r.stdout.decode("utf-8", "replace")
+    return {c.replace("/", os.sep) for c in saida.split(chr(0)) if c}
+
+
 def frontmatter(txt):
     m = re.match(r"^---\n(.*?)\n---", txt, re.S)
     if not m:
@@ -72,6 +101,7 @@ def frontmatter(txt):
 def validar(raiz):
     erros, avisos = [], []
     por_plugin = {}
+    custo_plugin = {}
     clientes = carregar_clientes(raiz)
     if clientes is None:
         avisos.append(
@@ -127,12 +157,18 @@ def validar(raiz):
         partes = os.path.normpath(rel).split(os.sep)
         plugin = "/".join(partes[:partes.index("skills")]) if "skills" in partes else partes[0]
         por_plugin.setdefault(plugin, []).append(rel)
+        custo_plugin[plugin] = custo_plugin.get(plugin, 0) + len(desc) // 4
 
+    # O teto que importa e o custo always-on, nao a contagem: um plugin de 14 skills enxutas
+    # custa menos que um de 10 com descricao no limite. A contagem entra so como informacao,
+    # porque foi por ela que a regra foi escrita em CONVENCOES.md §5.
     for plugin, skills in sorted(por_plugin.items()):
-        if len(skills) > MAX_SKILLS_PLUGIN:
+        custo = custo_plugin.get(plugin, 0)
+        if custo > MAX_TOKENS_PLUGIN:
             avisos.append(
-                f"{plugin}: {len(skills)} skills (teto sugerido {MAX_SKILLS_PLUGIN}). "
-                "Avalie dividir o plugin ou fundir skills próximas."
+                f"{plugin}: ~{custo} tokens always-on em {len(skills)} skills "
+                f"(teto {MAX_TOKENS_PLUGIN}). Toda sessao com o plugin instalado paga isso. "
+                "Avalie enxugar descricoes, fundir skills proximas ou dividir o plugin."
             )
 
     # O resto do conteúdo publicado: projeto.md, fundamentos.md, README.md do plugin e
@@ -140,21 +176,29 @@ def validar(raiz):
     # references/ é o que mais preocupa: é onde vai o detalhe extraído do material do
     # cliente, justamente o texto com maior chance de carregar um nome esquecido.
     if clientes:
-        publicados = ("projeto.md", "fundamentos.md", "README.md")
+        candidatos = []
+        # Varre TODO .md do repositorio, e nao uma lista de nomes de arquivo. A lista anterior
+        # cobria projeto.md, fundamentos.md, README.md e references/: deixou passar 89 ocorrencias
+        # de dois clientes em benchmarks/, em casos/ e no corpo de tres SKILL.md, porque nenhum
+        # desses caminhos estava previsto. Lista de caminhos permitidos envelhece; varredura total
+        # nao.
         for dirpath, dirnames, filenames in os.walk(raiz):
             dirnames[:] = [d for d in dirnames if d not in IGNORAR and d != ".git"]
-            if ".git" in dirpath or "node_modules" in dirpath:
+            if ".git" in dirpath or "node_modules" in dirpath or os.sep + "dist" in dirpath:
                 continue
-            em_references = os.path.basename(dirpath) == "references"
             for nome_arq in filenames:
-                if not (nome_arq in publicados or (em_references and nome_arq.endswith(".md"))):
+                if not nome_arq.endswith(".md"):
                     continue
-                caminho = os.path.join(dirpath, nome_arq)
-                rel = os.path.relpath(caminho, raiz)
-                txt = open(caminho, encoding="utf-8", errors="replace").read()
-                achados = sorted({n for n, padrao in clientes.items() if padrao.search(txt)})
-                if achados:
-                    erros.append(f"{rel}: nome de cliente no texto: {', '.join(achados)}. Anonimize.")
+                candidatos.append(os.path.relpath(os.path.join(dirpath, nome_arq), raiz))
+
+        ignorados = ignorados_pelo_git(raiz, candidatos)
+        for rel in candidatos:
+            if rel in ignorados:
+                continue
+            txt = open(os.path.join(raiz, rel), encoding="utf-8", errors="replace").read()
+            achados = sorted({n for n, padrao in clientes.items() if padrao.search(txt)})
+            if achados:
+                erros.append(f"{rel}: nome de cliente no texto: {', '.join(achados)}. Anonimize.")
 
     return erros, avisos, por_plugin
 

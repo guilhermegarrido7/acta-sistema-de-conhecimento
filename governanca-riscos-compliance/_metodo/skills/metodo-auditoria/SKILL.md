@@ -8,17 +8,15 @@ user-invocable: false
 
 > ## 🔴 PRIMEIRO PASSO, ANTES DE QUALQUER COISA
 >
-> **Leia a memória de longo prazo do usuário: `~/.claude/CLAUDE.md`.** É a autoridade sobre identidade
-> visual, dados cadastrais, quem é quem e como o auditor responsável quer trabalhar. Depois, o `CLAUDE.md` da raiz
-> do engajamento, o `HISTORICO.md` e o `APRENDIZADOS.md` em `~~controle`.
+> **Leia a memória de longo prazo do usuário: `~/.claude/CLAUDE.md`.** É a autoridade sobre
+> identidade visual, dados cadastrais, quem é quem e como o auditor responsável quer trabalhar.
+> Depois, o `CLAUDE.md` da raiz do engajamento, o `HISTORICO.md` e o `APRENDIZADOS.md` em
+> `~~controle`. Se o ambiente tiver skill própria de memória, carregue-a para o protocolo completo,
+> inclusive a regra de que **divergência entre registros se pergunta, nunca se unifica por conta
+> própria**.
 >
-> **Se o ambiente tiver uma skill própria de memória do usuário** (no ambiente de alguns auditores ela se chama
-> `memoria`), carregue-a para o protocolo completo: a armadilha da chave por diretório,
-> onde gravar cada tipo de fato, e a regra de que **divergência entre registros se pergunta, nunca se
-> unifica por conta própria**.
->
-> Isso não é formalidade. Já custou o verde institucional trocado por um tom errado e propagado por
-> quatro skills, porque a memória correta estava numa chave que a sessão não alcançava.
+> Já custou o verde institucional trocado por um tom errado e propagado por quatro skills, porque a
+> memória correta estava numa chave que a sessão não alcançava.
 
 Esta skill comanda as demais. Ela carrega o que vale para **todo** trabalho de auditoria da ACTA:
 as regras que não se negociam, a disciplina numérica, o modo de operar do auditor responsável e o ritual de
@@ -230,65 +228,27 @@ Datas sempre `dd/mm/aaaa`. Valores sempre `R$ 1.234,56`.
 
 ## 4. Ambiente técnico
 
-O preâmbulo abaixo elimina cerca de 40% de todos os erros técnicos já observados. Use-o sem pensar.
+Resolva o interpretador na hora, e nunca escreva caminho de máquina na skill:
 
 ```bash
-# Resolva o interpretador na hora; nunca escreva um caminho de maquina na skill.
 PY="~~interpretador python"
 "$PY" caminho/do/script.py
 ```
 
-> O catalogo completo de armadilhas de ambiente (encoding, arquivo travado, cache do OneDrive,
-> render, COM) vive em `acta-way`, skill `ambiente-tecnico`. Nao duplique aqui.
-
-- `python` e `python3` caem no stub quebrado da Microsoft Store. Sempre o caminho completo.
-- **Escreva scripts com a ferramenta Write, nunca por heredoc.** Heredoc com acento, apóstrofo ou
-  caminho com barra invertida quebra em `unexpected EOF`.
-- **Nunca `print` com `→ − ⚠ Σ ​`.** O console é cp1252 e estoura `UnicodeEncodeError`. Grave a
-  saída em arquivo `encoding="utf-8"` e leia o arquivo.
-- Bibliotecas presentes: `openpyxl`, `python-docx`, `python-pptx`, `pandas`+`xlrd` (para `.xls`
-  antigo), `pdfplumber`, `pypdf`, `fitz` (PyMuPDF), `pywin32` (COM).
-
-Detalhes, armadilhas conhecidas e receitas de render estão em
-[references/ambiente-windows.md](references/ambiente-windows.md), leia quando for mexer em COM,
-render, arquivo travado ou cache do OneDrive.
+O catálogo de armadilhas (interpretador, encoding do console, heredoc, arquivo travado, cache do
+OneDrive, render, COM) e a relação de bibliotecas disponíveis vivem em `acta-way:ambiente-tecnico` e
+em [references/ambiente-windows.md](references/ambiente-windows.md). Não são duplicados aqui.
 
 ---
 
 ## 5. Ritual de aprendizado: obrigatório
 
 **Antes de sobrescrever ou publicar qualquer entregável, pare e faça o momento de aprendizado com o
-auditor responsável.** Isso não é formalidade: é o mecanismo que impede que o mesmo erro volte no
-próximo cliente e que o conhecimento se perca quando a sessão fecha. Já se perderam 68 dias de
-auditoria numa pasta de memória vazia.
+auditor responsável.** É o mecanismo que impede o mesmo erro de voltar no próximo cliente e o
+conhecimento de se perder quando a sessão fecha.
 
-Todo processo novo, um tipo de base que você nunca tratou, um teste que você inventou, um layout que
-você resolveu, gera três coisas:
-
-1. **O que aprendi** (a técnica, em 2 a 4 linhas, reutilizável em outro cliente).
-2. **O que errei e como descobri** (inclusive o erro que morreu no rascunho).
-3. **O que ficou em aberto.**
-
-Apresente isso no chat, em bloco curto e destacado, e **espere a reflexão do auditor antes de
-gravar**. O auditor corrige a lição, foi assim que "não existe regra no benefício" virou "a regra existe
-e fecha ao centavo".
-
-Depois de validado, o registro segue o **mecanismo de checkpoint comum a todos os projetos da
-ACTA**, em `acta-way`, skill `checkpoint`:
-
-```
-~~controle/CHECKPOINT.md      ← estado do engajamento, consolidado
-~~controle/Sessoes/           ← feitos, refeitos e não feitos, imutável, um arquivo por sessão
-~~controle/APRENDIZADOS.md    ← técnica e erro, reutilizáveis em outro cliente
-```
-
-Nunca dentro da pasta do cliente (R1). Carregue `checkpoint` para o protocolo completo e
-`aprendizado-e-historico` para o critério do que promover a memória ou a skill.
-
-**Para auditoria isso não é organização, é conformidade.** A Norma 14.6 do IIA exige documentação
-que permita a um auditor informado repetir o trabalho e chegar ao mesmo resultado, e o registro de
-quem executou e quem supervisionou. O formato comum já carrega fonte do dado, preparador, data e
-revisão: registrar o checkpoint satisfaz a norma no mesmo ato.
+O ritual completo, com as perguntas, o que se registra e onde, está em
+[references/ritual-de-aprendizado.md](references/ritual-de-aprendizado.md).
 
 ---
 

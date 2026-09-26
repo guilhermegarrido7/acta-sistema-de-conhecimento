@@ -10,8 +10,8 @@ entre projetos e não precisa ser redesenhada a cada cliente.
 ### A.1 Checklist de insumos a coletar no kick-off
 
 Repetir esta lista em todo projeto, adaptando os nomes dos responsáveis. É a
-generalização do que os casos FJS e PASB pediram, cada um com seu vocabulário
-próprio (a FJS chama de "estrutura salarial vigente", a pesquisa PASB chamava de
+generalização do que os Casos A e B pediram, cada um com seu vocabulário
+próprio (o Caso A chama de "estrutura salarial vigente", a pesquisa do Caso B chamava de
 "tabelas praticadas").
 
 | # | Insumo | Bloqueia |
@@ -39,13 +39,13 @@ devolver os achados ao cliente junto com o pedido de descrições.
 
 | # | Problema | Como detectar | Exemplo já observado |
 | --- | --- | --- | --- |
-| 1 | Duplicidade literal de cargo | Contagem de valores distintos versus total de linhas | Caso FJS: um cargo técnico duplicado na planilha original |
-| 2 | Senioridade inconsistente | Verificar se a régua (numeração romana, nomenclatura, ausência de sufixo) é uniforme e sem lacunas | Caso FJS: mistura de I a V com Júnior/Pleno/Sênior no mesmo conjunto |
+| 1 | Duplicidade literal de cargo | Contagem de valores distintos versus total de linhas | Caso A: um cargo técnico duplicado na planilha original |
+| 2 | Senioridade inconsistente | Verificar se a régua (numeração romana, nomenclatura, ausência de sufixo) é uniforme e sem lacunas | Caso A: mistura de I a V com Júnior/Pleno/Sênior no mesmo conjunto |
 | 3 | Acentuação e grafia irregulares | Normalizar antes de usar como chave | Comum em bases exportadas de sistemas de folha antigos |
 | 4 | Ausência de metadados essenciais (headcount, unidade, família, nível) | Verificar colunas presentes contra o dicionário de dados | Recorrente em toda primeira entrega de cliente |
 | 5 | Cargo sem correspondência de mercado esperada | Cruzar título com vocabulário de mercado do setor | Cargos de nomenclatura interna, sem verbete comum no setor |
-| 6 | Cargo sem ocupante | Confirmar headcount declarado antes do matching | Caso PASB: cargo de especialização sem ocupante, desconsiderado da amostra |
-| 7 | Critério de nível não documentado | Perguntar ao cliente o que diferencia os níveis antes de assumir ordenação | Caso PASB: nível de professor definido por qualificação acadêmica, não por série |
+| 6 | Cargo sem ocupante | Confirmar headcount declarado antes do matching | Caso B: cargo de especialização sem ocupante, desconsiderado da amostra |
+| 7 | Critério de nível não documentado | Perguntar ao cliente o que diferencia os níveis antes de assumir ordenação | Caso B: nível de professor definido por qualificação acadêmica, não por série |
 
 Um cargo com qualquer um dos problemas 1 a 5 não entra em matching até ser
 esclarecido com o cliente. Um cargo com o problema 6 é excluído da estatística
@@ -59,7 +59,7 @@ com motivo padronizado, não apenas observado em rodapé.
    maturidade de gestão, e qualquer eixo de comparabilidade adicional definido
    no cartão de identidade).
 3. Identificar lacunas de comparabilidade que a lista do cliente não cobre. No
-   caso FJS, a lacuna era a ausência de comparáveis corporativos de grande
+   Caso A, a lacuna era a ausência de comparáveis corporativos de grande
    porte fora do setor de saúde. Toda pesquisa tende a ter uma lacuna análoga;
    procurá-la ativamente na Etapa 1.
 4. Dimensionar convites acima do mínimo amostral. Referência de conversão

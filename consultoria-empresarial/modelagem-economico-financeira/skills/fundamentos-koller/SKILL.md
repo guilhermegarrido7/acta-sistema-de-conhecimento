@@ -1,6 +1,6 @@
 ---
 name: fundamentos-koller
-description: Fundamentar o valuation no framework Koller/McKinsey, com NOPLAT, capital investido, ROIC, lucro econômico, FCF e a key value driver formula. Acionar ao reorganizar demonstrações contábeis, ao calcular ROIC ou lucro econômico, ao montar DCF ou valor terminal, ou ao interpretar múltiplos de enterprise value.
+description: Fundamentar o valuation no framework Koller/McKinsey, com NOPLAT, capital investido, ROIC, lucro econômico, FCF e a key value driver formula. Acionar ao reorganizar demonstrações contábeis, ao calcular ROIC ou lucro econômico, ou ao interpretar múltiplos de enterprise value.
 user-invocable: false
 ---
 

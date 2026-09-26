@@ -1,6 +1,6 @@
 ---
 name: tratamento-e-validacao-da-base
-description: Transforme a base bruta em base tratada e assinada, pronta para virar estatística. Acionar ao normalizar jornada, moeda, periodicidade e data-base, ao aplicar a ordem correta dos cálculos do Grupo 2, ao registrar exclusão com motivo, ao rodar os checks de consistência e as validações V1 a V14, ou ao assinar tecnicamente a base.
+description: Transforme a base bruta em base tratada e assinada, pronta para virar estatística. Acionar ao normalizar jornada, moeda, periodicidade e data-base, ao registrar exclusão com motivo, ao rodar os checks de consistência e as validações, ou ao assinar tecnicamente a base.
 ---
 
 # Tratamento e validação da base

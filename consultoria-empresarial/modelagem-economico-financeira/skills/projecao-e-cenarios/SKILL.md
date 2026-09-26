@@ -1,6 +1,6 @@
 ---
 name: projecao-e-cenarios
-description: Direcionar a projeção operacional, com drivers de volume e preço, capacidade instalada, matriz de cenários e a coerência obrigatória entre crescimento, ROIC e taxa de reinvestimento. Acionar ao montar projeções, ao definir cenários otimista/base/pessimista, ao projetar receita, ou ao checar se o crescimento é financiável.
+description: Direcionar a projeção operacional, com drivers de volume e preço, capacidade instalada, matriz de cenários e a coerência obrigatória entre crescimento, ROIC e reinvestimento. Acionar ao montar projeções, ao definir cenários, ou ao checar se o crescimento é financiável.
 ---
 
 # Projeção e cenários: o crescimento que se sustenta

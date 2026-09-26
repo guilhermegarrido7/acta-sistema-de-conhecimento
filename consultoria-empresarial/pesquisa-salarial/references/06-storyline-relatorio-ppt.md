@@ -1,11 +1,11 @@
 # Storyline e design do relatório final em PowerPoint (template)
 
 Documento de duas partes. A Parte A é o mapa slide a slide, generalizado a
-partir do caso FJS (42 slides, escopo hospitalar) com os números e nomes de
+partir do Caso A (42 slides, escopo hospitalar) com os números e nomes de
 cargo substituídos por indicações de ajuste. Cada novo projeto adapta a
 contagem de slides e os achados ao seu próprio escopo, mas a lógica de arco
 narrativo (situação, tensão, resolução, anexos) e os componentes visuais
-reaparecem em qualquer setor, como confirma o benchmark PASB.
+reaparecem em qualquer setor, como confirma o Caso B.
 
 A Parte B é a especificação de design do template visual ACTA (grade, paleta,
 tipografia, componentes). Esta parte **não muda entre projetos**: é a
@@ -37,7 +37,7 @@ número do gap, o custo de equalização e as três prioridades. Metodologia con
 confiança, não constrói conclusão, e por isso vem depois.
 
 **Um slide, uma mensagem.** Se o título de ação precisa de dois períodos com "e",
-são dois slides. O benchmark PASB acerta nisso nos slides de benefício, um benefício
+são dois slides. O Caso B acerta nisso nos slides de benefício, um benefício
 por slide, e erra ao repetir integralmente o mesmo slide de agenda três vezes
 (slides 8, 11 e 18), o que gasta atenção sem adicionar informação.
 
@@ -73,7 +73,7 @@ não puder ser escrito, a análise não está pronta.
 | 9 | Como interpretar quartis: cada faixa tem uma consequência de retenção | Conteúdo, escala + interpretação | Escala mínimo, Q1, mediana, Q3, máximo, com a leitura de risco de cada faixa | C-05 |
 | 10 | Quatro regras de leitura que evitam conclusão errada | Conteúdo, 4 blocos | Amostra mínima e o que "insuficiente" significa; normalização por jornada; data-base única; segmentação entre unidade própria e contrato de gestão | C-07, C-08, mínimos |
 
-O slide 9 é a adaptação direta do melhor slide do benchmark PASB. A versão do
+O slide 9 é a adaptação direta do melhor slide do Caso B. A versão do
 benchmark associa cada faixa de quartil a consequências de retenção, motivação e
 evasão de capital intelectual. Isso traduz estatística em risco de negócio e vale
 manter, com duas correções: eliminar a sobreposição de faixas do original (que lista
@@ -174,11 +174,11 @@ justamente a partir deste slide. É também a abertura natural para a próxima p
 | 41 | Glossário | Conteúdo, 2 colunas | Comparatio, quartil, mediana, gap, ajuste necessário, Total Rewards, matching, recorte, prevalência, fator de escala |
 | 42 | Encerramento | Fechamento | Contatos e marca |
 
-O slide 40 é adaptado dos slides 12 e 13 do benchmark PASB, que fazem isso bem. A
+O slide 40 é adaptado dos slides 12 e 13 do Caso B, que fazem isso bem. A
 diferença é posicionamento: no benchmark o guia aparece no meio do corpo, quebrando a
 narrativa. Aqui vai para o anexo, e o treinamento gravado cobre o uso ao vivo.
 
-## A.2 O que aprender do benchmark PASB, e o que não repetir
+## A.2 O que aprender do Caso B, e o que não repetir
 
 | Prática | Avaliação | Decisão para o plugin (aplicável a qualquer cliente) |
 | --- | --- | --- |

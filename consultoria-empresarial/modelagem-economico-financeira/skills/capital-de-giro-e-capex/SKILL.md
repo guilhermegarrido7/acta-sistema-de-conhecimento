@@ -1,6 +1,6 @@
 ---
 name: capital-de-giro-e-capex
-description: Direcionar os cronogramas operacionais do modelo, com prazos médios, necessidade de capital de giro, roll-forward de imobilizado e a separação entre capex de manutenção e de expansão. Acionar ao projetar capital de giro, ao modelar CapEx e depreciação, ou ao checar coerência entre prazos projetados e histórico.
+description: Direcionar os cronogramas operacionais do modelo, com prazos médios, necessidade de capital de giro, roll-forward de imobilizado e a separação entre capex de manutenção e de expansão. Acionar ao projetar capital de giro, ao modelar CapEx e depreciação, ou ao checar prazos projetados contra o histórico.
 ---
 
 # Capital de giro e CapEx: onde o caixa some

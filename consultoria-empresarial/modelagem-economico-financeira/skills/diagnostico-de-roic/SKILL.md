@@ -1,6 +1,6 @@
 ---
 name: diagnostico-de-roic
-description: Diagnosticar criação de valor pelo ROIC, com decomposição em margem e giro, lucro econômico, spread contra o WACC e duração da vantagem competitiva. Acionar ao calcular ou interpretar ROIC, ao avaliar se o crescimento cria ou destrói valor, ao definir o período de vantagem competitiva, ou ao comparar retornos com o setor.
+description: Diagnosticar criação de valor pelo ROIC, com decomposição em margem e giro, lucro econômico, spread contra o WACC e duração da vantagem competitiva. Acionar ao calcular ou interpretar ROIC, ao avaliar se o crescimento cria ou destrói valor, ou ao comparar retornos com o setor.
 ---
 
 # Diagnóstico de ROIC: o veredito sobre criação de valor

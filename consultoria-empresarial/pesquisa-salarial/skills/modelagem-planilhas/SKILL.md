@@ -1,10 +1,6 @@
 ---
 name: modelagem-planilhas
-description: >
-  Modelagem das bases do projeto em Excel: arquitetura de abas, tabelas, chaves,
-  fórmulas auditáveis, checks de consistência e construção da tabela comparativa
-  entregável. Acionar em consolidação da coleta, tratamento da base, cálculo das
-  estatísticas em planilha e montagem do Excel de consulta para o cliente.
+description: Modele as bases do projeto em Excel, com arquitetura de abas, chaves, fórmulas auditáveis e checks de consistência. Acionar na consolidação da coleta, no tratamento da base, no cálculo das estatísticas em planilha, ou na montagem do Excel de consulta para o cliente.
 ---
 
 # Modelagem de dados em planilhas

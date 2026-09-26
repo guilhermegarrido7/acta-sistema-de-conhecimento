@@ -1,6 +1,6 @@
 ---
 name: musk
-description: Decomponha custo e requisito até a restrição física da coisa, de baixo para cima, e ataque processo em vez de aceitar benchmark de mercado. Acionar ao repensar estrutura de custo industrial, ao avaliar projeto de automação ou de verticalização, ao julgar meta de produção agressiva, ou ao calibrar ambição de um plano de crescimento.
+description: Decompor custo e requisito até a restrição física da coisa, de baixo para cima, e atacar processo em vez de aceitar benchmark de mercado. Acionar ao repensar estrutura de custo industrial, ao avaliar automação ou verticalização, ou ao julgar meta agressiva.
 user-invocable: false
 ---
 

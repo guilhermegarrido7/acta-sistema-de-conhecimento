@@ -1,11 +1,6 @@
 ---
 name: matching-cargos
-description: >
-  Método de equivalência entre os cargos do cliente e os cargos das empresas
-  participantes, generalizado a partir dos casos FJS e PASB. Acionar em
-  classificação de cargos em família, nível funcional e critério de
-  nivelamento, definição do grau de match, tratamento de padrões de problema
-  já catalogados, e registro da base B4_MATCHING.
+description: Estabeleça a equivalência entre os cargos do cliente e os das empresas participantes. Acionar ao classificar cargo em família, nível funcional e critério de nivelamento, ao definir o grau de match, ao tratar padrão de problema já catalogado, ou ao registrar a base de matching.
 ---
 
 # Matching de cargos por conteúdo
@@ -44,7 +39,7 @@ o indicador de qualidade da pesquisa que um cliente sofisticado vai pedir.
 
 ## 3. Padrões de problema reconhecíveis (catálogo entre projetos)
 
-Os dois casos que originaram este plugin (FJS, saúde e terceiro setor; PASB,
+Os dois casos que originaram este plugin (Caso A, saúde e terceiro setor; Caso B,
 educação internacional) mostraram o mesmo fenômeno com sintomas diferentes: a
 estrutura interna do cliente não tem correspondência direta no vocabulário do
 mercado. Cada padrão abaixo é genérico, com o caso de origem citado como
@@ -56,7 +51,7 @@ repete antes de assumir que o cliente é um caso inteiramente novo.
 **Padrão:** o cliente usa um título para a posição máxima da estrutura que não
 corresponde ao vocabulário usual do setor.
 
-**Caso de origem:** FJS não usa Diretor, VP ou CEO. O cargo máximo é
+**Caso de origem:** Caso A não usa Diretor, VP ou CEO. O cargo máximo é
 Superintendente.
 
 **Tratamento:** não comparar por título. Coletar do participante três
@@ -70,7 +65,7 @@ como critério de equivalência.
 **Padrão:** um cargo do cliente cobre toda a organização, enquanto o cargo
 homônimo no mercado cobre apenas uma unidade, filial ou departamento.
 
-**Caso de origem:** um Coordenador de RH da FJS cobre toda a Fundação; no
+**Caso de origem:** um Coordenador de RH do Caso A cobre toda a organização; no
 mercado, o cargo homônimo costuma cobrir uma unidade.
 
 **Tratamento:** registrar `fator_escala` em B4 como a razão entre o escopo do
@@ -86,7 +81,7 @@ unilateralmente pelo consultor.
 convencional (Júnior, Pleno, Sênior, ou numeração romana), e sim outro
 critério que precisa ser explicitado antes do matching.
 
-**Caso de origem:** no PASB, os níveis de Professor eram definidos por
+**Caso de origem:** no Caso B, os níveis de Professor eram definidos por
 qualificação acadêmica (Bacharel, Pós-graduado, Mestrado, Doutorado) e por
 tempo de contrato, não por série lecionada. A tradução adotada foi: Educação
 Infantil equivalente a Professor Bacharel, Fundamental I a Pós-graduado,
@@ -104,9 +99,9 @@ Sem esse passo, o matching de nível é arbitrário mesmo que pareça preciso.
 remuneração segue lógicas diferentes, e misturá-las na mesma estatística
 produz um número sem significado.
 
-**Casos de origem:** FJS segmenta unidade própria (referência de mercado
+**Casos de origem:** Caso A segmenta unidade própria (referência de mercado
 privado) de unidade sob contrato de gestão (teto do funcionalismo, tabela
-SUS). PASB segmenta escola regional de escola nacional, porque o padrão de
+SUS). Caso B segmenta escola regional de escola nacional, porque o padrão de
 prática varia entre os dois grupos.
 
 **Tratamento:** identificar toda população interna heterogênea na Etapa 1 e
@@ -120,9 +115,9 @@ probabilidade de aparecer com frequência suficiente no painel, por ser
 nomenclatura interna, função regulada, ou função emergente sem verbete comum
 de mercado.
 
-**Casos de origem:** FJS tinha cargos como Assessor Administrativo da
+**Casos de origem:** Caso A tinha cargos como Assessor Administrativo da
 Superintendência, Agilista Master e Business Partners, todos marcados como
-alto risco de amostra insuficiente desde a Etapa 1. PASB tinha o cargo de
+alto risco de amostra insuficiente desde a Etapa 1. Caso B tinha o cargo de
 Professor Residente, sujeito a bolsa regulada e não a salário de mercado.
 
 **Tratamento:** marcar esses cargos como alto risco já na Etapa 1 e decidir

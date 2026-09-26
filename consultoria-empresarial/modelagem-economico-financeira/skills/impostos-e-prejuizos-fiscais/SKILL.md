@@ -1,6 +1,6 @@
 ---
 name: impostos-e-prejuizos-fiscais
-description: Direcionar o tratamento tributário no modelo, com regime de apuração, alíquota efetiva, imposto corrente e diferido, e o aproveitamento de prejuízo fiscal com o limite de 30%. Acionar ao definir a alíquota do modelo, ao encontrar prejuízo fiscal acumulado, ao avaliar troca de regime, ou ao conferir a linha de impostos.
+description: Direcionar o tratamento tributário no modelo, com regime de apuração, alíquota efetiva, imposto corrente e diferido, e o aproveitamento de prejuízo fiscal com o limite de 30%. Acionar ao definir a alíquota do modelo, ao encontrar prejuízo fiscal acumulado, ou ao conferir a linha de impostos.
 ---
 
 # Impostos e prejuízos fiscais: onde o mid-market brasileiro mais erra

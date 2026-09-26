@@ -84,7 +84,7 @@ ponderar por headcount faria a estatística de mercado ser puxada por esse
 participante, o que descaracteriza a referência externa. A ponderada é útil para
 dimensionar impacto financeiro (C-20), não para definir referência de mercado.
 Documentar as duas e explicar a diferença no relatório. Esta situação foi
-observada no caso FJS (17.400 colaboradores, dominante em cargos assistenciais)
+observada no Caso A (17.400 colaboradores, dominante em cargos assistenciais)
 e é comum em qualquer cliente de grande porte relativo ao seu painel.
 
 ### C-04 Mediana
@@ -176,9 +176,9 @@ Excel: `=salario*(1+$i$1)^(meses/12)`
 
 Crítico em qualquer setor com jornadas heterogêneas dentro do mesmo escopo.
 Exemplos já observados: no setor saúde, convivem 44h administrativas, 36h de
-enfermagem, 30h de fisioterapia, 20h de médicos e escalas 12x36 (caso FJS); em
+enfermagem, 30h de fisioterapia, 20h de médicos e escalas 12x36 (Caso A); em
 educação, convivem professores mensalistas e horistas remunerados por
-carga-aula (caso PASB, ver C-26 para a mensalização de horista).
+carga-aula (Caso B, ver C-26 para a mensalização de horista).
 
 ```
 salario_hora            = salario_mensal / (jornada_semanal * 4,3333)
@@ -375,7 +375,7 @@ da amplitude praticada, e não apenas em relação ao centro.
 
 ### C-19 Índice de competitividade agregado
 
-Para família, nível funcional ou total da Fundação:
+Para família, nível funcional ou total da organização:
 ```
 indice_agregado = soma(comparatio_c * headcount_c) / soma(headcount_c)
 ```
@@ -407,7 +407,7 @@ custo_equalizacao_cargo = (mediana_mercado - salario_cliente) * headcount * 13,3
 Calcular somente para cargos com comparatio abaixo do limite definido pelo cliente.
 Três cenários obrigatórios no relatório: equalizar ao Q1, à mediana e ao Q3, com o
 custo anual total de cada um. Este é o número que a diretoria do cliente costuma
-usar para justificar orçamento, e no caso FJS foi o principal insumo da defesa do
+usar para justificar orçamento, e no Caso A foi o principal insumo da defesa do
 equilíbrio econômico-financeiro nos contratos de gestão com o poder público.
 
 ### C-21 Prevalência de benefício
@@ -422,7 +422,7 @@ Excel: `=CONT.SE(faixa;"Sim")/CONT.VALORES(faixa)`
 ## Grupo 6. Cálculos de generalização (ativar conforme o cartão de identidade)
 
 Os três cálculos abaixo não estavam no primeiro projeto que originou este livro
-(FJS, moeda única, sem horista). Foram generalizados a partir do caso PASB, que
+(Caso A, moeda única, sem horista). Foram generalizados a partir do Caso B, que
 convivia com moeda mista e com cargos horistas. Ativar cada um conforme o
 cartão de identidade do projeto atual (`SKILL.md`, seção 1).
 
@@ -461,7 +461,7 @@ salario_mensal_equivalente = valor_hora_ou_aula * carga_horaria_referencia_mensa
 ```
 
 A carga horária de referência é declarada pelo cliente e documentada na nota
-metodológica. No caso PASB, a referência foi 176 horas-aula mensais para
+metodológica. No Caso B, a referência foi 176 horas-aula mensais para
 professores horistas.
 
 Regra de segmentação: cargos horistas mensalizados entram no mesmo pool
@@ -481,7 +481,7 @@ se n_incumbentes = 0 então flag_excluido = VERDADEIRO
                         e motivo_exclusao = "cargo sem ocupante"
 ```
 
-Generalizado a partir do caso PASB (cargo de especialização sem ocupante,
+Generalizado a partir do Caso B (cargo de especialização sem ocupante,
 desconsiderado da amostra). Diferente de um outlier (C-15), este não é um
 valor discrepante, é a ausência de base amostral para o cargo naquele
 participante. A linha nunca entra em B7, mas fica registrada em B6 com o

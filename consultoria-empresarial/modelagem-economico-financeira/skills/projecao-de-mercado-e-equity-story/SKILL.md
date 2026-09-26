@@ -1,6 +1,6 @@
 ---
 name: projecao-de-mercado-e-equity-story
-description: Projetar mercado, market share e receita por um menu de métodos (top-down, bottom-up, convergência a peers, curva-S, regressão macro, teto regulatório) e amarrar o número a uma equity story sabatinada. Acionar ao projetar mercado ou market share, ao construir a tese de crescimento, ou ao estressar projeção otimista demais.
+description: Projetar mercado, market share e receita por um menu de métodos (top-down, bottom-up, convergência a peers, curva-S, regressão macro, teto regulatório) e amarrar o número a uma equity story sabatinada. Acionar ao projetar market share, ao construir a tese de crescimento, ou ao estressar projeção otimista.
 ---
 
 # Projeção de mercado e equity story: o número precisa de uma tese, não só de um método

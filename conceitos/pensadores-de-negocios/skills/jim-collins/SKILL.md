@@ -1,6 +1,6 @@
 ---
 name: collins
-description: Diagnosticar consistência de longo prazo: qual é o motor econômico único da empresa, que volante de crescimento ela gira, e em que estágio de disciplina ou de declínio está. Acionar ao articular equity story como volante, ao avaliar dependência do fundador, ou ao testar se o plano tem um conceito unificador.
+description: Diagnosticar consistência de longo prazo: qual o motor econômico único da empresa, que volante de crescimento ela gira, e em que estágio de disciplina ou declínio está. Acionar ao articular equity story como volante, ao avaliar dependência do fundador, ou ao testar o conceito unificador.
 user-invocable: false
 ---
 

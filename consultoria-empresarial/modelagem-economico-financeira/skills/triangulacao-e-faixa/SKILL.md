@@ -1,6 +1,6 @@
 ---
 name: triangulacao-e-faixa
-description: Triangular o valor por múltiplos, transações precedentes e DCF, montar o football field e defender uma faixa em vez de um número. Acionar ao consolidar o resultado do valuation, ao selecionar comparáveis, ao discutir prêmio de controle ou desconto de iliquidez, ou ao construir a ponte de EV para equity value.
+description: Triangular o valor por múltiplos, transações precedentes e DCF, montar o football field e defender uma faixa em vez de um número. Acionar ao consolidar o resultado do valuation, ao selecionar comparáveis, ou ao construir a ponte de EV para equity value.
 ---
 
 # Triangulação e faixa: o valuation que se apresenta

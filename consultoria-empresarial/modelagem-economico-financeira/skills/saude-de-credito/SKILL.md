@@ -1,6 +1,6 @@
 ---
 name: saude-de-credito
-description: Diagnosticar liquidez, cobertura e alavancagem do alvo e estimar a capacidade de dívida que ele sustenta, incluindo EBITDAR para operação arrendada. Acionar ao analisar endividamento, ao avaliar quanto um comprador financeiro consegue pagar, ao checar covenant, ou ao testar a sobrevivência do negócio num downturn.
+description: Diagnosticar liquidez, cobertura e alavancagem do alvo e estimar a capacidade de dívida que ele sustenta, incluindo EBITDAR para operação arrendada. Acionar ao analisar endividamento, ao avaliar quanto um comprador financeiro paga, ou ao testar a sobrevivência num downturn.
 ---
 
 # Saúde de crédito: a alavancagem que o negócio sustenta

@@ -1,6 +1,6 @@
 ---
 name: mcgrath
-description: Tratar vantagem competitiva como transitória e a arena, e não o setor, como unidade de análise, testando as premissas de um plano de crescimento antes que ele consuma capital. Acionar ao avaliar plano de expansão sem contrato firmado, ao ordenar premissas por incerteza e impacto, ao detectar ponto de inflexão e sinais periféricos, ou ao questionar vantagem dita sustentável.
+description: Tratar vantagem competitiva como transitória e a arena, não o setor, como unidade de análise, testando as premissas de um plano antes que ele consuma capital. Acionar ao avaliar expansão sem contrato firmado, ao ordenar premissas por incerteza, ou ao detectar inflexão.
 user-invocable: false
 ---
 

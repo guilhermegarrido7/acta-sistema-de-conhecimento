@@ -37,19 +37,19 @@ Antes da coleta, escreva as hipóteses que a pesquisa vai testar. Formular por
 projeto, a partir do contexto do cliente e dos motivadores declarados por ele.
 Exemplos reais dos dois casos de origem, para inspiração do formato:
 
-- Caso FJS, H1: o gap é maior nos cargos corporativos de gestão do que nos
+- Caso A, H1: o gap é maior nos cargos corporativos de gestão do que nos
   assistenciais, porque o comparável real do corporativo é grande grupo
   econômico, não hospital.
-- Caso FJS, H2: nos cargos assistenciais regidos por convenção e piso, o
+- Caso A, H2: nos cargos assistenciais regidos por convenção e piso, o
   cliente está alinhado ao mercado no salário base e defasado no pacote de
   benefícios.
-- Caso FJS, H3: a perda de talentos declarada se concentra em cargos com
+- Caso A, H3: a perda de talentos declarada se concentra em cargos com
   comparatio abaixo de 0,90 e com alta prevalência de remuneração variável no
   mercado, onde o cliente não paga variável.
-- Caso FJS, H4: unidades sob contrato de gestão apresentam gap estruturalmente
+- Caso A, H4: unidades sob contrato de gestão apresentam gap estruturalmente
   maior e não endereçável por política interna, o que exige recomendação
   distinta.
-- Caso PASB (ilustrativo, adaptável a outro setor): professores expatriados
+- Caso B (ilustrativo, adaptável a outro setor): professores expatriados
   estão posicionados mais competitivamente do que professores nacionais,
   porque a competição por esse talento é internacional.
 
@@ -68,7 +68,7 @@ junto com o cliente:
 | Relevantes (tipicamente 30 a 40% do escopo) | Headcount médio, boa comparabilidade de mercado | Matching padrão, análise estatística completa |
 | Cauda longa (restante) | Baixo headcount, alta especificidade | Matching por proxy ou família, análise agregada por família quando o n individual for insuficiente |
 
-No caso FJS (265 cargos), essas faixas corresponderam a aproximadamente 30 a
+No Caso A (265 cargos), essas faixas corresponderam a aproximadamente 30 a
 40 cargos críticos e 80 a 100 relevantes. Sem essa priorização, o esforço se
 distribui uniformemente e a etapa de análise é consumida por cargos que não
 movem decisão.

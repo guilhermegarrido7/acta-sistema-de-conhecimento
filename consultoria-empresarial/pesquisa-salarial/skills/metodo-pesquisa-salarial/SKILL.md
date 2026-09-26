@@ -1,6 +1,6 @@
 ---
 name: metodo-pesquisa-salarial
-description: Aplique o método ACTA de pesquisa de remuneração, com regras de ouro, cartão de identidade do projeto, mínimos de agregação e anonimização, convenções de base e protocolo de checkpoint. Acionar ao abrir um projeto de pesquisa salarial, ao decidir metodologia, ao definir o que pode ou não ser publicado, ou ao retomar um projeto em andamento.
+description: Aplique o método ACTA de pesquisa de remuneração, com regras de ouro, cartão de identidade do projeto, mínimos de agregação e anonimização, e convenções de base. Acionar ao abrir projeto de pesquisa salarial, ao decidir metodologia, ou ao definir o que pode ser publicado.
 user-invocable: false
 ---
 
@@ -35,7 +35,7 @@ qualquer tarefa:
 | ``modelagem-planilhas`` | Construção da base tratada e da tabela comparativa em Excel |
 | ``dashboard-powerbi`` | Modelo de dados, medidas DAX e publicação do painel |
 
-Este plugin nasceu do case FJS (planejamento) e do case PASB (concluído). O
+Este plugin nasceu do Caso A (planejamento) e do Caso B (concluído). O
 racional de cada decisão de generalização está em `../ESTUDO-BENCHMARKING.md`,
 um nível acima desta pasta. Ao encontrar uma situação nova que pareça específica
 demais para este template, ler esse estudo primeiro: ele explica o critério de
@@ -68,9 +68,9 @@ quando uma prática de um caso sobe para regra geral.
 ### Particularidades estruturais do cliente que mudam a metodologia
 
 Preencher esta subseção com o equivalente, para o cliente atual, das quatro
-particularidades identificadas no case FJS (porte incomum, nomenclatura sem
+particularidades identificadas no Caso A (porte incomum, nomenclatura sem
 equivalente de mercado, estrutura de gestão centralizada, populações internas
-heterogêneas) e do case PASB (moeda mista, horista, critério de nível por
+heterogêneas) e do Caso B (moeda mista, horista, critério de nível por
 qualificação, sub-painéis regional/nacional). Todo projeto tem pelo menos uma
 particularidade que muda uma decisão técnica; identificá-la na Etapa 1 evita
 descobri-la depois da coleta.
@@ -102,8 +102,8 @@ contratante.
 **R4. Segmentação obrigatória.** Todo resultado é apresentado por, no mínimo, o
 recorte principal do projeto. Quando envolver populações internas heterogêneas
 do cliente (ver cartão de identidade), a segmentação também se aplica a elas.
-Este princípio veio da FJS (unidade própria versus contrato de gestão) e do
-PASB (escola regional versus nacional): é regra geral, não caso particular.
+Este princípio veio do Caso A (unidade própria versus contrato de gestão) e do
+Caso B (escola regional versus nacional): é regra geral, não caso particular.
 
 **R5. Escopo é escopo.** Atividades tipicamente fora do contrato de pesquisa de
 remuneração: estrutura de cargos e carreira, tabela salarial, enquadramento,

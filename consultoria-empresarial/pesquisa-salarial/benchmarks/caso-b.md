@@ -1,4 +1,4 @@
-# Caso de referência: PASB (Pan American School of Bahia)
+# Caso B
 
 Status: concluído. Usado como benchmark de conteúdo e de método para a
 generalização do plugin `pesquisa-salarial`. Não é reexecutável como projeto
@@ -6,7 +6,7 @@ vivo; é material de consulta.
 
 ## Resumo
 
-Pesquisa de remuneração e benefícios conduzida para a PASB, comparando-a a 22
+Pesquisa de remuneração e benefícios conduzida para o Caso B, comparando-a a 22
 escolas internacionais de porte semelhante (9 respondentes, taxa de 41%).
 Objetivo declarado: apoiar a elaboração ou atualização de Plano de Cargos,
 Carreira e Remuneração, com ganho de competitividade e equilíbrio entre
@@ -26,7 +26,7 @@ que se tornaram regra geral ou módulo do plugin:
 - Critério de nivelamento por qualificação acadêmica em vez de senioridade
   numérica (padrão 3.3 em `matching-cargos.md`).
 - Segmentação de sub-painel por natureza da unidade (escola regional versus
-  nacional), generalizando o mesmo requisito que a FJS aplicou a unidade
+  nacional), generalizando o mesmo requisito que o Caso A aplicou a unidade
   própria versus contrato de gestão.
 - Bloco de observações de tratamento de dados no corpo do relatório, não só
   no anexo.
@@ -43,8 +43,8 @@ que se tornaram regra geral ou módulo do plugin:
 
 ## Onde está o material original
 
-Deck de referência: `Relatório_PASB_-_Pesquisa_salarial.pptx`, usado como
-benchmark de conteúdo no planejamento do projeto FJS. Manter uma cópia de
-arquivo, se autorizado pelo cliente PASB, junto a este registro, ou apenas a
+Deck de referência: `Relatório_CasoB_-_Pesquisa_salarial.pptx`, usado como
+benchmark de conteúdo no planejamento do projeto do Caso A. Manter uma cópia de
+arquivo, se autorizado pelo cliente do Caso B, junto a este registro, ou apenas a
 referência de onde ela está arquivada, conforme a política de confidencialidade
 da ACTA para material de cliente anterior.

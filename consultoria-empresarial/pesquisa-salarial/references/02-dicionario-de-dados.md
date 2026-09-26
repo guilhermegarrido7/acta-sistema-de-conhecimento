@@ -7,7 +7,7 @@ Pergunta que não alimenta cálculo é atrito desnecessário na taxa de resposta
 deve sair.
 
 Este template incorpora dois módulos que só apareceram em um dos dois casos de
-origem (conversão cambial e mensalização de horista, ambos do caso PASB), mas
+origem (conversão cambial e mensalização de horista, ambos do Caso B), mas
 que qualquer projeto futuro pode precisar. Ativar ou não cada módulo é decisão
 da Etapa 1, registrada no cartão de identidade do `SKILL.md`.
 
@@ -58,7 +58,7 @@ Grão: uma linha por cargo do participante mapeado a um cargo do cliente.
 | `n_incumbentes` | Inteiro | sim | Quantas pessoas ocupam este cargo hoje. Zero é resposta válida e leva à exclusão automática (ver seção 7) |
 | `regime_jornada` | Lista: Mensalista, Horista, Escala | sim | Determina qual normalização se aplica |
 | `jornada_semanal_h` | Número | sim, se mensalista ou escala | Horas contratuais semanais |
-| `carga_horaria_referencia_h` | Número | sim, se horista | Carga usada para mensalizar (ver seção 5). No caso PASB, 176 horas-aula |
+| `carga_horaria_referencia_h` | Número | sim, se horista | Carga usada para mensalizar (ver seção 5). No Caso B, 176 horas-aula |
 | `regime_escala` | Lista: Administrativo, 12x36, 12x60, Plantonista, Sobreaviso, Outro | sim, se aplicável ao setor | Determina a comparabilidade e o adicional |
 | `moeda` | Lista | sim | Se diferente da moeda de referência do projeto, ativa a conversão cambial |
 | `salario_base_minimo` | Moeda | sim | Menor valor base praticado no cargo, sem adicionais |
@@ -94,8 +94,8 @@ tratamento estatístico; alerta se amplitude (`maximo / minimo`) for superior a
 
 Coletar por participante e por nível funcional, não por cargo, para não
 multiplicar o esforço do respondente pelo número de cargos do escopo. A lista
-de benefícios abaixo combina o catálogo padrão do setor de saúde (case FJS) e
-o catálogo do setor de educação internacional (case PASB); em cada projeto,
+de benefícios abaixo combina o catálogo padrão do setor de saúde (Caso A) e
+o catálogo do setor de educação internacional (Caso B); em cada projeto,
 usar o subconjunto relevante e acrescentar o que for específico do setor do
 cliente.
 
@@ -140,7 +140,7 @@ sempre segmentada por regime.
 
 ## 7. Bloco F. Conversão cambial (ativar quando houver mais de uma moeda)
 
-Módulo generalizado a partir do caso PASB, que convivia com valores em real e
+Módulo generalizado a partir do Caso B, que convivia com valores em real e
 em dólar na mesma pesquisa (auxílios de expatriados).
 
 | Campo | Tipo | Notas |
@@ -192,9 +192,9 @@ Requisitos que a ferramenta precisa atender, em ordem de criticidade:
 6. Hospedagem e retenção compatíveis com LGPD e com a política de segurança
    da informação do cliente.
 
-O caso PASB validou Microsoft Forms puro em campo, para um escopo menor de
+O Caso B validou Microsoft Forms puro em campo, para um escopo menor de
 cargos e sem exigência de pré-preenchimento individual por participante. Para
-escopos grandes (dezenas ou centenas de cargos, como no caso FJS), o requisito
+escopos grandes (dezenas ou centenas de cargos, como no Caso A), o requisito
 1 tende a eliminar as ferramentas mais simples e favorecer planilha
 estruturada por participante, com Forms reservado ao bloco de benefícios.
 Registrar a decisão do projeto atual no log de auditoria com a justificativa.

@@ -14,3 +14,6 @@ __pycache__/
 
 # Saida do build, copiada de site/dist pelo package.json da raiz
 /dist/
+
+# Notas brutas de material de cliente: ficam na maquina, nunca no versionamento.
+docs/levantamentos/brief-*.md

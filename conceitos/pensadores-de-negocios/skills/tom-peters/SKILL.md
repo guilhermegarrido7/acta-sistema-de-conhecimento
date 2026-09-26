@@ -1,6 +1,6 @@
 ---
 name: tom-peters
-description: Diagnosticar alinhamento organizacional pelo modelo 7S (estratégia, estrutura, sistemas, pessoal, estilo, habilidades e valores) e localizar onde a cultura sabota a execução. Acionar ao avaliar risco de integração pós-fusão, ao explicar sinergia não capturada, ao medir viés à ação de uma organização, ou ao avaliar cultura em diligência qualitativa.
+description: Diagnosticar alinhamento organizacional pelo modelo 7S, de estratégia e estrutura a estilo e valores, e localizar onde a cultura sabota a execução. Acionar ao avaliar risco de integração pós-fusão, ao explicar sinergia não capturada, ou ao avaliar cultura em diligência.
 user-invocable: false
 ---
 

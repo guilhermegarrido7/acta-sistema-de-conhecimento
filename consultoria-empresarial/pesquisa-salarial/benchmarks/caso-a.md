@@ -1,4 +1,4 @@
-# Caso de referência: FJS (Fundação José Silveira)
+# Caso A
 
 Status: em planejamento. A pesquisa ainda não foi executada; este registro
 documenta apenas as decisões metodológicas já tomadas no planejamento, usadas
@@ -6,14 +6,14 @@ como benchmark de método (não de resultado) para o plugin `pesquisa-salarial`.
 Não conter, em nenhuma hipótese, dado de resultado de pesquisa, porque a
 coleta ainda não ocorreu.
 
-O trabalho vivo deste projeto está no Project dedicado à FJS, com o pacote
+O trabalho vivo deste projeto está no Project dedicado ao Caso A, com o pacote
 metodológico completo (`SKILL.md`, `references/`, `skills/`,
 `CHECKPOINT.md`), fora deste repositório de conhecimento. Este arquivo é
 apenas o resumo do que foi generalizado a partir dele.
 
 ## Resumo
 
-Pesquisa de Total Rewards para 265 cargos da FJS, comparando-a a um painel de
+Pesquisa de Total Rewards para 265 cargos do Caso A, comparando-a a um painel de
 instituições de saúde, terceiro setor e grandes grupos econômicos, em três
 recortes geográficos (Salvador, Nordeste, Brasil). Contrato 20833, R$
 57.000,00, 265 cargos, mínimo de 12 empresas por recorte.
@@ -48,7 +48,7 @@ que se tornaram regra geral ou módulo do plugin:
 
 ## Atualização deste registro
 
-Quando a pesquisa FJS for concluída, revisar este arquivo e o
+Quando a pesquisa do Caso A for concluída, revisar este arquivo e o
 `ESTUDO-BENCHMARKING.md` à luz do que realmente aconteceu na execução (não
 apenas no planejamento), e verificar se alguma decisão tomada durante a
 coleta ou a análise deveria subir do caso para o plugin.

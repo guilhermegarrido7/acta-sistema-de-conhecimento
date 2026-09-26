@@ -1,6 +1,6 @@
 ---
 name: ram-charan
-description: Reduzir o negócio aos fundamentos que o dono entende (caixa, margem, giro, crescimento e cliente) e diagnosticar por que o plano não sai do papel, ligando pessoas, estratégia e operações. Acionar ao avaliar capacidade de execução, ao testar o plano do vendedor, ao traduzir valor em linguagem de dono, ou ao desenhar rotina de acompanhamento.
+description: Reduzir o negócio aos fundamentos que o dono entende, caixa, margem, giro, crescimento e cliente, e diagnosticar por que o plano não sai do papel. Acionar ao avaliar capacidade de execução, ao testar o plano do vendedor, ou ao falar em linguagem de dono.
 user-invocable: false
 ---
 

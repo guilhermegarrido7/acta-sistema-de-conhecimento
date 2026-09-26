@@ -1,6 +1,6 @@
 ---
 name: koller
-description: Julgar se o crescimento proposto cria ou destrói valor, usando ROIC contra custo de capital, a hierarquia do crescimento, reversão à média setorial e o princípio do melhor proprietário. Acionar ao avaliar plano de crescimento, ao construir equity story, ao definir o comprador natural de um ativo, ou ao questionar projeção que promete margem e expansão ao mesmo tempo.
+description: Julgar se o crescimento proposto cria ou destrói valor, por ROIC contra custo de capital, hierarquia do crescimento e melhor proprietário. Acionar ao avaliar plano de crescimento, ao construir equity story, ou ao definir o comprador natural de um ativo.
 user-invocable: false
 ---
 

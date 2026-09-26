@@ -1,6 +1,6 @@
 ---
 name: relatorio-de-valuation
-description: Estruturar e produzir o relatório de valuation em PowerPoint na identidade visual ACTA, com capítulos, títulos-asserção, paleta e tipografia, convenções de tabela/gráfico/nota de rodapé. Acionar ao montar ou revisar o deck de valuation, ao definir a storyline do relatório, ao aplicar o design ACTA nos slides, ou ao rodar o checklist de qualidade visual antes de entregar.
+description: Estruturar e produzir o relatório de valuation em PowerPoint na identidade visual ACTA, com capítulos, títulos-asserção, paleta, tipografia e convenções de tabela e gráfico. Acionar ao montar ou revisar o deck de valuation, ao definir a storyline, ou ao rodar o checklist de qualidade visual.
 ---
 
 # Relatório de valuation: a identidade visual e a arquitetura do documento

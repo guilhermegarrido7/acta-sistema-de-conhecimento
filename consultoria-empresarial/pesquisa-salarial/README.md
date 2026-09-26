@@ -1,7 +1,7 @@
 # Pesquisa Salarial
 
 Metodologia ACTA para projetos de Pesquisa de Remuneração e Benefícios, generalizada a partir dos
-casos FJS e PASB. Uma skill por etapa do ciclo de vida, do escopo comercial ao encerramento.
+Casos A e B. Uma skill por etapa do ciclo de vida, do escopo comercial ao encerramento.
 
 > **Pré-requisito: instale `acta-way` antes.**
 > ```bash

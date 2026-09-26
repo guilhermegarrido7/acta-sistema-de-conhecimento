@@ -1,11 +1,6 @@
 ---
 name: estatistica-remuneracao
-description: >
-  Estatística aplicada a pesquisa de remuneração. Acionar em amostragem, definição
-  de mínimos, cálculo e interpretação de mín, Q1, média, mediana, Q3, máx, dispersão,
-  outliers, percentis e leitura de competitividade. As fórmulas ficam em
-  references/03-livro-de-calculos.md. Este módulo trata do julgamento: qual medida
-  usar, quando não publicar, como interpretar.
+description: Aplique estatística a pesquisa de remuneração, com o julgamento que as fórmulas não dão: qual medida usar, quando não publicar e como interpretar. Acionar em amostragem, mínimos de agregação, mín, quartis, média, mediana, dispersão, outliers, percentis e leitura de competitividade.
 ---
 
 # Estatística aplicada a remuneração
@@ -44,7 +39,7 @@ tipicamente de 40% a 60%.
 ### Regra de consolidação de recorte com amostra insuficiente (decidir na Etapa 1)
 
 É comum que um dos recortes planejados fique abaixo do mínimo amostral. No
-caso FJS, o recorte "Bahia interior" tinha apenas 6 empresas indicadas contra
+Caso A, o recorte "Bahia interior" tinha apenas 6 empresas indicadas contra
 o mínimo de 12, e a decisão foi entre consolidá-lo dentro do recorte
 "Nordeste" ou mantê-lo isolado.
 

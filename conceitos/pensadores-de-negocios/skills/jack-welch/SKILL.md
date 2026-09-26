@@ -1,6 +1,6 @@
 ---
 name: jack-welch
-description: Testar disciplina de portfólio e desempenho relativo: este negócio é nº 1 ou nº 2 no mercado que de fato disputa, e o que se faz com quem não é, entre consertar, vender ou fechar. Acionar ao decidir desinvestimento ou carve-out, ao definir o mercado endereçável real, ao revisar portfólio de linhas de negócio, ou ao avaliar candura e gestão de desempenho de um time.
+description: Testar disciplina de portfólio e desempenho relativo: este negócio é nº 1 ou nº 2 no mercado que de fato disputa, e o que se faz com quem não é. Acionar ao decidir desinvestimento ou carve-out, ao definir o mercado endereçável real, ou ao revisar portfólio.
 user-invocable: false
 ---
 

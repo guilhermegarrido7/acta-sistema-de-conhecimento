@@ -65,6 +65,31 @@ Rode antes de publicar:
 python scripts/validar-skills.py
 ```
 
+### O teto por plugin mede tokens, não skills
+
+A regra sempre quis dizer custo always-on; a contagem de skills era só o atalho para chegar nele. O
+validador passou a medir a coisa: soma o tamanho das `description` do plugin, divide por quatro e
+compara com **1.000 tokens**, que é o que toda sessão com aquele plugin instalado paga.
+
+Um plugin de catorze skills enxutas custa menos que um de dez com descrição no limite, e era isso
+que o atalho escondia.
+
+**Exceção declarada: `acta-pesquisa-salarial`.** São 18 skills e cerca de 1.150 tokens, e o número
+não fecha por aritmética: levar as dezoito descrições ao piso de 220 caracteres chegaria a ~1.020
+tokens, com toda a capacidade de roteamento no mínimo. As saídas seriam fundir etapas do ciclo de
+vida, que são etapas de verdade, ou dividir o plugin entre ciclo e técnica, o que obrigaria a
+instalar dois plugins para fazer um trabalho só. Nenhuma das duas compensa: quem instala este plugin
+está fazendo exatamente esse projeto, e paga o custo enquanto o faz. **O aviso do validador fica de
+pé de propósito**, porque um aviso explicado vale mais que um aviso suprimido.
+
+### A varredura de nome de cliente cobre todo `.md`
+
+A versão anterior varria uma lista de nomes de arquivo (`projeto.md`, `fundamentos.md`, `README.md` e
+`references/`). Lista de caminho permitido envelhece: a varredura total encontrou 89 ocorrências de
+dois clientes em `benchmarks/`, em `casos/` e no corpo de três `SKILL.md`, nenhum desses caminhos
+previsto na lista. Agora a varredura é total, e respeita o `.gitignore`, para não acusar arquivo que
+já está de propósito fora do versionamento.
+
 ### A relação de clientes
 
 Vive em `clientes.local.txt` na raiz, **fora do versionamento**: publicar a carteira da firma seria

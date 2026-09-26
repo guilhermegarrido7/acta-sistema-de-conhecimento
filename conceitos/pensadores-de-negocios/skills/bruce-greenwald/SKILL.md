@@ -1,6 +1,6 @@
 ---
 name: greenwald
-description: Testar se existe barreira de entrada real, a única força capaz de produzir retorno persistente acima do custo de capital, e traduzi-la em valor por reposição de ativos, EPV e crescimento. Acionar ao definir moat e barreira de entrada, ao explicar rentabilidade acima da média do setor, ao avaliar dominância local ou de nicho, ou ao decidir se crescimento merece valor.
+description: Testar se existe barreira de entrada real, a única força capaz de sustentar retorno acima do custo de capital, e traduzi-la em valor por reposição e EPV. Acionar ao definir moat, ao explicar rentabilidade acima da média do setor, ou ao decidir se crescimento merece valor.
 user-invocable: false
 ---
 

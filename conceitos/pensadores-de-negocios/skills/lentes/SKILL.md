@@ -1,6 +1,6 @@
 ---
 name: lentes
-description: Escolher a lente teórica adequada a uma análise e carregá-la, apresentando o que cada candidata enxerga e o que ela ignora antes de aplicar. Acionar ao pedir análise competitiva ou setorial, ao avaliar barreira de entrada, moat ou plano de crescimento, ao diagnosticar gestão ou modelo de negócio, ou ao aprofundar uma tese.
+description: Escolher a lente teórica adequada a uma análise e carregá-la, apresentando o que cada candidata enxerga e o que ela ignora antes de aplicar. Acionar ao pedir análise competitiva ou setorial, ao avaliar barreira de entrada, moat ou plano de crescimento, ou ao ler modelo de negócio.
 ---
 
 # Lentes: a porta de entrada da biblioteca teórica

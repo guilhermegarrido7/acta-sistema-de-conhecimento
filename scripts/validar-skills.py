@@ -125,7 +125,17 @@ def validar(raiz):
             erros.append(f"{rel}: sem frontmatter YAML (o `---` tem de ser a primeira linha).")
             continue
 
+        # YAML aceita escalar de bloco (`description: >` com o texto nas linhas seguintes), e o
+        # portal nao: ele leu ">" como se fosse a descricao inteira e publicou a skill sem
+        # descricao nenhuma, marcada com ~0 tokens, sem erro em lugar nenhum. Uma skill invisivel
+        # no catalogo e pior que uma skill fora do padrao, entao a forma de bloco e erro.
         desc = campos.get("description", "")
+        if desc.strip() in (">", "|", ">-", "|-", ">+", "|+"):
+            erros.append(
+                f"{rel}: `description` em escalar de bloco YAML. O portal nao interpreta essa "
+                "forma e publica a skill sem descricao. Escreva a descricao na mesma linha."
+            )
+            desc = ""
         if not desc:
             erros.append(f"{rel}: sem `description`, que é o que o Claude usa para rotear.")
         elif len(desc) > MAX_DESC:

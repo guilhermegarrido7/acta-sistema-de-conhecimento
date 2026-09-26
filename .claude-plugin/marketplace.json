@@ -113,6 +113,12 @@
       "source": "./governanca-riscos-compliance/programa-de-integridade",
       "category": "governanca-riscos-compliance",
       "description": "Implantação e teste de programa de integridade: pilares exigidos pela lei anticorrupção, código de conduta, canal de denúncias, due diligence de terceiros nos dois modos (homologação e investigação de vínculo), treinamento e comunicação, e o teste de efetividade do programa."
+    },
+    {
+      "name": "acta-auditoria-de-pesquisa",
+      "source": "./governanca-riscos-compliance/auditoria-de-pesquisa",
+      "category": "governanca-riscos-compliance",
+      "description": "Verificação independente de pesquisa e de indicador apurado por terceiro: crítica do instrumento e do dicionário de dados, aderência da amostra à população oficial, bateria de oito testes sobre a base, recontato do respondente com códigos padronizados, e a apuração do indicador com memória de cálculo publicável."
     }
   ]
 }

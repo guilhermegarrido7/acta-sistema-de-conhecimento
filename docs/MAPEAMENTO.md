@@ -234,6 +234,14 @@ Nesta ordem, porque cada um tem projeto real de onde extrair:
     contratante). As outras cinco skills se apoiam na lei anticorrupção e no decreto que a
     regulamenta, que enumeram os parâmetros do programa, mais o guia do DOJ e a ISO 37001.
 
+21. ✅ `acta-auditoria-de-pesquisa`, **por matéria-prima real**, e segundo plugin a nascer fora
+    do desenho original: ciclos mensais consecutivos de verificação de um indicador de qualidade
+    reportado a regulador, com dicionário de dados imposto por norma, acervo de gravações, base
+    oficial de movimento como fonte independente e recontato telefônico com tabela de códigos
+    padronizada, mais duas edições de apuração auditada de resultado decidido por avaliadores, de
+    onde vieram a memória de cálculo e o ajuste de base por conflito de interesse. O que o separa de
+    `acta-pesquisa-salarial` é a independência: lá a casa coleta, aqui a casa verifica quem coletou.
+
 ### P4: demais plugins
 
 Por demanda de engajamento real, seguindo o desenho da seção 3. Um plugin só sai de esqueleto quando

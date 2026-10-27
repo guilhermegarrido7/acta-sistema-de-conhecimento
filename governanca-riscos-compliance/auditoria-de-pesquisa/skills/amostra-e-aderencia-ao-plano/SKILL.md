@@ -92,6 +92,6 @@ número do operador. Duas divergências aparecem com frequência:
 
 | Se o assunto é | A skill é |
 |---|---|
-| Dimensionar amostra de teste de controle | `acta-controles-internos:teste-e-amostragem` |
+| Dimensionar amostra de teste de controle | `acta-controles-internos:teste-de-controle-e-amostragem` |
 | Painel de participantes de pesquisa própria | `acta-pesquisa-salarial:painel-de-participantes` |
 | Testar os registros um a um | `bateria-de-testes-de-base` |

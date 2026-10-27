@@ -1,5 +1,5 @@
 ---
-name: choudary
+name: sangeet-choudary
 description: Mapear a interação central de um negócio de dois lados, medir efeito de rede contra economia de escala e resolver ovo-e-galinha e multihoming. Acionar ao avaliar marketplace ou credenciamento de rede, ao testar se um alvo é plataforma, ou ao precificar moat de rede.
 user-invocable: false
 ---

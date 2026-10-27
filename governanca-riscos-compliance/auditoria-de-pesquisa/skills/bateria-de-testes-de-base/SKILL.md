@@ -81,7 +81,7 @@ Três disciplinas que fazem a planilha sobreviver à revisão:
 ## 4. Amostra da bateria
 
 A bateria é cara: T1 a T4 exigem ouvir a gravação inteira. Ela roda sobre uma **subamostra** da base,
-e o dimensionamento dela segue `acta-controles-internos:teste-e-amostragem`.
+e o dimensionamento dela segue `acta-controles-internos:teste-de-controle-e-amostragem`.
 
 Duas regras próprias deste trabalho:
 
@@ -111,5 +111,5 @@ esta leitura que alimenta a opinião sobre a base, e é ela que o contratante l�
 | Se o assunto é | A skill é |
 |---|---|
 | Confirmar com o respondente que a coleta ocorreu | `recontato-do-respondente` |
-| Dimensionar a subamostra | `acta-controles-internos:teste-e-amostragem` |
+| Dimensionar a subamostra | `acta-controles-internos:teste-de-controle-e-amostragem` |
 | Redigir o achado | `acta-metodo-auditoria:redacao-de-achados` |

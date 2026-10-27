@@ -1,5 +1,5 @@
 ---
-name: prahalad
+name: ck-prahalad
 description: Separar competência organizacional de ativo e de dependência do fundador, pelos três testes de core competence. Acionar ao avaliar moat que o vendedor atribui a saber-fazer, ao testar se uma capacidade sustenta vários mercados, ou ao calibrar ambição frente a recursos.
 user-invocable: false
 ---

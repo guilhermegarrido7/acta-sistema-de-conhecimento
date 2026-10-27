@@ -1,7 +1,7 @@
 {
   "name": "acta-planejamento-orcamentario",
-  "version": "0.1.0",
-  "description": "Construção e revisão de orçamento: premissas, orçamento base zero ou incremental, ciclo de aprovação, acompanhamento e análise de desvio.",
+  "version": "1.0.0",
+  "description": "Construção e revisão de orçamento empresarial driver-based: premissas e drivers, orçamento de receita por quantidade e preço, despesa por natureza e folha, CapEx e depreciação, ciclo e consolidação multiunidade, e análise de variação com reprevisão.",
   "author": {
     "name": "ACTA Advisory"
   }

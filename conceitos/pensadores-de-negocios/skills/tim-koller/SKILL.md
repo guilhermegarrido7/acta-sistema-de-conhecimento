@@ -1,5 +1,5 @@
 ---
-name: koller
+name: tim-koller
 description: Julgar se o crescimento proposto cria ou destrói valor, por ROIC contra custo de capital, hierarquia do crescimento e melhor proprietário. Acionar ao avaliar plano de crescimento, ao construir equity story, ou ao definir o comprador natural de um ativo.
 user-invocable: false
 ---

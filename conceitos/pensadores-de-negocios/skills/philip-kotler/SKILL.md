@@ -1,5 +1,5 @@
 ---
-name: kotler
+name: philip-kotler
 description: Estruturar mercado e demanda com STP, mix, jornada e valor do cliente, e confrontar a segmentação com a evidência de painel do Ehrenberg-Bass. Acionar ao dimensionar mercado endereçável, ao diagnosticar mix e precificação, ou ao escrever posicionamento de venda.
 user-invocable: false
 ---

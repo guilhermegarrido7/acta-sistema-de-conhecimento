@@ -10,7 +10,8 @@ reajuste, glosa, cancelamento de nota, cut-off, inadimplência e conciliação c
 > testes, a redação de achados e o tratamento de bases vivem lá e **não são repetidos aqui**. Cada
 > skill manda carregá-lo antes.
 >
-> **Status: completo.** As 6 skills do ciclo estão escritas.
+> **Status: completo.** As 7 skills estão escritas: as 6 do ciclo recorrente e a de fechamento de
+> evento.
 > Ver [docs/ROADMAP.md](../../docs/ROADMAP.md).
 
 ## O que faz
@@ -20,12 +21,16 @@ caixa ao razão: fixa o critério contratual e o preço vigente, testa a mediç�
 operacional independente e o aceite contra quem tem poder de aceitar, confronta o aceito com o
 faturado pelos dois lados da população, verifica a aderência tributária da emissão e o cancelamento,
 testa o corte de competência e a conciliação com o razão, e fecha no aging, na baixa lastreada em
-ingresso efetivo e na reperformance dos encargos de mora.
+ingresso efetivo e na reperformance dos encargos de mora. Cobre também o **fechamento financeiro de
+evento**, onde a receita vem de várias naturezas ao mesmo tempo e boa parte dela não passa pelo
+caixa: apura a receita real por natureza (patrocínio em dinheiro e em produto, permuta, cortesia,
+bebidas) contra a autorização de faturamento, e entrega a diferença mais a pendência documental.
 
 Traz o que é próprio do domínio e não existe no plugin de método: o ciclo em sete elos com a
 pergunta-mestra de cada, os sete blocos executáveis com o controle de melhor prática, os cinco pares
-de bases que têm de fechar, o padrão Plano A/B/C de degradação declarada da evidência, e os quatorze
-riscos codificados com a matriz risco × controle × teste.
+de bases que têm de fechar, o padrão Plano A/B/C de degradação declarada da evidência, os quatorze
+riscos codificados do ciclo recorrente mais os quatro de evento, e o padrão de confronto
+apuração-vs-autorização por natureza de receita.
 
 ## Skills
 
@@ -37,6 +42,7 @@ riscos codificados com a matriz risco × controle × teste.
 | `medicao-e-aceite` | 3 e 4 | Medição contra evidência operacional; aceite formal, anterior à nota e por quem tem poder; glosas conciliadas por número e data e a taxa de conversão; pesagem, integridade do registro e aferição metrológica. |
 | `faturamento-e-nf` | 5 e 7 | Faturamento integral do aceito pelos dois lados; aderência tributária por espécie de documento; cancelamento com motivo, alçada e prazo legal; cut-off nas viradas; conciliação faturamento × razão. |
 | `recebimento-e-inadimplencia` | 6 | Aging reconciliado ao razão; baixa × ingresso efetivo de recursos; reperformance de juros e multa em 100% dos títulos pagos em atraso; cobrança, interrupção e provisão. |
+| `receita-de-evento` | Variante | Fechamento financeiro de evento: a apuração por natureza contra a autorização de faturamento, patrocínio em dinheiro e em produto, permuta, cortesia, a conciliação de estoque de bebidas por SKU, e a diferença apurada mais a pendência documental. |
 
 ## Fluxo típico
 
@@ -49,6 +55,12 @@ carregados a cada bloco executado, e `redacao-de-achados` e `relatorio-de-audito
 A ordem não é burocrática: o critério contratual fixado no primeiro elo é o que sustenta o confronto
 dos seguintes. Auditar medição antes de fixar o preço vigente é construir conclusão sobre referência
 que ainda pode mudar.
+
+**Mandato de evento** substitui as skills de elo por `receita-de-evento`, que comprime o ciclo
+(contrato → apuração → confronto) e o abre por natureza de receita em vez de por elo, mantendo
+`ciclo-da-receita`, `matriz-de-riscos-da-receita` e o método carregados. É a variante para fechamento
+de show, festival ou feira, onde a receita não-caixa (patrocínio em produto, permuta, cortesia) é a
+parte de maior risco.
 
 Ao fechar, o que se aprendeu volta para a matriz (risco novo, controle novo, forma de testar) e o
 estado do engajamento vai para o checkpoint de `acta-way`.

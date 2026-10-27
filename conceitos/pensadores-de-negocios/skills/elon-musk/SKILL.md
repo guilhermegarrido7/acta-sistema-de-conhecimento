@@ -1,5 +1,5 @@
 ---
-name: musk
+name: elon-musk
 description: Decompor custo e requisito até a restrição física da coisa, de baixo para cima, e atacar processo em vez de aceitar benchmark de mercado. Acionar ao repensar estrutura de custo industrial, ao avaliar automação ou verticalização, ou ao julgar meta agressiva.
 user-invocable: false
 ---

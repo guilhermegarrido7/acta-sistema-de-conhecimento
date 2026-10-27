@@ -51,13 +51,13 @@ que perguntar:
 
 | Candidatas em disputa | O que perguntar |
 |---|---|
-| `porter` vs. `greenwald` | "Você quer entender por que o setor todo é rentável ou não, ou por que **esta** empresa tem retorno acima dos concorrentes?" |
-| `greenwald` vs. `mcgrath` | "A vantagem que você está avaliando é estrutural e estável, ou o setor está passando por uma inflexão?" |
-| `porter` vs. `choudary` | "O negócio vende para o cliente, ou **medeia** a interação entre dois grupos que se valorizam mutuamente?" |
-| `prahalad` vs. `greenwald` | "A vantagem está num **ativo** que a empresa tem, ou numa **capacidade** que a organização sabe fazer?" |
-| `christensen` vs. `kotler` | "A pergunta é sobre o job que o cliente contrata, ou sobre segmentar e posicionar num mercado já definido?" |
-| `collins` vs. `ram-charan` | "O diagnóstico é de **articulação** (a empresa não sabe dizer o que é) ou de **execução** (sabe, mas não sai do papel)?" |
-| `koller` vs. qualquer estratégica | "Você quer o mecanismo econômico quantificado, ou a explicação estratégica de por que ele existe?" |
+| `michael-porter` vs. `bruce-greenwald` | "Você quer entender por que o setor todo é rentável ou não, ou por que **esta** empresa tem retorno acima dos concorrentes?" |
+| `bruce-greenwald` vs. `rita-mcgrath` | "A vantagem que você está avaliando é estrutural e estável, ou o setor está passando por uma inflexão?" |
+| `michael-porter` vs. `sangeet-choudary` | "O negócio vende para o cliente, ou **medeia** a interação entre dois grupos que se valorizam mutuamente?" |
+| `ck-prahalad` vs. `bruce-greenwald` | "A vantagem está num **ativo** que a empresa tem, ou numa **capacidade** que a organização sabe fazer?" |
+| `clayton-christensen` vs. `philip-kotler` | "A pergunta é sobre o job que o cliente contrata, ou sobre segmentar e posicionar num mercado já definido?" |
+| `jim-collins` vs. `ram-charan` | "O diagnóstico é de **articulação** (a empresa não sabe dizer o que é) ou de **execução** (sabe, mas não sai do papel)?" |
+| `tim-koller` vs. qualquer estratégica | "Você quer o mecanismo econômico quantificado, ou a explicação estratégica de por que ele existe?" |
 
 Quando a resposta do usuário indicar que **mais de uma lente se aplica**, aplique mais de uma, e
 explicite onde elas discordam. Divergência entre lentes é informação, não problema: quando Porter diz
@@ -81,21 +81,21 @@ Carregue a skill escolhida e siga a mecânica dela. Ao aplicar, respeite duas re
 
 | A pergunta | Lente | Unidade de análise |
 |---|---|---|
-| Por que a rentabilidade média deste setor é o que é? | `porter` | a estrutura do setor |
-| Por que esta empresa ganha acima da média? Há barreira de entrada real? | `greenwald` | a barreira de entrada |
-| Quanto tempo essa vantagem dura? O setor está numa inflexão? | `mcgrath` | a arena e a duração |
-| Esta empresa está exposta a um entrante com modelo mais barato? | `christensen` | o modelo de negócio |
-| A vantagem é um ativo ou uma capacidade da organização? | `prahalad` | a competência |
-| O negócio é plataforma de dois lados ou cadeia linear? | `choudary` | a interação central |
+| Por que a rentabilidade média deste setor é o que é? | `michael-porter` | a estrutura do setor |
+| Por que esta empresa ganha acima da média? Há barreira de entrada real? | `bruce-greenwald` | a barreira de entrada |
+| Quanto tempo essa vantagem dura? O setor está numa inflexão? | `rita-mcgrath` | a arena e a duração |
+| Esta empresa está exposta a um entrante com modelo mais barato? | `clayton-christensen` | o modelo de negócio |
+| A vantagem é um ativo ou uma capacidade da organização? | `ck-prahalad` | a competência |
+| O negócio é plataforma de dois lados ou cadeia linear? | `sangeet-choudary` | a interação central |
 | Este negócio é nº 1 ou nº 2 no mercado que de fato disputa? | `jack-welch` | o portfólio |
 
 ### Valor e propriedade
 
 | A pergunta | Lente |
 |---|---|
-| Crescer nesta empresa cria ou destrói valor? | `koller` |
-| Quem deveria ser o dono deste ativo? | `koller` (best owner) |
-| Qual o valor do poder de lucro atual, separado do valor de crescimento? | `greenwald` (EPV) |
+| Crescer nesta empresa cria ou destrói valor? | `tim-koller` |
+| Quem deveria ser o dono deste ativo? | `tim-koller` (best owner) |
+| Qual o valor do poder de lucro atual, separado do valor de crescimento? | `bruce-greenwald` (EPV) |
 
 Para o **cálculo** (NOPAT, capital investido, ROIC, WACC, DCF, valor terminal, múltiplos), a
 resposta não está neste plugin. Está em `acta-modelagem-economico-financeira`. Este plugin dá a
@@ -109,30 +109,29 @@ explicação estratégica; aquele dá o número.
 
 | A pergunta | Lente |
 |---|---|
-| Como segmentar, posicionar e precificar num mercado definido? | `kotler` |
-| Que trabalho o cliente está contratando este produto para fazer? | `christensen` (jobs to be done) |
-| Como se constrói e se escala o lado da oferta numa rede pulverizada? | `choudary` |
+| Como segmentar, posicionar e precificar num mercado definido? | `philip-kotler` |
+| Que trabalho o cliente está contratando este produto para fazer? | `clayton-christensen` (jobs to be done) |
+| Como se constrói e se escala o lado da oferta numa rede pulverizada? | `sangeet-choudary` |
 
 ### Gestão, execução e organização
 
 | A pergunta | Lente |
 |---|---|
 | Por que o plano existe e não sai do papel? | `ram-charan` |
-| A empresa sabe dizer o que ela é e onde é a melhor? | `collins` (porco-espinho) |
-| Como se descreve a estratégia de um negócio verticalizado? | `collins` (flywheel) |
+| A empresa sabe dizer o que ela é e onde é a melhor? | `jim-collins` (porco-espinho) |
+| Como se descreve a estratégia de um negócio verticalizado? | `jim-collins` (flywheel) |
 | A organização está alinhada em sistemas, estilo, valores e gente? | `tom-peters` (7S) |
-| A gestão depende do fundador? Há profundidade de time? | `ram-charan` + `prahalad` |
-| Este negócio deve ser consertado, vendido ou fechado? | `jack-welch` + `koller` |
+| A gestão depende do fundador? Há profundidade de time? | `ram-charan` + `ck-prahalad` |
+| Este negócio deve ser consertado, vendido ou fechado? | `jack-welch` + `tim-koller` |
 
 ### Tecnologia, custo e ambição
 
 | A pergunta | Lente |
 |---|---|
-| O custo desta operação pode ser reconstruído de baixo para cima? | `musk` (primeiros princípios, índice de idiota) |
-| Que parte do custo deste negócio está exposta a compressão por IA? | `amodei` |
-| Esta tecnologia vai desabar de preço e destravar demanda? | `diamandis` |
+| O custo desta operação pode ser reconstruído de baixo para cima? | `elon-musk` (primeiros princípios, índice de idiota) |
+| Que parte do custo deste negócio está exposta a compressão por IA? | `dario-amodei` |
 
-**Ressalva sobre este bloco:** `musk`, `amodei` e `diamandis` são **doutrina de operador, não
+**Ressalva sobre este bloco:** `elon-musk` e `dario-amodei` são **doutrina de operador, não
 framework analítico**: vivem em ensaio, entrevista e biografia, mudam no tempo, e os autores têm
 interesse comercial no resultado. As skills dizem isso na abertura. Não são a lente certa para a
 maioria dos diagnósticos de empresa tradicional, e o roteador deve dizer isso quando o usuário pedir
@@ -144,24 +143,24 @@ As colisões mais frequentes, e o critério:
 
 | Colisão | O critério de escolha |
 |---|---|
-| `porter` × `greenwald` | Média do setor vs. desvio da empresa. Greenwald reduz as cinco forças a uma: barreira de entrada. Para alvo regional com licença e densidade logística, Greenwald costuma render mais. |
-| `greenwald` × `mcgrath` | Vantagem estável vs. vantagem transitória. Se o setor está em inflexão regulatória ou tecnológica, a premissa de estabilidade de Greenwald falha. |
-| `prahalad` × `greenwald` | Capacidade organizacional vs. ativo posicional. Em empresa familiar, os três testes de competência essencial de Prahalad servem para separar competência real de dependência do fundador. |
-| `christensen` × `mcgrath` | Ambos tratam de ruptura. Christensen explica o mecanismo pelo qual o incumbente falha; McGrath dá a ferramenta de decisão sob incerteza. |
-| `kotler` × marketing baseado em evidência | O aparato de Kotler é contestado empiricamente (Byron Sharp / Ehrenberg-Bass) em segmentação e diferenciação. A skill `kotler` registra a crítica. |
-| `collins` × `jack-welch` | Ambos são doutrina de praticante com base empírica frágil ou contestada, e as skills dizem isso. |
-| `musk` × `porter` | Reconstruir custo de baixo para cima vs. aceitar a estrutura do setor. Em setor regulado, "questionar todo requisito" pode significar violar norma cuja razão de existir não é arbitrária. |
+| `michael-porter` × `bruce-greenwald` | Média do setor vs. desvio da empresa. Greenwald reduz as cinco forças a uma: barreira de entrada. Para alvo regional com licença e densidade logística, Greenwald costuma render mais. |
+| `bruce-greenwald` × `rita-mcgrath` | Vantagem estável vs. vantagem transitória. Se o setor está em inflexão regulatória ou tecnológica, a premissa de estabilidade de Greenwald falha. |
+| `ck-prahalad` × `bruce-greenwald` | Capacidade organizacional vs. ativo posicional. Em empresa familiar, os três testes de competência essencial de Prahalad servem para separar competência real de dependência do fundador. |
+| `clayton-christensen` × `rita-mcgrath` | Ambos tratam de ruptura. Christensen explica o mecanismo pelo qual o incumbente falha; McGrath dá a ferramenta de decisão sob incerteza. |
+| `philip-kotler` × marketing baseado em evidência | O aparato de Kotler é contestado empiricamente (Byron Sharp / Ehrenberg-Bass) em segmentação e diferenciação. A skill `philip-kotler` registra a crítica. |
+| `jim-collins` × `jack-welch` | Ambos são doutrina de praticante com base empírica frágil ou contestada, e as skills dizem isso. |
+| `elon-musk` × `michael-porter` | Reconstruir custo de baixo para cima vs. aceitar a estrutura do setor. Em setor regulado, "questionar todo requisito" pode significar violar norma cuja razão de existir não é arbitrária. |
 
 ## Onde as lentes servem no trabalho da casa
 
 | Entregável | Lentes que costumam render |
 |---|---|
-| Estudo setorial | `porter` para a estrutura, `greenwald` para a barreira, `mcgrath` para a inflexão, `jack-welch` para a tese de consolidação |
-| Equity story e teaser | `greenwald` para o moat, `collins` (flywheel) para negócio verticalizado, `prahalad` para competência |
-| Tese de CAP no valuation | `greenwald` e `mcgrath`: a duração da vantagem é a mesma tese do moat, e o material não pode contradizer o modelo |
-| Avaliação do plano do vendedor | `mcgrath` (discovery-driven planning: premissas ordenadas por incerteza × impacto), `ram-charan` (os três processos) |
-| Diagnóstico de consultoria | `ram-charan`, `collins`, `tom-peters` |
-| Segmentação de compradores | `koller` (best owner), `jack-welch` (portfólio) |
+| Estudo setorial | `michael-porter` para a estrutura, `bruce-greenwald` para a barreira, `rita-mcgrath` para a inflexão, `jack-welch` para a tese de consolidação |
+| Equity story e teaser | `bruce-greenwald` para o moat, `jim-collins` (flywheel) para negócio verticalizado, `ck-prahalad` para competência |
+| Tese de CAP no valuation | `bruce-greenwald` e `rita-mcgrath`: a duração da vantagem é a mesma tese do moat, e o material não pode contradizer o modelo |
+| Avaliação do plano do vendedor | `rita-mcgrath` (discovery-driven planning: premissas ordenadas por incerteza × impacto), `ram-charan` (os três processos) |
+| Diagnóstico de consultoria | `ram-charan`, `jim-collins`, `tom-peters` |
+| Segmentação de compradores | `tim-koller` (best owner), `jack-welch` (portfólio) |
 
 ## O que esta skill não faz
 

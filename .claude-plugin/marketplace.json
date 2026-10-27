@@ -46,7 +46,7 @@
       "name": "acta-revenue-assurance",
       "source": "./governanca-riscos-compliance/revenue-assurance",
       "category": "governanca-riscos-compliance",
-      "description": "Auditoria do ciclo da receita ponta a ponta: contrato e cadastro, medição e aceite, glosas, faturamento e nota fiscal, cut-off, recebimento e inadimplência, com a matriz de riscos da receita e o padrão de degradação de evidência."
+      "description": "Auditoria do ciclo da receita ponta a ponta: contrato e cadastro, medição e aceite, glosas, faturamento e nota fiscal, cut-off, recebimento e inadimplência, mais o fechamento financeiro de evento por natureza (patrocínio, permuta, cortesia, bebidas), com a matriz de riscos da receita e o padrão de degradação de evidência."
     },
     {
       "name": "acta-excelencia-operacional",
@@ -59,6 +59,18 @@
       "source": "./consultoria-empresarial/planejamento-estrategico",
       "category": "consultoria-empresarial",
       "description": "Planejamento estratégico em quatro workshops: diagnóstico de posicionamento, propósito visão e valores, análise de ambientes, direcionadores e mapa estratégico, desdobramento em metas e orçamento, e o painel de acompanhamento."
+    },
+    {
+      "name": "acta-planejamento-orcamentario",
+      "source": "./consultoria-empresarial/planejamento-orcamentario",
+      "category": "consultoria-empresarial",
+      "description": "Construção e revisão de orçamento empresarial driver-based: premissas e drivers, receita por quantidade e preço, despesa por natureza e folha, CapEx e depreciação, ciclo e consolidação multiunidade, e análise de variação com reprevisão em rolling forecast."
+    },
+    {
+      "name": "acta-dados-e-analytics",
+      "source": "./consultoria-empresarial/dados-e-analytics",
+      "category": "consultoria-empresarial",
+      "description": "Analytics financeiro de consolidação: diagnóstico e escopo de dados, ingestão e tratamento de base crua, qualidade e validação contra fonte autoritativa, reclassificação gerencial, consolidação multiempresa e intercompany, modelo analítico e visualização, e insight pronto para decisão."
     },
     {
       "name": "acta-controles-internos",

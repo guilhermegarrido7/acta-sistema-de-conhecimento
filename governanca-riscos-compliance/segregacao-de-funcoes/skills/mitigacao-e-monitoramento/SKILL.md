@@ -138,7 +138,8 @@ Dois pontos que fazem esse registro valer alguma coisa:
 
 **Quem aceita tem de ter alçada sobre o risco.** Gerente financeiro não aceita, em nome da Companhia,
 o risco de desvio no próprio desembolso. Aceitação sobe para diretoria, sócio ou conselho, conforme a
-governança, e a instância correta é a mesma de `acta-governanca:instancias-e-alcadas`.
+governança — na instância formal de alçada da Companhia (definição de instâncias e alçadas é tema do
+plugin `acta-governanca`, ainda não publicado).
 
 **A aceitação tem prazo e gatilho de reavaliação.** Concentração aceita porque a área tem três
 pessoas deixa de ser aceitável quando ela tem oito. Escreva o gatilho: efetivo da área, volume de

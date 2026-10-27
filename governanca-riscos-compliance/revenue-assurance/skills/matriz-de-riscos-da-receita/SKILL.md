@@ -16,7 +16,9 @@ mitiga, e como cada um se testa.
 
 ## 1. Os quatorze riscos do ciclo de receita
 
-Processo `REC`. O controle da terceira coluna é o de **melhor prática de mercado**, não o normativo
+Processo `REC`. Os quatorze abaixo são o núcleo do ciclo de receita recorrente; os quatro riscos de
+evento (`REC.R15`–`REC.R18`) vêm logo depois e só se aplicam a fechamento de evento. O controle da
+terceira coluna é o de **melhor prática de mercado**, não o normativo
 interno do cliente: quando a política interna do mandato tratar do tema, cite-a pelo assunto, sem
 transcrever código de item. Severidade é sugestão de partida; calibre no caso, com
 `redacao-de-achados`.
@@ -40,6 +42,22 @@ transcrever código de item. Severidade é sugestão de partida; calibre no caso
 
 ★ = risco que faltava nos programas de receita da casa até o confronto com um registro de riscos de
 vendas e faturamento de referência. Ver §2.
+
+### Riscos de receita de evento
+
+Os quatro riscos abaixo (`REC.R15` a `REC.R18`) são próprios de **fechamento financeiro de evento**
+(show, festival, feira), onde a receita vem de várias naturezas e boa parte dela não passa pelo
+caixa. Aplicam-se quando o mandato cobre esse tipo de operação; a mecânica está em `receita-de-evento`.
+Declare-os inaplicáveis nos mandatos de receita recorrente.
+
+| Código | Elo | Risco | Controle (melhor prática) | Como se testa | WP | Sev. |
+|---|---|---|---|---|---|---|
+| `REC.R15` ◆ | Patrocínio | Cota de patrocínio sem contrato assinado, ou valor praticado divergente do contratado e da autorização de faturamento | Contrato por cota antes do evento; AF conciliada ao contrato e ao razão | Apuração própria × contrato × AF, lançamento a lançamento, com as colunas de pendência (falta AF, falta contrato) | REC.04 | Alta |
+| `REC.R16` ◆ | Receita não-caixa | Patrocínio em produto ou permuta avaliado a valor inflado, sem contrapartida recebida, ou sem parâmetro de avaliação | Avaliação da contrapartida a valor comprovável; evidência física de recebimento do produto ou serviço | Nota de entrada do produto × valor da cota; evidência da permuta recebida × AF | REC.04 | Alta |
+| `REC.R17` ◆ | Cortesia | Cortesia concedida sem alçada; despesa (mão de obra temporária, ajuda de custo) lançada como cortesia | Cortesia autorizada em alçada; classificação pela natureza do lançamento, não pelo rótulo | Relação de cortesias × autorização; separação renúncia × despesa por natureza | REC.04 | Média |
+| `REC.R18` ◆ | Estoque de evento | Bebida ou insumo consumido sem venda registrada; perda não apurada; estoque final divergente | Conciliação de estoque por SKU no período do evento, com consumo aberto | Estoque inicial (NF) − consumo − perdas = final esperado × contado, por SKU | INV.01 | Alta |
+
+◆ = risco de receita de evento, aplicável só a mandato de fechamento de evento. Ver `receita-de-evento`.
 
 ## 2. Os quatro riscos que faltavam
 

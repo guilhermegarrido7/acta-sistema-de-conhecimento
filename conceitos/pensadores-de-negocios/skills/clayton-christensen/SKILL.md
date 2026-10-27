@@ -1,5 +1,5 @@
 ---
-name: christensen
+name: clayton-christensen
 description: Ler a empresa como modelo de negócio preso à própria estrutura de custos, e o cliente como alguém contratando uma solução para um progresso. Acionar ao avaliar ameaça de entrante de baixo custo, ao explicar por que o incumbente não reage, ou ao ver o que o cliente compra.
 user-invocable: false
 ---

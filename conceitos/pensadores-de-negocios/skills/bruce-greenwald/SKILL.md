@@ -1,5 +1,5 @@
 ---
-name: greenwald
+name: bruce-greenwald
 description: Testar se existe barreira de entrada real, a única força capaz de sustentar retorno acima do custo de capital, e traduzi-la em valor por reposição e EPV. Acionar ao definir moat, ao explicar rentabilidade acima da média do setor, ou ao decidir se crescimento merece valor.
 user-invocable: false
 ---

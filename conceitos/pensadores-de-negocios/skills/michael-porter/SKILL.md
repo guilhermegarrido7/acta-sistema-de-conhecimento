@@ -1,5 +1,5 @@
 ---
-name: porter
+name: michael-porter
 description: Analisar a estrutura econômica de um setor para explicar por que sua rentabilidade média é alta ou baixa, e onde estão barreiras e poder de barganha. Acionar ao estudar atratividade setorial, ao definir posicionamento genérico, ou ao separar estratégia de eficácia operacional.
 user-invocable: false
 ---

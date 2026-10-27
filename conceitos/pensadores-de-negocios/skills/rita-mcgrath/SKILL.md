@@ -1,5 +1,5 @@
 ---
-name: mcgrath
+name: rita-mcgrath
 description: Tratar vantagem competitiva como transitória e a arena, não o setor, como unidade de análise, testando as premissas de um plano antes que ele consuma capital. Acionar ao avaliar expansão sem contrato firmado, ao ordenar premissas por incerteza, ou ao detectar inflexão.
 user-invocable: false
 ---

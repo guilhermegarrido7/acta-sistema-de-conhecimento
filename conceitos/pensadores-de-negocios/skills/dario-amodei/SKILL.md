@@ -1,5 +1,5 @@
 ---
-name: amodei
+name: dario-amodei
 description: Projetar a trajetória de capacidade de sistemas de IA e traduzi-la em exposição de custo, preço e vantagem competitiva. Acionar ao avaliar o efeito de IA sobre um setor, ao estimar quanto do custo de um alvo é cognitivo rotineiro, ou ao julgar tese intensiva em software.
 user-invocable: false
 ---

@@ -18,24 +18,26 @@ ACTA: Sistema de Conhecimento
 │   └── Pensadores de Negócios ✅ ........ lentes teóricas roteadas por pergunta
 │
 ├── Consultoria Empresarial
-│   ├── _metodo .......................... como se conduz um projeto de consultoria
-│   ├── Planejamento Estratégico          ├── M&A Sell Side / Buy Side ✅
-│   ├── Planejamento Orçamentário         ├── Modelagem Econômico-Financeira ✅
+│   ├── _metodo ✅ ....................... como se conduz um projeto de consultoria
+│   ├── Planejamento Estratégico ✅       ├── M&A Sell Side / Buy Side ✅
+│   ├── Planejamento Orçamentário ✅      ├── Modelagem Econômico-Financeira ✅
 │   ├── Modelos de Operações Inteligentes ├── Análise de Aderência e Seleção de ERP
-│   ├── Centro de Serviços Compartilhados ├── Perfis de Acesso e Segregação de Funções
-│   ├── Modelos de Custeio                ├── Dados e Analytics
+│   ├── Centro de Serviços Compartilhados ├── Perfis de Acesso e Segregação de Funções ✅
+│   ├── Modelos de Custeio                ├── Dados e Analytics ✅
 │   ├── Redução Estratégica de Custos     ├── Plano de Cargos, Carreira e Remuneração
 │   ├── Transformação Comercial           ├── Pesquisa Salarial ✅
-│   ├── Excelência Operacional            ├── Avaliação de Desempenho
+│   ├── Excelência Operacional ✅         ├── Avaliação de Desempenho
 │   └──                                   └── Remuneração Variável
 │
 └── Governança, Riscos e Compliance
     ├── _metodo ✅ ....................... como se audita na ACTA
-    ├── Governança                        ├── Auditoria de Folha de Pagamento
-    ├── Gestão de Riscos                  ├── Auditoria de Estoques
-    ├── Auditoria Interna da Receita      ├── Auditoria de Compras
-    ├── Programa de Integridade           ├── Auditoria de Marketing
-    ├── Controles Internos                └── Auditoria de Produção
+    ├── Governança                        ├── Auditoria de Folha de Pagamento ✅
+    ├── Gestão de Riscos ✅               ├── Auditoria de Estoques ✅
+    ├── Auditoria Interna da Receita ✅   ├── Auditoria de Compras ✅
+    ├── Programa de Integridade ✅        ├── Auditoria de Marketing
+    ├── Controles Internos ✅            └── Auditoria de Produção
+    ├── Auditoria de Convênios ✅
+    ├── Auditoria de Pesquisa ✅
     ├── Forense
     └── ESG
 ```

@@ -22,6 +22,12 @@ const itens = [
   { href: '/skills',   rotulo: 'Skills' },
 ];
 const ativo = (href) => rota === href || rota.startsWith(href + '/');
+
+// Data do build: o portal é gerado do repositório a cada publicação, e o rodapé diz de quando é
+// o retrato que o leitor está vendo.
+const atualizado = new Intl.DateTimeFormat('pt-BR', {
+  timeZone: 'America/Bahia', day: '2-digit', month: '2-digit', year: 'numeric',
+}).format(new Date());
 ---
 <!doctype html>
 <html lang="pt-BR">
@@ -36,12 +42,7 @@ const ativo = (href) => rota === href || rota.startsWith(href + '/');
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE} />
     <meta property="og:locale" content="pt_BR" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap"
-    />
+    <link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -98,7 +99,7 @@ const ativo = (href) => rota === href || rota.startsWith(href + '/');
         </div>
         <div class="base">
           <span>ACTA Advisory · uso interno</span>
-          <span>Gerado de <code>acta-sistema-de-conhecimento</code></span>
+          <span>Gerado de <code>acta-sistema-de-conhecimento</code> em {atualizado}</span>
         </div>
       </div>
     </footer>
@@ -123,6 +124,29 @@ const ativo = (href) => rota === href || rota.startsWith(href + '/');
           setTimeout(() => { botao.textContent = 'copiar'; }, 1800);
         });
         bloco.appendChild(botao);
+      });
+
+      // Link de âncora para uma seção que vive dentro de um acordeão fechado (o índice da página
+      // de projeto aponta para elas): abre o acordeão, senão o leitor cai num título recolhido.
+      const abrirAlvo = () => {
+        const id = decodeURIComponent(location.hash.slice(1));
+        const alvo = id && document.getElementById(id);
+        if (!alvo) return;
+        if (alvo.tagName === 'DETAILS') alvo.open = true;
+        for (let d = alvo.parentElement?.closest('details'); d; d = d.parentElement?.closest('details')) d.open = true;
+      };
+      window.addEventListener('hashchange', abrirAlvo);
+      abrirAlvo();
+
+      // Impressão: abre os acordeões antes e devolve ao estado anterior depois.
+      let fechados = [];
+      window.addEventListener('beforeprint', () => {
+        fechados = [...document.querySelectorAll('details:not([open])')];
+        fechados.forEach((d) => { d.open = true; });
+      });
+      window.addEventListener('afterprint', () => {
+        fechados.forEach((d) => { d.open = false; });
+        fechados = [];
       });
     </script>
   </body>

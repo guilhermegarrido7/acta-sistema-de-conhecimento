@@ -9,6 +9,19 @@ const { plugins, categorias } = catalogo();
 const tiposDeProjeto = plugins.filter((p) => p.ehTipoDeProjeto).length;
 const etapasEscritas = plugins.reduce((t, p) => t + p.skills.filter((s) => !s.esqueleto).length, 0);
 const areas = categorias.filter((c) => c.plugins.some((p) => p.ehTipoDeProjeto)).length;
+
+// Contagem de cada área, no atalho do herói e no título do grupo: tipos de projeto quando a área
+// tem engajamento; plugins quando é base comum (fundação, biblioteca de conceitos).
+const contagemDaArea = (c) => {
+  const n = c.plugins.filter((p) => p.ehTipoDeProjeto).length;
+  if (n) return `${n} ${n === 1 ? 'tipo de projeto' : 'tipos de projeto'}`;
+  return `${c.plugins.length} ${c.plugins.length === 1 ? 'plugin' : 'plugins'}`;
+};
+// As áreas com engajamento vêm primeiro, no atalho e no catálogo: é o que o consultor procura.
+// A fundação e a biblioteca de conceitos, que vêm junto, ficam no fim.
+const atalhos = [...categorias].sort(
+  (a, b) => Number(b.plugins.some((p) => p.ehTipoDeProjeto)) - Number(a.plugins.some((p) => p.ehTipoDeProjeto))
+);
 ---
 
 <Base
@@ -16,18 +29,36 @@ const areas = categorias.filter((c) => c.plugins.some((p) => p.ehTipoDeProjeto))
   descricao="O Claude configurado para trabalhar do jeito que a ACTA trabalha, sem precisar aprender comando nenhum."
 >
   <section class="heroi">
-    <div class="envelope">
-      <span class="selo">Para toda a equipe, sem experiência prévia</span>
-      <h1>O Claude já sabe como a ACTA <em>trabalha</em>.</h1>
-      <p class="abertura">
-        Este site liga o Claude ao jeito da casa de fazer cada tipo de projeto. Você não precisa
-        aprender comando nenhum: instala uma vez e, nas conversas seguintes, o Claude já entende as
-        etapas, as regras e o formato de entrega da ACTA sem você pedir.
-      </p>
-      <div class="acoes">
-        <a href="/comecar" class="botao botao--forte">Instalar em 5 minutos</a>
-        <a href="/projetos" class="botao botao--claro">Ver o método do meu projeto</a>
+    <div class="envelope heroi-grade">
+      <div>
+        <span class="selo">Para toda a equipe, sem experiência prévia</span>
+        <h1>O Claude já sabe como a ACTA <em>trabalha</em>.</h1>
+        <p class="abertura">
+          Este site liga o Claude ao jeito da casa de fazer cada tipo de projeto. Você não precisa
+          aprender comando nenhum: instala uma vez e, nas conversas seguintes, o Claude já entende as
+          etapas, as regras e o formato de entrega da ACTA sem você pedir.
+        </p>
+        <div class="acoes">
+          <a href="/comecar" class="botao botao--forte">Instalar em 5 minutos</a>
+          <a href="#catalogo" class="botao botao--claro">Ver o método do meu projeto</a>
+        </div>
+        <p class="heroi-numeros">
+          <b>{tiposDeProjeto}</b> tipos de projeto · <b>{etapasEscritas}</b> etapas de método escritas ·
+          {' '}<b>{areas}</b> áreas da firma
+        </p>
       </div>
+
+      <aside class="atalhos" aria-labelledby="atalhos-titulo">
+        <h2 id="atalhos-titulo">Ir direto à área</h2>
+        {atalhos.map((c) => (
+          <a class="area" href={`#area-${c.slug}`}>{c.rotulo}<span>{contagemDaArea(c)}</span></a>
+        ))}
+        <form action="/busca" method="get" role="search">
+          <label for="busca-heroi" class="visualmente-oculto">Buscar no portal</label>
+          <input id="busca-heroi" name="q" type="search" placeholder="Buscar skill ou termo" autocomplete="off" />
+          <button type="submit">Buscar</button>
+        </form>
+      </aside>
     </div>
   </section>
 
@@ -37,12 +68,16 @@ const areas = categorias.filter((c) => c.plugins.some((p) => p.ehTipoDeProjeto))
       <h2>Escolha pelo projeto, não pela ferramenta</h2>
       <p class="abertura">
         Você não precisa decidir qual peça instalar: decide qual projeto está conduzindo. No Claude
-        Code, o plugin do projeto traz junto os plugins que ele requer.
+        Code, o plugin do projeto traz junto os plugins de que depende, a começar pelo ACTA Way, a
+        base comum de todos.
       </p>
-      {categorias.map((c) => (
-        <div class="grupo">
-          <h3>{c.rotulo}</h3>
-          <div class="grade">
+      {atalhos.map((c) => (
+        <div class="grupo" id={`area-${c.slug}`}>
+          <div class="area-titulo">
+            <h3>{c.rotulo}</h3>
+            <span>{contagemDaArea(c)}</span>
+          </div>
+          <div class={c.plugins.length === 1 ? 'grade grade--larga' : 'grade'}>
             {c.plugins.map((p) => <CartaoPlugin p={p} nivel={4} />)}
           </div>
         </div>
@@ -194,16 +229,6 @@ const areas = categorias.filter((c) => c.plugins.some((p) => p.ehTipoDeProjeto))
       <p style="margin-top:1.5rem">
         <a href="/comecar" class="botao botao--teal">Ver o passo a passo completo</a>
       </p>
-    </section>
-
-    <section class="secao">
-      <span class="sobrescrito">Números</span>
-      <h2>O que já está pronto</h2>
-      <div class="numeros" style="margin-top:1.5rem">
-        <div><b>{tiposDeProjeto}</b><span>tipos de projeto cobertos</span></div>
-        <div><b>{etapasEscritas}</b><span>etapas de método escritas</span></div>
-        <div><b>{areas}</b><span>áreas da firma</span></div>
-      </div>
     </section>
   </div>
 </Base>

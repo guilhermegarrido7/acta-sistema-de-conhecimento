@@ -2,7 +2,9 @@
 import Pagina from '../../layouts/Pagina.astro';
 import CartaoPlugin from '../../components/CartaoPlugin.astro';
 import { catalogo } from '../../lib/catalogo.js';
-const { categorias } = catalogo();
+// Mesma ordem do início: áreas com engajamento primeiro; fundação e conceitos, que vêm junto, no fim.
+const temProjeto = (c) => Number(c.plugins.some((p) => p.ehTipoDeProjeto));
+const categorias = [...catalogo().categorias].sort((a, b) => temProjeto(b) - temProjeto(a));
 ---
 
 <Pagina
@@ -11,10 +13,15 @@ const { categorias } = catalogo();
   descricao="Catálogo de plugins por tipo de projeto."
   abertura="Um plugin por tipo de engajamento. Cada um traz as etapas do ciclo de vida daquele projeto e o formato do entregável de cada etapa."
 >
+  <p class="nota" style="margin:0">
+    Todo plugin traz junto o <a href="/projetos/acta-way"><code>acta-way</code></a>, a base comum da
+    casa. O cartão só diz "requer" quando há dependência além dela.
+  </p>
+
   {categorias.map((c) => (
-    <section class="secao">
+    <section class="secao" id={`area-${c.slug}`}>
       <h2>{c.rotulo}</h2>
-      <div class="grade">
+      <div class={c.plugins.length === 1 ? 'grade grade--larga' : 'grade'}>
         {c.plugins.map((p) => <CartaoPlugin p={p} custo />)}
       </div>
     </section>
@@ -26,8 +33,12 @@ const { categorias } = catalogo();
       <table>
         <tbody>
           <tr>
-            <th style="width:10rem"><span class="etiqueta completo">Completo</span></th>
-            <td>Todas as etapas do ciclo de vida têm metodologia escrita.</td>
+            <th style="width:10rem">sem rótulo</th>
+            <td>
+              Completo: todas as etapas do ciclo de vida têm metodologia escrita. A página do projeto
+              mostra o rótulo <span class="etiqueta completo">Completo</span>; o cartão, não, porque
+              todo plugin publicado está nesse estado.
+            </td>
           </tr>
           <tr>
             <th><span class="etiqueta parcial">Parcial</span></th>
@@ -37,10 +48,10 @@ const { categorias } = catalogo();
             </td>
           </tr>
           <tr>
-            <th>requer</th>
+            <th>requer também</th>
             <td>
-              Os plugins que precisam estar instalados junto, lidos das dependências que o plugin
-              declara. No Claude Code eles entram na mesma instalação.
+              Os plugins além do <code>acta-way</code> que precisam estar instalados junto, lidos das
+              dependências que o plugin declara. No Claude Code eles entram na mesma instalação.
             </td>
           </tr>
           <tr>

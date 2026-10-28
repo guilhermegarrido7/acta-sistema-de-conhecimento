@@ -15,6 +15,9 @@ const { s, p } = Astro.props;
 const relacionadas = p.skills.filter((x) => x !== s);
 // Fora do padrão "o que faz. Acionar ao...", a description vai inteira para a abertura.
 const abertura = s.gatilhos.length > 0 && s.oQueFaz ? s.oQueFaz : s.descricao;
+// Na lateral estreita, o título da skill aparece só até os dois-pontos ("Teaser" em vez de
+// "Teaser: duas páginas para conseguir uma reunião"); o título inteiro fica no title do link.
+const tituloCurto = (t) => t.split(/:\s/)[0];
 ---
 
 <Pagina
@@ -32,92 +35,96 @@ const abertura = s.gatilhos.length > 0 && s.oQueFaz ? s.oQueFaz : s.descricao;
     {s.esqueleto && <span class="etiqueta parcial">a escrever</span>}
   </div>
 
-  {s.esqueleto && (
-    <div class="aviso aviso--atencao">
-      <p>
-        <strong>A metodologia desta etapa ainda não foi escrita.</strong> A skill existe como
-        marcador do que falta no plugin.
-      </p>
+  <div class="duas-colunas">
+    <div class="principal">
+      {s.esqueleto && (
+        <div class="aviso aviso--atencao">
+          <p>
+            <strong>A metodologia desta etapa ainda não foi escrita.</strong> A skill existe como
+            marcador do que falta no plugin.
+          </p>
+        </div>
+      )}
+
+      {s.gatilhos.length > 0 && (
+        <section class="secao">
+          <h2>Use quando…</h2>
+          <ul class="gatilhos">
+            {s.gatilhos.map((g) => <li>{g}</li>)}
+          </ul>
+        </section>
+      )}
+
+      {!s.esqueleto && (
+        <section class="secao">
+          <h2>Como ela entra em ação</h2>
+          {s.manual ? (
+            <p>
+              <strong>Manual.</strong> O Claude não a carrega sozinho: a descrição dela fica fora do
+              contexto. Para usar, digite <code>/{s.nome}</code> no início da mensagem.
+            </p>
+          ) : (
+            <p>
+              O Claude a carrega sozinho quando o assunto aparece na conversa.
+              {s.invocavelPeloUsuario && <> Para forçar, digite <code>/{s.nome}</code> no início da mensagem.</>}
+            </p>
+          )}
+          {!s.invocavelPeloUsuario && (
+            <p>
+              Ela fica fora do menu de <code>/</code> porque é conhecimento de fundo: outras skills a
+              puxam quando precisam do conceito exato. A descrição continua no contexto, então o Claude
+              também a carrega sozinho quando o assunto aparece.
+            </p>
+          )}
+        </section>
+      )}
+
+      {s.referencias.length > 0 && (
+        <section class="secao">
+          <h2>Material de referência</h2>
+          <p>
+            Arquivos que a skill carrega só quando precisa do detalhe. Aqui ficam os títulos; o conteúdo
+            vem com o plugin.
+          </p>
+          <ul class="titulos">
+            {s.referencias.map((r) => <li id={r.ancora}>{r.titulo}</li>)}
+          </ul>
+        </section>
+      )}
     </div>
-  )}
 
-  {s.gatilhos.length > 0 && (
-    <section class="secao">
-      <h2>Use quando…</h2>
-      <ul class="gatilhos">
-        {s.gatilhos.map((g) => <li>{g}</li>)}
-      </ul>
-    </section>
-  )}
-
-  {!s.esqueleto && (
-    <section class="secao">
-      <h2>Como ela entra em ação</h2>
-      {s.manual ? (
-        <p>
-          <strong>Manual.</strong> O Claude não a carrega sozinho: a descrição dela fica fora do
-          contexto. Para usar, digite <code>/{s.nome}</code> no início da mensagem.
+    <aside class="lateral" aria-label="Instalação e outras skills do plugin">
+      <section class="bloco">
+        <h2>Como obter</h2>
+        <p style="margin-top:0">
+          A skill vem com o plugin <a href={p.url}><code>{p.nome}</code></a>.
+          {p.requerTodos.length > 0 && (
+            <> Ele requer {p.requerTodos.map((d, i) => <>{i > 0 && ', '}<code>{d.nome}</code></>)}, que o Claude Code instala junto.</>
+          )}
         </p>
-      ) : (
+        <div class="comando"><code>{p.instalacao}</code></div>
         <p>
-          O Claude a carrega sozinho quando o assunto aparece na conversa.
-          {s.invocavelPeloUsuario && <> Para forçar, digite <code>/{s.nome}</code> no início da mensagem.</>}
+          O <a href="/comecar">guia de instalação</a> cobre o Claude Code, o Claude Desktop e o teste
+          que confirma que o plugin carregou.
         </p>
-      )}
-      {!s.invocavelPeloUsuario && (
-        <p>
-          Ela fica fora do menu de <code>/</code> porque é conhecimento de fundo: outras skills a
-          puxam quando precisam do conceito exato. A descrição continua no contexto, então o Claude
-          também a carrega sozinho quando o assunto aparece.
-        </p>
-      )}
-    </section>
-  )}
+      </section>
 
-  {s.referencias.length > 0 && (
-    <section class="secao">
-      <h2>Material de referência</h2>
-      <p>
-        Arquivos que a skill carrega só quando precisa do detalhe. Aqui ficam os títulos; o conteúdo
-        vem com o plugin.
-      </p>
-      <ul class="titulos">
-        {s.referencias.map((r) => <li id={r.ancora}>{r.titulo}</li>)}
-      </ul>
-    </section>
-  )}
-
-  {relacionadas.length > 0 && (
-    <section class="secao">
-      <h2>Outras skills do mesmo plugin</h2>
-      <div class="lista lista--titulos">
-        {relacionadas.map((r) => (
-          <a href={r.url}>
-            <span class="nome">
-              {r.titulo}
-              {r.manual && <span class="etiqueta">manual</span>}
-            </span>
-            <span class="oque">{r.oQueFaz || r.descricao}</span>
-          </a>
-        ))}
-      </div>
-      <p style="margin-top:1rem"><a href={p.url}>← Voltar para {p.titulo}</a></p>
-    </section>
-  )}
-
-  <section class="secao">
-    <h2>Como obter</h2>
-    <p>
-      Skill não se instala sozinha: ela vem com o plugin
-      {' '}<a href={p.url}><code>{p.nome}</code></a>.
-      {p.requerTodos.length > 0 && (
-        <> Ele requer {p.requerTodos.map((d, i) => <>{i > 0 && ', '}<code>{d.nome}</code></>)}, que o Claude Code instala junto.</>
+      {relacionadas.length > 0 && (
+        <section class="bloco">
+          <h2>Neste plugin</h2>
+          <ul class="irmas">
+            {relacionadas.map((r) => (
+              <li>
+                <a href={r.url} title={r.titulo !== tituloCurto(r.titulo) ? r.titulo : undefined}>
+                  {tituloCurto(r.titulo)}
+                  {r.manual && <span class="etiqueta" style="margin-left:.4rem">manual</span>}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p><a href={p.url}>Ver o projeto {p.titulo}</a></p>
+        </section>
       )}
-    </p>
-    <div class="comando"><code>{p.instalacao}</code></div>
-    <p>
-      O <a href="/comecar">guia de instalação</a> cobre o Claude Code e o Claude Desktop, o teste que
-      confirma que o plugin carregou e como remover depois.
-    </p>
-  </section>
+    </aside>
+  </div>
 </Pagina>

@@ -16,14 +16,30 @@ const totalDaCasa = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x
     <a href="/projetos" class="botao botao--linha">Prefiro escolher pelo tipo de projeto →</a>
   </p>
 
-  <section class="secao">
+  <section class="secao" id="metodologia">
     <h2>Metodologia da ACTA</h2>
-    {categorias.map((c, i) => (
+
+    {/* O filtro só aparece com JavaScript: sem ele, o campo seria uma caixa que não faz nada. */}
+    <div class="filtro" hidden>
+      <label for="filtro-skills">Filtrar as {totalDaCasa} skills da casa</label>
+      <input
+        id="filtro-skills"
+        type="search"
+        autocomplete="off"
+        placeholder="Ex.: data room, folha, ROIC, amostragem"
+        aria-describedby="filtro-resultado"
+      />
+      <p class="nota" id="filtro-resultado" aria-live="polite"></p>
+    </div>
+
+    {categorias.map((c, i) => {
+      const n = c.plugins.reduce((t, p) => t + p.skills.length, 0);
+      return (
       <details class="sanfona" open={i === 0}>
-        <summary>{c.rotulo} <span class="etiqueta" style="margin-left:.5rem">{c.plugins.reduce((t, p) => t + p.skills.length, 0)} skills</span></summary>
+        <summary><span>{c.rotulo}</span><span class="etiqueta contador">{n} {n === 1 ? 'skill' : 'skills'}</span></summary>
         <div class="miolo">
           {c.plugins.map((p) => (
-            <>
+            <div class="grupo-plugin">
               <h3>
                 <a href={p.url}>{p.titulo}</a>
                 <span class="etiqueta" style="margin-left:.5rem">{p.skills.length}</span>
@@ -44,12 +60,67 @@ const totalDaCasa = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x
                   </article>
                 ))}
               </div>
-            </>
+            </div>
           ))}
         </div>
       </details>
-    ))}
+      );
+    })}
   </section>
+
+  <script is:inline>
+    // Filtro do índice: procura em título, descrição e identificador de cada skill, sem acento e
+    // sem diferença de caixa. Todos os termos digitados têm de aparecer. As áreas com resultado
+    // abrem; as sem resultado somem. Campo vazio devolve a página ao estado inicial.
+    (() => {
+      const caixa = document.querySelector('.filtro');
+      const secao = document.getElementById('metodologia');
+      if (!caixa || !secao) return;
+      caixa.hidden = false;
+      const campo = caixa.querySelector('input');
+      const saida = document.getElementById('filtro-resultado');
+      const sanfonas = [...secao.querySelectorAll('details.sanfona')];
+      const inicial = sanfonas.map((d) => d.open);
+      const grupos = [...secao.querySelectorAll('.grupo-plugin')];
+      const norm = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+      const cartoes = [...secao.querySelectorAll('.cartao')].map((c) => ({ c, texto: norm(c.textContent) }));
+      let espera;
+
+      const aplicar = () => {
+        const termos = norm(campo.value).split(/\s+/).filter(Boolean);
+        if (termos.length === 0) {
+          cartoes.forEach(({ c }) => { c.hidden = false; });
+          grupos.forEach((g) => { g.hidden = false; });
+          sanfonas.forEach((d, i) => { d.hidden = false; d.open = inicial[i]; });
+          saida.textContent = '';
+          return;
+        }
+        let total = 0;
+        cartoes.forEach(({ c, texto }) => {
+          const casa = termos.every((t) => texto.includes(t));
+          c.hidden = !casa;
+          if (casa) total += 1;
+        });
+        grupos.forEach((g) => { g.hidden = !g.querySelector('.cartao:not([hidden])'); });
+        sanfonas.forEach((d) => {
+          const tem = Boolean(d.querySelector('.cartao:not([hidden])'));
+          d.hidden = !tem;
+          d.open = tem;
+        });
+        if (total === 0) {
+          saida.innerHTML = 'Nenhuma skill com esses termos. <a href="/busca?q=' +
+            encodeURIComponent(campo.value.trim()) + '">Procurar no portal inteiro</a>.';
+        } else {
+          saida.textContent = total === 1 ? '1 skill encontrada.' : total + ' skills encontradas.';
+        }
+      };
+
+      campo.addEventListener('input', () => {
+        clearTimeout(espera);
+        espera = setTimeout(aplicar, 120);
+      });
+    })();
+  </script>
 
   <section class="secao">
     <h2>De uso geral</h2>

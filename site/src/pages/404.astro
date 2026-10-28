@@ -9,6 +9,25 @@ import Pagina from '../layouts/Pagina.astro';
   abertura="O endereço pode estar errado, ou o conteúdo pode ter mudado de lugar: o catálogo é gerado do repositório, então uma skill renomeada muda de endereço junto."
 >
   <section class="secao">
+    <h2>Procure pelo que você queria abrir</h2>
+    <form action="/busca" method="get" role="search" class="busca-rapida">
+      <label for="busca-404" class="visualmente-oculto">Buscar no portal</label>
+      <input id="busca-404" name="q" type="search" placeholder="Nome da skill, do projeto ou um termo" autocomplete="off" />
+      <button type="submit">Buscar</button>
+    </form>
+    <script is:inline>
+      // O endereço que falhou costuma ser uma skill renomeada: o último trecho dele vira o termo
+      // sugerido na caixa ("/skills/ciclo-ptp" sugere "ciclo ptp").
+      (() => {
+        const campo = document.getElementById('busca-404');
+        const partes = location.pathname.split('/').filter((s) => s && !/^(index|404)(\.html)?$/i.test(s));
+        const ultimo = decodeURIComponent(partes.pop() || '');
+        if (campo && ultimo) campo.value = ultimo.replace(/[-_]+/g, ' ');
+      })();
+    </script>
+  </section>
+
+  <section class="secao">
     <h2>Por onde seguir</h2>
     <div class="grade">
       <article class="cartao">

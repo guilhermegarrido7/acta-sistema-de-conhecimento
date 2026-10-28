@@ -1,20 +1,29 @@
 ---
 /* Cartão de plugin nos catálogos (início e /projetos). nivel é o nível do título do cartão,
    para a hierarquia de cabeçalhos seguir a da página em que ele entra. custo mostra o custo
-   always-on, que só interessa no catálogo completo. */
+   always-on, que só interessa no catálogo completo.
+
+   O cartão mostra só o que diferencia um plugin do outro. Todo plugin depende do acta-way e,
+   publicado, está completo: repetir isso em vinte cartões é ruído. Por isso "requer" lista só a
+   dependência além do acta-way (o catálogo avisa uma vez, no topo), e o rótulo de status só
+   aparece quando o plugin não está completo. */
 const { p, nivel = 3, custo = false } = Astro.props;
 const Titulo = `h${nivel}`;
+const BASE = 'acta-way';
+const alemDaBase = p.requerTodos.filter((d) => d.nome !== BASE);
+const completo = String(p.status).trim().toLowerCase() === 'completo';
 ---
 <article class="cartao">
   <Titulo><a href={p.url}>{p.titulo}</a></Titulo>
-  <p>{p.descricao}</p>
-  <p class="requer">
-    {p.requerTodos.length > 0
-      ? <>requer {p.requerTodos.map((d, i) => <>{i > 0 && ', '}<code>{d.nome}</code></>)}</>
-      : 'sem dependências'}
-  </p>
+  <p class="resumo">{p.descricao}</p>
+  {p.nome === BASE && <p class="requer">Base de todos os plugins: entra junto com qualquer um deles.</p>}
+  {alemDaBase.length > 0 && (
+    <p class="requer">
+      requer também {alemDaBase.map((d, i) => <>{i > 0 && ', '}<code>{d.nome}</code></>)}
+    </p>
+  )}
   <div class="pe">
-    <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>
+    {!completo && <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>}
     <span>{p.skills.length} {p.skills.length === 1 ? 'skill' : 'skills'}</span>
     {custo && <span>~{p.custoAlwaysOn} tok/sessão</span>}
   </div>

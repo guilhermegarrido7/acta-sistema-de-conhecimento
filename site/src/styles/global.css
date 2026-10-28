@@ -13,6 +13,28 @@
      ênfase, regular (400) no corpo.
    - Âmbar só como semáforo de status (rótulo "Parcial", aviso de atenção), nunca decorativo. */
 
+/* Figtree servida do próprio portal, sem chamada ao Google Fonts: nenhum IP de leitor sai para
+   terceiro e a página não espera outro domínio. Cada arquivo é a fonte variável (um arquivo cobre
+   do regular ao semibold), nos dois recortes que o português usa. Licença OFL em /fonts/OFL.txt.
+   A Avenir LT Pro, fonte institucional, é licenciada e não pode ser servida na web
+   (acta-way:identidade-visual, seção 3). */
+@font-face {
+  font-family: Figtree;
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(/fonts/figtree-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: Figtree;
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(/fonts/figtree-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 :root {
   /* paleta da marca */
   --turquesa: #24BEB6;
@@ -54,6 +76,16 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* O atributo hidden tem de vencer o display das classes (.cartao é flex): sem isto o filtro de
+   skills esconderia o cartão só para o leitor de tela. */
+[hidden] { display: none !important; }
+
+/* Rótulo que o leitor de tela anuncia e a tela não mostra (campo de busca com placeholder). */
+.visualmente-oculto {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -88,6 +120,9 @@ code {
   color: var(--tinta);
 }
 a code { color: inherit; background: rgba(0, 110, 99, .09); }
+/* Identificador longo no meio do texto (endereço do marketplace, nome de plugin) quebra quando não
+   cabe na linha do celular, em vez de passar da borda da caixa. */
+:is(p, li, td) code { overflow-wrap: anywhere; }
 
 /* Marcador do que o leitor troca antes de rodar, como <plugin> num comando de exemplo. */
 var { font-style: normal; color: var(--teal); font-weight: var(--peso-semibold); }
@@ -158,7 +193,51 @@ main { display: block; }
 .heroi {
   background: var(--petroleo);
   color: #fff;
-  padding: 5.5rem 0 5rem;
+  padding: 4rem 0 3.75rem;
+}
+
+/* Duas colunas no desktop: a proposta à esquerda e os atalhos à direita, para a metade direita
+   do herói levar a algum lugar em vez de ficar vazia. No celular os atalhos saem: os dois botões
+   e o catálogo logo abaixo já cumprem o papel, e o herói não empurra o catálogo para longe. */
+.heroi-grade { display: grid; grid-template-columns: minmax(0, 1fr) 19.5rem; gap: 3.5rem; align-items: center; }
+.heroi-numeros { margin: 1.6rem 0 0; font-size: .875rem; color: rgba(255, 255, 255, .7); }
+.heroi-numeros b { color: #fff; font-weight: var(--peso-semibold); }
+
+.atalhos {
+  border: 1px solid rgba(255, 255, 255, .14); background: rgba(255, 255, 255, .04);
+  border-radius: var(--raio); padding: 1.2rem 1.25rem 1.25rem;
+}
+.atalhos h2 {
+  margin: 0 0 .5rem; font-size: .76rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--turquesa);
+}
+/* Nome da área em cima e contagem embaixo: lado a lado, "Governança, Riscos e Compliance"
+   quebrava em duas linhas contra a contagem. */
+.atalhos .area {
+  display: flex; flex-direction: column; gap: .05rem;
+  padding: .6rem 0; border-top: 1px solid rgba(255, 255, 255, .1);
+  color: #fff; font-size: .9375rem; line-height: 1.35;
+}
+.atalhos .area:first-of-type { border-top: none; }
+.atalhos .area span { color: rgba(255, 255, 255, .66); font-size: .8125rem; }
+.atalhos .area:hover { color: var(--turquesa); text-decoration: none; }
+.atalhos form { display: flex; gap: .5rem; margin-top: 1rem; }
+.atalhos input {
+  flex: 1; min-width: 0; font: inherit; font-size: .9rem; padding: .55rem .7rem;
+  border-radius: var(--raio-p); border: 1px solid rgba(255, 255, 255, .28);
+  background: rgba(255, 255, 255, .06); color: #fff;
+}
+.atalhos input::placeholder { color: rgba(255, 255, 255, .6); }
+.atalhos input:focus-visible { outline: 2px solid var(--turquesa); outline-offset: 1px; }
+.atalhos button {
+  font: inherit; font-size: .875rem; font-weight: var(--peso-semibold); cursor: pointer;
+  padding: .55rem .85rem; border-radius: var(--raio-p); border: 1px solid transparent;
+  background: var(--turquesa); color: var(--petroleo);
+}
+.atalhos button:hover { background: #fff; }
+@media (max-width: 960px) {
+  .heroi-grade { grid-template-columns: 1fr; }
+  .atalhos { display: none; }
 }
 
 .selo {
@@ -241,6 +320,9 @@ h4 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
    para o olho voltar ao começo da seguinte. */
 .conteudo > p,
 .secao > p, .secao > ol, .secao > ul { max-width: var(--largura-texto); }
+/* Bloco de comando solto numa seção segue a medida do texto: em /comecar, os comandos dos passos
+   ficavam na medida e os de "Atualizar" e "Remover" corriam a largura toda. */
+.secao > .comando { max-width: var(--largura-texto); }
 .secao > ol:not(.passos), .secao > ul { padding-left: 1.3rem; }
 .secao > ol:not(.passos) li, .secao > ul li { margin-bottom: .45rem; }
 .secao > ol li::marker, .secao > ul li::marker { color: var(--tinta-fraca); }
@@ -251,8 +333,34 @@ h4 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
 /* O cabeçalho é fixo: sem isto o link de âncora para a seção a esconde atrás dele. */
 .secao[id], .secao [id] { scroll-margin-top: 5.5rem; }
 
-/* Grupo de cartões sob um subtítulo, no catálogo da página inicial. */
-.grupo > h3 { margin: 2.25rem 0 1rem; }
+/* Grupo de cartões sob um subtítulo, no catálogo da página inicial. A área é o primeiro corte
+   do catálogo, então o título dela pesa mais que o do cartão: filete turquesa (decorativo, que é
+   o uso dele em fundo claro), corpo maior e a contagem ao lado. */
+.grupo { scroll-margin-top: 5.5rem; }
+.area-titulo {
+  display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap;
+  margin: 2.75rem 0 1.1rem; padding-bottom: .65rem; border-bottom: 1px solid var(--linha);
+}
+.area-titulo h3 { margin: 0; font-size: 1.2rem; }
+.area-titulo h3::before {
+  content: ""; display: inline-block; width: 1.25rem; height: 3px; background: var(--turquesa);
+  vertical-align: middle; margin-right: .65rem; position: relative; top: -.12em;
+}
+.area-titulo span { font-size: .875rem; color: var(--tinta-fraca); }
+
+/* Busca curta em fundo claro (404). */
+.busca-rapida { display: flex; gap: .5rem; max-width: 34rem; margin: 1.25rem 0 0; }
+.busca-rapida input {
+  flex: 1; min-width: 0; font: inherit; font-size: 1rem; padding: .62rem .85rem;
+  border: 1px solid var(--linha-forte); border-radius: var(--raio-p); background: var(--papel); color: var(--tinta);
+}
+.busca-rapida input:focus-visible { outline: 2px solid var(--teal); outline-offset: 1px; border-color: var(--teal); }
+.busca-rapida button {
+  font: inherit; font-size: .9375rem; font-weight: var(--peso-semibold); cursor: pointer;
+  padding: .62rem 1rem; border-radius: var(--raio-p); border: 1px solid transparent;
+  background: var(--teal); color: #fff;
+}
+.busca-rapida button:hover { background: var(--petroleo); }
 
 /* Rótulo de botão ou de aba da interface do Claude, para distinguir do que o leitor
    digita (code) do que ele clica. */
@@ -267,13 +375,6 @@ h4 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
 /* Nome de plugin não quebra no hífen: "acta-pensadores-de-" numa linha e "negocios" na
    seguinte parece dois nomes. */
 .requer code { font-size: .8125rem; white-space: nowrap; }
-
-/* ---------- números ---------- */
-
-.numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 1px; background: var(--linha); border: 1px solid var(--linha); border-radius: var(--raio); overflow: hidden; }
-.numeros div { background: var(--papel); padding: 1.4rem 1.5rem; }
-.numeros b { display: block; font-size: 2rem; font-weight: var(--peso-semibold); color: var(--teal); line-height: 1.1; letter-spacing: -.02em; }
-.numeros span { display: block; font-size: .875rem; color: var(--tinta-fraca); margin-top: .2rem; }
 
 /* ---------- cartões ---------- */
 
@@ -308,6 +409,15 @@ h4 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
 .cartao .pe a { position: relative; z-index: 2; }
 .cartao p { margin: 0; font-size: .9125rem; color: var(--tinta); }
 .cartao p.requer { font-size: .8125rem; color: var(--tinta-fraca); }
+/* Resumo do cartão na página inicial: cinco linhas no máximo, para a grade ler em linhas
+   regulares. O texto inteiro continua no HTML (o leitor de tela lê tudo) e na página do projeto. */
+.cartao p.resumo {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; line-clamp: 5;
+  overflow: hidden;
+}
+/* Área com um plugin só: o cartão ocupa a linha, em vez de deixar dois terços da grade vazios. */
+.grade--larga { grid-template-columns: 1fr; }
+.grade--larga .cartao p { max-width: var(--largura-texto); }
 .cartao .pe {
   margin-top: auto; padding-top: .9rem; font-size: .8125rem; color: var(--tinta-fraca);
   display: flex; gap: .6rem; flex-wrap: wrap; align-items: center;
@@ -452,7 +562,15 @@ tbody tr:hover { background: var(--papel-suave); }
 
 /* ---------- prosa vinda de markdown ---------- */
 
-.prosa { max-width: var(--largura-texto); }
+/* A medida de linha vale para o texto, não para o bloco: parágrafo, lista e citação param em
+   --largura-texto mesmo dentro de painel ou acordeão de largura cheia, onde antes corriam até
+   ~150 caracteres. A tabela (embrulhada em .quadro pelo catálogo) usa a largura que houver. */
+.prosa { max-width: none; }
+.prosa > :is(p, ul, ol, blockquote, h2, h3, h4) { max-width: var(--largura-texto); }
+.prosa .quadro { margin: 1.5rem 0; }
+/* Cabeçalho de tabela do editorial no padrão da casa: fundo teal, texto branco (6,2:1), corpo
+   sem preenchimento e linha divisória clara (acta-way:identidade-visual, seção 5). */
+.prosa thead th { background: var(--teal); color: #fff; border-bottom: none; }
 .prosa h2 { font-size: 1.375rem; margin: 2.75rem 0 .85rem; }
 .prosa h3 { font-size: 1.0625rem; margin: 1.85rem 0 .45rem; }
 .prosa p { margin: 0 0 1rem; }
@@ -463,12 +581,7 @@ tbody tr:hover { background: var(--papel-suave); }
   margin: 1.35rem 0; padding: .1rem 0 .1rem 1.1rem;
   border-left: 3px solid var(--turquesa); color: var(--tinta);
 }
-/* Tabela vinda de markdown escapa da medida de linha: dentro de 44rem as colunas
-   ficam espremidas a ponto de a tabela deixar de ser legível. */
-.prosa table {
-  margin: 1.5rem 0; display: block; overflow-x: auto;
-  width: min(62rem, calc(100vw - 3.5rem));
-}
+
 
 /* ---------- ícone circular ---------- */
 
@@ -537,6 +650,8 @@ tbody tr:hover { background: var(--papel-suave); }
   transform: rotate(45deg); transition: transform .15s;
 }
 .sanfona[open] > summary::after { transform: rotate(-135deg); }
+/* Contagem no título do acordeão: encostada na seta, não solta no meio da linha. */
+.sanfona > summary .contador { margin-left: auto; }
 .sanfona > summary:hover { background: var(--papel-suave); }
 .sanfona .miolo { padding: 0 1.2rem 1.3rem; }
 .sanfona .miolo .prosa { max-width: none; }
@@ -568,6 +683,58 @@ tbody tr:hover { background: var(--papel-suave); }
 .gatilhos li::marker { color: var(--turquesa); }
 .titulos li { scroll-margin-top: 5.5rem; }
 .titulos li:target { background: rgba(36, 190, 182, .12); border-radius: 4px; }
+
+/* ---------- página longa com índice (projeto) ---------- */
+
+/* A página de projeto passa de dez seções. No desktop largo, o índice "Nesta página" fica fixo à
+   direita, no espaço que a medida de linha já deixava livre; abaixo de 1180px ele sai e a página
+   volta a uma coluna só. */
+.indice { display: none; }
+@media (min-width: 1180px) {
+  .com-indice { display: grid; grid-template-columns: minmax(0, 1fr) 14rem; gap: 3.5rem; align-items: start; }
+  .indice {
+    display: block; position: sticky; top: 5.75rem;
+    border-left: 1px solid var(--linha); padding-left: 1.1rem; font-size: .875rem;
+  }
+  .indice h2 {
+    font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--tinta-fraca);
+    margin: 0 0 .5rem;
+  }
+  .indice a { display: block; padding: .32rem 0; color: var(--tinta); line-height: 1.35; }
+  .indice a:hover { color: var(--teal); text-decoration: none; }
+}
+
+/* ---------- página de skill: conteúdo e coluna lateral ---------- */
+
+/* A instalação e as outras skills do plugin vão para a lateral no desktop: o que antes ficava
+   no fim de uma página longa, depois de onze descrições, passa a estar à vista desde o topo. */
+.lateral { margin-top: 3rem; }
+.lateral .bloco { border: 1px solid var(--linha); border-radius: var(--raio); padding: 1.15rem 1.25rem; background: var(--papel); }
+.lateral .bloco + .bloco { margin-top: 1.25rem; }
+.lateral .bloco > h2 { font-size: 1rem; margin: 0 0 .6rem; }
+.lateral .bloco > p { font-size: .875rem; margin: .6rem 0 0; }
+.lateral .comando { font-size: .75rem; margin: .75rem 0 0; }
+.irmas { list-style: none; padding: 0; margin: 0; }
+.irmas li { border-top: 1px solid var(--linha); }
+.irmas li:first-child { border-top: none; }
+.irmas a { display: block; padding: .5rem 0; font-size: .875rem; color: var(--tinta); line-height: 1.4; }
+.irmas a:hover { color: var(--teal); text-decoration: none; }
+@media (min-width: 1100px) {
+  .duas-colunas { display: grid; grid-template-columns: minmax(0, 1fr) 22.5rem; gap: 3.25rem; align-items: start; }
+  .lateral { margin-top: 0; }
+}
+
+/* ---------- filtro do índice de skills ---------- */
+
+.filtro { margin: 0 0 1.5rem; max-width: 34rem; }
+.filtro label { display: block; font-weight: var(--peso-semibold); font-size: .9375rem; color: var(--tinta-forte); margin-bottom: .4rem; }
+.filtro input {
+  width: 100%; font: inherit; font-size: 1rem; padding: .62rem .85rem;
+  border: 1px solid var(--linha-forte); border-radius: var(--raio-p); background: var(--papel); color: var(--tinta);
+}
+.filtro input:focus-visible { outline: 2px solid var(--teal); outline-offset: 1px; border-color: var(--teal); }
+.filtro .nota { margin: .45rem 0 0; min-height: 1.4em; }
+.grupo-plugin > h3:first-child { margin-top: 1rem; }
 
 /* ---------- rodapé ---------- */
 
@@ -644,6 +811,10 @@ footer code { background: rgba(255, 255, 255, .1); color: rgba(255, 255, 255, .8
   h2 { font-size: 1.3rem; margin-top: 2.5rem; }
   .acoes .botao { flex: 1 1 auto; justify-content: center; }
   .instalar { padding: 1.1rem 1.15rem; }
+  /* Célula mais justa no celular: com o respiro de desktop, a tabela de três colunas das páginas
+     de projeto passava de 360px e precisava de rolagem dentro da caixa. */
+  th, td { padding: .55rem .42rem; }
+  table { font-size: .875rem; }
   footer .colunas { grid-template-columns: 1fr; gap: 1.75rem; }
 
   /* Tabela de definição (rótulo na primeira célula, explicação na segunda) empilha:
@@ -659,4 +830,23 @@ footer code { background: rgba(255, 255, 255, .1); color: rgba(255, 255, 255, .8
   html { scroll-behavior: auto; }
   .cartao { transition: none; }
   .cartao:hover { transform: none; }
+}
+
+/* Impressão: a página de projeto vira documento de leitura. Sai o que só serve na tela
+   (navegação, botões, índice, filtro); os acordeões abrem pelo script da Base antes de imprimir. */
+@media print {
+  .topo, footer, .pular, .copiar, .acoes, .indice, .atalhos, .filtro, .sugestoes, .busca-rapida { display: none !important; }
+  body { font-size: 10.5pt; color: #000; background: #fff; }
+  .heroi, .capa { background: none; color: #000; padding: 0 0 1rem; border: none; }
+  .heroi h1, .heroi .abertura, .heroi-numeros, .heroi-numeros b { color: #000; }
+  .conteudo { padding-block: 0; }
+  .com-indice, .duas-colunas { display: block; }
+  .comando { background: none; color: #000; border: 1px solid #999; }
+  .cartao, .painel, .instalar, .lateral .bloco, tr { break-inside: avoid; }
+  .cartao:hover { transform: none; }
+  .sanfona { border: none; }
+  .sanfona > summary { padding: 0; font-size: 1.15rem; }
+  .sanfona > summary::after { display: none; }
+  .sanfona .miolo { padding: .5rem 0 0; }
+  a { color: inherit; }
 }

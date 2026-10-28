@@ -46,7 +46,7 @@ import Pagina from '../layouts/Pagina.astro';
     });
 
     window.addEventListener('DOMContentLoaded', () => {
-      new PagefindUI({
+      const ui = new PagefindUI({
         element: '#busca',
         showSubResults: true,
         showImages: false,
@@ -61,6 +61,21 @@ import Pagina from '../layouts/Pagina.astro';
           searching: 'Buscando [SEARCH_TERM]...',
         },
       });
+
+      // /busca?q=termo chega da caixa de busca do início, da 404 e do filtro de skills: a busca
+      // já abre com o termo, em vez de pedir para o leitor digitar de novo.
+      const termo = new URLSearchParams(location.search).get('q')?.trim();
+      if (termo) {
+        if (typeof ui.triggerSearch === 'function') {
+          ui.triggerSearch(termo);
+        } else {
+          const campo = document.querySelector('#busca input');
+          if (campo) {
+            campo.value = termo;
+            campo.dispatchEvent(new Event('input', { bubbles: true }));
+          }
+        }
+      }
     });
   </script>
 </Pagina>

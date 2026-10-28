@@ -1,6 +1,6 @@
 ---
 import Pagina from '../../layouts/Pagina.astro';
-import { catalogo } from '../../lib/catalogo.js';
+import { catalogo, ancora } from '../../lib/catalogo.js';
 
 export async function getStaticPaths() {
   return catalogo().plugins.map((p) => ({ params: { slug: p.slug }, props: { p } }));
@@ -33,6 +33,31 @@ const SOBRESCRITO = {
   metodo: 'Método transversal',
 };
 const contagem = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
+
+// Índice "Nesta página". Os títulos do projeto.md seguem o roteiro de docs/PLATAFORMA.md e são
+// longos para uma coluna estreita: o índice usa o rótulo curto quando reconhece o título, e o
+// título inteiro quando não reconhece.
+// A ordem importa: "O que é preciso ter antes de começar" também começa por "O que é", então o
+// padrão mais específico vem antes.
+const CURTOS = [
+  [/antes de começar/i, 'Antes de começar'],
+  [/etapas do ciclo de vida/i, 'Etapas'],
+  [/dá errado/i, 'Onde dá errado'],
+  [/se entrega/i, 'O que se entrega'],
+  [/quem participa/i, 'Quem participa'],
+  [/^o que é/i, 'O que é'],
+];
+const curto = (t) => CURTOS.find(([re]) => re.test(t))?.[1] ?? t;
+const idDe = (s) => (s?.titulo ? `secao-${ancora(s.titulo)}` : undefined);
+
+const indice = [
+  { id: 'instalar', rotulo: 'Instalar' },
+  ...(abreProjeto?.titulo ? [{ id: idDe(abreProjeto), rotulo: curto(abreProjeto.titulo) }] : []),
+  ...abertas.map((s) => ({ id: idDe(s), rotulo: curto(s.titulo) })),
+  ...fechadas.filter((s) => s.titulo).map((s) => ({ id: idDe(s), rotulo: curto(s.titulo) })),
+  { id: 'no-plugin', rotulo: 'Skills do plugin' },
+  ...(secoesFundamentos.length > 0 ? [{ id: 'fundamentos', rotulo: 'De onde vem o método' }] : []),
+];
 ---
 
 <Pagina
@@ -50,161 +75,170 @@ const contagem = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
     {p.projeto?.duracao_tipica && <span class="etiqueta">{p.projeto.duracao_tipica}</span>}
   </div>
 
-  <section class="secao instalar" aria-labelledby="instalar">
-    <h2 id="instalar">Instalar</h2>
-    <div class="comando"><code>{p.instalacao}</code></div>
-    {p.requerTodos.length > 0 ? (
-      <>
-        <p class="requer">
-          Requer{' '}
-          {p.requerTodos.map((d, i) => (
-            <>{i > 0 && ', '}{d.url ? <a href={d.url}><code>{d.nome}</code></a> : <code>{d.nome}</code>}</>
-          ))}.
+  <div class="com-indice">
+    <div class="corpo">
+      <section class="secao instalar" aria-labelledby="instalar">
+        <h2 id="instalar">Instalar</h2>
+        <div class="comando"><code>{p.instalacao}</code></div>
+        {p.requerTodos.length > 0 ? (
+          <>
+            <p class="requer">
+              Requer{' '}
+              {p.requerTodos.map((d, i) => (
+                <>{i > 0 && ', '}{d.url ? <a href={d.url}><code>{d.nome}</code></a> : <code>{d.nome}</code>}</>
+              ))}.
+            </p>
+            <p>
+              O Claude Code instala as dependências declaradas junto com o plugin, então o comando acima
+              basta. Se preferir instalar um por vez, ou se alguma dependência falhar, rode nesta ordem:
+            </p>
+            <details class="sanfona">
+              <summary>Instalar um plugin por vez, na ordem</summary>
+              <div class="miolo">
+                {p.comandosEmOrdem.map((c) => <div class="comando"><code>{c}</code></div>)}
+              </div>
+            </details>
+          </>
+        ) : (
+          <p>
+            Não depende de outro plugin.
+            {p.dependentes.length > 0 &&
+              ` É requisito de ${contagem(p.dependentes.length, 'plugin', 'plugins')} do catálogo: no Claude Code, ele entra junto quando qualquer um deles é instalado.`}
+          </p>
+        )}
+        <p class="nota">
+          Primeira vez? O <a href="/comecar">guia de instalação</a> mostra como registrar o marketplace e
+          o caminho pelo Claude Desktop. <a href={p.repositorio}>Ver a pasta no GitHub</a>.
         </p>
-        <p>
-          O Claude Code instala as dependências declaradas junto com o plugin, então o comando acima
-          basta. Se preferir instalar um por vez, ou se alguma dependência falhar, rode nesta ordem:
-        </p>
-        <details class="sanfona">
-          <summary>Instalar um plugin por vez, na ordem</summary>
-          <div class="miolo">
-            {p.comandosEmOrdem.map((c) => <div class="comando"><code>{c}</code></div>)}
+      </section>
+
+      {abreProjeto ? (
+        <section class="secao" id={idDe(abreProjeto)}>
+          <div class="painel">
+            {abreProjeto.titulo && <h2 style="margin-top:0">{abreProjeto.titulo}</h2>}
+            <div class="prosa" set:html={abreProjeto.html} />
           </div>
-        </details>
-      </>
-    ) : (
-      <p>
-        Não depende de outro plugin.
-        {p.dependentes.length > 0 &&
-          ` É requisito de ${contagem(p.dependentes.length, 'plugin', 'plugins')} do catálogo: no Claude Code, ele entra junto quando qualquer um deles é instalado.`}
-      </p>
-    )}
-    <p class="nota">
-      Primeira vez? O <a href="/comecar">guia de instalação</a> mostra como registrar o marketplace e
-      o caminho pelo Claude Desktop. <a href={p.repositorio}>Ver a pasta no GitHub</a>.
-    </p>
-  </section>
+        </section>
+      ) : (
+        <div class="aviso aviso--atencao">
+          <p>
+            <strong>A página editorial deste projeto ainda não foi escrita.</strong> O que você vê abaixo
+            é derivado do plugin: a lista de skills, mas não as etapas, os riscos nem os entregáveis.
+          </p>
+        </div>
+      )}
 
-  {abreProjeto ? (
-    <section class="secao">
-      <div class="painel">
-        {abreProjeto.titulo && <h2 style="margin-top:0">{abreProjeto.titulo}</h2>}
-        <div class="prosa" set:html={abreProjeto.html} />
-      </div>
-    </section>
-  ) : (
-    <div class="aviso aviso--atencao">
-      <p>
-        <strong>A página editorial deste projeto ainda não foi escrita.</strong> O que você vê abaixo
-        é derivado do plugin: a lista de skills, mas não as etapas, os riscos nem os entregáveis.
-      </p>
-    </div>
-  )}
-
-  {abertas.map((s) => (
-    <section class="secao">
-      <h2>{s.titulo}</h2>
-      <div class="prosa" set:html={s.html} />
-    </section>
-  ))}
-
-  {fechadas.length > 0 && (
-    <section class="secao">
-      {fechadas.map((s) => (
-        <details class="sanfona">
-          <summary>{s.titulo}</summary>
-          <div class="miolo"><div class="prosa" set:html={s.html} /></div>
-        </details>
+      {abertas.map((s) => (
+        <section class="secao" id={idDe(s)}>
+          <h2>{s.titulo}</h2>
+          <div class="prosa" set:html={s.html} />
+        </section>
       ))}
-    </section>
-  )}
 
-  <section class="secao">
-    <h2>O que vem no plugin</h2>
-
-    {principais.length > 0 && (
-      <>
-        <p>
-          O Claude carrega estas sozinho quando o assunto aparece na conversa. Não é preciso digitar
-          nada especial.
-          {algumaManual && ' A exceção são as marcadas como manual: só rodam quando você digita o nome delas depois de /.'}
-        </p>
-        <div class="grade">
-          {principais.map((s) => (
-            <article class="cartao">
-              <h3><a href={s.url}>{s.titulo}</a></h3>
-              <p>{s.oQueFaz || s.descricao}</p>
-              <div class="pe">
-                <code>{s.nome}</code>
-                {s.manual && <span class="etiqueta">manual</span>}
-              </div>
-            </article>
+      {fechadas.length > 0 && (
+        <section class="secao">
+          {fechadas.map((s) => (
+            <details class="sanfona" id={idDe(s)}>
+              <summary>{s.titulo}</summary>
+              <div class="miolo"><div class="prosa" set:html={s.html} /></div>
+            </details>
           ))}
-        </div>
-      </>
-    )}
+        </section>
+      )}
 
-    {comLentes.map((s) => (
-      <>
-        <h3>As {s.referencias.length} lentes</h3>
-        <p>
-          Cada lente é um arquivo de referência que a skill <a href={s.url}><code>{s.nome}</code></a>
-          carrega só quando a pergunta pede. Aqui ficam os títulos; o texto vem com o plugin.
-        </p>
-        <ol class="titulos">
-          {s.referencias.map((r) => <li><a href={`${s.url}#${r.ancora}`}>{r.titulo}</a></li>)}
-        </ol>
-      </>
-    ))}
+      <section class="secao" id="no-plugin">
+        <h2>O que vem no plugin</h2>
 
-    {(defundo.length > 0 || pendentes.length > 0) && (
-      <details class="sanfona" style="margin-top:1.25rem">
-        <summary>Detalhe técnico: skills fora do menu e etapas ainda não escritas</summary>
-        <div class="miolo">
-          {defundo.length > 0 && (
-            <>
-              <h3>Fora do menu de /</h3>
-              <p>
-                Não aparecem quando você digita <code>/</code>, mas a descrição continua no contexto:
-                o Claude as carrega sozinho quando o assunto aparece, e outras skills as puxam quando
-                precisam do conceito exato.
-              </p>
-              <div class="lista lista--titulos">
-                {defundo.map((s) => (
-                  <a href={s.url}>
-                    <span class="nome">{s.titulo}</span>
-                    <span class="oque">{s.oQueFaz || s.descricao}</span>
-                  </a>
-                ))}
-              </div>
-            </>
-          )}
-          {pendentes.length > 0 && (
-            <>
-              <h3>Etapas ainda não escritas</h3>
-              <p>Existem como marcador do que falta: a metodologia delas ainda não foi escrita.</p>
-              <p class="pe">
-                {pendentes.map((s) => (
-                  <a href={s.url} class="etiqueta etiqueta--codigo"><code>{s.nome}</code></a>
-                ))}
-              </p>
-            </>
-          )}
-        </div>
-      </details>
-    )}
-  </section>
+        {principais.length > 0 && (
+          <>
+            <p>
+              O Claude carrega estas sozinho quando o assunto aparece na conversa. Não é preciso digitar
+              nada especial.
+              {algumaManual && ' A exceção são as marcadas como manual: só rodam quando você digita o nome delas depois de /.'}
+            </p>
+            <div class="grade">
+              {principais.map((s) => (
+                <article class="cartao">
+                  <h3><a href={s.url}>{s.titulo}</a></h3>
+                  <p>{s.oQueFaz || s.descricao}</p>
+                  <div class="pe">
+                    <code>{s.nome}</code>
+                    {s.manual && <span class="etiqueta">manual</span>}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </>
+        )}
 
-  {secoesFundamentos.length > 0 && (
-    <section class="secao">
-      <span class="sobrescrito">Embasamento teórico</span>
-      <h2>De onde vem o método</h2>
-      {secoesFundamentos.map((s) => (
-        <details class="sanfona">
-          <summary>{s.titulo || 'Introdução'}</summary>
-          <div class="miolo"><div class="prosa" set:html={s.html} /></div>
-        </details>
-      ))}
-    </section>
-  )}
+        {comLentes.map((s) => (
+          <>
+            <h3>As {s.referencias.length} lentes</h3>
+            <p>
+              Cada lente é um arquivo de referência que a skill <a href={s.url}><code>{s.nome}</code></a>
+              carrega só quando a pergunta pede. Aqui ficam os títulos; o texto vem com o plugin.
+            </p>
+            <ol class="titulos">
+              {s.referencias.map((r) => <li><a href={`${s.url}#${r.ancora}`}>{r.titulo}</a></li>)}
+            </ol>
+          </>
+        ))}
+
+        {(defundo.length > 0 || pendentes.length > 0) && (
+          <details class="sanfona" style="margin-top:1.25rem">
+            <summary>Detalhe técnico: skills fora do menu e etapas ainda não escritas</summary>
+            <div class="miolo">
+              {defundo.length > 0 && (
+                <>
+                  <h3>Fora do menu de /</h3>
+                  <p>
+                    Não aparecem quando você digita <code>/</code>, mas a descrição continua no contexto:
+                    o Claude as carrega sozinho quando o assunto aparece, e outras skills as puxam quando
+                    precisam do conceito exato.
+                  </p>
+                  <div class="lista lista--titulos">
+                    {defundo.map((s) => (
+                      <a href={s.url}>
+                        <span class="nome">{s.titulo}</span>
+                        <span class="oque">{s.oQueFaz || s.descricao}</span>
+                      </a>
+                    ))}
+                  </div>
+                </>
+              )}
+              {pendentes.length > 0 && (
+                <>
+                  <h3>Etapas ainda não escritas</h3>
+                  <p>Existem como marcador do que falta: a metodologia delas ainda não foi escrita.</p>
+                  <p class="pe">
+                    {pendentes.map((s) => (
+                      <a href={s.url} class="etiqueta etiqueta--codigo"><code>{s.nome}</code></a>
+                    ))}
+                  </p>
+                </>
+              )}
+            </div>
+          </details>
+        )}
+      </section>
+
+      {secoesFundamentos.length > 0 && (
+        <section class="secao" id="fundamentos">
+          <span class="sobrescrito">Embasamento teórico</span>
+          <h2>De onde vem o método</h2>
+          {secoesFundamentos.map((s) => (
+            <details class="sanfona">
+              <summary>{s.titulo || 'Introdução'}</summary>
+              <div class="miolo"><div class="prosa" set:html={s.html} /></div>
+            </details>
+          ))}
+        </section>
+      )}
+    </div>
+
+    <nav class="indice" aria-labelledby="indice-titulo">
+      <h2 id="indice-titulo">Nesta página</h2>
+      {indice.map((i) => <a href={`#${i.id}`}>{i.rotulo}</a>)}
+    </nav>
+  </div>
 </Pagina>

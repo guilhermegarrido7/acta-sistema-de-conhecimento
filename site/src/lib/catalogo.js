@@ -29,6 +29,20 @@ export const MARKETPLACE = 'guilhermegarrido7/acta-sistema-de-conhecimento';
 
 const lerJSON = (p) => JSON.parse(fs.readFileSync(p, 'utf-8'));
 const existe = (p) => fs.existsSync(p);
+
+/** Âncora legível a partir de um título: sem acento, minúscula, palavras ligadas por hífen. */
+export function ancora(texto) {
+  return String(texto ?? '')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+/* Tabela de editorial entra numa caixa com rolagem própria: no celular, a tabela larga rola
+   dentro dela, e a página não ganha rolagem horizontal. */
+const envolverTabelas = (html) =>
+  html.replace(/<table>/g, '<div class="quadro"><table>').replace(/<\/table>/g, '</table></div>');
 const ehVerdadeiro = (v) => String(v ?? '').trim().toLowerCase() === 'true';
 const ehFalso = (v) => String(v ?? '').trim().toLowerCase() === 'false';
 
@@ -424,7 +438,7 @@ export function catalogo() {
   for (const p of plugins) {
     for (const ed of [p.projeto, p.fundamentos]) {
       if (!ed) continue;
-      ed.corpoHtml = linkarCodigo(marked.parse(ed.corpo), p, indices);
+      ed.corpoHtml = envolverTabelas(linkarCodigo(marked.parse(ed.corpo), p, indices));
       ed.secoes = dividirEmSecoes(ed.corpoHtml);
     }
   }

@@ -1,6 +1,6 @@
 ---
 name: abertura-e-cartao-de-identidade
-description: Abra o projeto preenchendo o cartão de identidade e diagnosticando os insumos do cliente. Acionar no kick-off, ao registrar particularidades estruturais que mudam a metodologia, ao inventariar as bases recebidas, ou ao avaliar a qualidade da base de cargos do cliente.
+description: Abra a pesquisa salarial preenchendo o cartão de identidade. Acionar no kick-off, ao registrar particularidade estrutural que muda a metodologia, ao inventariar bases recebidas, ou ao avaliar a base de cargos do cliente.
 ---
 
 # Abertura e cartão de identidade

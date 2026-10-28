@@ -2,7 +2,7 @@
 
 Condução de planejamento estratégico: diagnóstico de posicionamento, definição de direcionadores, desdobramento em objetivos e indicadores, e agenda de execução.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 
 ## O que faz
 
@@ -14,11 +14,10 @@ matriz SWOT com cenários e vetores priorizados, o **mapa estratégico nas quatr
 Balanced Scorecard**, o desdobramento em iniciativa, indicador, meta, dono e orçamento, e o modelo de
 acompanhamento instalado e rodando.
 
-**O que este plugin não faz.** Ele não reensina teoria de estratégia: julgamento estratégico (posicionamento, durabilidade de vantagem, leitura de estrutura setorial)
-vive em
-`acta-pensadores-de-negocios`, skill `lentes`, e cada skill daqui manda carregá-la no ponto em que a
+**O que este plugin não faz.** Ele não reensina teoria de estratégia: julgamento estratégico (posicionamento, durabilidade de vantagem, leitura de estrutura setorial) vive em
+`acta-pensadores-de-negocios:lentes`, e cada skill daqui manda carregá-la no ponto em que a
 pergunta deixa de ser de método e passa a ser de julgamento. Também não produz tese setorial para
-sustentar múltiplo em transação: isso é `acta-ma-sell-buy-side`, skill `estudo-setorial`. Lá o
+sustentar múltiplo em transação: isso é `acta-ma-sell-buy-side:estudo-setorial`. Lá o
 objetivo é vender a empresa, aqui é decidir para onde ela vai.
 
 ## Skills
@@ -65,7 +64,7 @@ por negócio e o WS3 produz **um mapa por negócio**.
 **SWOT** e **PESTEL** estruturam o diagnóstico de ambientes. **OKR** e **SMART** dão a gramática dos
 indicadores; **Hoshin Kanri** dá o vaivém de negociação da meta com quem executa. Os **três horizontes
 (McKinsey)** diagnosticam o portfólio de iniciativas. Posicionamento competitivo remete a **Porter**,
-e a lente, como todas as demais, é carregada de `acta-pensadores-de-negocios`, não reensinada aqui.
+e a lente, como todas as demais, é carregada de `acta-pensadores-de-negocios:lentes`, não reensinada aqui.
 
 ## Convenções
 

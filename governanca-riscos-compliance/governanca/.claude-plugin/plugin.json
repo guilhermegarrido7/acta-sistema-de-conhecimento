@@ -4,5 +4,8 @@
   "description": "Estruturação de governança corporativa: instâncias e alçadas, regimento e estatuto, composição de conselho e comitês, e agenda de governança.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way"
+  ]
 }

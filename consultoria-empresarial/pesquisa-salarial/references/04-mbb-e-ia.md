@@ -188,7 +188,7 @@ contrário.
 4. **Prompt com entrada explícita.** Nunca "analise a base". Sempre: qual arquivo,
    qual versão, qual grão, qual cálculo do livro, qual formato de saída.
 5. **Checkpoint ao final de cada sessão.** Sem exceção. O protocolo, os
-   templates e a regra de defasagem estão em `acta-way`, skill `checkpoint`. Em projeto com mais
+   templates e a regra de defasagem estão em `acta-way:checkpoint`. Em projeto com mais
    de um consultor o checkpoint fica defasado na virada da jornada, e produzir sobre estado
    defasado é a principal fonte de retrabalho.
 

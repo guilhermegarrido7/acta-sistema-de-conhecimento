@@ -5,10 +5,10 @@ description: Desenhe o fluxograma To-Be com raias, SLA inline e interfaces, e co
 
 # Fluxo e regras de negócio
 
-Carregue `acta-way` antes desta skill: identidade visual, convenções de entregável e checkpoint valem
-aqui e **não** são repetidos. O método de prática (desenho TO BE, priorização) virá de
-`acta-metodo-consultoria`; enquanto esse plugin for esqueleto, o que esta skill assume dele está dito
-aqui.
+Carregue `acta-way:checkpoint` antes desta skill; `acta-way:convencoes-de-entregavel` e
+`acta-way:identidade-visual` ao produzir o entregável. Valem aqui e **não** são repetidos. O método de
+prática (desenho TO BE, priorização) está em `acta-metodo-consultoria`, que este plugin não exige
+instalado: o que esta skill assume dele está dito aqui.
 
 A notação, os cinco níveis e a codificação estão em `taxonomia-de-processos`. Esta skill é a
 **produção** do artefato; aquela é a régua.

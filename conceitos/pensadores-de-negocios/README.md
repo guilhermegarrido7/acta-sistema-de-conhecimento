@@ -3,9 +3,9 @@
 Biblioteca de lentes teóricas de estratégia, valor, gestão, mercado e tecnologia, roteadas por tipo
 de pergunta e não por autor.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
-> **Status: completo.** 15 skills escritas: uma roteadora e 14 lentes.
+> **Status: completo.** Uma skill roteadora (`lentes`) e 14 lentes em `skills/lentes/references/`.
 > Publicado em `marketplace.json`. Ver [docs/ROADMAP.md](../../docs/ROADMAP.md).
 
 ## O que faz
@@ -18,19 +18,21 @@ específica supera essa média. São perguntas diferentes, com lentes diferentes
 
 ## Como se usa
 
-Só uma skill é invocável: **`lentes`**, a roteadora. As 14 lentes de pensador são
-`user-invocable: false` e carregam a partir dela: assim o menu de comandos não fica poluído com 14
-nomes de autor.
+O plugin tem uma skill, **`lentes`**, a roteadora. As 14 lentes ficam em
+`skills/lentes/references/`, um arquivo por pensador, e só entram no contexto quando a roteadora
+escolhe a lente. Até a versão 1, cada lente era uma skill com `user-invocable: false`: isso tirava as
+14 do menu, mas mantinha as 14 descrições no contexto de toda sessão (cerca de 930 tokens). Agora o
+plugin custa uma descrição.
 
 O protocolo da roteadora tem quatro passos, e o terceiro é obrigatório: antes de aplicar qualquer
 lente, ela apresenta de 2 a 4 candidatas dizendo **o que cada uma enxerga e o que cada uma ignora**,
 e pergunta pelo contexto. Escolher a lente é parte da análise, não preliminar dela.
 
-## Skills
+## Skill e lentes
 
-| Skill | Pergunta que responde |
+| Skill ou lente (arquivo em `references/`) | Pergunta que responde |
 |---|---|
-| `lentes` | **Roteadora.** Qual lente serve a esta análise, e o que ela deixa de fora? |
+| `lentes` | **Roteadora, a única skill.** Qual lente serve a esta análise, e o que ela deixa de fora? |
 | `michael-porter` | Por que a rentabilidade média deste setor é alta ou baixa? |
 | `bruce-greenwald` | Existe barreira de entrada real, a única força capaz de sustentar retorno acima do custo de capital? |
 | `tim-koller` | O crescimento proposto cria ou destrói valor? Quem é o melhor proprietário deste ativo? |

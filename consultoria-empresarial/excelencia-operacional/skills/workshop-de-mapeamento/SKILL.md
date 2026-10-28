@@ -5,10 +5,10 @@ description: Conduza o workshop de homologação do processo desenhado, com grup
 
 # Workshop de mapeamento
 
-Carregue `acta-way` antes desta skill: convenções de entregável, identidade visual e o protocolo de
-checkpoint valem aqui e **não** são repetidos. O método de prática (condução de reunião,
-facilitação, gestão de mudança) virá de `acta-metodo-consultoria`; enquanto esse plugin for
-esqueleto, o que esta skill assume dele está dito aqui.
+Carregue `acta-way:checkpoint` antes desta skill; `acta-way:convencoes-de-entregavel` e
+`acta-way:identidade-visual` ao produzir o entregável. Valem aqui e **não** são repetidos. O método de
+prática (condução de reunião, facilitação, gestão de mudança) está em `acta-metodo-consultoria`, que
+este plugin não exige instalado: o que esta skill assume dele está dito aqui.
 
 Pré-requisitos duros: `coleta-e-diagnostico` fechado, `fluxo-e-regras-de-negocio` e
 `oportunidades-e-quick-wins` produzidos, `sla-e-indicadores` com a coluna de sugestões preenchida.

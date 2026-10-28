@@ -1,13 +1,14 @@
 ---
 name: diagnostico-e-entrevistas
-description: Abra um diagnóstico com escopo, entidades e recortes analíticos fechados, a solicitação de informações estruturada por layout de arquivo e o status report que cobra pendência. Acionar ao abrir engajamento de diagnóstico, ao montar a lista de informações a pedir, ao cobrar dado que não chegou, ao definir a autoridade entre fontes divergentes, ou ao entrevistar a gestão.
+description: Abra o diagnóstico operacional e econômico-financeiro, abertura comum dos projetos de consultoria sem skill de diagnóstico própria. Acionar ao fechar entidades e recortes analíticos, ao redigir a carta de solicitação arquivo a arquivo, ao emitir o status report de pendências, ao fixar a hierarquia entre fontes, ou ao entrevistar a gestão para explicar um número.
 ---
 
 # Diagnóstico: escopo, insumos e entrevistas
 
-Carregue antes: `acta-way` (checkpoint, convenções de entregável, anonimização) e a skill
-`metodo-consultoria` deste plugin não existe: o que vale para todo o método está distribuído entre
-as seis skills daqui, e esta é a primeira do ciclo.
+Carregue antes `acta-way:checkpoint`; `acta-way:convencoes-de-entregavel` e
+`acta-way:anonimizacao-e-lgpd` ao produzir entregável ou tratar dado pessoal. Este plugin não tem
+skill-mestra: o que vale para todo o método está distribuído entre as seis skills daqui, e esta é a
+primeira do ciclo.
 
 ## Papel desta skill
 

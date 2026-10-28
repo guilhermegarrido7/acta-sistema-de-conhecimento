@@ -5,7 +5,7 @@ description: Trabalhe o catálogo dos pares de funções que decidem o resultado
 
 # Os conflitos que decidem o trabalho
 
-Carregue `acta-metodo-auditoria` antes desta skill. Monte a matriz em `matriz-de-sod` primeiro: aqui
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill. Monte a matriz em `matriz-de-sod` primeiro: aqui
 está o conteúdo das células, não a forma delas.
 
 O catálogo completo, com código, dano, teste e evidência por par, está em

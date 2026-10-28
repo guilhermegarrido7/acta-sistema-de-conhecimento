@@ -4,5 +4,8 @@
   "description": "Pesquisa de remuneração e benefícios: painel de participantes, matching de cargos, coleta, estatística, competitividade e painel interativo.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way"
+  ]
 }

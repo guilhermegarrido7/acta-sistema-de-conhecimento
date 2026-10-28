@@ -20,7 +20,7 @@ Aqui é onde a tentação de reensinar teoria é maior, e onde a regra é mais f
 estratégico não se resolve nesta skill.** Por que este setor rende o que rende, se a concentração
 observada é barreira ou é acidente, se a vantagem desta empresa é fosso ou é posição transitória,
 quando abandonar uma vantagem em erosão: tudo isso é pergunta de lente. Carregue
-`acta-pensadores-de-negocios`, skill `lentes`, e deixe a roteadora escolher entre Porter, Greenwald,
+`acta-pensadores-de-negocios:lentes`, e deixe a roteadora escolher entre Porter, Greenwald,
 McGrath, Collins e os demais. Esta skill entrega o **levantamento estruturado** contra o qual essas
 lentes são aplicadas.
 
@@ -97,7 +97,7 @@ E **pare aqui**. Interpretar essa estrutura (se a concentração é fosso susten
 segmento onde a empresa é forte é defensável, se a posição intermediária é vantagem ou é terra de
 ninguém) é o trabalho da lente. Traga a estrutura levantada e chame `acta-pensadores-de-negocios`.
 
-> **Fronteira com M&A.** `acta-ma-sell-buy-side`, skill `estudo-setorial`, também produz tese
+> **Fronteira com M&A.** `acta-ma-sell-buy-side:estudo-setorial`, também produz tese
 > setorial, panorama de mercado e análise competitiva. **O objetivo é outro e o formato não se
 > reaproveita.** Lá o estudo existe para sustentar um múltiplo diante de um comprador: é argumento de
 > venda, otimizado para o lado comprador enxergar a tese. Aqui o estudo existe para a liderança
@@ -188,8 +188,8 @@ Regras que evitam a SWOT decorativa:
 
 | Pergunta | Onde se resolve |
 |---|---|
-| Que lente aplicar ao julgamento competitivo, à durabilidade da vantagem, à leitura de estrutura setorial | `acta-pensadores-de-negocios`, skill `lentes` |
-| Tese setorial para sustentar múltiplo em transação | `acta-ma-sell-buy-side`, skill `estudo-setorial` (propósito diferente, não reaproveite) |
+| Que lente aplicar ao julgamento competitivo, à durabilidade da vantagem, à leitura de estrutura setorial | `acta-pensadores-de-negocios:lentes` |
+| Tese setorial para sustentar múltiplo em transação | `acta-ma-sell-buy-side:estudo-setorial` (propósito diferente, não reaproveite) |
 | Percepções de mercado colhidas antes do WS2 | `diagnostico-de-posicionamento` |
 | Kit, pré-leitura, votação e ata | `workshops-de-planejamento` |
 | Transformar SWOT e cenários em objetivos | `direcionadores-e-objetivos` |

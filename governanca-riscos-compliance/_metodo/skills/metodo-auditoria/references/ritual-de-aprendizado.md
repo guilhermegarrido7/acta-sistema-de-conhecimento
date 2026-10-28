@@ -24,7 +24,7 @@ gravar**. O auditor corrige a lição, foi assim que "não existe regra no benef
 e fecha ao centavo".
 
 Depois de validado, o registro segue o **mecanismo de checkpoint comum a todos os projetos da
-ACTA**, em `acta-way`, skill `checkpoint`:
+ACTA**, em `acta-way:checkpoint`:
 
 ```
 ~~controle/CHECKPOINT.md      ← estado do engajamento, consolidado

@@ -5,7 +5,7 @@ description: Recalcule o indicador do zero a partir da base testada, com denomin
 
 # Apuração do indicador e memória de cálculo
 
-Carregue antes: `acta-way` e `acta-metodo-auditoria`.
+Carregue antes: `acta-way:checkpoint` e `acta-metodo-auditoria:metodo-auditoria`.
 
 ## 1. Reexecutar, não conferir
 

@@ -1,47 +1,54 @@
-/* Identidade visual ACTA.
-   Os valores de cor foram lidos do site institucional (acta.com.br), que é a fonte
-   de verdade da marca na web. O tema do PowerPoint usa variações mais escuras dos
-   mesmos tons; quando acta-way:identidade-visual for escrita, reconciliar as duas.
+/* Identidade visual ACTA no portal.
+   Os tokens seguem a skill acta-way:identidade-visual, fonte de verdade da marca na web. Se a
+   paleta ou a tipografia mudarem lá, este bloco muda junto.
 
-   Regra de contraste que não é óbvia e se quebra fácil:
-   o turquesa (#24BEB6) tem 2,25:1 sobre branco, abaixo do mínimo AA de 4,5:1.
-   Ele é decorativo em fundo claro. Texto e link em fundo claro usam o teal (#006E63),
-   que dá 6,2:1. Em fundo petróleo o turquesa dá 6,5:1 e pode carregar texto. */
+   O que se quebra fácil:
+   - Turquesa (#24BEB6) tem 2,25:1 sobre branco, abaixo do mínimo AA de 4,5:1. Em fundo claro
+     ele só decora (filete, ícone, borda). Texto e link em fundo claro usam o teal (#006E63,
+     6,2:1). Sobre o petróleo o turquesa dá 6,5:1 e pode carregar texto.
+   - Texto em três tons da paleta: título #222222, corpo #333333, apoio #69727D (4,9:1 sobre
+     branco, 4,6:1 sobre --papel-suave). O apoio claro da paleta (#8C99A2) fica de fora: sobre
+     branco dá 2,9:1, abaixo do AA até para texto grande.
+   - Sem gradiente e sem sombra projetada. A hierarquia vem do peso: semibold (600) em título e
+     ênfase, regular (400) no corpo.
+   - Âmbar só como semáforo de status (rótulo "Parcial", aviso de atenção), nunca decorativo. */
 
 :root {
+  /* paleta da marca */
   --turquesa: #24BEB6;
-  --turquesa-claro: #5FD3CC;
   --teal: #006E63;
-  --teal-fundo: #0B7C70;
   --teal-agua: #00949B;
   --petroleo: #0A2D30;
-  --petroleo-alto: #123C3E;
 
-  --tinta: #15201F;
-  --tinta-media: #47585A;
-  --tinta-fraca: #6E8082;
+  /* texto */
+  --tinta-forte: #222222;
+  --tinta: #333333;
+  --tinta-fraca: #69727D;
 
+  /* neutros de fundo e de filete, puxados para o petróleo; nunca cor de texto */
   --papel: #ffffff;
   --papel-suave: #F4F8F8;
   --papel-medio: #E9F0F0;
   --linha: #DBE5E5;
   --linha-forte: #C4D2D2;
 
+  /* semáforo de status */
   --ambar: #8A6A12;
   --ambar-fundo: #FDF7E7;
   --ambar-linha: #EADFBE;
+  --ambar-filete: #C9A227;
+
+  --peso-regular: 400;
+  --peso-semibold: 600;
 
   --largura: 68rem;
   --largura-texto: 44rem;
   --raio: 10px;
   --raio-p: 6px;
 
-  --sombra: 0 1px 2px rgba(10, 45, 48, .04), 0 8px 24px rgba(10, 45, 48, .06);
-  --sombra-alta: 0 2px 4px rgba(10, 45, 48, .06), 0 16px 40px rgba(10, 45, 48, .10);
-
-  /* Figtree é a substituta livre mais próxima da Avenir LT Pro, usada no site
-     institucional. Avenir vem primeiro para quem a tem instalada. */
-  --fonte: Figtree, "Avenir Next", Avenir, Rawline, "Segoe UI", system-ui, sans-serif;
+  /* Figtree é a fonte da marca na web: a Avenir LT Pro é licenciada e não pode ser servida.
+     As fontes locais depois dela só entram se a Figtree não carregar. */
+  --fonte: Figtree, "Avenir LT Pro", "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
   --fonte-mono: "Cascadia Mono", "JetBrains Mono", Consolas, "SF Mono", Menlo, monospace;
 }
 
@@ -52,6 +59,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: var(--fonte);
+  font-weight: var(--peso-regular);
   color: var(--tinta);
   background: var(--papel);
   line-height: 1.62;
@@ -59,6 +67,8 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+b, strong, th { font-weight: var(--peso-semibold); }
 
 a { color: var(--teal); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 2px; }
@@ -78,6 +88,24 @@ code {
   color: var(--tinta);
 }
 a code { color: inherit; background: rgba(0, 110, 99, .09); }
+
+/* Marcador do que o leitor troca antes de rodar, como <plugin> num comando de exemplo. */
+var { font-style: normal; color: var(--teal); font-weight: var(--peso-semibold); }
+
+/* ---------- pular para o conteúdo ---------- */
+
+/* Fica fora da tela até receber foco pelo teclado: é o primeiro Tab da página, e poupa quem
+   navega sem mouse de atravessar o cabeçalho inteiro em toda página. */
+.pular {
+  position: absolute; left: 1rem; top: .75rem; z-index: 50;
+  transform: translateY(-200%);
+  background: var(--petroleo); color: #fff;
+  padding: .6rem 1rem; border-radius: var(--raio-p);
+  font-weight: var(--peso-semibold); font-size: .9375rem;
+}
+.pular:focus { transform: none; outline: 2px solid var(--turquesa); outline-offset: 2px; text-decoration: none; }
+#conteudo { scroll-margin-top: 5.5rem; }
+#conteudo:focus { outline: none; }
 
 /* ---------- estrutura ---------- */
 
@@ -103,48 +131,40 @@ main { display: block; }
 }
 .topo .envelope { display: flex; align-items: center; gap: 2.5rem; min-height: 68px; }
 
-.marca { display: flex; align-items: baseline; gap: .55rem; color: var(--tinta); }
+.marca { display: flex; align-items: baseline; gap: .55rem; color: var(--tinta-forte); }
 .marca:hover { text-decoration: none; }
 .marca b {
-  font-size: 1.22rem; font-weight: 800; letter-spacing: .09em; color: var(--tinta);
+  font-size: 1.22rem; font-weight: var(--peso-semibold); letter-spacing: .09em; color: var(--tinta-forte);
 }
 .marca span {
-  font-size: .82rem; font-weight: 500; color: var(--teal);
+  font-size: .82rem; font-weight: var(--peso-regular); color: var(--teal);
   letter-spacing: .01em; padding-left: .55rem; border-left: 1px solid var(--linha-forte);
 }
 
 .topo nav { display: flex; gap: .35rem; margin-left: auto; flex-wrap: wrap; }
 .topo nav a {
-  color: var(--tinta-media); font-size: .9375rem; font-weight: 500;
+  color: var(--tinta); font-size: .9375rem; font-weight: var(--peso-regular);
   padding: .45rem .7rem; border-radius: var(--raio-p);
 }
 .topo nav a:hover { color: var(--teal); background: var(--papel-suave); text-decoration: none; }
-.topo nav a[aria-current="page"] { color: var(--teal); background: rgba(0, 110, 99, .08); font-weight: 600; }
+.topo nav a[aria-current="page"] { color: var(--teal); background: rgba(0, 110, 99, .08); font-weight: var(--peso-semibold); }
 
 .topo nav a.lupa { display: inline-flex; align-items: center; padding: .45rem .6rem; }
 .topo nav a.lupa svg { display: block; }
 
 /* ---------- herói ---------- */
 
+/* Fundo petróleo chapado: a identidade não usa gradiente. */
 .heroi {
   background: var(--petroleo);
   color: #fff;
   padding: 5.5rem 0 5rem;
-  position: relative;
-  overflow: hidden;
 }
-/* Brilho de canto: evita que o bloco escuro fique chapado, sem virar gradiente chamativo. */
-.heroi::after {
-  content: ""; position: absolute; inset: 0;
-  background: radial-gradient(60rem 30rem at 88% -10%, rgba(36, 190, 182, .16), transparent 62%);
-  pointer-events: none;
-}
-.heroi .envelope { position: relative; z-index: 1; }
 
 .selo {
   display: inline-flex; align-items: center; gap: .5rem;
-  font-size: .78rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
-  color: var(--turquesa-claro);
+  font-size: .78rem; font-weight: var(--peso-semibold); letter-spacing: .04em; text-transform: uppercase;
+  color: var(--turquesa);
   border: 1px solid rgba(36, 190, 182, .35);
   background: rgba(36, 190, 182, .09);
   padding: .34rem .8rem; border-radius: 999px;
@@ -156,7 +176,7 @@ main { display: block; }
 
 .heroi h1 {
   font-size: clamp(2.1rem, 5vw, 3.15rem);
-  line-height: 1.1; letter-spacing: -.025em; font-weight: 800;
+  line-height: 1.1; letter-spacing: -.025em; font-weight: var(--peso-semibold);
   margin: 0 0 1.1rem; max-width: 20ch; color: #fff;
 }
 .heroi h1 em { font-style: normal; color: var(--turquesa); }
@@ -170,17 +190,17 @@ main { display: block; }
 
 .botao {
   display: inline-flex; align-items: center; gap: .5rem;
-  font-size: .9375rem; font-weight: 600; font-family: inherit;
+  font-size: .9375rem; font-weight: var(--peso-semibold); font-family: inherit;
   padding: .7rem 1.25rem; border-radius: var(--raio-p);
   border: 1px solid transparent; cursor: pointer;
 }
 .botao:hover { text-decoration: none; }
 .botao--forte { background: var(--turquesa); color: var(--petroleo); }
-.botao--forte:hover { background: var(--turquesa-claro); }
+.botao--forte:hover { background: #fff; }
 .botao--claro { background: transparent; color: #fff; border-color: rgba(255, 255, 255, .28); }
 .botao--claro:hover { border-color: rgba(255, 255, 255, .6); background: rgba(255, 255, 255, .06); }
 .botao--teal { background: var(--teal); color: #fff; }
-.botao--teal:hover { background: var(--teal-fundo); }
+.botao--teal:hover { background: var(--petroleo); }
 .botao--linha { background: transparent; color: var(--teal); border-color: var(--linha-forte); }
 .botao--linha:hover { border-color: var(--teal); background: var(--papel-suave); }
 
@@ -191,26 +211,30 @@ main { display: block; }
 .capa .abertura { margin: 0; max-width: var(--largura-texto); }
 
 .rastro { font-size: .875rem; color: var(--tinta-fraca); margin: 0 0 .85rem; }
-.rastro a { color: var(--tinta-media); }
+.rastro a { color: var(--tinta); }
 
 /* ---------- tipografia ---------- */
 
+h1, h2, h3, h4 { color: var(--tinta-forte); font-weight: var(--peso-semibold); }
 h1 {
   font-size: clamp(1.85rem, 4vw, 2.4rem); line-height: 1.15; letter-spacing: -.022em;
-  margin: 0 0 .75rem; font-weight: 800;
+  margin: 0 0 .75rem;
 }
 h2 {
   font-size: 1.5rem; line-height: 1.25; letter-spacing: -.015em;
-  margin: 3.25rem 0 1rem; font-weight: 700;
+  margin: 3.25rem 0 1rem;
 }
-h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; font-weight: 650; letter-spacing: -.005em; }
+h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; letter-spacing: -.005em; }
+h4 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
 
 .sobrescrito {
-  display: block; font-size: .76rem; font-weight: 700; letter-spacing: .1em;
+  display: block; font-size: .76rem; font-weight: var(--peso-semibold); letter-spacing: .1em;
   text-transform: uppercase; color: var(--teal); margin-bottom: .5rem;
 }
+/* O sobrescrito é o rótulo do título logo abaixo: sem isto a margem do h2 o descola dele. */
+.sobrescrito + :is(h2, h3) { margin-top: 0; }
 
-.abertura { font-size: 1.0625rem; color: var(--tinta-media); max-width: var(--largura-texto); }
+.abertura { font-size: 1.0625rem; color: var(--tinta); max-width: var(--largura-texto); }
 
 /* Medida de linha. Tabela e grade de cartões ficam de fora de propósito: elas usam
    a largura toda. Só a prosa corrida é limitada, senão a linha fica longa demais
@@ -225,22 +249,31 @@ h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; font-weight: 650; letter-spacin
 .secao:first-child { margin-top: 0; }
 .secao > h2:first-child { margin-top: 0; }
 /* O cabeçalho é fixo: sem isto o link de âncora para a seção a esconde atrás dele. */
-.secao[id] { scroll-margin-top: 5.5rem; }
+.secao[id], .secao [id] { scroll-margin-top: 5.5rem; }
+
+/* Grupo de cartões sob um subtítulo, no catálogo da página inicial. */
+.grupo > h3 { margin: 2.25rem 0 1rem; }
 
 /* Rótulo de botão ou de aba da interface do Claude, para distinguir do que o leitor
    digita (code) do que ele clica. */
 .ui {
-  font-weight: 650; color: var(--teal);
+  font-weight: var(--peso-semibold); color: var(--teal);
   background: rgba(0, 110, 99, .07); border: 1px solid rgba(0, 110, 99, .16);
   border-radius: 4px; padding: .05em .34em; white-space: nowrap;
 }
+
+/* Linha "requer ..." e nota curta abaixo de um bloco: texto de apoio. */
+.requer, .nota { font-size: .875rem; color: var(--tinta-fraca); }
+/* Nome de plugin não quebra no hífen: "acta-pensadores-de-" numa linha e "negocios" na
+   seguinte parece dois nomes. */
+.requer code { font-size: .8125rem; white-space: nowrap; }
 
 /* ---------- números ---------- */
 
 .numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 1px; background: var(--linha); border: 1px solid var(--linha); border-radius: var(--raio); overflow: hidden; }
 .numeros div { background: var(--papel); padding: 1.4rem 1.5rem; }
-.numeros b { display: block; font-size: 2rem; font-weight: 800; color: var(--teal); line-height: 1.1; letter-spacing: -.02em; }
-.numeros span { display: block; font-size: .875rem; color: var(--tinta-media); margin-top: .2rem; }
+.numeros b { display: block; font-size: 2rem; font-weight: var(--peso-semibold); color: var(--teal); line-height: 1.1; letter-spacing: -.02em; }
+.numeros span { display: block; font-size: .875rem; color: var(--tinta-fraca); margin-top: .2rem; }
 
 /* ---------- cartões ---------- */
 
@@ -250,72 +283,123 @@ h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; font-weight: 650; letter-spacin
 .grade { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr)); }
 .grade--dupla { grid-template-columns: repeat(auto-fill, minmax(min(24rem, 100%), 1fr)); }
 
+/* Destaque por borda, sem sombra: a identidade não usa sombra projetada. */
 .cartao {
   position: relative;
   border: 1px solid var(--linha); border-radius: var(--raio);
   padding: 1.35rem 1.4rem; background: var(--papel);
   display: flex; flex-direction: column; gap: .45rem;
-  transition: border-color .15s, box-shadow .15s, transform .15s;
+  transition: border-color .15s, transform .15s;
 }
-.cartao:has(h3 a) { cursor: pointer; }
-.cartao:hover { border-color: var(--turquesa); box-shadow: var(--sombra); transform: translateY(-2px); }
-.cartao:focus-within { border-color: var(--teal); box-shadow: var(--sombra); }
+.cartao:has(:is(h3, h4) a) { cursor: pointer; }
+.cartao:hover { border-color: var(--turquesa); transform: translateY(-2px); }
 .cartao > .icone { margin-bottom: .4rem; }
-.cartao h3 { margin: 0; font-size: 1.0625rem; font-weight: 650; }
-.cartao h3 a { color: var(--tinta); }
-.cartao h3 a:hover { color: var(--teal); text-decoration: none; }
+.cartao :is(h3, h4) { margin: 0; font-size: 1.0625rem; }
+.cartao :is(h3, h4) a { color: var(--tinta-forte); }
+.cartao :is(h3, h4) a:hover { color: var(--teal); text-decoration: none; }
 
 /* O cartão inteiro vira área de clique: o link do título estica uma camada
    invisível sobre a caixa. Continua sendo um único link, então leitor de tela e
    navegação por teclado seguem anunciando um destino só. */
-.cartao h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: 1; }
-.cartao h3 a:focus-visible { outline: none; }
-.cartao:focus-within { outline: 2px solid var(--teal); outline-offset: 2px; }
+.cartao :is(h3, h4) a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: 1; }
+.cartao :is(h3, h4) a:focus-visible { outline: none; }
+.cartao:focus-within { border-color: var(--teal); outline: 2px solid var(--teal); outline-offset: 2px; }
 /* Link que precise ficar clicável por cima da camada esticada. */
 .cartao .pe a { position: relative; z-index: 2; }
-.cartao p { margin: 0; font-size: .9125rem; color: var(--tinta-media); }
+.cartao p { margin: 0; font-size: .9125rem; color: var(--tinta); }
+.cartao p.requer { font-size: .8125rem; color: var(--tinta-fraca); }
 .cartao .pe {
   margin-top: auto; padding-top: .9rem; font-size: .8125rem; color: var(--tinta-fraca);
   display: flex; gap: .6rem; flex-wrap: wrap; align-items: center;
 }
+.cartao .pe code { font-size: .75rem; }
 
 /* ---------- etiquetas ---------- */
 
 .etiqueta {
   display: inline-flex; align-items: center; gap: .3rem;
-  font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  font-size: .7rem; font-weight: var(--peso-semibold); letter-spacing: .05em; text-transform: uppercase;
   padding: .2rem .5rem; border-radius: 4px;
-  background: var(--papel-medio); color: var(--tinta-media); border: 1px solid var(--linha);
+  background: var(--papel-medio); color: var(--tinta); border: 1px solid var(--linha);
   white-space: nowrap;
 }
-.etiqueta.completo { background: #E4F3F1; color: #0A5F55; border-color: #BDDFDA; }
+/* Na capa, a etiqueta pode trazer texto do projeto.md (a duração típica), que não cabe numa
+   linha de celular: ali ela quebra em vez de empurrar a página para o lado. */
+.capa .etiqueta { white-space: normal; }
+.etiqueta.completo { background: rgba(0, 110, 99, .08); color: var(--teal); border-color: rgba(0, 110, 99, .22); }
 .etiqueta.parcial { background: var(--ambar-fundo); color: var(--ambar); border-color: var(--ambar-linha); }
+
+/* Identificador (nome de plugin ou de skill): escrito como se digita, sem caixa alta. */
+.etiqueta--codigo { text-transform: none; letter-spacing: 0; font-weight: var(--peso-regular); }
+.etiqueta--codigo code { background: none; padding: 0; font-size: .8125rem; color: inherit; }
+a.etiqueta--codigo { color: var(--teal); }
+a.etiqueta--codigo:hover { border-color: var(--teal); text-decoration: none; }
 
 /* ---------- bloco de comando ---------- */
 
+/* Sem "$" na frente: o leitor copia o bloco inteiro, e um prompt desenhado antes do comando
+   (ou antes de um endereço, que nem comando é) só confunde quem cola. */
 .comando {
-  position: relative; background: var(--petroleo); color: #DCEAE9;
-  border-radius: var(--raio); padding: .9rem 3.4rem .9rem 1.1rem;
+  position: relative; background: var(--petroleo); color: #fff;
+  border-radius: var(--raio); padding: .9rem 4.4rem .9rem 1.1rem;
   font-family: var(--fonte-mono); font-size: .8125rem; line-height: 1.55;
   margin: 1rem 0;
 }
-.comando::before { content: "$ "; color: var(--turquesa); }
 /* Os comandos de instalação são longos e de uma linha só. Quebrar é melhor que
    rolar na horizontal: com barra de rolagem o fim do comando some sem aviso. */
 .comando code {
   white-space: pre-wrap; overflow-wrap: anywhere;
   background: none; padding: 0; color: inherit; font-size: inherit;
 }
+.comando var { color: var(--turquesa); }
 .comando--claro { background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .14); }
+
+/* Comando de exemplo: tem um marcador para trocar antes de rodar. Fundo claro e rótulo, para
+   não ser confundido com o comando pronto para copiar. */
+.comando.exemplo {
+  background: var(--papel-suave); color: var(--tinta);
+  border: 1px dashed var(--linha-forte); padding-right: 5.75rem;
+}
+.comando.exemplo var { color: var(--teal); }
+.rotulo-exemplo {
+  position: absolute; top: .6rem; right: .6rem;
+  font-family: var(--fonte); font-size: .68rem; font-weight: var(--peso-semibold);
+  letter-spacing: .06em; text-transform: uppercase;
+  color: var(--tinta-fraca); border: 1px solid var(--linha-forte); border-radius: 4px;
+  padding: .1rem .4rem; background: var(--papel);
+}
+
+/* Pedido para digitar numa conversa com o Claude: é texto, não comando de terminal. */
+.pedido {
+  position: relative; margin: 1rem 0; max-width: var(--largura-texto);
+  border: 1px solid var(--linha); border-left: 3px solid var(--turquesa);
+  border-radius: 0 var(--raio) var(--raio) 0; background: var(--papel-suave);
+  padding: .9rem 5rem .9rem 1.1rem; font-size: 1rem;
+}
+.pedido q { quotes: "“" "”"; }
+.pedido .copiar { background: var(--papel); color: var(--teal); border-color: var(--linha-forte); }
+.pedido .copiar:hover { background: var(--papel-medio); color: var(--teal); }
 
 .copiar {
   position: absolute; top: .55rem; right: .55rem;
-  background: rgba(255, 255, 255, .1); color: #DCEAE9;
-  border: 1px solid rgba(255, 255, 255, .16); border-radius: 5px;
-  font-family: var(--fonte); font-size: .72rem; font-weight: 600;
+  background: rgba(255, 255, 255, .1); color: #fff;
+  border: 1px solid rgba(255, 255, 255, .2); border-radius: 5px;
+  font-family: var(--fonte); font-size: .72rem; font-weight: var(--peso-semibold);
   padding: .25rem .55rem; cursor: pointer;
 }
 .copiar:hover { background: rgba(255, 255, 255, .2); color: #fff; }
+
+/* ---------- bloco de instalação (página de projeto) ---------- */
+
+.instalar {
+  border: 1px solid var(--linha); border-left: 3px solid var(--teal);
+  border-radius: 0 var(--raio) var(--raio) 0; background: var(--papel);
+  padding: 1.35rem 1.5rem;
+}
+.instalar > h2 { margin: 0 0 .25rem; font-size: 1.25rem; }
+.instalar > p { margin: .65rem 0 0; }
+.instalar .sanfona { margin-top: 1rem; }
+.instalar .miolo .comando:first-child { margin-top: 0; }
 
 /* ---------- avisos ---------- */
 
@@ -328,7 +412,7 @@ h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; font-weight: 650; letter-spacin
 .aviso p { margin: 0; }
 .aviso p + p { margin-top: .6rem; }
 .aviso strong { color: var(--teal); }
-.aviso--atencao { border-left-color: #C9A227; background: var(--ambar-fundo); border-color: var(--ambar-linha); }
+.aviso--atencao { border-left-color: var(--ambar-filete); background: var(--ambar-fundo); border-color: var(--ambar-linha); }
 .aviso--atencao strong { color: var(--ambar); }
 
 /* ---------- passos ---------- */
@@ -340,7 +424,7 @@ h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; font-weight: 650; letter-spacin
 .passos > li::before {
   content: counter(passo); position: absolute; left: 0; top: -.1rem;
   width: 1.9rem; height: 1.9rem; border-radius: 50%;
-  background: var(--teal); color: #fff; font-size: .875rem; font-weight: 700;
+  background: var(--teal); color: #fff; font-size: .875rem; font-weight: var(--peso-semibold);
   display: flex; align-items: center; justify-content: center;
 }
 /* Linha que costura os passos, para ler como sequência e não como lista solta. */
@@ -348,9 +432,10 @@ h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; font-weight: 650; letter-spacin
   content: ""; position: absolute; left: .95rem; top: 2.1rem; bottom: .35rem;
   width: 1px; background: var(--linha-forte);
 }
-.passos h3 { margin: 0 0 .35rem; font-size: 1rem; }
-.passos p { margin: 0 0 .5rem; color: var(--tinta-media); font-size: .9375rem; max-width: var(--largura-texto); }
+.passos :is(h3, h4) { margin: 0 0 .35rem; font-size: 1rem; }
+.passos p { margin: 0 0 .5rem; color: var(--tinta); font-size: .9375rem; max-width: var(--largura-texto); }
 .passos .comando { margin: .65rem 0 0; }
+.passos .comando + p { margin-top: .65rem; }
 
 /* ---------- tabela ---------- */
 
@@ -358,10 +443,10 @@ h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; font-weight: 650; letter-spacin
 table { border-collapse: collapse; width: 100%; font-size: .9375rem; }
 th, td { text-align: left; padding: .7rem .8rem; border-bottom: 1px solid var(--linha); vertical-align: top; }
 thead th {
-  font-weight: 700; font-size: .72rem; text-transform: uppercase; letter-spacing: .07em;
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .07em;
   color: var(--tinta-fraca); border-bottom: 1px solid var(--linha-forte);
 }
-tbody th { font-weight: 650; color: var(--tinta); }
+tbody th { color: var(--tinta-forte); }
 tbody tr:last-child td, tbody tr:last-child th { border-bottom: none; }
 tbody tr:hover { background: var(--papel-suave); }
 
@@ -376,7 +461,7 @@ tbody tr:hover { background: var(--papel-suave); }
 .prosa li::marker { color: var(--tinta-fraca); }
 .prosa blockquote {
   margin: 1.35rem 0; padding: .1rem 0 .1rem 1.1rem;
-  border-left: 3px solid var(--turquesa); color: var(--tinta-media);
+  border-left: 3px solid var(--turquesa); color: var(--tinta);
 }
 /* Tabela vinda de markdown escapa da medida de linha: dentro de 44rem as colunas
    ficam espremidas a ponto de a tabela deixar de ser legível. */
@@ -384,7 +469,6 @@ tbody tr:hover { background: var(--papel-suave); }
   margin: 1.5rem 0; display: block; overflow-x: auto;
   width: min(62rem, calc(100vw - 3.5rem));
 }
-.prosa strong { font-weight: 650; }
 
 /* ---------- ícone circular ---------- */
 
@@ -396,7 +480,7 @@ tbody tr:hover { background: var(--papel-suave); }
 .icone svg { width: 1.375rem; height: 1.375rem; }
 .icone--grande { width: 3.25rem; height: 3.25rem; }
 .icone--grande svg { width: 1.625rem; height: 1.625rem; }
-.icone--claro { background: rgba(36, 190, 182, .14); color: var(--turquesa-claro); }
+.icone--claro { background: rgba(36, 190, 182, .14); color: var(--turquesa); }
 
 /* ---------- fluxo (como funciona) ---------- */
 
@@ -410,9 +494,9 @@ tbody tr:hover { background: var(--papel-suave); }
 }
 .fluxo .no .icone { background: var(--papel); border: 2px solid var(--teal); position: relative; z-index: 1; }
 .fluxo .no h3 { margin: 0; font-size: .9375rem; }
-.fluxo .no p { margin: 0; font-size: .8375rem; color: var(--tinta-media); max-width: 15rem; }
-/* A linha conecta o centro de um nó ao centro do seguinte, por cima do ícone
-   por trás (z-index 0) para virar uma esteira contínua, não setas soltas. */
+.fluxo .no p { margin: 0; font-size: .8375rem; color: var(--tinta); max-width: 15rem; }
+/* A linha conecta o centro de um nó ao centro do seguinte e passa por trás dos ícones
+   (z-index 0 contra 1), para ler como esteira contínua e não como setas soltas. */
 .fluxo .no:not(:last-child)::after {
   content: ""; position: absolute; top: 1.375rem; left: 50%; width: 100%;
   height: 2px; background: var(--linha-forte); z-index: 0;
@@ -432,9 +516,9 @@ tbody tr:hover { background: var(--papel-suave); }
 }
 .beneficio:first-child { border-top: none; padding-top: 0; }
 .beneficio h3 { margin: 0 0 .25rem; font-size: .9375rem; }
-.beneficio p { margin: 0; font-size: .875rem; color: var(--tinta-media); }
+.beneficio p { margin: 0; font-size: .875rem; color: var(--tinta); }
 
-/* ---------- acordeão (embasamento teórico e catálogos longos) ---------- */
+/* ---------- acordeão (editoriais, embasamento teórico e catálogos longos) ---------- */
 
 .sanfona {
   border: 1px solid var(--linha); border-radius: var(--raio);
@@ -444,7 +528,7 @@ tbody tr:hover { background: var(--papel-suave); }
 .sanfona > summary {
   cursor: pointer; list-style: none; padding: 1rem 1.2rem;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  font-weight: 650; color: var(--tinta); font-size: .9375rem;
+  font-weight: var(--peso-semibold); color: var(--tinta-forte); font-size: .9375rem;
 }
 .sanfona > summary::-webkit-details-marker { display: none; }
 .sanfona > summary::after {
@@ -457,8 +541,8 @@ tbody tr:hover { background: var(--papel-suave); }
 .sanfona .miolo { padding: 0 1.2rem 1.3rem; }
 .sanfona .miolo .prosa { max-width: none; }
 
-/* Painel de destaque para o parágrafo de abertura do embasamento: fica sempre
-   visível, fora do acordeão, para não esconder o "porquê" atrás de um clique. */
+/* Painel de destaque para a seção de abertura de um editorial: fica sempre visível,
+   fora do acordeão, para não esconder o "porquê" atrás de um clique. */
 .painel {
   background: var(--papel-suave); border: 1px solid var(--linha);
   border-radius: var(--raio); padding: 1.35rem 1.5rem; margin: 1.25rem 0;
@@ -466,7 +550,7 @@ tbody tr:hover { background: var(--papel-suave); }
 .painel .prosa { max-width: none; }
 .painel .prosa p:last-child { margin-bottom: 0; }
 
-/* ---------- lista de skills ---------- */
+/* ---------- listas de skills, gatilhos e títulos ---------- */
 
 .lista { border: 1px solid var(--linha); border-radius: var(--raio); overflow: hidden; }
 .lista > a {
@@ -475,8 +559,15 @@ tbody tr:hover { background: var(--papel-suave); }
 }
 .lista > a:last-child { border-bottom: none; }
 .lista > a:hover { background: var(--papel-suave); text-decoration: none; }
-.lista .nome { font-family: var(--fonte-mono); font-size: .8125rem; color: var(--teal); font-weight: 500; display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
-.lista .oque { font-size: .9125rem; color: var(--tinta-media); }
+.lista .nome { font-family: var(--fonte-mono); font-size: .8125rem; color: var(--teal); display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.lista .oque { font-size: .9125rem; color: var(--tinta); }
+/* Variante com o título legível da skill no lugar do identificador. */
+.lista--titulos > a { grid-template-columns: minmax(0, 20rem) 1fr; }
+.lista--titulos .nome { font-family: var(--fonte); font-size: .9375rem; font-weight: var(--peso-semibold); }
+
+.gatilhos li::marker { color: var(--turquesa); }
+.titulos li { scroll-margin-top: 5.5rem; }
+.titulos li:target { background: rgba(36, 190, 182, .12); border-radius: 4px; }
 
 /* ---------- rodapé ---------- */
 
@@ -485,7 +576,7 @@ footer .colunas { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 2.5r
 /* h2, não h4: o rodapé fecha o documento depois das seções da página, e pular de
    h2 para h4 quebra a hierarquia de cabeçalho para quem navega por leitor de tela.
    O tamanho pequeno é decisão visual, não de nível semântico. */
-footer h2 { color: #fff; font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; margin: 0 0 .85rem; }
+footer h2 { color: #fff; font-size: .78rem; letter-spacing: .09em; text-transform: uppercase; margin: 0 0 .85rem; }
 footer a { color: rgba(255, 255, 255, .7); display: block; padding: .18rem 0; }
 footer a:hover { color: var(--turquesa); text-decoration: none; }
 footer p { margin: 0 0 .6rem; max-width: 26rem; line-height: 1.6; }
@@ -501,7 +592,7 @@ footer code { background: rgba(255, 255, 255, .1); color: rgba(255, 255, 255, .8
   margin: 1.1rem 0 0; font-size: .875rem; color: var(--tinta-fraca);
 }
 .sugestoes button {
-  font-family: inherit; font-size: .8125rem; font-weight: 550; cursor: pointer;
+  font-family: inherit; font-size: .8125rem; font-weight: var(--peso-regular); cursor: pointer;
   color: var(--teal); background: var(--papel-suave);
   border: 1px solid var(--linha); border-radius: 999px; padding: .28rem .7rem;
 }
@@ -519,7 +610,7 @@ footer code { background: rgba(255, 255, 255, .1); color: rgba(255, 255, 255, .8
 
 @media (max-width: 860px) {
   footer .colunas { grid-template-columns: 1fr 1fr; }
-  .lista > a { grid-template-columns: 1fr; gap: .3rem; }
+  .lista > a, .lista--titulos > a { grid-template-columns: 1fr; gap: .3rem; }
   .fluxo { grid-template-columns: 1fr; gap: 1.75rem; text-align: left; }
   .fluxo .no { flex-direction: row; text-align: left; padding: 0; }
   .fluxo .no p { max-width: none; }
@@ -531,14 +622,20 @@ footer code { background: rgba(255, 255, 255, .1); color: rgba(255, 255, 255, .8
   .fluxo .no:not(:last-child)::after {
     top: 2.75rem; left: 1.375rem; width: 2px; height: calc(100% + .25rem);
   }
-  .fluxo--ciclo .no:last-child::before { position: static; display: block; transform: none; margin-top: .4rem; }
+  /* Na linha do nó, o "↻ repete" vira o último item e ganha linha própria. Sem quebra, o
+     nowrap dele alargava a coluna da grade e a página rolava na horizontal em 375px. */
+  .fluxo--ciclo .no:last-child { flex-wrap: wrap; }
+  .fluxo--ciclo .no:last-child::before {
+    position: static; display: block; transform: none; margin-top: .4rem;
+    order: 1; flex-basis: 100%; white-space: normal;
+  }
 }
 
 @media (max-width: 640px) {
   .envelope { padding: 0 1.15rem; }
   .topo .envelope { min-height: 0; padding-block: .8rem; flex-wrap: wrap; gap: .75rem; }
-  /* Quebra em duas linhas em vez de rolar na horizontal: com rolagem os dois
-     últimos itens ficam escondidos e nada indica que existem. */
+  /* Quebra em duas linhas em vez de rolar na horizontal: com rolagem os últimos
+     itens ficam escondidos e nada indica que existem. */
   .topo nav { margin-left: 0; width: 100%; flex-wrap: wrap; gap: .15rem; }
   .topo nav a { padding: .3rem .5rem; font-size: .875rem; }
   .heroi { padding: 3.25rem 0 3rem; }
@@ -546,6 +643,7 @@ footer code { background: rgba(255, 255, 255, .1); color: rgba(255, 255, 255, .8
   .conteudo { padding-block: 2.25rem 3rem; }
   h2 { font-size: 1.3rem; margin-top: 2.5rem; }
   .acoes .botao { flex: 1 1 auto; justify-content: center; }
+  .instalar { padding: 1.1rem 1.15rem; }
   footer .colunas { grid-template-columns: 1fr; gap: 1.75rem; }
 
   /* Tabela de definição (rótulo na primeira célula, explicação na segunda) empilha:

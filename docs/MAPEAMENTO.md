@@ -50,7 +50,8 @@ As regras já existiam em [CONVENCOES.md](../CONVENCOES.md) §5. O que faltava e
 |---|---|---|---|
 | `description` | **220 a 380 caracteres** | erro acima, aviso abaixo | É o que se paga em toda sessão. 380 caracteres ≈ 95 tokens. |
 | Corpo do `SKILL.md` | **≤ 300 linhas** | aviso | Acima disso, mover detalhe para `references/`, que só carrega quando necessário. |
-| Skills por plugin | **5 a 12** | aviso | Abaixo de 5, o plugin provavelmente não merece existir sozinho; acima de 12, o custo always-on passa de ~1 mil tokens. |
+| Skills por plugin | **5 a 12** | referência | Abaixo de 5, o plugin provavelmente não merece existir sozinho. Acima de 12 não há aviso: o validador mede o custo, não a contagem. |
+| Custo always-on do plugin | **≤ 1.000 tokens** | aviso | Soma de `len(description) // 4` das skills roteáveis. É o que o plugin custa em toda sessão em que está habilitado. |
 | Nome de cliente real | **Proibido** | erro | O marketplace é compartilhado na firma. Casos viram exemplo anonimizado em `casos/`. |
 | Nome de pessoa | **Proibido** | erro | A metodologia é da casa, não de um consultor. |
 | Repetição entre camadas | **Proibida** | manual | Fundação (`acta-way`) e método de prática (`_metodo`) não são repetidos no plugin de projeto; referencie. |
@@ -74,13 +75,11 @@ compara com **1.000 tokens**, que é o que toda sessão com aquele plugin instal
 Um plugin de catorze skills enxutas custa menos que um de dez com descrição no limite, e era isso
 que o atalho escondia.
 
-**Exceção declarada: `acta-pesquisa-salarial`.** São 18 skills e cerca de 1.150 tokens, e o número
-não fecha por aritmética: levar as dezoito descrições ao piso de 220 caracteres chegaria a ~1.020
-tokens, com toda a capacidade de roteamento no mínimo. As saídas seriam fundir etapas do ciclo de
-vida, que são etapas de verdade, ou dividir o plugin entre ciclo e técnica, o que obrigaria a
-instalar dois plugins para fazer um trabalho só. Nenhuma das duas compensa: quem instala este plugin
-está fazendo exatamente esse projeto, e paga o custo enquanto o faz. **O aviso do validador fica de
-pé de propósito**, porque um aviso explicado vale mais que um aviso suprimido.
+**Exceção declarada: `acta-pesquisa-salarial`, só na contagem de skills.** São 18, acima das 12 da
+tabela: o plugin reúne as etapas do ciclo da pesquisa e as técnicas que elas usam, e dividi-lo entre
+ciclo e técnica obrigaria a instalar dois plugins para um trabalho só. No custo não há exceção:
+depois do enxugamento das descrições, o plugin custa 997 tokens always-on, abaixo do teto de 1.000,
+e o validador não emite aviso. A folga é de 3 tokens.
 
 ### A varredura de nome de cliente cobre todo `.md`
 
@@ -110,6 +109,10 @@ Cada plugin abaixo tem um desenho de 5 a 8 skills e uma âncora de mercado decla
 para que o conteúdo não seja opinião da casa sobre o tema, mas a prática consagrada mais o ajuste da
 ACTA a mid-market brasileiro.
 
+> **Esta tabela é o desenho original, não o status.** Vários plugins foram escritos com skills
+> diferentes das listadas aqui. O status e a lista real de cada plugin estão em
+> [ROADMAP.md](ROADMAP.md) e no `README.md` do plugin.
+
 ### Fundação
 
 | Plugin | Skills alvo | Âncora |
@@ -125,11 +128,11 @@ ACTA a mid-market brasileiro.
 | `acta-gestao-de-riscos` | taxonomia-de-riscos · apetite-e-tolerancia · avaliacao-impacto-probabilidade · matriz-e-mapa-de-calor · planos-de-resposta · monitoramento-e-kri | COSO ERM 2017; ISO 31000 |
 | `acta-revenue-assurance` ✅ | ciclo-da-receita · contrato-e-cadastro · medicao-e-aceite · faturamento-e-nf · recebimento-e-inadimplencia · matriz-de-riscos-da-receita | Ciclo OTC; IIA |
 | `acta-auditoria-folha` | universo-da-folha · encargos-e-beneficios · horas-extras-e-jornada · admissao-e-desligamento · terceiros-e-pj | CLT; eSocial; IIA |
-| `acta-auditoria-compras` ✅ | ciclo-ptp · requisicao-e-alcada · cotacao-e-selecao · contrato-e-aditivo · recebimento-e-pagamento · matriz-de-riscos-de-compras | APQC PCF 4.0; ciclo PTP |
+| `acta-auditoria-compras` ✅ | ciclo-ptp · requisicao-e-alcada · cotacao-e-selecao · contrato-e-aditivo · recebimento-e-pagamento · matriz-de-riscos-de-compras | APQC PCF Cross-Industry 8.0; ciclo PTP |
 | `acta-auditoria-estoques` | acuracidade-e-inventario · custeio-e-giro · obsolescencia-e-provisao · movimentacao-e-perdas | CPC 16; IIA |
 | `acta-auditoria-marketing` | verbas-e-patrocinios · contratacao-de-agencias · comprovacao-de-entrega · brindes-e-conflito | ACFE; Lei 12.846 |
 | `acta-auditoria-producao` | apontamento-e-consumo · perdas-e-refugo · produtividade · manutencao | Lean; CPC 16 |
-| `acta-programa-de-integridade` | pilares-do-programa · codigo-de-conduta · canal-de-denuncias · due-diligence-de-terceiros · treinamento-e-comunicacao · monitoramento-e-teste | Lei 12.846 + Decreto 11.129/2022; DOJ ECCP; ISO 37001 |
+| `acta-programa-de-integridade` | pilares-do-programa · codigo-de-conduta · canal-de-denuncias · due-diligence-de-terceiros · treinamento-e-comunicacao · monitoramento-e-teste | Lei 12.846 + Decreto 11.129/2022; DOJ ECCP; ISO 37001:2025 |
 | `acta-forense` | preservacao-de-evidencia · analise-documental-e-de-dados · entrevista-investigativa · relatorio-forense | ACFE Fraud Examiners Manual; triângulo da fraude |
 | `acta-auditoria-convenios` | ciclo-do-convenio · matriz-de-riscos-do-convenio · estruturacao-e-formalizacao · execucao-e-fornecedores · prestacao-de-contas · contrapartida-e-encerramento | Lei 13.019/2014; jurisprudência do TCU; IIA; instrução normativa do concedente |
 | `acta-governanca` | instancias-e-alcadas · estatuto-e-regimento · composicao-de-conselho · politicas-corporativas | IBGC Código das Melhores Práticas |
@@ -141,7 +144,7 @@ ACTA a mid-market brasileiro.
 | Plugin | Skills alvo | Âncora |
 |---|---|---|
 | `acta-metodo-consultoria` | diagnostico-e-entrevistas · mapeamento-as-is · desenho-to-be · priorizacao-e-roadmap · gestao-de-mudanca | Método de consultoria; APQC |
-| `acta-excelencia-operacional` | taxonomia-de-processos · workshop-de-mapeamento · fluxo-as-is-e-narrativa · matriz-raci · gaps-e-quick-wins · desenho-to-be · indicadores-de-processo | **APQC PCF 4.0**; BPMN 2.0 (OMG); SIPOC; Lean |
+| `acta-excelencia-operacional` | taxonomia-de-processos · workshop-de-mapeamento · fluxo-as-is-e-narrativa · matriz-raci · gaps-e-quick-wins · desenho-to-be · indicadores-de-processo | **APQC PCF Cross-Industry 8.0**; BPMN 2.0.2 (OMG); SIPOC; Lean |
 | `acta-planejamento-estrategico` | diagnostico-de-posicionamento · analise-competitiva · direcionadores-e-objetivos · desdobramento-e-metas · painel-e-acompanhamento | Porter; Balanced Scorecard (Kaplan/Norton); OKR; três horizontes |
 | `acta-planejamento-orcamentario` | premissas-e-drivers · orcamento-base-zero · ciclo-e-calendario · forecast-e-reprevisao · analise-de-variacao | Beyond Budgeting; ZBB; rolling forecast |
 | `acta-reducao-estrategica-de-custos` | baseline-de-gastos · spend-cube · alavancas-e-priorizacao · should-cost · captura-e-acompanhamento | ZBB; spend analytics; clean sheet |
@@ -155,14 +158,14 @@ ACTA a mid-market brasileiro.
 | `acta-avaliacao-de-desempenho` | modelo-e-ciclo · competencias-e-metas · calibracao · feedback-e-pdi | 9-box; gestão por competências |
 | `acta-remuneracao-variavel` | elegibilidade · indicadores-e-metas · curva-de-pagamento · simulacao-e-custo · politica | Práticas de PLR e ILP |
 | `acta-modelagem-economico-financeira` | ✅ 14 skills | Koller/McKinsey; CPC/IFRS |
-| `acta-ma-sell-buy-side` | ✅ 9 skills | Prática sell-side mid-market |
-| `acta-pesquisa-salarial` | ✅ 5 escritas de 18 | Estatística de remuneração |
+| `acta-ma-sell-buy-side` | ✅ 12 skills, do estudo setorial ao closing | Prática sell-side e buy-side mid-market; CPC 15 (R1); Lei 12.529/2011 |
+| `acta-pesquisa-salarial` | ✅ 18 skills | Estatística de remuneração |
 
 ### Conceitos
 
 | Plugin | Skills alvo | Âncora |
 |---|---|---|
-| `acta-pensadores-de-negocios` | ✅ 15 lentes escritas | Obra primária de cada autor |
+| `acta-pensadores-de-negocios` | ✅ 1 skill roteadora (`lentes`) e 14 lentes em `references/` | Obra primária de cada autor |
 
 ✅ = já escrito.
 
@@ -257,7 +260,7 @@ Nesta ordem, porque cada um tem projeto real de onde extrair:
     produziu o teste de maior retorno da skill, o padrão de interposta pessoa (sócio que sai do
     quadro logo depois de o cônjuge entrar, tendo sido sócio do fornecedor enquanto ocupava cargo na
     contratante). As outras cinco skills se apoiam na lei anticorrupção e no decreto que a
-    regulamenta, que enumeram os parâmetros do programa, mais o guia do DOJ e a ISO 37001.
+    regulamenta, que enumeram os parâmetros do programa, mais o guia do DOJ e a ISO 37001:2025.
 
 21. ✅ `acta-auditoria-de-pesquisa`, **por matéria-prima real**, e segundo plugin a nascer fora
     do desenho original: ciclos mensais consecutivos de verificação de um indicador de qualidade

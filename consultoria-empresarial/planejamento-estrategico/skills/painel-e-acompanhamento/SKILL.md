@@ -18,7 +18,7 @@ aqui é o particular do planejamento estratégico.
 
 Quando a reunião de acompanhamento revelar que a premissa estratégica mudou, e não apenas que a
 execução atrasou, a pergunta vira de julgamento estratégico e **não se resolve aqui**: carregue
-`acta-pensadores-de-negocios`, skill `lentes`.
+`acta-pensadores-de-negocios:lentes`.
 
 ## O que esta skill entrega
 
@@ -161,5 +161,5 @@ planejamento, e as quatro fases voltam. Ver `diagnostico-de-posicionamento`, que
 | Mapa e objetivos revisados na sessão anual | `direcionadores-e-objetivos` |
 | Gatilhos de cenário monitorados nas reuniões | `analise-de-ambientes` |
 | Recomeço do ciclo completo de planejamento | `diagnostico-de-posicionamento` |
-| Se a premissa competitiva mudou de fato | `acta-pensadores-de-negocios`, skill `lentes` |
-| Registro de estado entre sessões e consultores | `acta-way`, skill `checkpoint` |
+| Se a premissa competitiva mudou de fato | `acta-pensadores-de-negocios:lentes` |
+| Registro de estado entre sessões e consultores | `acta-way:checkpoint` |

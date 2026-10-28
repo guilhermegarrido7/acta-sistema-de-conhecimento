@@ -5,7 +5,7 @@ description: Teste a tempestividade do registro contra o início efetivo da pres
 
 # Admissão, desligamento e as duas datas que organizam o vínculo
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 valem aqui integralmente e não são repetidas. Este plugin é de processo auditado;
 o método vive no plugin de método. O universo e a estrutura da base estão em `universo-da-folha`.
 
@@ -169,9 +169,20 @@ Os pontos em que o recálculo mais dá diferença:
 
 **Prazo e formalização.** Confronte a data do desligamento com a data do pagamento em 100%, e apure
 o atraso, que tem penalidade própria em favor da pessoa. Confira ainda o termo de rescisão assinado,
-a assistência sindical onde a convenção a exigir, e a guia de recolhimento rescisório do fundo de
-garantia. Rescisão paga no prazo e não formalizada continua sendo passivo, porque o que se discute
-depois é o que está assinado.
+a assistência sindical onde a convenção a exigir, e o recolhimento rescisório do fundo de garantia.
+Rescisão paga no prazo e não formalizada continua sendo passivo, porque o que se discute depois é o
+que está assinado.
+
+**O fundo de garantia rescisório no FGTS Digital.** Para desligamento a partir de 01/03/2024 não se
+emite mais GRRF (MTE, alertas do FGTS Digital): o recolhimento sai em guia do FGTS Digital,
+calculado sobre o declarado no eSocial, e a indenização compensatória é apurada sobre as
+remunerações de todo o período trabalhado (MTE, página do FGTS Digital). O prazo é de dez dias
+contados do desligamento (Lei 8.036/1990, art. 18, segundo o MTE). Quando o desligamento com direito
+a saque ocorre entre os dias 1 e 9, o depósito do mês anterior também vence no prazo rescisório,
+antes do dia 20, e o sistema antecipa o vencimento (MTE, comunicado de 06/12/2024). Teste em 100%
+dos desligados a data da guia rescisória e a do depósito do mês anterior contra esse prazo, e o
+evento de desligamento declarado contra a rescisão calculada: guia gerada sobre declaração errada
+recolhe errado.
 
 **Homologação e quitação.** Onde houver programa de desligamento coletivo ou acordo homologado, leia
 o instrumento antes de concluir: o alcance da quitação muda o que ainda é passivo e o que já não é.

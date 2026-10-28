@@ -5,7 +5,7 @@ description: Teste a base de incidência de contribuição previdenciária, fund
 
 # Encargos, impostos e benefícios
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 valem aqui integralmente e não são repetidas. Este plugin é de processo auditado;
 o método vive no plugin de método. O universo, o dicionário de rubricas e a distinção entre provento,
 desconto e base estão em `universo-da-folha`, e esta skill os pressupõe.
@@ -107,7 +107,13 @@ ponto de achado para risco declarado.
    regra própria.
 6. **Fundo de garantia**: confronte o depósito de cada competência com a base gravada e com o extrato
    da conta vinculada, e verifique o depósito sobre as parcelas de aviso e de décimo terceiro, que é
-   onde a falta costuma estar.
+   onde a falta costuma estar. Desde 01/03/2024 o recolhimento sai pelo FGTS Digital, calculado
+   sobre o declarado no eSocial, e vence no dia 20 do mês seguinte ao da competência (Lei
+   14.438/2022; MTE, página do FGTS Digital). Quando o dia 20 não é dia útil, o vencimento se
+   antecipa: a competência de março de 2024 venceu em 19/04/2024, sexta-feira (cronograma do MTE).
+   Teste o vencimento pela regra vigente em cada competência, e trate divergência entre folha e
+   eSocial como diferença de fundo de garantia: a guia sai do declarado, e a declaração na
+   escrituração digital tem caráter de confissão de dívida (Lei 13.932/2019, segundo o MTE).
 7. **Certidões de regularidade.** Peça as vigentes. Certidão negada é indício de divergência já
    conhecida pelo fisco, e muda a prioridade do trabalho.
 
@@ -117,6 +123,33 @@ eventos transmitidos fora do prazo e de retificações. Divergência entre folha
 autuação independente do mérito do cálculo, porque o número declarado é o que a fiscalização usa como
 ponto de partida. Retificação recorrente da mesma competência é sintoma de processo de fechamento
 instável, e vale como achado de controle mesmo sem diferença residual.
+
+### Contribuição sobre a receita bruta: a transição de 2025 a 2027
+
+Vale para a empresa que optou pela contribuição substitutiva sobre a receita bruta. A Lei
+14.973/2024 tornou a substituição parcial e decrescente (Lei 12.546/2011, art. 9º-A, incluído por
+ela), e em cada ano a empresa recolhe as duas parcelas:
+
+| Ano | Sobre a receita bruta | Patronal sobre a folha (Lei 8.212/1991, art. 22, I e III) |
+|---|---|---|
+| 2025 | 80% das alíquotas da Lei 12.546/2011 | 25% das alíquotas, ou 5% da remuneração |
+| 2026 | 60% | 50%, ou 10% |
+| 2027 | 40% | 75%, ou 15% |
+| A partir de 2028 | Sem substituição: a lei a limita aos exercícios de 2025 a 2027 | Integral, 20% |
+
+Três testes próprios, por competência:
+
+1. **A virada de janeiro.** As duas alíquotas mudam no primeiro dia de cada ano. Parametrização que
+   não virou erra em todas as competências do ano.
+2. **O décimo terceiro.** De 2025 a 2027, no regime de substituição parcial, a parcela patronal dos
+   incisos I e III não incide sobre o décimo terceiro salário (art. 9º-A, §1º). Recolher sobre ele é
+   pagamento a maior, recuperável. A exclusão alcança só essa parcela; as demais incidências sobre o
+   décimo terceiro seguem a regra geral e o teste da §2.
+3. **O termo de manutenção de empregados.** Quem opta firma termo de manter, em cada ano-calendário,
+   quantitativo médio de empregados de pelo menos 75% da média do ano anterior. Descumprido, perde a
+   contribuição sobre a receita bruta a partir do ano seguinte e recolhe 20% sobre a folha (Lei
+   14.973/2024, art. 4º). Peça o termo e recalcule a média anual pela base de folha: recolhimento
+   pela receita bruta no ano seguinte ao descumprimento é passivo, medido até a alíquota cheia.
 
 ## 4. Benefícios: a conciliação a três pontas
 
@@ -238,12 +271,14 @@ passivo crescente, risco de pagamento em dobro e indicador de quadro subdimensio
 4. Conciliação base gravada contra declarada contra guia recolhida, por competência e por entidade, e
    a relação de recolhimentos em atraso com o encargo de mora quantificado.
 5. A alíquota de risco ambiental testada contra a atividade preponderante de cada estabelecimento.
-6. A conciliação a três pontas de cada benefício, com os quatro resíduos isolados e quantificados.
-7. Os testes próprios de vale-transporte, plano de saúde e consignado, com a população de saldo
+6. Para optante pela receita bruta, as alíquotas de transição por competência, o décimo terceiro sem
+   a parcela patronal e o termo de manutenção de empregados conferido contra a média anual.
+7. A conciliação a três pontas de cada benefício, com os quatro resíduos isolados e quantificados.
+8. Os testes próprios de vale-transporte, plano de saúde e consignado, com a população de saldo
    negativo recorrente tratada.
-8. Provisões de férias e décimo terceiro confrontadas com o direito apurado, e a relação de períodos
+9. Provisões de férias e décimo terceiro confrontadas com o direito apurado, e a relação de períodos
    aquisitivos vencidos.
-9. A lista do que não foi testável, com a limitação redigida para a aba Critérios.
+10. A lista do que não foi testável, com a limitação redigida para a aba Critérios.
 
 ## Próximo passo
 

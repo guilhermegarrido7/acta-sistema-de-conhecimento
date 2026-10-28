@@ -6,7 +6,7 @@ description: Feche um bloco de trabalho de auditoria e decida o destino da liç�
 # Aprendizado e histórico
 
 Esta skill é o **ritual de auditoria** rodando sobre o mecanismo comum. O protocolo de checkpoint,
-os templates e a regra de defasagem vivem em `acta-way`, skill `checkpoint`. Carregue-a primeiro.
+os templates e a regra de defasagem vivem em `acta-way:checkpoint`. Carregue-a primeiro.
 Aqui está só o que a auditoria acrescenta.
 
 Carregue também `metodo-auditoria`: as regras invioláveis e a doutrina do número exato valem

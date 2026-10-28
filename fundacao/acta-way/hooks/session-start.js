@@ -2,9 +2,10 @@
 // Hook de SessionStart do acta-way.
 // Le quais plugins ACTA estao habilitados e lembra do custo always-on caso
 // haja mais de um ativo, ou caso o unico ativo nao esteja em uso nesta
-// conversa. Nunca falha a sessao: qualquer erro aqui e engolido e o hook
-// sai silenciosamente (exit 0, sem output), porque um lembrete de higiene de
-// contexto nao pode travar o inicio de uma sessao de trabalho real.
+// conversa. Roda so no inicio de sessao nova (matcher "startup" em hooks.json),
+// nao em resume, clear ou compact. Nunca falha a sessao: qualquer erro aqui e
+// engolido e o hook sai silenciosamente (exit 0, sem output), porque um
+// lembrete de higiene de contexto nao pode travar o inicio de uma sessao.
 
 const fs = require("fs");
 const os = require("os");
@@ -12,10 +13,29 @@ const path = require("path");
 
 const MARKETPLACE = "acta-sistema-de-conhecimento";
 
+function lerJSON(p) {
+  try {
+    // Remove o BOM que editores do Windows gravam no inicio do arquivo e que quebra o JSON.parse.
+    return JSON.parse(fs.readFileSync(p, "utf8").replace(/^\uFEFF/, ""));
+  } catch (erro) {
+    return null;
+  }
+}
+
+// O plugin pode estar habilitado no escopo do usuario ou no do projeto. A ordem
+// segue a precedencia do Claude Code: usuario, depois projeto, depois local.
 function lerPluginsHabilitados() {
-  const p = path.join(os.homedir(), ".claude", "settings.json");
-  const j = JSON.parse(fs.readFileSync(p, "utf8"));
-  const mapa = j.enabledPlugins || {};
+  const projeto = process.env.CLAUDE_PROJECT_DIR || process.cwd();
+  const arquivos = [
+    path.join(os.homedir(), ".claude", "settings.json"),
+    path.join(projeto, ".claude", "settings.json"),
+    path.join(projeto, ".claude", "settings.local.json"),
+  ];
+  const mapa = {};
+  for (const arquivo of arquivos) {
+    const j = lerJSON(arquivo);
+    if (j && j.enabledPlugins) Object.assign(mapa, j.enabledPlugins);
+  }
   return Object.keys(mapa)
     .filter((chave) => mapa[chave] === true && chave.endsWith("@" + MARKETPLACE))
     .map((chave) => chave.split("@")[0])
@@ -30,8 +50,10 @@ function montarContexto(ativos) {
   return (
     "Plugins do ACTA Sistema de Conhecimento habilitados nesta maquina: " + lista + ".\n\n" +
     "Cada plugin habilitado soma um custo fixo de contexto (\"always-on\") em TODA sessao, " +
-    "mesmo em conversas sem nenhuma relacao com ele. E o preco de manter a descricao das " +
-    "skills disponivel para o roteamento. Nao e cobrado por uso, e cobrado por estar ativo.\n\n" +
+    "mesmo em conversas sem nenhuma relacao com ele: e o preco de manter a descricao das skills " +
+    "disponivel para o roteamento. Alem disso, a listagem de skills tem teto (1% da janela de " +
+    "contexto): acima dele, o Claude Code corta as descricoes das skills menos usadas e o " +
+    "roteamento piora.\n\n" +
     "Se esta conversa nao for sobre um dos projetos acima, mencione isso ao usuario logo na " +
     "primeira resposta, em uma linha curta, e sugira desativar o que nao estiver em uso agora:\n" +
     "`claude plugin disable <nome>` (reversivel a qualquer momento com `claude plugin enable <nome>`).\n" +

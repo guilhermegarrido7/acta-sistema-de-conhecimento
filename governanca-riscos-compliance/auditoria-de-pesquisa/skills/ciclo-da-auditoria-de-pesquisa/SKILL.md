@@ -5,7 +5,7 @@ description: Conduza a auditoria independente de uma pesquisa ou de um indicador
 
 # O ciclo da auditoria de pesquisa
 
-Carregue antes: `acta-way` e `acta-metodo-auditoria`. As regras invioláveis, o papel de trabalho, o
+Carregue antes: `acta-way:checkpoint` e `acta-metodo-auditoria:metodo-auditoria`. As regras invioláveis, o papel de trabalho, o
 programa de testes e a redação de achado vivem lá e não são repetidos aqui.
 
 ## 1. O que este trabalho é

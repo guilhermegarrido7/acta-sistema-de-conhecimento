@@ -5,7 +5,7 @@ de apetite e tolerância, avaliação de impacto e probabilidade com escalas anc
 de calor, planos de resposta com dono e prazo, e o monitoramento que mantém o processo vivo depois
 que o consultor sai.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
 > **Plugins vizinhos, quando o mandato exigir:** `acta-controles-internos` traz a matriz formal de
 > riscos e controles, o walkthrough e a distinção entre desenho e efetividade, que é o que decide se

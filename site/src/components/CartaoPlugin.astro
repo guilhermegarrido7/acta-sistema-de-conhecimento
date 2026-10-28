@@ -1,0 +1,21 @@
+---
+/* Cartão de plugin nos catálogos (início e /projetos). nivel é o nível do título do cartão,
+   para a hierarquia de cabeçalhos seguir a da página em que ele entra. custo mostra o custo
+   always-on, que só interessa no catálogo completo. */
+const { p, nivel = 3, custo = false } = Astro.props;
+const Titulo = `h${nivel}`;
+---
+<article class="cartao">
+  <Titulo><a href={p.url}>{p.titulo}</a></Titulo>
+  <p>{p.descricao}</p>
+  <p class="requer">
+    {p.requerTodos.length > 0
+      ? <>requer {p.requerTodos.map((d, i) => <>{i > 0 && ', '}<code>{d.nome}</code></>)}</>
+      : 'sem dependências'}
+  </p>
+  <div class="pe">
+    <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>
+    <span>{p.skills.length} {p.skills.length === 1 ? 'skill' : 'skills'}</span>
+    {custo && <span>~{p.custoAlwaysOn} tok/sessão</span>}
+  </div>
+</article>

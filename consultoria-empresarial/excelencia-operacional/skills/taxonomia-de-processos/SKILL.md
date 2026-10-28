@@ -5,10 +5,11 @@ description: Classifique o ciclo nos cinco níveis de modelagem e codifique proc
 
 # Taxonomia de processos
 
-Carregue `acta-way` antes desta skill: ambiente técnico, convenções de entregável e o protocolo de
-checkpoint valem aqui integralmente e **não** são repetidos. O método de prática (diagnóstico,
-entrevista, desenho TO BE, priorização) virá de `acta-metodo-consultoria`; enquanto esse plugin for
-esqueleto, o que esta skill precisa dele está dito aqui e em mais nada.
+Carregue `acta-way:checkpoint` antes desta skill; `acta-way:convencoes-de-entregavel` e
+`acta-way:ambiente-tecnico` ao produzir entregável ou rodar script. Valem aqui integralmente e **não**
+são repetidos. O método de prática (diagnóstico, entrevista, desenho TO BE, priorização) está em
+`acta-metodo-consultoria`, que este plugin não exige instalado: o que esta skill precisa dele está dito
+aqui e em mais nada.
 
 ## Papel desta skill
 
@@ -53,7 +54,7 @@ proposta, não no meio do projeto.
 
 ## 2. Notação BPMN simplificada
 
-**Âncora:** **BPMN 2.0 (OMG)** é a notação padrão de modelagem de processos de negócio; ela contribui
+**Âncora:** **BPMN 2.0.2 (OMG; ISO/IEC 19510:2013)** é a notação padrão de modelagem de processos de negócio; ela contribui
 a semântica dos elementos (evento, atividade, gateway, raia) e a garantia de que o desenho é legível
 por qualquer analista treinado. A ACTA usa um **subconjunto** dela, o suficiente para o cliente ler
 sem treinamento e não o bastante para virar exercício de notação.

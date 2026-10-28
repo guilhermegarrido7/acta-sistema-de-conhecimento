@@ -4,5 +4,9 @@
   "description": "Auditoria independente de pesquisa e de indicador apurado por terceiro: dicionário de dados e roteiro, aderência ao plano amostral conferida contra a população oficial, bateria de testes de consistência sobre a base, recontato do respondente com código de ocorrência padronizado, e a memória de cálculo do indicador.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way",
+    "acta-metodo-auditoria"
+  ]
 }

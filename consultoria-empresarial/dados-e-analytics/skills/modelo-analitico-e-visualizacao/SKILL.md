@@ -1,11 +1,12 @@
 ---
 name: modelo-analitico-e-visualizacao
-description: Monte o modelo analítico que lê a base por qualquer recorte e o painel que a diretoria consulta, e decida o que vale automatizar. Acionar ao montar tabela dinâmica ou modelo com SUMIFS, ao desenhar painel de indicadores, ao conectar a base ao Power BI, ou ao avaliar automatizar o pipeline de dados recorrente.
+description: Monte o modelo analítico e o painel de gestão de um projeto de dados e analytics, lendo a base de lançamentos por qualquer recorte, e decida o que automatizar. Acionar ao montar tabela dinâmica ou modelo com SUMIFS, ao desenhar painel de indicadores, ao conectar a base ao Power BI, ou ao avaliar automatizar pipeline recorrente.
 ---
 
 # Modelo analítico e visualização
 
-Carregue `acta-metodo-consultoria` antes desta skill. Modele apenas sobre base validada, reclassificada
+Carregue `acta-metodo-consultoria:mapeamento-as-is` antes desta skill (definições únicas de
+numerador e denominador). Modele apenas sobre base validada, reclassificada
 e, em grupo, consolidada: o painel bonito sobre dado errado é o jeito mais rápido de um número falso
 chegar à diretoria com cara de verdade.
 

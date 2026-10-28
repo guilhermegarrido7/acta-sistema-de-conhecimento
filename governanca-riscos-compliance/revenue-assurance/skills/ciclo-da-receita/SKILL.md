@@ -5,7 +5,7 @@ description: Mapeie o ciclo da receita em sete elos e monte o escopo do trabalho
 
 # O ciclo da receita: escopo, elos e blocos executáveis
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 (nunca presumir caminho, sempre perguntar) valem aqui integralmente e não são
 repetidas. Este plugin é de **processo auditado**. O método de auditar vive no plugin de método,
 aqui vive o que é próprio do ciclo de receita.

@@ -19,16 +19,20 @@ description: Teste se o programa de integridade funciona na prática, com a bate
 ## 1. A pergunta que organiza o pilar
 
 O guia do Departamento de Justiça norte-americano para avaliação de programas de compliance (ECCP)
-se organiza em torno de três perguntas, e a segunda é a que muda o trabalho: **o programa está sendo
-aplicado com seriedade e de boa-fé, ou seja, funciona na prática?** As outras duas são se o programa
-é bem desenhado e se ele funciona na prática **naquele caso concreto**.
+se organiza em torno de três perguntas: (1) o programa é bem desenhado?; (2) é aplicado com
+seriedade e de boa-fé, isto é, tem recursos e autonomia para funcionar?; (3) **funciona na
+prática?** A versão vigente é a de setembro de 2024, a última listada pela Divisão Criminal do DOJ
+em 26/10/2026 (justice.gov). A terceira pergunta é a que muda o trabalho, e é dela que este pilar
+trata.
 
 A consequência metodológica é direta: a evidência aceitável é a que a operação produziu ao operar, e
 não a que a área de integridade produziu ao se descrever. Política, organograma e apresentação
-provam desenho. Só registro transacional prova funcionamento.
+provam desenho, que é a primeira pergunta. Orçamento executado, linha de reporte e autoridade da
+instância respondem à segunda, e estão nas linhas de alta direção e de instância responsável da §2.
+Só registro transacional prova funcionamento.
 
-A ISO 37001 entra aqui pelo outro lado, com a disciplina de sistema de gestão: objetivo definido,
-controle operacional, análise crítica por período e melhoria registrada. O que ela acrescenta ao
+A ISO 37001:2025 entra aqui pelo outro lado, com a disciplina de sistema de gestão: objetivo
+definido, controle operacional, análise crítica por período e melhoria registrada. O que ela acrescenta ao
 trabalho é a exigência de que o resultado do teste **volte** como mudança no programa, e não apenas
 como relatório.
 
@@ -42,16 +46,18 @@ aqui não produz inconformidade documental isolada.
 |---|---|---|
 | Alta direção | Atas do período com o tema em pauta; rubrica orçamentária de integridade executada; decisões barradas por parecer de integridade | Todas as atas e todo o orçamento do período |
 | Código e políticas | Admitidos no período contra termos de ciência, com a versão vigente na data | 100% dos admitidos |
-| Terceiros | Data do laudo de diligência contra data de assinatura do contrato; cláusula de integridade presente no instrumento | 100% dos contratos firmados no período |
+| Setor público | Licitações, contratos administrativos, fiscalizações, licenças e certidões do período contra o procedimento: aprovação prévia, registro da interação e, quando houve intermediário, diligência dele anterior à contratação | Todas as licitações e contratos públicos do período, e o registro de interações |
+| Terceiros | Data do laudo de diligência contra data de assinatura do contrato; cláusula de integridade presente no instrumento; triagem de pessoa exposta politicamente; diligência do beneficiário anterior ao patrocínio ou à doação, e prestação de contas | 100% dos contratos, patrocínios e doações do período |
 | Instância responsável | Linha de reporte, orçamento próprio, e casos em que a instância foi sobreposta | Estrutura e casos do período |
 | Risco de integridade | Data da última avaliação e da revisão; cobertura das unidades e processos expostos | Matriz vigente |
 | Registros contábeis | Despesa de representação, doação, patrocínio, fundo fixo e adiantamento sem documentação suficiente | 100% das contas sensíveis do período |
 | Treinamento | Os três cortes de cobertura, com reciclagem vencida contando como não treinado | 100% do quadro ativo |
 | Canal | Aderência aos marcos de prazo; teste das três camadas de independência; trilha de acesso aos casos | 100% dos casos do período |
-| Disciplina | Consistência de medida por natureza do caso e por nível hierárquico | 100% dos casos encerrados |
+| Disciplina e remediação | Consistência de medida por natureza do caso e por nível hierárquico; dias entre a detecção e a interrupção da conduta; remediação do dano registrada | 100% dos casos encerrados |
+| Fusões e aquisições | Operação societária com diligência de integridade anterior ao fechamento, e o achado tratado no contrato ou no plano de integração | 100% das operações do período |
 | Melhoria | Planos de ação abertos por teste anterior, com dono, prazo e situação | 100% dos planos |
 
-**O teste mais barato e mais revelador é o terceiro da lista.** Ordenar os contratos do período pela
+**O teste mais barato e mais revelador é o de terceiros.** Ordenar os contratos do período pela
 data de assinatura e confrontar com a data do laudo de diligência custa uma consulta e derruba o
 pilar de terceiros na maioria dos diagnósticos: a diligência existe, o processo existe, e sai depois
 do contrato assinado. Diligência posterior ao contrato não é controle. É formalidade.

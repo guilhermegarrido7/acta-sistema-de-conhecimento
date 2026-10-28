@@ -4,13 +4,13 @@ O "ACTA way of work" em auditoria interna: as regras que não se negociam, a dis
 modo de operar e a mecânica de cada entregável. Não é um projeto: é o método que todos os projetos
 de auditoria da firma carregam.
 
-> **Pré-requisito: instale `acta-way` antes.**
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json` e instalado junto.
 > ```bash
 > claude plugin install acta-way@acta-sistema-de-conhecimento --scope user
 > ```
-> `aprendizado-e-historico` (abaixo) roda sobre o mecanismo de checkpoint que vive lá. O manifesto
-> de plugin não tem campo de dependência. Sem `acta-way` instalado, essa instrução não encontra
-> nada.
+> `aprendizado-e-historico` (abaixo) roda sobre o mecanismo de checkpoint que vive lá. Sem
+> `acta-way` instalado, essa instrução não encontra nada. O comando acima só é necessário se a sua
+> versão do Claude Code não instalar dependências sozinha.
 
 ## Skills
 
@@ -39,5 +39,4 @@ pergunte antes de agir. Nunca deduza pelo nome do arquivo, nunca escolha "o mais
 assuma a pasta padrão.
 
 Pessoas aparecem por papel (*o auditor responsável*, *o sócio responsável*, *o revisor de WP*), não
-por nome. O catálogo de armadilhas de ambiente Windows/OneDrive vive em `acta-way`, skill
-`ambiente-tecnico`.
+por nome. O catálogo de armadilhas de ambiente Windows/OneDrive vive em `acta-way:ambiente-tecnico`.

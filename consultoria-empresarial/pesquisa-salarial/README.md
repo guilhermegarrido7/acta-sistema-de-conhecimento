@@ -3,16 +3,31 @@
 Metodologia ACTA para projetos de Pesquisa de Remuneração e Benefícios, generalizada a partir dos
 Casos A e B. Uma skill por etapa do ciclo de vida, do escopo comercial ao encerramento.
 
-> **Pré-requisito: instale `acta-way` antes.**
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json` e instalado junto.
 > ```bash
 > claude plugin install acta-way@acta-sistema-de-conhecimento --scope user
 > ```
 > É onde vive o mecanismo de checkpoint entre sessões e consultores (seção 7 do método, abaixo). Sem
-> ele instalado, a instrução "carregue `acta-way`, skill `checkpoint`" não encontra nada. O
-> manifesto de plugin não tem campo de dependência, ninguém instala isso por você.
+> ele instalado, a instrução "carregue `acta-way:checkpoint`" não encontra nada. O comando
+> acima só é necessário se a sua versão do Claude Code não instalar dependências sozinha.
 
 Vizinho de `acta-pccr`: a pesquisa alimenta a tabela salarial do Plano de Cargos, mas é um projeto
 com metodologia, entregáveis e ciclo próprios.
+
+## Fronteira: igualdade salarial e relatório de transparência
+
+A Lei 14.611/2023 trata da igualdade salarial e de critérios remuneratórios entre mulheres e homens
+e prevê o Relatório de Transparência Salarial e de Critérios Remuneratórios, semestral. O Decreto
+11.795/2023 e a Portaria MTE nº 3.714/2023 o regulamentam para a pessoa jurídica de direito privado
+com 100 ou mais empregados. O relatório é produzido pelo Ministério do Trabalho e Emprego, com as
+informações complementares que a empresa presta no Portal Emprega Brasil, e cabe à empresa
+publicá-lo em local visível (MTE, notícias de 02/09/2024 e de 10/08/2026).
+
+A pesquisa de mercado da ACTA não substitui nem produz esse relatório. Ela compara a remuneração do
+cliente com a de um painel externo, cargo a cargo, e não mede diferença entre mulheres e homens
+dentro da empresa. A análise de equidade salarial interna é escopo separado, com base, método e
+entregável próprios, e se contrata como tal. Quando o cliente pedir as duas coisas, a proposta as
+separa em `escopo-e-proposta`.
 
 ## Skills
 

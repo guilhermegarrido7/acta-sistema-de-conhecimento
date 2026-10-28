@@ -1,8 +1,9 @@
 {
-  "description": "Lembra o custo de contexto always-on dos plugins ACTA ativos no início de cada sessão",
+  "description": "Lembra o custo de contexto always-on dos plugins ACTA ativos no início de cada sessão nova",
   "hooks": {
     "SessionStart": [
       {
+        "matcher": "startup",
         "hooks": [
           {
             "type": "command",

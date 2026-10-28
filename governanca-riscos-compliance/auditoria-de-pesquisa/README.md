@@ -5,9 +5,9 @@ dicionário de dados, aderência da amostra ao plano conferida contra a populaç
 oito testes sobre a base entregue, recontato do respondente com tabela de códigos padronizada, e a
 apuração do indicador com memória de cálculo publicável.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
-> **Segundo pré-requisito: `acta-metodo-auditoria`.** Este plugin é de **processo auditado**. As
+> **Segundo pré-requisito: `acta-metodo-auditoria`**, também declarado como dependência. Este plugin é de **processo auditado**. As
 > regras invioláveis, a doutrina do número exato, o papel de trabalho, o programa de testes e a
 > redação de achados vivem lá e **não são repetidos aqui**. Cada skill manda carregá-lo antes.
 >

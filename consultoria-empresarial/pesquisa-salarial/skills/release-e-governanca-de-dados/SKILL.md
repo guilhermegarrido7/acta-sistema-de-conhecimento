@@ -1,6 +1,6 @@
 ---
 name: release-e-governanca-de-dados
-description: Congele a base publicada e governe os números que saem da firma. Acionar ao fechar o release com hash e log, ao conduzir a revisão independente do segundo consultor, ao versionar, ou ao propagar correção de número já divulgado ao cliente.
+description: Congele o release da pesquisa salarial e governe os números entregues. Acionar ao fechar o release com hash, ao fazer a revisão independente, ao marcar o release no entregável, ou ao propagar correção de número já divulgado.
 ---
 
 # Release e governança de dados

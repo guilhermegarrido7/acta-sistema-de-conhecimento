@@ -5,7 +5,7 @@ description: Rode a bateria de oito testes sobre a base entregue pelo operador, 
 
 # A bateria de testes de base
 
-Carregue antes: `acta-way` e `acta-metodo-auditoria`. A doutrina do número exato e a regra de
+Carregue antes: `acta-way:checkpoint` e `acta-metodo-auditoria:metodo-auditoria`. A doutrina do número exato e a regra de
 evidência vivem lá.
 
 ## 1. O desenho da bateria

@@ -17,7 +17,7 @@ de gestor) virá de `acta-metodo-consultoria` quando ele sair do esqueleto; até
 > `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 
 Se a meta é ambiciosa demais ou de menos para a estrutura do setor é pergunta de julgamento
-estratégico e **não se resolve aqui**: carregue `acta-pensadores-de-negocios`, skill `lentes`. Esta
+estratégico e **não se resolve aqui**: carregue `acta-pensadores-de-negocios:lentes`. Esta
 skill entrega a disciplina de desdobramento.
 
 A mecânica da sala está em `workshops-de-planejamento`.
@@ -184,6 +184,6 @@ interdependência. Duas regras:
 | Ritual, cadência e painel de acompanhamento | `painel-e-acompanhamento` |
 | Orçamento completo e controle orçamentário | `acta-planejamento-orcamentario` (quando existir) |
 | Modelagem de projeção, cenários e retorno | `acta-modelagem-economico-financeira` |
-| Se a meta é compatível com a estrutura do setor | `acta-pensadores-de-negocios`, skill `lentes` |
+| Se a meta é compatível com a estrutura do setor | `acta-pensadores-de-negocios:lentes` |
 | Kit, orientação aos gestores e ata do WS4 | `workshops-de-planejamento` |
 | Convenção de planilha, anonimização, checkpoint | `acta-way` |

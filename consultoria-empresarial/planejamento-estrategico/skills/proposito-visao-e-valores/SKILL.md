@@ -17,7 +17,7 @@ planejamento estratégico.
 > `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 
 Julgamento estratégico (se a aspiração declarada é sustentável, se a vantagem que ela pressupõe
-existe) **não se resolve aqui**. Carregue `acta-pensadores-de-negocios`, skill `lentes`, e deixe a
+existe) **não se resolve aqui**. Carregue `acta-pensadores-de-negocios:lentes`, e deixe a
 roteadora escolher. Este plugin não reensina Porter, Collins ou Greenwald.
 
 A mecânica da sala (kit, pré-leitura, votação, ata) está em `workshops-de-planejamento`.
@@ -172,5 +172,5 @@ de operação por tempo de sala, e o argumento precisa ser de consequência.
 | Sondagem sobre os elementos vigentes e entrevistas | `diagnostico-de-posicionamento` |
 | SWOT, cenários e vetores que testam a aspiração | `analise-de-ambientes` |
 | Objetivos que fecham a lacuna entre visão e capacidade | `direcionadores-e-objetivos` |
-| Se a vantagem pressuposta pela visão é durável | `acta-pensadores-de-negocios`, skill `lentes` |
+| Se a vantagem pressuposta pela visão é durável | `acta-pensadores-de-negocios:lentes` |
 | Anonimização das referências, identidade do deck | `acta-way` |

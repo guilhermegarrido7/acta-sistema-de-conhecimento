@@ -5,7 +5,7 @@ description: Avalie e teste controles gerais de TI nos quatro domínios e conclu
 
 # ITGC: controles gerais de tecnologia da informação
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 (nunca presumir caminho, sempre perguntar) valem aqui integralmente e não são
 repetidas.
 
@@ -54,6 +54,20 @@ incompleto.
 estabelece a dependência entre ITGC, controles de aplicação e evidência de sistema; a **ISO/IEC
 27001** contribui onde o trabalho toca segurança da informação como disciplina própria, e não deve
 ser invocada onde o objeto é confiabilidade do reporte financeiro.
+
+**Requisito Tópico de Cibersegurança do IIA.** Vigente desde 05/02/2026, é componente obrigatório do
+IPPF, aplicado com as Normas Globais de Auditoria Interna: quando a avaliação de risco da função de
+auditoria interna leva o tema ao plano, todo trabalho de asseguração sobre cibersegurança tem de
+cobrir, como linha de base mínima, o desenho e a implementação dos processos de governança, de
+gestão de risco e de controle de cibersegurança; em consultoria, é recomendado e não obrigatório
+(theiia.org). Esta skill, cujo objeto é a confiabilidade do reporte financeiro, cobre parte da
+camada de controle (acessos, mudanças, operações, incidentes, backup e restauração) e não cobre
+governança nem gestão do risco cibernético. Quando a casa atuar como auditoria interna em trabalho
+de cibersegurança, acrescente essas duas partes a partir do texto do requisito e do guia do usuário
+do IIA, e registre no papel de trabalho a avaliação de aplicabilidade e a justificativa de cada
+exclusão (itens do requisito, e a aplicação a risco cibernético surgido dentro de um trabalho de
+ITGC, a confirmar no documento do IIA). O requisito amplia o escopo do trabalho de cibersegurança e
+não altera a conclusão de dependência desta seção.
 
 ## 2. Gestão de acessos
 

@@ -1,8 +1,11 @@
 {
   "name": "acta-excelencia-operacional",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Modelagem e otimização de processos ponta a ponta, incluindo os ciclos PTP, OTC, RTR e HTR: mapeamento, gargalos, redesenho e indicadores.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way"
+  ]
 }

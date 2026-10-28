@@ -1,6 +1,6 @@
 ---
 name: relatorio-e-storyline
-description: Construa o relatório da pesquisa, do ghost deck ao deck final. Acionar ao montar a storyline em três atos, ao escrever títulos de ação, ao aplicar o design ACTA nos slides, ou ao rodar o checklist de qualidade visual antes de entregar.
+description: Construa o deck de resultados da pesquisa salarial, do ghost deck ao deck final. Acionar ao escrever o sumário executivo e títulos de ação, ao montar a storyline, ao diagramar no design ACTA, ou ao rodar o checklist visual.
 ---
 
 # Relatório e storyline

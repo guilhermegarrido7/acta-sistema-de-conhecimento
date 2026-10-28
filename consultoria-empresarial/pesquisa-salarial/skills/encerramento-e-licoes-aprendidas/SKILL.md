@@ -1,6 +1,6 @@
 ---
 name: encerramento-e-licoes-aprendidas
-description: Encerre o projeto e converta o engajamento em benchmark reutilizável. Acionar ao montar o pacote de encerramento, ao arquivar release e livro de cálculos, ao escrever o caso em casos/, ou ao atualizar o estudo de benchmarking com o que mudou no método.
+description: Encerre a pesquisa salarial e converta o engajamento em benchmark. Acionar ao entregar o pacote de encerramento, ao decidir o destino do dado de participante, ao escrever o caso, ou ao atualizar o estudo de benchmarking.
 ---
 
 # Encerramento e lições aprendidas
@@ -10,8 +10,7 @@ firma, quando o dado de terceiro está guardado ou descartado conforme o que foi
 prometido, e quando o método que o projeto produziu está disponível para o
 próximo. Nenhuma das três acontece sozinha.
 
-Carregue `metodo-pesquisa-salarial` antes desta skill, e `acta-way`, skill
-`checkpoint`, porque o encerramento é o último gatilho de gravação do
+Carregue `metodo-pesquisa-salarial` antes desta skill, e `acta-way:checkpoint`, porque o encerramento é o último gatilho de gravação do
 engajamento.
 
 ## 1. Pacote de encerramento

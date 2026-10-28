@@ -1,6 +1,6 @@
 ---
 name: anonimizacao-e-lgpd
-description: Remover identificação de cliente e de pessoa do material que circula na firma ou vai para o repositório, com a régua da LGPD para dado pessoal em projeto de consultoria e o validador que barra nome publicado. Acionar ao transformar caso real em exemplo, ao receber base com CPF ou nome de funcionário, ao publicar skill, ou ao divulgar resultado de pesquisa salarial.
+description: Remova identificação de cliente e de pessoa do material que circula na firma ou vai para o repositório, com a régua da LGPD para dado pessoal e a rota de incidente. Acionar ao transformar caso real em exemplo, ao receber base com CPF ou nome de funcionário, ao publicar skill, ao divulgar número agregado sobre pessoas, ou ao tratar incidente com dado pessoal.
 ---
 
 # Anonimização e LGPD
@@ -25,8 +25,8 @@ fora dele.
 | Registro | Onde vive | Nome do cliente |
 |---|---|---|
 | Método, skill, template, fórmula, critério | Repositório do plugin | **Nunca** |
-| O projeto como aconteceu | `casos/<cliente>.md` | Sim, é o ponto do arquivo |
-| O que dali se generaliza | `benchmarks/<cliente>.md` | Sim, mas o conteúdo é generalizável |
+| O projeto como aconteceu | `casos/<caso>.md` | **Não**: setor e porte no lugar do nome |
+| O que dali se generaliza | `benchmarks/<caso>.md` | **Não**: o conteúdo é generalizável |
 | Estado e decisões do projeto corrente | `~~controle/` do projeto | Sim, é a pasta do cliente |
 
 Ao promover uma lição de `APRENDIZADOS.md` para o repositório (ver `checkpoint`, seção 9), a
@@ -60,9 +60,11 @@ cliente âncora nomeado, métrica única no mercado local, evento noticiado com 
 ## 2. O validador: como a regra pega
 
 A regra de nome de cliente não é intenção, é verificação automática. O repositório tem
-`scripts/validar-skills.py`, que **barra nome de cliente e de pessoa em todo texto publicado**:
-`SKILL.md`, `projeto.md` e `fundamentos.md`. Os dois últimos foram incluídos porque também vão para o
-portal, e conteúdo publicado sem checagem é justamente o buraco que o script existe para fechar.
+`scripts/validar-skills.py`, que **barra nome de cliente e de pessoa em todo arquivo `.md` do
+repositório**, inclusive `references/`, e não só em `SKILL.md`, `projeto.md` e `fundamentos.md`. O
+que o `.gitignore` exclui do versionamento fica de fora. A varredura é total porque uma lista de
+caminhos permitidos envelhece, e conteúdo publicado sem checagem é justamente o buraco que o script
+existe para fechar.
 
 ```bash
 python scripts/validar-skills.py
@@ -121,15 +123,28 @@ O que aparece em projeto da ACTA, por tipo de trabalho:
 | M&A e valuation | Contrato de trabalho de executivo, quadro societário, remuneração da diretoria | Chega no data room sem pedido |
 | Compras e integridade | Sócio de fornecedor, parte relacionada, denúncia | Denúncia pode conter dado de terceiro não envolvido |
 
-**Dado pessoal sensível** tem regime mais estrito: saúde, biometria, origem racial ou étnica,
-convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso,
-filosófico ou político, dado referente à vida sexual. Em folha de pagamento isso chega sem aviso, por
-rubrica de plano de saúde, desconto sindical, laudo de afastamento e cota legal. **Rubrica de folha
-que revela condição de saúde ou filiação sindical não entra em papel de trabalho nominal.**
+**Dado pessoal sensível** tem regime mais estrito: origem racial ou étnica, convicção religiosa,
+opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou
+político, dado referente à saúde ou à vida sexual, e dado genético ou biométrico, quando vinculado a
+uma pessoa natural (LGPD, art. 5º, II). Em folha de pagamento isso chega sem aviso, por rubrica de
+plano de saúde, desconto sindical, laudo de afastamento e cota legal, e em base de ponto ou de
+controle de acesso pelo cadastro biométrico, quando ele vem junto. **Rubrica de folha que revela
+condição de saúde ou filiação sindical não entra em papel de trabalho nominal.**
 
 **A firma é operadora, não controladora, na maioria dos projetos.** O cliente decide a finalidade do
 tratamento e nos contrata para executá-lo. Isso não dilui a responsabilidade: a operadora responde
-solidariamente quando descumpre a instrução ou a lei. Consequências operacionais:
+solidariamente quando descumpre a instrução ou a lei.
+
+**A exceção é a pesquisa salarial da própria casa.** A LGPD chama de controlador quem toma as
+decisões referentes ao tratamento, e de operador quem trata em nome do controlador (art. 5º, VI e
+VII). Quando a ACTA conduz pesquisa de remuneração com painel de participantes e decide ela mesma a
+finalidade e os meios (o que o instrumento pede, como a base é tratada, o que se publica, por quanto
+tempo se guarda), ela pode ser controladora dos dados do painel, e não só operadora. O enquadramento
+de cada pesquisa se decide antes da coleta, com a assessoria jurídica, e se registra. Como
+controladora, as obrigações de controlador passam a ser da casa, inclusive a comunicação de
+incidente e o encarregado da seção 7.
+
+Consequências operacionais, nos dois papéis:
 
 - **Finalidade e minimização.** Peça o mínimo necessário para a análise. Base completa "para o caso
   de precisar" é exposição sem contrapartida, e dado que não existe na nossa pasta não vaza da nossa
@@ -204,6 +219,45 @@ arquivo e por agregado. Se um trecho precisa ser mostrado, mostre o trecho já s
    até a pessoa (seção 4).
 6. A tabela de correspondência, se existe, ficou fora do que circula.
 7. O aviso do validador sobre a lista ausente não foi lido como aprovação.
+
+## 7. Incidente de segurança com dado pessoal
+
+Incidente é qualquer evento adverso confirmado que viole a confidencialidade, a integridade, a
+disponibilidade ou a autenticidade de dado pessoal (Resolução CD/ANPD nº 15/2024). Na casa, os
+casos típicos são base enviada ao destinatário errado, pasta compartilhada aberta por engano,
+equipamento com cópia de trabalho perdido e planilha com CPF anexada a mensagem externa. A rota,
+pela mesma resolução:
+
+1. **Contenha e registre na hora.** Data do conhecimento, circunstâncias, natureza e categoria do
+   dado, número de titulares, avaliação de risco e medidas tomadas. O controlador guarda o registro
+   por no mínimo cinco anos, inclusive do incidente não comunicado, com o motivo da não comunicação
+   (art. 10).
+2. **Avalie se há risco ou dano relevante.** A comunicação é obrigatória quando o incidente pode
+   afetar significativamente interesses e direitos fundamentais dos titulares e envolve ao menos um
+   destes critérios: dado sensível; dado de criança, adolescente ou idoso; dado financeiro; dado de
+   autenticação em sistema; dado protegido por sigilo legal, judicial ou profissional; ou dado em
+   larga escala (arts. 4º e 5º). Base de folha e de pesquisa salarial costuma reunir mais de um.
+3. **Quando a casa é operadora**, quem comunica à ANPD e aos titulares é o cliente controlador. O
+   dever da casa é avisá-lo de imediato, com o que já se sabe: o prazo dele corre de quando soube
+   que o incidente afetou dado pessoal (art. 6º, §1º), e cada dia de demora da casa consome o prazo
+   do cliente.
+4. **Quando a casa é controladora** (seção 3), a comunicação é dela: à ANPD, pelo formulário
+   eletrônico da autoridade e por meio do encarregado ou de representante constituído, em três dias
+   úteis contados do conhecimento, com complemento possível em vinte dias úteis (art. 6º); e aos
+   titulares, em linguagem simples e de forma direta e individual quando possível, também em três
+   dias úteis (art. 9º). Agente de pequeno porte tem esses prazos em dobro (art. 6º, §8º, e art. 9º,
+   §6º).
+5. **A decisão não é de quem achou o incidente.** Avaliação de risco e decisão de comunicar ficam
+   com o sócio responsável e a assessoria jurídica, registradas com data na entrada de sessão (ver
+   `checkpoint`).
+
+**O encarregado.** A Resolução CD/ANPD nº 18, de 16/07/2024, regula a indicação do encarregado, a
+divulgação pública da identidade e do contato dele, os deveres dos agentes de tratamento para com
+ele e as situações de conflito de interesse (ANPD). Para a casa, duas consequências. No projeto em
+que é operadora, o interlocutor de incidente e de pedido de titular é o encarregado do cliente,
+identificado na abertura do projeto. No tratamento em que é controladora, a casa precisa de
+encarregado próprio indicado e com contato divulgado, salvo hipótese de dispensa por porte (a
+confirmar o enquadramento da casa na Resolução CD/ANPD nº 2/2022).
 
 ## Próximo passo
 

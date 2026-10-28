@@ -167,7 +167,16 @@ def validar(raiz):
         partes = os.path.normpath(rel).split(os.sep)
         plugin = "/".join(partes[:partes.index("skills")]) if "skills" in partes else partes[0]
         por_plugin.setdefault(plugin, []).append(rel)
-        custo_plugin[plugin] = custo_plugin.get(plugin, 0) + len(desc) // 4
+        # So `disable-model-invocation: true` tira a description do contexto. `user-invocable:
+        # false` apenas esconde a skill do menu `/` e continua custando (CONVENCOES.md §3c).
+        if campos.get("disable-model-invocation", "").strip().lower() != "true":
+            custo_plugin[plugin] = custo_plugin.get(plugin, 0) + len(desc) // 4
+
+        if campos.get("name") and campos["name"] != os.path.basename(dirpath):
+            avisos.append(
+                f"{rel}: `name` ({campos['name']}) diferente do nome da pasta "
+                f"({os.path.basename(dirpath)}). CONVENCOES.md §5 pede os dois iguais."
+            )
 
     # O teto que importa e o custo always-on, nao a contagem: um plugin de 14 skills enxutas
     # custa menos que um de 10 com descricao no limite. A contagem entra so como informacao,
@@ -210,7 +219,38 @@ def validar(raiz):
             if achados:
                 erros.append(f"{rel}: nome de cliente no texto: {', '.join(achados)}. Anonimize.")
 
+    erros.extend(validar_dependencias(raiz))
     return erros, avisos, por_plugin
+
+
+def validar_dependencias(raiz):
+    """Todo plugin publicado declara `acta-way` em `dependencies`, e so depende de publicado.
+
+    Sem a declaracao, a instrucao "carregue `acta-way`" de uma skill aponta para um plugin que
+    pode nao estar instalado, e falha calada (CONVENCOES.md §3b).
+    """
+    import json
+
+    erros = []
+    mk_path = os.path.join(raiz, ".claude-plugin", "marketplace.json")
+    if not os.path.exists(mk_path):
+        return erros
+    mk = json.load(open(mk_path, encoding="utf-8"))
+    publicados = {p["name"]: p["source"] for p in mk.get("plugins", [])}
+    for nome, fonte in sorted(publicados.items()):
+        pj = os.path.join(raiz, fonte, ".claude-plugin", "plugin.json")
+        if not os.path.exists(pj):
+            erros.append(f"{nome}: plugin.json nao encontrado em {fonte}.")
+            continue
+        deps = json.load(open(pj, encoding="utf-8")).get("dependencies", [])
+        nomes = [d if isinstance(d, str) else d.get("name", "") for d in deps]
+        nomes = [n.split("@")[0] for n in nomes]
+        if nome != "acta-way" and "acta-way" not in nomes:
+            erros.append(f"{nome}: `acta-way` ausente de `dependencies` no plugin.json.")
+        for n in nomes:
+            if n not in publicados:
+                erros.append(f"{nome}: dependencia `{n}` nao esta publicada no marketplace.json.")
+    return erros
 
 
 def main():

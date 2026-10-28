@@ -5,7 +5,7 @@ description: Critique a contrapartida econômica e financeira do parceiro, audit
 
 # Contrapartida, resultado e encerramento
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 valem aqui integralmente e não são repetidas.
 
 Elo 7 do ciclo (`ciclo-do-convenio` §2), mais a contrapartida, que atravessa toda a execução. Bloco

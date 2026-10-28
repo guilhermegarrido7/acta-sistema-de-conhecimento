@@ -170,6 +170,32 @@ integralmente `acta-way:anonimizacao-e-lgpd`, e três regras se aplicam sempre:
   exemplo de método. Em skill, em template e em material interno, o terceiro é "o terceiro
   avaliado", "o fornecedor", "a Companhia contratante".
 
+## 8. Quando o trabalho é de auditoria interna: o Requisito Tópico de Terceiros
+
+O IIA emitiu o Requisito Tópico de Terceiros (*Third-Party Topical Requirement*) em 15/09/2025, e
+ele vigora desde 15/09/2026 (theiia.org). Requisito Tópico é componente obrigatório do IPPF, aplicado
+com as Normas Globais de Auditoria Interna: quando a avaliação de risco da função de auditoria
+interna leva o tema ao plano, todo trabalho de asseguração sobre terceiros tem de cobrir, como linha
+de base mínima, o desenho e a implementação dos processos de governança, de gestão de risco e de
+controle sobre terceiros. Em consultoria, o requisito é recomendado e não obrigatório. A exclusão
+de item segue a orientação de aplicação do IIA, e a casa registra a justificativa no papel de
+trabalho.
+
+A consequência para esta skill é de fronteira. O laudo do Modo A e o papel de trabalho do Modo B são
+diligência sobre um terceiro, prestada à contratante, e não asseguração sobre o processo de gestão
+de terceiros dela. Quando a casa atuar como auditoria interna, própria do cliente ou terceirizada, e
+o objeto for esse processo, a skill cobre a camada de controle na seleção e na contratação: a faixa
+de criticidade da §2, o laudo anterior ao contrato e o teste de datas de `monitoramento-e-teste` §2.
+Não cobre a governança do programa de terceiros (política, papéis, inventário, reporte ao colegiado)
+nem a gestão do risco ao longo do contrato (reavaliação, monitoramento, encerramento). Essas duas
+partes entram no programa de trabalho a partir do texto do requisito, com a avaliação de
+aplicabilidade registrada no papel de trabalho (itens do requisito a confirmar no documento do IIA
+antes do primeiro trabalho).
+
+O IIA anuncia ainda um Requisito Tópico de Anticorrupção para o quarto trimestre de 2026, não
+emitido até 26/10/2026 (theiia.org). Quando for emitido, vale do mesmo modo para a asseguração sobre o
+programa de integridade, e `monitoramento-e-teste` deve ser revisto contra ele.
+
 ## O que entregar
 
 1. O gate de entrada respondido: quem definiu escopo e critérios, modo A ou B, subconjunto de
@@ -180,6 +206,8 @@ integralmente `acta-way:anonimizacao-e-lgpd`, e três regras se aplicam sempre:
 5. A estrutura completa do dicionário com sinalização das categorias cobertas, e a avaliação por
    categoria na escala de quatro níveis.
 6. Os quatro gates da §6 percorridos, com a varredura de nome herdado registrada.
+7. Em trabalho de auditoria interna sobre o processo de terceiros, a avaliação de aplicabilidade do
+   Requisito Tópico de Terceiros, com as exclusões justificadas (§8).
 
 ## Próximo passo
 

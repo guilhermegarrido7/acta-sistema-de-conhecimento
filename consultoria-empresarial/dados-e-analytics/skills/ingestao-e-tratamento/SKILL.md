@@ -5,7 +5,8 @@ description: Traga a base crua ao formato analisável, normalizando moeda, data,
 
 # Ingestão e tratamento
 
-Carregue `acta-metodo-consultoria` antes desta skill. Tratamento de dado é onde o projeto de
+Carregue `acta-metodo-consultoria:mapeamento-as-is` antes desta skill (base reconstruída, flag e
+override documentados). Tratamento de dado é onde o projeto de
 analytics ganha ou perde a confiança do número: uma base mal tratada produz análise sofisticada sobre
 lixo. Em mid-market, esta é a etapa mais longa e a que o cliente mais subestima.
 

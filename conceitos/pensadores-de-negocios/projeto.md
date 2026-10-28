@@ -13,9 +13,9 @@ de projeto: é um conjunto de lentes analíticas consagradas que uma análise ca
 
 O problema que resolve é recorrente: usar o framework errado para a pergunta certa. Cinco forças
 explica a rentabilidade média de um setor; não explica por que uma empresa específica supera essa
-média. São perguntas diferentes, com lentes diferentes. Só uma skill é invocável — **`lentes`**, a
-roteadora; as 14 lentes de pensador são `user-invocable: false` e carregam a partir dela, para que o
-menu de comandos não fique poluído com 14 nomes de autor. O protocolo da roteadora tem quatro passos,
+média. São perguntas diferentes, com lentes diferentes. O plugin tem uma skill, **`lentes`**, a
+roteadora; as 14 lentes ficam em arquivos de referência e só entram no contexto quando a roteadora as
+escolhe. O protocolo da roteadora tem quatro passos,
 e o terceiro é obrigatório: antes de aplicar qualquer lente, ela apresenta de 2 a 4 candidatas dizendo
 **o que cada uma enxerga e o que cada uma ignora**, e pergunta pelo contexto. Escolher a lente é parte
 da análise, não preliminar dela.
@@ -59,9 +59,8 @@ cálculo vai para lá; pergunta de julgamento fica aqui.
 
 ## O que é preciso ter antes de usar
 
-- **`acta-way` instalado** como pré-requisito, onde vive o mecanismo de checkpoint entre sessões e
-  consultores — o manifesto de plugin não tem campo de dependência, então sem ele nenhum outro plugin
-  da ACTA usa o checkpoint.
+- **`acta-way` instalado**, onde vive o mecanismo de checkpoint entre sessões e consultores. Ele vem
+  junto: o plugin o declara como dependência no `plugin.json`.
 - **A pergunta a responder, enunciada com clareza**, porque é ela que roteia a lente: a biblioteca se
   organiza por pergunta, não por autor.
 - **`acta-modelagem-economico-financeira` instalado** quando a análise de `tim-koller` precisar virar

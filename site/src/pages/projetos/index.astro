@@ -1,5 +1,6 @@
 ---
 import Pagina from '../../layouts/Pagina.astro';
+import CartaoPlugin from '../../components/CartaoPlugin.astro';
 import { catalogo } from '../../lib/catalogo.js';
 const { categorias } = catalogo();
 ---
@@ -14,17 +15,7 @@ const { categorias } = catalogo();
     <section class="secao">
       <h2>{c.rotulo}</h2>
       <div class="grade">
-        {c.plugins.map((p) => (
-          <article class="cartao">
-            <h3><a href={`/projetos/${p.slug}`}>{p.titulo}</a></h3>
-            <p>{p.descricao}</p>
-            <div class="pe">
-              <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>
-              <span>{p.skills.length} skills</span>
-              <span>~{p.custoAlwaysOn} tok/sessão</span>
-            </div>
-          </article>
-        ))}
+        {c.plugins.map((p) => <CartaoPlugin p={p} custo />)}
       </div>
     </section>
   ))}
@@ -43,6 +34,13 @@ const { categorias } = catalogo();
             <td>
               Parte das etapas está escrita e o resto existe como marcador. O plugin funciona; ele
               cobre menos do que o projeto inteiro.
+            </td>
+          </tr>
+          <tr>
+            <th>requer</th>
+            <td>
+              Os plugins que precisam estar instalados junto, lidos das dependências que o plugin
+              declara. No Claude Code eles entram na mesma instalação.
             </td>
           </tr>
           <tr>

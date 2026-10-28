@@ -17,7 +17,7 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 | Plugin | Status | No marketplace | Observação |
 |---|---|---|---|
-| `acta-pensadores-de-negocios` | Completo | sim | 15 skills: a roteadora `lentes` e 14 lentes de pensador (`user-invocable: false`). Fronteira com `acta-modelagem-economico-financeira` declarada em `tim-koller`. |
+| `acta-pensadores-de-negocios` | Completo | sim | 1 skill roteadora (`lentes`) e 14 lentes em `skills/lentes/references/`, lidas sob demanda: o plugin custa uma descrição no contexto, em vez de quinze (−~930 tokens). Fronteira com `acta-modelagem-economico-financeira` declarada em `references/tim-koller.md`. |
 
 ## Consultoria Empresarial
 
@@ -32,8 +32,8 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 | `acta-reducao-estrategica-de-custos` | Esqueleto | não | Programa de redução de custos: baseline de gastos, identificação e priorização de alavanca… |
 | `acta-transformacao-comercial` | Esqueleto | não | Transformação comercial e crescimento de receita: diagnóstico do funil, política comercial… |
 | `acta-excelencia-operacional` | Completo | sim | 7 skills: taxonomia de processos, coleta e diagnóstico, workshop de mapeamento, fluxo e regras de negócio, oportunidades e quick wins, SLA e indicadores, manual de processos. |
-| `acta-ma-sell-buy-side` | Completo | sim | 9 de 9 skills com conteúdo real: convenções de projeto, estudo setorial, transações precedentes, go-to-market, teaser, segmentação de compradores, IM, solicitação de informações, negociação/LOI. |
-| `acta-modelagem-economico-financeira` | Completo | sim | 14 de 14 skills com conteúdo real, framework Koller/McKinsey: fundamentos, reorganização contábil, ROIC, custo de capital, capital de giro/CapEx, impostos, projeção de mercado/equity story, projeção/cenários, saúde de crédito, valor terminal, triangulação, revisão de modelo, relatório de valuation. |
+| `acta-ma-sell-buy-side` | Completo | sim | 12 de 12 skills com conteúdo real, do estudo setorial ao closing: convenções de projeto, estudo setorial, transações precedentes, go-to-market, teaser, segmentação de compradores, IM, solicitação de informações, negociação/LOI, processo competitivo e propostas, due diligence e data room, SPA e closing (com o PPA em `references/`). |
+| `acta-modelagem-economico-financeira` | Completo | sim | 14 de 14 skills com conteúdo real, framework Koller/McKinsey: fundamentos, reorganização contábil, ROIC, custo de capital, capital de giro/CapEx, impostos (com a transição tributária 2026–2033 e a Lei 15.270/2025 em `references/`), projeção de mercado/equity story, projeção/cenários, saúde de crédito, valor terminal, triangulação, revisão de modelo, relatório de valuation. CPC 51 a partir de 2027. Custo always-on ~979 tokens, perto do teto de 1.000. |
 | `acta-selecao-de-erp` | Esqueleto | não | Seleção de ERP: levantamento de requisitos, matriz de aderência, RFP, avaliação de fornece… |
 | `acta-dados-e-analytics` | Completo | sim | 7 skills, analytics financeiro de consolidação (âncora CRISP-DM + DAMA-DMBOK qualidade + McKinsey data-driven, lente AI-first): diagnóstico e escopo com a pergunta antes do dado, ingestão e tratamento com ETL agêntico, qualidade e validação com reconciliação contra fonte autoritativa, reclassificação gerencial com total invariante, consolidação e intercompany pela contrapartida espelhada, modelo analítico e visualização com decisão de pipeline, insight e recomendação com dono humano. Validado em caso de grupo imobiliário/hoteleiro multiempresa. Ver [MAPEAMENTO-AI-FIRST.md](MAPEAMENTO-AI-FIRST.md) §3.2. |
 | `acta-pccr` | Esqueleto | não | Construção de PCCR: descrição e avaliação de cargos, arquitetura de carreira, tabela salar… |
@@ -50,12 +50,12 @@ Legenda: **Publicado** no marketplace · **Parcial** tem conteúdo, ainda incomp
 
 | Plugin | Status | No marketplace | Observação |
 |---|---|---|---|
-| `acta-metodo-auditoria` | Completo | sim | 7 de 7 skills com conteúdo real: método, bases e conciliação, papel de trabalho, programa de testes, redação de achados, relatório e aprendizado. Metodologia de campo absorvida e anonimizada. |
+| `acta-metodo-auditoria` | Completo | sim | 7 de 7 skills com conteúdo real: método, bases e conciliação, papel de trabalho, programa de testes, redação de achados, relatório e aprendizado. Metodologia de campo absorvida e anonimizada. A skill mestra (`metodo-auditoria`) carrega as regras R1 a R8 e manda o detalhe para `references/`: ~2 mil tokens por ativação, contra ~4,6 mil antes. |
 | `acta-governanca` | Esqueleto | não | Estruturação de governança corporativa: instâncias e alçadas, regimento e estatuto, compos… |
 | `acta-gestao-de-riscos` | Completo | sim | 6 skills ancoradas em COSO ERM 2017 e ISO 31000: taxonomia com o dicionário de riscos da casa (4 componentes, 8 grupos, 52 categorias) em references, apetite e tolerância revelados da prática, escalas de impacto e probabilidade com o nível Limitação de Escopo, matriz e mapa de calor por zonas, planos de resposta com teste de suficiência, monitoramento e KRI. |
 | `acta-revenue-assurance` | Completo | sim | 7 skills: ciclo da receita, contrato e cadastro, medição e aceite, faturamento e NF, recebimento e inadimplência, matriz de riscos da receita (14 riscos do ciclo + 4 de evento), e receita de evento (fechamento por natureza — patrocínio, permuta, cortesia, bebidas — contra a autorização de faturamento). A variante de evento validada em caso de fechamento de grande show. |
 | `acta-segregacao-de-funcoes` | Completo | sim | 4 skills: matriz de SoD, catálogo de conflitos críticos, ciclo de vida do acesso (concessão, revisão periódica, revogação no desligamento) e controle compensatório para quando não há gente para segregar. Escrito a partir de dois ciclos de SOX IT. Fronteira com `acta-controles-internos:itgc` declarada. |
-| `acta-programa-de-integridade` | Completo | sim | 6 skills: pilares do programa, código de conduta, canal de denúncias, due diligence de terceiros (com os dois modos, homologação e investigação de vínculo, mais o padrão de interposta pessoa), treinamento e comunicação, e monitoramento e teste. A estrutura do laudo, as fontes de consulta e o protocolo de mídia negativa em `references/`. Escrito de três casos executados. |
+| `acta-programa-de-integridade` | Completo | sim | 6 skills: pilares do programa (12 pilares cobrindo os 15 incisos do art. 57 do Decreto 11.129/2022, mais Lei 14.133/2021 e Decreto 12.304/2024), código de conduta, canal de denúncias, due diligence de terceiros (com os dois modos, homologação e investigação de vínculo, mais o padrão de interposta pessoa), treinamento e comunicação, e monitoramento e teste. A estrutura do laudo, as fontes de consulta e o protocolo de mídia negativa em `references/`. Escrito de três casos executados. |
 | `acta-controles-internos` | Completo | sim | 6 skills ancoradas em COSO 2013 e PCAOB AS 2201: matriz de riscos e controles, walkthrough e narrativa, desenho × efetividade, teste e amostragem, deficiências e severidade, ITGC. |
 | `acta-forense` | Esqueleto | não | Investigação forense: preservação de evidência, análise documental e de dados, entrevistas… |
 | `acta-esg` | Esqueleto | não | Diagnóstico e estruturação ESG: materialidade, indicadores e frameworks de reporte, plano … |
@@ -89,10 +89,12 @@ matéria-prima real da pasta de projetos, e cada um registra no MAPEAMENTO qual 
 ## Ao completar um plugin
 
 1. Escrever as skills em `skills/<etapa>/SKILL.md`.
-2. Atualizar o `README.md` do plugin com a tabela de skills e o fluxo típico. **Manter o aviso de
-   pré-requisito `acta-way` no topo**: o manifesto de plugin não tem campo de dependência, então
-   é o único lugar que garante que quem instala não perde o checkpoint.
-3. Subir a `version` no `plugin.json`.
-4. Adicionar a entrada em `.claude-plugin/marketplace.json`.
-5. Atualizar a linha aqui.
-6. `claude plugin validate <dir> --strict`.
+2. Atualizar o `README.md` do plugin com a tabela de skills e o fluxo típico, mantendo o aviso de
+   pré-requisito no topo.
+3. Declarar no `plugin.json` o campo `dependencies`: `acta-way` sempre, e o método da prática
+   (`acta-metodo-auditoria` ou `acta-metodo-consultoria`) quando as skills mandarem carregá-lo. O
+   validador barra plugin publicado sem `acta-way` nas dependências.
+4. Subir a `version` no `plugin.json`.
+5. Adicionar a entrada em `.claude-plugin/marketplace.json`.
+6. Atualizar a linha aqui.
+7. `py -3 scripts/validar-skills.py` e `claude plugin validate <dir> --strict`.

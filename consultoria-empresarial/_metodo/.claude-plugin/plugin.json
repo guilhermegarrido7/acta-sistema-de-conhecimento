@@ -4,5 +4,8 @@
   "description": "Como a ACTA conduz um projeto de consultoria: escopo e recortes, solicitação de informações e cobrança de pendência, base analítica reconstruída da fonte bruta, referência de comparação, priorização e plano de ação, acompanhamento pós-relatório e defesa técnica.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way"
+  ]
 }

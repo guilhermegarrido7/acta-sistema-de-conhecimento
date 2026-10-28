@@ -1,6 +1,6 @@
 ---
 name: dashboard-powerbi
-description: Construa o painel interativo entregável em Power BI, com modelo de dados, medidas DAX, páginas, filtros, segurança e publicação. Acionar ao modelar o dataset, ao escrever medidas, ao desenhar as páginas do painel, ou ao treinar os usuários do cliente.
+description: Construa o painel Power BI entregável da pesquisa salarial. Acionar ao modelar o dataset de mercado e cliente, ao escrever medida DAX com supressão por mínimo amostral, ao desenhar as páginas, ou ao publicar e liberar acesso.
 ---
 
 # Painel Power BI

@@ -1,6 +1,6 @@
 ---
 name: apresentacao-ao-cliente
-description: Conduza a apresentação dos resultados ao cliente e o treinamento do painel. Acionar ao fazer pré-leitura reservada de achado sensível, ao ensaiar as perguntas difíceis, ao validar coerência entre os artefatos, ou ao apresentar ao Comitê Gestor.
+description: Apresente os resultados da pesquisa salarial e treine o uso do painel Power BI. Acionar ao cruzar os números de deck, Excel e painel, ao fazer pré-leitura reservada, ao ensaiar perguntas difíceis, ou ao apresentar ao Comitê Gestor.
 ---
 
 # Apresentação ao cliente

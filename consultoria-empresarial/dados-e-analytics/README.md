@@ -4,9 +4,9 @@ Analytics financeiro de consolidação: diagnóstico e escopo, ingestão e trata
 qualidade e validação, reclassificação gerencial, consolidação multiempresa e intercompany, modelo
 analítico e visualização, e insight pronto para decisão.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
-> **Segundo pré-requisito: `acta-metodo-consultoria`.** Analytics é um projeto de consultoria cujo
+> **Segundo pré-requisito: `acta-metodo-consultoria`**, também declarado como dependência. Analytics é um projeto de consultoria cujo
 > insumo é dado. A hierarquia de autoridade entre fontes, a âncora de validação, a reconstrução de
 > base a partir do dado bruto, a planilha-mestre com rastreabilidade e a defesa técnica do número
 > vivem lá e **não se repetem aqui**. Cada skill manda carregá-lo antes.

@@ -1,14 +1,22 @@
 ---
+/* Guia de instalação. Uma seção por aplicativo, sem misturar instruções: quem usa o Claude
+   Desktop não precisa ler comando de terminal, e vice-versa. Comando com marcador para trocar
+   (<plugin>) leva o rótulo "exemplo" e não ganha botão de copiar. */
 import Pagina from '../layouts/Pagina.astro';
 import { catalogo, REPO, MARKETPLACE } from '../lib/catalogo.js';
-const { plugins } = catalogo();
+const { plugins, marketplace } = catalogo();
+
+// Teste de uso. O plugin e a skill do exemplo saem do catálogo: se a skill mudar de nome, o
+// teste muda junto em vez de mandar procurar algo que não existe.
+const folha = plugins.find((p) => p.nome === 'acta-auditoria-folha');
+const esperada = folha?.skills.find((s) => /abrir auditoria de folha/i.test(s.descricao)) ?? folha?.skills[0];
 ---
 
 <Pagina
   titulo="Começar"
   sobrescrito="Guia de instalação"
-  descricao="Os três jeitos de instalar, como atualizar e como remover."
-  abertura="Escolha um dos três caminhos abaixo. Os dois primeiros recebem atualização automática; o terceiro não, e é por isso que ele fica por último."
+  descricao="Como instalar os plugins da ACTA no Claude Code e no Claude Desktop, testar, atualizar e remover."
+  abertura="Escolha o aplicativo em que você trabalha e siga só a seção dele. No fim, um teste rápido confirma que o plugin carregou."
 >
   <section class="secao">
     <h2>Antes de tudo, três coisas</h2>
@@ -25,52 +33,48 @@ const { plugins } = catalogo();
           <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </span>
         <h3>Acesso ao repositório</h3>
-        <p>O material da firma fica num endereço privado no GitHub. Peça o acesso antes de começar, ou os métodos 1 e 2 falham no login.</p>
+        <p>O material da firma fica num endereço privado no GitHub. Peça o acesso antes de começar, ou a instalação falha no login.</p>
       </article>
       <article class="cartao">
         <span class="icone" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </span>
         <h3>Cinco minutos</h3>
-        <p>Não precisa saber programar. O método 2 é só clique.</p>
+        <p>Não precisa saber programar. No Claude Desktop é só clique.</p>
       </article>
     </div>
   </section>
 
   <section class="secao">
-    <h2>Qual caminho é o seu</h2>
+    <h2>Qual é o seu aplicativo</h2>
     <div class="grade">
       <article class="cartao">
-        <span class="etiqueta completo">Recomendado</span>
-        <h3><a href="#metodo-1">1. Pela linha de comando</a></h3>
-        <p>Para quem já trabalha no Claude Code, no terminal. Um comando por plugin.</p>
+        <h3><a href="#claude-code">Claude Code, no terminal</a></h3>
+        <p>Para quem já trabalha no terminal. Um comando instala o plugin do projeto e o que ele requer.</p>
         <div class="pe"><span>Atualiza com um comando</span></div>
       </article>
       <article class="cartao">
-        <span class="etiqueta completo">Recomendado</span>
-        <h3><a href="#metodo-2">2. Pela interface do Claude Desktop</a></h3>
+        <h3><a href="#claude-desktop">Claude Desktop</a></h3>
         <p>Sem terminal. Você cola o endereço do repositório uma vez e instala clicando.</p>
         <div class="pe"><span>Atualiza pela interface</span></div>
-      </article>
-      <article class="cartao">
-        <span class="etiqueta parcial">Último recurso</span>
-        <h3><a href="#metodo-3">3. Por upload da máquina</a></h3>
-        <p>Você baixa a pasta e envia o arquivo. Só quando os outros dois não estiverem disponíveis.</p>
-        <div class="pe"><span>Não recebe atualização</span></div>
       </article>
     </div>
     <div class="aviso aviso--atencao">
       <p>
-        A diferença entre os dois primeiros e o terceiro é a que mais gera confusão depois. O upload
-        instala uma cópia congelada, e o consultor segue trabalhando com metodologia antiga sem
-        perceber que existe versão nova.
+        O Claude Desktop aceita ainda o upload de uma pasta baixada, descrito no fim da seção dele.
+        É o último recurso: o upload instala uma cópia congelada, e o consultor segue trabalhando
+        com metodologia antiga sem perceber que existe versão nova.
       </p>
     </div>
   </section>
 
-  <section class="secao" id="metodo-1">
-    <span class="sobrescrito">Método 1</span>
-    <h2>Linha de comando, no Claude Code</h2>
+  <section class="secao" id="claude-code">
+    <span class="sobrescrito">Por aplicativo</span>
+    <h2>Claude Code, no terminal</h2>
+    <p>
+      Os comandos desta seção rodam no terminal (no Windows, o PowerShell), fora de uma conversa com o
+      Claude.
+    </p>
     <ol class="passos">
       <li>
         <h3>Registre o marketplace</h3>
@@ -78,34 +82,57 @@ const { plugins } = catalogo();
         <div class="comando"><code>{`claude plugin marketplace add ${MARKETPLACE} --scope user`}</code></div>
       </li>
       <li>
-        <h3>Instale o <code>acta-way</code></h3>
-        <p>
-          É pré-requisito de todos os outros e não é opcional: é onde vive o checkpoint, que faz o
-          estado de um projeto atravessar sessões e consultores. Nenhum plugin consegue forçar a
-          instalação de outro, por isso este passo é manual.
-        </p>
-        <div class="comando"><code>claude plugin install acta-way@acta-sistema-de-conhecimento --scope user</code></div>
-      </li>
-      <li>
         <h3>Instale o plugin do seu projeto</h3>
-        <p>Só o do trabalho em que você está. A lista fica em <a href="/projetos">Projetos</a>.</p>
-        <div class="comando"><code>claude plugin install acta-metodo-auditoria@acta-sistema-de-conhecimento --scope user</code></div>
+        <p>
+          Só o do trabalho em que você está. A lista fica em <a href="/projetos">Projetos</a>, e a
+          página de cada projeto traz o comando pronto para copiar. O Claude Code instala junto as
+          dependências que o plugin declara, como o <code>acta-way</code>, onde vive o checkpoint.
+        </p>
+        <div class="comando exemplo"><span class="rotulo-exemplo">exemplo</span><code>claude plugin install <var>&lt;plugin&gt;</var>@{marketplace} --scope user</code></div>
+        <p>
+          Troque <var>&lt;plugin&gt;</var> pelo nome do plugin, por exemplo
+          <code>acta-auditoria-folha</code>. Se a instalação de uma dependência falhar, a página do
+          projeto mostra os comandos um por vez, na ordem.
+        </p>
       </li>
       <li>
-        <h3>Reinicie e confirme</h3>
+        <h3>Abra uma sessão nova</h3>
         <p>
-          As skills só entram em operação na sessão seguinte. Sem reiniciar, parece que a instalação
-          falhou.
+          As skills entram em operação na sessão seguinte. Numa sessão que já estava aberta, digite
+          <code>/reload-plugins</code>. Sem isso, parece que a instalação falhou.
         </p>
-        <div class="comando"><code>claude plugin details acta-metodo-auditoria@acta-sistema-de-conhecimento</code></div>
       </li>
     </ol>
+
+    <h3>Atualizar</h3>
+    <p>
+      A sua máquina guarda uma cópia do marketplace, e essa cópia não se atualiza sozinha. Atualize o
+      marketplace e depois o plugin que usa:
+    </p>
+    <div class="comando"><code>{`claude plugin marketplace update ${marketplace}`}</code></div>
+    <div class="comando exemplo"><span class="rotulo-exemplo">exemplo</span><code>claude plugin update <var>&lt;plugin&gt;</var>@{marketplace}</code></div>
+
+    <h3>Desativar, mantendo instalado</h3>
+    <p>
+      É o que fazer ao terminar um projeto: o plugin sai de operação e devolve o contexto que
+      consumia, mas continua instalado. Reversível a qualquer momento.
+    </p>
+    <div class="comando exemplo"><span class="rotulo-exemplo">exemplo</span><code>claude plugin disable <var>&lt;plugin&gt;</var>@{marketplace}</code></div>
+    <div class="comando exemplo"><span class="rotulo-exemplo">exemplo</span><code>claude plugin enable <var>&lt;plugin&gt;</var>@{marketplace}</code></div>
+
+    <h3>Remover</h3>
+    <div class="comando exemplo"><span class="rotulo-exemplo">exemplo</span><code>claude plugin uninstall <var>&lt;plugin&gt;</var>@{marketplace}</code></div>
+    <p>
+      As dependências que vieram junto continuam instaladas, porque outro plugin pode precisar delas.
+      Para remover as que nenhum plugin instalado usa mais (o comando lista e pede confirmação):
+    </p>
+    <div class="comando"><code>claude plugin prune</code></div>
   </section>
 
-  <section class="secao" id="metodo-2">
-    <span class="sobrescrito">Método 2</span>
-    <h2>Interface do Claude Desktop</h2>
-    <p>Mesma fonte do método 1, sem abrir terminal.</p>
+  <section class="secao" id="claude-desktop">
+    <span class="sobrescrito">Por aplicativo</span>
+    <h2>Claude Desktop, pela interface</h2>
+    <p>Mesma fonte do Claude Code, sem abrir terminal.</p>
     <ol class="passos">
       <li>
         <h3>Abra o painel de plugins</h3>
@@ -123,33 +150,45 @@ const { plugins } = catalogo();
         <h3>Instale o que vai usar</h3>
         <p>
           Os plugins passam a aparecer no bloco <b class="ui">Dos marketplaces que você adicionou</b>.
-          Instale o <code>acta-way</code> e o do seu projeto. Vale a mesma regra: instale pouco.
+          Instale o do seu projeto e os que a página dele lista em <strong>requer</strong>, a começar
+          pelo <code>acta-way</code>. Vale a mesma regra: instale pouco.
         </p>
       </li>
     </ol>
-  </section>
 
-  <section class="secao" id="metodo-3">
-    <span class="sobrescrito">Método 3</span>
-    <h2>Upload do plugin direto da máquina</h2>
+    <h3>Atualizar</h3>
     <p>
-      Use quando os outros dois não estiverem disponíveis, por exemplo se o acesso ao repositório
-      ainda não foi concedido e alguém já lhe passou a pasta.
+      Em <b class="ui">Personalizar</b>, aba <b class="ui">Plugins</b>, pelo menu de três pontos à
+      direita do plugin.
+    </p>
+
+    <h3>Remover</h3>
+    <p>
+      Em <b class="ui">Personalizar</b>, aba <b class="ui">Plugins</b>, localize o plugin na lista.
+      Clique no menu de três pontos à direita da linha dele e escolha <b class="ui">Remover</b>.
+      Remover o plugin não remove o marketplace: ele continua registrado e o plugin volta a aparecer
+      como disponível para instalar.
+    </p>
+
+    <h3 id="upload">Último recurso: upload da pasta</h3>
+    <p>
+      Use quando o marketplace não estiver disponível, por exemplo se o acesso ao repositório ainda
+      não foi concedido e alguém já lhe passou a pasta.
     </p>
     <ol class="passos">
       <li>
-        <h3>Baixe a pasta do plugin</h3>
+        <h4>Baixe a pasta do plugin</h4>
         <p>
           No <a href={REPO}>repositório</a>, baixe o projeto e localize a pasta do plugin. Cada
           página de projeto deste portal aponta a pasta exata dele.
         </p>
       </li>
       <li>
-        <h3>Envie pelo painel</h3>
+        <h4>Envie pelo painel</h4>
         <p>
           Em <b class="ui">Personalizar</b>, aba <b class="ui">Plugins</b>, clique em
           <b class="ui">Adicionar</b> e escolha <b class="ui">Fazer upload de plugin</b>. Aponte para
-          a pasta baixada.
+          a pasta baixada. Faça o mesmo com cada plugin que ele requer.
         </p>
       </li>
     </ol>
@@ -160,56 +199,50 @@ const { plugins } = catalogo();
         de método e skill nova não chegam nele.
       </p>
       <p>
-        Para atualizar, baixe de novo e envie por cima. Melhor ainda, migre para o método 1 ou 2
-        assim que tiver acesso ao repositório.
+        Para atualizar, baixe de novo e envie por cima. Melhor ainda, passe para o marketplace assim
+        que tiver acesso ao repositório.
       </p>
     </div>
   </section>
 
-  <section class="secao">
-    <h2>Manter atualizado</h2>
-    <p>
-      Nos métodos 1 e 2 a sua máquina guarda uma cópia do marketplace, e essa cópia não se atualiza
-      sozinha. No Claude Code, atualize o marketplace e depois os plugins que usa:
-    </p>
-    <div class="comando"><code>claude plugin marketplace update acta-sistema-de-conhecimento</code></div>
-    <div class="comando"><code>claude plugin update acta-metodo-auditoria@acta-sistema-de-conhecimento</code></div>
-    <p>
-      No Claude Desktop, o mesmo é feito pelo menu de três pontos à direita do plugin, em
-      <b class="ui">Personalizar</b>, aba <b class="ui">Plugins</b>.
-    </p>
-  </section>
-
-  <section class="secao">
-    <h2>Desativar e remover</h2>
-    <p>
-      São coisas diferentes, e quase sempre você quer a primeira. Desativar tira o plugin de operação
-      e devolve o contexto que ele consumia, mantendo-o instalado. Remover apaga.
-    </p>
-
-    <h3>Desativar, mantendo instalado</h3>
-    <p>É o que fazer ao terminar um projeto. Reversível a qualquer momento.</p>
-    <div class="comando"><code>claude plugin disable acta-pesquisa-salarial@acta-sistema-de-conhecimento</code></div>
-    <div class="comando"><code>claude plugin enable acta-pesquisa-salarial@acta-sistema-de-conhecimento</code></div>
-
-    <h3>Remover pelo Claude Desktop</h3>
-    <p>
-      Em <b class="ui">Personalizar</b>, aba <b class="ui">Plugins</b>, localize o plugin na lista.
-      Clique no menu de três pontos à direita da linha dele e escolha <b class="ui">Remover</b>.
-    </p>
-    <p>
-      Remover o plugin não remove o marketplace: ele continua registrado e o plugin volta a aparecer
-      como disponível para instalar.
-    </p>
-
-    <h3>Remover pelo Claude Code</h3>
-    <div class="comando"><code>claude plugin uninstall acta-pesquisa-salarial@acta-sistema-de-conhecimento</code></div>
-    <div class="aviso">
+  <section class="secao" id="teste">
+    <span class="sobrescrito">Teste de uso</span>
+    <h2>Confirme que o plugin carregou</h2>
+    {folha && esperada ? (
+      <>
+        <p>
+          Numa conversa nova, peça ao Claude algo que só o plugin sabe responder. Com o plugin de
+          auditoria de folha instalado, por exemplo:
+        </p>
+        <div class="pedido"><q>Vou abrir um mandato de auditoria de folha. Qual skill da ACTA se aplica?</q></div>
+        <p>
+          A resposta deve citar uma skill do plugin <a href={folha.url}><code>{folha.nome}</code></a>;
+          para abrir o mandato, a esperada é <a href={esperada.url}><code>{esperada.nome}</code></a>.
+          Se ela vier genérica, sem citar skill nenhuma, o plugin não carregou: veja
+          {' '}<a href="#problemas">Quando não funciona</a>.
+        </p>
+      </>
+    ) : (
       <p>
-        Nada do seu trabalho é apagado junto. Os plugins contêm metodologia, não dados de projeto: o
-        checkpoint e os arquivos do cliente continuam onde estão.
+        Numa conversa nova, pergunte ao Claude qual skill da ACTA se aplica ao trabalho que você vai
+        começar. A resposta tem de citar uma skill do plugin que você instalou.
       </p>
-    </div>
+    )}
+    <p>
+      Com outro plugin, troque o assunto pelo do seu projeto: a página de cada skill lista, em
+      <strong>Use quando…</strong>, as situações em que ela entra.
+    </p>
+    <h3>Ver o que está instalado</h3>
+    <ul>
+      <li>
+        <strong>Claude Code:</strong> numa sessão, <code>/plugin</code> abre o painel de plugins, e
+        <code>/plugin list</code> mostra os instalados na própria conversa, com versão e status. No
+        terminal, <code>claude plugin list</code> faz o mesmo.
+      </li>
+      <li>
+        <strong>Claude Desktop:</strong> <b class="ui">Personalizar</b>, aba <b class="ui">Plugins</b>.
+      </li>
+    </ul>
   </section>
 
   <section class="secao">
@@ -226,7 +259,7 @@ const { plugins } = catalogo();
         <tbody>
           {plugins.map((p) => (
             <tr>
-              <td><a href={`/projetos/${p.slug}`}><code>{p.nome}</code></a></td>
+              <td><a href={p.url}><code>{p.nome}</code></a></td>
               <td>~{p.custoAlwaysOn} tokens</td>
               <td>{p.skills.length}</td>
             </tr>
@@ -236,7 +269,7 @@ const { plugins } = catalogo();
     </div>
   </section>
 
-  <section class="secao">
+  <section class="secao" id="problemas">
     <h2>Quando não funciona</h2>
     <p>Na ordem em que os problemas costumam aparecer.</p>
 
@@ -244,17 +277,33 @@ const { plugins } = catalogo();
       <summary>Instalei mas as skills não aparecem</summary>
       <div class="miolo">
         <ol>
-          <li><strong>Não reiniciou a sessão.</strong> É a causa mais comum, de longe.</li>
           <li>
-            <strong>O plugin está instalado mas desabilitado.</strong> Confira com
+            <strong>A sessão é a mesma de antes da instalação.</strong> É a causa mais comum, de
+            longe. No Claude Code, abra uma sessão nova ou digite <code>/reload-plugins</code>; no
+            Claude Desktop, comece uma conversa nova.
+          </li>
+          <li>
+            <strong>O plugin está instalado mas desabilitado.</strong> No Claude Code, confira com
             <code>claude plugin list</code> e procure <code>disabled</code> na linha de status.
             Resolva com <code>claude plugin enable &lt;nome&gt;</code>.
           </li>
           <li>
-            <strong>O marketplace local está desatualizado</strong> e não conhece o plugin novo. Rode
-            o <code>marketplace update</code> da seção acima.
+            <strong>O marketplace local está desatualizado</strong> e não conhece o plugin novo. No
+            Claude Code, rode o <code>marketplace update</code> da <a href="#claude-code">seção do
+            terminal</a>.
           </li>
         </ol>
+      </div>
+    </details>
+
+    <details class="sanfona">
+      <summary>Uma dependência não instalou</summary>
+      <div class="miolo">
+        <p>
+          A página de cada projeto mostra, em <strong>Instalar</strong>, os comandos um por vez e na
+          ordem: dependências primeiro, o plugin por último. Rode na sequência e veja em qual deles o
+          erro aparece.
+        </p>
       </div>
     </details>
 
@@ -273,8 +322,9 @@ const { plugins } = catalogo();
       <summary>A metodologia parece antiga</summary>
       <div class="miolo">
         <p>
-          Verifique por qual método o plugin foi instalado. Se veio por upload, está congelado na
-          versão do dia do download e a atualização não chega nele. Ver o método 3.
+          Verifique como o plugin foi instalado. Se veio por upload, está congelado na versão do dia
+          do download e a atualização não chega nele. Ver o <a href="#upload">upload, na seção do
+          Claude Desktop</a>.
         </p>
       </div>
     </details>
@@ -309,6 +359,10 @@ const { plugins } = catalogo();
       <a href={REPO}>repositório</a>. Antes de abrir um pull request, rode o validador da raiz: ele
       aplica os limites da casa e barra nome de cliente e de pessoa no texto publicado.
     </p>
-    <div class="comando"><code>python scripts/validar-skills.py</code></div>
+    <div class="comando"><code>py -3 scripts/validar-skills.py</code></div>
+    <p>
+      No Windows o comando é <code>py -3</code>: o atalho <code>python</code> não funciona nas
+      máquinas da firma. Em macOS ou Linux, <code>python3</code>.
+    </p>
   </section>
 </Pagina>

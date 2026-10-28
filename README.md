@@ -76,27 +76,23 @@ formato de frontmatter, onde vive cada camada) estão em **[CONVENCOES.md](CONVE
 
 ## Instalação
 
-**`acta-way` é pré-requisito de todo projeto.** O manifesto de plugin do Claude Code não tem campo
-de dependência: nenhum `plugin.json` consegue forçar a instalação de outro. Instale sempre primeiro,
-manualmente, senão o checkpoint e o resto do método comum não existem na sua sessão.
+Registre o marketplace uma vez:
 
 ```bash
 claude plugin marketplace add guilhermegarrido7/acta-sistema-de-conhecimento --scope user
 ```
 
-```bash
-claude plugin install acta-way@acta-sistema-de-conhecimento --scope user
-```
-
-Depois, o(s) plugin(s) do projeto em que você vai trabalhar:
-
-```bash
-claude plugin install acta-metodo-auditoria@acta-sistema-de-conhecimento --scope user
-```
+Depois, instale só o plugin do projeto em que você vai trabalhar. Cada plugin declara no
+`plugin.json` o que precisa (`dependencies`), e o `claude plugin install` instala junto: o
+`acta-way` em todos, o método da prática (`acta-metodo-auditoria` ou `acta-metodo-consultoria`)
+nos que o usam. Exemplo, para uma auditoria de compras:
 
 ```bash
-claude plugin install acta-pesquisa-salarial@acta-sistema-de-conhecimento --scope user
+claude plugin install acta-auditoria-compras@acta-sistema-de-conhecimento --scope user
 ```
+
+Esse comando instala também `acta-way` e `acta-metodo-auditoria`. Se a sua versão do Claude Code
+não instalar dependências, instale-as antes, à mão, com o mesmo comando trocando o nome do plugin.
 
 Só plugins com conteúdo entram no marketplace. Um plugin em esqueleto existe no repositório mas não
 é instalável até ter metodologia escrita, o que evita que alguém instale casca vazia.

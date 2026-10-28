@@ -18,11 +18,11 @@ admitido do mês passado, o protocolo do canal com data de encerramento, a ata c
 Nenhuma dessas provas passa pela área de integridade descrevendo a si mesma, e é exatamente por isso
 que elas servem.
 
-A segunda escolha é sobre onde o trabalho tem lastro real. Cinco dos seis pilares aqui se apoiam em
+A segunda escolha é sobre onde o trabalho tem lastro real. Cinco das seis skills aqui se apoiam em
 base normativa vinculante, que é diferente de conteúdo genérico mas não é o mesmo que experiência de
-execução. O sexto, a due diligence de terceiros, a casa executou, e a skill correspondente é a mais
-densa do plugin porque ela carrega decisões que só aparecem quando o laudo precisa ser entregue: a
-diferença entre a varredura de homologação e o aprofundamento investigativo, a declaração de que
+execução. A sexta, a due diligence de terceiros, a casa executou, e ela é a mais densa do plugin
+porque carrega decisões que só aparecem quando o laudo precisa ser entregue: a diferença entre a
+varredura de homologação e o aprofundamento investigativo, a declaração de que
 quem definiu escopo e critérios foi a contratante, a captura de evidência da fonte que **não**
 retornou ocorrência, e a varredura final do nome de cliente herdado do modelo.
 
@@ -36,9 +36,11 @@ valor do dicionário está inteiro na comparabilidade entre trabalhos e entre an
 | Referência | O que é | Onde aparece no método |
 |---|---|---|
 | Lei 12.846/2013 | Responsabilização administrativa e civil da pessoa jurídica por ato lesivo à administração pública, nacional ou estrangeira, em regime objetivo, com o programa de integridade pesando na dosimetria | A base de `pilares-do-programa` §1, e a razão de o pilar de terceiros existir: o ato praticado por quem age em nome da empresa alcança a empresa |
-| Decreto 11.129/2022 | Regulamenta a lei, define programa de integridade e enumera os parâmetros de avaliação | Os dez pilares de `pilares-do-programa` §2 e a bateria de testes de `monitoramento-e-teste` §2, que é a mesma lista vista pelo lado da evidência |
-| DOJ, Evaluation of Corporate Compliance Programs (ECCP) | Guia público do Departamento de Justiça norte-americano para avaliar programa de compliance, organizado em três perguntas | A pergunta de se o programa funciona na prática, que organiza `monitoramento-e-teste` §1 e a preferência por evidência transacional sobre evidência descritiva |
-| ISO 37001 | Norma de sistema de gestão antissuborno, certificável | A disciplina de sistema de gestão: objetivo, controle operacional, análise crítica e melhoria registrada, em `monitoramento-e-teste` §1 e §6 |
+| Decreto 11.129/2022 | Regulamenta a lei, define programa de integridade e enumera, no art. 57, os quinze parâmetros de avaliação | Os doze pilares de `pilares-do-programa` §2, com a tabela que liga cada inciso a um pilar, e a bateria de testes de `monitoramento-e-teste` §2, que é a mesma lista vista pelo lado da evidência |
+| Lei 14.133/2021, Decreto 12.304/2024 e Portaria Normativa SE/CGU nº 226/2025 | O programa de integridade na contratação pública: obrigatório em contrato de grande vulto, critério de desempate, fator de dosimetria e condição de reabilitação. O decreto regulamenta a avaliação no âmbito federal, com dezessete parâmetros, e a portaria fixa procedimentos e metodologia | `pilares-do-programa` §7 |
+| DOJ, Evaluation of Corporate Compliance Programs (ECCP), versão de setembro de 2024 | Guia público do Departamento de Justiça norte-americano para avaliar programa de compliance, organizado em três perguntas: se é bem desenhado, se é aplicado com seriedade e de boa-fé, com recursos e autonomia para funcionar, e se funciona na prática | A terceira pergunta, se o programa funciona na prática, que organiza `monitoramento-e-teste` §1 e a preferência por evidência transacional sobre evidência descritiva |
+| ISO 37001:2025 | Norma de sistema de gestão antissuborno, segunda edição, certificável | A disciplina de sistema de gestão: objetivo, controle operacional, análise crítica e melhoria registrada, em `monitoramento-e-teste` §1 e §6 |
+| IIA, Requisito Tópico de Terceiros (Third-Party Topical Requirement) | Componente obrigatório do IPPF, vigente desde 15/09/2026, com a linha de base para asseguração de auditoria interna sobre governança, gestão de risco e controle de terceiros | A fronteira entre diligência sobre um terceiro e asseguração sobre o processo de terceiros, em `due-diligence-de-terceiros` §8 |
 | Dicionário de Riscos da ACTA | Taxonomia fechada da casa, quatro componentes, oito grupos, 52 categorias numeradas, hospedada em `acta-gestao-de-riscos` | A classificação do terceiro em `due-diligence-de-terceiros` §3, com a estrutura completa sinalizada no laudo |
 | Escala com Limitação de Escopo | Decisão de método da casa: quatro níveis, sendo o primeiro a declaração de que a categoria não pôde ser avaliada | A avaliação por categoria no laudo, e a regra de que certidão não emitida não vira Baixo |
 | COSO, Internal Control, Integrated Framework | Referencial de controle interno: atividade de controle existe para mitigar risco identificado, e se avalia se está presente e funcionando | A distinção entre desenho e efetividade que atravessa a régua de maturidade, com a mecânica em `acta-controles-internos` |

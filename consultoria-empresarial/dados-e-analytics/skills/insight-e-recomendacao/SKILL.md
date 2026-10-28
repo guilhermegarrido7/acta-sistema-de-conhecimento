@@ -5,8 +5,8 @@ description: Transforme o resultado da análise em recomendação pronta para de
 
 # Insight e recomendação
 
-Carregue `acta-metodo-consultoria` antes desta skill: a defesa técnica do número e o registro de
-limitações valem aqui integralmente. Esta é a skill que fecha o plugin, e a que justifica todas as
+Carregue `acta-metodo-consultoria:defesa-tecnica-e-limitacoes` antes desta skill: a defesa técnica
+do número e o registro de limitações valem aqui integralmente. Esta é a skill que fecha o plugin, e a que justifica todas as
 anteriores: sem ela, o projeto entregou uma ferramenta, não uma decisão.
 
 O deliverable de analytics em consultoria **é a decisão, não o painel**. O cliente não contratou um

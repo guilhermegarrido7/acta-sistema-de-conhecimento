@@ -1,6 +1,6 @@
 ---
 name: estatistica-remuneracao
-description: Aplique estatística a pesquisa de remuneração, com o julgamento que as fórmulas não dão: qual medida usar, quando não publicar e como interpretar. Acionar em amostragem, mínimos de agregação, mín, quartis, média, mediana, dispersão, outliers, percentis e leitura de competitividade.
+description: Aplique o julgamento estatístico à pesquisa de remuneração. Acionar ao escolher mediana ou média e o método de percentil, ao tratar cargo com n pequeno, ao marcar outlier sem excluir, ou ao justificar amostra intencional.
 ---
 
 # Estatística aplicada a remuneração

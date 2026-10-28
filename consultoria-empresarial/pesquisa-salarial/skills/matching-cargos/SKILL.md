@@ -1,6 +1,6 @@
 ---
 name: matching-cargos
-description: Estabeleça a equivalência entre os cargos do cliente e os das empresas participantes. Acionar ao classificar cargo em família, nível funcional e critério de nivelamento, ao definir o grau de match, ao tratar padrão de problema já catalogado, ou ao registrar a base de matching.
+description: Faça o matching por conteúdo entre cargos do cliente e das participantes. Acionar ao classificar cargo em família, nível funcional e critério de nivelamento, ao pontuar o grau de match, ou ao tratar padrão já catalogado.
 ---
 
 # Matching de cargos por conteúdo

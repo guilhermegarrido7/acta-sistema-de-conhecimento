@@ -36,7 +36,7 @@ o canal vem antes do treinamento (ensinar a reportar sem ter para onde reportar 
 
 | # | Etapa | O que fecha a etapa |
 |---|---|---|
-| 1 | Pilares do programa | A matriz dos dez pilares com o nível de maturidade e a evidência de cada um, as cinco provas de comprometimento da alta direção e o rastreamento de um caso real por pilar |
+| 1 | Pilares do programa | A matriz dos doze pilares com o nível de maturidade e a evidência de cada um, as cinco provas de comprometimento da alta direção e o rastreamento de um caso real por pilar |
 | 2 | Código de conduta | O código na régua de decidibilidade (decide caso concreto), as políticas específicas das exposições altas, a cláusula de integridade de terceiro e a conciliação admitidos × termos de ciência em 100% |
 | 3 | Canal de denúncias | As três camadas de independência testadas, anonimato × confidencialidade com protocolo de retorno, os quatro marcos de prazo e o desvio obrigatório quando o denunciado está no fluxo |
 | 4 | Due diligence de terceiros | O gate de entrada, a faixa de criticidade, o laudo (ou papel de trabalho no Modo B), o dossiê de evidência com captura datada e os quatro gates antes de entregar |
@@ -80,7 +80,7 @@ herdado de modelo, porque entregar laudo com o nome de outro cliente no corpo é
 
 | Artefato | Formato | Para quem |
 |---|---|---|
-| Diagnóstico de maturidade por pilar | Matriz dos dez pilares, nota por pilar com evidência, e rastreamento de caso real | Alta direção / instância de integridade |
+| Diagnóstico de maturidade por pilar | Matriz dos doze pilares, nota por pilar com evidência, e rastreamento de caso real | Alta direção / instância de integridade |
 | Código de conduta e políticas | Código na régua de decidibilidade + políticas específicas com limite e formulário | Todo o quadro / terceiros |
 | Fluxo e política do canal de denúncias | Fluxo com três camadas de independência, prazos e procedimento de desvio | Instância de integridade / governança |
 | Laudo de due diligence de terceiro | Laudo (Modo A) ou papel de trabalho (Modo B), com dossiê de evidência datado | Companhia contratante |

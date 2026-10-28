@@ -1,6 +1,6 @@
 ---
 name: escopo-e-proposta
-description: Qualifique a demanda e desenhe o escopo de um projeto de pesquisa de remuneração. Acionar ao dimensionar Total Rewards versus subconjunto, ao precificar e cronogramar a proposta, ao fixar a fronteira do escopo, ou ao avaliar pedido de mudança durante a execução.
+description: Qualifique a demanda e feche o escopo e a proposta de pesquisa salarial. Acionar ao fixar cargos, recortes e Total Rewards ou subconjunto, ao precificar e cronogramar a proposta, ou ao avaliar pedido de mudança na execução.
 ---
 
 # Escopo e proposta

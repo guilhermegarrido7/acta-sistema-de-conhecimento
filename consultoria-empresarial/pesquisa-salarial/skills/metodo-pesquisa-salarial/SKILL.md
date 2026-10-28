@@ -1,6 +1,6 @@
 ---
 name: metodo-pesquisa-salarial
-description: Aplique o método ACTA de pesquisa de remuneração, com regras de ouro, cartão de identidade do projeto, mínimos de agregação e anonimização, e convenções de base. Acionar ao abrir projeto de pesquisa salarial, ao decidir metodologia, ou ao definir o que pode ser publicado.
+description: Aplique o método ACTA de pesquisa salarial, com regras de ouro, mínimos de anonimização e convenções de base. Acionar ao iniciar qualquer etapa, ao escolher a skill da etapa, ou ao checar se um número pode ser publicado.
 user-invocable: false
 ---
 
@@ -216,8 +216,7 @@ Recalcular no slide é a principal fonte de divergência entre entregáveis.
 
 ## 7. Protocolo de checkpoint
 
-O mecanismo de checkpoint é **comum a todos os projetos da ACTA** e vive em `acta-way`, skill
-`checkpoint`. Carregue-a: ela traz os gatilhos de quando gravar (pedido do consultor, encerrar
+O mecanismo de checkpoint é **comum a todos os projetos da ACTA** e vive em `acta-way:checkpoint`. Carregue-a: ela traz os gatilhos de quando gravar (pedido do consultor, encerrar
 sessão ou trocar de chat, conversa pesada, ou a pergunta diária de início de dia e fim de tarde), a
 detecção de defasagem, a detecção dos dois modos de operação, e os templates.
 

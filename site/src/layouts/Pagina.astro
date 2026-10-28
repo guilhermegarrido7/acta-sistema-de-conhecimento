@@ -1,10 +1,10 @@
 ---
-/* Página interna: faixa de título mais o corpo. Existe para que as oito páginas
-   internas não repitam a mesma marcação de cabeçalho. */
+/* Página interna: faixa de título mais o corpo. Existe para que as páginas internas não
+   repitam a mesma marcação de cabeçalho. tituloAba e noindex passam direto para a Base. */
 import Base from './Base.astro';
-const { titulo, descricao, sobrescrito, abertura, voltar } = Astro.props;
+const { titulo, descricao, sobrescrito, abertura, voltar, tituloAba, noindex } = Astro.props;
 ---
-<Base titulo={titulo} descricao={descricao}>
+<Base titulo={titulo} descricao={descricao} tituloAba={tituloAba} noindex={noindex}>
   <div class="capa">
     <div class="envelope">
       {voltar && <p class="rastro"><a href={voltar.href}>← {voltar.rotulo}</a></p>}

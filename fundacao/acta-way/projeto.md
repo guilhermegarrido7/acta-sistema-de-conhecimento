@@ -48,9 +48,10 @@ reescrever o que elas trazem.
 
 ## O que é preciso ter antes de usar
 
-- **Instalar `acta-way` primeiro, sempre, antes de qualquer plugin de projeto** — o manifesto de
-  plugin não tem campo de dependência, então sem ele instalado nenhum outro plugin da ACTA consegue
-  usar o checkpoint.
+- **`acta-way` vem junto com qualquer plugin da ACTA.** Todo plugin o declara como dependência no
+  `plugin.json`, e o `claude plugin install` o instala na mesma operação. Instale-o à mão só se a sua
+  versão do Claude Code não instalar dependências sozinha; sem ele, nenhum plugin consegue usar o
+  checkpoint.
 - **Copiar os templates de `skills/checkpoint/references/` para a pasta do engajamento** ao abrir um
   projeto novo: o `TEMPLATE-CLAUDE.md` traz o passo a passo, são cinco minutos, uma vez por projeto.
 - **Manter `clientes.local.txt` atualizado na própria máquina**, porque ele alimenta a checagem de

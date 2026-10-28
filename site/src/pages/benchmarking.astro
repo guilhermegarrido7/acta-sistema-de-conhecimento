@@ -1,10 +1,10 @@
 ---
+/* Fora do menu principal até o acervo existir; o rodapé ainda aponta para cá. */
 import Pagina from '../layouts/Pagina.astro';
 import { catalogo } from '../lib/catalogo.js';
 const { plugins } = catalogo();
-const deProjeto = plugins.filter(
-  (p) => p.categoria === 'consultoria-empresarial' || p.categoria === 'governanca-riscos-compliance'
-);
+// Plugins que já têm pasta de acervo no repositório, lido a cada build.
+const comAcervo = plugins.filter((p) => p.acervo.length > 0);
 ---
 
 <Pagina
@@ -56,15 +56,15 @@ const deProjeto = plugins.filter(
   </section>
 
   <section class="secao">
-    <h2>Tipos de projeto que terão acervo</h2>
-    <div class="grade">
-      {deProjeto.map((p) => (
-        <article class="cartao">
-          <h3><a href={`/projetos/${p.slug}`}>{p.titulo}</a></h3>
-          <p>Aguardando registro de engajamentos.</p>
-          <div class="pe"><span>Ver o método →</span></div>
-        </article>
-      ))}
-    </div>
+    <h2>Onde os benchmarks estão hoje</h2>
+    <p>
+      Os benchmarks vivem dentro de cada plugin, nas pastas <code>casos/</code> e
+      <code>benchmarks/</code>, e ainda estão em consolidação: o formato do registro e a regra do que
+      pode ser referenciado vêm antes de qualquer página aqui.
+      {comAcervo.length > 0 && (
+        <> Hoje há pasta de acervo em {comAcervo.length === 1 ? 'um plugin' : `${comAcervo.length} plugins`}:
+        {' '}{comAcervo.map((p, i) => <>{i > 0 && ', '}<a href={p.url}>{p.titulo}</a></>)}.</>
+      )}
+    </p>
   </section>
 </Pagina>

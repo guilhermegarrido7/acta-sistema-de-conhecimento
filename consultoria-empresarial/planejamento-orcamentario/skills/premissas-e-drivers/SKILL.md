@@ -5,9 +5,9 @@ description: Defina os drivers operacionais e as premissas que sustentam o orça
 
 # Premissas e drivers
 
-Carregue `acta-metodo-consultoria` antes desta skill: a hierarquia de autoridade entre fontes, a
-reconstrução de base a partir do dado bruto e a planilha-mestre com rastreabilidade valem aqui e não
-são repetidas. O orçamento é um projeto de consultoria como os outros; o que muda é que o número
+Carregue antes desta skill `acta-metodo-consultoria:diagnostico-e-entrevistas` (a hierarquia de
+autoridade entre fontes) e `acta-metodo-consultoria:mapeamento-as-is` (a reconstrução de base a partir
+do dado bruto e a planilha-mestre com rastreabilidade): valem aqui e não são repetidas. O orçamento é um projeto de consultoria como os outros; o que muda é que o número
 olha para a frente.
 
 Esta é a skill de entrada do plugin. Nada se projeta antes de os drivers e as premissas estarem
@@ -79,6 +79,19 @@ crescimento que é aspiração, não projeção. Sua função é separar as duas
 (`projecao-e-cenarios` da modelagem, quando houver), e a projeção-base parte do realizado ajustado
 pelos drivers que o cliente controla. Orçar a aspiração como base produz o orçamento que ninguém bate
 e que vira peça de ficção no terceiro mês.
+
+**A premissa tributária muda a partir de 2027.** Em orçamento de 2027 em diante, PIS e Cofins saem
+e entra a CBS, com crédito amplo sobre as compras (salvo uso e consumo pessoal); o IBS fica em 0,1%
+em 2027 e 2028 e cresce de 2029 a 2032, enquanto ICMS e ISS caem a 9/10, 8/10, 7/10 e 6/10 da
+alíquota (ADCT, arts. 126 a 128). A alíquota de referência da CBS de 2027 é fixada pelo Senado até
+15/12/2026: até lá, entra na aba `Premissas` como faixa, com fonte e data, e é trocada pelo número
+oficial. Orce o preço líquido de tributos como driver e compare receita líquida, não bruta, entre o
+realizado de 2026 e o orçado. Pergunte ao cliente o regime atual de PIS/Cofins (cumulativo ou não
+cumulativo), a receita por tipo de cliente (contribuinte do regime regular, Simples, consumidor
+final, poder público), a política de repasse ao preço, o prazo de pagamento a fornecedores, os meios
+de recebimento (que entram no split payment) e os benefícios de ICMS com prazo e condição.
+Calendário, fontes e roteiro completo de perguntas: `acta-modelagem-economico-financeira:impostos-e-prejuizos-fiscais`,
+reference `transicao-tributaria-2026-2033.md`, se estiver instalado.
 
 ## 4. A base realizada: o ponto de partida honesto
 

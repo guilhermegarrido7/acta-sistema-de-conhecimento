@@ -2,7 +2,7 @@
 
 Construção de modelo econômico-financeiro: projeção de resultado e caixa, capital de giro, valuation, cenários e análise de sensibilidade, no framework Koller/McKinsey (NOPLAT, ROIC, lucro econômico, DCF) adaptado a mid-market fechado brasileiro (CPC/IFRS).
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É ali que vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
 > **Status: completo.** As 14 skills do ciclo de vida estão escritas, com a camada de
 > fundamento teórico (`fundamentos-koller`) e suas 5 referências detalhadas.

@@ -4,9 +4,9 @@ Construção e revisão de orçamento empresarial driver-based: premissas e driv
 quantidade e preço, despesa por natureza e folha, CapEx e depreciação, ciclo e consolidação
 multiunidade, e análise de variação com reprevisão.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
-> **Segundo pré-requisito: `acta-metodo-consultoria`.** O orçamento é um projeto de consultoria. A
+> **Segundo pré-requisito: `acta-metodo-consultoria`**, também declarado como dependência. O orçamento é um projeto de consultoria. A
 > hierarquia de autoridade entre fontes, a reconstrução de base a partir do dado bruto, a
 > planilha-mestre com rastreabilidade célula a célula e a defesa técnica do número vivem lá e **não
 > se repetem aqui**. Cada skill manda carregá-lo antes.

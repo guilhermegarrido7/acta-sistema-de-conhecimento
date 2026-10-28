@@ -5,7 +5,7 @@ description: Teste o recebimento, a conferência de três vias e a saída do cai
 
 # Recebimento, três vias e pagamento
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 (nunca presumir caminho, sempre perguntar) valem aqui integralmente e não são
 repetidas. Este plugin é de processo auditado; o método vive no plugin de método.
 

@@ -40,7 +40,13 @@ se atualiza) é o que preserva a responsabilização e, ao mesmo tempo, mantém 
   driver-based, rolling forecast).
 - Literatura de driver-based budgeting e de rolling forecast (planejamento contínuo).
 - Beyond Budgeting (Hope & Fraser) — crítica ao orçamento anual fixo.
-- CPC 27 / IAS 16 — depreciação por vida útil econômica, base da tabela de depreciação do CapEx.
+- IN RFB 1.700/2017, art. 124 e Anexo III — prazos de vida útil e taxas anuais de depreciação
+  admitidos pela Receita Federal na apuração do IRPJ e da CSLL, base da tabela de depreciação do
+  CapEx (anexo conferido em 26/10/2026 em reprodução: https://www.legisweb.com.br/legislacao/?id=340506;
+  o portal Normas da Receita Federal publica o anexo em arquivo à parte).
+- CPC 27 / IAS 16 — depreciação contábil pela vida útil estimada, revisada ao menos ao fim de cada
+  exercício (item 51); CPC 32 / IAS 12 — tributo diferido da diferença entre a depreciação contábil e
+  a fiscal.
 
 > Conteúdo das fontes externas foi reescrito para conformidade com restrições de licenciamento. A
 > metodologia da casa combina essas referências com o ajuste a mid-market brasileiro, validado em

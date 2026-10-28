@@ -5,7 +5,7 @@ description: Audite o fechamento financeiro de um evento, apurando a receita rea
 
 # Receita de evento
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 (nunca presumir caminho, sempre perguntar) valem aqui integralmente e não são
 repetidas. Carregue também `ciclo-da-receita` e `matriz-de-riscos-da-receita`: esta skill é uma
 **variante do ciclo de receita** aplicada a um evento, não um ciclo novo.

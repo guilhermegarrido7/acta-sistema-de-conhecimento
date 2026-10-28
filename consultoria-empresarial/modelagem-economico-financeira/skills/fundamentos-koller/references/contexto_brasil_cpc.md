@@ -12,6 +12,7 @@
 | Benefícios a empregados (CP) | CPC 33 (IAS 19) | Férias, 13º, PLR: entram em passivo operacional |
 | Reconhecimento de receita | CPC 47 (IFRS 15) | Impacta timing de receita e adiantamentos de clientes |
 | Instrumentos financeiros | CPC 48 (IFRS 9) | Derivativos de hedge, aplicações financeiras |
+| Apresentação da DRE (categorias e MPMs) | CPC 51 (IFRS 18) | Substitui o CPC 26 (R1) nos exercícios iniciados a partir de 01/01/2027; ver seção 5 |
 
 ---
 
@@ -113,7 +114,61 @@ A amortização vai para EBIT contábil → excluir ao calcular EBITA (é amorti
 
 ---
 
-## 5. Ajustes de normalização de EBITDA no contexto Brasil
+## 5. CPC 51 / IFRS 18: a DRE por categorias (exercícios a partir de 2027)
+
+**Norma e alcance.** O CPC 51 (Apresentação e Divulgação em Demonstrações Contábeis), correlato ao
+IFRS 18, substitui o CPC 26 (R1). A Resolução CVM 237, de 24/12/2025, o torna obrigatório para a
+companhia aberta nos exercícios iniciados em ou após 01/01/2027 e revoga a Resolução CVM 106 (que
+aprovava o CPC 26 R1) e a Resolução CVM 156 (divulgação voluntária de LAJIDA e LAJIR). Para as
+demais entidades que seguem as normas completas do CFC, a NBC TG 51 tem a mesma vigência e revoga a
+NBC TG 26 (NBC TG 51, item 2 e cláusula de vigência). A empresa fechada que adota a norma de PME
+(NBC TG 1000) fica fora do alcance (a confirmar).
+
+| O que muda | Regra | Item da NBC TG 51 |
+|---|---|---|
+| Cinco categorias | Operacional, investimento, financiamento, tributos sobre o lucro e operações descontinuadas | 47 |
+| Operacional | Residual: recebe tudo o que não está nas outras quatro | 52 |
+| Investimento | Resultado de coligadas, joint ventures e controladas não consolidadas, de caixa e equivalentes, e de ativo que gera retorno individualmente e em grande parte independente dos demais recursos | 53 e 54 |
+| Financiamento | Receitas e despesas de passivo que só capta recursos (empréstimo, debênture), com o custo de transação; de outros passivos, só juros e efeito de mudança de taxa que outra norma manda identificar | 59 a 61 |
+| Subtotais obrigatórios | Lucro operacional; lucro antes de financiamento e tributos sobre o lucro; lucro líquido | 69 a 72 |
+| MPM | Subtotal usado em comunicação pública fora das demonstrações para dar a visão da administração sobre o desempenho, como o EBITDA ajustado. Vai para nota única, com cálculo, motivo, conciliação ao subtotal mais comparável e efeito de tributos e de não controladores por item conciliado | 117, 122 e 123 |
+| Não é MPM | Lucro bruto; lucro operacional antes de depreciação, amortização e impairment do CPC 01 (o mais próximo de um EBITDA sem ajuste); lucro antes dos tributos, entre outros | 118 |
+
+Entidade cuja atividade principal é investir em ativos ou financiar clientes (banco, financeira,
+entidade de investimento) leva parte do resultado de investimento e de financiamento para a
+categoria operacional (itens 49 e 50). Comparável desse tipo pede leitura própria.
+
+**Efeito no valuation.**
+
+- **Lucro operacional não é NOPAT.** A categoria é residual e, em regra, carrega não recorrentes,
+  resultado na venda de imobilizado, impairment e amortização de intangível adquirido. A
+  reorganização de `reorganizacao-contabil` continua obrigatória: o subtotal é ponto de partida, não
+  resultado.
+- **Parte da separação vem pronta.** Equivalência patrimonial e rendimento de caixa saem do
+  operacional (item 53), e os juros de passivo financeiro vão para financiamento (itens 60 e 61),
+  como na reorganização Koller. Confira em nota onde a empresa classificou os juros do arrendamento
+  (CPC 06) e a atualização de provisões. Use as categorias para conferir a classificação, não para
+  substituí-la.
+- **A nota de MPM melhora o comparável.** O EBITDA ajustado da listada passa a ter conciliação item a
+  item, com efeito tributário, e o EBITDA da listada pode mudar de definição com a saída da Resolução
+  CVM 156. Refaça o múltiplo do comparável sobre a mesma definição de EBITDA do alvo antes de
+  aplicá-lo (ver `qualidade-de-resultados`).
+- **A série histórica quebra na adoção.** As demonstrações anteriores seguem o CPC 26. Reclassifique
+  esses anos pelo mesmo critério antes de ler tendência de margem.
+
+Fontes desta seção: CVM, notícia de 24/12/2025 sobre as Resoluções CVM 237 e 238
+(https://www.gov.br/cvm/pt-br/assuntos/noticias/2025/cvm-edita-normas-sobre-novas-regras-contabeis-provenientes-do-pronunciamento-tecnico-cpc-51/);
+ementas das Resoluções CVM 106 e 156
+(https://conteudo.cvm.gov.br/legislacao/resolucoes/resol106.html e
+https://conteudo.cvm.gov.br/legislacao/resolucoes/resol156.html); CPC, ficha do CPC 51, aprovado em
+10/10/2025 (https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=162);
+NBC TG 51, de 13/11/2025, conferida em reprodução (https://www.legisweb.com.br/legislacao/?id=488310).
+Os itens citados são os da NBC TG 51, elaborada a partir do CPC 51; confira a numeração no texto do
+CPC antes de citar item em entregável. Acesso em 26/10/2026.
+
+---
+
+## 6. Ajustes de normalização de EBITDA no contexto Brasil
 
 ### Pró-labore acima/abaixo do mercado
 
@@ -144,7 +199,7 @@ Se a empresa recebe adiantamentos e reconhece receita antes da entrega, o EBITDA
 
 ---
 
-## 6. Checklist Específico Mid-Market Brasil
+## 7. Checklist Específico Mid-Market Brasil
 
 ### Qualidade de Resultados
 
@@ -156,6 +211,7 @@ Se a empresa recebe adiantamentos e reconhece receita antes da entrega, o EBITDA
 - [ ] Regime tributário: Simples / Presumido / Real, e implicações para normalização
 - [ ] Receita: concentração em poucos clientes? (risco de churn pós-transação)
 - [ ] CAPEX de manutenção vs. expansão: separar para estimar FCF sustentável
+- [ ] Exercícios a partir de 2027 (CPC 51): lucro operacional reconciliado ao NOPAT e nota de MPM lida, se houver (seção 5)
 
 ### Estrutura da Dívida
 
@@ -166,7 +222,7 @@ Se a empresa recebe adiantamentos e reconhece receita antes da entrega, o EBITDA
 
 ---
 
-## 7. Taxa de desconto: peculiaridades do Brasil
+## 8. Taxa de desconto: peculiaridades do Brasil
 
 ### WACC em BRL
 

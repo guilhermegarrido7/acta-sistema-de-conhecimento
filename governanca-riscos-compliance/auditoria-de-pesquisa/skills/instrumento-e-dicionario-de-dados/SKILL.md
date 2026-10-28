@@ -5,7 +5,7 @@ description: Critique o instrumento e o dicionário de dados de uma pesquisa ant
 
 # O instrumento e o dicionário de dados
 
-Carregue antes: `acta-way` e `acta-metodo-auditoria`.
+Carregue antes: `acta-way:checkpoint` e `acta-metodo-auditoria:metodo-auditoria`.
 
 ## 1. Por que este elo vem primeiro
 

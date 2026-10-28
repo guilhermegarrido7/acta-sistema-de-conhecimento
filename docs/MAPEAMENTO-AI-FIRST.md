@@ -1,5 +1,4 @@
 # Mapeamento AI-first dos próximos plugins
-# Mapeamento AI-first dos próximos plugins
 
 Este documento mapeia os próximos plugins com matéria-prima disponível sob a tese de que a ACTA é uma
 **consultoria de negócios AI-first**. Complementa [MAPEAMENTO.md](MAPEAMENTO.md) (desenho e ordem)
@@ -85,7 +84,7 @@ chegar à recomendação. Para mid-market, é esse o trabalho que a ACTA entrega
 [MAPEAMENTO.md](MAPEAMENTO.md) §5.
 
 **Âncora de mercado.** CRISP-DM como espinha dorsal do ciclo (definir objetivo → entender/preparar
-dado → modelar → avaliar → operacionalizar), DAMA-DMBOK 2.0 como âncora de **qualidade e governança
+dado → modelar → avaliar → operacionalizar), DAMA-DMBOK2 Revised (2024) como âncora de **qualidade e governança
 de dados** onde couber (citável em consultoria com atribuição), e o diagnóstico data-driven da
 McKinsey (escolher o dado certo → construir o modelo → transformar a decisão) como lente de valor.
 
@@ -113,7 +112,7 @@ fases próprias, não apêndices.
 | `modelo-analitico-e-visualizacao` | Modelo dinâmico, SUMIFS, painel, conexão com Power BI (fronteira com `acta-pesquisa-salarial:dashboard-powerbi`) |
 | `insight-e-recomendacao` | Ler o número e produzir a recomendação pronta para decisão — o deliverable é a decisão, não a ferramenta |
 
-Âncora declarada: CRISP-DM; DAMA-DMBOK 2.0 (qualidade e governança); McKinsey data-driven enterprise.
+Âncora declarada: CRISP-DM 1.0; DAMA-DMBOK2 Revised (2024), para qualidade e governança; McKinsey data-driven enterprise.
 
 > **Ponto em aberto de dimensionamento:** uma oitava skill, `automacao-e-operacionalizacao` (pipeline
 > e reconciliação automatizados, a camada AI-first explícita), pode entrar se couber no teto de custo
@@ -154,8 +153,9 @@ Pesquisa de outubro de 2026. Conteúdo reescrito para conformidade com licenciam
 citada com link para atribuição.
 
 **Consultoria AI-first e agentes em serviços profissionais**
-- [AI agents in professional services (Klient)](https://klient.com/blog/ai-agents-in-professional-services/) — agente como executor autônomo de tarefa, com revisão humana antes de ir ao cliente; pressão de margem no setor (SPI Benchmark 2025).
-- [McKinsey has 40,000 AI agents — playbook (Todd Edwards)](https://toddedwards42.substack.com/i/193037664/what-the-big-consulting-firms-have-actually-built) — escala de agentes em MBB e grandes firmas.
+- [AI agents in professional services (Klient)](https://klient.com/blog/ai-agents-in-professional-services/) — agente como executor autônomo de tarefa, com revisão humana antes de ir ao cliente.
+- [SPI Research, Professional Services Maturity Benchmark, 19ª edição (release de fev/2026)](https://natlawreview.com/press-releases/spi-research-publishes-its-19th-annual-professional-services-maturitytm) — utilização faturável de 66,4%, a menor em 19 anos: é a pressão de margem que empurra serviços profissionais para agentes.
+- [Where McKinsey and consulting go from here (HBR IdeaCast, jan/2026)](https://hbr.org/podcast/2026/01/where-mckinsey-and-consulting-go-from-here) e [Business Insider, jan/2026](https://www.businessinsider.com/mckinsey-workforce-ai-agents-consulting-industry-bob-sternfels-2026-1) — o CEO da McKinsey fala em cerca de 40 mil pessoas e 20 a 25 mil agentes de IA. O número de 40 mil agentes que circula em blogs é meta, não estoque.
 - [How consulting firms turn playbooks into agentic workflows (Monetizely)](https://www.getmonetizely.com/articles/how-are-consulting-firms-using-agentic-ai-to-transform-their-playbooks-into-dynamic-workflows) — IP da firma vira workflow agêntico.
 - [The anatomy of an AI-first tech consultancy (Alion)](https://aliontech.substack.com/p/the-anatomy-of-an-ai-first-tech-consultancy) — fim do "pay for time" e da pirâmide de entrega.
 
@@ -170,7 +170,7 @@ citada com link para atribuição.
 
 **Dados e analytics**
 - [DAMA-DMBOK (DAMA International)](https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/) — framework de gestão de dados; citável em consultoria com atribuição.
-- [DAMA-DMBOK 2.0 — guia (Atlan)](https://atlan.com/dama-dmbok-framework/) — 11 áreas de conhecimento, governança no centro.
+- [DAMA-DMBOK2 Revised Edition (DAMA International)](https://dama.org/dama-dmbok-revision/) — revisão de manutenção publicada em 2024, sem mudar a estrutura das 11 áreas de conhecimento.
 - [Three keys to a data-driven strategy (McKinsey, Barton & Court)](https://www.mckinsey.com/~/media/McKinsey/Business%20Functions/McKinsey%20Digital/Our%20Insights/Three%20keys%20to%20building%20a%20data%20driven%20strategy/Three%20keys%20to%20building%20a%20data%20driven%20strategy.pdf) — escolher o dado, construir o modelo, transformar a decisão.
 
 **Problem-solving de consultoria (transversal)**
@@ -180,7 +180,7 @@ citada com link para atribuição.
 
 ## 5. Decisões tomadas e ordem de execução
 
-Decisões do responsável (nov/2026), já incorporadas acima:
+Decisões do responsável (out/2026), já incorporadas acima:
 
 - **Escopo do marketplace.** Consultoria Tributária / Tax, Auditoria Externa / Assurance e
   Consultoria em Tecnologia (Cybersecurity) **ficam de fora**: são serviços de outra equipe. O

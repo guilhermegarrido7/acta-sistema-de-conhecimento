@@ -11,7 +11,7 @@ Direciona a organização do mandato. Não move nem renomeia arquivo sem confirm
 mandato em andamento é memória compartilhada da equipe, e reorganização silenciosa destrói rastro.
 
 **O mecanismo genérico não vive aqui.** `CLAUDE.md`, `CHECKPOINT.md`, `Sessoes/` e `APRENDIZADOS.md`
-são de `acta-way`, skill `checkpoint`. Carregue-a para isso. Esta skill cobre apenas o que é próprio
+são de `acta-way:checkpoint`. Carregue-a para isso. Esta skill cobre apenas o que é próprio
 de um mandato de M&A.
 
 > Se `acta-way` não estiver instalado, **avise o usuário** em vez de improvisar o protocolo de

@@ -40,10 +40,16 @@ que merece.
 | LGPD | O regime de tratamento de dado pessoal, com base mínima, finalidade declarada e descarte, e o tratamento agravado de dado pessoal sensível | O protocolo de sete regras de `universo-da-folha` §7, o cuidado com rubrica de saúde e de filiação sindical, e a descrição de todo achado por cargo e por registro |
 | COSO, Internal Control, Integrated Framework (revisão de 2013) | O referencial de controle interno: atividade de controle existe para mitigar risco identificado, e se avalia se está presente e funcionando | A estrutura risco por controle por teste de `matriz-de-riscos-da-folha`, e o confronto de cobertura com a matriz do próprio cliente (§4) |
 | Segregação de funções e controle de acesso | O princípio de que cadastrar, lançar variável, processar, revisar e liberar pagamento não podem ficar na mesma mão, e a exigência de revogação tempestiva no desligamento | O risco `FOP.R05`, e a defasagem entre desligamento e revogação medida em `admissao-e-desligamento` §5, que é encaminhada a `acta-segregacao-de-funcoes:perfis-e-acessos` |
+| Lei 14.973/2024 (Lei 12.546/2011, art. 9º-A) | A transição da contribuição substitutiva sobre a receita bruta: de 2025 a 2027, parcela sobre a receita decrescente e parcela patronal sobre a folha crescente, sem esta sobre o décimo terceiro, e o termo de manutenção de empregados | Os testes de transição de `encargos-e-beneficios` §3 |
+| FGTS Digital (Lei 14.438/2022; Lei 8.036/1990, art. 18; Portaria MTE nº 240/2024) | Recolhimento por guia do FGTS Digital desde 01/03/2024, calculado sobre o eSocial, com vencimento no dia 20 do mês seguinte, rescisório em dez dias e fim da GRRF | O fundo de garantia de `encargos-e-beneficios` §3 e o rescisório de `admissao-e-desligamento` §6 |
+| STF, Tema 1.389 da repercussão geral (ARE 1.532.603) | Competência, ônus da prova e licitude da contratação de pessoa jurídica ou autônomo para prestar serviço, com mérito pendente em outubro de 2026 | O risco a acompanhar de `terceiros-e-pj` §3 |
 
-Nenhuma numeração de artigo é citada nas skills, e isso é deliberado. A obrigação se descreve pelo
-conteúdo, porque o número muda com reforma legislativa e com a data-base da convenção, e uma citação
-errada derruba o achado inteiro numa discussão em que o mérito estava certo.
+Fora das regras com data marcada para começar ou terminar, nenhuma numeração de artigo é citada nas
+skills, e isso é deliberado. A obrigação se descreve pelo conteúdo, porque o número muda com reforma
+legislativa e com a data-base da convenção, e uma citação errada derruba o achado inteiro numa
+discussão em que o mérito estava certo. Nas regras com data marcada, que são as três últimas linhas
+da tabela, a norma e os dispositivos que ela menciona acompanham o texto, conferidos na fonte,
+porque o que se testa é a vigência em cada competência.
 
 ## Onde a ACTA se afasta do manual
 

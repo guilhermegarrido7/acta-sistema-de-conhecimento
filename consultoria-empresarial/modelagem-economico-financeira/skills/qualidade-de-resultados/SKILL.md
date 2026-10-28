@@ -119,6 +119,26 @@ Colunas que não são decorativas:
 Ao final: **EBITDA reportado → EBITDA normalizado**, com o total por família e o percentual de
 ajuste sobre o reportado.
 
+## EBITDA ajustado como MPM (CPC 51, exercícios a partir de 2027)
+
+O EBITDA ajustado que a entidade usa em comunicação pública passa a ser medida de desempenho
+definida pela administração (MPM): nota única, com cálculo, motivo, conciliação ao subtotal mais
+comparável e efeito de tributos e de não controladores por item conciliado (NBC TG 51, itens 117,
+122 e 123). O lucro operacional antes de depreciação, amortização e impairment, o mais próximo de um
+EBITDA sem ajuste, não é MPM (item 118, b).
+
+- **A MPM é ponto de partida auditável, não o fim da normalização.** Ela traz a visão da
+  administração e não precisa seguir as quatro famílias nem o teste de recorrência desta skill. Use a
+  conciliação como evidência da tabela de add-backs e submeta cada ajuste aos mesmos testes.
+- **Quem está obrigado.** A companhia aberta, pela Resolução CVM 237/2025; a fechada que segue as
+  normas completas do CFC, pela NBC TG 51; a fechada no regime de PME, não (a confirmar). Mesmo no
+  alcance, só há MPM se a empresa divulgar a medida em comunicação pública (item 117, a).
+- **O comprador listado lê o alvo por essa régua**, obrigado o alvo ou não: vai conciliar o EBITDA
+  normalizado como concilia o próprio. Monte a ponte reportado → normalizado nesse formato, com o
+  subtotal de partida, o efeito de IR e CSLL de cada ajuste e a definição de EBITDA declarada.
+
+Alcance, vigência e fontes: `fundamentos-koller`, reference `contexto_brasil_cpc.md`, seção 5.
+
 ## O termômetro do percentual de ajuste
 
 O ajuste total como percentual do EBITDA reportado é lido pelo comprador como sinal:

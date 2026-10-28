@@ -5,7 +5,7 @@ description: Teste a medição do serviço e o aceite do cliente antes da nota, 
 
 # Medição, aceite e glosa
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 (nunca presumir caminho, sempre perguntar) valem aqui integralmente e não são
 repetidas. Este plugin é de processo auditado; o método vive no plugin de método.
 

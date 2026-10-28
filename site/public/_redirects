@@ -1,0 +1,40 @@
+# Endereços antigos do portal que mudaram de lugar.
+# O Astro copia este arquivo para dist/, que é o diretório de ativos do Worker (wrangler.toml,
+# [assets]). Workers Static Assets lê as regras dali e não publica o arquivo em si.
+# Formato e limites: https://developers.cloudflare.com/workers/static-assets/redirects/
+# Cada regra vem com e sem barra final, porque a origem é comparada como foi escrita.
+
+# O plugin acta-way tinha a página em /projetos/way (o slug perdia o prefixo acta-).
+/projetos/way /projetos/acta-way/ 301
+/projetos/way/ /projetos/acta-way/ 301
+
+# Os 14 pensadores deixaram de ser skills e viraram referências da skill lentes.
+# A âncora leva ao título da lente na página da skill.
+/skills/bruce-greenwald /skills/lentes/#ref-bruce-greenwald 301
+/skills/bruce-greenwald/ /skills/lentes/#ref-bruce-greenwald 301
+/skills/ck-prahalad /skills/lentes/#ref-ck-prahalad 301
+/skills/ck-prahalad/ /skills/lentes/#ref-ck-prahalad 301
+/skills/clayton-christensen /skills/lentes/#ref-clayton-christensen 301
+/skills/clayton-christensen/ /skills/lentes/#ref-clayton-christensen 301
+/skills/dario-amodei /skills/lentes/#ref-dario-amodei 301
+/skills/dario-amodei/ /skills/lentes/#ref-dario-amodei 301
+/skills/elon-musk /skills/lentes/#ref-elon-musk 301
+/skills/elon-musk/ /skills/lentes/#ref-elon-musk 301
+/skills/jack-welch /skills/lentes/#ref-jack-welch 301
+/skills/jack-welch/ /skills/lentes/#ref-jack-welch 301
+/skills/jim-collins /skills/lentes/#ref-jim-collins 301
+/skills/jim-collins/ /skills/lentes/#ref-jim-collins 301
+/skills/michael-porter /skills/lentes/#ref-michael-porter 301
+/skills/michael-porter/ /skills/lentes/#ref-michael-porter 301
+/skills/philip-kotler /skills/lentes/#ref-philip-kotler 301
+/skills/philip-kotler/ /skills/lentes/#ref-philip-kotler 301
+/skills/ram-charan /skills/lentes/#ref-ram-charan 301
+/skills/ram-charan/ /skills/lentes/#ref-ram-charan 301
+/skills/rita-mcgrath /skills/lentes/#ref-rita-mcgrath 301
+/skills/rita-mcgrath/ /skills/lentes/#ref-rita-mcgrath 301
+/skills/sangeet-choudary /skills/lentes/#ref-sangeet-choudary 301
+/skills/sangeet-choudary/ /skills/lentes/#ref-sangeet-choudary 301
+/skills/tim-koller /skills/lentes/#ref-tim-koller 301
+/skills/tim-koller/ /skills/lentes/#ref-tim-koller 301
+/skills/tom-peters /skills/lentes/#ref-tom-peters 301
+/skills/tom-peters/ /skills/lentes/#ref-tom-peters 301

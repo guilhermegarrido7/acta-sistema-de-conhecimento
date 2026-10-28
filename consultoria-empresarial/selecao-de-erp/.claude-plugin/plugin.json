@@ -4,5 +4,8 @@
   "description": "Seleção de ERP: levantamento de requisitos, matriz de aderência, RFP, avaliação de fornecedores e business case de implantação.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way"
+  ]
 }

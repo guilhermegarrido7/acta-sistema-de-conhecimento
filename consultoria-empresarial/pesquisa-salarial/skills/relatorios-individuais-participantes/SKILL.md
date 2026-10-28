@@ -1,6 +1,6 @@
 ---
 name: relatorios-individuais-participantes
-description: Produza e distribua o relatório de contrapartida de cada empresa participante. Acionar ao estruturar o relatório individual, ao aplicar as regras de supressão específicas do artefato, ao rodar o piloto antes da distribuição, ou ao gerar o lote final.
+description: Produza e distribua o relatório individual de contrapartida a cada empresa participante. Acionar ao estruturar o relatório, ao aplicar a supressão que desconta o destinatário, ao conferir o relatório-piloto, ou ao gerar o lote.
 ---
 
 # Relatórios individuais dos participantes

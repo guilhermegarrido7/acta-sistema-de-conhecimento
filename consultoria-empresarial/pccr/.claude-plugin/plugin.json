@@ -4,5 +4,8 @@
   "description": "Construção de PCCR: descrição e avaliação de cargos, arquitetura de carreira, tabela salarial, enquadramento e política de remuneração.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way"
+  ]
 }

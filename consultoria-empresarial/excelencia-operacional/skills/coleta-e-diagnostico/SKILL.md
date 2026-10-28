@@ -5,10 +5,11 @@ description: Levante os insumos do ciclo com o checklist de oito blocos e as ent
 
 # Coleta e diagnóstico
 
-Carregue `acta-way` antes desta skill: ambiente técnico, anonimização e o protocolo de checkpoint
-valem aqui integralmente e **não** são repetidos. O método de prática (condução de entrevista,
-diagnóstico, gestão de escopo) virá de `acta-metodo-consultoria`; enquanto esse plugin for esqueleto,
-o que esta skill assume dele está dito aqui.
+Carregue `acta-way:checkpoint` antes desta skill; `acta-way:anonimizacao-e-lgpd` e
+`acta-way:ambiente-tecnico` quando for tratar dado pessoal ou rodar script. Valem aqui integralmente
+e **não** são repetidos. O método de prática (condução de entrevista, diagnóstico, gestão de escopo)
+está em `acta-metodo-consultoria`, que este plugin não exige instalado: o que esta skill assume dele
+está dito aqui.
 
 Classifique o ciclo com `taxonomia-de-processos` antes de coletar: a coluna "processo(s) impactado(s)"
 do checklist só existe se a matriz de subprocessos já existir.

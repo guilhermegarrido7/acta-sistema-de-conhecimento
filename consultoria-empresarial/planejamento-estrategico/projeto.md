@@ -82,7 +82,7 @@ iniciativa, que recebem meta e orçamento no WS4 e respondem pela execução na 
 
 **Do nosso lado:** um consultor responsável pela condução, pelo diagnóstico e pelo material que entra
 em cada workshop, com o sócio responsável facilitando as sessões de decisão. O julgamento estratégico
-(posicionamento, durabilidade de vantagem) é carregado de `acta-pensadores-de-negocios` no ponto em que
+(posicionamento, durabilidade de vantagem) é carregado de `acta-pensadores-de-negocios:lentes` no ponto em que
 a pergunta deixa de ser de método.
 
 ## O que é preciso ter antes de começar

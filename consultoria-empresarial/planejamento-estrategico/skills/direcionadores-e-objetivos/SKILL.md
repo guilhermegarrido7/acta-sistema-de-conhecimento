@@ -18,7 +18,7 @@ planejamento estratégico.
 
 O **julgamento** por trás de um objetivo (se este posicionamento se sustenta, se a vantagem que ele
 pressupõe dura, se o objetivo de crescimento é compatível com a estrutura do setor) **não se resolve
-aqui**. Carregue `acta-pensadores-de-negocios`, skill `lentes`. Esta skill entrega a estrutura em que
+aqui**. Carregue `acta-pensadores-de-negocios:lentes`. Esta skill entrega a estrutura em que
 a decisão é registrada; a decisão em si é da liderança, informada pela lente.
 
 A mecânica da sala está em `workshops-de-planejamento`.
@@ -159,7 +159,7 @@ ele circula pela empresa inteira.
 
 | Pergunta | Onde se resolve |
 |---|---|
-| Se a vantagem pressuposta dura, que lente aplicar ao posicionamento | `acta-pensadores-de-negocios`, skill `lentes` |
+| Se a vantagem pressuposta dura, que lente aplicar ao posicionamento | `acta-pensadores-de-negocios:lentes` |
 | SWOT, cenários e vetores que alimentam o mapa | `analise-de-ambientes` |
 | Visão e propósito, que o mapa precisa realizar | `proposito-visao-e-valores` |
 | Indicador, meta, dono, iniciativa e orçamento | `desdobramento-e-metas` |

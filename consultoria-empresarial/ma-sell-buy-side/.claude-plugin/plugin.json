@@ -1,8 +1,11 @@
 {
   "name": "acta-ma-sell-buy-side",
-  "version": "1.0.0",
-  "description": "Assessoria em fusões e aquisições sell side e buy side: teaser, CIM, mapeamento de mercado, due diligence financeira e negociação.",
+  "version": "1.1.0",
+  "description": "Assessoria em fusões e aquisições sell side e buy side, do estudo setorial ao closing: teaser, information memorandum, processo competitivo e propostas, due diligence e data room, negociação, SPA, fechamento e suporte ao PPA.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way"
+  ]
 }

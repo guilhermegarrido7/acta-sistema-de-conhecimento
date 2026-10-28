@@ -150,6 +150,42 @@ Três pontos que costumam ser mal negociados e custam dinheiro:
 - **Quem prepara o balanço de fechamento e como se resolve divergência.** Defina o mecanismo antes,
   não depois.
 
+### Dividendos antes do fechamento: a Lei 15.270/2025
+
+A Lei 15.270/2025 foi publicada no DOU de 27/11/2025 e produz efeitos a partir de 01/01/2026
+(art. 8º). Os pontos que pesam numa venda:
+
+| Ponto | Regra | Fonte |
+|---|---|---|
+| Retenção mensal | 10% de imposto de renda na fonte sobre o total do valor pago, e não só sobre o excedente, quando os lucros e dividendos pagos, creditados, empregados ou entregues por uma mesma pessoa jurídica à mesma pessoa física residente no Brasil passam de R$ 50 mil no mês. Com mais de um pagamento no mês, a retenção é recalculada sobre o total do mês | Lei 9.250/1995, art. 6º-A, caput e § 2º |
+| Tributação mínima anual das altas rendas (IRPFM) | Criada pela mesma lei. Na apuração anual, deduz-se o valor retido na fonte | Lei 9.250/1995, art. 16-A, § 5º |
+| Transição | Ficam fora da retenção os lucros de resultados apurados até 2025, com distribuição aprovada até 31/12/2025, exigíveis pela legislação civil ou empresarial e pagos nos termos originalmente previstos no ato de aprovação. Para ficar fora da base do IRPFM, exige-se também pagamento em 2026, 2027 ou 2028 | Lei 9.250/1995, art. 6º-A, § 3º, e art. 16-A, § 1º, XII |
+| Redutor do IRPFM | Concedido quando a carga combinada da empresa e do sócio passa das alíquotas nominais de IRPJ e CSLL. Entra na comparação das rotas pelo líquido | Lei 9.250/1995, art. 16-B |
+| Sócio no exterior | Retenção de 10% sobre os dividendos remetidos, com pedido de crédito pelo art. 10-A. Pesa quando o vendedor ou o comprador é estrangeiro | Lei 9.249/1995, art. 10, § 4º, na redação da Lei 15.270/2025, e art. 10-A |
+
+**Contencioso (verificar estado).** No STF, liminar de 26/12/2025 nas ADIs 7.912 e 7.914 prorrogou
+o prazo de aprovação para 31/01/2026; o referendo foi interrompido por pedido de destaque em
+18/02/2026, sem data de retomada. A ADI 7.917 trata dos optantes do Simples Nacional. No TRF4,
+decisão de 05/08/2026 no agravo de instrumento 5026333-41.2026.4.04.0000 limitou a retenção sobre
+pagamentos mensais entre R$ 50 mil e R$ 100 mil, só entre as partes, com mérito pendente na Turma.
+
+O que muda na negociação:
+
+- **Dividendo pré-fechamento ou preço.** Distribuir o lucro acumulado antes do fechamento e
+  recebê-lo dentro do preço são rotas com tributação diferente para o vendedor pessoa física. A
+  escolha muda a base da proposta (o caixa que fica entra no equity value pelo CFDF) e tem de estar
+  feita antes da data-base. Compare as rotas pelo **líquido do vendedor**, não pelo headline; conta
+  e parecer são da assessoria tributária, e a ACTA fornece os cenários de preço e de caixa.
+- **Leakage em locked box.** Dividendo pago depois da data do locked box é leakage, salvo se listado
+  como permitido, com valor e data (ver `spa-signing-e-closing`).
+- **Distribuição aprovada e ainda não paga**, para aproveitar a transição, é obrigação da sociedade
+  com os sócios: entra na ponte CFDF como item assemelhado a dívida. Retenção não feita em
+  distribuição de 2026 é contingência da sociedade pagadora, a levantar na frente fiscal de
+  `due-diligence-e-data-room`.
+
+Detalhe normativo em `acta-modelagem-economico-financeira:impostos-e-prejuizos-fiscais`, reference
+`transicao-tributaria-2026-2033.md`, seção 3, se estiver instalado.
+
 ### As formas de pagamento, e o risco que cada uma aloca
 
 | Forma | Quem carrega o risco | Nota |
@@ -256,3 +292,9 @@ enviesada não renegocia. Ele sai, e conta aos outros.
 
 > Instrumento jurídico é competência de advogado. Esta skill prepara a posição econômica; a minuta e
 > o parecer são da assessoria jurídica do mandato.
+
+## Próximo passo
+
+`processo-competitivo-e-propostas`, que corre intercalada com esta skill e organiza as rodadas de
+proposta; `due-diligence-e-data-room`, quando a fase 2 abre à shortlist; e `spa-signing-e-closing`,
+que leva a posição econômica ao contrato e ao fechamento.

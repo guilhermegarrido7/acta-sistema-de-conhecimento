@@ -101,21 +101,41 @@ O spread não é perpétuo. Concorrência, entrada de novos players e reversão 
 excepcional. **A sustentabilidade do retorno determina a duração da criação de valor**, e essa
 duração vale tanto quanto o nível do retorno.
 
-O que sustenta um CAP longo, em ordem de robustez:
+O que sustenta um CAP longo são as fontes de vantagem competitiva de Koller, Goedhart e Wessels
+(*Valuation*, McKinsey; 8ª ed., Wiley, 2025, e 7ª ed., 2020), em duas famílias, mais o efeito de
+rede, implícito:
 
-1. **Ativo escasso ou regulatório**: licença ambiental de operação, concessão, outorga, direito
-   minerário, imóvel em localização única. O mais defensável, porque é verificável em documento.
-2. **Custo de troca e contrato de longo prazo**: contrato com vigência e cláusula de reajuste,
-   integração operacional com o cliente.
-3. **Escala local com custo de transporte relevante**: o clássico do setor de resíduos, agregados,
-   distribuição regional. Barreira geográfica real.
-4. **Rede e efeito de densidade**: mais pontos tornam cada ponto melhor.
-5. **Marca e reputação**: real, mas mais difícil de provar em B2B mid-market.
-6. **Vantagem de custo por processo ou tecnologia própria**: mais frágil, imitável.
+| Família | Fonte | Evidência documental que sustenta o CAP |
+|---|---|---|
+| Prêmio de preço | Produto inovador | Patente, registro ou tecnologia difícil de copiar, com a receita que depende dela |
+| | Qualidade | Prêmio de preço observável, por diferença real ou percebida, em série de preços contra concorrentes |
+| | Marca | Prêmio de preço sustentado sem diferença clara de qualidade; difícil de provar em B2B mid-market |
+| | Lock-in do cliente | Custo de troca e contrato longo: vigência, cláusula de reajuste, multa rescisória, integração operacional, homologação |
+| | Disciplina racional de preço | Piso de preço mantido pelos líderes do setor ao longo de ciclos, visível na série de preço e margem |
+| Custo e eficiência de capital | Método de negócio inovador | Modelo operacional que o concorrente não replicou, com o custo unitário que o comprova |
+| | Recursos exclusivos (*unique resources*) | Característica geológica, acesso exclusivo a insumo ou localização sem substituto próximo, com título ou contrato |
+| | Economia de escala | Escala eficiente no mercado relevante, inclusive o local: custo de transporte que limita o raio do concorrente (resíduos, agregados, distribuição regional) |
+| | Produto ou processo escalável | Cliente ou capacidade adicionados a custo marginal desprezível, visível na margem incremental |
+| Implícita | Efeito de rede | Valor para cada cliente que cresce com o número de clientes ou de pontos atendidos |
+
+**A robustez é a da evidência documental.** A fonte vale tantos anos de CAP quanto o documento que a
+prova: contrato com vigência, título do recurso, série de preço, custo unitário. Em mid-market,
+lock-in contratual, recurso exclusivo e escala local costumam ser os mais verificáveis; marca e
+vantagem de custo por processo próprio, os mais difíceis de provar e os mais imitáveis.
+
+**Tailwinds regulatórios.** Licença ambiental de operação, concessão, outorga e direito minerário
+não são fonte de vantagem competitiva nessa régua. São tailwinds regulatórios: verificáveis em
+documento, podem alongar o CAP enquanto a regra vigorar, mas carregam risco regulatório (renovação,
+revisão de condicionante, nova outorga a concorrente, mudança da norma). Declare-os em parágrafo
+próprio da tese, com a norma, o prazo e o risco, sem somá-los às fontes da tabela. Quando a licença é
+o meio de uma fonte, como a unidade licenciada perto da demanda que dá escala eficiente no mercado
+local, classifique pela fonte e cite a norma como contexto. É a mesma régua do `teaser`, Bloco 7,
+no plugin de M&A.
 
 O que **não** sustenta CAP, apesar de ser frequentemente apresentado como se sustentasse: "equipe
-experiente", "atendimento diferenciado", "qualidade superior", "relacionamento com clientes". São
-atributos, não barreiras. Se o concorrente pode contratar ou copiar em 12 meses, não é CAP.
+experiente", "atendimento diferenciado", "qualidade superior" sem prêmio de preço demonstrado,
+"relacionamento com clientes" sem custo de troca. São atributos, não barreiras. Se o concorrente
+pode contratar ou copiar em 12 meses, não é CAP.
 
 **Implicação prática:** o CAP define quantos anos o modelo pode manter ROIC acima do WACC antes de
 convergir. Um CAP de 5 a 10 anos é defensável com barreira documentada; perpetuidade com spread
@@ -165,7 +185,8 @@ que o leitor não entende não convence.
 2. A decomposição margem × giro, com a leitura do perfil de negócio.
 3. Lucro econômico em reais.
 4. O posicionamento contra comparáveis, com a amostra declarada.
-5. A tese de CAP: qual barreira, por quantos anos, com que evidência documental.
+5. A tese de CAP: qual fonte de vantagem, por quantos anos, com que evidência documental, e os
+   tailwinds regulatórios declarados à parte, com o risco de cada um.
 6. O resultado do teste de plausibilidade: as seis causas checadas, com veredito.
 
 ## Próximo passo

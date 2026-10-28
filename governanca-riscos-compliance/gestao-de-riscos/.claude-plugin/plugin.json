@@ -4,5 +4,8 @@
   "description": "Implantação de gestão de riscos: o Dicionário de Riscos da ACTA com 52 categorias, apetite e tolerância, escalas de impacto e probabilidade, matriz e mapa de calor, planos de resposta e KRI.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way"
+  ]
 }

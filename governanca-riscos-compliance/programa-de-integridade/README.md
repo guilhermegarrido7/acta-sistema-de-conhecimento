@@ -5,9 +5,9 @@ código de conduta que decide caso concreto, canal de denúncias com independên
 diligence de terceiros com dossiê de evidência, treinamento segmentado por exposição e o teste que
 apura se o programa funciona na prática.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
-> **Segundo pré-requisito: `acta-gestao-de-riscos`.** O **Dicionário de Riscos da ACTA** (quatro
+> **Segundo pré-requisito: `acta-gestao-de-riscos`**, também declarado como dependência. O **Dicionário de Riscos da ACTA** (quatro
 > componentes, oito grupos, 52 categorias numeradas) e a escala de avaliação com o nível Limitação
 > de Escopo vivem lá, e **não são repetidos aqui**. A skill `due-diligence-de-terceiros` classifica
 > no dicionário de lá e referencia a skill de lá; ela não cria taxonomia nem escala própria.
@@ -38,7 +38,7 @@ linha do tempo societária que revela interposição de pessoa.
 
 | Skill | Etapa | Descrição |
 |---|---|---|
-| `pilares-do-programa` | Entrada e diagnóstico | Os dez pilares com o entregável que comprova cada um, a régua de maturidade em quatro níveis aplicada pilar a pilar, as cinco evidências que provam comprometimento da alta direção e a sequência de implantação com as três dependências que não se invertem. |
+| `pilares-do-programa` | Entrada e diagnóstico | Os doze pilares com o entregável que comprova cada um e o inciso do Decreto 11.129/2022 que cada um cobre, a régua de maturidade em quatro níveis aplicada pilar a pilar, as cinco evidências que provam comprometimento da alta direção, a sequência de implantação com as três dependências que não se invertem e o programa como condição de contrato público (Lei 14.133/2021). |
 | `codigo-de-conduta` | Regra | A régua de decidibilidade que separa princípio de regra aplicável, os dez temas obrigatórios, a cláusula de integridade para contrato de terceiro, o termo de ciência conferido em 100% dos admitidos e o teste de consistência disciplinar por nível hierárquico. |
 | `canal-de-denuncias` | Reporte | As três camadas de independência e como testá-las, a diferença entre anonimato e confidencialidade com o protocolo de retorno, os quatro marcos de prazo, o desvio obrigatório quando o denunciado está no fluxo e o monitoramento de não retaliação. |
 | `due-diligence-de-terceiros` | Terceiros | Os dois modos do trabalho, a profundidade por criticidade, a classificação no dicionário de `acta-gestao-de-riscos`, o dossiê de evidência com captura de fonte sem ocorrência, o teste de linha do tempo societária e os quatro gates antes de entregar. |

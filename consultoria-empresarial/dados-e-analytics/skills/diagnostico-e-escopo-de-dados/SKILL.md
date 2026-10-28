@@ -5,9 +5,9 @@ description: Fixe a pergunta de negócio e o escopo de um projeto de dados antes
 
 # Diagnóstico e escopo de dados
 
-Carregue `acta-metodo-consultoria` antes desta skill: a hierarquia de autoridade entre fontes, a
-reconstrução de base a partir do dado bruto e a planilha-mestre com rastreabilidade valem aqui e não
-são repetidas. Um projeto de analytics é um projeto de consultoria cujo insumo é dado.
+Carregue antes desta skill `acta-metodo-consultoria:diagnostico-e-entrevistas` (a hierarquia de
+autoridade entre fontes) e `acta-metodo-consultoria:mapeamento-as-is` (a reconstrução de base a partir
+do dado bruto e a planilha-mestre com rastreabilidade): valem aqui e não são repetidas. Um projeto de analytics é um projeto de consultoria cujo insumo é dado.
 
 Esta é a skill de entrada. O erro que mata um projeto de dados não é técnico, é de escopo: começar
 pelo que o dado permite fazer em vez de pela decisão que o cliente precisa tomar. A ordem da casa é a

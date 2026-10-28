@@ -5,7 +5,7 @@ description: Confirme com o próprio respondente que a coleta registrada na base
 
 # Recontato do respondente
 
-Carregue antes: `acta-way` e `acta-metodo-auditoria`.
+Carregue antes: `acta-way:checkpoint` e `acta-metodo-auditoria:metodo-auditoria`.
 
 ## 1. O que este teste prova, e o que não prova
 

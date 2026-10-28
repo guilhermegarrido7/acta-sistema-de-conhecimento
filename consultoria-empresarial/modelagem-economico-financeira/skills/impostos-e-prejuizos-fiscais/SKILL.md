@@ -1,6 +1,6 @@
 ---
 name: impostos-e-prejuizos-fiscais
-description: Direcionar o tratamento tributário no modelo, com regime de apuração, alíquota efetiva, imposto corrente e diferido, e o aproveitamento de prejuízo fiscal com o limite de 30%. Acionar ao definir a alíquota do modelo, ao encontrar prejuízo fiscal acumulado, ou ao conferir a linha de impostos.
+description: Direcionar o tratamento tributário no modelo: regime de apuração, alíquota efetiva, imposto corrente e diferido, prejuízo fiscal com a trava de 30%. Acionar ao definir a alíquota do modelo, ao encontrar prejuízo fiscal acumulado, ao projetar a transição do IBS e da CBS, ou ao conferir a linha de impostos.
 ---
 
 # Impostos e prejuízos fiscais: onde o mid-market brasileiro mais erra
@@ -162,6 +162,38 @@ giro:
 - **Depósito judicial**: ativo não operacional. Se a discussão for ganha, é caixa; se perdida,
   quita o passivo. Trate junto com a contingência correspondente, não isolado.
 
+## Transição tributária 2026–2033
+
+Calendário, fontes, perguntas ao cliente e roteiro de diligência estão na reference
+`transicao-tributaria-2026-2033.md` (posição em out/2026).
+
+**Regra de modelagem:** projete os tributos sobre a receita ano a ano pelo calendário legal e ponha
+o ano terminal no regime de 2033 (IBS e CBS plenos; ICMS, ISS, PIS e Cofins extintos; nenhum
+benefício de ICMS), mesmo que o horizonte explícito termine antes. Carga de hoje mantida até a
+perpetuidade é erro.
+
+- **2026** é teste (CBS 0,9%, IBS 0,1%), sem efeito econômico para quem cumpre as obrigações
+  acessórias; PIS e Cofins seguem integrais (LC 214/2025, art. 348).
+- **2027**: a CBS substitui PIS e Cofins, o IPI vai a zero salvo Zona Franca e o Imposto Seletivo
+  começa (ADCT, art. 126). A alíquota de referência da CBS não estava fixada em 26/10/2026, e o
+  Senado tem até 15/12/2026: até lá, use faixa com fonte e data, nunca um número "oficial" que não
+  existe.
+- **2029–2032**: ICMS e ISS caem a 9/10, 8/10, 7/10 e 6/10 da alíquota, os benefícios de ICMS caem
+  junto, e o IBS sobe para repor (ADCT, art. 128).
+- O valor se move pelo **repasse** ao preço, pelo **crédito amplo** sobre as compras e pelo
+  **capital de giro** (split payment, crédito condicionado à extinção do débito do fornecedor,
+  saldo credor de ICMS compensável em 240 parcelas). Modele os três em cenário, com o preço líquido
+  de tributos como driver.
+- **Lei 15.270/2025** (retenção de 10% sobre dividendos acima de R$ 50 mil por mês e tributação
+  mínima anual): não muda FCFF nem EV, muda o líquido do acionista. Dividendo aprovado e não pago
+  entra na ponte como item assemelhado a dívida (ver `triangulacao-e-faixa`).
+- **LC 224/2025**: acréscimo de 10% nos percentuais de presunção sobre a receita que exceder
+  R$ 5 milhões no ano, e corte de 10% nos benefícios federais. Refaça a alíquota efetiva e a
+  comparação presumido × real do passo 1.
+- **STF, Tema 1.401**: constitucionalidade da trava de 30% na extinção da pessoa jurídica, com
+  mérito pendente. Compensação integral na incorporação entra como cenário, não como caso base
+  (passo 3).
+
 ## Red flags fiscais
 
 - Alíquota efetiva histórica muito abaixo de 34% no lucro real, sem explicação no LALUR.
@@ -174,6 +206,7 @@ giro:
 - Certidão negativa de débitos ausente ou vencida no data room.
 - Distribuição de lucro superior ao lucro contábil acumulado, o que pode gerar tributação.
 - Empresas do grupo com transações intercompany a preços não de mercado: risco de glosa.
+- PIS/Cofins projetados depois de 2026, ICMS depois de 2032, ou benefício de ICMS no valor terminal.
 
 ## O que entregar
 
@@ -185,6 +218,8 @@ giro:
 4. A separação corrente vs. diferido, e a confirmação de que o fluxo usa o corrente.
 5. A lista de passivos e contingências tributárias, classificados entre dívida, negociação e ruído.
 6. Os red flags, com o que cada um exige de documento.
+7. O calendário da transição tributária aplicado ao modelo, ano a ano, com a fonte e a data da
+   alíquota de referência usada.
 
 ## Próximo passo
 

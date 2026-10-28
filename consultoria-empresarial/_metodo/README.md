@@ -5,7 +5,7 @@ reconstrói da fonte bruta, como o patamar-alvo se sustenta, como o gap vira pla
 número se defende. Não é um projeto: é o método que todos os projetos de consultoria da firma
 carregam.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
 > **Status: completo.** As 6 skills do ciclo estão escritas.
 > Ver [docs/ROADMAP.md](../../docs/ROADMAP.md).

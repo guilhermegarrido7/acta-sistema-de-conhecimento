@@ -1,12 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
+import CartaoPlugin from '../components/CartaoPlugin.astro';
 import { catalogo } from '../lib/catalogo.js';
 const { plugins, categorias } = catalogo();
 
-const totalSkills = plugins.reduce((t, p) => t + p.skills.length, 0);
-const deProjeto = plugins.filter(
-  (p) => p.categoria === 'consultoria-empresarial' || p.categoria === 'governanca-riscos-compliance'
-);
+// Os números saem do catálogo. Tipo de projeto exclui a fundação (acta-way), a biblioteca de
+// pensadores e os métodos transversais (_metodo): eles vêm junto, mas não são engajamento.
+const tiposDeProjeto = plugins.filter((p) => p.ehTipoDeProjeto).length;
+const etapasEscritas = plugins.reduce((t, p) => t + p.skills.filter((s) => !s.esqueleto).length, 0);
+const areas = categorias.filter((c) => c.plugins.some((p) => p.ehTipoDeProjeto)).length;
 ---
 
 <Base
@@ -30,6 +32,23 @@ const deProjeto = plugins.filter(
   </section>
 
   <div class="envelope conteudo">
+    <section class="secao" id="catalogo">
+      <span class="sobrescrito">Catálogo</span>
+      <h2>Escolha pelo projeto, não pela ferramenta</h2>
+      <p class="abertura">
+        Você não precisa decidir qual peça instalar: decide qual projeto está conduzindo. No Claude
+        Code, o plugin do projeto traz junto os plugins que ele requer.
+      </p>
+      {categorias.map((c) => (
+        <div class="grupo">
+          <h3>{c.rotulo}</h3>
+          <div class="grade">
+            {c.plugins.map((p) => <CartaoPlugin p={p} nivel={4} />)}
+          </div>
+        </div>
+      ))}
+    </section>
+
     <section class="secao">
       <span class="sobrescrito">Como funciona</span>
       <h2>Quatro passos, e o segundo em diante acontece sozinho</h2>
@@ -178,36 +197,12 @@ const deProjeto = plugins.filter(
     </section>
 
     <section class="secao">
-      <span class="sobrescrito">Por onde começar</span>
-      <h2>Escolha pelo projeto, não pela ferramenta</h2>
-      <p class="abertura" style="margin-bottom:1.75rem">
-        Você não precisa decidir qual peça instalar: decide qual projeto está conduzindo, e a peça
-        certa vem junto.
-      </p>
-      <div class="grade">
-        {deProjeto.map((p) => (
-          <article class="cartao">
-            <h3><a href={`/projetos/${p.slug}`}>{p.titulo}</a></h3>
-            <p>{p.descricao}</p>
-            <div class="pe">
-              <span class={`etiqueta ${p.status.toLowerCase()}`}>{p.status}</span>
-              <span>{p.skills.length} skills</span>
-            </div>
-          </article>
-        ))}
-      </div>
-      <p style="margin-top:1.4rem">
-        <a href="/projetos" class="botao botao--linha">Ver todos os tipos de projeto</a>
-      </p>
-    </section>
-
-    <section class="secao">
       <span class="sobrescrito">Números</span>
       <h2>O que já está pronto</h2>
       <div class="numeros" style="margin-top:1.5rem">
-        <div><b>{plugins.length}</b><span>tipos de projeto cobertos</span></div>
-        <div><b>{totalSkills}</b><span>etapas de método escritas</span></div>
-        <div><b>{categorias.length}</b><span>áreas da firma</span></div>
+        <div><b>{tiposDeProjeto}</b><span>tipos de projeto cobertos</span></div>
+        <div><b>{etapasEscritas}</b><span>etapas de método escritas</span></div>
+        <div><b>{areas}</b><span>áreas da firma</span></div>
       </div>
     </section>
   </div>

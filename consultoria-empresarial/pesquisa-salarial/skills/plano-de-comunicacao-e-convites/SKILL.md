@@ -1,6 +1,6 @@
 ---
 name: plano-de-comunicacao-e-convites
-description: Conduza a comunicação com as empresas participantes, do convite à confirmação. Acionar ao definir identidade da pesquisa e contrapartida, ao redigir carta-convite e FAQ, ao operar cadência de follow-up, ou ao substituir participante que declinou.
+description: Conduza a comunicação com as empresas participantes até a confirmação. Acionar ao definir identidade da pesquisa e contrapartida, ao redigir carta-convite e FAQ, ao fazer follow-up do convite, ou ao substituir quem declinou.
 ---
 
 # Plano de comunicação e convites

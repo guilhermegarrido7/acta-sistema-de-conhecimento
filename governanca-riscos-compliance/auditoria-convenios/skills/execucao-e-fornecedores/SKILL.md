@@ -5,7 +5,7 @@ description: Teste o que o parceiro contratou com o recurso do convênio: estrat
 
 # Execução do convênio e análise de fornecedores
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 valem aqui integralmente e não são repetidas.
 
 Elo 5 do ciclo (`ciclo-do-convenio` §2). Blocos **CNV.06**, **CNV.07** e **CNV.08**.

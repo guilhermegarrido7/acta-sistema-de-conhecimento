@@ -5,7 +5,7 @@ description: Teste o ciclo de vida do acesso ponta a ponta, da concessão à rev
 
 # O ciclo de vida do acesso
 
-Carregue `acta-metodo-auditoria` antes desta skill. `acta-controles-internos:itgc` §2 traz a tabela
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill. `acta-controles-internos:itgc` §2 traz a tabela
 de pontos de controle de acesso e não se repete aqui: esta skill é o teste ponta a ponta de cada
 ponto, com a mecânica de população, amostra e evidência.
 

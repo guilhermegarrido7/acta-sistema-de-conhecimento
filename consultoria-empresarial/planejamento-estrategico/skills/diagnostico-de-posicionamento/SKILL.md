@@ -17,7 +17,7 @@ o particular do planejamento estratégico, não o genérico da consultoria.
 > `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 
 Julgamento estratégico (por que este setor rende o que rende, se a vantagem desta empresa dura,
-qual lente aplicar) **não se resolve aqui**. Carregue `acta-pensadores-de-negocios`, skill `lentes`,
+qual lente aplicar) **não se resolve aqui**. Carregue `acta-pensadores-de-negocios:lentes`,
 e deixe a roteadora escolher. Este plugin não reensina Porter, Greenwald ou McGrath.
 
 ## O que esta skill entrega
@@ -168,10 +168,10 @@ Ver `workshops-de-planejamento`.
 
 | Pergunta | Onde se resolve |
 |---|---|
-| Que lente teórica aplicar ao julgamento competitivo | `acta-pensadores-de-negocios`, skill `lentes` |
+| Que lente teórica aplicar ao julgamento competitivo | `acta-pensadores-de-negocios:lentes` |
 | Panorama setorial, concorrentes, cenários, SWOT | `analise-de-ambientes`, nesta mesma casa |
 | Mecânica de condução de workshop | `workshops-de-planejamento` |
-| Tese setorial para sustentar múltiplo em uma transação | `acta-ma-sell-buy-side`, skill `estudo-setorial` (propósito diferente, não reaproveite o formato) |
+| Tese setorial para sustentar múltiplo em uma transação | `acta-ma-sell-buy-side:estudo-setorial` (propósito diferente, não reaproveite o formato) |
 | Checkpoint, anonimização, identidade visual | `acta-way` |
 
 ## 7. O risco que o diagnóstico já precisa endereçar

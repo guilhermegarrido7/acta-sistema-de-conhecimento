@@ -4,9 +4,9 @@ Revisão de segregação de funções e de perfis de acesso: a matriz função c
 dos conflitos que decidem o resultado, o ciclo de vida do acesso da concessão à revogação, e o
 controle compensatório para o conflito que não se resolve por falta de gente.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
-> **Segundo pré-requisito: `acta-metodo-auditoria`.** As regras invioláveis, a doutrina do número
+> **Segundo pré-requisito: `acta-metodo-auditoria`**, também declarado como dependência. As regras invioláveis, a doutrina do número
 > exato, a regra R8, o papel de trabalho, o programa de testes com a régua de amostragem e a redação
 > de achados vivem lá e **não são repetidos aqui**. Cada skill manda carregá-lo antes.
 >

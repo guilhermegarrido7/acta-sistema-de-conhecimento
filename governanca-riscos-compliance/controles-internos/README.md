@@ -2,9 +2,9 @@
 
 Desenho e teste de controles internos: matriz de riscos e controles, walkthrough, teste de desenho e de efetividade, e plano de remediação.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
-> **Carregue também `acta-metodo-auditoria`.** Toda skill deste plugin manda carregá-lo antes: as regras invioláveis, a doutrina do número exato e a regra R8 vivem lá, e as skills `programa-de-testes`, `papel-de-trabalho` e `redacao-de-achados` são referenciadas o tempo todo e não são repetidas aqui.
+> **Depende também de `acta-metodo-auditoria`**, declarado no `plugin.json`. Toda skill deste plugin manda carregar `acta-metodo-auditoria:metodo-auditoria` antes: as regras invioláveis, a doutrina do número exato e a regra R8 vivem lá, e as skills `programa-de-testes`, `papel-de-trabalho` e `redacao-de-achados` são referenciadas o tempo todo e não são repetidas aqui.
 
 ## O que faz
 

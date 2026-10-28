@@ -5,7 +5,7 @@ description: Reconcilie o extrato bancário da conta do convênio contra o siste
 
 # Prestação de contas: extrato, sistema e liberação de parcela
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 valem aqui integralmente e não são repetidas. A mecânica de tratar base, casar
 valor e consumir pool está em `bases-e-conciliacao` e não se repete aqui.
 

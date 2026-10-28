@@ -1,14 +1,16 @@
 ---
 name: lentes
-description: Escolher a lente teórica adequada a uma análise e carregá-la, apresentando o que cada candidata enxerga e o que ela ignora antes de aplicar. Acionar ao pedir análise competitiva ou setorial, ao avaliar barreira de entrada, moat ou plano de crescimento, ou ao ler modelo de negócio.
+description: Escolha a lente teórica certa para a análise (Porter, Greenwald, Koller, Christensen, McGrath e outras) e aplique-a, dizendo o que cada candidata enxerga e ignora. Acionar ao pedir análise competitiva ou setorial, ao avaliar moat, barreira de entrada ou plano de crescimento, ou ao ler modelo de negócio.
 ---
 
 # Lentes: a porta de entrada da biblioteca teórica
 
 ## O que esta skill faz
 
-É a **roteadora** do plugin. Todas as skills de pensador são `user-invocable: false` e são carregadas
-a partir daqui, ou por outra skill que peça uma lente específica.
+É a **roteadora** e a única skill do plugin. As 14 lentes vivem em `references/`, um arquivo por
+pensador (`references/michael-porter.md`, `references/tim-koller.md` e assim por diante), e só entram
+no contexto quando esta skill escolhe a lente. Assim o plugin custa uma descrição em toda sessão, e
+não quinze. Os nomes entre crases nas tabelas abaixo são os nomes desses arquivos.
 
 Ela existe porque **pensador não é a unidade da pergunta.** Quando alguém pede uma análise
 competitiva de um setor, não está pedindo Porter: está pedindo análise competitiva, e Porter é uma
@@ -69,10 +71,12 @@ pergunta de método.
 
 ### 4. Carregue e aplique
 
-Carregue a skill escolhida e siga a mecânica dela. Ao aplicar, respeite duas regras:
+Leia o arquivo da lente escolhida em `references/<nome>.md` (por exemplo,
+[references/bruce-greenwald.md](references/bruce-greenwald.md)) e siga a mecânica dele. Leia só as
+lentes que vai aplicar. Ao aplicar, respeite duas regras:
 
 - **Diga qual lente está sendo usada.** A análise fica auditável e o usuário pode pedir outra.
-- **Traga a seção "o que esta lente não vê" para a conclusão.** Toda skill de pensador tem essa
+- **Traga a seção "o que esta lente não vê" para a conclusão.** Todo arquivo de lente tem essa
   seção. Uma análise que não declara o próprio ponto cego é propaganda.
 
 ## O mapa: tipo de pergunta para lente
@@ -133,7 +137,7 @@ explicação estratégica; aquele dá o número.
 
 **Ressalva sobre este bloco:** `elon-musk` e `dario-amodei` são **doutrina de operador, não
 framework analítico**: vivem em ensaio, entrevista e biografia, mudam no tempo, e os autores têm
-interesse comercial no resultado. As skills dizem isso na abertura. Não são a lente certa para a
+interesse comercial no resultado. Os arquivos dessas lentes dizem isso na abertura. Não são a lente certa para a
 maioria dos diagnósticos de empresa tradicional, e o roteador deve dizer isso quando o usuário pedir
 uma delas para uma pergunta que outra lente responde melhor.
 
@@ -147,8 +151,8 @@ As colisões mais frequentes, e o critério:
 | `bruce-greenwald` × `rita-mcgrath` | Vantagem estável vs. vantagem transitória. Se o setor está em inflexão regulatória ou tecnológica, a premissa de estabilidade de Greenwald falha. |
 | `ck-prahalad` × `bruce-greenwald` | Capacidade organizacional vs. ativo posicional. Em empresa familiar, os três testes de competência essencial de Prahalad servem para separar competência real de dependência do fundador. |
 | `clayton-christensen` × `rita-mcgrath` | Ambos tratam de ruptura. Christensen explica o mecanismo pelo qual o incumbente falha; McGrath dá a ferramenta de decisão sob incerteza. |
-| `philip-kotler` × marketing baseado em evidência | O aparato de Kotler é contestado empiricamente (Byron Sharp / Ehrenberg-Bass) em segmentação e diferenciação. A skill `philip-kotler` registra a crítica. |
-| `jim-collins` × `jack-welch` | Ambos são doutrina de praticante com base empírica frágil ou contestada, e as skills dizem isso. |
+| `philip-kotler` × marketing baseado em evidência | O aparato de Kotler é contestado empiricamente (Byron Sharp / Ehrenberg-Bass) em segmentação e diferenciação. A lente `philip-kotler` registra a crítica. |
+| `jim-collins` × `jack-welch` | Ambos são doutrina de praticante com base empírica frágil ou contestada, e os arquivos das duas lentes dizem isso. |
 | `elon-musk` × `michael-porter` | Reconstruir custo de baixo para cima vs. aceitar a estrutura do setor. Em setor regulado, "questionar todo requisito" pode significar violar norma cuja razão de existir não é arbitrária. |
 
 ## Onde as lentes servem no trabalho da casa

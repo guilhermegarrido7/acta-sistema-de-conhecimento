@@ -1,6 +1,6 @@
 ---
 name: solicitacao-de-informacoes
-description: Redigir a carta de solicitação de informações ao alvo em quatro eixos (financeiro, operacional, comercial e regulatório), e conduzir as rodadas sucessivas até o data room estar suficiente. Acionar ao abrir a coleta de dados, ao pedir informação complementar ao alvo, ou ao avaliar se o data room já sustenta o valuation.
+description: Redigir a carta de solicitação de informações ao alvo em quatro eixos (financeiro, operacional, comercial e regulatório) e conduzir as rodadas de coleta que sustentam material e valuation, antes da ida a mercado. Acionar ao abrir a coleta junto ao alvo, ao pedir informação complementar, ou ao avaliar se a base recebida já sustenta o valuation.
 ---
 
 # Solicitação de informações: a carta que determina o que será possível analisar
@@ -184,7 +184,8 @@ ou em que slide o dado entra, ele provavelmente não precisa estar na primeira r
 ## Próximo passo
 
 Com o data room aberto: `estudo-setorial` (que corre em paralelo e não depende do alvo) e o plugin de
-valuation, skill `reorganizacao-contabil`.
+valuation, skill `reorganizacao-contabil`. O data room aberto aos compradores na diligência é outra
+etapa, com outra lógica de acesso: `due-diligence-e-data-room`.
 
 # Característica importante
 

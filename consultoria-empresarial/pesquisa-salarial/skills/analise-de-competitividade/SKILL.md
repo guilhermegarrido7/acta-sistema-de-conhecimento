@@ -1,6 +1,6 @@
 ---
 name: analise-de-competitividade
-description: Analise a competitividade da remuneração do cliente contra o painel. Acionar ao calcular comparatio, gap e ajuste necessário, ao classificar posição na faixa, ao estimar custo de equalização em cenários, ou ao priorizar por criticidade versus gap.
+description: Analise a competitividade salarial do cliente contra o mercado. Acionar ao calcular comparatio, gap e ajuste necessário, ao classificar a posição na faixa, ao estimar custo de equalização, ou ao priorizar por criticidade.
 ---
 
 # Análise de competitividade

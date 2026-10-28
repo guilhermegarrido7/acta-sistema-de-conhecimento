@@ -81,6 +81,17 @@ Fora do NOPAT, sempre:
 - **Itens não recorrentes**: vão para a skill `qualidade-de-resultados`, que decide o add-back; aqui
   só se marca a linha.
 
+### DRE no CPC 51 (exercícios a partir de 2027)
+
+O CPC 51 (IFRS 18) entrega a DRE em categorias operacional, de investimento e de financiamento, com
+o lucro operacional como subtotal obrigatório (NBC TG 51, itens 47 e 69). **As categorias não
+substituem a separação desta etapa.** A operacional é residual (item 52): recebe tudo o que não coube
+nas outras e, por isso, carrega itens que a reorganização trata à parte, como não recorrentes,
+resultado na venda de imobilizado, impairment e amortização de intangível adquirido. Parta do lucro
+operacional, refaça a classificação conta a conta e registre a ponte entre o subtotal do CPC 51 e o
+NOPAT na lista de decisões de classificação. Alcance, vigência e fontes: `fundamentos-koller`,
+reference `contexto_brasil_cpc.md`, seção 5.
+
 ### Impostos operacionais ajustados
 
 O imposto que a operação pagaria se não tivesse dívida nem itens não operacionais:

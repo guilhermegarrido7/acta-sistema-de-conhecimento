@@ -156,7 +156,9 @@ cenário base: entra como cenário separado ou como upside declarado fora do val
   veículo e benfeitoria têm vidas muito diferentes, e a mistura distorce EBIT e NOPAT.
 - **Convenção de meio-ano** no CapEx novo: ativo adquirido ao longo do ano deprecia meio ano. Sem
   isso, o primeiro ano de um investimento grande fica sobre-depreciado.
-- Depreciação fiscal ≠ depreciação contábil. A diferença gera imposto diferido; ver
+- Depreciação fiscal ≠ depreciação contábil. A fiscal parte das taxas do Anexo III da IN RFB
+  1.700/2017 (art. 124, § 1º); a contábil, da vida útil estimada e revisada ao menos ao fim de cada
+  exercício (CPC 27, item 51). A diferença gera imposto diferido (CPC 32); ver
   `impostos-e-prejuizos-fiscais`.
 - **Em regime estacionário, CapEx ≈ depreciação.** Se o valor terminal do modelo tem CapEx muito
   abaixo da depreciação, ele está liquidando a base de ativos na perpetuidade, o que gera fluxo

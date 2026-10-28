@@ -30,20 +30,28 @@ orçamento que promete crescimento sem comprar o meio de produzi-lo.
 ## 2. A tabela de depreciação por classe
 
 Cada item de CapEx pertence a uma classe de ativo, e a classe define a vida útil e a taxa. Monte a
-tabela de depreciação uma vez e referencie:
+tabela de depreciação uma vez e referencie. O ponto de partida é a referência fiscal da Receita
+Federal (IN RFB 1.700/2017, Anexo III):
 
-| Classe | Vida útil típica | Taxa anual |
+| Classe (referência NCM do Anexo III) | Vida útil (anos) | Taxa anual |
 |---|---|---|
-| Edifícios e benfeitorias | 25 anos | 4% |
-| Máquinas e equipamentos | 10 anos | 10% |
-| Instalações | 10 anos | 10% |
-| Móveis e utensílios | 10 anos | 10% |
-| Veículos (leves e pesados) | 5 anos | 20% |
-| Computadores e periféricos | 5 anos | 20% |
+| Edificações | 25 | 4% |
+| Instalações | 10 | 10% |
+| Máquinas e equipamentos (maior parte do Capítulo 84; há exceções, como a posição 8474, com 5 anos e 20%) | 10 | 10% |
+| Móveis para escritório (9403) | 10 | 10% |
+| Automóveis de passageiros (8703) | 5 | 20% |
+| Veículos de carga (8704) | 4 | 25% |
+| Tratores, veículos para 10 pessoas ou mais e veículos para usos especiais (8701, 8702, 8705) | 4 | 25% |
+| Computadores e periféricos (8471) | 5 | 20% |
 
-> As taxas acima são **convenção contábil usual** (alinhada ao CPC 27 / vida útil econômica),
-> exemplo de ponto de partida — não padrão obrigatório. A vida útil a usar é a que reflete o uso real
-> do ativo no cliente; divergência material entre a fiscal e a econômica é decisão a declarar.
+> **A tabela é fiscal, não do CPC 27.** O Anexo III dá o prazo de vida útil admissível na apuração
+> do IRPJ e da CSLL, e o contribuinte pode usar taxa diferente se provar a adequação (IN RFB
+> 1.700/2017, art. 124, § 1º). Notas do anexo alteram casos específicos, como máquinas,
+> equipamentos e instalações da indústria química, com 5 anos e 20%. A **depreciação contábil**
+> segue a vida útil estimada para o uso real do ativo no cliente, revisada ao menos ao fim de cada
+> exercício (CPC 27, item 51). A diferença entre as duas gera tributo diferido (CPC 32); quando a
+> contábil é menor que a fiscal, a diferença pode ser excluída no e-Lalur e é adicionada de volta
+> depois (art. 124, §§ 4º e 5º). Decida e declare qual vida útil o orçamento usa.
 
 ```
 Depreciação mensal do item = valor do ativo ÷ (vida útil em anos × 12)
@@ -80,8 +88,8 @@ e o que é expansão (muda a leitura da diretoria), e a vida útil econômica on
 
 1. O CapEx orçado separado em manutenção e expansão, com o de expansão reconciliado contra a
    capacidade que a receita projetada exige.
-2. A tabela de depreciação por classe, com a vida útil usada e a justificativa onde divergir da
-   convenção.
+2. A tabela de depreciação por classe, com a vida útil usada e a justificativa onde a vida útil
+   contábil divergir da referência fiscal, com o efeito no tributo diferido.
 3. O cronograma de depreciação mensal, iniciando na entrada em operação de cada ativo, não na compra.
 4. Os três reflexos amarrados ao mesmo lançamento: desembolso no caixa (no mês do pagamento),
    depreciação na DRE (pela vida útil), ativo no balanço (pelo valor líquido).

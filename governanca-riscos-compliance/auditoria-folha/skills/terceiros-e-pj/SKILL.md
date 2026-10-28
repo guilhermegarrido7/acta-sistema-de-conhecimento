@@ -5,7 +5,7 @@ description: Reúna os sinais de pessoalidade, subordinação e habitualidade em
 
 # Trabalhador sem vínculo direto: PJ, cooperado, estagiário e terceiro
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 valem aqui integralmente e não são repetidas. Este plugin é de processo auditado;
 o método vive no plugin de método. O universo e a estrutura da base estão em `universo-da-folha`.
 
@@ -97,6 +97,29 @@ incompatível com o serviço prestado. Nenhuma delas conclui sozinha, e todas en
 ausente ou não verificável, com a fonte da evidência. Ordene pela contagem. A leitura é de
 concentração: prestador com um ou dois sinais isolados é ruído, e prestador que acumula pessoalidade,
 subordinação e habitualidade ao mesmo tempo é o que vai para o parecer jurídico.
+
+### Risco a acompanhar: Tema 1.389 do STF
+
+O STF reconheceu repercussão geral no ARE 1.532.603, Tema 1.389, sobre a competência e o ônus da
+prova nos processos que discutem fraude no contrato civil ou comercial de prestação de serviços, e
+sobre a licitude da contratação de pessoa jurídica ou de trabalhador autônomo para essa finalidade
+(portal do STF). Em abril de 2025, o relator suspendeu em todo o país os processos sobre o tema. Em
+junho de 2026, retirou a suspensão na primeira e na segunda instâncias da Justiça do Trabalho, que
+voltaram a instruir e julgar, e manteve o processo suspenso depois do julgamento pelo TRT até a
+fixação da tese (STF, notícia sobre a decisão). Em 26/10/2026, o mérito está pendente: a última
+movimentação no portal, de 18/10/2026, é a conclusão ao relator.
+
+Nada aqui antecipa o resultado. Três consequências para o trabalho:
+
+1. A tese pode mudar quem julga o pedido de vínculo e quem tem de provar a fraude, e com isso o peso
+   jurídico de cada sinal da matriz. A matriz continua sendo de fato observado; a leitura jurídica é
+   da assessoria jurídica.
+2. A exposição máxima da §1 sai com a ressalva de que o tema está pendente, e com a data da consulta
+   ao andamento.
+3. Reclamatória de vínculo da relação da §2 pode estar suspensa depois do julgamento no TRT. A
+   situação de cada uma se pede ao jurídico do cliente, e não se presume.
+
+Antes de emitir o relatório, consulte de novo o andamento do tema no portal do STF.
 
 ## 4. Cooperativa de mão de obra
 

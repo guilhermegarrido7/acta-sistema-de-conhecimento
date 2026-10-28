@@ -4,5 +4,9 @@
   "description": "Auditoria do ciclo de compras procure-to-pay: requisição e alçada, fracionamento, cotação e seleção, conflito de interesse, contrato e aditivo, recebimento, três vias e pagamento.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way",
+    "acta-metodo-auditoria"
+  ]
 }

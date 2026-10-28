@@ -4,5 +4,9 @@
   "description": "Auditoria do ciclo de receita e revenue assurance: contrato, medição, aceite, faturamento, reajuste, glosa, inadimplência, cancelamento, e o fechamento financeiro de evento por natureza (patrocínio, permuta, cortesia, bebidas).",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way",
+    "acta-metodo-auditoria"
+  ]
 }

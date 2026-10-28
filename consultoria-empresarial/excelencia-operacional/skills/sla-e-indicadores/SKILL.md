@@ -5,10 +5,11 @@ description: Monte o quadro de duas colunas (sugestões da consultoria × defini
 
 # SLA e indicadores
 
-Carregue `acta-way` antes desta skill: convenções de entregável, identidade visual e o protocolo de
-checkpoint valem aqui e **não** são repetidos. O método de prática (construção de painel, rituais de
-gestão, gestão de desempenho) virá de `acta-metodo-consultoria`; enquanto esse plugin for esqueleto,
-o que esta skill assume dele está dito aqui.
+Carregue `acta-way:checkpoint` antes desta skill; `acta-way:convencoes-de-entregavel` e
+`acta-way:identidade-visual` ao produzir o entregável. Valem aqui e **não** são repetidos. O método de
+prática (construção de painel, rituais de gestão, gestão de desempenho) está em
+`acta-metodo-consultoria`, que este plugin não exige instalado: o que esta skill assume dele está dito
+aqui.
 
 O posicionamento das caixas de SLA no desenho é de `fluxo-e-regras-de-negocio`; o conteúdo do que
 está escrito dentro delas é desta skill. A folha 3 do A3 e a dinâmica de sala estão em

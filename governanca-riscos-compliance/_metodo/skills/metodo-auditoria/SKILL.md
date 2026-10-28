@@ -14,20 +14,14 @@ user-invocable: false
 > `~~controle`. Se o ambiente tiver skill própria de memória, carregue-a para o protocolo completo,
 > inclusive a regra de que **divergência entre registros se pergunta, nunca se unifica por conta
 > própria**.
->
-> Já custou o verde institucional trocado por um tom errado e propagado por quatro skills, porque a
-> memória correta estava numa chave que a sessão não alcançava.
 
 Esta skill comanda as demais. Ela carrega o que vale para **todo** trabalho de auditoria da ACTA:
 as regras que não se negociam, a disciplina numérica, o modo de operar do auditor responsável e o ritual de
 aprendizado. As skills subordinadas trazem a mecânica de cada entregável, carregue-as conforme a
 tabela de roteamento no fim deste documento.
 
-Quem é o interlocutor: o **auditor responsável** pelo engajamento. O **sócio responsável** pela conta
-faz o quality review e revisa os decks. Um **revisor de WP** independente revisa os papéis de trabalho.
-O **líder de frente** encabeça as frentes organizacionais. O auditor responsável domina auditoria, responda no nível
-técnico, sem explicação básica. Trabalha em Windows com OneDrive, com os arquivos abertos, sob
-prazo, e valida abrindo o entregável e olhando.
+O interlocutor é o **auditor responsável**, que domina auditoria: responda no nível técnico, sem
+explicação básica.
 
 ---
 
@@ -62,16 +56,11 @@ controle testado continua sendo o completo, e o resultado provável é que não 
 programa de trabalho separa duas colunas: **Política** (onde está e o que diz, de forma simples) e
 **Controle** (o que se verifica de fato).
 
-> Exemplo canônico: a política manda homologar fornecedor. O controle é "verificar a existência de
-> processo de homologação, contemplando critérios, documentos exigidos, responsável, cadastro de
-> homologados e reavaliação periódica". Achado: *"A política cita a homologação, porém não existe o
-> processo."*
-
 E a ressalva que acompanha qualquer avaliação de normativo: se as políticas foram emitidas **depois**
 do período auditado, deficiência de política é de **desenho atual**, não se cobra aderência
 retroativa a norma que não existia. Declare isso.
 
----
+Detalhe: `references/exemplo-canonico-r7.md` — carregue quando precisar do exemplo canônico da R7.
 
 **R8, Nunca presuma um caminho, um arquivo ou uma base.** Esta skill não contém caminho de
 máquina nenhum: ela usa os placeholders de `CONVENCOES.md` (`~~arquivos recebidos`,
@@ -85,144 +74,43 @@ Não deduza pelo nome do arquivo, não escolha "o mais recente", não assuma a p
 
 ## 2. A doutrina do número
 
-Esta seção existe porque foi aqui que o método falhou mais. Onze números entregues ao auditor responsável
-precisaram ser retratados, e **todos tinham a mesma causa: agregar antes de validar o universo.**
-Total de fatura tratado como transação inflou um saldo em 4,6×. Parcelas da mesma compra contadas
-como 148 duplicidades. Homônimos no cadastro contando pagamento em dobro. Percentual formatado com
-zero decimais que virou conclusão sobre a ausência de regra, quando a regra existia e fechava ao
-centavo.
+Onze números retratados tinham a mesma causa: **agregar antes de validar o universo.** A ordem
+correta, sem atalho:
 
-**A ordem correta, sem atalho:**
+1. **Defina o universo antes de somar.**
+2. **Reconcilie contra um total independente.**
+3. **Casamento item a item, com tolerância declarada** (1 centavo), consumindo um pool.
+4. **Separe fenômenos que se parecem.**
+5. **Se o universo é contável, conte-o inteiro.** Nunca `~`, "cerca de", "aproximadamente".
+6. **Cheque a consistência interna antes de entregar.**
+7. **Tente refutar o seu próprio número.**
 
-1. **Defina o universo antes de somar.** Quantas linhas o arquivo tem? Quantas são transação e
-   quantas são cabeçalho, subtotal, total, rodapé de página, linha de continuação? Some só depois de
-   responder.
-2. **Reconcilie contra um total independente.** O total da fatura, o saldo do extrato, o valor
-   declarado pelo cliente. Se a sua soma não bate com um total que você não calculou, você ainda não
-   entendeu a base.
-3. **Casamento item a item, com tolerância declarada.** Ao confrontar duas bases, case valor a valor
-   consumindo um pool (cada contraparte só pode casar uma vez, senão homônimos e repetições contam em
-   dobro). Declare a tolerância, 1 centavo, e trate os quase-pares como achado próprio: diferença
-   de centavos entre fatura e sistema é prova de lançamento manual.
-4. **Separe fenômenos que se parecem.** Parcelamento não é duplicidade. Cobrança recorrente
-   automática não é gasto discricionário. Seguro operacional não é seguro do cartão. Antes de
-   classificar por palavra-chave, olhe a lista de valores distintos.
-5. **Se o universo é contável, conte-o inteiro.** Nunca escreva `~`, "cerca de", "aproximadamente"
-   para algo que dá para contar. O auditor responsável formulou a regra assim: *"entendo que você precisou olhar
-   100% delas, o valor tem de ser exato e a quantificação de todos os dados precisam ter acurácia."*
-6. **Cheque a consistência interna antes de entregar.** Se um parágrafo diz 100% e outro diz 20%, um
-   dos dois está medindo outro universo. Descubra qual antes que o revisor descubra.
-7. **Tente refutar o seu próprio número.** Pergunte: qual é a explicação inocente para isso? Se
-   existe e você não a testou, você ainda não tem achado, tem hipótese. Três dos onze erros morreram
-   no rascunho justamente porque essa pergunta foi feita.
+**Número já publicado errado:** diga o errado, o certo e a causa, propague para **todos** os
+artefatos e registre a correção no histórico do projeto.
 
-**Quando um número já publicado estiver errado**, corrija de frente: diga o número que estava errado,
-o certo, e a causa, em duas linhas. Depois propague para **todos** os artefatos, WP, deck, matriz,
-texto do ponto. Número corrigido em um lugar e velho em outro é pior que o erro original. E registre
-a correção no histórico do projeto (ver `aprendizado-e-historico`).
+Detalhe: `references/doutrina-do-numero.md` — carregue quando precisar do texto integral ou for
+corrigir número publicado.
 
 ---
 
 ## 3. Como o auditor responsável opera
 
-Estas regras vêm do comportamento observado ao longo de 347 turnos. Ignorá-las é a principal fonte de
-retrabalho.
+- **Nunca sobrescreva: sempre versão nova**, e diga qual é. **A edição manual do auditor é
+  soberana**: preserve o que ele mexeu.
+- **Os arquivos estão abertos**: em `WinError 32`, diga qual travou e espere; nunca salve com outro
+  nome sem avisar.
+- **Produzir não é publicar**: quando ele pede para ver antes, mostre no chat e espere o aval.
+- **Localize por conteúdo, não por posição.** **Estética é requisito**: renderize e olhe.
+- **Paleta: verde ACTA (`167D73`) e preto**, nada de tinta derivada do verde.
+- **Respeite o sequenciamento**, **confirme entendimento antes de tarefa grande** e **execute até o
+  fim** (item bloqueado não para os demais). **Crédito e contexto são recurso.**
+- Ação pendente do auditor vai em destaque: `> 🟡 **AÇÃO NECESSÁRIA, [o quê]**`. Datas
+  `dd/mm/aaaa`, valores `R$ 1.234,56`.
+- Em régua de casamento ou classificação, **regra nova entra DEPOIS**; o nome da contraparte não é
+  chave; completude se prova; hipótese do revisor também se testa.
 
-**Nunca sobrescreva: sempre versão nova.** v1 → v16 no mesmo relatório. *"eu sempre gosto de trabalhar
-em cópias para guardar as alterações, caso alguém apague ou faça uma besteira, dá pra voltar."*
-Se for alterar um entregável existente, crie a versão seguinte e diga qual é.
-
-**A edição manual do auditor é soberana.** O arquivo mais recente é a verdade, inclusive quando contradiz o
-que você gerou. *"Vai haver divergência entre os dois, este prevalece sempre."* Antes de reescrever
-qualquer bloco, leia o estado atual e preserve o que ele mexeu. Já aconteceu de uma alteração minha
-apagar a do auditor, *"não altere mais nada, suas alterações tavam apagando as minhas."*
-
-**Os arquivos estão abertos.** `PermissionError [WinError 32]` é estado normal, não exceção. Diga
-exatamente qual arquivo travou e espere; ele responde "fechei". Nunca contorne salvando com outro
-nome sem avisar.
-
-**Produzir não é publicar.** Existe gate: *"ainda não vai pro slide, fica só na planilha por
-enquanto"*, *"só não sobe o arquivo de matriz de riscos e controles"*. Quando ele pede para ver antes,
-mostre o resultado no chat e espere o aval.
-
-**Localize por conteúdo, não por posição.** O auditor reordena slides e renomeia abas entre turnos.
-Encontrar o slide pelo texto do título é a única forma estável.
-
-**Estética é requisito.** O auditor valida abrindo o arquivo. Texto cortado, tabela fora da margem e
-sobreposição voltam como *"está horrível"*, *"ficou pobre"*, *"faz CERTO!!!"*. Renderize e olhe antes
-de dizer que terminou. Quando houver escolha visual legítima (barra × pizza), entregue as duas e
-deixe ele apagar a que não quer, funcionou melhor que tentar acertar de primeira.
-
-**Paleta: verde ACTA e preto, e nada de tinta derivada do verde.** Regra fixada em 19/08/2026:
-*"use bastante o verde ACTA e o preto, que também é uma cor ACTA, prefiro o preto que variações do
-verde ACTA, o verde ACTA seria o único verde em qualquer coisa, salvo aquele verde que serve como
-farol."*
-
-| Uso | Cor |
-|---|---|
-| Verde ACTA, **único verde do arquivo** | `167D73`, RGB 22, 125, 115 |
-| Preto, **também cor ACTA e preferido** | `000000` |
-| Cinzas neutros (zebra / borda / destaque) | `F7F7F7` · `BFBFBF` · `E6E6E6` |
-| Cinza de subtítulo | `595959` |
-
-Onde você ia usar verde claro, use cinza neutro. Onde ia usar verde médio para dar peso, use **preto**.
-`0F5850`, `F4F8F7`, `E4EEEC` e `BFD3D0` estão **proibidas**: são tintas do verde ACTA e estavam prescritas por
-engano em `papel-de-trabalho`, de onde foram removidas. A única exceção é o verde do **semáforo**
-(`C6EFCE`/`276221`), que é farol e não decoração.
-
-**Respeite o sequenciamento que ele impõe.** Quando ele diz "só execute a atividade 1 depois de
-validar a 2", isso é ordem de execução, não sugestão.
-
-**Regra nova entra DEPOIS, e não altera regra anterior.** *"essa regra para pegar esses casos tem
-que aplicar uma nova regra que vem DEPOIS, não mudar as regras anteriores, pra não dar falso negativo"*
-(19/08/2026). Vale para qualquer régua de casamento, classificação ou conciliação. O caso que gerou:
-num mandato, um bem legítimo foi dado como inexistente porque o nome do fornecedor não batia. A FAF
-cadastra **nome fantasia** e o razão **razão social**, e `SAT` contra `SISTEMA DE AUTOMACAO E
-TECNOLOGIA` dá similaridade 0,00. A correção certa não foi baixar o limiar de similaridade, que
-mexeria em milhares de pares já casados, e sim acrescentar uma **passada terminal** que casa o que
-sobrou por documento mais valor idêntico ao centavo, com ressalva obrigatória na linha.
-**Corolário: o nome da contraparte não é chave de casamento, é evidência de apoio.** A chave é
-documento mais valor; o nome serve para desempatar homônimo.
-
-**O que começa certo, termina certo.** *"preciso calcular o valor ORIGINAL, encontrar TUDO, depois eu
-avalio a depreciação uniforme com tudo já consolidado"* (20/08/2026). Na prática:
-
-1. **Completude se prova, não se argumenta.** Varra **todas** as contas ou todos os registros sem
-   filtro, liste o que ficou fora **com valor**, e classifique cada exclusão. Custa um script. Num mandato
-   isso revelou que uma conta dada como "fora do universo" estava dentro, e provou que tudo o que
-   ficava fora era depreciação acumulada ou obra em andamento.
-2. **Nunca feche diferença de uma grandeza com número de outra.** Custo não se explica com residual.
-3. **Ausência de contraparte é achado com nome**, não redução de escopo.
-4. **Menor bloco isolável primeiro.** Quando as duas partes medem grandezas diferentes, amarre
-   ponta a ponta o menor bloco isolável antes de discutir o agregado: uma amarração exata num bloco
-   pequeno vale mais que aproximação no total.
-
-**Chave composta: teste o componente que se repete.** Antes de usar um identificador como chave, conte
-quantas vezes cada valor aparece. Se repete, ele é **componente**, não chave. E o sinal de chave certa
-não é só a taxa de acerto: é a **ausência de casos que casam com valor divergente**. Taxa alta com
-divergências significa chave frouxa; taxa média com zero divergência significa chave certa.
-
-**Hipótese do revisor também se testa antes de implementar.** Descartar regra por medição vale tanto
-quanto criar regra por medição, e o custo do teste é um script. Num mandato, implementar por deferência uma
-regra pedida teria criado dupla contagem de R$ 34 milhões; a medição mostrou que os dois lados do
-lançamento já estavam na base.
-
-**Confirme entendimento antes de tarefa grande.** Em pedido longo e multi-item, devolva o
-entendimento numerado e espere o "pode executar". O auditor pede isso explicitamente.
-
-**Execute até o fim.** *"Execute o comando até o fim… você parou de pensar, não faça mais isso."*
-Não pare no meio para perguntar o que dá para decidir sozinho. Se um item ficou bloqueado, entregue
-todos os outros e diga o que faltou e por quê.
-
-**Crédito e contexto são recurso.** O auditor monitora janela de contexto e custo. Prefira um script que
-resolve a dez tentativas; prefira escrever a saída em arquivo a despejar base inteira no chat.
-
-**Ação do auditor em destaque.** Toda vez que sobrar algo para o auditor responsável fazer, destaque visualmente:
-
-> 🟡 **AÇÃO NECESSÁRIA, [o quê]**
-> onde, como e por quê.
-
-Datas sempre `dd/mm/aaaa`. Valores sempre `R$ 1.234,56`.
+Detalhe: `references/como-o-auditor-opera.md` — carregue quando for mexer em régua, chave ou
+completude, definir cor, ou precisar dos casos e dos papéis da equipe.
 
 ---
 
@@ -236,8 +124,9 @@ PY="~~interpretador python"
 ```
 
 O catálogo de armadilhas (interpretador, encoding do console, heredoc, arquivo travado, cache do
-OneDrive, render, COM) e a relação de bibliotecas disponíveis vivem em `acta-way:ambiente-tecnico` e
-em [references/ambiente-windows.md](references/ambiente-windows.md). Não são duplicados aqui.
+OneDrive, render, COM) e a relação de bibliotecas disponíveis vivem na skill
+`acta-way:ambiente-tecnico`, na reference `ambiente-windows.md` daquela skill. Não são duplicados
+aqui.
 
 ---
 
@@ -256,49 +145,24 @@ O ritual completo, com as perguntas, o que se registra e onde, está em
 
 | O que você vai fazer | Carregue |
 |---|---|
-| Ler/tratar extrato bancário, fatura de cartão, planilhão de pagamentos, base de colaboradores, cadastro de fornecedores; conciliar duas bases; definir amostra | **`bases-e-conciliacao`** |
-| Montar ou atualizar papel de trabalho: capa, abas de evidência, aba de critérios, resultado | **`papel-de-trabalho`** |
-| Criar/revisar programa de testes, matriz de testes, registro de riscos R1..Rx, matriz controles × riscos, grau de implementação, régua de riscos | **`programa-de-testes`** |
-| Escrever ponto de auditoria, achado, memorando de deficiências, texto de status report, recomendação, severidade | **`redacao-de-achados`** |
-| Montar/alterar slide no deck de auditoria, tabela ou gráfico em PPTX, organograma, fluxo AS IS | **`relatorio-de-auditoria`** |
-| Fechar um bloco de trabalho, registrar o que foi feito/refeito, promover lição a memória ou skill | **`aprendizado-e-historico`** |
-| Auditar o ciclo de receita: contrato, medição/BM, aceite, faturamento/NF, tabela de preços, reajuste, glosa, notificação, inadimplência/aging, cancelamento/balança/MTR | **`acta-revenue-assurance`** (plugin próprio) |
+| Tratar ou conciliar base, definir amostra | `bases-e-conciliacao` |
+| Papel de trabalho | `papel-de-trabalho` |
+| Programa de testes, registro de riscos, matriz controles × riscos | `programa-de-testes` |
+| Ponto de auditoria, achado, memorando, status report | `redacao-de-achados` |
+| Slide, tabela ou gráfico do deck de auditoria | `relatorio-de-auditoria` |
+| Fechar bloco de trabalho, promover lição | `aprendizado-e-historico` |
+| Ciclo de receita | `acta-revenue-assurance` (plugin próprio) |
 
-**Memória NÃO é skill da ACTA.** Ler ou gravar memória de longo prazo, decidir se o fato é do
-usuário ou do projeto, resolver divergência entre registros: isso é protocolo **pessoal do
-usuário**, não metodologia da ACTA. Se o ambiente tiver uma skill de memória, carregue-a **antes
-de produzir qualquer coisa**; no ambiente de alguns auditores ela se chama **`memoria`**. **Se não tiver, siga
-sem:** nada nesta skill depende dela, e o mínimo é ler o `CLAUDE.md` global e o do engajamento
-antes de produzir.
+Mais de uma pode valer ao mesmo tempo. **Memória NÃO é skill da ACTA**: se o ambiente não tiver
+skill de memória, siga sem.
 
-Mais de uma pode valer ao mesmo tempo, um ponto novo no relatório normalmente pede `bases-e-conciliacao`
-(o número), `redacao-de-achados` (o texto) e `relatorio-de-auditoria` (o slide). Carregue as que o trabalho pedir.
-
-As seis primeiras linhas são skills de **mecânica** (como fazer o entregável) e vivem neste
-mesmo plugin. A última é uma skill de **domínio** (o que testar num processo) e vive em plugin
-próprio: cada processo auditado (receita, folha, estoques, compras, marketing, produção) é um
-plugin do repositório, que orquestra estas skills de mecânica e se retroalimenta a cada execução.
+Detalhe: `references/roteamento.md` — carregue quando a tarefa não couber numa linha da tabela.
 
 ---
 
 ## 7. Checklist antes de dizer que terminou
 
-**Conteúdo:** toda afirmação tem fonte? Fato separado de percepção, percepção atribuída?
-Contradições registradas em vez de resolvidas por escolha? Declarei desenho ou efetividade? Cada
-ponto tem Condição + Risco + Recomendação + Severidade? A recomendação é acionável (o quê, quem, qual
-gatilho)? Registrei o que **não** foi possível concluir e o que falta solicitar?
+Cinco blocos: **conteúdo** (inclusive o que não foi possível concluir), **número**, **forma**,
+**destino e integridade** e **aprendizado**.
 
-**Número:** universo definido e declarado? Soma reconciliada contra total independente? Nenhum `~`?
-Percentuais consistentes entre si e com as tabelas? Se corrigi número já publicado, propaguei para
-todos os artefatos?
-
-**Forma:** paleta e fonte ACTA; vocabulário fechado respeitado; primeira pessoa do plural, pretérito;
-sem adjetivo de intensidade; sem julgar pessoas; IDs sem duplicidade e nenhum ID já emitido
-renumerado; datas `dd/mm/aaaa`.
-
-**Destino e integridade:** o arquivo **não** foi salvo na pasta do cliente? Está na pasta correta?
-É versão nova em vez de sobrescrita? As edições manuais do auditor responsável foram preservadas? Rendeirizei o
-`.pptx`/`.docx` e **olhei**? Abre sem aviso de reparo?
-
-**Aprendizado:** fiz o momento de reflexão com ele antes de gravar? Atualizei `HISTORICO.md` e
-`APRENDIZADOS.md`?
+Detalhe: `references/checklist-de-entrega.md` — carregue quando for dizer que terminou.

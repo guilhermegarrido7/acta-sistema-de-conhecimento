@@ -2,7 +2,7 @@
 
 Modelagem e otimização de processos ponta a ponta, incluindo os ciclos PTP, OTC, RTR e HTR: mapeamento, gargalos, redesenho e indicadores.
 
-> **Pré-requisito, desde já: instale `acta-way`** (`claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`). É onde vive o mecanismo de checkpoint entre sessões e consultores. O manifesto de plugin não tem campo de dependência; sem ele instalado, nenhum outro plugin da ACTA consegue usar o checkpoint.
+> **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
 > **Status: completo.** As 7 skills do ciclo de vida de um mandato de mapeamento estão escritas.
 > Ver [docs/ROADMAP.md](../../docs/ROADMAP.md).

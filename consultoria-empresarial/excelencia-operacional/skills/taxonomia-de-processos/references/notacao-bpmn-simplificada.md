@@ -52,7 +52,7 @@ rótulo nas saídas não é decisão; é ruído, e trava a leitura do grupo no w
 ## O que esta notação deliberadamente não usa
 
 Gateway paralelo e inclusivo, evento de compensação, pool múltiplo, sinalização de erro, subprocesso
-de evento. São elementos legítimos em BPMN 2.0 e inúteis num workshop de homologação: cada símbolo a
+de evento. São elementos legítimos em BPMN 2.0.2 e inúteis num workshop de homologação: cada símbolo a
 mais é um minuto de explicação e um risco de o grupo discutir notação em vez de processo.
 
 Quando o processo real exige essa semântica (duas coisas que ocorrem em paralelo, um caminho de

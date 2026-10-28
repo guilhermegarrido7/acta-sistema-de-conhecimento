@@ -76,7 +76,9 @@ O capítulo mais valioso, e o mais mal usado quando tratado como seção de comp
 
 **Tese-guarda-chuva:** a regulação é driver de múltiplo, não custo de conformidade. A precificação
 do setor mudou porque o valuation moderno é ditado pela capacidade da empresa de **originar
-instrumentos a partir de exigências legais**.
+instrumentos a partir de exigências legais**. No vocabulário da casa, isso é **tailwind
+regulatório**: driver de demanda e de múltiplo, apresentado à parte das fontes de vantagem
+competitiva (ver `teaser`, Bloco 7).
 
 Para cada marco, quatro elementos:
 
@@ -162,8 +164,10 @@ Duas honestidades exigidas aqui:
 Traduz a tese em argumento de venda. Pilares "inegociáveis", cada um endereçando uma dor específica
 do comprador:
 
-- **Barreira de entrada e *speed to market***: quanto tempo e qual licença um entrante precisaria.
-  O alvo oferece acesso *plug-and-play*. É o argumento mais forte contra "eu construo do zero".
+- **Barreira regulatória de entrada e *speed to market***: quanto tempo e qual licença um entrante
+  precisaria. O alvo oferece acesso *plug-and-play*. É o argumento mais forte contra "eu construo do
+  zero". O rótulo é tailwind regulatório, não moat: moat é o que cabe nas fontes de vantagem
+  competitiva da régua de `teaser`, Bloco 7.
 - **Habilitação de agenda do comprador**: ESG, meta regulatória, Escopo 3. O alvo resolve uma
   obrigação que o comprador já tem.
 - **Proteção de margem**: hedge fiscal, contrato indexado, take-or-pay.

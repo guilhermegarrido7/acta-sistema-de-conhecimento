@@ -5,7 +5,8 @@ description: Consolide o resultado de um grupo de várias empresas e elimine as 
 
 # Consolidação e intercompany
 
-Carregue `acta-metodo-consultoria` antes desta skill. Consolide apenas base validada
+Carregue `acta-metodo-consultoria:mapeamento-as-is` antes desta skill (a base reconstruída e a
+planilha-mestre). Consolide apenas base validada
 (`qualidade-e-validacao`) e reclassificada (`reclassificacao-gerencial`): consolidar antes de
 reclassificar soma gavetas diferentes, e consolidar antes de validar propaga o erro de uma empresa
 para o grupo.

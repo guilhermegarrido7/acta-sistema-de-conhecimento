@@ -4,5 +4,9 @@
   "description": "Implantação e avaliação de programa de integridade: os parâmetros do Decreto 11.129/2022, código de conduta, canal de denúncias, due diligence de terceiros, treinamento e monitoramento.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way",
+    "acta-gestao-de-riscos"
+  ]
 }

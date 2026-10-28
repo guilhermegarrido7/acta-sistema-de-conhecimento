@@ -36,9 +36,9 @@ saída. O deliverable, no fim, é a decisão — não a ferramenta.
 
 ## Fontes
 
-- CRISP-DM (Cross-Industry Standard Process for Data Mining) — ciclo de referência de projetos de
-  dados, de origem IBM.
-- DAMA-DMBOK 2.0 (DAMA International) — áreas de conhecimento de gestão de dados; citável em
+- CRISP-DM 1.0 (Cross-Industry Standard Process for Data Mining, 2000) — ciclo de referência de
+  projetos de dados, criado por um consórcio de NCR, DaimlerChrysler, SPSS e OHRA.
+- DAMA-DMBOK2 Revised Edition (DAMA International, 2024) — áreas de conhecimento de gestão de dados; citável em
   consultoria com atribuição. Usado como âncora de qualidade e governança, não como escopo.
 - McKinsey, *Three keys to a data-driven strategy* (Barton & Court) e *The data-driven enterprise of
   2025* — a lógica de escolher o dado certo, construir o modelo e transformar a decisão.

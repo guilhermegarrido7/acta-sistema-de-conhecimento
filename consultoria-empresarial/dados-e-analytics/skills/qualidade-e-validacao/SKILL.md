@@ -5,9 +5,9 @@ description: Prove que a base tratada é confiável antes de analisar, checando 
 
 # Qualidade e validação
 
-Carregue `acta-metodo-consultoria` antes desta skill: a hierarquia de autoridade entre fontes e a
-âncora de validação (o número que o consultor não calculou) são o coração desta etapa e não se
-repetem aqui.
+Carregue antes desta skill `acta-metodo-consultoria:diagnostico-e-entrevistas` (a hierarquia de
+autoridade entre fontes) e `acta-metodo-consultoria:mapeamento-as-is` (a âncora de validação, o número
+que o consultor não calculou): são o coração desta etapa e não se repetem aqui.
 
 Esta skill existe porque base tratada **não é** base confiável. O tratamento arruma o formato; a
 validação prova que o conteúdo bate com a realidade. Pular esta etapa é a causa raiz do pior desfecho

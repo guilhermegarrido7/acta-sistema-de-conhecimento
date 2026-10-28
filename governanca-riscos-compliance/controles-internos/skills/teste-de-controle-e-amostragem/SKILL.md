@@ -5,7 +5,7 @@ description: Execute o teste de efetividade de um controle, do roteiro à conclu
 
 # Teste de controle e amostragem
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 (nunca presumir caminho, sempre perguntar) valem aqui integralmente e não são
 repetidas.
 

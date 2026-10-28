@@ -5,7 +5,7 @@ description: Construa a matriz de segregação de funções função contra fun�
 
 # A matriz de SoD: função contra função
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 (nunca presumir caminho, sempre perguntar) valem aqui e não são repetidas.
 
 **Fronteira.** `acta-controles-internos:itgc` cobre os quatro domínios de ITGC com COBIT, e a tabela

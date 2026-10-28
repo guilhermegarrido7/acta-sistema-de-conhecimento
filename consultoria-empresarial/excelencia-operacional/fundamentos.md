@@ -32,7 +32,7 @@ começa a envelhecer no mesmo dia.
 | Referência | O que é | Onde aparece no método |
 |---|---|---|
 | APQC Process Classification Framework | Referência de mercado para hierarquia de processos, com categorias, grupos, processos e atividades como níveis estáveis e comparáveis entre empresas | Os cinco níveis de modelagem de `taxonomia-de-processos`, e a decisão de que o mandato contrata os níveis 2 a 4 |
-| BPMN 2.0 (OMG) | Notação padrão de modelagem de processos de negócio: evento, atividade, gateway, raia | A notação simplificada de `taxonomia-de-processos` e o desenho To-Be de `fluxo-e-regras-de-negocio` |
+| BPMN 2.0.2 (OMG; ISO/IEC 19510:2013) | Notação padrão de modelagem de processos de negócio: evento, atividade, gateway, raia | A notação simplificada de `taxonomia-de-processos` e o desenho To-Be de `fluxo-e-regras-de-negocio` |
 | Lean | Taxonomia de desperdício: espera, retrabalho, superprocessamento, movimentação, estoque e talento subutilizado | Classificação de origem das oportunidades em `oportunidades-e-quick-wins`, e a organização das cartas de sugestões dos facilitadores em `workshop-de-mapeamento` |
 | Matriz esforço por impacto | Padrão de priorização que separa quick win, projeto, item de carona e descarte | As colunas VALOR POTENCIAL e COMPLEXIDADE de `oportunidades-e-quick-wins`, e a composição da primeira onda |
 | SIPOC | Disciplina de nomear fornecedor, entrada, processo, saída e cliente antes de descrever o miolo | O elemento 2 da grade de definição de subprocesso em `workshop-de-mapeamento`, e as interfaces entre subprocessos vizinhos no fluxograma |

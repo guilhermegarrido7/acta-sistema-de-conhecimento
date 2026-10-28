@@ -3,9 +3,7 @@ import Pagina from '../../layouts/Pagina.astro';
 import { catalogo } from '../../lib/catalogo.js';
 import { gruposDeTerceiros } from '../../lib/terceiros.js';
 const { categorias } = catalogo();
-const resumo = (d) => d.split('. Acionar')[0].replace(/\.$/, '') + '.';
 const totalDaCasa = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x + p.skills.length, 0), 0);
-
 ---
 
 <Pagina
@@ -27,19 +25,21 @@ const totalDaCasa = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x
           {c.plugins.map((p) => (
             <>
               <h3>
-                <a href={`/projetos/${p.slug}`}>{p.titulo}</a>
+                <a href={p.url}>{p.titulo}</a>
                 <span class="etiqueta" style="margin-left:.5rem">{p.skills.length}</span>
               </h3>
               <div class="grade">
                 {p.skills.map((s) => (
                   <article class="cartao">
-                    <h3 style="margin:0">
-                      <a href={`/skills/${s.slug}`}>{s.nome}</a>
-                    </h3>
-                    <p>{s.descricao ? resumo(s.descricao) : 'Etapa mapeada, metodologia ainda não escrita.'}</p>
+                    <h4>
+                      <a href={s.url}>{s.titulo}</a>
+                    </h4>
+                    <p>{s.descricao ? s.oQueFaz || s.descricao : 'Etapa mapeada, metodologia ainda não escrita.'}</p>
                     <div class="pe">
+                      <code>{s.nome}</code>
+                      {s.manual && <span class="etiqueta">manual</span>}
                       {!s.invocavelPeloUsuario && <span class="etiqueta">de fundo</span>}
-                      {(s.esqueleto || !s.roteavel) && <span class="etiqueta parcial">a escrever</span>}
+                      {s.esqueleto && <span class="etiqueta parcial">a escrever</span>}
                     </div>
                   </article>
                 ))}
@@ -70,7 +70,7 @@ const totalDaCasa = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x
         <div class="grade">
           {g.itens.map((it) => (
             <article class="cartao">
-              <h3 style="margin:0"><a href={`/skills/uso-geral/${it.slug}`}>{it.nome}</a></h3>
+              <h4><a href={`/skills/uso-geral/${it.slug}`}>{it.nome}</a></h4>
               <p>{it.resumo}</p>
             </article>
           ))}
@@ -85,17 +85,26 @@ const totalDaCasa = categorias.reduce((t, c) => t + c.plugins.reduce((x, p) => x
       <table>
         <tbody>
           <tr>
-            <th style="width:10rem"><span class="etiqueta">de fundo</span></th>
+            <th style="width:10rem"><span class="etiqueta">manual</span></th>
             <td>
-              Não aparece no menu de <code>/</code>. É conhecimento que outra skill carrega quando
-              precisa do conceito exato; você não a invoca diretamente.
+              O Claude não a carrega sozinho: a descrição fica fora do contexto e ela
+              <strong>não custa contexto</strong>. Só roda quando você digita <code>/</code> e o
+              nome dela.
+            </td>
+          </tr>
+          <tr>
+            <th><span class="etiqueta">de fundo</span></th>
+            <td>
+              Não aparece no menu de <code>/</code>, mas a descrição continua no contexto: o Claude
+              a carrega sozinho quando o assunto aparece, e outras skills a puxam quando precisam do
+              conceito exato.
             </td>
           </tr>
           <tr>
             <th><span class="etiqueta parcial">a escrever</span></th>
             <td>
-              A etapa está mapeada mas a metodologia ainda não foi escrita. Está fora do roteamento e
-              <strong>não custa contexto</strong>: existe como marcador do que falta.
+              A etapa está mapeada mas a metodologia ainda não foi escrita: a skill existe como
+              marcador do que falta.
             </td>
           </tr>
         </tbody>

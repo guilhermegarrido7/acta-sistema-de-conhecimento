@@ -5,7 +5,7 @@ description: Desenhe o controle compensatório quando não há gente para segreg
 
 # Quando não há quem segregar
 
-Carregue `acta-metodo-auditoria` antes desta skill. `matriz-de-sod` e `conflitos-criticos` produzem
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill. `matriz-de-sod` e `conflitos-criticos` produzem
 a lista de conflitos efetivos; esta skill trata do que se faz com os que não têm solução por
 redistribuição.
 

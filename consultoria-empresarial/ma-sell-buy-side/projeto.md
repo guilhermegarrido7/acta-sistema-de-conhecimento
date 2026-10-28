@@ -11,9 +11,10 @@ Um mandato de M&A conduz uma transação do início ao fim: abre o projeto e fix
 constrói a tese setorial que decide em qual arquétipo o ativo vai ser precificado, levanta as
 transações precedentes, aplica o gate de prontidão antes de ir a mercado, produz o teaser pré-NDA,
 segmenta e prioriza compradores, escreve o information memorandum (IM), conduz a solicitação de
-informações e o data room, e negocia até o LOI. O entregável não é um documento: é **o negócio
-fechado nas melhores condições disponíveis**, sustentado por material que resiste ao escrutínio do
-comprador.
+informações, negocia a posição econômica ao longo do processo competitivo, coordena a due diligence
+com o data room aberto aos compradores e defende essa posição no contrato até o fechamento. O
+entregável não é um documento: é **o negócio fechado nas melhores condições disponíveis**, sustentado
+por material que resiste ao escrutínio do comprador.
 
 O que distingue o método da casa é a disciplina do que vem antes da abordagem: **a primeira conversa
 com um comprador acontece uma vez.** Um comprador que recebe teaser com número frágil, pede o IM e
@@ -25,12 +26,12 @@ dela o múltiplo-alvo.
 A firma costuma ser contratada em três situações:
 
 - **O acionista decidiu vender (sell-side).** Quer o processo conduzido com disciplina de preço e de
-  competição, do teaser à negociação, com a expectativa alinhada à realidade de mercado antes da
+  competição, do teaser ao fechamento, com a expectativa alinhada à realidade de mercado antes da
   primeira abordagem.
 - **Um comprador quer avaliar e estruturar uma aquisição (buy-side).** As etapas espelham o
-  sell-side: tese setorial, segmentação da oportunidade, solicitação de informações e a análise
-  econômica da negociação, com o teto de preço calculado pela sinergia que o comprador consegue
-  capturar.
+  sell-side: tese setorial, segmentação da oportunidade, solicitação de informações, a análise
+  econômica da negociação, a NBO e a proposta vinculante, a diligência e o contrato, com o teto de
+  preço calculado pela sinergia que o comprador consegue capturar.
 - **A empresa vai captar ou abrir o capital no médio prazo e precisa estar pronta.** O gate de
   prontidão revela o que falta — normalização de EBITDA, valuation preliminar, pontos sensíveis
   mapeados — antes de o ativo ser exposto.
@@ -39,7 +40,8 @@ A firma costuma ser contratada em três situações:
 
 Uma skill por etapa, na ordem do mandato. A etapa 8 (solicitação de informações) não é sequencial:
 roda em paralelo desde cedo, porque o data room alimenta o estudo setorial, o IM e o plugin de
-valuation ao mesmo tempo.
+valuation ao mesmo tempo. A etapa 10 (processo competitivo) corre intercalada com a 9: cada rodada
+de proposta passa pela análise econômica da negociação antes da próxima.
 
 | # | Etapa | O que fecha a etapa |
 |---|---|---|
@@ -52,6 +54,9 @@ valuation ao mesmo tempo.
 | 7 | Information memorandum | O planejamento escrito antes do PowerPoint, o arco de seis capítulos e o texto dos slides com títulos-asserção |
 | 8 | Solicitação de informações | A carta em quatro eixos e o controle das rodadas até o data room sustentar o valuation |
 | 9 | Negociação e LOI | A posição econômica: sinergia quantificada, teto do comprador, estrutura de preço (CFDF, earn-out, escrow) e objeções de múltiplo desarmadas |
+| 10 | Processo competitivo e propostas | A carta de processo, as NBOs comparadas em base equivalente, a shortlist e as propostas vinculantes com o markup lido em reais |
+| 11 | Due diligence e data room | O data room aberto aos compradores, o Q&A respondido no prazo e cada red flag com destino: preço, estrutura ou proteção |
+| 12 | SPA, signing e closing | O term sheet econômico refletido no contrato, as condições precedentes cumpridas, o funds flow conferido e o calendário pós-fechamento |
 
 ## Onde este projeto dá errado
 
@@ -99,13 +104,19 @@ projeto está. *Prevenção:* a árvore numerada pela ordem em que o trabalho ac
 | Gate de prontidão | Checklist de vinte itens com veredito e lacunas | Sócio responsável / vendedor |
 | Carta de solicitação de informações | Carta em quatro eixos, com controle de rodadas | Alvo (via sócio e vendedor) |
 | Posição econômica da negociação | Sinergia quantificada, teto do comprador e estrutura de preço | Sócio responsável / vendedor |
+| Carta de processo e comparativo de propostas | Carta por fase; comparativo com o equity value comparável e a leitura de certeza, prazo e condicionantes | Comprador (carta) / sócio responsável e vendedor (comparativo) |
+| Índice do data room e Q&A log | Índice com níveis de acesso; registro de perguntas com prazo e responsável | Compradores da shortlist / alvo |
+| Relatório de red flags | Achado, quantificação e tratamento proposto (preço, estrutura ou proteção) | Sócio responsável / vendedor; no buy-side, o comprador |
+| Term sheet econômico do contrato e funds flow | Posição por termo do contrato; fluxo de fundos conferido contra o closing statement | Assessoria jurídica / vendedor |
+| Suporte ao PPA | Calendário do laudo e insumos para a alocação do preço | Comprador (buy-side) |
 
 ## Quem participa, do lado do cliente e do nosso
 
 **Do lado do cliente:** o vendedor ou o acionista, que decide a abordagem e aprova cada contato com
-comprador; pontos focais em finanças, operações e jurídico que alimentam o data room; e a assessoria
+comprador; pontos focais em finanças, operações e jurídico que alimentam o data room; a assessoria
 jurídica, que minuta e revisa NDA, LOI e contrato de compra e venda — o mandato prepara a posição
-econômica, não o instrumento jurídico.
+econômica, não o instrumento jurídico; e, quando a transação exige, as assessorias tributária e
+concorrencial e os especialistas das frentes de diligência.
 
 **Do nosso lado:** o consultor responsável pela construção dos materiais e pela condução das rodadas,
 com o sócio responsável conduzindo a abordagem aos compradores e validando a tese, o múltiplo-alvo e

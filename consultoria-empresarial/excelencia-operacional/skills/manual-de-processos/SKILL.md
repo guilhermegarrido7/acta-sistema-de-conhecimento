@@ -5,10 +5,11 @@ description: Consolide fluxos, regras, SLA e oportunidades no Manual de Processo
 
 # Manual de processos
 
-Carregue `acta-way` antes desta skill: convenções de entregável, nomeação, versionamento, identidade
-visual e o protocolo de checkpoint valem aqui e **não** são repetidos. O método de prática (gestão de
-mudança, implantação, transferência de conhecimento) virá de `acta-metodo-consultoria`; enquanto esse
-plugin for esqueleto, o que esta skill assume dele está dito aqui.
+Carregue `acta-way:checkpoint` antes desta skill; `acta-way:convencoes-de-entregavel` (nomeação e
+versionamento) e `acta-way:identidade-visual` ao produzir o entregável. Valem aqui e **não** são
+repetidos. O método de prática (gestão de mudança, implantação, transferência de conhecimento) está em
+`acta-metodo-consultoria`, que este plugin não exige instalado: o que esta skill assume dele está dito
+aqui.
 
 Esta skill **consolida**; ela não produz conteúdo novo. Fluxo e regras vêm de
 `fluxo-e-regras-de-negocio`, metas de `sla-e-indicadores`, gaps de `oportunidades-e-quick-wins`,

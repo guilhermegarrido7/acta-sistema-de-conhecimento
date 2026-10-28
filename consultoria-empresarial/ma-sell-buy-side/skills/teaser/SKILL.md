@@ -44,16 +44,19 @@ que precisam existir antes de escrever. Prosa corrida, sem bullets: a saída é 
 
 ### Bloco 1: a companhia
 
-Superlativo **verificável** (maior/única em X na região) e o diferencial de processo, com nota de que
+Posicionamento **qualificado e verificável**, com recorte e fonte ("referência regional consolidada
+em `<recorte>`", "principal plataforma `<recorte>`"), e o diferencial de processo, com nota de que
 o investimento já está amortizado quando for o caso. Verticalização, ativos próprios, sistema de
 gestão. Histórico societário e operacional: fundação, eventuais hiatos, retomada, consolidação.
 Marco de entrada em novo mercado com o valor do primeiro contrato. Saldo contratado acumulado e
 potencial adicional, com teto e renovabilidade do instrumento. Atuação geográfica. **Mix de receita
 em percentual** por linha. Headcount (próprios + terceiros).
 
-"Maior" e "única" só entram com a qualificação que os torna verdadeiros. "Única no estado com
-`<processo>`" é verificável; "líder de mercado" sem recorte não é, e é o tipo de afirmação que o
-comprador desconta de tudo o mais.
+Superlativo absoluto não entra. "Única", "líder" ou "maior" sem recorte e sem fonte é o tipo de
+afirmação que o comprador desconta de tudo o mais, e que a diligência desmente com um concorrente
+que a assessoria não conhecia. A formulação da casa nomeia o recorte (atividade e geografia) e a
+fonte que o sustenta: entidade setorial, órgão licenciador, cadastro público, ranking com
+metodologia declarada. Sem fonte, a afirmação sai do teaser.
 
 ### Bloco 2: modelo operacional e cadeia de valor
 
@@ -108,24 +111,51 @@ isso. Antecipe.
 O bloco mais valioso e o mais mal feito. O método tem quatro movimentos, na ordem:
 
 1. **Reconhecer a paridade**: quais atributos concorrentes também têm.
-2. **Isolar o diferencial único**: o que só este alvo tem.
-3. **Quantificar o efeito** em custo ou margem.
+2. **Isolar o diferencial defensável** e classificá-lo na fonte de vantagem competitiva a que
+   pertence (tabela abaixo), com a evidência que o sustenta.
+3. **Quantificar o efeito** em preço, custo ou margem.
 4. **Justificar a não replicabilidade** no curto prazo.
 
 > "...opera hoje em um nicho restrito, com `<atributos>`, atributos que alguns concorrentes também
-> possuem. O diferencial defensável é único: é a única empresa `<no estado>` com `<processo>`,
-> gerando redução de ~`<%>` no custo de `<insumo>` frente a concorrentes que usam `<alternativa
-> convencional>`. Esse é o ponto de moat a destacar no teaser, já que reduz custo variável de forma
-> estrutural e não replicável no curto prazo."
+> possuem. O diferencial defensável está em `<processo>`: a companhia é referência regional
+> consolidada em `<recorte>` (`<fonte>`), e o processo gera redução de ~`<%>` no custo de
+> `<insumo>` frente a concorrentes que usam `<alternativa convencional>`. É vantagem de
+> `<fonte da tabela>`, e é o ponto de moat a destacar no teaser, porque reduz custo variável de
+> forma estrutural e não replicável no curto prazo."
 
 Começar reconhecendo a paridade é contraintuitivo e é o que faz o argumento funcionar: sem isso, a
 lista de "vantagens" é indistinguível da de qualquer concorrente, e o leitor desconta todas.
 
+**A régua de classificação** são as fontes de vantagem competitiva de Koller, Goedhart e Wessels
+(McKinsey & Company, *Valuation*, capítulo *Return on Invested Capital*). Diferencial que não cabe
+em nenhuma linha é atributo, não moat:
+
+| Família | Fonte | Evidência que o comprador aceita |
+|---|---|---|
+| Prêmio de preço | Produto inovador | Produto, serviço ou tecnologia patenteado ou difícil de copiar |
+| | Qualidade | Prêmio de preço observável por diferença de qualidade, real ou percebida |
+| | Marca | Prêmio de preço sustentado mesmo sem diferença clara de qualidade |
+| | Lock-in do cliente | Custo de troca alto: integração operacional, homologação, contrato longo |
+| | Disciplina racional de preço | Piso de preço no setor mantido pela liderança de preço dos participantes relevantes |
+| Custo e eficiência de capital | Método de negócio inovador | Modelo operacional difícil de replicar |
+| | Recursos exclusivos (*unique resources*) | Característica geológica ou acesso exclusivo a matéria-prima ou insumo |
+| | Economia de escala | Escala eficiente para o mercado relevante, inclusive o mercado local |
+| | Produto ou processo escalável | Cliente ou capacidade adicionados a custo marginal desprezível |
+| Implícita | Efeito de rede | Valor para cada cliente que cresce com o número de clientes |
+
+**Tailwinds regulatórios não são fonte de vantagem competitiva** e não entram na tabela. Licença
+escassa, meta compulsória, incentivo fiscal e exigência de certificação sustentam demanda e preço
+enquanto a norma vigorar. No teaser, ganham parágrafo próprio, separado do moat, com a norma, o
+prazo e o risco de mudança declarados (ver `estudo-setorial`, capítulo 2). Quando a licença é o meio
+de uma fonte da tabela, como a unidade licenciada perto da demanda que dá escala eficiente no
+mercado local, classifique pela fonte e cite a norma como contexto.
+
 **O que não é moat**, apesar de aparecer como se fosse: equipe experiente, atendimento
-diferenciado, qualidade superior, relacionamento com clientes, tradição. São atributos. Se o
-concorrente pode contratar ou copiar em doze meses, não sustenta retorno. Ver plugin de valuation,
-skill `diagnostico-de-roic`, seção de CAP. O moat do teaser e a duração da vantagem no modelo têm de
-ser **a mesma tese**, ou o material contradiz o número.
+diferenciado, qualidade alegada sem prêmio de preço demonstrado, relacionamento com clientes sem
+custo de troca, tradição. São atributos. Se o concorrente pode contratar ou copiar em doze meses,
+não sustenta retorno. Ver plugin de valuation, skill `diagnostico-de-roic`, seção de CAP. O moat do
+teaser e a duração da vantagem no modelo têm de ser **a mesma tese**, ou o material contradiz o
+número.
 
 Caso a empresa tenha linhas de serviços verticalizadas, utilizar o flywheel para caracterizar a estratégia da empresa.
 
@@ -138,8 +168,8 @@ Antes de emitir, verifique ativamente. O que identifica um alvo mid-market para 
 - Cidade específica (use a região ou o estado).
 - Cliente âncora nominado.
 - Número de licença, CNPJ, processo administrativo.
-- Métrica única no mercado local: "a única planta com capacidade de X toneladas no estado" pode
-  identificar melhor que o nome.
+- Métrica sem equivalente no mercado local: a capacidade, a área licenciada ou o número de unidades
+  que só o alvo tem no estado identifica melhor que o nome.
 - Metadados do arquivo: autor, empresa, caminho original, título do documento.
 - Nome do arquivo enviado.
 
@@ -195,7 +225,8 @@ A identidade visual da casa vive em `acta-way`. Carregue-a em vez de reinventar 
 
 1. As notas consolidadas por bloco, em prosa, prontas para virar o texto.
 2. O resumo executivo com identidade + inflexão + mecanismo + âncora numérica.
-3. O parágrafo de moat nos quatro movimentos.
+3. O parágrafo de moat nos quatro movimentos, com a fonte de vantagem classificada, e os tailwinds
+   regulatórios em parágrafo separado.
 4. A tabela de pendências rastreada por bloco.
 5. O parágrafo de implicação estratégica.
 6. **O resultado da checagem de anonimato**, item por item.

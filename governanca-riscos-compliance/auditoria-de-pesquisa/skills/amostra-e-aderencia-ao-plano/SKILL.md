@@ -5,7 +5,7 @@ description: Confronte a amostra entregue contra o plano declarado e contra a po
 
 # Amostra e aderência ao plano
 
-Carregue antes: `acta-way` e `acta-metodo-auditoria`.
+Carregue antes: `acta-way:checkpoint` e `acta-metodo-auditoria:metodo-auditoria`.
 
 ## 1. A pergunta deste elo
 

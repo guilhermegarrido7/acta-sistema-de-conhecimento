@@ -1,6 +1,6 @@
 ---
 name: conducao-da-coleta
-description: Opere o campo da pesquisa até a base bruta estar completa. Acionar ao abrir o campo, ao triar retorno de participante, ao sanear resposta incompleta ou implausível, ao operar cobrança e escalonamento, ou ao declarar o corte de encerramento da coleta.
+description: Opere o campo da pesquisa salarial até a base bruta fechar. Acionar ao triar retorno de participante, ao sanear resposta incompleta ou implausível, ao cobrar e escalonar formulário atrasado, ou ao declarar o corte do campo.
 ---
 
 # Condução da coleta

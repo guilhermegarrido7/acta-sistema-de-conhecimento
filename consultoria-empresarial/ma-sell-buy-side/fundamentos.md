@@ -24,7 +24,7 @@ A ACTA opera assim porque o mid-market brasileiro castiga método frouxo de duas
 de comparáveis é pequena, e quatro transações bem julgadas costumam ser tudo o que existe. E o
 comprador do outro lado da mesa é frequentemente programático, com equipe que já leu cem materiais
 e que desmonta na primeira pergunta um múltiplo sem origem declarada ou um EBITDA sem base temporal.
-Contra esse leitor, a disciplina que atravessa as nove skills não é preciosismo: fonte por número,
+Contra esse leitor, a disciplina que atravessa as doze skills não é preciosismo: fonte por número,
 critério de julgamento declarado antes da tabela, e coerência verificada entre teaser, IM e deck de
 valuation antes de qualquer coisa sair da casa.
 
@@ -32,7 +32,7 @@ valuation antes de qualquer coisa sair da casa.
 
 | Referência | O que é | Onde aparece no método |
 |---|---|---|
-| Valuation (Tim Koller e McKinsey & Company) | Framework de criação de valor por NOPAT, capital investido, ROIC, WACC e lucro econômico | Vocabulário econômico dos capítulos V e VI do IM em `information-memorandum`; o teste ROIC do deal contra WACC do comprador em `negociacao-e-loi` |
+| Valuation (Tim Koller e McKinsey & Company) | Framework de criação de valor por NOPAT, capital investido, ROIC, WACC e lucro econômico | Vocabulário econômico dos capítulos V e VI do IM em `information-memorandum`; o teste ROIC do deal contra WACC do comprador em `negociacao-e-loi`; as fontes de vantagem competitiva que classificam o moat no Bloco 7 de `teaser` |
 | Melhor dono (best owner) | Tese de que o valor de um ativo depende de quem o detém, e que a venda cria valor quando o dono atual não é o melhor | Fecha o raciocínio de `segmentacao-de-compradores` e é o argumento que se apresenta ao vendedor |
 | Os seis arquétipos de criação de valor em aquisição | Melhorar desempenho, consolidar capacidade excedente, criar acesso a mercado, adquirir competência, explorar escalabilidade setorial, escolher vencedores cedo | A régua de `segmentacao-de-compradores`: comprador sem arquétipo identificável é prêmio zero |
 | Tipologia de comprador por padrão de M&A | Programático, grande deal, orgânico e seletivo, como preditores de velocidade e previsibilidade do processo | Priorização da lista curta em `segmentacao-de-compradores` |
@@ -44,6 +44,12 @@ valuation antes de qualquer coisa sair da casa.
 | Prêmio de controle | Diferença entre o preço pago por controle e o valor pré-anúncio, historicamente na ordem de 30% em mercado listado | Calibra o teto do comprador em `negociacao-e-loi`, com a ressalva de que média não é teto de ninguém em particular |
 | Princípio da Pirâmide (Barbara Minto) | Estrutura de documento que abre pela conclusão e sustenta cada afirmação com o nível abaixo | O BLUF de `estudo-setorial` e os títulos-asserção de `information-memorandum` |
 | Fato relevante e comunicado ao mercado (CVM) | Divulgação obrigatória de companhia aberta, definitiva para preço e estrutura de transação | Topo da hierarquia de fontes na parte 2 de `transacoes-precedentes` |
+| CPC 15 (R1) Combinação de Negócios | Pronunciamento correlato à IFRS 3: método de aquisição, ativos identificáveis e passivos assumidos a valor justo, contraprestação contingente, ágio por expectativa de rentabilidade futura (goodwill), período de mensuração de até um ano | O PPA do comprador e o tratamento contábil do earn-out em `spa-signing-e-closing`, com o detalhe em `ppa-e-alocacao-do-preco.md` |
+| Lei 12.973/2014, arts. 20, 22 e 25, e Decreto-Lei 1.598/1977, art. 20, na redação dela | Desdobramento do custo de aquisição em valor patrimonial, mais-valia e goodwill, com laudo até o último dia útil do 13º mês; aproveitamento da mais-valia e exclusão do goodwill à razão máxima de 1/60 por mês após incorporação, fusão ou cisão; definição de partes dependentes | Calendário e condições do benefício fiscal do PPA em `spa-signing-e-closing` |
+| Lei 12.529/2011, art. 88, e guia do CADE sobre consumação prévia (2015) | Notificação obrigatória por faturamento dos grupos (R$ 750 milhões e R$ 75 milhões, pela Portaria Interministerial MJ/MF 994/2012), controle prévio em até 240 dias, nulidade e multa de R$ 60 mil a R$ 60 milhões por consumação antes da apreciação | Condições precedentes e cronograma em `spa-signing-e-closing`; clean team e gun jumping em `due-diligence-e-data-room` |
+| Decreto 11.129/2022, art. 57, XIV | Parâmetro do programa de integridade: verificação de irregularidades, ilícitos e vulnerabilidades nas pessoas jurídicas envolvidas em fusões, aquisições e reestruturações societárias | Frente de integridade em `due-diligence-e-data-room` |
+| Lei 12.846/2013, art. 4º | A responsabilidade da pessoa jurídica subsiste em alteração contratual, transformação, incorporação, fusão e cisão; na fusão e na incorporação, a sucessora responde por multa e reparação integral até o limite do patrimônio transferido | Frente de integridade em `due-diligence-e-data-room` |
+| Lei 15.270/2025 | Retenção de 10% na fonte sobre o total pago no mês, quando os dividendos de uma mesma PJ a uma mesma PF residente passam de R$ 50 mil (Lei 9.250/1995, art. 6º-A), tributação mínima das altas rendas e regra de transição para lucros apurados até 2025 | Dividendo pré-fechamento, leakage e líquido do vendedor em `negociacao-e-loi` e `spa-signing-e-closing` |
 
 ## Onde a ACTA se afasta do manual
 

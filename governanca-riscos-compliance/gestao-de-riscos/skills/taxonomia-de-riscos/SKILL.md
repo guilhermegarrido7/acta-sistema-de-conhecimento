@@ -9,7 +9,7 @@ O dicionário completo está em `references/dicionario-de-riscos.md`. Ele é lon
 carregado quando houver classificação para fazer. Esta skill traz o que decide: por que a taxonomia
 é fechada, como se classifica, e o que fazer com o que não cabe.
 
-Carregue `acta-way` para o checkpoint do engajamento. Quando o trabalho for de auditoria, o código
+Carregue `acta-way:checkpoint` para registrar e retomar o estado do engajamento. Quando o trabalho for de auditoria, o código
 de risco por processo (`<CódProcesso>.R<NN>`) vive em `acta-metodo-auditoria:programa-de-testes` e é
 outra coisa: aquilo identifica o risco dentro de um processo auditado, isto classifica qualquer risco
 dentro do vocabulário da casa. Os dois convivem, e a matriz de auditoria costuma ter as duas colunas.

@@ -17,7 +17,7 @@ o particular do planejamento estratégico, não o genérico da consultoria.
 > `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 
 Julgamento estratégico (que lente aplicar a uma pergunta de posicionamento, se a vantagem dura)
-**não se resolve aqui**. Carregue `acta-pensadores-de-negocios`, skill `lentes`. Esta skill trata da
+**não se resolve aqui**. Carregue `acta-pensadores-de-negocios:lentes`. Esta skill trata da
 sala: quem entra, o que recebe antes, o que sai escrito.
 
 ## O que esta skill entrega
@@ -143,7 +143,7 @@ próprio documento. Em cinco semanas não existe folga para consenso tácito mal
 | O que se decide no WS4 | `desdobramento-e-metas` |
 | O ritual depois que os workshops acabam | `painel-e-acompanhamento` |
 | Entrevistas, questionário e sondagem que antecedem tudo | `diagnostico-de-posicionamento` |
-| Que lente teórica aplicar a um julgamento competitivo | `acta-pensadores-de-negocios`, skill `lentes` |
+| Que lente teórica aplicar a um julgamento competitivo | `acta-pensadores-de-negocios:lentes` |
 | Identidade visual do deck, anonimização, checkpoint | `acta-way` |
 
 ## 7. O que faz um workshop falhar

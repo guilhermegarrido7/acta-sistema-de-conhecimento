@@ -4,5 +4,9 @@
   "description": "Construção e revisão de orçamento empresarial driver-based: premissas e drivers, orçamento de receita por quantidade e preço, despesa por natureza e folha, CapEx e depreciação, ciclo e consolidação multiunidade, e análise de variação com reprevisão.",
   "author": {
     "name": "ACTA Advisory"
-  }
+  },
+  "dependencies": [
+    "acta-way",
+    "acta-metodo-consultoria"
+  ]
 }

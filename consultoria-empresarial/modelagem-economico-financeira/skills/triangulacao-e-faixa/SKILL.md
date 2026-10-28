@@ -37,7 +37,7 @@ ENTERPRISE VALUE
 (−) Passivo de arrendamento                     (se capitalizado no capital investido)
 (−) Contingências prováveis
 (−) Mútuos e contas a pagar a sócios
-(−) Dividendos declarados e não pagos
+(−) Dividendos declarados e não pagos           (valor bruto; ver regra 5)
 (−) Participação de minoritários                (se houver, a valor)
 (+) Caixa e aplicações excedentes               (só o excedente; o operacional já está no EV)
 (+) Ativos não operacionais                     (imóvel não operacional, participações, depósitos judiciais)
@@ -45,7 +45,7 @@ ENTERPRISE VALUE
 = EQUITY VALUE
 ```
 
-Quatro regras que evitam os erros que mais aparecem:
+Cinco regras que evitam os erros que mais aparecem:
 
 1. **Coerência com o capital investido.** Se o arrendamento foi capitalizado no capital investido,
    ele sai aqui. Se não foi capitalizado (o aluguel ficou na despesa), ele **não** sai aqui; senão o
@@ -55,6 +55,14 @@ Quatro regras que evitam os erros que mais aparecem:
    indenização específica. Diga isso explicitamente.
 4. **A ponte é a base do CFDF.** *Cash-free debt-free* é exatamente esta conta, e ela precisa estar
    pronta e reconciliada antes da negociação de mecanismo de preço.
+5. **Dividendo declarado e não pago é item assemelhado a dívida**, inclusive o aprovado até
+   31/12/2025 para aproveitar a transição da Lei 15.270/2025 (lucros apurados até 2025, pagos nos
+   termos do ato de aprovação: Lei 9.250/1995, art. 6º-A, § 3º, e art. 16-A, § 1º, XII) e o
+   aprovado até 31/01/2026 sob a liminar das ADIs 7.912 e 7.914 (verificar estado). É obrigação da
+   sociedade com os sócios e sai da ponte pelo valor bruto. A retenção de 10% na fonte, sobre o
+   total do mês quando a mesma sociedade paga mais de R$ 50 mil ao mesmo sócio pessoa física
+   (art. 6º-A), é imposto do acionista: muda o líquido do vendedor, não o EV nem o equity value.
+   Ver `impostos-e-prejuizos-fiscais`, reference `transicao-tributaria-2026-2033.md`.
 
 Apresente a ponte como um slide próprio. É onde o vendedor entende por que o "valor da empresa" não é
 o que ele recebe, conversa que é melhor ter no valuation do que na assinatura.

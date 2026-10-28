@@ -118,10 +118,17 @@ justificativa vive na parte 1.
 O que faz o estudo ter método é aplicar **os mesmos critérios a todas as transações**. Defina-os no
 começo, conforme o setor, e julgue cada deal por eles. No padrão que tem funcionado:
 
-1. **Posição monopolística ou defensiva regional**: concessão exclusiva, licença escassa, barreira
-   geográfica.
-2. **Certificação ou ativo regulatório**: crédito ambiental, habilitação, credenciamento.
+1. **Posição defensiva regional**: barreira geográfica ou escala eficiente no mercado local (fonte de
+   vantagem competitiva), concessão exclusiva ou licença escassa (barreira regulatória).
+2. **Certificação ou ativo regulatório** (tailwind regulatório): crédito ambiental, habilitação,
+   credenciamento.
 3. **Avenidas de monetização ainda não refletidas no EBITDA corrente.**
+
+Sobre o rótulo: só escala, recurso exclusivo, lock-in e as demais fontes de Koller, Goedhart e
+Wessels são vantagem competitiva (ver a régua em `teaser`, Bloco 7). Concessão, licença,
+certificação e crédito regulatório são tailwinds regulatórios: sustentam prêmio enquanto a norma
+vigorar, e o estudo os apresenta com a norma e o prazo. O julgamento pelos três critérios não muda;
+muda o nome com que cada vantagem chega ao comprador.
 
 E a leitura que decorre:
 

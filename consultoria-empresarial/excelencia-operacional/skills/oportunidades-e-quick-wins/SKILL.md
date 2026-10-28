@@ -5,10 +5,10 @@ description: Redija as oportunidades de melhoria na tabela de seis colunas e pri
 
 # Oportunidades e quick wins
 
-Carregue `acta-way` antes desta skill: convenções de entregável, identidade visual e o protocolo de
-checkpoint valem aqui e **não** são repetidos. O método de prática (diagnóstico, priorização,
-construção de caso de ganho) virá de `acta-metodo-consultoria`; enquanto esse plugin for esqueleto,
-o que esta skill assume dele está dito aqui.
+Carregue `acta-way:checkpoint` antes desta skill; `acta-way:convencoes-de-entregavel` e
+`acta-way:identidade-visual` ao produzir o entregável. Valem aqui e **não** são repetidos. O método de
+prática (diagnóstico, priorização, construção de caso de ganho) está em `acta-metodo-consultoria`, que
+este plugin não exige instalado: o que esta skill assume dele está dito aqui.
 
 A matéria-prima vem de `coleta-e-diagnostico` (a leitura bruta de gargalos e a separação
 sistema × fora de sistema). O destino é o slide de fluxo de `fluxo-e-regras-de-negocio` e a folha 4

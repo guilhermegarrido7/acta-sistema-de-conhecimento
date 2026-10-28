@@ -5,7 +5,8 @@ description: Converta o dado contábil societário na visão gerencial que respo
 
 # Reclassificação gerencial
 
-Carregue `acta-metodo-consultoria` antes desta skill, e só reclassifique base que passou por
+Carregue `acta-metodo-consultoria:mapeamento-as-is` antes desta skill (a base reconstruída a partir
+do balancete), e só reclassifique base que passou por
 `qualidade-e-validacao`. Reclassificar base não validada é construir a visão gerencial sobre número
 que não fecha.
 

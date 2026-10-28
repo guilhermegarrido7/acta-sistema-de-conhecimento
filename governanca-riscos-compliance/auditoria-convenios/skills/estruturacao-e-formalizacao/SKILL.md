@@ -5,7 +5,7 @@ description: Teste a estruturação do convênio: documentação exigida, valida
 
 # Estruturação e formalização do convênio
 
-Carregue `acta-metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
+Carregue `acta-metodo-auditoria:metodo-auditoria` antes desta skill: as regras invioláveis, a doutrina do número
 exato e a regra R8 valem aqui integralmente e não são repetidas.
 
 Elos 1, 2, 3 e 4 do ciclo (`ciclo-do-convenio` §2). Blocos **CNV.01** a **CNV.04**.

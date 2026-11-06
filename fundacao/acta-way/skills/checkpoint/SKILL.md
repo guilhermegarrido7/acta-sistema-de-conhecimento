@@ -20,6 +20,8 @@ o arquivo.
 `~~controle/` guarda o `CHECKPOINT.md` (estado consolidado), `Sessoes/` (log append-only, uma entrada
 por sessão) e o `APRENDIZADOS.md`. **Arquivo em `Sessoes/` nunca é editado depois de escrito**:
 corrigiu, nova entrada. Decisão metodológica fica na entrada de sessão e é indexada no `CHECKPOINT.md`.
+Quando a decisão responde a um bloco de matriz de decisões de uma skill (ID como `CC-04`), use
+`references/TEMPLATE-registro-de-decisao.md`: a skill guarda as opções, o checkpoint guarda a escolha.
 
 Detalhe: `references/contexto-e-estrutura.md` — carregue quando for montar a pasta ou explicar o
 protocolo.
@@ -165,6 +167,7 @@ Detalhe: `references/metodologia-e-conformidade.md` — carregue quando precisar
 | `references/TEMPLATE-CHECKPOINT.md` | estado consolidado do engajamento, com os dois campos de lembrete diário na seção 0 |
 | `references/TEMPLATE-entrada-de-sessao.md` | uma por sessão de trabalho |
 | `references/TEMPLATE-APRENDIZADOS.md` | lição reutilizável |
+| `references/TEMPLATE-registro-de-decisao.md` | decisão que responde a um bloco de matriz de decisões |
 | `references/TEMPLATE-CLAUDE.md` | raiz do engajamento, carregado automaticamente |
 
 ---

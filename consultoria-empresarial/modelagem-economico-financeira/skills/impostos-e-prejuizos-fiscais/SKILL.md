@@ -220,6 +220,8 @@ perpetuidade é erro.
 6. Os red flags, com o que cada um exige de documento.
 7. O calendário da transição tributária aplicado ao modelo, ano a ano, com a fonte e a data da
    alíquota de referência usada.
+8. A confirmação de que o `t` do custo da dívida segue o mesmo regime da linha de impostos
+   ([references/matriz-de-decisoes.md](references/matriz-de-decisoes.md), IM-01).
 
 ## Próximo passo
 

@@ -158,6 +158,10 @@ Nota do template: o múltiplo terminal a usar **é o de regime estacionário do 
 que o alvo persegue na transação. Confundir os dois embute o prêmio da venda dentro do próprio
 valor, em dupla contagem.
 
+Duas regras práticas: perpetuidade e múltiplo de saída usam o **mesmo horizonte**, e o múltiplo só
+vai ao deck com fonte, data e amostra documentadas. Fonte, peso e escolha de `g`:
+[references/matriz-de-decisoes.md](references/matriz-de-decisoes.md) (VT-01 a VT-03).
+
 ## Os testes de coerência
 
 Rode todos antes de aceitar o terminal. É o que distingue um valor terminal de um número.

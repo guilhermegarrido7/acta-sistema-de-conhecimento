@@ -67,9 +67,9 @@ O que pode dar errado e o que fazer se der.
 
 Índice. O registro completo, com justificativa e contrapartida, está na entrada de sessão indicada.
 
-| ID | Data | Decisão | Registrada em |
-|---|---|---|---|
-| DM-01 | `{{dd/mm/aaaa}}` | `{{decisão em uma linha}}` | `Sessoes/{{arquivo}}` |
+| ID | Data | Matriz | Decisão | Reabrir se | Registrada em |
+|---|---|---|---|---|---|
+| DM-01 | `{{dd/mm/aaaa}}` | `{{skill · ID do bloco, ou —}}` | `{{decisão em uma linha}}` | `{{evento}}` | `Sessoes/{{arquivo}}` |
 
 ### Decisões pendentes
 

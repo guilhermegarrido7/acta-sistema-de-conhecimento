@@ -34,7 +34,7 @@ mid-market fechado no Brasil.
 | `valor-terminal` | 10 | Mecânica do valor terminal e da convergência do spread ROIC-WACC ao fim do período de vantagem competitiva. |
 | `triangulacao-e-faixa` | 11 | Triangulação da faixa de valor entre DCF, múltiplos de mercado e transações precedentes (football field). |
 | `revisao-de-modelo` | 12 | Revisão final do modelo antes da entrega. |
-| `relatorio-de-valuation` | 13 | Estrutura, identidade visual (paleta, tipografia, títulos-asserção) e tom do relatório de valuation em PowerPoint, capítulo a capítulo. |
+| `relatorio-de-valuation` | 13 | Arquitetura do relatório em PowerPoint (quatro capítulos e apêndice, títulos por tópico com linha de mensagem), geometria do template, mapa modelo → slides e manifesto de release automatizado (`scripts/manifesto_release.py`). |
 
 ## Fluxo típico
 
@@ -43,6 +43,42 @@ mid-market fechado no Brasil.
 `projecao-e-cenarios` → `saude-de-credito` → `valor-terminal` → `triangulacao-e-faixa` →
 `revisao-de-modelo` → `relatorio-de-valuation`, com `fundamentos-koller` carregado sob demanda em
 qualquer etapa que precise do conceito exato.
+
+## Matrizes de decisão
+
+As skills funcionam como oráculo: cada decisão discricionária da etapa tem um bloco em
+`skills/<skill>/references/matriz-de-decisoes.md`, com a pergunta, as alternativas, quando usar cada
+uma, o efeito, o risco, a recomendação padrão e exemplos anonimizados. **O analista decide** e
+registra a escolha no checkpoint do engajamento (`acta-way:checkpoint`,
+`TEMPLATE-registro-de-decisao.md`), citando o ID do bloco.
+
+| Prefixo | Skill |
+|---|---|
+| CC | `custo-de-capital` |
+| RC | `reorganizacao-contabil` |
+| QR | `qualidade-de-resultados` |
+| RO | `diagnostico-de-roic` |
+| CG | `capital-de-giro-e-capex` |
+| IM | `impostos-e-prejuizos-fiscais` |
+| PC | `projecao-e-cenarios` |
+| VT | `valor-terminal` |
+| TF | `triangulacao-e-faixa` |
+| FK | `fundamentos-koller` |
+| RV | `relatorio-de-valuation` |
+
+Três regras de manutenção:
+
+1. Alternativa nova só entra numa matriz depois de aparecer num projeto real e ser validada pelo
+   sócio responsável.
+2. Particularidade do modelo de negócio (driver de receita, CapEx por unidade física) não entra em
+   matriz: fica no checkpoint do engajamento.
+3. O exemplo registrado cita o caso pelo setor (`casos/`), nunca pelo nome, e sem números do cliente.
+
+## Casos
+
+| Caso | Perfil |
+|---|---|
+| [`casos/caso-a.md`](casos/caso-a.md) | Rede regional de mídia exterior digital, mid-market, venda a comprador estratégico |
 
 ## Convencoes
 

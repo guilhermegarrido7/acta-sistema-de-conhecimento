@@ -186,6 +186,12 @@ Sinais de que o EBITDA reportado já é frágil antes de qualquer ajuste:
 3. A lista de red flags de qualidade de resultados, com a leitura de cada uma.
 4. **A lista dos ajustes que você recomendou NÃO fazer**, e por quê. Tem valor duplo: protege o
    mandato e mostra ao vendedor que a normalização foi analítica.
+5. A base do EBITDA sobre a qual o múltiplo é aplicado, igual à da fonte do múltiplo.
+
+## Matriz de decisões
+
+Base do EBITDA do múltiplo e receita com risco de descontinuidade:
+[references/matriz-de-decisoes.md](references/matriz-de-decisoes.md).
 
 ## Próximo passo
 

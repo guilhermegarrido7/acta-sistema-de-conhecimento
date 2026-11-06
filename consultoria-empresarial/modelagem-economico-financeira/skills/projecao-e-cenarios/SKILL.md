@@ -129,7 +129,7 @@ natureza, e é obrigação do oráculo dizer isso, mesmo que contrarie a expecta
 
 ## Passo 5: cenários que informam
 
-O modelo da casa tem seletor de cenário (otimista / base / pessimista) por driver. Três regras para
+O modelo da casa tem seletor de cenário (otimista / base / pessimista) por driver. Cinco regras para
 que isso valha algo:
 
 **1. Cenário é combinação coerente, não deslocamento paralelo.** Somar dois pontos percentuais em
@@ -144,6 +144,13 @@ não gosta de ver, porque é o que o comprador vai construir sozinho. Construa v
 **3. Separe cenário de sensibilidade.** Sensibilidade move uma variável (WACC, `g`, múltiplo) e
 mostra a derivada. Cenário move o conjunto operacional de forma correlacionada. As duas coisas
 aparecem no deck, em lugares diferentes, e confundi-las faz parecer que há mais análise do que há.
+
+**4. Atingir meta (Goal Seek) só como caso reverso.** Ajustar uma premissa até o modelo chegar a um
+valor-alvo responde "o que precisa ser verdade para valer X". O resultado só vira premissa de cenário
+depois de validado contra histórico, capacidade, benchmark e plano comercial (matriz PC-01).
+
+**5. Cenário do comprador com sinergia em linha própria.** Sinergia embutida em driver operacional
+some da vista de quem negocia o preço (matriz PC-02).
 
 ### O que merece cenário próprio, em mid-market
 
@@ -192,6 +199,13 @@ um número inicial menor.
 5. Os três cenários como histórias coerentes, com o que muda em cada um e por quê.
 6. A confirmação de que não há dupla contagem entre run-rate e crescimento projetado.
 7. Onde a sua projeção divergiu do plano do vendedor, e o número que sustenta a divergência.
+8. O registro no checkpoint de cada decisão da matriz, com o ID do bloco.
+
+## Matriz de decisões
+
+Atingir meta e sinergias no cenário do comprador:
+[references/matriz-de-decisoes.md](references/matriz-de-decisoes.md). O driver de receita específico
+do negócio não entra na matriz; fica no checkpoint do engajamento.
 
 ## Próximo passo
 

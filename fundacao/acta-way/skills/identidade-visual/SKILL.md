@@ -79,8 +79,8 @@ e o cliente vê isso antes de você.
 
 ## 4. Reconciliação com o tema do PowerPoint
 
-A skill `relatorio-de-valuation`, do plugin de modelagem econômico-financeira, documenta os tokens
-extraídos do tema "ACTA" instalado no PowerPoint da casa. Eles **divergem** dos valores da web em
+Os tokens do tema "ACTA" instalado no PowerPoint da casa estão nas seções 4.1 e 4.2, extraídos do
+template oficial de valuation. Eles **divergem** dos valores da web em
 dois pontos, e a divergência é real, não erro de apuração de nenhum dos dois lados.
 
 | Item | Web (esta skill) | Tema do PowerPoint | Qual vale |
@@ -106,13 +106,42 @@ então a escolha entre eles é de consistência, não de acessibilidade. **A reg
 dois mundos**: nenhum dos temas autoriza texto turquesa sobre fundo claro.
 
 Quando o tema do PowerPoint for revisto para convergir com a web, esta tabela é o lugar de registrar
-a mudança, e a `relatorio-de-valuation` passa a apontar para cá. Até lá, as duas versões coexistem
-declaradas.
+a mudança. Esta seção é a fonte única dos tokens do tema; `relatorio-de-valuation` aponta para cá e
+guarda só a geometria e os componentes do relatório.
+
+### 4.1 Tokens do tema "ACTA" no PowerPoint
+
+| Papel | Hex |
+|---|---|
+| Teal primário: título, régua, fundo de capa e divisor | `#167D73` |
+| Navy: cabeçalho de tabela, série secundária | `#334E6F` |
+| Slate: fonte, nota, copyright | `#44546A` |
+| Cinza claro e fundo de bloco | `#E7E6E6`, `#F2F5F8` |
+| Azuis de série, nesta ordem | `#87AFC7`, `#A3BFD9`, `#C5D3E8` |
+| Verde de apoio, uso pontual | `#5A982C` |
+| Texto de corpo | `#262626` |
+
+Tipografia do tema: **Rawline** no corpo e **Rawline SemiBold** em título e ênfase.
+
+### 4.2 Armadilhas do tema que quebram o deck
+
+1. **Peso pela família, não pelo negrito.** Os títulos têm `b="0"`: o peso vem de
+   `Rawline SemiBold`. Por script, use `font.name = "Rawline SemiBold"` com `bold = False`. Ligar o
+   negrito sobre a SemiBold engrossa duas vezes.
+2. **`clrMap` do master.** `tx1` aponta para o tom escuro do tema, que é o teal. Texto que herda
+   `tx1` sem cor explícita sai teal no corpo. Corpo de texto e de tabela recebe `#262626` explícito.
+3. **Tabelas "No Style, No Grid".** O estilo da tabela não formata nada: cabeçalho, borda e
+   preenchimento vão célula a célula.
+4. **Sem arredondamento novo.** O layout de sumário do template de valuation traz `roundRect`: é
+   herança do template e fica. Forma nova em slide de conteúdo é retangular.
+5. **Montar a partir do template**, removendo os slides de exemplo. Réguas, logo e copyright vivem
+   nos layouts.
 
 ## 5. Uso por suporte
 
 **PowerPoint.** Slide 16:9. Título no topo, faixa de largura total. Rodapé fixo com fonte e nota.
-Divisor de capítulo em fundo petróleo com o numeral e o título, sem conteúdo analítico. Nenhum
+Divisor de capítulo no layout de divisor do tema (teal no tema PowerPoint; petróleo fora dele), com o
+numeral e o título, sem conteúdo analítico. Nenhum
 elemento fora do placeholder do layout: caixa de texto solta é o que quebra o deck na primeira
 revisão.
 

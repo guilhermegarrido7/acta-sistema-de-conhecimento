@@ -280,5 +280,6 @@ Principais adaptações ao framework Koller para empresas mid-market brasileiras
 | `references/estrutura_dcf_wacc.md` | WACC; valor terminal; APV; modelos de equity |
 | `references/ma_e_multiplos.md` | Transações precedentes; múltiplos; sinergias; retorno sobre preço pago |
 | `references/contexto_brasil_cpc.md` | CPC 06 R2, CPC 33, CPC 15; CPC 51 (DRE por categorias e MPM, a partir de 2027); EBITDA normalizado; mid-market BR |
+| `references/matriz-de-decisoes.md` | Índice das matrizes de decisão do plugin; convenção de desconto (FK-01) |
 
 **Regra de leitura:** Carregue apenas o(s) arquivo(s) relevante(s) para a tarefa específica. Para uma análise histórica de ROIC, carregue `noplat_detalhado.md` + `capital_investido.md`. Para due diligence de M&A, carregue `ma_e_multiplos.md` + `contexto_brasil_cpc.md`.

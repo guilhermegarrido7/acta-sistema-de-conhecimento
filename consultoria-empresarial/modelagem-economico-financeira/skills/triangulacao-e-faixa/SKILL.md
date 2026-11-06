@@ -64,6 +64,11 @@ Cinco regras que evitam os erros que mais aparecem:
    (art. 6º-A), é imposto do acionista: muda o líquido do vendedor, não o EV nem o equity value.
    Ver `impostos-e-prejuizos-fiscais`, reference `transicao-tributaria-2026-2033.md`.
 
+6. **Mesma data em tudo.** O EV, a dívida líquida e cada item da ponte estão na mesma data. EV na
+   data-base anual e dívida do último balancete é o erro mais comum, e bloqueia o release em
+   `revisao-de-modelo`. Como alinhar: matriz TF-01. Item não operacional que fica fora da ponte
+   tem registro com motivo (TF-02).
+
 Apresente a ponte como um slide próprio. É onde o vendedor entende por que o "valor da empresa" não é
 o que ele recebe, conversa que é melhor ter no valuation do que na assinatura.
 
@@ -165,6 +170,9 @@ O modelo da casa traz quatro metodologias: **transações precedentes · múltip
 | DCF | Da sensibilidade WACC × `g`, ou dos cenários | **Escolha uma das duas e diga qual.** Misturar cenário operacional com sensibilidade de taxa produz uma faixa que ninguém sabe interpretar |
 | DCF otimista | Cenário otimista | Deixe claro que é cenário, não caso base |
 
+**Faixa de ±% fixo sobre o ponto central** é convenção de apresentação, não método. Use só rotulada
+como convenção e acompanhada da sensibilidade WACC × `g`, que é item mínimo do modelo (matriz TF-03).
+
 ### Regras de apresentação
 
 - **Ordem fixa**, da metodologia mais ancorada em mercado à mais específica do alvo, ou o inverso,
@@ -219,7 +227,8 @@ número.
 Consequência prática para o valuation: **o valuation entregue ao vendedor é o standalone com
 melhorias**, e a sinergia é tratada como o que explica por que um comprador pagaria acima da faixa.
 Colocar sinergia dentro do caso base infla o valuation e cria expectativa que o processo não
-sustenta.
+sustenta. Quando o mandato pedir também o cenário do comprador, modele-o à parte, com a sinergia em
+linhas próprias, e mostre quanto dela o preço transfere ao vendedor (matriz TF-04).
 
 Ver plugin de M&A, `segmentacao-de-compradores`: comprador diferente tem sinergia diferente, e é
 isso que define a lista de abordagem.
@@ -234,6 +243,12 @@ isso que define a lista de abordagem.
 6. Prêmio de controle e desconto de iliquidez: se aplicados, onde e com que argumento; se não, por
    que não.
 7. A separação standalone / com melhorias / com sinergias, e o que vai ao vendedor.
+8. O registro no checkpoint de cada decisão da matriz, com o ID do bloco.
+
+## Matriz de decisões
+
+Data da ponte, itens não operacionais, construção da faixa e standalone vs. sinergias:
+[references/matriz-de-decisoes.md](references/matriz-de-decisoes.md).
 
 ## Próximo passo
 

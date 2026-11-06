@@ -44,8 +44,10 @@ Ke = Rf + β × ERP + CRP + prêmio de porte + prêmio de iliquidez
 ```
 
 Os dois últimos termos são o que separa valuation de empresa fechada mid-market de valuation de
-listada. Ignorá-los produz um Ke baixo demais e um valor alto demais, e é o erro que a diligência do
-comprador corrige na direção contrária ao interesse do vendedor.
+listada. **A decisão sobre eles é obrigatória e documentada; a aplicação, não.** Omitir em silêncio é
+o erro que a diligência do comprador ataca primeiro. Não aplicar, com fonte e argumento, é uma
+escolha defensável. As alternativas, as fontes e os testes estão em
+[references/matriz-de-decisoes.md](references/matriz-de-decisoes.md) (CC-04 e CC-05).
 
 ### Taxa livre de risco
 
@@ -140,9 +142,12 @@ Existe, é contestado, e importa muito no porte de mandato.
 - **Contra**: parte do efeito pode ser iliquidez, viés de sobrevivência ou má especificação do
   modelo, e o efeito enfraqueceu em períodos recentes.
 
-**Recomendação prática:** inclua, com fonte e data, e trate como componente explícito e discutível em
-vez de embutido. Um alvo com receita de R$ 100 milhões não tem o mesmo custo de capital de uma
-listada de R$ 10 bilhões, e negar isso é menos defensável do que assumir o prêmio declaradamente.
+**Recomendação padrão:** não somar prêmio ad hoc à taxa e tratar o risco de porte nos fluxos e nos
+cenários, com fundamento em Damodaran (2015) e McKinsey (2012). O contraponto é real: a própria
+McKinsey (2005) registra custo historicamente maior abaixo de cerca de US$ 500 milhões de valor de
+mercado. Por isso a pergunta que o analista responde no checkpoint é "onde está o risco de porte?",
+e não "aplico ou não?". Se aplicar, use prêmio por decil com o ERP da mesma família de calibração e
+declare o decil. Fontes e alternativas: matriz CC-04.
 
 ### Prêmio de iliquidez (DLOM)
 
@@ -161,6 +166,11 @@ produzem faixas amplas. Peça ao usuário a convenção da casa e a fonte. E not
 **sell-side** o DLOM trabalha contra o vendedor: aplicá-lo generosamente reduz o preço que você
 defende, então ele precisa ser dimensionado com o mesmo rigor dos demais componentes, não usado como
 folga de conservadorismo.
+
+Damodaran não recomenda abandonar o desconto: critica o percentual fixo e defende que ele varie com
+a empresa (caixa, saúde financeira, chance de abertura de capital). Em transação de controle de 100%
+do capital com comprador definido, não aplicar é defensável pelo contexto da transação. Critérios e
+fontes: matriz CC-05.
 
 ## Custo da dívida
 
@@ -213,6 +223,10 @@ Duas notas técnicas:
   use a estrutura-alvo dos comparáveis e evite o problema.
 - **Coerência com o beta.** A estrutura usada na realavancagem tem de ser a mesma usada nos pesos.
   Realavancar para 30% de dívida e pesar o WACC com 50% é incoerência interna.
+- **Escudo fiscal zero.** No presumido ou com prejuízo fiscal amplo, a dívida não gera escudo, e a
+  alavancagem não deveria levar o WACC abaixo do custo desalavancado. Calcule o Ku e compare; se o
+  WACC ficar abaixo, justifique ou adote o Ku (matriz CC-07).
+- **Kd equivalente em R$ abaixo do soberano** indica rota mal calibrada (matriz CC-01).
 
 ## WACC constante ou variável no tempo
 
@@ -253,6 +267,14 @@ matriz desloca a conversa para onde dentro do intervalo, que é uma conversa mel
 5. A estrutura de capital adotada, e a confirmação de que é a mesma da realavancagem.
 6. A checagem nominal vs. real das três variáveis.
 7. A sensibilidade, com o intervalo defensável e o ponto central.
+8. O registro de cada decisão da matriz no checkpoint do engajamento, com o ID do bloco.
+
+## Matriz de decisões
+
+As decisões discricionárias desta etapa (moeda, Rf, ERP, porte, DLOM, Kd, estrutura de capital com
+escudo zero, risco-país) estão em [references/matriz-de-decisoes.md](references/matriz-de-decisoes.md),
+com alternativas, testes, fontes e exemplos anonimizados. A skill informa; o analista decide e
+registra.
 
 ## Próximo passo
 

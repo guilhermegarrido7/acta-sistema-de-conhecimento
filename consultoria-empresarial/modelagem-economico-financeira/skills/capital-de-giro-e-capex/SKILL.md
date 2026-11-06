@@ -184,6 +184,11 @@ do aluguel a valor de mercado em perpetuidade (ver `qualidade-de-resultados`, fa
    incremental, ramp-up, margem.
 6. Os red flags encontrados, com a leitura de cada um.
 
+## Matriz de decisões
+
+Caixa mínimo operacional: [references/matriz-de-decisoes.md](references/matriz-de-decisoes.md). O
+CapEx unitário por driver físico é do modelo de negócio e fica no checkpoint do engajamento.
+
 ## Próximo passo
 
 `projecao-e-cenarios`, onde esses cronogramas se amarram aos drivers de receita e à taxa de

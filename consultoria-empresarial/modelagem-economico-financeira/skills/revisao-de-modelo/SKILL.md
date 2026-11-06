@@ -188,7 +188,18 @@ estáveis. Se não estão, a fórmula de valor terminal não se aplica. Ver `val
 [ ] Prêmio de controle não somado sobre múltiplo de transação precedente
 [ ] Benefício fiscal temporário não embutido na perpetuidade
 [ ] CapEx terminal ≈ depreciação terminal
+[ ] GATE: EV, dívida líquida e itens da ponte na MESMA data (triangulacao-e-faixa, TF-01)
+[ ] GATE: capital investido e NOPAT na mesma base no histórico e no projetado (reorganizacao-contabil, RC-01/RC-02)
+[ ] Item não operacional fora da ponte tem registro com motivo (TF-02)
+[ ] Com escudo fiscal zero, WACC comparado ao custo desalavancado (custo-de-capital, CC-07)
+[ ] Kd equivalente em R$ não fica abaixo do soberano (CC-01)
+[ ] Perpetuidade e múltiplo de saída no mesmo horizonte; múltiplo com fonte documentada (valor-terminal, VT-01/VT-02)
+[ ] Premissa calibrada por Atingir meta passou nos quatro testes antes de virar cenário (projecao-e-cenarios, PC-01)
+[ ] Sensibilidade WACC × g existe; faixa de ±% fixo rotulada como convenção (TF-03)
+[ ] Cada decisão discricionária tem registro no checkpoint com o ID da matriz
 ```
+
+Item marcado **GATE** bloqueia o release: o modelo não sai da casa com ele aberto.
 
 ---
 
@@ -262,6 +273,16 @@ O entregável desta skill:
    atacar, e onde vale reforçar a evidência antes.
 6. **O veredito**: o modelo está pronto para ir ao cliente, pronto com ressalvas declaradas, ou não
    está pronto.
+7. **O manifesto de release**, gerado pelo script de `relatorio-de-valuation`
+   (`scripts/manifesto_release.py`): hash do modelo e do deck, erros de fórmula, conciliação modelo ×
+   deck, diff contra a versão anterior, busca de resíduos e render. O veredito "pronto" exige o
+   manifesto sem pendência de gate.
+
+## Testes mínimos que não se pulam no cenário final
+
+Stress dos extremos, teste do payout e NOPAT top-down vs. bottom-up rodam **de novo sobre o modelo
+que vai ao cliente**, e não só sobre uma versão anterior. Mudança de cenário depois da revisão
+reabre esses três testes.
 
 ## Uma nota sobre precisão
 

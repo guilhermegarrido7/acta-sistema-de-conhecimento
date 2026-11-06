@@ -1,15 +1,15 @@
 ---
 name: relatorio-de-valuation
-description: Estruturar e produzir o relatório de valuation em PowerPoint na identidade visual ACTA, com capítulos, títulos-asserção, paleta, tipografia e convenções de tabela e gráfico. Acionar ao montar ou revisar o deck de valuation, ao definir a storyline, ou ao rodar o checklist de qualidade visual.
+description: Estruturar e produzir o relatório de valuation em PowerPoint no template ACTA, com quatro capítulos e apêndice, títulos por tópico com linha de mensagem, mapa modelo-slides e manifesto de release. Acionar ao montar ou revisar o deck de valuation, ao definir a storyline, ao conciliar números do deck com o modelo, ou ao rodar o checklist antes de entregar.
 ---
 
-# Relatório de valuation: a identidade visual e a arquitetura do documento
+# Relatório de valuation: a arquitetura do documento e o release
 
 ## Papel desta skill
 
-Direciona a estrutura, o tom e a identidade visual do relatório. Redige texto e monta slide quando
-pedido. Não inventa número: todo dado que aparece no relatório vem do modelo (skills desta pasta) ou
-de fonte citada. Esta skill organiza a apresentação, não o cálculo.
+Direciona a estrutura, o tom e a montagem do relatório. Redige texto e monta slide quando pedido.
+Não inventa número: todo dado que aparece no relatório vem do modelo (skills desta pasta) ou de
+fonte citada. Esta skill organiza a apresentação, não o cálculo.
 
 O relatório de valuation da ACTA segue um padrão de casa, testado em mandatos reais. Reaproveitá-lo
 integralmente é o objetivo; desviar da estrutura sem motivo é o erro mais comum.
@@ -17,201 +17,126 @@ integralmente é o objetivo; desviar da estrutura sem motivo é o erro mais comu
 ## O que o relatório é, e o que ele não é
 
 É o documento que **converte o modelo em argumento**. Cada capítulo tem um trabalho: situar o leitor
-(sumário), justificar por que a empresa cria valor (drivers), expor as premissas de forma auditável
-(premissas) e mostrar o número com a faixa de confiança em volta dele (resultados). Não é um dump de
-planilha em slide: toda tabela e todo gráfico está ali para sustentar uma frase específica do
-título.
+(sumário), justificar por que a empresa cria valor (companhia e drivers), expor as premissas de forma
+auditável (premissas), mostrar o número com a faixa em volta dele (resultados) e guardar o material
+técnico rastreável (apêndice). Não é um dump de planilha em slide: toda tabela e todo gráfico está
+ali para sustentar a linha de mensagem do slide.
 
-## Identidade visual ACTA
+## Identidade visual e template
 
-> Estes tokens foram extraídos de um deck de valuation real da casa. Reconcilie com
-> `acta-way:identidade-visual` quando essa skill for escrita. Por ora, esta é a fonte de verdade
-> para relatório de valuation.
-
-**Formato.** Slide widescreen 13,33 x 7,5 pol (16:9). Título no topo do slide (faixa de ~0,7 pol de
-altura, largura total, 20pt). Rodapé de fontes e notas fixo no fim do slide (texto pequeno, cinza).
-
-**Paleta (tema "ACTA" do PowerPoint):**
-
-| Papel | Hex | Uso |
-|---|---|---|
-| Cor primária da casa | `#167D73` (teal) | Títulos de destaque, chips numerados, barras de ênfase, texto-chave dentro de caixas de metodologia |
-| Navy secundário | `#334E6F` | Séries de gráfico secundárias, elementos de dados alternativos ao teal |
-| Azuis claros (sequência) | `#87AFC7` / `#A3BFD9` / `#C5D3E8` | Paleta sequencial para gráficos com múltiplas séries ou faixas |
-| Verde de apoio | `#5A982C` | Uso pontual: indicador positivo, nunca cor primária de gráfico |
-| Texto de corpo | `#262626` / `#333333` | Parágrafos e texto corrido |
-| Texto secundário / legendas | `#4A5560` | Texto de apoio dentro de cartões (ex.: linhas descritivas de transação) |
-| Notas e fontes | `#75787B` / `#777777` | Rodapé de fonte, notas de rodapé, texto de menor hierarquia |
-| Rótulo sobre fundo escuro | `#FFFFFF` | Texto dentro de chips/pills na cor primária |
-
-**Tipografia.** Fonte única da casa: **Rawline**, em pesos conforme o papel do texto: `Rawline
-SemiBold` para títulos de bloco, rótulos-chave e ênfase dentro de parágrafo; `Rawline` peso normal
-(referida como "Rawline (Body)") para corpo corrido. Nunca misturar com outra família tipográfica.
-
-**Divisores de capítulo.** Cada capítulo (numerado em algarismo romano: I., II., III., IV., ...)
-abre com um slide dedicado: numeral à esquerda, título do capítulo centralizado, fundo de capa
-da casa. Não existe conteúdo analítico nesse slide além do numeral e do título.
+- **Paleta, tipografia e armadilhas do tema PowerPoint** (Rawline SemiBold com `b="0"`, `clrMap`,
+  tabelas "No Style, No Grid"): `acta-way:identidade-visual`, seção 4. Não repita aqui.
+- **Template:** o template oficial de valuation da casa (`@@Template - Slide Valuation.pptx`). Ele
+  **não é versionado neste repositório**, que é público. Pergunte ao usuário o caminho; não use outro
+  deck como base.
+- **Layouts, grade em polegadas, componentes e densidade de tabela:**
+  [references/componentes-e-geometria.md](references/componentes-e-geometria.md).
 
 ## Estrutura de capítulos
 
-A ordem abaixo é o padrão de casa para um valuation completo (DCF + múltiplos + transações
-precedentes). Adapte a quantidade de slides por capítulo ao mandato; a ordem e a função de cada
-capítulo não mudam.
+Quatro capítulos de conteúdo e um apêndice padrão. Detalhe slide a slide em
+[references/arquitetura-do-relatorio.md](references/arquitetura-do-relatorio.md).
 
-### Abertura (antes do capítulo I)
+| Bloco | Conteúdo | Obrigatório |
+|---|---|---|
+| Abertura | Capa, Aviso legal, Sumário do valuation | Sim |
+| I. Sumário executivo | Um slide-síntese: metodologia, faixa e ponto central | Sim |
+| II. A Companhia e drivers de valor | Companhia e mercado, DRE histórica, normalização de EBITDA, capital investido, ROIC e duração da vantagem | Sim |
+| III. Premissas e observações | Metodologia, premissas macro, drivers da projeção, WACC, dívida e capital de giro | Sim |
+| IV. Resultados | DRE projetada, capital investido, FCFF, Sumário do valuation | Sim |
+| V. Apêndice | Sensibilidade WACC × g, ponte EV–equity com a data, decisões de custo de capital com fontes, premissas e fontes, cálculo por método, glossário | Cada item, quando existir no modelo |
+| Fechamento | Slide de encerramento da casa | Sim |
 
-1. **Capa**: nome do projeto/codinome do mandato, "Apresentação para [Administração / Comprador /
-   Comitê]", mês e ano.
-2. **Aviso legal**: três blocos fixos, sempre nesta ordem: *Natureza e finalidade do documento*
-   (para quem e para qual finalidade o relatório foi produzido), *Base de informações* (a ACTA não
-   assume responsabilidade independente pela verificação das informações recebidas do cliente),
-   *Limitações da valoração* (o valor reflete condições de mercado e informações disponíveis na
-   data; resultados futuros podem divergir). Fecha com bloco de contato do sócio responsável.
-3. **Sumário do valuation**: mapa de navegação do documento inteiro em um slide: uma linha por
-   capítulo (Sumário executivo / Drivers de valor / Premissas / Resultados), cada uma com uma frase
-   de uma linha do que aquele capítulo entrega. É o único lugar do documento que descreve a
-   estrutura em vez de argumentar um número.
+Adapte a quantidade de slides por capítulo ao mandato; a ordem e a função de cada capítulo não
+mudam. Omita o que não se aplica (marco regulatório, receita de terceiro), nunca Aviso legal, Sumário
+do valuation, Sumário executivo e o Sumário do valuation dos resultados.
 
-### Capítulo I: sumário executivo
+## Títulos: tópico padronizado e linha de mensagem
 
-Um único slide-síntese: título-asserção com a conclusão central do valuation, caixa lateral com a
-metodologia aplicada (ex.: DCF em dois estágios, ver `valor-terminal`), e uma barra de conclusão no
-rodapé do slide com a faixa de valor e o ponto central em uma frase corrida. Este é o slide que um
-leitor apressado lê sozinho e sai com a conclusão certa.
+O título do slide nomeia o tópico, não a conclusão. Padrão da casa em duas linhas:
 
-### Capítulo II: drivers de geração de valor
+```
+<Nome do capítulo>
+<Tópico do slide>
+```
 
-Sequência recomendada:
+Exemplo: "Premissas e observações / Custo médio ponderado de capital (WACC)". A lista de tópicos
+padrão por capítulo está em `references/arquitetura-do-relatorio.md`.
 
-1. **Framework**: o que é ROIC e por que ROIC x crescimento determina a criação de valor (ver
-   `fundamentos-koller`). Ilustrar com matriz 2x2 (ROIC alto/baixo x crescimento alto/baixo) e a
-   leitura de cada quadrante.
-2. **Duração da vantagem**: o Competitive Advantage Period: o que sustenta retorno acima do WACC ao
-   longo do tempo (ver `diagnostico-de-roic`, seção de CAP).
-3. **Benchmarking**: lista/tabela de comparáveis selecionados, com a fonte de cada um.
-4. **Leitura comparativa**: gráfico de ROIC e de crescimento do alvo contra os comparáveis, com
-   painel lateral "Análises e Perspectivas" interpretando a posição do alvo (por que está acima,
-   abaixo, ou na média, e nunca apenas mostrar o gráfico sem leitura).
-5. **A tese do alvo**: o que sustentou o ROIC observado historicamente e qual é o vetor de expansão
-   ou manutenção daqui para frente. Aqui a skill `projecao-de-mercado-e-equity-story` alimenta o
-   argumento.
+**A conclusão vai na linha de mensagem**, logo abaixo da régua do título ou no primeiro bullet do
+corpo: uma frase, com número e fonte, sem adjetivo. Exemplo de forma: "WACC de X% em reais nominais,
+com Ke pelo CAPM e Kd sintético; fontes na nota". O leitor que só lesse as linhas de mensagem sairia
+com o argumento completo.
 
-### Capítulo III: premissas
-
-Um slide por bloco de premissa, sempre no formato "o que se projeta + a lógica/fórmula + a tabela ou
-fonte que sustenta":
-
-- **Mercado/TAM**: indicador histórico e projetado (população, volume de mercado, ou o driver macro
-  relevante ao setor), com a fonte declarada.
-- **Receita e capacidade**: drivers de volume e preço por cenário (otimista/base/pessimista, ver
-  `projecao-e-cenarios`) e capacidade instalada por linha, com observação de gargalo ou expansão
-  planejada.
-- **Marco regulatório ou contratual**, quando existir uma condicionante externa relevante à receita
-  (licença, certificação, regime tributário específico): tabela de requisitos ou linha do tempo.
-- **Tributação**, quando o regime ou uma controvérsia tributária afeta o resultado projetado.
-- **Custos, despesas, CapEx e depreciação**: a lógica de escalonamento de cada linha (ver
-  `projecao-e-cenarios`, Passo 2) e a tabela de percentuais ou valores de referência.
-- **WACC**: tabela estruturada em duas colunas (Custo do Equity | Custo da Dívida) convergindo para
-  Estrutura de Capital e WACC final (ver `custo-de-capital`).
-- **Dívida, capital de giro e metodologia de valuation**: premissas de prazo médio, dívida líquida,
-  e o resumo dos três métodos aplicados (DCF, múltiplos de mercado, transações precedentes) com a
-  taxa/múltiplo de cada um.
-- **Normalização de EBITDA**: tabela ano a ano com EBITDA contábil, ajustes por família (não
-  recorrentes / pró-forma / contábeis / run-rate) e EBITDA normalizado resultante (ver
-  `qualidade-de-resultados`).
-- **Transações precedentes**: um cartão por transação (numerado), com adquirente/adquirida, valor,
-  EV, descrição do ativo em 2-3 linhas e o múltiplo EV/EBITDA resultante em destaque. Fechar com
-  disclaimer explícito do critério de seleção da amostra (ver skill `transacoes-precedentes` do
-  plugin de M&A).
-
-### Capítulo IV: resultados
-
-Sequência fixa:
-
-1. **DRE**: tabela histórico + projetado, com dois gráficos de coluna (ex.: receita e EBITDA).
-2. **Análise de ROIC**: tabela com EBIT, NOPAT, capital investido médio, ROIC, WACC e spread
-   ano a ano; gráfico de linha ROIC vs. WACC e gráfico de coluna do capital investido.
-3. **Capital investido e fundos investidos**: a reconciliação entre a ótica operacional e a ótica
-   de financiamento, com a identidade contábil explicitada linha a linha (ver `fundamentos-koller`,
-   seção 2) e a nota sobre a premissa de fechamento de balanço nos anos projetados.
-4. **Fluxo de caixa livre**: tabela do FCFF, dois gráficos (FCFF isolado e FCFF vs. EBITDA), e, se
-   o modelo usa dois estágios, uma caixa explicando por que o período de convergência foi incluído
-   (ver `valor-terminal`).
-5. **Sumário do valuation**: o slide mais denso do documento: tabela de cenário x método (DCF,
-   múltiplos, transações: conservador/base/otimista/média), tabela de sensibilidade (WACC x g), e
-   football field chart consolidando as faixas dos três métodos com nota de rodapé explicando a
-   origem de cada faixa (ver `triangulacao-e-faixa`).
-
-### Fechamento
-
-Slide de encerramento no padrão da casa (mesma família de capa do slide 1, sem conteúdo analítico).
-
-## Títulos-asserção
-
-Nenhum título de slide de conteúdo é um rótulo neutro ("ROIC", "WACC", "Transações precedentes"). Todo
-título é uma frase que já entrega a conclusão do slide; o leitor que só lesse os títulos do
-documento inteiro sairia com o argumento completo. Padrão:
-
-> `<Achado ou dado central> + <por quê / o que isso implica>`
-
-Exemplos do padrão (generalizados): "Dois drivers, uma equação: ROIC e crescimento são os
-principais agentes na determinação do valor da empresa"; "Peers globais evidenciam trajetória
-inevitável: [o padrão setorial observado]"; "[Fator X] sustentou ROIC N vezes acima do benchmark
-setorial". Esta é a mesma doutrina de título-asserção já usada nas skills `teaser` e
-`information-memorandum` do plugin de M&A: o vocabulário do documento de valuation e o do documento
-de venda devem soar como a mesma casa.
+Esta regra vale para o relatório de valuation. `teaser` e `information-memorandum`, do plugin de M&A,
+são material de venda e mantêm título-asserção.
 
 ## Convenções de tabela, gráfico e nota
 
-- **Tabela histórico + projetado**: anos históricos sem sufixo, anos projetados com sufixo `E`
-  (2026E, 2027E, ...). Nunca misturar formatos de casas decimais dentro da mesma coluna.
-- **Nota de rodapé numerada** quando uma cifra ou afirmação depende de fonte externa ou de um
-  cálculo não óbvio, em "Nota (1): ..." no rodapé do slide, nunca dentro do corpo do texto.
-- **Fonte sempre citada** no rodapé fixo do slide (canto inferior), mesmo quando repetida entre
-  slides consecutivos. Hierarquia de confiabilidade da fonte segue a mesma régua da skill
-  `transacoes-precedentes` (fato relevante > demonstração auditada > research > imprensa >
-  agregador).
-- **Disclaimer explícito** sempre que houver uma limitação de comparabilidade (amostra pequena,
-  comparável de escala diferente, dado estimado e não auditado). Declarar a limitação no próprio
-  slide é doutrina da casa; omitir para parecer mais robusto é o erro que a diligência do comprador
-  expõe primeiro.
-- **Caixa de metodologia**: bloco lateral com título em `Rawline SemiBold` na cor primária e
-  parágrafos curtos (2-4 frases) explicando o método antes de mostrar o número, e nunca apresentar um
-  resultado (ex.: valor terminal, WACC) sem a caixa que explica como ele foi obtido.
+- **Histórico + projetado**: anos históricos sem sufixo, projetados com `E` (2026E). Casas decimais
+  iguais dentro da mesma coluna.
+- **Nota de rodapé numerada** ("Nota (1): ...") quando a cifra depende de fonte externa ou de cálculo
+  não óbvio, no rodapé, nunca no corpo.
+- **Fonte sempre citada** no placeholder de fonte do layout, mesmo repetida entre slides. A ACTA não
+  é fonte: cite o dado primário (Companhia, órgão, autor). Padrões de nota, fonte e disclaimer:
+  [references/fontes-notas-e-disclosures.md](references/fontes-notas-e-disclosures.md).
+- **Disclaimer explícito** em toda limitação de comparabilidade (amostra pequena, escala diferente,
+  dado estimado). Omitir para parecer mais robusto é o que a diligência do comprador expõe primeiro.
+- **Caixa de metodologia** antes de todo resultado (valor terminal, WACC): título em Rawline SemiBold
+  na cor primária e 2 a 4 frases sobre o método.
+- **Faixa de ±% fixo** só rotulada como convenção, com a sensibilidade WACC × g no apêndice
+  (`triangulacao-e-faixa`, TF-03).
 
 ## Tom e voz
 
 Terceira pessoa institucional ("Este relatório foi elaborado...", nunca "nós elaboramos"). Denso e
-factual: números com casas decimais consistentes, nunca arredondamento que esconda o driver.
-Nenhum adjetivo sem número que o sustente ("crescimento robusto" não passa sem o número ao lado).
-Quando um resultado é ruim ou um dado é atípico, o relatório diz isso explicitamente em vez de
-suavizar, na mesma régua de honestidade que a skill `qualidade-de-resultados` aplica ao EBITDA
-normalizado vale para o texto do relatório inteiro.
+factual: casas decimais consistentes, nunca arredondamento que esconda o driver. Nenhum adjetivo sem
+número que o sustente. Resultado ruim ou dado atípico é dito explicitamente, na mesma régua de
+honestidade que `qualidade-de-resultados` aplica ao EBITDA normalizado.
+
+## Do modelo ao slide
+
+Todo número do deck tem célula de origem no modelo. O mapa de qual saída alimenta qual slide, e
+como registrá-lo para a conciliação automática:
+[references/mapa-modelo-para-slides.md](references/mapa-modelo-para-slides.md).
+
+## Release: o manifesto antes de entregar
+
+O deck não sai da casa sem o manifesto de release gerado por
+`scripts/manifesto_release.py`: hash do modelo e do deck, erros de fórmula, conciliação modelo ×
+deck pelo mapa, diff contra a versão anterior, busca de resíduos, gate de data da ponte e render em
+PDF. Uso, parâmetros e leitura do resultado:
+[references/qa-e-release-pptx.md](references/qa-e-release-pptx.md).
+
+Antes de renderizar ou editar via COM, consultar `acta-way:ambiente-tecnico` (cópia de arquivo
+travado, instância do Office do usuário, retry de RPC).
 
 ## Checklist antes de entregar
 
-1. Todo título de slide de conteúdo é uma asserção, não um rótulo.
-2. Todo número que aparece em mais de um slide (ex.: WACC, faixa de valor, múltiplo aplicado) é
-   idêntico em todos os lugares onde aparece, na mesma verificação de coerência da skill
-   `transacoes-precedentes`, aplicada ao documento inteiro.
-3. Toda tabela e gráfico tem fonte no rodapé; toda cifra dependente de terceiro tem a fonte
-   citada, não "fontes diversas".
-4. Toda limitação relevante (amostra pequena, dado estimado, comparável parcialmente aderente) tem
-   disclaimer explícito no slide correspondente.
-5. A paleta e a tipografia (Rawline / Rawline SemiBold) são as únicas usadas no documento.
-6. O número de divisores de capítulo bate com o que o slide de "Sumário do valuation" prometeu.
-7. Antes de renderizar via COM, consultar `acta-way:ambiente-tecnico`, que lista armadilhas conhecidas de
-   geração de PPTX no ambiente Windows/OneDrive da casa.
+1. Todo slide de conteúdo tem título por tópico no padrão de duas linhas e linha de mensagem com
+   número e fonte.
+2. Todo número que aparece em mais de um slide (WACC, faixa, múltiplo, dívida líquida) é idêntico em
+   todos os lugares e bate com a célula do modelo (manifesto, conciliação).
+3. Toda tabela e gráfico tem fonte; nenhuma fonte é a ACTA; nenhuma é "fontes diversas".
+4. Toda limitação relevante tem disclaimer no slide.
+5. Paleta e tipografia do tema; nenhuma forma arredondada nova (o `roundRect` do layout de sumário é
+   herança do template, não padrão).
+6. Os divisores de capítulo batem com o Sumário do valuation.
+7. Apêndice com sensibilidade WACC × g, ponte com a data e as decisões de custo de capital com fonte.
+8. Manifesto de release sem pendência de gate.
+
+## Matriz de decisões
+
+Estrutura de capítulos (RV-01) e tipo de título (RV-02):
+[references/matriz-de-decisoes.md](references/matriz-de-decisoes.md).
 
 ## O que entregar
 
-1. O deck completo na estrutura de capítulos acima, com os slides efetivamente necessários ao
-   mandato (nem todo mandato tem marco regulatório ou receita de créditos de terceiro; omita o que
-   não se aplica, mas nunca pule Aviso legal, Sumário do valuation, Sumário executivo e o Sumário do
-   valuation final).
-2. O checklist acima, rodado e confirmado antes da entrega.
+1. O deck completo na estrutura acima, com os slides necessários ao mandato.
+2. O mapa modelo → slides preenchido.
+3. O manifesto de release, arquivado junto do deck em `~~entregaveis`.
 
 ## Próximo passo
 
-Nenhum. Este é o artefato final do mandato de valuation. Se o relatório expuser uma inconsistência
-no modelo, volte para `revisao-de-modelo` antes de corrigir o slide.
+Nenhum. Este é o artefato final do mandato de valuation. Se o relatório ou o manifesto expuser uma
+inconsistência no modelo, volte para `revisao-de-modelo` antes de corrigir o slide.

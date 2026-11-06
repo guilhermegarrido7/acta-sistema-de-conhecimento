@@ -52,6 +52,10 @@ Uma frase por decisão, no formato que registra o porquê e o preço:
 Sem o "descartamos" e o "aceitando que", quem chegar depois ou aceita cegamente ou reverte
 cegamente.
 
+Decisão que responde a um bloco de matriz de decisões de uma skill (ID como `CC-04`, `TF-01`) usa o
+formato completo de `TEMPLATE-registro-de-decisao.md`: opções avaliadas, escolha, fonte, aprovador,
+impacto e "reabrir se".
+
 ## 4. Pendências geradas
 
 | # | O quê | De quem | Até quando |

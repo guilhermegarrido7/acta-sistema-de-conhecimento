@@ -219,6 +219,13 @@ na frente do comprador.
    documento que sustenta a resposta na due diligence quando o comprador perguntar por que tal conta
    está onde está.
 4. As limitações: o que não foi possível classificar por falta de analítico.
+5. A confirmação de que histórico e projetado usam a mesma base de capital (bruta ou líquida) e de
+   NOPAT, e a decisão sobre arrendamentos registrada no checkpoint.
+
+## Matriz de decisões
+
+Base do capital investido, base do NOPAT histórico e arrendamentos (CPC 06 R2):
+[references/matriz-de-decisoes.md](references/matriz-de-decisoes.md).
 
 ## Red flags para levantar aqui
 

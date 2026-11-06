@@ -188,6 +188,13 @@ que o leitor não entende não convence.
 5. A tese de CAP: qual fonte de vantagem, por quantos anos, com que evidência documental, e os
    tailwinds regulatórios declarados à parte, com o risco de cada um.
 6. O resultado do teste de plausibilidade: as seis causas checadas, com veredito.
+7. **ROIC projetado** ano a ano, na mesma base de NOPAT e de capital do histórico, com margem × giro
+   e lucro econômico. É obrigatório no modelo; no deck, entra quando sustenta a tese ou o terminal.
+
+## Matriz de decisões
+
+Mínimo de ROIC no modelo e no deck, e a origem do RONIC do terminal:
+[references/matriz-de-decisoes.md](references/matriz-de-decisoes.md).
 
 ## Próximo passo
 

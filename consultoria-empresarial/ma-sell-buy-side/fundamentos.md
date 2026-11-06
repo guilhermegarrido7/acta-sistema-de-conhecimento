@@ -24,9 +24,9 @@ A ACTA opera assim porque o mid-market brasileiro castiga método frouxo de duas
 de comparáveis é pequena, e quatro transações bem julgadas costumam ser tudo o que existe. E o
 comprador do outro lado da mesa é frequentemente programático, com equipe que já leu cem materiais
 e que desmonta na primeira pergunta um múltiplo sem origem declarada ou um EBITDA sem base temporal.
-Contra esse leitor, a disciplina que atravessa as doze skills não é preciosismo: fonte por número,
-critério de julgamento declarado antes da tabela, e coerência verificada entre teaser, IM e deck de
-valuation antes de qualquer coisa sair da casa.
+Contra esse leitor, a disciplina que atravessa as quatorze skills não é preciosismo: fonte por
+número, critério de julgamento declarado antes da tabela, e coerência verificada entre proposta,
+contrato, teaser, IM e deck de valuation antes de qualquer coisa sair da casa.
 
 ## As referências
 

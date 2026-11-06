@@ -7,14 +7,17 @@ plugin: acta-ma-sell-buy-side
 
 ## O que é, e quando a ACTA é contratada para isso
 
-Um mandato de M&A conduz uma transação do início ao fim: abre o projeto e fixa suas convenções,
-constrói a tese setorial que decide em qual arquétipo o ativo vai ser precificado, levanta as
-transações precedentes, aplica o gate de prontidão antes de ir a mercado, produz o teaser pré-NDA,
-segmenta e prioriza compradores, escreve o information memorandum (IM), conduz a solicitação de
-informações, negocia a posição econômica ao longo do processo competitivo, coordena a due diligence
-com o data room aberto aos compradores e defende essa posição no contrato até o fechamento. O
-entregável não é um documento: é **o negócio fechado nas melhores condições disponíveis**, sustentado
-por material que resiste ao escrutínio do comprador.
+Um mandato de M&A começa antes da abertura formal: a proposta comercial define escopo, entregáveis,
+cronograma e honorários, e o contrato de prestação de serviços transforma essas condições em um
+instrumento coerente. Depois da contratação, o mandato conduz uma transação do início ao fim: abre o
+projeto e fixa suas convenções, constrói a tese setorial que decide em qual arquétipo o ativo vai ser
+precificado, levanta as transações precedentes, aplica o gate de prontidão antes de ir a mercado,
+produz o teaser pré-NDA, segmenta e prioriza compradores, escreve o information memorandum (IM),
+conduz a solicitação de informações, negocia a posição econômica ao longo do processo competitivo,
+coordena a due diligence com o data room aberto aos compradores e defende essa posição no contrato
+até o fechamento. As duas skills de contratação também atendem projetos autônomos de valuation. O
+entregável do mandato não é um documento: é **o negócio fechado nas melhores condições disponíveis**,
+sustentado por material que resiste ao escrutínio do comprador.
 
 O que distingue o método da casa é a disciplina do que vem antes da abordagem: **a primeira conversa
 com um comprador acontece uma vez.** Um comprador que recebe teaser com número frágil, pede o IM e
@@ -45,6 +48,8 @@ de proposta passa pela análise econômica da negociação antes da próxima.
 
 | # | Etapa | O que fecha a etapa |
 |---|---|---|
+| 0A | Proposta de M&A e valuation | O briefing aprovado, o escopo e os entregáveis definidos, as condições comerciais fechadas e a proposta sem placeholders ou referências herdadas |
+| 0B | Contrato de M&A e valuation | A proposta reconciliada com o contrato, os módulos econômicos e jurídicos completos e a minuta liberada para revisão jurídica e assinatura |
 | 1 | Convenções de projeto | A árvore de pastas numerada pela ordem do processo, nomenclatura datada e versionada, quarentena de legado e o codinome do projeto |
 | 2 | Estudo setorial | A tese em seis capítulos e o arquétipo em que o alvo será precificado — o múltiplo que o mandato vai perseguir |
 | 3 | Transações precedentes | A tabela defensável, com a lógica de inclusão e exclusão de cada deal como parte do entregável |

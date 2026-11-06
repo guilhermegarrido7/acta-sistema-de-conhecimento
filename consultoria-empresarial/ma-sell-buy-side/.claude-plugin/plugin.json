@@ -1,7 +1,7 @@
 {
   "name": "acta-ma-sell-buy-side",
-  "version": "1.1.0",
-  "description": "Assessoria em fusões e aquisições sell side e buy side, do estudo setorial ao closing: teaser, information memorandum, processo competitivo e propostas, due diligence e data room, negociação, SPA, fechamento e suporte ao PPA.",
+  "version": "1.2.0",
+  "description": "Assessoria em fusões e aquisições sell side e buy side, da proposta comercial e contratação ao closing: tese setorial, teaser, information memorandum, processo competitivo, due diligence, negociação, SPA, fechamento e suporte ao PPA, com contratação também aplicável a projetos de valuation.",
   "author": {
     "name": "ACTA Advisory"
   },

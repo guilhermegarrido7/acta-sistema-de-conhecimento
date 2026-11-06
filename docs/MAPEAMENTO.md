@@ -158,7 +158,7 @@ ACTA a mid-market brasileiro.
 | `acta-avaliacao-de-desempenho` | modelo-e-ciclo · competencias-e-metas · calibracao · feedback-e-pdi | 9-box; gestão por competências |
 | `acta-remuneracao-variavel` | elegibilidade · indicadores-e-metas · curva-de-pagamento · simulacao-e-custo · politica | Práticas de PLR e ILP |
 | `acta-modelagem-economico-financeira` | ✅ 14 skills | Koller/McKinsey; CPC/IFRS |
-| `acta-ma-sell-buy-side` | ✅ 12 skills, do estudo setorial ao closing | Prática sell-side e buy-side mid-market; CPC 15 (R1); Lei 12.529/2011 |
+| `acta-ma-sell-buy-side` | ✅ 14 skills, da proposta comercial ao closing | Contratação de M&A/valuation; prática sell-side e buy-side mid-market; CPC 15 (R1); Lei 12.529/2011 |
 | `acta-pesquisa-salarial` | ✅ 18 skills | Estatística de remuneração |
 
 ### Conceitos

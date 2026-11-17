@@ -1,6 +1,6 @@
 ---
 name: impostos-e-prejuizos-fiscais
-description: Direcionar o tratamento tributário no modelo: regime de apuração, alíquota efetiva, imposto corrente e diferido, prejuízo fiscal com a trava de 30%. Acionar ao definir a alíquota do modelo, ao encontrar prejuízo fiscal acumulado, ao projetar a transição do IBS e da CBS, ou ao conferir a linha de impostos.
+description: Direcionar o tratamento tribut├írio no modelo: regime de apura├º├úo, al├¡quota efetiva, imposto corrente e diferido, preju├¡zo fiscal com a trava de 30%. Acionar ao definir a al├¡quota do modelo, ao encontrar preju├¡zo fiscal acumulado, ao projetar a transi├º├úo do IBS e da CBS, ou ao conferir a linha de impostos.
 ---
 
 # Impostos e prejuízos fiscais: onde o mid-market brasileiro mais erra
@@ -165,19 +165,23 @@ giro:
 ## Transição tributária 2026–2033
 
 Calendário, fontes, perguntas ao cliente e roteiro de diligência estão na reference
-`transicao-tributaria-2026-2033.md` (posição em out/2026).
+`transicao-tributaria-2026-2033.md` (posição em 17/11/2026). Para classificar setor e operação,
+tratar aluguel, operação entre empresas do mesmo grupo e consórcio, e para a data de corte dos
+parâmetros, use a skill `reforma-tributaria`.
 
 **Regra de modelagem:** projete os tributos sobre a receita ano a ano pelo calendário legal e ponha
 o ano terminal no regime de 2033 (IBS e CBS plenos; ICMS, ISS, PIS e Cofins extintos; nenhum
 benefício de ICMS), mesmo que o horizonte explícito termine antes. Carga de hoje mantida até a
-perpetuidade é erro.
+perpetuidade é erro. Peça ao cliente o plano tributário até 2033: se o plano parar antes, o terminal
+usa o regime de 2033, e não a última alíquota do plano da empresa.
 
 - **2026** é teste (CBS 0,9%, IBS 0,1%), sem efeito econômico para quem cumpre as obrigações
   acessórias; PIS e Cofins seguem integrais (LC 214/2025, art. 348).
 - **2027**: a CBS substitui PIS e Cofins, o IPI vai a zero salvo Zona Franca e o Imposto Seletivo
-  começa (ADCT, art. 126). A alíquota de referência da CBS não estava fixada em 26/10/2026, e o
-  Senado tem até 15/12/2026: até lá, use faixa com fonte e data, nunca um número "oficial" que não
-  existe.
+  começa (ADCT, art. 126). A alíquota de referência da CBS foi calculada pelo TCU em 28/10/2026
+  (11,3%, ou 11,2% cobrada em 2027 e 2028), mas só vale depois da resolução do Senado, com prazo até
+  15/12/2026. Até lá, use o cálculo do TCU como caso base, com fonte, data e sensibilidade, e nunca
+  como número fixado.
 - **2029–2032**: ICMS e ISS caem a 9/10, 8/10, 7/10 e 6/10 da alíquota, os benefícios de ICMS caem
   junto, e o IBS sobe para repor (ADCT, art. 128).
 - O valor se move pelo **repasse** ao preço, pelo **crédito amplo** sobre as compras e pelo
@@ -205,7 +209,9 @@ perpetuidade é erro.
 - Parcelamento tributário não mencionado no balanço mas visível no razão ou nas certidões.
 - Certidão negativa de débitos ausente ou vencida no data room.
 - Distribuição de lucro superior ao lucro contábil acumulado, o que pode gerar tributação.
-- Empresas do grupo com transações intercompany a preços não de mercado: risco de glosa.
+- Empresas do grupo com transações intercompany a preços não de mercado: risco de glosa e, a partir
+  de 2027, tributação de IBS e CBS pelo valor de mercado (LC 214/2025, art. 5º, IV; ver
+  `reforma-tributaria`).
 - PIS/Cofins projetados depois de 2026, ICMS depois de 2032, ou benefício de ICMS no valor terminal.
 
 ## O que entregar

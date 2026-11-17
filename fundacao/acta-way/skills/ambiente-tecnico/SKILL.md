@@ -27,8 +27,9 @@ PY="~~interpretador python"
 ## Catálogo completo
 
 O detalhamento (interpretador, encoding, arquivos travados, cache do OneDrive e SharePoint, leitura
-de planilha e de PDF, render para conferência visual, PowerPoint via COM, dependências ausentes)
-está em [`references/ambiente-windows.md`](references/ambiente-windows.md).
+de planilha e de PDF, render para conferência visual, PowerPoint via COM, dependências ausentes,
+acentos em PowerShell, COM do Excel em bloco, slide oculto no PDF, gráfico empilhado e edição
+concorrente) está em [`references/ambiente-windows.md`](references/ambiente-windows.md).
 
 ## Regra que atravessa tudo
 

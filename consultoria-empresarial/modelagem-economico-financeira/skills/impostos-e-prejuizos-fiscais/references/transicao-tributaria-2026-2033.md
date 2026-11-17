@@ -1,8 +1,10 @@
 # Transição tributária 2026–2033: reforma do consumo e tributação de dividendos
 
-**Posição em out/2026** (fontes acessadas em 26/10/2026). Material de apoio da skill
-`impostos-e-prejuizos-fiscais`. Direciona a modelagem no valuation e no orçamento; não substitui
-parecer da assessoria tributária do cliente ou do mandato.
+**Posição em 17/11/2026.** Fontes acessadas em 26/10/2026, com a revisão de 17/11/2026 marcada
+**[atualizado em 17/11/2026]** em cada ponto que mudou (seção 1.1, seção 2.1, seção 6 e seção 7).
+Material de apoio das skills `impostos-e-prejuizos-fiscais` e `reforma-tributaria`. Direciona a
+modelagem no valuation e no orçamento; não substitui parecer da assessoria tributária do cliente ou
+do mandato.
 
 Convenções deste texto:
 
@@ -13,6 +15,10 @@ Convenções deste texto:
 - Os artigos da LC 214/2025 foram conferidos na publicação original. A LC 227/2026, que instituiu o
   Comitê Gestor do IBS (art. 1º), e os regulamentos de 2026 podem ter alterado ou detalhado esses
   dispositivos (a confirmar). Confira a redação vigente antes de citar um artigo em entregável.
+  **[atualizado em 17/11/2026]** O texto compilado do Planalto, que já incorpora a LC 227/2026,
+  voltou a responder e foi lido em 17/11/2026. Os artigos citados na skill `reforma-tributaria`
+  (3º, 4º, 5º, 11, 12, 14, 24, 26, 41, 57, 125 a 142, 157, 164 a 171, 251 a 263 e 409) foram conferidos
+  nele. Os demais artigos desta reference seguem a conferência de 26/10/2026.
 
 ## 1. Reforma do consumo: o calendário (EC 132/2023 e LC 214/2025)
 
@@ -64,18 +70,52 @@ valem provisoriamente as alíquotas calculadas pelo TCU (art. 349, § 2º). A fi
 à noventena do art. 150, III, "c", da Constituição (ADCT, art. 130, § 1º), e o valor é arredondado
 ao décimo de ponto percentual mais próximo (LC 214/2025, art. 349, § 14).
 
-**Estado em 26/10/2026.** Nenhuma alíquota de referência estava fixada. A Receita Federal enviou ao
-TCU, em 14/09/2026, a proposta de cálculo da CBS de 2027 sem estimativa numérica (Conjur,
-15/10/2026), e o TCU pautou a deliberação para 28/10/2026 (reformatributaria.com, out/2026).
-Verifique o resultado antes de usar qualquer número.
+**Estado em 17/11/2026 [atualizado em 17/11/2026].** A alíquota de referência da CBS de 2027 foi
+**calculada, mas ainda não foi fixada.** Em 28/10/2026, em sessão extraordinária, o Plenário do TCU
+aprovou o cálculo de **11,3468%, arredondado para 11,3%** (art. 349, § 14), e o redutor de compras
+públicas de **44,16%** (TC 006.529/2026-7). O resultado seguiu ao Senado, que fixa por resolução até
+15/12/2026. Se a fixação passar de 22/12/2026, valem as alíquotas calculadas pelo TCU até a fixação,
+e a resolução tardia vigora a partir do início do segundo mês seguinte, observada a anterioridade de
+exercício (art. 349, § 2º) (Senado Federal; Conjur, 12/11/2026; Barbieri Advogados, nov/2026). Antes
+disso, em 14/09/2026, a Receita Federal tinha enviado a proposta sem estimativa numérica (Conjur,
+15/10/2026). **Não localizei resolução do Senado até 17/11/2026.** Verifique antes de usar o número.
 
-**Estimativas públicas, nenhuma oficial:**
+**Da referência à CBS cobrada.** Sem lei específica da União, vale a alíquota de referência (art. 14,
+§ 3º), reduzida em 0,1 ponto percentual em 2027 e 2028, exceto combustíveis do regime específico
+(art. 347). Com 11,3% de referência, a CBS na alíquota-padrão seria de **11,2%** em 2027 e 2028
+(leitura ACTA, a partir de Barbieri Advogados, nov/2026). Não há notícia de lei específica da União
+para 2027.
+
+**Por que ficou acima das estimativas anteriores.** A alíquota é calculada para repor a receita
+média de PIS, Cofins, IPI e IOF-seguros de 2012 a 2021 em proporção do PIB (4,9861% do PIB), junto
+com o Imposto Seletivo e o IPI residual (arts. 350 e 353). Quanto maior a parcela da base com
+tratamento favorecido, maior a alíquota sobre o restante. No cálculo do TCU, com médias de 2023 e
+2024, a alíquota zero retira R$ 126,3 bilhões da receita estimada, as reduções proporcionais R$ 61,9
+bilhões, o regime imobiliário R$ 26,8 bilhões e o cashback R$ 10,5 bilhões (Conjur, 12/11/2026). O
+TCU ressalvou que a alíquota de referência não é previsão da arrecadação de 2027 nem dos efeitos da
+reforma sobre preços (Barbieri Advogados, nov/2026).
+
+**Imposto Seletivo.** A receita estimada do IS entra no cálculo e reduz a CBS (art. 353, II; MP
+1.399/2026, art. 16). O TCU calculou antes de a MP 1.399/2026, publicada em 04/11/2026, fixar as
+alíquotas do IS, com estimativa para elas. Se e como o Senado considerará as alíquotas fixadas é
+ponto a acompanhar até 15/12/2026, assim como a conversão da MP em lei (Barbieri Advogados, nov/2026;
+texto da MP não consultado).
+
+**Travas posteriores (a confirmar no texto).** Se a média da receita-base da União em 2027 e 2028
+exceder o teto de referência, a alíquota de referência da CBS é reduzida a partir de 2030, sem
+cobrança ou restituição dos anos anteriores (art. 368). Revisão semelhante, de CBS e IBS, em 2035,
+com base na média de 2029 a 2033 (art. 369) (Barbieri Advogados, nov/2026).
+
+**Números em circulação, com a natureza de cada um:**
 
 | Número | Quem e quando | Natureza |
 |---|---|---|
+| **11,3% (CBS de referência de 2027), 11,3468% antes do arredondamento** | TCU, 28/10/2026, TC 006.529/2026-7 | Cálculo aprovado pelo TCU. **Pendente da resolução do Senado** (prazo 15/12/2026) |
+| **44,16% (redutor de compras públicas de 2027)** | TCU, 28/10/2026 | Cálculo aprovado pelo TCU. Pendente do Senado |
+| **Cerca de 30% (11,3% mais 18,7%)** | Conta do articulista, Conjur, 12/11/2026 | Soma de comparação. **Não é alíquota fixada**, porque os 18,7% são parâmetro metodológico do IBS |
 | 27,91% (IBS + CBS), dos quais 18,70% de IBS | Resolução CGIBS nº 14, de 29/07/2026, que estimou a arrecadação do IBS de 2027. Parte da alíquota total de 26,50% (parcela do IBS de 17,70%) estimada pela Secretaria Extraordinária da Reforma Tributária e de nova alíquota total estimada de 27,91%, com fator de atualização de 1,0532, até a parcela do IBS de 18,70% | Parâmetro metodológico do ato, sem valor de alíquota aplicável (Legal 500, 2026; Conjur, 15/10/2026). Texto da resolução não consultado (a confirmar) |
-| 9,21% (CBS) | Diferença aritmética entre 27,91% e 18,70%, feita por analistas | Inferência; não consta como alíquota em ato oficial |
-| 8,8% a 9,3% (CBS de 2027) | Tributaristas ouvidos pelo Valor, 14/09/2026 | Estimativa de mercado |
+| 9,21% (CBS) | Diferença aritmética entre 27,91% e 18,70%, feita por analistas | Inferência; não consta como alíquota em ato oficial. **Superada** pelo cálculo do TCU de 28/10/2026 (11,3%) |
+| 8,8% a 9,3% (CBS de 2027) | Tributaristas ouvidos pelo Valor, 14/09/2026 | Estimativa de mercado. **Superada** pelo cálculo do TCU de 28/10/2026 |
 
 **Trava de 26,5%.** Na avaliação quinquenal, se a soma das alíquotas de referência estimadas
 superar 26,5%, o Executivo, ouvido o Comitê Gestor, envia projeto de lei complementar com medidas
@@ -175,8 +215,10 @@ identificado (a confirmar).
 3. O driver é o preço líquido de tributos. A receita bruta é consequência da carga de cada ano; o
    que move EBITDA, NOPAT e valor é a hipótese de repasse, o crédito sobre as compras e o capital de
    giro.
-4. Enquanto a alíquota de referência não for publicada, a premissa entra como faixa, com fonte e
-   data (seção 1.1), e é trocada pelo número oficial quando sair.
+4. **[atualizado em 17/11/2026]** Até a resolução do Senado, a CBS de 2027 entra pelo cálculo do TCU
+   (11,3% de referência e 11,2% cobrada em 2027 e 2028), com sensibilidade para a faixa de 8,8% a
+   11,3%, fonte e data (seção 1.1). O IBS de 2029 em diante entra em faixa, com fonte e data, nunca
+   como número oficial. Troque pelo número da resolução quando ela sair.
 5. Tributo sobre a receita fica nas deduções e chega ao NOPAT pela margem. O imposto operacional do
    NOPAT continua sendo IRPJ e CSLL (passos 2 e 4 da skill).
 
@@ -412,7 +454,10 @@ prevê incorporar a pessoa jurídica que detém o prejuízo.
 - PIS/Cofins projetados depois de 2026, ou ICMS e ISS depois de 2032.
 - Benefício de ICMS no ano terminal, ou compensação pelo Fundo sem prova de onerosidade e de
   habilitação.
-- 27,91% ou 9,21% tratados como alíquota oficial.
+- 27,91% ou 9,21% tratados como alíquota oficial, ou a soma de cerca de 30% tratada como alíquota
+  fixada.
+- **[atualizado em 17/11/2026]** CBS de 11,3% tratada como fixada sem a resolução do Senado, ou sem
+  conferir o marco de 22/12/2026 (a partir dele, valem as alíquotas calculadas pelo TCU até a fixação).
 - Receita bruta como driver, com margem preservada sem hipótese explícita de repasse.
 - Saldo credor de ICMS no capital de giro pelo valor de face.
 - Nível de referência de capital de giro calculado sobre histórico que não reflete CBS plena nem
@@ -422,8 +467,9 @@ prevê incorporar a pessoa jurídica que detém o prejuízo.
 
 ## 7. Fontes
 
-Acesso em 26/10/2026. O portal do Planalto não respondeu na data; os textos foram conferidos na
-Câmara dos Deputados ou em reprodução, indicada abaixo. Os itens 13, 14, 17, 18, 19 e 20, e o link
+Acesso em 26/10/2026, com a revisão de 17/11/2026 (itens 25 a 29). Em 26/10/2026 o portal do Planalto
+não respondeu; os textos foram conferidos na Câmara dos Deputados ou em reprodução, indicada abaixo.
+Em 17/11/2026 o texto compilado da LC 214/2025 no Planalto (item 2) foi aberto e lido. Os itens 13, 14, 17, 18, 19 e 20, e o link
 do Ato Conjunto RFB/CGIBS nº 1/2025 no item 6, foram conferidos pelo resumo do buscador, sem abrir a
 página. O item 8 e a página do CGIBS no item 6 foram abertos na revisão de 26/10/2026; os itens 21
 a 24 entraram nessa revisão.
@@ -435,7 +481,7 @@ Normas e atos:
    https://www2.camara.leg.br/legin/fed/emecon/2023/emendaconstitucional-132-20-dezembro-2023-795084-publicacaooriginal-170513-pl.html
 2. Lei Complementar 214/2025, publicação original na Câmara dos Deputados:
    https://www2.camara.leg.br/legin/fed/leicom/2025/leicomplementar-214-16-janeiro-2025-796905-publicacaooriginal-174141-pl.html
-   (texto compilado, não acessado: https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm)
+   (texto compilado, acessado em 17/11/2026: https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm)
 3. Lei 15.270/2025, dados da norma na Câmara dos Deputados:
    https://www2.camara.leg.br/legin/fed/lei/2025/lei-15270-26-novembro-2025-798354-norma-pl.html ;
    Senado Federal (DOU de 27/11/2025, p. 3): https://legis.senado.leg.br/norma/41758136 ; texto dos
@@ -496,3 +542,19 @@ Documentos fiscais e conformidade de 2026:
 24. Ato Conjunto RFB/CGIBS nº 5, de 12/08/2026, que regulamenta para 2026 o Programa Nacional de
     Conformidade Tributária (LC 214/2025, arts. 471-A a 471-C), em reprodução:
     https://www.legisweb.com.br/legislacao/?id=499233
+
+Revisão de 17/11/2026 (alíquota de referência da CBS de 2027):
+
+25. Senado Federal, entrega do relatório do TCU ao presidente do Senado, com a alíquota de 11,3%
+    aprovada em 28/10/2026:
+    https://www12.senado.leg.br/institucional/presidencia/noticia/davi-alcolumbre/davi-alcolumbre-recebe-do-presidente-do-tcu-relatorio-sobre-aliquota-da-cbs-para-2027
+26. Barbieri Advogados, "Alíquota da CBS em 2027: os 11,3% do TCU e o papel do Senado" (atualizado em
+    nov/2026): https://www.barbieriadvogados.com/aliquota-cbs-2027/ . Fonte secundária; abrangeu o rito
+    do art. 349, o art. 347 e o redutor de 44,16%. Artigos conferidos no texto compilado quando
+    indicado na seção 1.1.
+27. Conjur, 12/11/2026, "A alíquota da CBS e a conta que sempre existiu":
+    https://conjur.com.br/2026-nov-12/a-aliquota-da-cbs-e-a-conta-que-sempre-existiu/
+28. Valor Econômico, 28/10/2026, aprovação do cálculo pelo TCU:
+    https://valor.globo.com/brasil/noticia/2026/10/28/tcu-define-alquota-de-referncia-da-cbs-em-113-pontos-percentuais.ghtml
+29. Planalto, LC 214/2025, texto compilado com as alterações da LC 227/2026, aberto e lido em
+    17/11/2026: https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm

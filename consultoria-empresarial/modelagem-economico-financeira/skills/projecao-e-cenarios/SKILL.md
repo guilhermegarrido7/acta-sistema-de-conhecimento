@@ -66,6 +66,18 @@ Onde há contrato com cláusula de reajuste por índice, o lastro é forte e val
 o preço é spot (commodity, sucata, resina reciclada), o preço não é premissa de repasse: é premissa
 de mercado, e merece cenário próprio.
 
+### Contrato com poder público: reajuste, repactuação e reequilíbrio
+
+Reajuste (índice), repactuação (custo de mão de obra, pela convenção coletiva), revisão
+(circunstância excepcional) e alteração por tributo são mecanismos distintos, e só o primeiro é
+automático. O que está em cláusula e já foi aplicado entra no caso base. **O que foi pleiteado e não
+foi aprovado é ativo contingente: fica fora do caso base** e entra como cenário, ou como valor
+esperado ponderado por probabilidade e prazo, sempre com o status e a fonte do parecer. Separe o
+retroativo (passado, que só entra na ponte do equity se aprovado ou provável) do prospectivo (preço
+novo, que entra na receita a partir da vigência). O custo que motivou o pedido precisa estar no custo
+projetado. Estrutura completa e perguntas ao cliente:
+[references/reequilibrio-economico-financeiro.md](references/reequilibrio-economico-financeiro.md).
+
 ## Passo 2: custos e despesas com a mesma disciplina
 
 - **Custos variáveis** em R$ por unidade, não em percentual da receita. Percentual da receita esconde
@@ -75,6 +87,19 @@ de mercado, e merece cenário próprio.
 - **Pessoal** por headcount × custo médio, com produtividade declarada (unidade por colaborador).
   Assim o modelo mostra se o crescimento exige gente na proporção ou se há alavancagem.
 - **SG&A** separando o que escala (comissão, frete) do que não escala (TI, aluguel, diretoria).
+- **Custos do plano da empresa abertos por natureza.** Quando o plano traz só totais, abra-os por
+  natureza (pessoal, combustível, manutenção, seguros, aluguel) pela composição do realizado, com
+  crescimento percentual ao ano por linha e a receita como referência de escala.
+- **Declare a base de todo percentual.** Folha como percentual do custo de pessoal, não do custo
+  total; encargo como percentual da folha. Percentual sem base declarada muda de sentido quando outro
+  analista reabre o modelo.
+- **Reajuste com data-base fora de janeiro** e **retroativo** entram em linhas próprias. O retroativo
+  é passado, não preço novo (ver a seção seguinte).
+- **Calibração ao plano da empresa em linha própria.** Se o modelo é ajustado para reproduzir o plano
+  da empresa, o ajuste fica numa linha identificada, e não diluído nos drivers.
+- **Custo de pessoal crescendo acima do reajuste do preço.** Antes de aceitar, verifique se há
+  repactuação de mão de obra pela convenção coletiva (Lei 14.133/2021, art. 135). Em contrato com
+  poder público, é um dos maiores drivers de valor, e o resultado depende do contrato.
 
 **Alavancagem operacional é uma alegação, não uma consequência automática.** Se a margem EBITDA
 projetada sobe, o modelo tem de mostrar qual custo fixo está sendo diluído e por quê. Margem que sobe
@@ -205,7 +230,8 @@ um número inicial menor.
 
 Atingir meta e sinergias no cenário do comprador:
 [references/matriz-de-decisoes.md](references/matriz-de-decisoes.md). O driver de receita específico
-do negócio não entra na matriz; fica no checkpoint do engajamento.
+do negócio não entra na matriz; fica no checkpoint do engajamento. Tratamento de pleito de
+reequilíbrio: [references/reequilibrio-economico-financeiro.md](references/reequilibrio-economico-financeiro.md).
 
 ## Próximo passo
 

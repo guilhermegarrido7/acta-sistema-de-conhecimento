@@ -67,6 +67,12 @@ entra?
 **Exemplo registrado.** Caso A: prêmio de porte por decil no cenário standalone; retirado no cenário
 do comprador estratégico, com fundamento em Damodaran (2015) e McKinsey (2012).
 
+**Exemplo registrado.** Caso B: não aplicado. A linha fica no slide de WACC, com a justificativa.
+Fundamento: o porte não é risco sistemático independente, e somá-lo duplicaria o que o beta, o prêmio
+de risco-país e o custo da dívida já refletem (Damodaran, 2015; Koller). Risco aceito: o comprador
+financeiro pode contestar pelo custo histórico maior de empresas pequenas (contraponto McKinsey,
+2005, acima).
+
 ## CC-05 · Desconto de iliquidez (DLOM)
 
 | Alternativa | Quando usar | Risco |
@@ -85,6 +91,13 @@ desconto; critica o percentual fixo.
 
 **Exemplo registrado.** Caso A: não aplicado. Fundamento: transação de controle de 100% do capital,
 com comprador estratégico definido.
+
+**Exemplo registrado.** Caso B: não aplicado, e o relatório não discute o tema. O motivo da decisão
+não ficou registrado na conversa do mandato. A leitura abaixo é a da matriz e **precisa ser
+confirmada com o analista responsável antes de ser citada**: transação de controle, com o valor lido
+como preço de transação. A regra "WACC ou valor, nunca os dois" fica atendida. Risco: relatório
+silencioso sobre iliquidez expõe o analista se o leitor for minoritário. Registre a decisão no
+checkpoint mesmo que o relatório não a cite.
 
 ## CC-06 · Custo da dívida
 

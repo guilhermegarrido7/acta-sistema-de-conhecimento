@@ -97,3 +97,29 @@ mais os lucros econômicos que ela gera sobre esse capital*. Se a criação de v
 explícito, o terminal tem papel muito menor do que o DCF de fluxo de caixa sugere.
 
 Apresente as três. É o slide que mais reduz atrito numa reunião de valuation.
+
+### Meio de período e período parcial (teste 14)
+
+A convenção de meio de período supõe que o fluxo de cada ano chega, em média, no meio do ano. Ela
+muda a data de desconto do valor terminal, e a mudança depende do método.
+
+| Método do terminal | Data de desconto | Por quê |
+|---|---|---|
+| **Perpetuidade** (fórmula dos value drivers ou Gordon) | Mesma data do último fluxo explícito: N − 0,5 | O terminal é feito de fluxos que também chegam a meio de ano |
+| **Múltiplo de saída** | N | O múltiplo se aplica à métrica do último ano, medida no fim desse ano |
+
+**Período parcial** (data-base no meio do ano, com `p` a fração do primeiro ano que resta, em anos):
+
+| Fluxo | Prazo de desconto |
+|---|---|
+| Período parcial (primeiro) | `p ÷ 2` |
+| Ano completo `n` (n = 1, 2, …) | `p + n − 0,5` |
+| Terminal por perpetuidade | Igual ao do último fluxo explícito |
+| Terminal por múltiplo | `p + n`, com `n` igual ao número de anos completos |
+
+Dois erros recorrentes: dividir por 2 o prazo de todos os anos (só o primeiro, o parcial, é dividido
+por 2), e descontar a perpetuidade em N com os demais fluxos a meio de período. O segundo subavalia o
+valor em torno de (1 + WACC)^0,5 sobre o terminal. Fonte do procedimento:
+[Breaking Into Wall Street, mid-year convention](https://breakingintowallstreet.com/kb/discounted-cash-flow-analysis-dcf/mid-year-convention-dcf/),
+conferida em 17/11/2026. Não use meio de período em negócio muito sazonal, com a caixa concentrada no
+fim do ano; nesse caso, declare o prazo de desconto adotado e a razão.

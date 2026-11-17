@@ -4,7 +4,7 @@ Construção de modelo econômico-financeiro: projeção de resultado e caixa, c
 
 > **Pré-requisito: `acta-way`**, declarado como dependência no `plugin.json`: o `claude plugin install` deste plugin instala o `acta-way` junto. É onde vive o mecanismo de checkpoint entre sessões e consultores. Se a sua versão do Claude Code não instalar dependências, instale-o antes: `claude plugin install acta-way@acta-sistema-de-conhecimento --scope user`.
 >
-> **Status: completo.** As 14 skills do ciclo de vida estão escritas, com a camada de
+> **Status: completo.** As 15 skills do ciclo de vida estão escritas, com a camada de
 > fundamento teórico (`fundamentos-koller`) e suas 5 referências detalhadas.
 > Publicado em `marketplace.json`. Ver [docs/ROADMAP.md](../../docs/ROADMAP.md).
 
@@ -28,6 +28,7 @@ mid-market fechado no Brasil.
 | `custo-de-capital` | 4 | Cálculo e defesa do WACC. |
 | `capital-de-giro-e-capex` | 5 | Projeção de capital de giro operacional e CapEx, coerente com o ROIC diagnosticado. |
 | `impostos-e-prejuizos-fiscais` | 6 | Tratamento de impostos operacionais ajustados e prejuízos fiscais acumulados na projeção. |
+| `reforma-tributaria` | 6, apoio | Mapeamento do IBS, da CBS e do Imposto Seletivo a partir de 2027, do setor, da operação e do regime até a alíquota, o crédito e o efeito no caixa. Traz data de corte, artigo da norma em cada parâmetro e o teste de aluguel, operação entre partes relacionadas e consórcio. |
 | `projecao-de-mercado-e-equity-story` | 7 | Menu de métodos de projeção de mercado/market share/receita (top-down, bottom-up, convergência a peers, curva-S, regressão macro, teto regulatório) e construção da equity story que sustenta o número, sabatinada antes de travar. |
 | `projecao-e-cenarios` | 8 | Projeção de resultado e caixa em cenários, com a coerência entre crescimento e taxa de reinvestimento imposta pelo ROIC. |
 | `saude-de-credito` | 9 | Avaliação da saúde de crédito do alvo/projeção (endividamento, cobertura, covenants). |
@@ -39,7 +40,7 @@ mid-market fechado no Brasil.
 ## Fluxo típico
 
 `reorganizacao-contabil` → `qualidade-de-resultados` → `diagnostico-de-roic` → `custo-de-capital` →
-`capital-de-giro-e-capex` → `impostos-e-prejuizos-fiscais` → `projecao-de-mercado-e-equity-story` →
+`capital-de-giro-e-capex` → `impostos-e-prejuizos-fiscais` → `reforma-tributaria` → `projecao-de-mercado-e-equity-story` →
 `projecao-e-cenarios` → `saude-de-credito` → `valor-terminal` → `triangulacao-e-faixa` →
 `revisao-de-modelo` → `relatorio-de-valuation`, com `fundamentos-koller` carregado sob demanda em
 qualquer etapa que precise do conceito exato.

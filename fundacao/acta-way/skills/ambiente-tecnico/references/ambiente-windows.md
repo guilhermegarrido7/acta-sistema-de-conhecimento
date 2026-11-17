@@ -13,6 +13,7 @@ Consulte quando for mexer em COM, render, arquivo travado, cache do OneDrive ou 
 7. Render para conferência visual
 8. PowerPoint via COM
 9. Dependências ausentes
+10. Acréscimos de mandatos recentes
 
 ---
 
@@ -197,3 +198,51 @@ for m in ('openpyxl','pptx','docx','fitz','pdfplumber','pandas','xlrd','win32com
     try: importlib.import_module(m); print('ok', m)
     except Exception as e: print('FALTA', m, type(e).__name__)"
 ```
+
+---
+
+## 10. Acréscimos de mandatos recentes
+
+Falhas registradas em uso real, com a solução que funcionou.
+
+### 10.1 Acentos em script PowerShell
+
+`Get-Content` e `Set-Content` do PowerShell corrompem acentos quando o arquivo é UTF-8 e o
+parâmetro de encoding não é informado. Leia e grave com .NET, em UTF-8 sem BOM, e use `.Replace`
+literal em vez de `-replace`, que é regex e quebra com `(`, `.`, `$` e `\`:
+
+```powershell
+$c = [IO.File]::ReadAllText($caminho, [Text.Encoding]::UTF8)
+$c = $c.Replace('texto antigo', 'texto novo')
+[IO.File]::WriteAllText($caminho, $c, (New-Object Text.UTF8Encoding $false))
+```
+
+### 10.2 COM do Excel: leia em bloco
+
+Percorrer `UsedRange` célula a célula via COM estourou 10 minutos. Leia `.Formula` e `.Value` do
+intervalo inteiro de uma vez (devolve uma matriz), ou escaneie o arquivo com `openpyxl`, sem abrir o
+Excel.
+
+### 10.3 PDF exportado de um PPTX: slide oculto
+
+Slide oculto não sai no PDF, e o índice da página deixa de bater com o índice do slide. Localize a
+página pelo texto do título, e nunca pelo índice.
+
+### 10.4 Gráfico de barras empilhadas: rótulo do total
+
+A posição de rótulo `outEnd` é inválida em barras empilhadas, e o PowerPoint recusa o arquivo.
+Use uma série auxiliar invisível (sem preenchimento) que carrega o rótulo do total, e atualize o
+cache XML do gráfico e o workbook embutido no `.pptx`.
+
+### 10.5 Edição concorrente do mesmo arquivo
+
+Quando o arquivo pode mudar enquanto você trabalha, na ordem:
+
+1. Copie o original.
+2. Compare por hash.
+3. Porte a diferença por parágrafo.
+4. Confira o hash do arquivo de destino antes de sobrescrever.
+5. Se o arquivo estiver aberto, grave uma versão nova e localize o arquivo por padrão de nome.
+6. Se o arquivo não mudou, diga ao usuário para salvar e fechar.
+
+Complementa a seção 3.

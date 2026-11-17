@@ -256,6 +256,7 @@ O caminho correto é: construir cada cenário completo e coerente, rodar o valua
 As duas aparecem no deck, em lugares diferentes. Confundi-las faz parecer que há mais análise do que
 há. Ver `projecao-e-cenarios`.
 
+
 ---
 
 # O relatório de revisão
@@ -282,7 +283,8 @@ O entregável desta skill:
 
 Stress dos extremos, teste do payout e NOPAT top-down vs. bottom-up rodam **de novo sobre o modelo
 que vai ao cliente**, e não só sobre uma versão anterior. Mudança de cenário depois da revisão
-reabre esses três testes.
+reabre esses três testes. Com seletor de cenário alimentando uma tabela de dados, um script percorre todos os cenários,
+confere balanço e erros em cada um e só então salva o arquivo, com o cenário base selecionado.
 
 ## Uma nota sobre precisão
 

@@ -163,6 +163,11 @@ cenário base: entra como cenário separado ou como upside declarado fora do val
 - **Em regime estacionário, CapEx ≈ depreciação.** Se o valor terminal do modelo tem CapEx muito
   abaixo da depreciação, ele está liquidando a base de ativos na perpetuidade, o que gera fluxo
   alto e insustentável. É um dos testes da skill `valor-terminal`.
+- **CapEx igual à depreciação, constante em termos nominais, com a receita crescendo.** A razão
+  CapEx sobre receita líquida cai ano a ano, e o modelo passa a repor a base de ativos a um custo de
+  reposição cada vez menor em termos reais. Confira a razão no primeiro e no último ano do horizonte e
+  pergunte se a queda se justifica pelo custo de reposição a preço corrente e pela capacidade que o
+  crescimento exige. Sem essa justificativa, o fluxo está alto demais.
 - Ativo substancialmente depreciado em operação que depende dele: não projetar a depreciação futura exclusivamente com base na despesa histórica, pois a redução da depreciação pode inflar artificialmente EBIT, NOPAT e ROIC. AVALIAR se os ativos precisarão ser substituídos para sustentar a capacidade operacional. SE houver necessidade econômica de reposição, utilizar uma das seguintes abordagens: (i) projetar a depreciação com base no valor bruto do imobilizado; ou (ii) estimar o custo de reposição dos ativos e ajustar simultaneamente o CapEx e a depreciação futura. VALIDAR que CapEx e depreciação sejam economicamente consistentes com a manutenção da capacidade operacional.
 
 ### O caso do imobilizado fora da empresa

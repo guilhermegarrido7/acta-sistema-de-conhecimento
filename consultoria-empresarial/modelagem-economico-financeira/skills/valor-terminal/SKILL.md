@@ -179,8 +179,9 @@ Rode todos antes de aceitar o terminal. É o que distingue um valor terminal de 
 | 9 | Alíquota terminal em regime normal | Benefício fiscal temporário embutido na perpetuidade. Ver `impostos-e-prejuizos-fiscais`. |
 | 10 | Múltiplo terminal implícito comparado ao setor | Divergência grande exige explicação. |
 | 11 | Peso do VT no EV | Diagnóstico, não sintoma. Ver abaixo. |
-| 12 | **VT medido no ano N é descontado por N anos, não N+1** | Erro mecânico frequente. Se o terminal é calculado sobre o fluxo do ano 6 mas está expresso na data do ano 5, desconte 5 anos. |
+| 12 | **VT medido no ano N é descontado por N anos, não N+1** | Erro mecânico frequente. Se o terminal é calculado sobre o fluxo do ano 6 mas está expresso na data do ano 5, desconte 5 anos. Com convenção de meio de período, ver o teste 14. |
 | 13 | **Capital de giro terminal como % constante da receita** | Ver o erro 1 adiante; é o erro que mais subestima valor. |
+| 14 | **Meio de período: o VT descontado na data do último fluxo** | Com os fluxos a meio de período, o terminal por perpetuidade é descontado como o último fluxo (N − 0,5), e o múltiplo de saída é descontado em N. Descontar a perpetuidade em N subavalia o valor. Em período parcial, o primeiro desconto é o parcial ÷ 2 e os seguintes são parcial + n − 0,5. Ver [references/erros-e-peso-do-terminal.md](references/erros-e-peso-do-terminal.md). |
 
 ## Os três erros clássicos, e todos subestimam o valor
 
@@ -222,7 +223,7 @@ perpetuidade porque a fórmula do template a oferece.
 
 1. O valor terminal pelo método primário, com `g`, ROIC terminal e WACC declarados e justificados.
 2. O argumento do ROIC terminal, amarrado à tese de CAP.
-3. A tabela dos onze testes, com o resultado de cada um.
+3. A tabela dos quatorze testes, com o resultado de cada um.
 4. O peso do VT no EV.
 5. O múltiplo terminal implícito, comparado ao regime estacionário do setor.
 6. A sensibilidade WACC × `g`, e, quando houver estágio de convergência, a leitura de por que o

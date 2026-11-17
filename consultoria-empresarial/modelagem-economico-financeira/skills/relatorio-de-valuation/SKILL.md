@@ -86,6 +86,8 @@ são material de venda e mantêm título-asserção.
   na cor primária e 2 a 4 frases sobre o método.
 - **Faixa de ±% fixo** só rotulada como convenção, com a sensibilidade WACC × g no apêndice
   (`triangulacao-e-faixa`, TF-03).
+- **Cenário no subtítulo** de todo slide que depende dele. O cenário base fica no corpo do relatório;
+  os demais cenários ficam em slide seguinte, com o mesmo subtítulo.
 
 ## Tom e voz
 

@@ -1,6 +1,6 @@
 ---
 name: diagnostico-de-roic
-description: Diagnosticar criação de valor pelo ROIC e construir a análise estratégica por trás dele — árvore de direcionadores (margem e giro), vantagens operacionais lidas nas métricas (ex.: marca forte com marketing baixo), fonte de valor (preço ou custo/capital), por que o concorrente não copia, lucro econômico, spread contra o WACC e duração da vantagem. Acionar ao calcular ou interpretar ROIC, ao explicar de onde vem o retorno, ao avaliar se o crescimento cria ou destrói valor, ao definir o período de vantagem competitiva, ou ao comparar retornos com o setor.
+description: Diagnosticar criação de valor pelo ROIC e construir a análise estratégica: árvore de direcionadores, vantagens operacionais lidas nas métricas (ex.: marca forte com marketing baixo), fonte de valor, por que o concorrente não copia, lucro econômico, spread contra o WACC e duração da vantagem. Acionar ao calcular ou interpretar ROIC e ao explicar de onde vem o retorno.
 ---
 
 # Diagnóstico de ROIC: o veredito sobre criação de valor
@@ -101,16 +101,7 @@ bruta no PMR, pró-labore no G&A, P&D capitalizado) e a ponte de ROIC estão em
 A mesma margem bruta alta com marketing alto conta outra história: a demanda está sendo *comprada*,
 e a vantagem é de gasto, não de marca. É esse cruzamento que separa diagnóstico de descrição.
 
-Outras combinações que o analista deve procurar:
-
-| Combinação nas métricas | Hipótese de vantagem |
-|---|---|
-| Margem bruta alta + S&M baixo | Marca, qualidade percebida ou custo de troca |
-| Margem bruta alta + P&D alto | Inovação: vantagem real, mas que exige renovação contínua |
-| G&A / Receita baixo e em queda com o volume + giro alto | Escala (alavancagem da estrutura fixa) |
-| Margem bruta alta com preço igual ao dos pares | Custo de produção ou insumo privilegiado |
-| PMP > PMR + PME, capital de giro negativo, margem baixa | Alto giro de capital (modelo de varejo e distribuição) |
-| Margem e giro altos sem despesa comercial correspondente | Ativo escasso ou regulatório |
+Outras combinações (P&D alto, escala, capital de giro negativo): `references/vantagens_competitivas.md`.
 
 **Cada hipótese tem de passar por três testes antes de virar conclusão:**
 
@@ -139,17 +130,9 @@ A distinção muda a leitura de risco. Vantagem de preço é frágil a concorrê
 e a mudança de preferência. Vantagem de custo é frágil a quem replica a escala e a mudança de preço
 de insumo. Vantagem de capital de giro é frágil a quem muda o prazo dos fornecedores.
 
-## Por que o concorrente não copia?
-
-É a pergunta que fecha a análise econômica. Para cada vantagem que sobreviveu ao falseamento, aplique
-os três filtros (detalhados em `references/vantagens_competitivas.md`):
-
-1. **Imitabilidade:** em quanto tempo e a que custo o concorrente replica?
-2. **Substituição:** existe modelo diferente que entrega o mesmo ao cliente?
-3. **Apropriação:** a vantagem fica com a empresa ou é transferida ao cliente, fornecedor ou
-   funcionário?
-
-O que passa nos três é a barreira, e a barreira define o CAP (seção adiante).
+**Por que o concorrente não copia?** Fecha a análise econômica. Aplique a cada vantagem os três
+filtros de `references/vantagens_competitivas.md`: imitabilidade, substituição e apropriação. O que
+passa nos três é a barreira, e a barreira define o CAP (seção adiante).
 
 ## ROIC com e sem goodwill
 

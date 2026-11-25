@@ -18,6 +18,19 @@ só com o sintoma.
 A mesma empresa pode ter as duas. O trabalho é dizer **qual pesa mais** e **qual é mais durável**,
 usando a ponte de ROIC contra os pares (ver `arvore_de_direcionadores.md`).
 
+## Combinações de métricas que levantam hipóteses
+
+Outras combinações que o analista deve procurar:
+
+| Combinação nas métricas | Hipótese de vantagem |
+|---|---|
+| Margem bruta alta + S&M baixo | Marca, qualidade percebida ou custo de troca |
+| Margem bruta alta + P&D alto | Inovação: vantagem real, mas que exige renovação contínua |
+| G&A / Receita baixo e em queda com o volume + giro alto | Escala (alavancagem da estrutura fixa) |
+| Margem bruta alta com preço igual ao dos pares | Custo de produção ou insumo privilegiado |
+| PMP > PMR + PME, capital de giro negativo, margem baixa | Alto giro de capital (modelo de varejo e distribuição) |
+| Margem e giro altos sem despesa comercial correspondente | Ativo escasso ou regulatório |
+
 ## Catálogo: assinatura, evidência e falseamento
 
 ### Vantagens de preço

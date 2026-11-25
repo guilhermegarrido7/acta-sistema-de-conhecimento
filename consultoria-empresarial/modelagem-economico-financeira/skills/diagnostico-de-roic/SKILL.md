@@ -1,6 +1,6 @@
 ---
 name: diagnostico-de-roic
-description: Diagnosticar criação de valor pelo ROIC, com decomposição em margem e giro, lucro econômico, spread contra o WACC e duração da vantagem competitiva. Acionar ao calcular ou interpretar ROIC, ao avaliar se o crescimento cria ou destrói valor, ou ao comparar retornos com o setor.
+description: Diagnosticar criação de valor pelo ROIC e construir a análise estratégica por trás dele — árvore de direcionadores (margem e giro), vantagens operacionais lidas nas métricas (ex.: marca forte com marketing baixo), fonte de valor (preço ou custo/capital), por que o concorrente não copia, lucro econômico, spread contra o WACC e duração da vantagem. Acionar ao calcular ou interpretar ROIC, ao explicar de onde vem o retorno, ao avaliar se o crescimento cria ou destrói valor, ao definir o período de vantagem competitiva, ou ao comparar retornos com o setor.
 ---
 
 # Diagnóstico de ROIC: o veredito sobre criação de valor
@@ -10,7 +10,20 @@ description: Diagnosticar criação de valor pelo ROIC, com decomposição em ma
 **Oráculo. Não escreve na planilha.** Interpreta o ROIC, contesta números implausíveis e transforma
 o cálculo em argumento de equity story. Quem digita é o analista.
 
+**O produto desta skill é uma análise estratégica, não uma tabela de índices.** O cálculo técnico
+(NOPAT, capital investido, decomposição) é o meio. O output é a resposta a três perguntas, nesta
+ordem: **quanto** valor a empresa cria, **de onde** ele vem (quais vantagens operacionais aparecem
+nas métricas) e **por que** o concorrente não consegue copiar. Número sem essa leitura não sai
+daqui.
+
 Fundamento: skill `fundamentos-koller`, references `capital_investido.md` e `noplat_detalhado.md`.
+
+References desta skill:
+
+- `references/arvore_de_direcionadores.md` — a árvore completa, fórmulas, armadilhas, as quatro
+  lentes de leitura e a ponte de ROIC contra os pares.
+- `references/vantagens_competitivas.md` — catálogo de vantagens: assinatura nos números, evidência,
+  teste de falseamento, e os três filtros "por que não copiam?".
 
 ## A pergunta que esta etapa responde
 
@@ -60,6 +73,83 @@ negócios opostos:
 Desça um nível mais quando o dado permitir: margem se abre em preço, mix e estrutura de custo; giro
 se abre em giro do imobilizado e giro do capital de giro. **É essa abertura que produz os slides de
 driver de valor no deck**, e não o ROIC consolidado.
+
+## Árvore de direcionadores — abrir cada ramo em métricas que o negócio controla
+
+Margem e giro ainda são agregados. Cada ramo se abre em métricas que apontam para uma decisão ou uma
+vantagem concreta:
+
+| Ramo de margem (poder de preço e custos) | Ramo de giro (eficiência de capital) |
+|---|---|
+| **Margem bruta**: poder de precificação ou vantagem de custo de produção | **PMR**: poder sobre o cliente e disciplina de cobrança |
+| **Vendas e marketing / Receita**: eficiência em adquirir e manter cliente | **Giro de estoque (PME)**: eficiência logística e da cadeia |
+| **G&A / Receita**: alavancagem operacional da estrutura fixa | **PMP**: poder de barganha com fornecedores |
+| **P&D / Receita**: intensidade de inovação exigida para manter o negócio | **Imobilizado líquido / Receita**: intensidade de capital físico (CapEx) |
+
+A árvore tem de **fechar**: margem bruta menos as despesas sobre receita reproduz a margem EBITA, e a
+soma das intensidades de capital é o inverso do giro. Fórmulas, armadilhas de cálculo (receita
+bruta no PMR, pró-labore no G&A, P&D capitalizado) e a ponte de ROIC estão em
+`references/arvore_de_direcionadores.md`.
+
+## Leitura cruzada — de métricas soltas à vantagem operacional
+
+**Nenhuma métrica prova vantagem sozinha. A vantagem aparece na combinação.** O exemplo central:
+
+> Margem bruta acima dos pares **e** vendas e marketing / receita igual ou menor que os pares =
+> a empresa cobra mais sem gastar mais para vender. Hipótese: **marca forte**.
+
+A mesma margem bruta alta com marketing alto conta outra história: a demanda está sendo *comprada*,
+e a vantagem é de gasto, não de marca. É esse cruzamento que separa diagnóstico de descrição.
+
+Outras combinações que o analista deve procurar:
+
+| Combinação nas métricas | Hipótese de vantagem |
+|---|---|
+| Margem bruta alta + S&M baixo | Marca, qualidade percebida ou custo de troca |
+| Margem bruta alta + P&D alto | Inovação: vantagem real, mas que exige renovação contínua |
+| G&A / Receita baixo e em queda com o volume + giro alto | Escala (alavancagem da estrutura fixa) |
+| Margem bruta alta com preço igual ao dos pares | Custo de produção ou insumo privilegiado |
+| PMP > PMR + PME, capital de giro negativo, margem baixa | Alto giro de capital (modelo de varejo e distribuição) |
+| Margem e giro altos sem despesa comercial correspondente | Ativo escasso ou regulatório |
+
+**Cada hipótese tem de passar por três testes antes de virar conclusão:**
+
+1. **As quatro lentes**: nível contra pares, tendência na série, corte por segmento e
+   sensibilidade (quanto do ROIC se perde se a métrica convergir aos pares).
+2. **Evidência fora do balanço**: contrato, retenção, patente, licença, participação regional.
+3. **Falseamento**: o que, se fosse verdade, mostraria que a vantagem é artefato? G&A baixo por
+   pró-labore abaixo do mercado, S&M baixo porque a carteira é do dono, margem alta por mix
+   temporário.
+
+Catálogo completo, com assinatura, evidência e falseamento de cada vantagem:
+`references/vantagens_competitivas.md`.
+
+## Fonte de valor — preço ou custo e capital?
+
+Depois de identificar as vantagens, classifique-as em duas fontes e **diga qual pesa mais**,
+apoiando-se na ponte de ROIC contra os pares:
+
+- **Vantagem de preço (diferenciação):** cobra mais sem perder volume, por produto inovador ou
+  patente, marca e qualidade percebida, custos de troca ou efeito de rede. Aparece na margem bruta.
+- **Vantagem de custo e eficiência de capital:** entrega o mesmo gastando menos recursos, por escala
+  regional ou global, processo exclusivo ou insumo privilegiado, ou alto giro de capital (capital
+  de giro negativo). Aparece em G&A, custo unitário e giro.
+
+A distinção muda a leitura de risco. Vantagem de preço é frágil a concorrência que iguala o produto
+e a mudança de preferência. Vantagem de custo é frágil a quem replica a escala e a mudança de preço
+de insumo. Vantagem de capital de giro é frágil a quem muda o prazo dos fornecedores.
+
+## Por que o concorrente não copia?
+
+É a pergunta que fecha a análise econômica. Para cada vantagem que sobreviveu ao falseamento, aplique
+os três filtros (detalhados em `references/vantagens_competitivas.md`):
+
+1. **Imitabilidade:** em quanto tempo e a que custo o concorrente replica?
+2. **Substituição:** existe modelo diferente que entrega o mesmo ao cliente?
+3. **Apropriação:** a vantagem fica com a empresa ou é transferida ao cliente, fornecedor ou
+   funcionário?
+
+O que passa nos três é a barreira, e a barreira define o CAP (seção adiante).
 
 ## ROIC com e sem goodwill
 
@@ -137,6 +227,9 @@ experiente", "atendimento diferenciado", "qualidade superior" sem prêmio de pre
 "relacionamento com clientes" sem custo de troca. São atributos, não barreiras. Se o concorrente
 pode contratar ou copiar em 12 meses, não é CAP.
 
+Cada item da lista corresponde a uma vantagem do catálogo em `references/vantagens_competitivas.md`:
+use a assinatura nos números para levantar a hipótese e esta régua para estimar a duração.
+
 **Implicação prática:** o CAP define quantos anos o modelo pode manter ROIC acima do WACC antes de
 convergir. Um CAP de 5 a 10 anos é defensável com barreira documentada; perpetuidade com spread
 elevado não é. Ver skill `valor-terminal` para a mecânica da convergência.
@@ -179,17 +272,40 @@ Se nenhuma das seis explica, **o ROIC alto é real e é o principal ativo do equ
 o slide didático que explica ao comprador o que é ROIC antes de mostrar o número, porque um número
 que o leitor não entende não convence.
 
-## O que entregar
+## Estrutura do output estratégico
 
-1. ROIC histórico ano a ano, com NOPAT, capital investido médio, WACC e spread.
-2. A decomposição margem × giro, com a leitura do perfil de negócio.
-3. Lucro econômico em reais.
-4. O posicionamento contra comparáveis, com a amostra declarada.
-5. A tese de CAP: qual fonte de vantagem, por quantos anos, com que evidência documental, e os
-   tailwinds regulatórios declarados à parte, com o risco de cada um.
-6. O resultado do teste de plausibilidade: as seis causas checadas, com veredito.
-7. **ROIC projetado** ano a ano, na mesma base de NOPAT e de capital do histórico, com margem × giro
-   e lucro econômico. É obrigatório no modelo; no deck, entra quando sustenta a tese ou o terminal.
+O output segue uma **sequência de argumento**, não de cálculo. Cada seção abre com uma **manchete**:
+uma frase que afirma a conclusão (não um rótulo), no mesmo padrão de título com linha de mensagem do
+`relatorio-de-valuation`. Os números sustentam a manchete; não a substituem.
+
+| # | Seção | Pergunta que responde | Conteúdo mínimo |
+|---|---|---|---|
+| 1 | **Veredito de valor** | A empresa devolve mais do que o capital custa? | ROIC histórico ano a ano, NOPAT, capital médio, WACC, spread, lucro econômico em reais, regime (acima, próximo ou abaixo do WACC) |
+| 2 | **De onde vem o retorno** | O ROIC nasce de margem ou de giro? | Árvore preenchida contra a mediana dos pares (amostra declarada), séries de 3 a 5 anos, ponte de ROIC por direcionador |
+| 3 | **Vantagens operacionais** | O que, nas métricas, indica vantagem? | Uma linha por vantagem: assinatura nos números, evidência, falseamento, peso no ROIC, veredito (confirmada, parcial, não sustentada) |
+| 4 | **Fonte de valor** | Preço ou custo e capital? Qual pesa mais? | Classificação das vantagens nas duas fontes, com o peso de cada uma na ponte |
+| 5 | **Por que não copiam** | Qual é a barreira e por quanto tempo? | Os três filtros por vantagem, tese de CAP com evidência documental, o que pode corroê-la. Tailwinds regulatórios declarados à parte, com o risco de cada um |
+| 6 | **Riscos à tese** | O que pode estar errado? | Teste de plausibilidade (as seis causas, com veredito) e as vantagens que o falseamento enfraqueceu |
+| 7 | **Implicações** | O que isso muda no modelo e na negociação? | Crescimento premiado ou neutro, margens projetadas, reinvestimento, convergência do spread, mensagem da equity story, argumento de preço |
+
+Regras de construção:
+
+- **Manchete afirma, não rotula.** "Marca forte sustenta margem bruta de 42% contra 31% dos pares com
+  marketing de 3% da receita, e explica dois terços do spread de ROIC" é manchete. "Análise da margem
+  bruta" não é.
+- **Toda vantagem declarada carrega o seu falseamento.** Vantagem sem teste de falseamento é
+  adjetivo. Se o teste não pôde ser feito por falta de dado, registre a lacuna e rebaixe o veredito
+  para "parcial".
+- **Cada vantagem tem peso.** Quanto do spread contra os pares ela explica. Vantagem real mas
+  pequena não é o centro da equity story.
+- **Confirmada e não sustentada convivem no mesmo output.** O leitor confia mais em quem mostra o
+  que descartou.
+- **Fechar o circuito com o modelo.** A seção 7 diz quais premissas de projeção a análise autoriza ou
+  proíbe (por exemplo, "margem bruta pode se manter, mas não expandir: a vantagem é de marca estável,
+  não de escala crescente").
+- **ROIC projetado.** Além das sete seções, entregue o ROIC projetado ano a ano, na mesma base de
+  NOPAT e de capital do histórico, com margem × giro e lucro econômico. É obrigatório no modelo; no
+  deck, entra quando sustenta a tese ou o terminal.
 
 ## Matriz de decisões
 

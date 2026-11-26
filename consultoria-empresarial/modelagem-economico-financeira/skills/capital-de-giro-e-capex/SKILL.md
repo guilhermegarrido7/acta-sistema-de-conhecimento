@@ -48,6 +48,10 @@ NCG                 = ativo operacional circulante − passivo operacional circu
 ΔNCG                = NCG do ano − NCG do ano anterior     ← é isto que entra no FCFF
 ```
 
+A NCG **exclui caixa e aplicações** (100% na dívida líquida; ver `reorganizacao-contabil` e CG-01) e
+**inclui a posição líquida de IRPJ/CSLL**: o a recolher no passivo operacional e o a recuperar
+em até 12 meses no ativo operacional circulante.
+
 **O sinal importa e é fonte constante de erro:** aumento de NCG **consome** caixa (entra negativo no
 fluxo). Um modelo em que a receita cresce 30% e a ΔNCG aparece positiva no fluxo está com o sinal
 invertido. Cheque isso antes de qualquer outra coisa.
@@ -76,6 +80,11 @@ Regras de coerência que o oráculo deve verificar:
 - **O dia projetado tem de ter uma razão.** Se o PMR histórico é 45 dias e o modelo projeta 35,
   qual é a ação que causa isso: mudança de política de crédito, troca de mix de cliente,
   antecipação de recebíveis? Sem ação nomeada, volte para a média histórica.
+- **IRPJ/CSLL: projete a posição líquida em dias sobre o imposto corrente.** Prazo = (a recolher −
+  a recuperar em até 12 meses) / imposto corrente × 365, ou um prazo para cada lado. A base é o imposto **corrente**, não o total da DRE (que carrega o
+  diferido). O saldo de fechamento depende do calendário de vencimento (estimativa mensal ou
+  apuração trimestral), então leia o saldo à luz do calendário e use média de saldos quando houver
+  dado. Só o atraso e os parcelamentos ficam fora: vão para a dívida.
 - **Melhoria de capital de giro é ganho de caixa não recorrente.** Reduzir o PMR de 45 para 35 dias
   libera caixa uma vez. O modelo não pode manter o ganho todo ano, e o valor terminal não pode
   embutir melhoria contínua.
@@ -191,7 +200,7 @@ do aluguel a valor de mercado em perpetuidade (ver `qualidade-de-resultados`, fa
 
 ## Matriz de decisões
 
-Caixa mínimo operacional: [references/matriz-de-decisoes.md](references/matriz-de-decisoes.md). O
+Caixa no capital de giro (CG-01): [references/matriz-de-decisoes.md](references/matriz-de-decisoes.md). O
 CapEx unitário por driver físico é do modelo de negócio e fica no checkpoint do engajamento.
 
 ## Próximo passo

@@ -41,7 +41,7 @@ Fechamento obrigatório: `Margem bruta − Σ(despesas/Receita) = Margem EBITA` 
 | Prazo médio de estoque (PME) | Estoque / CMV × 365 | Eficiência logística e gestão da cadeia. | Estoque de segurança por risco de ruptura pode ser decisão racional, não ineficiência. |
 | Prazo médio de pagamento (PMP) | Fornecedores / Compras × 365 | Poder de barganha com fornecedores. | Atraso com fornecedor não é poder de barganha. Verifique se o prazo é contratual. |
 | Imobilizado líquido / Receita | Imobilizado operacional líquido / Receita líquida | Intensidade de capital físico que o modelo de negócio exige. | Imobilizado depreciado subestima o capital econômico. Teste a valor de reposição. |
-| Capital de giro operacional / Receita | (Ativo circulante operacional − Passivo circulante operacional) / Receita | Consolida PMR, PME e PMP numa só leitura. Negativo = o negócio é financiado por clientes e fornecedores. | Negativo estrutural só vale se sustentável. Adiantamento de cliente pode cessar. |
+| Capital de giro operacional / Receita | (Ativo circulante operacional, sem caixa − Passivo circulante operacional, com IRPJ/CSLL a recolher) / Receita | Consolida PMR, PME e PMP numa só leitura. Negativo = o negócio é financiado por clientes e fornecedores. | Negativo estrutural só vale se sustentável. Adiantamento de cliente pode cessar. |
 
 ## Como ler: quatro lentes sobre cada métrica
 

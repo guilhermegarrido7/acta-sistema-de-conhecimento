@@ -26,7 +26,7 @@ posterior. A divergência foi identificada na revisão.
 
 ## TF-02 · Itens não operacionais na ponte
 
-Para cada item (caixa excedente, ativo não operacional, contingência, dividendo a pagar, mútuo com
+Para cada item (caixa livre, caixa restrito, ativo não operacional, contingência, dividendo a pagar, mútuo com
 sócio, parcelamento tributário), registrar: entra ou não, valor, data, fonte e justificativa.
 **Nenhum item fica fora sem registro.**
 

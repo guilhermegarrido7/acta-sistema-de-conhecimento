@@ -42,7 +42,7 @@ célula visível de flag.
 ```
 [ ] Capital investido + ativos não operacionais = fontes cumulativas de financiamento
 [ ] NOPAT calculado top-down (da receita) = NOPAT calculado bottom-up (do lucro líquido)
-[ ] Variação de caixa excedente e de dívida bate com a demonstração de fluxo de caixa
+[ ] Variação de caixa e de dívida bate com a demonstração de fluxo de caixa
 ```
 
 A checagem **NOPAT top-down = bottom-up** é a mais reveladora das três e quase nunca é feita. Se os
@@ -81,7 +81,7 @@ eles se movem, o modelo tem falha mecânica.
 Os três vazamentos típicos, em ordem de frequência:
 
 1. **Juros entrando no NOPAT**, direta ou via imposto operacional calculado sobre o LAIR.
-2. **Caixa excedente dentro do capital de giro operacional.**
+2. **Caixa dentro do capital de giro operacional** (na base da casa, nenhum caixa fica ali).
 3. **Despesa financeira afetando o imposto operacional ajustado.**
 
 ## Erros mecânicos específicos a procurar
@@ -92,6 +92,7 @@ Os três vazamentos típicos, em ordem de frequência:
 [ ] O fluxo de caixa usa imposto CORRENTE, não o imposto total da DRE
 [ ] Há #REF!, #NUM!, #DIV/0! em célula que alimenta resultado
 [ ] Sinal da ΔNCG: aumento de capital de giro CONSOME caixa
+[ ] IRPJ/CSLL a recolher e a recuperar têm linha projetada no capital de giro e só o atraso foi para a ponte
 [ ] Capital investido médio (não final) no denominador do ROIC
 ```
 

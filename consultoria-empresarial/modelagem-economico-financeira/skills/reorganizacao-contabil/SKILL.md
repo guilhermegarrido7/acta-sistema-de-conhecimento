@@ -120,16 +120,16 @@ Sempre checar se o ativo imobilizado utilizado no cálculo do capital investido 
 O capital que a operação consome:
 
 ```
-CAPITAL DE GIRO OPERACIONAL
-    Caixa operacional mínimo        ← só o necessário para girar; o resto é excesso de caixa
-  + Contas a receber de clientes
+CAPITAL DE GIRO OPERACIONAL         ← sem caixa: 100% do caixa e aplicações vai para a dívida líquida
+    Contas a receber de clientes
   + Estoques
   + Adiantamentos a fornecedores
-  + Impostos a recuperar (operacionais)
+  + Impostos a recuperar (operacionais), inclusive IRPJ/CSLL antecipado e saldo negativo a compensar em até 12 meses
   + Despesas antecipadas
   − Fornecedores
   − Salários e encargos a pagar
-  − Obrigações fiscais operacionais
+  − IRPJ/CSLL correntes a recolher
+  − Demais obrigações fiscais operacionais (PIS/COFINS, ICMS, ISS, retenções)
   − Adiantamento de clientes
   − Provisões operacionais
 
@@ -142,15 +142,44 @@ CAPITAL DE GIRO OPERACIONAL
 = CAPITAL INVESTIDO OPERACIONAL
 ```
 
-**Caixa operacional mínimo.** O erro mais comum do mid-market: jogar o caixa inteiro no capital
-investido, o que infla o denominador e afunda o ROIC. Empresa familiar frequentemente acumula caixa
-como poupança do sócio, não como capital de giro. Estime o mínimo operacional por dias de custo
-caixa (tipicamente 5 a 20 dias, conforme sazonalidade e prazo de recebimento) e trate o excedente
-como **excesso de caixa**, que sai do capital investido e entra no bridge de EV para equity value.
-Pergunte ao usuário qual critério ele quer adotar e registre-o; não escolha calado.
+**Caixa: 100% fora do capital de giro.** A convenção da casa é o capital de giro não-caixa
+(Damodaran; Rosenbaum e Pearl; prática dominante em M&A e laudos no Brasil). Todo o caixa e
+aplicações financeiras fica fora do capital de giro e do capital investido, e é abatido por inteiro
+da dívida líquida. Não há "caixa operacional mínimo" dentro do capital de giro nem projeção de caixa
+mínimo como percentual da receita. O caixa serve à operação, mas é tratado na dívida líquida, e a
+receita financeira que ele gera sai do NOPAT.
+
+- **Exceção: caixa restrito.** Depósito bloqueado, garantia de empréstimo, saldo mínimo exigido por
+  covenant e conta vinculada não são sacáveis, então **não abatem a dívida líquida**. Classifique
+  pela natureza (depósito judicial é ativo não operacional e se trata junto com a contingência;
+  garantia financeira acompanha a dívida que garante) e registre.
+- **Efeito sobre os números.** Sem caixa no denominador, o capital investido é menor e o ROIC maior
+  que na base Koller, que mantém cerca de 2% da receita de caixa operacional no capital de giro. O
+  EV sai maior e a dívida líquida abate mais. O equity value tende ao mesmo valor se a base for
+  aplicada com consistência. O que muda é a comparabilidade: benchmark de ROIC e múltiplo só vale na
+  mesma base.
+- **Alternativa Koller.** Só quando o usuário pedir, ou quando comparáveis e benchmark estiverem
+  nessa base. Registre na matriz CG-01 e use a mesma base no capital investido, na projeção, na ponte
+  e nos comparáveis.
 
 **Contingências.** Provisão para contingência trabalhista ou tributária não é passivo operacional de
 giro: é equivalente de dívida. Sai daqui e entra nos fundos investidos.
+
+**Tributos sobre o lucro e diferido.**
+
+- **IRPJ/CSLL corrente entra no capital de giro pela posição líquida.** O a recolher é passivo
+  operacional circulante. As antecipações e estimativas pagas, o IRRF a compensar e o saldo negativo
+  realizável em até 12 meses são ativo operacional circulante. O imposto é recorrente e acompanha o
+  NOPAT. Projete a posição líquida em dias sobre o imposto corrente (`capital-de-giro-e-capex`). Se
+  as antecipações superarem o devido, o saldo líquido é ativo. Saldo negativo de prazo maior e
+  crédito de realização incerta saem do capital de giro (não circulante). Fora do capital de giro, o
+  passivo não reduz equity nem fluxo.
+- **Vai para a dívida só o que não é float corrente:** tributo vencido e não pago, parcelamentos
+  (REFIS, PERT, transação tributária) e saldos de transição. Separe atraso de float corrente no
+  razão, mês a mês, antes de classificar. Sem o razão, registre a lacuna em vez de inferir.
+- **IR/CSLL diferido.** O passivo líquido (depreciação acelerada, por exemplo) é **equivalente de
+  patrimônio**, não item não operacional. O ativo diferido de prejuízo fiscal é item não operacional,
+  avaliado à parte (`impostos-e-prejuizos-fiscais`). Decisão na matriz RC-04.
 
 ## Passo 3: fundos investidos (perspectiva de baixo)
 
@@ -160,16 +189,18 @@ Quem financia aquele capital:
 DÍVIDA LÍQUIDA
     Empréstimos e financiamentos (curto + longo prazo)
   + Parcelamentos tributários (REFIS, PERT, transação tributária)
+  + Tributos vencidos e não pagos (IRPJ/CSLL e demais, só a parte em atraso)
   + Passivo de arrendamento (CPC 06 R2 / IFRS 16)
   + Provisão para contingências (provável, não a remota)
   + Mútuos com sócios e partes relacionadas
-  − Excesso de caixa e aplicações financeiras
+  − Caixa e aplicações financeiras (100%, exceto caixa restrito)
 
 + PATRIMÔNIO LÍQUIDO
     Capital social + reservas + lucros acumulados + AAP − dividendos a pagar
+  + Passivo de IR diferido líquido (equivalente de patrimônio)
 
 + ITENS NÃO OPERACIONAIS
-    Depósitos judiciais · IR/CSLL diferido · goodwill · IRPJ/CSLL a pagar ·
+    Depósitos judiciais · ativo fiscal diferido de prejuízo fiscal · goodwill ·
     imóveis não operacionais · participações em outras empresas
 
 = FUNDOS INVESTIDOS
@@ -180,6 +211,7 @@ DÍVIDA LÍQUIDA
 | Item | Onde aparece | Por que é dívida |
 |---|---|---|
 | Parcelamento tributário | Passivo fiscal de longo prazo | Obrigação contratada, com juros e cronograma. Quem compra a empresa herda o passivo. |
+| Tributo vencido e não pago | Passivo fiscal de curto prazo | Obrigação em atraso, com multa e juros. O IRPJ/CSLL corrente dentro do prazo **não** entra aqui: é capital de giro. |
 | Arrendamento (CPC 06 R2) | Direito de uso no ativo, passivo de arrendamento | Aluguel de longo prazo é dívida disfarçada. Ver nota abaixo. |
 | Contingência provável | Provisão | Saída de caixa esperada, não financiada por equity. |
 | Mútuo de sócio | Partes relacionadas | Quase sempre liquidado no fechamento. Confirme com o usuário como entra no CFDF. |
@@ -199,13 +231,15 @@ Capital investido operacional  −  Fundos investidos  =  0
 ```
 
 O modelo da casa traz essa checagem explícita, com a convenção de sinal invertida em um dos lados.
-**Ela precisa fechar em todos os anos históricos.** Não fechar significa uma de quatro coisas:
+**Ela precisa fechar em todos os anos históricos.** Não fechar significa uma de cinco coisas:
 
 1. Uma conta foi classificada em duas perspectivas ao mesmo tempo, ou em nenhuma.
 2. O balanço recebido não fecha, e isso acontece mais do que se admite em mid-market. Confira
    Ativo = Passivo + PL antes de acusar a sua classificação.
-3. Excesso de caixa foi subtraído do capital investido mas não somado aos fundos investidos.
+3. O caixa ficou fora do capital investido mas não foi abatido da dívida líquida, ou o inverso.
 4. Um equivalente de dívida ficou dentro do capital de giro operacional.
+5. O IRPJ/CSLL a recolher ficou como item não operacional nos fundos, sem contrapartida no capital
+   de giro.
 
 **Nunca prossiga para ROIC com a reconciliação aberta.** Um ROIC calculado sobre capital investido
 que não reconcilia é um número sem significado, e ele vai atravessar o deck inteiro até ser defendido
@@ -221,6 +255,8 @@ na frente do comprador.
 4. As limitações: o que não foi possível classificar por falta de analítico.
 5. A confirmação de que histórico e projetado usam a mesma base de capital (bruta ou líquida) e de
    NOPAT, e a decisão sobre arrendamentos registrada no checkpoint.
+6. A base adotada para o caixa (CG-01) e a classificação do IRPJ/CSLL a recolher e do diferido
+   (RC-04), com o saldo em atraso separado do float corrente.
 
 ## Matriz de decisões
 
@@ -230,7 +266,7 @@ Base do capital investido, base do NOPAT histórico e arrendamentos (CPC 06 R2):
 ## Red flags para levantar aqui
 
 - Balanço que não fecha, ou que fecha por conta de "outros" com saldo relevante.
-- Caixa acima de 3 meses de custo caixa sem justificativa operacional.
+- Caixa acima de 3 meses de custo caixa. Não distorce o ROIC (está na dívida líquida), mas confirme quanto é livre e quanto é restrito.
 - Contas a receber crescendo muito acima da receita; ver `capital-de-giro-e-capex`.
 - Imobilizado quase todo depreciado numa operação que depende dele: o capital investido contábil
   subestima o capital econômico e o ROIC sai inflado. Sinalize, porque pode ser necessário discutir valor

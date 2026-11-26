@@ -145,14 +145,20 @@ corretamente na linha de fluxo de caixa não alavancado (EBITDA − impostos cor
 Confira que o modelo não está usando o imposto total ali; usar o total é um erro comum que distorce
 o fluxo nos anos em que o diferido é grande.
 
-Ativo fiscal diferido no balanço: é **item não operacional**, entra no bridge de EV para equity
-value, não no capital investido operacional. Ver `reorganizacao-contabil`.
+**Ativo fiscal diferido de prejuízo fiscal** é item não operacional: entra no bridge de EV para
+equity value, não no capital investido operacional. **Passivo de IR diferido líquido** é equivalente
+de patrimônio. **IRPJ/CSLL corrente** (a recolher no passivo, a recuperar em até 12 meses no ativo) é capital de
+giro, projetado
+(`capital-de-giro-e-capex`); só o tributo em atraso e os parcelamentos vão para a dívida (Passo 5).
+Ver `reorganizacao-contabil`.
 
 ## Passo 5: passivos tributários, que são dívida
 
 O que aparece com frequência em mid-market e precisa entrar nos fundos investidos, não no capital de
 giro:
 
+- **Tributo vencido e não pago** (atraso, inclusive IRPJ/CSLL): dívida. O IRPJ/CSLL corrente dentro
+  do prazo **não** é dívida: é passivo operacional do capital de giro.
 - **Parcelamento tributário** (REFIS, PERT, transação tributária): obrigação contratada com juros e
   cronograma. Quem compra a empresa herda. Cheque o saldo, o prazo e as condições de manutenção do
   parcelamento: a exclusão por inadimplência acelera a dívida inteira.

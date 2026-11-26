@@ -33,13 +33,13 @@ múltiplo.
 ```
 ENTERPRISE VALUE
 (−) Dívida financeira bruta
-(−) Parcelamentos tributários
+(−) Parcelamentos tributários e tributos em atraso
 (−) Passivo de arrendamento                     (se capitalizado no capital investido)
 (−) Contingências prováveis
 (−) Mútuos e contas a pagar a sócios
 (−) Dividendos declarados e não pagos           (valor bruto; ver regra 5)
 (−) Participação de minoritários                (se houver, a valor)
-(+) Caixa e aplicações excedentes               (só o excedente; o operacional já está no EV)
+(+) Caixa e aplicações financeiras              (100%; exceto caixa restrito)
 (+) Ativos não operacionais                     (imóvel não operacional, participações, depósitos judiciais)
 (+/−) Ajuste de capital de giro vs. o normalizado
 = EQUITY VALUE
@@ -50,7 +50,10 @@ Cinco regras que evitam os erros que mais aparecem:
 1. **Coerência com o capital investido.** Se o arrendamento foi capitalizado no capital investido,
    ele sai aqui. Se não foi capitalizado (o aluguel ficou na despesa), ele **não** sai aqui; senão o
    mesmo compromisso é descontado duas vezes. Ver `reorganizacao-contabil`.
-2. **Só o caixa excedente entra.** O caixa operacional mínimo já está dentro do EV, na operação.
+2. **O caixa entra por inteiro, menos o restrito.** O capital de giro projetado não contém caixa,
+   então nada do caixa está no EV. Caixa restrito (depósito bloqueado, garantia, covenant) fica fora.
+   O IRPJ/CSLL corrente a recolher não entra na ponte: está no capital de giro. Só o tributo em atraso
+   entra, como dívida. Na base Koller (CG-01), só o excedente entra.
 3. **Contingência possível não entra na ponte**, mas entra na negociação, como escrow, retenção ou
    indenização específica. Diga isso explicitamente.
 4. **A ponte é a base do CFDF.** *Cash-free debt-free* é exatamente esta conta, e ela precisa estar

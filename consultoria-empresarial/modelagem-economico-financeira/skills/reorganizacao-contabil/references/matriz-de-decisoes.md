@@ -42,3 +42,21 @@ ROIC histórico sem leitura.
 e ponte (`triangulacao-e-faixa`). Ver `fundamentos-koller`, `references/capital_investido.md`.
 
 **Exemplo registrado.** Caso A: tratamento de arrendamentos não documentado no modelo.
+
+## RC-04 · IRPJ/CSLL (a recolher e a recuperar) e IR diferido
+
+| Alternativa | Quando usar | Risco |
+|---|---|---|
+| Posição líquida corrente (a recolher menos a recuperar em até 12 meses) no capital de giro; atraso e parcelamento como dívida | Padrão: imposto recorrente que acompanha o lucro | Exige o razão para separar atraso de float corrente |
+| Todo o saldo a recolher como dívida | Razão indisponível e saldo relevante, em caráter provisório | Subestima o capital de giro e superestima a dívida; registrar como provisório |
+| Todo o saldo como item não operacional | Não usar | Tira da operação um passivo recorrente: o saldo não reduz equity nem fluxo |
+
+**Regra:** passivo e ativo classificados como operacionais exigem linha projetada no capital de giro
+(dias sobre o imposto corrente). Classificar sem projetar deixa o fluxo ignorando o saldo. Saldo
+negativo de prazo maior que 12 meses não é capital de giro. Diferido: o passivo
+líquido é equivalente de patrimônio e o ativo de prejuízo fiscal é não operacional, avaliado à parte.
+
+**Registrar no checkpoint:** saldo a recolher, saldo a recuperar e prazo, parcela em atraso, fonte (razão e período) e critério.
+
+**Exemplo registrado.** Mandato recente: IRPJ/CSLL a recolher classificado como item não operacional,
+sem linha no capital de giro e fora da ponte. O passivo não reduzia equity nem fluxo.

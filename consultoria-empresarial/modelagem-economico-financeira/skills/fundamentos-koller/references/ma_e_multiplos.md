@@ -177,6 +177,6 @@ EBITDA contábil (DRE)
 - [ ] Partes relacionadas: transações a preços de mercado?
 - [ ] CAPEX vs. OPEX: despesas operacionais capitalizadas indevidamente?
 - [ ] Capital de giro: tendência de DSO (prazo de recebimento), DIO (giro de estoque), DPO (prazo de pagamento): pressão de liquidez?
-- [ ] Caixa: caixa restrito ou comprometido? Caixa excedente de fato disponível?
+- [ ] Caixa: caixa restrito ou comprometido? Caixa livre de fato disponível, e quanto é restrito?
 - [ ] Dívida: passivos contingentes relevantes não provisionados?
 - [ ] Leases: todos os contratos de arrendamento mapeados e capitalizados (CPC 06 R2)?

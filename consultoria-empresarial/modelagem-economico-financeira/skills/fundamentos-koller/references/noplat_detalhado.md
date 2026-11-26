@@ -85,7 +85,7 @@ Ajuste no Capital Investido:
 
 - **Ganhos/perdas na venda de ativos:** excluir do NOPLAT (não operacional)
 - **Provisões de reestruturação:** excluir do NOPLAT; o passivo provisão entra como equivalente de dívida no IC até ser realizado
-- **Receita financeira sobre caixa excedente:** excluir do NOPLAT
+- **Receita financeira sobre o caixa:** excluir do NOPLAT
 - **Equivalentes de caixa aplicados:** excluir do IC (são ativos não operacionais)
 
 ### 3.4 Stock Options / Remuneração Baseada em Ações
@@ -138,5 +138,5 @@ Antes de usar em valuation ou ROIC, verificar:
 - [ ] Impostos operacionais foram recalculados (não usar IR reportado diretamente)?
 - [ ] Itens não recorrentes (venda de ativos, reestruturação) foram excluídos?
 - [ ] Juros de leases CPC 06 R2 foram adicionados de volta ao EBITA?
-- [ ] Receita financeira de caixa excedente foi excluída?
+- [ ] Receita financeira do caixa foi excluída?
 - [ ] O NOPLAT é consistente com o IC (mesmo perímetro de ativos)?

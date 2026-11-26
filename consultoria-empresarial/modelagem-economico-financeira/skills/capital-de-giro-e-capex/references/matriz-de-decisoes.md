@@ -11,17 +11,19 @@ modelo de negócio e **não** entra nesta matriz. Ela fica no checkpoint do enga
 
 ---
 
-## CG-01 · Caixa mínimo operacional
+## CG-01 · Caixa no capital de giro
 
 | Alternativa | Quando usar | Risco |
 |---|---|---|
-| % da receita | Padrão simples, com referência bibliográfica | Percentual sem lastro na operação |
-| Dias de custo caixa | Operação com sazonalidade de pagamento | Exige base de custo caixa limpa |
-| Zero (todo caixa é excedente) | Conta garantida ou limite cobre o descasamento | Superestima o caixa que entra na ponte |
+| Zero: 100% do caixa na dívida líquida, capital de giro não-caixa (padrão da casa) | Padrão de M&A e laudos no Brasil (Damodaran; Rosenbaum e Pearl) | ROIC e EV na base não-caixa não comparam com benchmark na base Koller |
+| Caixa mínimo operacional no capital de giro (percentual da receita ou dias de custo caixa); só o excedente na ponte | Usuário pede a base Koller, ou comparáveis e benchmark estão nessa base | Percentual sem lastro; exige a mesma base no capital investido, na projeção, na ponte e nos comparáveis |
 
-**Regra:** o caixa mínimo fica dentro do capital de giro operacional e **não** entra na ponte; só o
-excedente entra (`triangulacao-e-faixa`).
+**Regra:** a escolha vale para o capital investido, a projeção do capital de giro, a ponte e os
+comparáveis. Caixa restrito (depósito bloqueado, garantia, covenant) não abate a dívida líquida em
+nenhuma das duas bases.
 
-**Registrar no checkpoint:** método, parâmetro e fonte.
+**Registrar no checkpoint:** base adotada, tratamento do caixa restrito e, se Koller, método,
+parâmetro e fonte.
 
-**Exemplo registrado.** Caso A: 2% da receita líquida, com referência a Koller, Goedhart & Wessels.
+**Exemplo registrado.** Caso A: 2% da receita líquida, com referência a Koller, Goedhart & Wessels
+(base Koller, anterior à convenção da casa).

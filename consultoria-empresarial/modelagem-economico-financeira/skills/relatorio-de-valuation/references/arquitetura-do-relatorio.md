@@ -61,7 +61,7 @@ que sustenta":
 | Tributação | Regime e transição tributária | `impostos-e-prejuizos-fiscais` |
 | Custos, despesas, CapEx e depreciação | Lógica de escalonamento | `capital-de-giro-e-capex` |
 | Custo médio ponderado de capital (WACC) | Custo do equity e da dívida, estrutura de capital | `custo-de-capital` |
-| Dívida e capital de giro | Prazos médios, caixa mínimo, dívida líquida | `capital-de-giro-e-capex` |
+| Dívida e capital de giro | Prazos médios, tratamento do caixa, dívida líquida | `capital-de-giro-e-capex` |
 | Transações precedentes | Um cartão por transação e disclaimer da amostra | plugin de M&A, `transacoes-precedentes` |
 
 ## IV. Resultados

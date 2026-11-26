@@ -18,6 +18,13 @@ Este documento é o ponto de entrada para análises de valuation no framework Ko
 
 ---
 
+> **Adaptação da casa: caixa e tributos.** Koller mantém cerca de 2% da receita de caixa operacional
+> dentro do capital de giro. A casa usa o capital de giro **não-caixa** (Damodaran; prática de M&A no
+> Brasil): 100% do caixa e aplicações na dívida líquida, exceto caixa restrito. Onde este material
+> disser "caixa mínimo" ou "caixa excedente", leia a base Koller; o método da etapa
+> (`reorganizacao-contabil`, matriz CG-01) manda. O IRPJ/CSLL corrente (a recolher e a
+> recuperar em até 12 meses) é capital de giro operacional, projetado pela posição líquida.
+
 ## Princípio Central
 
 > **Empresas criam valor quando investem capital a taxas de retorno superiores ao custo desse capital. As duas alavancas são: crescimento e ROIC.**
@@ -222,7 +229,7 @@ FCF = NOPLAT × (1 − IR) = NOPLAT × (1 − g/ROIC)
 Valor de Operações
 = VP(FCFs do período explícito) + VP(Valor Terminal)
 
-(+) Ativos não operacionais (caixa excedente, equivalentes, participações)
+(+) Ativos não operacionais (caixa e equivalentes, participações; na base Koller, só o excedente)
 = Enterprise Value (Valor da Empresa)
 
 (−) Dívida financeira e equivalentes de dívida

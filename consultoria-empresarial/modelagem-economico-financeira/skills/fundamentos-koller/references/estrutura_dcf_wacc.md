@@ -12,7 +12,7 @@ Período Pós-Explícito
 └── VP(VT) = VT / (1+WACC)ⁿ
 
 Valor das Operações = VP(FCFs) + VP(VT)
-(+) Ativos Não Operacionais (caixa excedente, investimentos)
+(+) Ativos Não Operacionais (caixa e aplicações, investimentos; na base Koller, só o excedente)
 = Enterprise Value (EV)
 (−) Dívida financeira e equivalentes de dívida (valor de mercado ou contábil)
 (−) Passivos de arrendamento CPC 06 R2 (valor contábil do passivo)

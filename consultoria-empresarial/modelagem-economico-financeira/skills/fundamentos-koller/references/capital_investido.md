@@ -14,8 +14,9 @@ O Capital Investido (IC) isola apenas os **ativos necessários para operar o neg
 
 ```
 Ativo Circulante Operacional:
-(+) Caixa mínimo operacional (≈ 1–2% da receita, ou saldo mínimo para operações)
-    [NÃO inclui caixa excedente; este é ativo não operacional]
+(+) Caixa mínimo operacional (≈ 1–2% da receita)
+    [BASE KOLLER. A casa usa capital de giro não-caixa: esta linha fica zerada e todo o caixa vai
+     para a dívida líquida. Ver reorganizacao-contabil e matriz CG-01]
 (+) Contas a receber (clientes)
 (+) Estoques
 (+) Outros ativos circulantes operacionais (adiantamentos, despesas antecipadas operacionais)
@@ -31,7 +32,7 @@ Passivo Circulante Operacional:
 ```
 
 **O que NÃO entra no CGOL:**
-- Caixa excedente (acima do mínimo operacional) → ativo não operacional
+- Caixa e aplicações (casa: 100%; base Koller: só o excedente acima do mínimo) → dívida líquida / ativo não operacional
 - Parcelas correntes de dívidas financeiras → dívida financeira
 - IR diferido corrente → equivalente de patrimônio
 - Parcelas correntes de arrendamentos → equivalente de dívida
@@ -147,7 +148,7 @@ TFI = IC (operacional, incl. goodwill) + Ativos Não Operacionais
 ```
 
 **Ativos Não Operacionais Comuns:**
-- Caixa excedente e aplicações financeiras
+- Caixa e aplicações financeiras (casa: 100%, exceto restrito; Koller: só o excedente)
 - Investimentos em subsidiárias não consolidadas
 - Imóveis não utilizados nas operações
 - Ativos de pensão pré-pagos
@@ -156,7 +157,7 @@ TFI = IC (operacional, incl. goodwill) + Ativos Não Operacionais
 
 ## 9. Validação e Checklist de IC
 
-- [ ] CGOL exclui caixa excedente e inclui apenas caixa mínimo operacional?
+- [ ] CGOL segue a base adotada para o caixa (casa: nenhum caixa; Koller: só o mínimo operacional)?
 - [ ] Ativo ROU (CPC 06 R2) está incluído no IC operacional?
 - [ ] Passivo de arrendamento está nas perspectivas de financiamento como DE?
 - [ ] IR diferido foi classificado corretamente (EE ou ativo não operacional)?

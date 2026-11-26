@@ -244,8 +244,8 @@ frequentemente esconde erro de base. **Antes de levar o número ao deck, elimine
    reposição? Se cair muito, o ROIC alto é artefato contábil e precisa de nota.
 2. **Ativo operacional fora da empresa.** Imóvel, frota ou equipamento na pessoa física do sócio ou
    em outra empresa do grupo. O capital investido está incompleto.
-3. **Caixa inteiro no capital investido, ou nenhum.** Se nenhum caixa foi incluído, o denominador
-   está subestimado.
+3. **Tratamento do caixa.** Na base da casa nenhum caixa fica no capital investido, e o ROIC já sai
+   mais alto que na base Koller. Confirme o mesmo tratamento em todos os anos e o benchmark na mesma base.
 4. **Add-back agressivo no numerador.** O NOPAT carrega um EBITDA normalizado que não se sustenta.
 5. **Capital de giro negativo estrutural** tratado como redução de capital sem checar se é
    sustentável: adiantamento de cliente que pode cessar.

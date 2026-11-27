@@ -82,6 +82,6 @@ escasso duram mais; processo e atendimento duram menos. A régua de robustez est
 
 Uma linha por vantagem, sempre no mesmo formato:
 
-> **[Vantagem]** — *Assinatura:* [métrica, valor, vs. pares, série]. *Evidência:* [documento ou
+> **[Vantagem]**. *Assinatura:* [métrica, valor, vs. pares, série]. *Evidência:* [documento ou
 > dado]. *Falseamento:* [teste aplicado e resultado]. *Peso no ROIC:* [Δ p.p. da ponte].
 > *Durabilidade:* [barreira, anos]. *Veredito:* confirmada / parcial / não sustentada.

@@ -46,3 +46,21 @@ capturar, probabilidade e quem a cria. Sinergia de receita pede desconto maior q
 
 **Exemplo registrado.** Caso A: sinergia do comprador embutida nos drivers operacionais. A
 recomendação de linhas próprias saiu da revisão.
+
+## PC-03 · Ano corrente parcialmente realizado
+
+| Alternativa | Quando usar | Risco |
+|---|---|---|
+| **Realizado até a data-base × (1 + fator de sazonalidade)** (padrão sugerido) | A data-base deixa a maior parte do ano realizada | Fator calculado sobre poucos anos é frágil: declare a faixa |
+| Drivers para o ano inteiro | Pouco do ano realizado, ou negócio sem sazonalidade relevante | Descarta o realizado, o melhor dado disponível |
+| Último trimestre anualizado | Descartada | Leva a força ou a fraqueza sazonal do trimestre para o ano inteiro |
+
+**Regra:** o fator é a razão entre o resto do ano e o realizado até a data-base, em cada ano
+histórico, com a média. Não é crescimento de trimestre contra trimestre. O primeiro ano projetado por
+drivers é o seguinte, e o fluxo do período parcial segue a mesma sazonalidade (`valor-terminal`).
+
+**Registrar no checkpoint:** parcela do ano realizada, fator de cada ano, média e faixa de receita e de
+EV entre o menor e o maior fator.
+
+**Exemplo registrado.** Caso A: nove meses realizados, fator pela razão entre o último trimestre e o
+acumulado dos nove meses em dois anos, com a faixa de receita registrada.

@@ -24,4 +24,5 @@ aplicam o múltiplo. Registrar a base no checkpoint e na nota de rodapé do slid
 
 Contrato ou cliente relevante com renovação incerta: normalizar o EBITDA sem ele, tratá-lo como
 cenário (`projecao-e-cenarios`) ou manter com disclaimer. Registrar a escolha, o peso do contrato na
-receita e a fonte da incerteza.
+receita e a fonte da incerteza. Quando o contrato fica fora do EBITDA ajustado e do EV, projete-o à
+parte, por competência, e trate-o na ponte ou como contingente: fora do EV não é fora do relatório.

@@ -20,9 +20,9 @@ Fundamento: skill `fundamentos-koller`, references `capital_investido.md` e `nop
 
 References desta skill:
 
-- `references/arvore_de_direcionadores.md` — a árvore completa, fórmulas, armadilhas, as quatro
+- `references/arvore_de_direcionadores.md`: a árvore completa, fórmulas, armadilhas, as quatro
   lentes de leitura e a ponte de ROIC contra os pares.
-- `references/vantagens_competitivas.md` — catálogo de vantagens: assinatura nos números, evidência,
+- `references/vantagens_competitivas.md`: catálogo de vantagens com assinatura nos números, evidência,
   teste de falseamento, e os três filtros "por que não copiam?".
 
 ## A pergunta que esta etapa responde
@@ -74,7 +74,7 @@ Desça um nível mais quando o dado permitir: margem se abre em preço, mix e es
 se abre em giro do imobilizado e giro do capital de giro. **É essa abertura que produz os slides de
 driver de valor no deck**, e não o ROIC consolidado.
 
-## Árvore de direcionadores — abrir cada ramo em métricas que o negócio controla
+## Árvore de direcionadores: abrir cada ramo em métricas que o negócio controla
 
 Margem e giro ainda são agregados. Cada ramo se abre em métricas que apontam para uma decisão ou uma
 vantagem concreta:
@@ -91,7 +91,7 @@ soma das intensidades de capital é o inverso do giro. Fórmulas, armadilhas de 
 bruta no PMR, pró-labore no G&A, P&D capitalizado) e a ponte de ROIC estão em
 `references/arvore_de_direcionadores.md`.
 
-## Leitura cruzada — de métricas soltas à vantagem operacional
+## Leitura cruzada: de métricas soltas à vantagem operacional
 
 **Nenhuma métrica prova vantagem sozinha. A vantagem aparece na combinação.** O exemplo central:
 
@@ -115,7 +115,7 @@ Outras combinações (P&D alto, escala, capital de giro negativo): `references/v
 Catálogo completo, com assinatura, evidência e falseamento de cada vantagem:
 `references/vantagens_competitivas.md`.
 
-## Fonte de valor — preço ou custo e capital?
+## Fonte de valor: preço ou custo e capital?
 
 Depois de identificar as vantagens, classifique-as em duas fontes e **diga qual pesa mais**,
 apoiando-se na ponte de ROIC contra os pares:

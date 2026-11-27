@@ -268,6 +268,11 @@ Base do capital investido, base do NOPAT histórico e arrendamentos (CPC 06 R2):
 - Balanço que não fecha, ou que fecha por conta de "outros" com saldo relevante.
 - Caixa acima de 3 meses de custo caixa. Não distorce o ROIC (está na dívida líquida), mas confirme quanto é livre e quanto é restrito.
 - Contas a receber crescendo muito acima da receita; ver `capital-de-giro-e-capex`.
+- Ajuste de fechamento lançado contra conta de sócios ou lucros acumulados, sem passar pela DRE do
+  período. Não entra no NOPAT nem no EBITDA: trate na ponte, registre a composição, o status de cada
+  parcela e se o saldo já está dentro da dívida líquida (contado duas vezes ou não contado).
+- Arquivo-fonte com data de corte diferente da data-base (DRE de 30/06 ao lado de balancete de
+  30/09). Confira a data de cada arquivo antes de reconciliar.
 - Imobilizado quase todo depreciado numa operação que depende dele: o capital investido contábil
   subestima o capital econômico e o ROIC sai inflado. Sinalize, porque pode ser necessário discutir valor
   de reposição.

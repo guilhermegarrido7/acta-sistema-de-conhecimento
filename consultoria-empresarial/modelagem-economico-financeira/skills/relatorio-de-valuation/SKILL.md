@@ -96,6 +96,13 @@ factual: casas decimais consistentes, nunca arredondamento que esconda o driver.
 número que o sustente. Resultado ruim ou dado atípico é dito explicitamente, na mesma régua de
 honestidade que `qualidade-de-resultados` aplica ao EBITDA normalizado.
 
+Explique a causa econômica antes da conclusão e evite "portanto considerou-se". Diga "por hipótese"
+quando não houver documento da empresa que sustente a premissa (cronograma de parcelamento sem
+calendário, data de mecanismo regulatório sem data fixada). Nota de rodapé só com o que muda a
+leitura, e o slide não repete o que o título já disse (o escopo da receita, por exemplo). Mecânica de
+imposto com número rastreável: "IRPJ (15% mais 10% de adicional) e CSLL (9%) somam 34% do lucro
+tributável, aproximado pelo EBIT no FCFF".
+
 ## Do modelo ao slide
 
 Todo número do deck tem célula de origem no modelo. O mapa de qual saída alimenta qual slide, e
@@ -126,6 +133,18 @@ travado, instância do Office do usuário, retry de RPC).
 6. Os divisores de capítulo batem com o Sumário do valuation.
 7. Apêndice com sensibilidade WACC × g, ponte com a data e as decisões de custo de capital com fonte.
 8. Manifesto de release sem pendência de gate.
+9. Nenhuma nota com numeração duplicada ("Nota (1): Nota:") e "n.a." onde o dado não existe, nunca "0".
+10. Todo número colado bate com o modelo recalculado, inclusive os que o mapa não cobre (sumário,
+    FCFF, variação de giro, valor presente, equity, apêndice). A mesma premissa aparece igual em todos
+    os slides que a repetem (percentual, ano final de convergência, crescimento). Tabela do deck é
+    valor colado: toda mudança no modelo gera a lista dos slides afetados.
+11. Percentual de parte do todo (lote, safra, contrato) usa no texto o mesmo critério de peso do
+    cálculo, e o texto o declara.
+12. Premissa que depende de data regulatória tem disclaimer no slide do FCFF (o FCFF parte do EBITDA,
+    já líquido de IBS/CBS) e fonte nos slides que a usam. Nenhum marcador de "adicionar fonte" sobrou.
+13. Diff de texto de todos os slides: só mudou o que se pretendia, e as edições do usuário foram
+    preservadas. Mantenha o nome do arquivo e a versão quando o usuário pedir, e não crie versão nova
+    por conta própria.
 
 ## Matriz de decisões
 

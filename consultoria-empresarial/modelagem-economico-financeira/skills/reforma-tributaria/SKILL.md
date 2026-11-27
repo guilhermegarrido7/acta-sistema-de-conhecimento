@@ -134,6 +134,14 @@ neutralizá-lo. Os dois momentos precisam estar separados no modelo.
    coisa, e o saldo credor como valor a receber, fora do capital de giro normalizado.
 5. Peça ao cliente o plano tributário até 2033. Se o plano parar antes, o terminal usa o regime de
    2033, não a última alíquota do plano.
+6. Com repasse integral ao cliente contribuinte, calcule IBS e CBS por fora sobre a receita líquida
+   base: receita líquida e EBITDA ficam preservados, e a reforma passa a atuar no capital de giro e na
+   base do IRPJ/CSLL, e não no EBITDA.
+7. No lucro presumido, a base do IRPJ/CSLL a partir de 2027 é a receita bruta sem IBS/CBS. Registre a
+   base legal na nota do modelo.
+8. A data do split payment é hipótese do modelo. O texto diz que ela se apoia na primeira etapa B2B e
+   que o cronograma de operação plena não está fixado. Fontes e o que vale como indício:
+   `impostos-e-prejuizos-fiscais`, reference de transição, seção 1.2.
 
 ## Red flags
 
@@ -147,6 +155,7 @@ neutralizá-lo. Os dois momentos precisam estar separados no modelo.
 - Consórcio tratado como contribuinte sem conferir a opção pelo regime regular.
 - Receita bruta como driver, com margem preservada sem hipótese de repasse.
 - Resposta sem a data de corte da skill.
+- Data de split apresentada como fato, ou apoiada em nota técnica de outro documento fiscal ou em notícia sem fonte primária.
 
 ## O que entregar
 

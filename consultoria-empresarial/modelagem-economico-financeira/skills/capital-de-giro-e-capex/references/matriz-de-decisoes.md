@@ -25,5 +25,22 @@ nenhuma das duas bases.
 **Registrar no checkpoint:** base adotada, tratamento do caixa restrito e, se Koller, método,
 parâmetro e fonte.
 
-**Exemplo registrado.** Caso A: 2% da receita líquida, com referência a Koller, Goedhart & Wessels
-(base Koller, anterior à convenção da casa).
+**Exemplo registrado.** Caso A: começou em 2% da receita líquida (Koller, Goedhart & Wessels) e migrou
+para caixa zero no giro, com todo o caixa na ponte.
+
+## CG-02 · IBS/CBS no capital de giro
+
+| Alternativa | Quando usar | Risco |
+|---|---|---|
+| **Recebível sobre a receita líquida, sem passivo de IBS/CBS** (padrão sugerido, a partir da data do split) | Split payment em vigor para o meio de recebimento do cliente | A data do split é hipótese: declare |
+| Recebível com tributo e passivo a recolher em dias (média dos dois últimos anos fechados) | Antes do split, inclusive na fase de testes | Gera necessidade residual de giro, que se reverte quando o split começa |
+| Passivo de IBS/CBS com prazo igual ao PMR | Não usar como mecânica | As linhas se anulam só por coincidência aritmética; serve de teste de neutralidade |
+
+**Regra:** dedução na DRE e efeito de caixa são explicados separadamente. A data do split, a etapa em
+que ela se apoia e a fonte são declaradas (`reforma-tributaria`).
+
+**Registrar no checkpoint:** data adotada do split, prazo do passivo antes dele, valor residual de
+giro gerado e ano em que se reverte.
+
+**Exemplo registrado.** Caso A: passivo em dias até a fase de testes e recebível líquido a partir do
+ano seguinte, com o teste de neutralidade de prazos iguais.

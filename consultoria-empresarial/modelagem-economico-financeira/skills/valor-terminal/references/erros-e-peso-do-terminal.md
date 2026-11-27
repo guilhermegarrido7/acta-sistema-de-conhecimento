@@ -123,3 +123,10 @@ valor em torno de (1 + WACC)^0,5 sobre o terminal. Fonte do procedimento:
 [Breaking Into Wall Street, mid-year convention](https://breakingintowallstreet.com/kb/discounted-cash-flow-analysis-dcf/mid-year-convention-dcf/),
 conferida em 17/11/2026. Não use meio de período em negócio muito sazonal, com a caixa concentrada no
 fim do ano; nesse caso, declare o prazo de desconto adotado e a razão.
+
+"Meio de período" quer dizer o meio do período de cada fluxo: com data-base em 30/09, o trimestre
+final do ano é descontado a 0,125 ano e o primeiro ano completo a 0,75 (`p + n − 0,5`, com `p` = 0,25).
+Descontar o fluxo parcial a meio ano é o erro oposto. O fluxo do período parcial é o do resto do ano
+pela mesma sazonalidade que projetou o ano corrente (`projecao-e-cenarios`, PC-03), e não a fração
+linear do fluxo anual: se o último trimestre concentra mais de um quarto da receita, um quarto do
+fluxo subavalia o EV.

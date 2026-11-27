@@ -71,6 +71,13 @@ Cinco regras que evitam os erros que mais aparecem:
    data-base anual e dívida do último balancete é o erro mais comum, e bloqueia o release em
    `revisao-de-modelo`. Como alinhar: matriz TF-01. Item não operacional que fica fora da ponte
    tem registro com motivo (TF-02).
+7. **Dívida sem cronograma documentado.** Parcelamento ou tributo vencido sem calendário: assuma o
+   prazo por hipótese, declare-o e registre que ele muda o ritmo da dívida projetada e o FCFE, e não o
+   EV nem o equity value da ponte, que usa o valor de face na data-base. Limites rotativos ficam
+   constantes e sem nova captação, salvo plano documentado.
+8. **Ajuste de fechamento fora da DRE.** Lançamento contra conta de sócios ou lucros acumulados não
+   afeta o EBITDA e se trata aqui. Antes de incluir, confirme se o saldo já está na dívida líquida do
+   balancete.
 
 Apresente a ponte como um slide próprio. É onde o vendedor entende por que o "valor da empresa" não é
 o que ele recebe, conversa que é melhor ter no valuation do que na assinatura.

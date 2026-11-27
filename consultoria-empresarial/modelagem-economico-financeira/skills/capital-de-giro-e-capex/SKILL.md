@@ -95,6 +95,17 @@ Regras de coerência que o oráculo deve verificar:
 - **No ano terminal, os dias têm de estar estáveis.** Capital de giro em movimento na perpetuidade é
   incoerência: ver skill `valor-terminal`.
 
+### Tributos no capital de giro
+
+A dedução na DRE tira o tributo do EBITDA, e o efeito de caixa está no balanço, entre receber do
+cliente e recolher ao Fisco: a dedução sozinha não resolve o giro. Com split payment, o IBS/CBS é
+retido na liquidação e não passa pelo caixa, então sai do capital de giro (recebível sobre a receita
+líquida, sem passivo de IBS/CBS). Antes do split, mantenha o recebível com tributo e o passivo a
+recolher em dias. Passivo com prazo igual ao PMR é atalho frágil, e a data do split é hipótese do
+modelo. O saldo de tributo que a reforma extingue vai para a ponte na data-base, e não para o giro
+projetado. Mecânica, testes e convergência dos prazos:
+[references/tributos-no-capital-de-giro.md](references/tributos-no-capital-de-giro.md). Decisão: CG-02.
+
 ### Red flags de capital de giro
 
 - PMR subindo ano a ano com receita estável: deterioração de crédito ou receita que não vira caixa.
@@ -200,7 +211,7 @@ do aluguel a valor de mercado em perpetuidade (ver `qualidade-de-resultados`, fa
 
 ## Matriz de decisões
 
-Caixa no capital de giro (CG-01): [references/matriz-de-decisoes.md](references/matriz-de-decisoes.md). O
+Caixa e tributos no capital de giro (CG-01 e CG-02): [references/matriz-de-decisoes.md](references/matriz-de-decisoes.md). O
 CapEx unitário por driver físico é do modelo de negócio e fica no checkpoint do engajamento.
 
 ## Próximo passo

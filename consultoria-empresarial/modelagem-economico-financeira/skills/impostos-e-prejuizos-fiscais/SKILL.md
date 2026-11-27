@@ -63,8 +63,11 @@ CSLL            9% sobre a base de cálculo
 Marginal      ≈ 34%
 ```
 
-O adicional é irrelevante na margem para empresa do porte de mandato, mas confira: em empresa com
-lucro pequeno ou em holding do grupo, ele importa.
+O adicional incide só sobre o lucro acima de R$ 240 mil por ano. Acima desse limiar, o imposto é 34% do
+lucro tributável menos R$ 24 mil por ano (10% de R$ 240 mil); abaixo dele, 24%. Aplicar 34% sem o
+abatimento superestima o imposto de empresa com lucro pequeno ou de holding do grupo. No FCFF,
+aplique sobre o EBIT (proxy do lucro tributável, sem despesa financeira): o benefício da dívida entra
+pelo custo da dívida após imposto no WACC, e tributar o LAIR no fluxo contaria o escudo duas vezes.
 
 **Use a alíquota marginal (34%) para o escudo fiscal dos juros e para o imposto operacional
 ajustado. Use a alíquota efetiva para conferir a plausibilidade histórica.** Se a efetiva histórica
@@ -174,6 +177,11 @@ Calendário, fontes, perguntas ao cliente e roteiro de diligência estão na ref
 `transicao-tributaria-2026-2033.md` (posição em 17/11/2026). Para classificar setor e operação,
 tratar aluguel, operação entre empresas do mesmo grupo e consórcio, e para a data de corte dos
 parâmetros, use a skill `reforma-tributaria`.
+
+**Percentual legado e base do IBS/CBS.** O percentual de PIS/Cofins e ISS aplicado à receita bruta até o
+último ano do regime antigo é o mesmo que compõe a base do IBS/CBS por fora nos anos seguintes.
+Alterá-lo muda a receita líquida futura, ainda que o efeito no EV seja pequeno: rastreie os
+dependentes e recalcule antes de dizer que o valor não se moveu.
 
 **Regra de modelagem:** projete os tributos sobre a receita ano a ano pelo calendário legal e ponha
 o ano terminal no regime de 2033 (IBS e CBS plenos; ICMS, ISS, PIS e Cofins extintos; nenhum

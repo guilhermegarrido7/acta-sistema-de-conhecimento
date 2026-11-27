@@ -150,6 +150,15 @@ prestadores de serviço de pagamento desenvolvam suas soluções (Ministério da
 O calendário de obrigatoriedade por instrumento de pagamento e por tipo de operação não foi
 identificado (a confirmar).
 
+**Fontes federais conferidas em 27/11/2026 (caso A).** Nenhuma fixa a data de operação plena.
+LC 214/2025, art. 35: implantação gradual por ato conjunto RFB/CGIBS, com hipóteses facultativas.
+Decreto 12.955/2026, art. 33: no mínimo duas etapas, e a primeira pode ser só entre contribuintes
+(adquirente do regime regular) e facultativa. Comunicado da RFB de 30/09/2026: testes com prestadores
+de serviço de pagamento desde 15/10/2026, sem operação definitiva e sem mencionar 2027. A NT 2026.001
+do Encat (família CT-e) cita "a partir de 2027", mas é indício, não fonte federal, e vale para CT-e,
+não para NFS-e. Previsão de 2028 em notícia sem fonte primária não entra como fonte. Qualquer data de
+split no modelo é hipótese da modelagem, apoiada na primeira etapa B2B, e o texto diz isso.
+
 ### 1.3 Crédito, ressarcimento e saldos que vêm do sistema atual
 
 - **Crédito amplo.** O contribuinte do regime regular apropria crédito de IBS e de CBS sobre as
@@ -267,7 +276,8 @@ Colunas de modelagem em leitura ACTA:
 - **Split payment (leitura ACTA).** Hoje o tributo da venda fica no caixa entre o recebimento e o
   recolhimento. Com o split payment, ele é segregado na liquidação (art. 31): a conta de tributos a
   recolher encolhe, com uma saída de caixa não recorrente quando o mecanismo passar a valer para o
-  meio de recebimento do cliente. Calendário a confirmar (seção 1.2).
+  meio de recebimento do cliente. Calendário a confirmar (seção 1.2). A mecânica no capital de giro do modelo está em
+  `capital-de-giro-e-capex`, reference `tributos-no-capital-de-giro.md`.
 - **Crédito no tempo do pagamento (leitura ACTA).** O crédito do adquirente depende da extinção do
   débito do fornecedor (art. 47), e não só da nota. Com split payment, a extinção tende a coincidir
   com o pagamento ao fornecedor, e prazo médio de pagamento longo atrasa o crédito. Modele o crédito

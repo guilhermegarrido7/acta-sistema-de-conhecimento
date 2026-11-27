@@ -25,4 +25,5 @@ só o que é transversal.
 a data-base é intermediária (`triangulacao-e-faixa`, TF-01).
 
 **Exemplo registrado.** Caso A: meio de ano, com o primeiro ano projetado integral a partir de
-data-base anual.
+data-base anual; revisado depois para data-base trimestral, com período parcial e meio de período
+em cada fluxo.

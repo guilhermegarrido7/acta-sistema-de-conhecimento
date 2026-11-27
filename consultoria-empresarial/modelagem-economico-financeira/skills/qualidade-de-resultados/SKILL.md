@@ -169,6 +169,16 @@ Sinais de que o EBITDA reportado já é frágil antes de qualquer ajuste:
 - **Contabilidade trocada de escritório** no período analisado; a série pode não ser comparável.
 - **Diferença entre a DRE contábil e a DRE gerencial** que a empresa usa para decidir. Peça as duas
   e reconcilie: a diferença é sempre informativa.
+- **Crédito dentro de despesa no período** (permuta, estorno, reversão de provisão): teste a
+  recorrência e mostre a margem sem ele.
+- **Créditos em contas criadas por revisão contábil.** Peça os lançamentos de revisão ao contador. Se
+  não forem recorrentes, expurgue do EBITDA ajustado e mostre o efeito no múltiplo implícito.
+- **Imposto de regime anterior** (Simples, por exemplo) em ano histórico, sem normalização para o
+  regime do modelo.
+- **Valor fixo no código do modelo** (comissão, receita, ajuste) sem lastro rastreável até um
+  documento.
+- **Duas versões da mesma base** (balancete ou DRE original e revisado) com EBITDA diferente. Registre
+  qual fonte vale em cada ano, reproduza-a no modelo ao centavo e peça o motivo da diferença.
 
 ## O que perguntar ao usuário
 

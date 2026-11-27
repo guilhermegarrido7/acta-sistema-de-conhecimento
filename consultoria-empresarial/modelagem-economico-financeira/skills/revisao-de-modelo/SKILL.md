@@ -94,6 +94,8 @@ Os três vazamentos típicos, em ordem de frequência:
 [ ] Sinal da ΔNCG: aumento de capital de giro CONSOME caixa
 [ ] IRPJ/CSLL a recolher e a recuperar têm linha projetada no capital de giro e só o atraso foi para a ponte
 [ ] Capital investido médio (não final) no denominador do ROIC
+[ ] Nota e texto de premissa revisados na mesma edição; cada arquivo-fonte com a data de corte da data-base
+[ ] Nenhum valor fixo embutido em fórmula sem lastro rastreável a um documento
 ```
 
 O erro de desconto `N+1` e o erro de sinal da ΔNCG são os dois mais frequentes, e os dois passam
@@ -257,7 +259,6 @@ O caminho correto é: construir cada cenário completo e coerente, rodar o valua
 As duas aparecem no deck, em lugares diferentes. Confundi-las faz parecer que há mais análise do que
 há. Ver `projecao-e-cenarios`.
 
-
 ---
 
 # O relatório de revisão
@@ -269,23 +270,22 @@ O entregável desta skill:
 2. **Camada 2**: a regra de sinal, o guardanapo, os quatro testes de padrão, e a lista de
    consistências entre etapas.
 3. **Camada 3**: múltiplo implícito vs. pares, comparação com precedentes, plausibilidade do ROIC.
-4. **A lista priorizada**: o que **precisa** ser corrigido antes de o número sair da casa, separado
-   do que é refinamento.
+4. **A lista priorizada**: o que precisa ser corrigido antes de o número sair, separado do refinamento.
 5. **As premissas mais sensíveis**, com o efeito de cada uma no valor, porque é onde o comprador vai
    atacar, e onde vale reforçar a evidência antes.
 6. **O veredito**: o modelo está pronto para ir ao cliente, pronto com ressalvas declaradas, ou não
    está pronto.
-7. **O manifesto de release**, gerado pelo script de `relatorio-de-valuation`
-   (`scripts/manifesto_release.py`): hash do modelo e do deck, erros de fórmula, conciliação modelo ×
-   deck, diff contra a versão anterior, busca de resíduos e render. O veredito "pronto" exige o
+7. **O manifesto de release** (`scripts/manifesto_release.py`, de `relatorio-de-valuation`): hashes,
+   erros de fórmula, conciliação modelo × deck, diff, resíduos e render. O veredito "pronto" exige o
    manifesto sem pendência de gate.
 
 ## Testes mínimos que não se pulam no cenário final
 
 Stress dos extremos, teste do payout e NOPAT top-down vs. bottom-up rodam **de novo sobre o modelo
-que vai ao cliente**, e não só sobre uma versão anterior. Mudança de cenário depois da revisão
-reabre esses três testes. Com seletor de cenário alimentando uma tabela de dados, um script percorre todos os cenários,
-confere balanço e erros em cada um e só então salva o arquivo, com o cenário base selecionado.
+que vai ao cliente**, e não só sobre uma versão anterior. Mudança de cenário depois da revisão reabre
+os três testes. Com seletor de cenário alimentando uma tabela de dados, um script percorre todos os
+cenários, confere balanço e erros e só então salva o arquivo, com o cenário base selecionado. Edição
+do arquivo e validação do EV: [references/edicao-e-validacao-do-modelo.md](references/edicao-e-validacao-do-modelo.md).
 
 ## Uma nota sobre precisão
 

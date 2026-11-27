@@ -55,6 +55,16 @@ O que cada elemento exige de lastro:
 excede a capacidade instalada em qualquer ano sem CapEx correspondente, a projeção é impossível, e
 esse erro atravessa o valuation inteiro sem aparecer, porque a receita simplesmente cresce.
 
+### Ano corrente já em boa parte realizado
+
+Quando a data-base deixa a maior parte do ano realizada, projete o ano corrente pelo realizado mais um
+fator de sazonalidade (razão entre o resto do ano e o realizado até a data-base, em média dos anos
+históricos), e use drivers só a partir do ano seguinte. O preço médio do ano corrente é resultado
+(receita ÷ unidades médias), e o reajuste implícito é resíduo. A faixa de sensibilidade do fator, o
+mesmo escopo de receita nos dois lados, a comparação sempre do mesmo período entre anos, a mecânica
+de preço ligado à utilização e a reconciliação das fontes de receita estão em
+[references/ano-corrente-e-sazonalidade.md](references/ano-corrente-e-sazonalidade.md). Decisão: PC-03.
+
 ### Repasse de preço: a premissa mais frouxa que existe
 
 Projetar reajuste igual à inflação presume poder de precificação que precisa ser demonstrado.
@@ -228,7 +238,7 @@ um número inicial menor.
 
 ## Matriz de decisões
 
-Atingir meta e sinergias no cenário do comprador:
+Atingir meta, sinergias no cenário do comprador e ano corrente parcialmente realizado (PC-01 a PC-03):
 [references/matriz-de-decisoes.md](references/matriz-de-decisoes.md). O driver de receita específico
 do negócio não entra na matriz; fica no checkpoint do engajamento. Tratamento de pleito de
 reequilíbrio: [references/reequilibrio-economico-financeiro.md](references/reequilibrio-economico-financeiro.md).
